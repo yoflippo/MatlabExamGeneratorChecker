@@ -99,7 +99,7 @@ for wk = 1:length(namesWeekDirectories)
             % Go inside current folder
             cd(subdirs{end})
             % Create unique filename
-            uniqueFileName = [extractBefore(namefile,'_versie') '_' uniqueFN.Hash];
+            uniqueFileName = [extractBefore(namefile,'_versie') '_' uniqueFN.Hash '_' ];
             makeMFileFromCells(uniqueFileName,headerHash)
             % Rename the ANS file
             movefile([namefile '_ANT' ext],[extractBefore(namefile,'_versie') '_' uniqueFN.Hash '_ANT' ext]);

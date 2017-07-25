@@ -1,22 +1,30 @@
     %% Create the assignments
+    clc; close all; clear all;
+    
     nameAssignmentFolder = 'assignments';
     
     % Get an overview of files
     mfiles = readFilesInSubFolder(nameAssignmentFolder,'.m');
     
     % Filter the relevant files, only files with 'vraag' are relevant
-    mfilesOI = strfind(mfiles,'vraag'); %files of interest
-    mfilesOI = mfiles(cellfun('length',mfilesOI)==2);
+    mfilesOI = strfind(mfiles,'vraag_'); %files of interest
+    mfiles = mfiles(cellfun('length',mfilesOI)==2);
     
     % Further filter the files down to files without the postfix '_ans'
-    mfilesOI = strfind(mfilesOI,'_ANT'); %files of interest
+    mfilesOI = strfind(mfiles,'_ANT'); %files of interest
     mfilesOI = mfiles(cellfun('isempty',mfilesOI));
     
     % Get HashCode of each file
-    strfind(mfilesOI,'_')
+    underscorePos = strfind(mfilesOI,'_');
+    numUnderScores = length(underscorePos{2});
+    hashPos = underscorePos{1,2}(numUnderScores-1:numUnderScores);
+
+    for h = 1:length(mfilesOI)
+       HashCodes{h} = mfilesOI{1,h}(hashPos(1)+1:hashPos(2)-1) ;
+    end
     % Combine the relevant files in a Container (dictionary) so the
     % hashcode is combined with a location
-    
+    mapWithHash = containers.Map(HashCodes,mfilesOI);
 
     % Create a working folder called 'student-assignments'
     % Create week folders
