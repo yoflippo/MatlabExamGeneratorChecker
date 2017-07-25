@@ -1,4 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
+%                    |673f43e24c8530ea6b610ebfe42bb5cb|
 % Alles wat je nodig hebt om deze opdracht af te ronden staat in dit bestand!
 % De regels:
 % 1 - Door ons aangemaakte bestandsnamen, commentaar & code mag jij NIET aanpassen!
@@ -19,3 +20,14 @@ A = 1; B = 2; C = 3; D = 4;
 %                       Antwoord_VraagY = B;
 %% =================== BLIJF VAN VOORGAANDE CODE AF! ======================
 %
+%% Vraag 2
+% Stelling 1: In Matlab kan machtverheffing met de volgende operator worden
+% uitgevoerd: ^
+% Stelling 2: Een operator voert een handeling uit op één of meerder
+% operands.
+%
+% A : stelling 1 is WAAR      en stelling 2 is WAAR
+% B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
+% C : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
+% D : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
+Antwoord_Vraag2 = NaN;
