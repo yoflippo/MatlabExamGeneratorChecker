@@ -1,19 +1,9 @@
     %% Create the assignments
-    nameAssignmentFolder = 'assignments';
-    
+    studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
     % Get an overview of files
-    mfiles = readFilesInSubFolder(nameAssignmentFolder,'.m');
     
-    % Filter the relevant files, only files with 'vraag' are relevant
-    mfilesOI = strfind(mfiles,'vraag'); %files of interest
-    mfilesOI = mfiles(cellfun('length',mfilesOI)==2);
+    % Filter the relevant files
     
-    % Further filter the files down to files without the postfix '_ans'
-    mfilesOI = strfind(mfilesOI,'_ANT'); %files of interest
-    mfilesOI = mfiles(cellfun('isempty',mfilesOI));
-    
-    % Get HashCode of each file
-    strfind(mfilesOI,'_')
     % Combine the relevant files in a Container (dictionary) so the
     % hashcode is combined with a location
     
