@@ -1,0 +1,9 @@
+- herkennen van een filename (bijvoorbeeld het ANT gedeelte)
+- copy pasten van stukje m-files (genereren van final opdracht)
+- aanmaken van een .mat file met daarin de per student gegenereerde files (plus hash-code)
+- inpakken van bestanden
+- aantal punten per opdracht vaststellen -> in elke diepste folder een bestandje met de naam deelpunten
+- testen of elke unieke folder met opdrachten ook een m-file heeft met de naam deelpunten
+
+- code schrijven die deelpunten optelt
+- alle gegeneerde opdrachten moeten worden ingepakt
