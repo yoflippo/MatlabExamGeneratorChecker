@@ -1,7 +1,7 @@
 %% Credits
 % This file creates the assignments for Human Kinetic Movement student.
 % Every students get a personalized set of assignments at the end of every
-% Week. These assignment need to be handed in on a set time (prefferably
+% Week. These assignment need to be handed in on a set time (preferably
 % via an LMS like Blackboard).
 % The solutions from the students are automatically checked in with an script
 % called < fill_me_frodo. m>.
@@ -30,9 +30,6 @@ for i = 1:length(listWithNeededFolder)
     try
         cd(listWithNeededFolder{i});
         cd ..
-        % %         if isempty(readFilesInSubFolder(listWithNeededFolder{i},'.m'))
-        % %             error(['The folder: "' mfilesFolder '" does not contain files']);
-        % %         end
     catch
         error(['The folder: ' listWithNeededFolder{i} ' was not found']);
     end
@@ -57,15 +54,22 @@ studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
 %%We want to leave the original folder intact
 nameAssignmentFolder = 'assignments';
 % delete previously generated folder
+rmpath(genpath(nameAssignmentFolder))
 if exist(nameAssignmentFolder)
     warning off
+    fclose('all'); %close all files, because after copy Matlab does not release a file
+    A = dir( nameAssignmentFolder )
+    for k = 1:length(A)
+        delete([ nameAssignmentFolder  '\' A(k).name])
+    end   
     rmdir(nameAssignmentFolder,'s');
 end
 warning on
 copyfiles(listWithNeededFolder{2},nameAssignmentFolder);
 addpath(genpath(nameAssignmentFolder))
+fclose('all'); %close all files, because after copy Matlab does not release a file
 
-%% Create new filenames (with HASH code AND combine file names
+%% Create new filenames (with HASH code AND combine file names)
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
 ext = '.m';
 % change current folder
@@ -88,15 +92,32 @@ for wk = 1:length(namesWeekDirectories)
                 header = combineTextOfDifferentFiles('top_mc_question.m');
                 %         elseif
             end
-            
+            % Create header with hash of file
             headerHash{1} = header{1};
             uniqueFN = generateUniqueFilename(namefile,year);
             headerHash{2} = uniqueFN.HashCommentLine;
+            % Grab default header text for every m-file
             for hh = 2:length(header)
-               headerHash{hh+1} = header{hh};
+                headerHash{length(headerHash)+1} = header{hh};
             end
+            % Copy the clean/original file
+            clean_file = combineTextOfDifferentFiles([namefile ext]);
+            for hh = 1:length(clean_file)
+                headerHash{length(headerHash)+1} = clean_file{hh};
+            end
+            % Go inside current folder
+            cd(subdirs{end})
+            % Create unique filename
+            uniqueFileName = [namefile '_' uniqueFN.Hash];
+            makeMFileFromCells(uniqueFileName,headerHash)
+            movefile([namefile '_ANT' ext],[namefile '_ANT_' uniqueFN.Hash ext]);
+            delete([namefile ext])
+            % Go back to current folder
+            clear headerHash
+            cd ..
             
-            makeMFileFromCells('testGODVERDOMME',headerHash)
+            cd ..
+            cd ..
             % combine header for every assigment with assignment and give hashname
             
             % delete the original file
