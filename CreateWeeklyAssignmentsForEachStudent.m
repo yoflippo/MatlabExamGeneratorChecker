@@ -23,7 +23,7 @@
        HashCodes{h} = mfilesOI{1,h}(hashPos(1)+1:hashPos(2)-1) ;
     end
     % Combine the relevant files in a Container (dictionary) so the
-    % hashcode is combined with a location
+    % hashcode is combined with a location for fast lookup
     mapWithHash = containers.Map(HashCodes,mfilesOI);
 
     % Create a working folder called 'student-assignments'

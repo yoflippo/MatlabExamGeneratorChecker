@@ -22,21 +22,6 @@ for i = 1:length(listWithNeededFolder)
     end
 end
 
-%% Read the student number and convert the list to e-mailadresses
-studentFolder = listWithNeededFolder{3};
-studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
-
-% go to the folder with studentnumbers. It is assumed to be a list with
-% doubles
-scriptFolder = pwd;
-cd(studentFolder)
-studentNumbers = load(studentFolderOutput{1});
-cd(scriptFolder)
-% Reshuffle the list with student numbers (removing patterns)
-studentNumbers = studentNumbers(randperm(length(studentNumbers)));
-% Convert the reshuffled list of student number to e-mailadresses
-studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
-
 %% Copy the folder called 'clean_source_assignments'.
 %%We want to leave the original folder intact
 nameAssignmentFolder = 'assignments';
@@ -59,11 +44,35 @@ copyfiles(listWithNeededFolder{2},nameAssignmentFolder);
 addpath(genpath(nameAssignmentFolder))
 fclose('all'); %close all files, because after copy Matlab does not release a file
 
+%% Read the student number and convert the list to e-mailadresses
+studentFolder = listWithNeededFolder{3};
+studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
+
+% go to the folder with studentnumbers. It is assumed to be a list with
+% doubles
+scriptFolder = pwd;
+cd(studentFolder)
+studentNumbers = load(studentFolderOutput{1});
+cd(scriptFolder)
+% Reshuffle the list with student numbers (removing patterns)
+studentNumbers = studentNumbers(randperm(length(studentNumbers)));
+% Convert the reshuffled list of student number to e-mailadresses
+studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
+% Write the list of e-mailadresses to a txt file
+cd(nameAssignmentFolder)
+fid = fopen('emailadressen.txt','w');
+for i=1:length(studentEmailadresses)
+   fprintf(fid,'%s',studentEmailadresses{i});
+   fprintf(fid,'\n');
+end
+fclose(fid);
+
+
 %% Create new filenames (with HASH code AND combine file names)
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
 ext = '.m';
 % change current folder
-cd(nameAssignmentFolder)
+
 for wk = 1:length(namesWeekDirectories)
     % find all files in weekX folder
     weekAssignments = readFilesInSubFolder(namesWeekDirectories{wk},ext);
