@@ -1,5 +1,6 @@
-function [outVar] = combineTextOfDifferentFiles(varargin)
-%COMBINETEXTOFDIFFERENTFILES <short description>
+function [HashCode] = GetHashCodeFromMFile(fileNameWithLocation)
+%GETHASHCODEFROMMFILE This script extracts the HashCode from a certain
+%file.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -18,7 +19,10 @@ function [outVar] = combineTextOfDifferentFiles(varargin)
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
 %
-% DESCRIPTION:
+% DESCRIPTION: 
+% Warning: this functionality of this file heavily depends on agreements
+% regarding file structure. For instance: the hashcode of every exercise is
+% on the second line. Changing these structures will lead to errors.
 %
 %
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -35,27 +39,25 @@ function [outVar] = combineTextOfDifferentFiles(varargin)
 %
 %
 
-% $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
-%<Description>
+% $Revision: 0.0.0 $  $Date: 2017-07-26 $
+% Creation of ilfe
 
 %% Read the data of file
-concatenatedTxt = {};
-cnt = 1;
-% fetch txt
-for i = 1:length(varargin)
-    filename = varargin{i};
-    delimiter = {''};
-    formatSpec = '%s%[^\n\r]';
-    fileID = fopen(filename,'r');
-    dataArray{i} = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
-        'TextType', 'string',  'ReturnOnError', false);
-    fclose(fileID);
-    % copy text lines
-    for j = 1:length(dataArray{1,i}{1,1})
-        concatenatedTxt{cnt} = dataArray{1,i}{1,1}{j};
-        cnt = cnt + 1;
-    end
-end
+delimiter = {''};
+formatSpec = '%s%[^\n\r]';
+fileID = fopen(fileNameWithLocation,'r');
 
-outVar = concatenatedTxt;
+dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
+    'TextType', 'string',  'ReturnOnError', false);
+fclose(fileID);
+HashString = dataArray{1,1}(2,:);
+HashString = char(HashString(1));
+underscorePos = strfind(HashString,'|');
+lu = length(underscorePos);
+if lu ~= 2
+    error('the number of symbols that separate the Hashcode is incorrect');
 end
+HashCode = HashString(underscorePos(1)+1:underscorePos(2)-1);
+
+
+
