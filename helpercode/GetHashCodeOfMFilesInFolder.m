@@ -1,6 +1,7 @@
-function [HashCode] = GetHashCodeFromMFile(fileNameWithLocation)
-%GETHASHCODEFROMMFILE This script extracts the HashCode from a certain
-%file.
+function HashCodes = CheckHashCodeOfMFilesInFolder(folder)
+%CHECHHASCODEOFMFILESINFOLDER This function checks if all the m-files in
+%the given directory contain hashcodes as created by us. The goal is to
+%check if students altered the forbidden parts of the given code.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -36,25 +37,21 @@ function [HashCode] = GetHashCodeFromMFile(fileNameWithLocation)
 %
 %
 
-% $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
-% Creation
+% $Revision: 0.0.0 $  $Date: 2017-07-26 $
+% Creation of function
 
-%% Read the data of file
-delimiter = {''};
-formatSpec = '%s%[^\n\r]';
-fileID = fopen(fileNameWithLocation,'r');
+% Get an overview of files
+mfiles = readFilesInSubFolder(folder,'.m');
 
-dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
-    'TextType', 'string',  'ReturnOnError', false);
+% Filter the relevant files, only files with 'vraag' are relevant
+mfilesOI = strfind(mfiles,'vraag_'); %files of interest
+mfiles = mfiles(cellfun('length',mfilesOI)==2);
 
-HashString = dataArray{1,1}(2,:);
-HashString 
-underscorePos = strfind(HashString,'|');
-lu = length(underscorePos);
-if lu ~= 2
-    error('the number of symbols that separate the Hashcode is incorrect');
+% Further filter the files down to files without the postfix '_ans'
+mfilesOI = strfind(mfiles,'_ANT'); %files of interest
+mfilesOI = mfiles(cellfun('isempty',mfilesOI));
+
+HashCodes = [];
+for i = 1:length(mfilesOI)
+    HashCodes{i} = GetHashCodeFromMFile(mfilesOI{1,i});
 end
-HashCode = HashString(1)(underscorePos(1)+1:underscorePos(2)-1);
-
-
-
