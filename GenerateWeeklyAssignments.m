@@ -4,18 +4,16 @@
 % Week. These assignment need to be handed in on a set time (preferably
 % via an LMS like Blackboard).
 % The solutions from the students are automatically checked in with an script
-DEBUGOUTPUT = 1;
+Constants
 
 %% Start fresh and remove every file, Command Window
 debugOutput(DEBUGOUTPUT,'Start fresh and remove every file, Command Window');
 clc; close all; close all hidden;
 addpath(genpath(pwd));
-year = 2017;
+
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
-listWithNeededFolder = {'helpercode' 'clean_source_assignments' 'studentnumbers' ...
-    'clean_source' };
 for i = 1:length(listWithNeededFolder)
     try
         cd(listWithNeededFolder{i});
@@ -29,7 +27,7 @@ end
 %% Copy the folder called 'clean_source_assignments'.
 debugOutput(DEBUGOUTPUT,'Copy the folder called clean_source_assignments');
 %%We want to leave the original folder intact
-nameAssignmentFolder = 'unique_assignments';
+
 % delete previously generated folder
 rmpath(genpath(nameAssignmentFolder))
 if exist(nameAssignmentFolder)
@@ -100,7 +98,7 @@ for wk = 1:length(namesWeekDirectories)
             end
             % Create header with hash of file
             headerHash{1} = header{1};
-            uniqueFN = generateUniqueFilename(namefile,year);
+            uniqueFN = generateUniqueFilename(namefile,YEAR);
             headerHash{2} = uniqueFN.HashCommentLine;
             % Grab default header text for every m-file
             for hh = 2:length(header)

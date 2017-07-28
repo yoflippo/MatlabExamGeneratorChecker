@@ -1,12 +1,9 @@
 %% Create the assignments
 clc;
-WEEK = 1; % make zero to delete base folder
-DEBUGOUTPUT = 1;
+Constants
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
-listWithNeededFolder = {'helpercode' 'clean_source_assignments' 'studentnumbers' ...
-    'clean_source' };
 for i = 1:length(listWithNeededFolder)
     try
         cd(listWithNeededFolder{i});
@@ -21,8 +18,6 @@ end
 
 %% Create a working folder called 'student-assignments'
 debugOutput(DEBUGOUTPUT,'Create a working folder called student-assignments');
-studentAssDir = 'student_week_assignments';
-assignmentsDir = 'unique_assignments';
 wkFolderName = [studentAssDir filesep 'week' num2str(WEEK)];
 %remove folder if it exists
 if exist(studentAssDir) && isequal(WEEK,0)
@@ -42,7 +37,7 @@ end
 
 %% Create a student specific folder in every week folder
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder');
-cd(assignmentsDir)
+cd(nameAssignmentFolder)
 load('studentNumbers.mat');
 cd ..
 % Create weekfolders
@@ -61,13 +56,13 @@ debugOutput(DEBUGOUTPUT,'Get overview of file versions, and assign to studentNum
 % folder can be assigned sequently to the studentnumbers without
 % introducing some kind of detectable order.
 global output; output = [];
-deepestAssignFolders = GetDeepestFolders(assignmentsDir);
+deepestAssignFolders = GetDeepestFolders(nameAssignmentFolder);
 % Make relative path
 for i = 1:length(deepestAssignFolders)
-    deepestAssignFolders{i} = extractAfter(deepestAssignFolders{i},assignmentsDir);
+    deepestAssignFolders{i} = extractAfter(deepestAssignFolders{i},nameAssignmentFolder);
     % Count the number of assignment in every folder (with '_ANT')
     currPath = pwd;
-    cd([assignmentsDir filesep deepestAssignFolders{i}]);
+    cd([nameAssignmentFolder filesep deepestAssignFolders{i}]);
     answerFilesInDir{i} = dir('*_ANT*');
     numberOfAssignmentInDir(i) = length(answerFilesInDir{i});
     cd(currPath);
@@ -80,11 +75,10 @@ debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignment
 % student.
 % Go to student directory
 cd(wkFolderName);
-dirs = dir(pwd);
+studentDirs = dir(pwd);
 cd ..; cd ..;
 answerFileCounter = ones(1,length(deepestAssignFolders));
-for i = 3:length(dirs)
-% %     cd(dirs(i).name);
+for i = 3:length(studentDirs)
     % Browse to every assignment folder
     for j = 1:length(deepestAssignFolders)
         % Also copy the subfolder
