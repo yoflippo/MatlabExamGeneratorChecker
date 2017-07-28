@@ -73,7 +73,6 @@ for i = 1:length(deepestAssignFolders)
     cd(currPath);
 end
 
-
 %% Fill every student folder with the number of assignments sequentially
 debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments sequentially');
 % Zip the assignment and give it the student number corresponding to the
@@ -81,13 +80,9 @@ debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignment
 % Go to student directory
 cd(wkFolderName);
 dirs = dir(pwd);
-cd ..; cd ..;
-answerFileCounter = ones(1,length(deepestAssignFolders));
+answerFileCounter = [];
 for i = 3:length(dirs)
-% %     cd(dirs(i).name);
-    % Browse to every assignment folder
-    for j = 1:length(deepestAssignFolders)
-        % Also copy the subfolder
-    end
+    cd(dirs(i).name);
+    
     cd ..
 end

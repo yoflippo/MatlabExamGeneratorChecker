@@ -2,9 +2,6 @@ function output = GetDeepestFolders(location)
 %GETDEEPESTFOLDERS This function needs this line to be present before calling 
 %this function: "global output;".
 %
-%This function will check for the existence in
-%every lowest folder. This can be used for checking of the 'deelpunten.m'
-%file is present in every folder.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)

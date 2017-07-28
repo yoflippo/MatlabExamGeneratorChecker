@@ -1,3 +1,6 @@
+function debugOutput(blGiveOutputToCW, message)
+%DEBUGOUTPUT for debug and info purposes
+%
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
@@ -14,19 +17,28 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
+% 
+% DESCRIPTION:
+%
+% 
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+% 
+% PARAMETERS:
+%               varargin:   <text>
+%               varargin:   <text>
+%
+% RETURN:       
+%               outvar:     <text>     
+%               outvar:     <text>
+% 
+% EXAMPLES:
+%
+%
 
-% A testscript can be runned by the Matlab unit test environment by calling
-% : result = runtests('<name of testscript>');
-% For more info: https://nl.mathworks.com/help/matlab/ref/assert.html
-% For more info: https://nl.mathworks.com/help/matlab/ref/runtests.html
-
-% Test unit case 1
-clear all; close all; clc;
-global output;
-blCheck = GetDeepestFolders('testdata');
-% Make relative path
-for i = 1:length(blCheck)
-extractAfter(blCheck{i},'testdata')
+% $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
+%<Description>
+if blGiveOutputToCW
+   disp(message); 
 end
 
-assert(~isempty(blCheck));
+end

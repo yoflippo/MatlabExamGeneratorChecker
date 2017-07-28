@@ -51,7 +51,6 @@ addpath(genpath(nameAssignmentFolder))
 fclose('all'); %close all files, because after copy Matlab does not release a file
 
 %% Read the student number and convert the list to e-mailadresses
-debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses');
 studentFolder = listWithNeededFolder{3};
 studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
 % go to the folder with studentnumbers. It is assumed to be a list with
@@ -76,7 +75,6 @@ fclose(fid);
 save('studentNumbers.mat','studentNumbers'); 
 
 %% Create new filenames (with HASH code AND combine file names)
-debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)');
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
 ext = '.m';
 for wk = 1:length(namesWeekDirectories)
