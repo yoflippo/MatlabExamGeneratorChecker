@@ -76,7 +76,6 @@ save('studentNumbers.mat','studentNumbers');
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)');
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
-ext = '.m';
 for wk = 1:length(namesWeekDirectories)
     % find all files in weekX folder
     weekAssignments = readFilesInSubFolder(namesWeekDirectories{wk},ext);

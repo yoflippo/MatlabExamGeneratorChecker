@@ -5,3 +5,4 @@ listWithNeededFolder = {'helpercode' 'clean_source_assignments' 'studentnumbers'
     'clean_source' };
 nameAssignmentFolder = 'unique_assignments';
 studentAssDir = 'student_week_assignments';
+ext = '.m';

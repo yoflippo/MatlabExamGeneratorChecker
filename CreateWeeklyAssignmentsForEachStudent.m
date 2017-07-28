@@ -9,8 +9,8 @@ for i = 1:length(listWithNeededFolder)
         cd(listWithNeededFolder{i});
         cd ..
     catch
-          error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ... 
-            'The folder: ' listWithNeededFolder{i} ' was not found']);       
+        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
+            'The folder: ' listWithNeededFolder{i} ' was not found']);
     end
 end
 
@@ -18,21 +18,17 @@ end
 
 %% Create a working folder called 'student-assignments'
 debugOutput(DEBUGOUTPUT,'Create a working folder called student-assignments');
-wkFolderName = [studentAssDir filesep 'week' num2str(WEEK)];
+weekName = ['week' num2str(WEEK)];
+wkFolderName = [studentAssDir filesep weekName];
 %remove folder if it exists
 if exist(studentAssDir) && isequal(WEEK,0)
-    try
-        warning off
-        fclose('all'); %close all files, because after copy Matlab does not release a file
-        A = dir( studentAssDir );
-        for k = 1:length(A)
-            delete([ studentAssDir  '\' A(k).name]);
-        end
-        rmdir(studentAssDir,'s');
-    catch
-    end
+    dirToRemove = studentAssDir;
 else
-    rmdir(wkFolderName,'s');
+    dirToRemove = wkFolderName;
+end
+try
+    removeShitFromDir(dirToRemove);
+catch
 end
 
 %% Create a student specific folder in every week folder
@@ -68,20 +64,37 @@ for i = 1:length(deepestAssignFolders)
     cd(currPath);
 end
 
-
 %% Fill every student folder with the number of assignments sequentially
 debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments sequentially');
 % Zip the assignment and give it the student number corresponding to the
 % student.
-% Go to student directory
-cd(wkFolderName);
-studentDirs = dir(pwd);
-cd ..; cd ..;
 answerFileCounter = ones(1,length(deepestAssignFolders));
-for i = 3:length(studentDirs)
-    % Browse to every assignment folder
+for i = 1:length(studentNumbers)
+    % Browse to every assignment folder, PLEASE NOTICE: here randomness is
+    % introduced here, but could be improved by implementing a random
+    % generator everytime an assignment is chosen
+    studentDir = num2str(studentNumbers(i));
+    currStudentDir = [wkFolderName filesep studentDir];
     for j = 1:length(deepestAssignFolders)
-        % Also copy the subfolder
+        cnt = answerFileCounter(j); %
+        currFile = [deepestAssignFolders{j} filesep answerFilesInDir{1,j}(cnt).name];
+        currFile = [currFile(1:end-5) ext];         % rename the file to a file without _ANT
+        % file to copy
+        sourceFile = [nameAssignmentFolder currFile];
+        % create the right dir tree within student folder
+        currFileClean = [currFile(1:end-36) ext];
+        finFileLoc = [currStudentDir currFileClean];
+        % Copy file from unique assignment dir to student folder with
+        % subdirs
+        mkdir([wkFolderName filesep studentDir deepestAssignFolders{j}])
+        copyfile(sourceFile,finFileLoc)
+        % Reset counter if last file is reached
+        if isequal(numberOfAssignmentInDir(j),answerFileCounter(j))
+            answerFileCounter(j) = 1;
+        else
+            answerFileCounter(j) = cnt + 1;
+        end
     end
-    cd ..
+    zip([wkFolderName filesep weekName '_' studentDir '.zip'],currStudentDir)
+    removeShitFromDir(currStudentDir);
 end
