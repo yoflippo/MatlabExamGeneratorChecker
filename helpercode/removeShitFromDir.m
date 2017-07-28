@@ -37,12 +37,15 @@ function removeShitFromDir(dirToRemove)
 
 % $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
 %<Description>
-warning off
-fclose('all'); %close all files, because after copy Matlab does not release a file
-A = dir( dirToRemove );
-for k = 1:length(A)
-    delete([ dirToRemove  '\' A(k).name]);
+try
+    warning off
+    fclose('all'); %close all files, because after copy Matlab does not release a file
+    A = dir( dirToRemove );
+    for k = 1:length(A)
+        delete([ dirToRemove  '\' A(k).name]);
+    end
+    rmdir(dirToRemove,'s');
+    warning on
+catch
 end
-rmdir(dirToRemove,'s');
-
 end

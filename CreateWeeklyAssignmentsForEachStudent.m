@@ -26,10 +26,8 @@ if exist(studentAssDir) && isequal(WEEK,0)
 else
     dirToRemove = wkFolderName;
 end
-try
-    removeShitFromDir(dirToRemove);
-catch
-end
+removeShitFromDir(dirToRemove);
+
 
 %% Create a student specific folder in every week folder
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder');
@@ -68,6 +66,7 @@ end
 debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments sequentially');
 % Zip the assignment and give it the student number corresponding to the
 % student.
+q34g09ujawdpgj error here because week 2 and 1 ad once
 answerFileCounter = ones(1,length(deepestAssignFolders));
 for i = 1:length(studentNumbers)
     % Browse to every assignment folder, PLEASE NOTICE: here randomness is
