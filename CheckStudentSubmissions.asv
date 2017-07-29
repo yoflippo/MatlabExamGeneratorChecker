@@ -1,4 +1,5 @@
-
+%CHECKSTUDENTSUBMISSIONS
+%
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
@@ -15,18 +16,27 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
+% 
+% DESCRIPTION:
+%
+% 
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+% 
 
-DEBUGOUTPUT = 1;
-% make zero to delete base folder
-WEEK = 1; 
-WEEKNAME = ['week' num2str(WEEK)];
- % important determines the unique hashcode
-YEAR = 2017;
-LISTWITHNEEDEDFOLDERS = {'helpercode' 'clean_source_assignments' 'studentnumbers' ...
-                        'clean_source_headers' };
-                    
-NAMEASSIGNMENTFOLDER = 'unique_assignments';
-STUDENTASSFOLDER = 'student_week_assignments';
-STUDENTSUBFOLDER = 'student_submission';
-EXT = '.m';
-SOLPOSTFIX = '_SOL';
+% $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
+% Creation of script
+clc; clear variables;
+Constants
+debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments sequentially',1);
+correct = input(['Is this the correct week?: ' num2str(WEEK) ... 
+                 ' (not giving an answer is YES)']);
+if ~isempty(correct)
+    return
+end
+subWkFolder = [STUDENTSUBFOLDER filesep WEEKNAME];             
+
+%% Check if needed folder exists, if not stop execution of script
+if ~exist(subWkFolder)
+    disp('
+end

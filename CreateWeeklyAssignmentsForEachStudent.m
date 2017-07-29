@@ -28,6 +28,7 @@
 %
 % TODO: Give a message to student as last assigment to zip the folder
 % before submitting
+% TODO: Create a script that generates the solutions per student
 %
 %
 
@@ -42,13 +43,13 @@ debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);
 
-for i = 1:length(listWithNeededFolder)
+for i = 1:length(LISTWITHNEEDEDFOLDERS)
     try
-        cd(listWithNeededFolder{i});
+        cd(LISTWITHNEEDEDFOLDERS{i});
         cd ..
     catch
         error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
-            'The folder: ' listWithNeededFolder{i} ' was not found']);
+            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end
 end
 
@@ -57,11 +58,10 @@ end
 %% Create a working folder called 'student-assignments'
 debugOutput(DEBUGOUTPUT,'Create a working folder called student-assignments',1);
 
-weekName = ['week' num2str(WEEK)];
-wkFolderName = [studentAssDir filesep weekName];
+wkFolderName = [STUDENTASSFOLDER filesep WEEKNAME];
 %remove folder if it exists
-if exist(studentAssDir) && isequal(WEEK,0)
-    dirToRemove = studentAssDir;
+if exist(STUDENTASSFOLDER) && isequal(WEEK,0)
+    dirToRemove = STUDENTASSFOLDER;
 else
     dirToRemove = wkFolderName;
 end
@@ -71,10 +71,10 @@ removeShitFromDir(dirToRemove);
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
 
 % Load the studentnumbers (randomly ordered)
-load([nameAssignmentFolder filesep 'studentNumbers.mat']);
+load([NAMEASSIGNMENTFOLDER filesep 'studentNumbers.mat']);
 % Create weekfolders
 mkdir(wkFolderName)
-% Create a studentAssDir inside every weekfolder
+% Create a STUDENTASSFOLDER inside every weekfolder
 for i = 1:length(studentNumbers)
     mkdir([wkFolderName filesep num2str(studentNumbers(i))]);
 end
@@ -86,13 +86,13 @@ debugOutput(DEBUGOUTPUT,'Get overview of file versions, and assign to studentNum
 % folder can be assigned sequently to the studentnumbers without
 % introducing some kind of detectable order.
 global output; output = [];
-deepestAssignFolders = GetDeepestFolders([nameAssignmentFolder filesep weekName]);
+deepestAssignFolders = GetDeepestFolders([NAMEASSIGNMENTFOLDER filesep WEEKNAME]);
 % Make relative path
 for i = 1:length(deepestAssignFolders)
-    deepestAssignFolders{i} = extractAfter(deepestAssignFolders{i},nameAssignmentFolder);
+    deepestAssignFolders{i} = extractAfter(deepestAssignFolders{i},NAMEASSIGNMENTFOLDER);
     % Count the number of assignment in every folder (with '_SOL')
     currPath = pwd;
-    cd([nameAssignmentFolder filesep deepestAssignFolders{i}]);
+    cd([NAMEASSIGNMENTFOLDER filesep deepestAssignFolders{i}]);
     answerFilesInDir{i} = dir(['*' SOLPOSTFIX '*']);
     numberOfAssignmentInDir(i) = length(answerFilesInDir{i});
     cd(currPath);
@@ -112,11 +112,11 @@ for i = 1:length(studentNumbers)
         cnt = answerFileCounter(j); %
         currFile = [deepestAssignFolders{j} filesep answerFilesInDir{1,j}(cnt).name];
         % rename the file to a file without _SOL
-        currFile = [currFile(1:end-5) ext];         
+        currFile = [currFile(1:end-5) EXT];         
         % file to copy
-        sourceFile = [nameAssignmentFolder currFile];
+        sourceFile = [NAMEASSIGNMENTFOLDER currFile];
         % create the right dir tree within student folder
-        currFileClean = [currFile(1:end-36) ext];
+        currFileClean = [currFile(1:end-36) EXT];
         % create the rel path string with final naming
         finFileLoc = [currStudentDir currFileClean];
         % Copy file from unique assignment dir to student folder with
@@ -134,7 +134,7 @@ for i = 1:length(studentNumbers)
     % student.
     currPath = pwd;
     cd(currStudentDir);
-    zip(['..' filesep weekName '_' studentDir '.zip'],pwd)
+    zip(['..' filesep WEEKNAME '_' studentDir '.zip'],pwd)
     cd(currPath);
     % Remove the folder that is previously zipped
     removeShitFromDir(currStudentDir);
@@ -144,9 +144,9 @@ end
 debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);
 
 currPath = pwd;
-cd(studentAssDir)
-zip(['Biostatica_Programmeren_StudentOpdrachten_' num2str(YEAR) '_' weekName ...
-    '.zip'],weekName)
+cd(STUDENTASSFOLDER)
+zip(['Biostatica_Programmeren_StudentOpdrachten_' num2str(YEAR) '_' WEEKNAME ...
+    '.zip'],WEEKNAME)
 cd(currPath)
 removeShitFromDir(wkFolderName)
 

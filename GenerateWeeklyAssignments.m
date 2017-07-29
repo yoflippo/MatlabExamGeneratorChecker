@@ -53,13 +53,13 @@ addpath(genpath(pwd));
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);
 
-for i = 1:length(listWithNeededFolder)
+for i = 1:length(LISTWITHNEEDEDFOLDERS)
     try
-        cd(listWithNeededFolder{i});
+        cd(LISTWITHNEEDEDFOLDERS{i});
         cd ..
     catch
         error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
-            'The folder: ' listWithNeededFolder{i} ' was not found']);
+            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end
 end
 
@@ -67,17 +67,17 @@ end
 debugOutput(DEBUGOUTPUT,'Copy the folder called clean_source_assignments',1);
 
 % Delete previously generated folder
-removeShitFromDir(nameAssignmentFolder);
+removeShitFromDir(NAMEASSIGNMENTFOLDER);
 % Copy files
-copyfiles(listWithNeededFolder{2},nameAssignmentFolder);
-addpath(genpath(nameAssignmentFolder))
+copyfiles(LISTWITHNEEDEDFOLDERS{2},NAMEASSIGNMENTFOLDER);
+addpath(genpath(NAMEASSIGNMENTFOLDER))
 % After copy Matlab does not release a file
 fclose('all');
 
 %% Read the student number and convert the list to e-mailadresses
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
 
-studentFolder = listWithNeededFolder{3};
+studentFolder = LISTWITHNEEDEDFOLDERS{3};
 studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
 % go to the folder with studentnumbers. It is assumed to be a list with
 % doubles
@@ -87,7 +87,7 @@ studentNumbers = studentNumbers(randperm(length(studentNumbers)));
 % Convert the reshuffled list of student number to e-mailadresses
 studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
 % Write the list of e-mailadresses to a txt file
-cd(nameAssignmentFolder)
+cd(NAMEASSIGNMENTFOLDER)
 fid = fopen('emailadressen.txt','w');
 for i=1:length(studentEmailadresses)
     fprintf(fid,'%s',studentEmailadresses{i});
@@ -102,13 +102,13 @@ debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file n
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
 for wk = 1:length(namesWeekDirectories)
     % find all files in weekX folder
-    weekAssignments = readFilesInSubFolder(namesWeekDirectories{wk},ext);
+    weekAssignments = readFilesInSubFolder(namesWeekDirectories{wk},EXT);
     % traverse the week folder
     for fl = 1:length(weekAssignments)
         currentFile = weekAssignments{fl};
-        [relpath,namefile,ext] = fileparts(currentFile);
+        [relpath,namefile,EXT] = fileparts(currentFile);
         % find m-file with the answer/solution file
-        if exist([relpath filesep namefile '_SOL' ext])
+        if exist([relpath filesep namefile '_SOL' EXT])
             % check which types of questions are in the subfolder of the
             % current weekfolder
             subdirs = strsplit(relpath,filesep);
@@ -131,7 +131,7 @@ for wk = 1:length(namesWeekDirectories)
                 headerHash{length(headerHash)+1} = header{hh};
             end
             % Copy the clean/original file
-            clean_file = combineTextOfDifferentFiles([namefile ext]);
+            clean_file = combineTextOfDifferentFiles([namefile EXT]);
             for hh = 1:length(clean_file)
                 headerHash{length(headerHash)+1} = clean_file{hh};
             end
@@ -142,9 +142,9 @@ for wk = 1:length(namesWeekDirectories)
                 uniqueFN.Hash '_' ];
             makeMFileFromCells(uniqueFileName,headerHash)
             % Rename the ANS file
-            movefile([namefile SOLPOSTFIX ext],[extractBefore(namefile,'_versie')...
-                '_' uniqueFN.Hash SOLPOSTFIX ext]);
-            fclose('all'); delete([namefile ext]);
+            movefile([namefile SOLPOSTFIX EXT],[extractBefore(namefile,'_versie')...
+                '_' uniqueFN.Hash SOLPOSTFIX EXT]);
+            fclose('all'); delete([namefile EXT]);
             % Go back to current folder and clear variable
             clear headerHash
             cd ..; cd ..; cd ..;
@@ -152,4 +152,4 @@ for wk = 1:length(namesWeekDirectories)
     end
 end
 cd ..
-toc
+debugOutput(DEBUGOUTPUT,'END SCRIPT',1);
