@@ -16,14 +16,14 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 % This file creates randomly assignments to students and zips to folder for
-% every student. This script depends on the Constants.m file (as does 
+% every student. This script depends on the Constants.m file (as does
 % the GENERATEWEEKLYASSIGNMENTS script). For week1 to assign assignments to
 % a student the 'week' variable in Constant.m has to be changed to 1.
 %
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % TODO: Give a message to student as last assigment to zip the folder
@@ -70,10 +70,11 @@ debugOutput(DEBUGOUTPUT,'Get overview of file versions, and assign to studentNum
 % folder can be assigned sequently to the studentnumbers without
 % introducing some kind of detectable order.
 global output; output = [];
-deepestAssignFolders = GetDeepestFolders([NAMEASSIGNMENTFOLDER filesep WEEKNAME]);
+deepestAssignFolders = GetDeepestFolders(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME));
 % Make relative path
 for i = 1:length(deepestAssignFolders)
     deepestAssignFolders{i} = extractAfter(deepestAssignFolders{i},NAMEASSIGNMENTFOLDER);
+    deepestAssignFoldersWithoutWeek{i} = extractAfter(deepestAssignFolders{i},WEEKNAME);
     % Count the number of assignment in every folder (with '_SOL')
     currPath = pwd;
     cd([NAMEASSIGNMENTFOLDER filesep deepestAssignFolders{i}]);
@@ -81,12 +82,15 @@ for i = 1:length(deepestAssignFolders)
     numberOfAssignmentInDir(i) = length(answerFilesInDir{i});
     cd(currPath);
 end
+% Save the answer files in the corresponding week folder
+save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['answerfiles_' WEEKNAME '.mat']),'answerFilesInDir');
 
 %% Fill every student folder with the number of assignments sequentially
 debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments sequentially',1);
 
 answerFileCounter = ones(1,length(deepestAssignFolders));
 for i = 1:length(studentNumbers)
+    warning off
     % Browse to every assignment folder, PLEASE NOTICE: randomness is
     % used here, but could be improved by implementing a random
     % generator everytime an assignment is chosen
@@ -96,16 +100,19 @@ for i = 1:length(studentNumbers)
         cnt = answerFileCounter(j); %
         currFile = [deepestAssignFolders{j} filesep answerFilesInDir{1,j}(cnt).name];
         % rename the file to a file without _SOL
-        currFile = [currFile(1:end-5) EXT];         
+        currFile = [currFile(1:end-5) EXT];
         % file to copy
         sourceFile = [NAMEASSIGNMENTFOLDER currFile];
         % create the right dir tree within student folder
         currFileClean = currFile(1:end-36);
+        % remove redundant folder
+        currFileClean = GetPathOneLevelUp(currFileClean);
         % create the rel path string with final naming
-        finFileLoc = [currStudentDir currFileClean '_' num2str(studentDir) '_' EXT];
+        % % % %         finFileLoc = [currStudentDir currFileClean '_' num2str(studentDir) '_' EXT];
+        finFileLoc = [currStudentDir currFileClean EXT];
         % Copy file from unique assignment dir to student folder with
         % subdirs
-        mkdir([wkFolderName filesep studentDir deepestAssignFolders{j}])
+        mkdir([wkFolderName filesep studentDir GetPathOneLevelUp(deepestAssignFolders{j})])
         copyfile(sourceFile,finFileLoc)
         % Reset counter if last file is reached
         if isequal(numberOfAssignmentInDir(j),answerFileCounter(j))
@@ -116,6 +123,10 @@ for i = 1:length(studentNumbers)
     end
     % Copy the finishing script that a student needs to use
     copyfile(fullfile(pwd,'AfrondenWeekOpdracht.m'),fullfile(currStudentDir,WEEKNAME))
+    % Create a file with the studentnumber
+    fid = fopen(fullfile(currStudentDir,WEEKNAME,'studentnummer.m'),'w'); 
+    fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
+    fclose(fid);
     % Zip the assignment and give it the student number corresponding to the
     % student.
     currPath = pwd;
@@ -124,7 +135,9 @@ for i = 1:length(studentNumbers)
     cd(currPath);
     % Remove the folder that is previously zipped
     removeShitFromDir(currStudentDir);
+    warning on
 end
+
 
 %% Zip the folder with zipped-assignments per student and delete that folder
 debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);

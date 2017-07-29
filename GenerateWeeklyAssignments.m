@@ -32,7 +32,7 @@
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 %
-%
+% TODO: save the generated files in a zip with date (for savety purposes)
 %
 
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-27 $
@@ -40,7 +40,6 @@
 
 %% Start fresh
 Constants
-addpath(genpath(pwd));
 debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
 
 %% Check for the existence of needed supporting scripts/function files

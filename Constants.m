@@ -16,6 +16,7 @@
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
 clc; clear variables; close all; close all hidden;
+addpath(genpath(pwd));
 DEBUGOUTPUT = 1;
 % make zero to delete base folder
 WEEK = 1; 

@@ -43,6 +43,7 @@ subWkFolder = [STUDENTSUBFOLDER filesep WEEKNAME];
 
 %% Check if needed folder exists, if not stop execution of script
 debugOutput(DEBUGOUTPUT,'Check if needed folder exists, if not stop execution of script',0);
+
 if ~exist(STUDENTSUBFOLDER)
     mkdir(STUDENTSUBFOLDER)
 end
@@ -56,8 +57,23 @@ debugOutput(DEBUGOUTPUT,'Check existence of  Matrix with studentnumbers and grad
 
 %% Check which students have submitted their assignments. Student without do not get any points
 debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. Student without do not get any points',0);
+
 % Get files in the folder for analysis
-files = dir(subWkFolder)
+files = dir(subWkFolder);
+oldPath = pwd;
+cd(subWkFolder);
+% Get studentnumbers of students that submitted AND unzip the folder
+for i = 3:length(files)
+    studentsThatSubmitted{i-2} = files(i).name(end-11:end-4);
+    unzip(fullfile(subWkFolder,files(i).name));
+end
+cd(oldPath);
+% Load the old studentNumbers
+load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
+% Display how many students did not submit
+numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
+disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments']) 
+
 
 
 %% Check if the HASH-codes in every m-file of the students is intact
