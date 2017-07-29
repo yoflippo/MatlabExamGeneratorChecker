@@ -39,10 +39,9 @@
 % Creation of script.
 
 %% Start fresh
-debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
-
 Constants
 addpath(genpath(pwd));
+debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);

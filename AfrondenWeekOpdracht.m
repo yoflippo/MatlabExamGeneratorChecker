@@ -74,9 +74,23 @@
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
 % Creation of script
 
-% Get current location of this mfile
-currPath = pwd;
-pathOfThisScript = mfilename('fullpath');
-wkFolder = extractBefore(pathOfThisScript,mfilename)
+% Go to upper folder (the week folder)
+cd ..
+% Find the mfiles
+mfiles = dir('**/*.m');
+% Get last mfile
+lastMFile = mfiles(end).name;
+% Extract studentnumber
+studentNumber = lastMFile(end-10:end-3);
+% Message to student
+clc
+disp('Er is nu zip-bestand aangemaakt die je moet opsturen')
+disp(['Dat zip-bestand heet: Biostatica_ToSubmit_' studentNumber '.zip']);
+% Zip the file
+zip(['..' filesep 'Biostatica_ToSubmit_' studentNumber '.zip'],pwd)
+filebrowser
+cd ..
+
+
 
 

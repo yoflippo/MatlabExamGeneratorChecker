@@ -114,6 +114,8 @@ for i = 1:length(studentNumbers)
             answerFileCounter(j) = cnt + 1;
         end
     end
+    % Copy the finishing script that a student needs to use
+    copyfile(fullfile(pwd,'AfrondenWeekOpdracht.m'),fullfile(currStudentDir,WEEKNAME))
     % Zip the assignment and give it the student number corresponding to the
     % student.
     currPath = pwd;
