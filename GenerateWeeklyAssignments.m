@@ -8,12 +8,14 @@ Constants
 
 %% Start fresh and remove every file, Command Window
 debugOutput(DEBUGOUTPUT,'Start fresh and remove every file, Command Window');
+
 clc; close all; close all hidden;
 addpath(genpath(pwd));
 
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
+
 for i = 1:length(listWithNeededFolder)
     try
         cd(listWithNeededFolder{i});
@@ -26,40 +28,25 @@ end
 
 %% Copy the folder called 'clean_source_assignments'.
 debugOutput(DEBUGOUTPUT,'Copy the folder called clean_source_assignments');
-%%We want to leave the original folder intact
 
-% delete previously generated folder
-rmpath(genpath(nameAssignmentFolder))
-if exist(nameAssignmentFolder)
-    try
-        warning off
-        fclose('all'); %close all files, because after copy Matlab does not release a file
-        A = dir( nameAssignmentFolder );
-        for k = 1:length(A)
-            delete([ nameAssignmentFolder  '\' A(k).name]);
-        end
-        rmdir(nameAssignmentFolder,'s');
-    catch
-    end
-end
-pause(1)
-warning on
+% Delete previously generated folder
+removeShitFromDir(nameAssignmentFolder);
+% Copy files
 copyfiles(listWithNeededFolder{2},nameAssignmentFolder);
 addpath(genpath(nameAssignmentFolder))
-fclose('all'); %close all files, because after copy Matlab does not release a file
+% After copy Matlab does not release a file
+fclose('all'); 
 
 %% Read the student number and convert the list to e-mailadresses
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses');
+
 studentFolder = listWithNeededFolder{3};
 studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
 % go to the folder with studentnumbers. It is assumed to be a list with
 % doubles
-scriptFolder = pwd;
-cd(studentFolder)
 studentNumbers = load(studentFolderOutput{1});
-cd(scriptFolder)
 % Reshuffle the list with student numbers (removing patterns)
-studentNumbers = studentNumbers(randperm(length(studentNumbers)));
+studentNumbers = studentNumbers(randperm(length(studentNumbers)))
 % Convert the reshuffled list of student number to e-mailadresses
 studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
 % Write the list of e-mailadresses to a txt file
@@ -89,7 +76,8 @@ for wk = 1:length(namesWeekDirectories)
             % current weekfolder
             subdirs = strsplit(relpath,filesep);
             cd([subdirs{1} filesep subdirs{2}])
-            %if exist('TypeOfQuestion_Multiplechoice.m','file')
+            %Check for the presence of files below to give the proper
+            %header in the student specific assignment
             if (exist(fullfile(relpath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
                 header = combineTextOfDifferentFiles('top_mc_question.m');
             elseif (exist(fullfile(relpath, 'TypeOfAssignment_Assignement.m'), 'file') == 2)
@@ -120,11 +108,8 @@ for wk = 1:length(namesWeekDirectories)
             fclose('all'); delete([namefile ext]);
             % Go back to current folder and clear variable
             clear headerHash
-            cd ..          
-            cd ..
-            cd ..
+            cd ..; cd ..; cd ..;
         end
     end
 end
 cd ..
-

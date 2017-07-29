@@ -24,21 +24,20 @@ function removeShitFromDir(dirToRemove)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               varargin:   <text>
-%               varargin:   <text>
+%               dirToRemove:   The directory to delete
 %
 % RETURN:
-%               outvar:     <text>
-%               outvar:     <text>
+%               nothing
 %
 % EXAMPLES:
-%
+%               removeShitFromDir('temp/');
 %
 
-% $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
-%<Description>
+% $Revision: 0.0.0 $  $Date: 2017-07-28 $
+% Creation of script
 try
     warning off
+    rmpath(genpath(dirToRemove))
     fclose('all'); %close all files, because after copy Matlab does not release a file
     A = dir( dirToRemove );
     for k = 1:length(A)

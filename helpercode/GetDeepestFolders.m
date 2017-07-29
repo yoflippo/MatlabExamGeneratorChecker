@@ -40,6 +40,7 @@ function output = GetDeepestFolders(location)
 % $Revision: 0.0.0 $  $Date: 2017-07-26 $
 % Creation
 global output
+currPath = pwd;
 cd(location);
 
 % find the folders
@@ -61,5 +62,5 @@ if ~blHasDir
     output{length(output)+1} = pwd;
 end
 % Go back to upper folder
-cd('..');
+cd(currPath);
 end

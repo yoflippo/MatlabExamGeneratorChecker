@@ -1,9 +1,10 @@
 %% Create the assignments
-clc;
+clc; clear variables;
 Constants
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
+
 for i = 1:length(listWithNeededFolder)
     try
         cd(listWithNeededFolder{i});
@@ -18,6 +19,7 @@ end
 
 %% Create a working folder called 'student-assignments'
 debugOutput(DEBUGOUTPUT,'Create a working folder called student-assignments');
+
 weekName = ['week' num2str(WEEK)];
 wkFolderName = [studentAssDir filesep weekName];
 %remove folder if it exists
@@ -31,26 +33,24 @@ removeShitFromDir(dirToRemove);
 
 %% Create a student specific folder in every week folder
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder');
-cd(nameAssignmentFolder)
-load('studentNumbers.mat');
-cd ..
+
+% Load the studentnumbers (randomly ordered)
+load([nameAssignmentFolder filesep 'studentNumbers.mat']);
 % Create weekfolders
 mkdir(wkFolderName)
-cd(wkFolderName);
 % Create a studentAssDir inside every weekfolder
 for i = 1:length(studentNumbers)
-    mkdir(num2str(studentNumbers(i)));
+    mkdir([wkFolderName filesep num2str(studentNumbers(i))]);
 end
-% Go back
-cd ..; cd ..;
 
 %% Get overview of file versions, and assign to studentNumbers. PLEASE NOTICE:
 debugOutput(DEBUGOUTPUT,'Get overview of file versions, and assign to studentNumbers');
-% the studentNumbers variable is randomly generated. So assignments in
+
+% The studentNumbers variable is randomly generated. So assignments in
 % folder can be assigned sequently to the studentnumbers without
 % introducing some kind of detectable order.
 global output; output = [];
-deepestAssignFolders = GetDeepestFolders(nameAssignmentFolder);
+deepestAssignFolders = GetDeepestFolders([nameAssignmentFolder filesep weekName]);
 % Make relative path
 for i = 1:length(deepestAssignFolders)
     deepestAssignFolders{i} = extractAfter(deepestAssignFolders{i},nameAssignmentFolder);
@@ -64,24 +64,24 @@ end
 
 %% Fill every student folder with the number of assignments sequentially
 debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments sequentially');
-% Zip the assignment and give it the student number corresponding to the
-% student.
-q34g09ujawdpgj error here because week 2 and 1 ad once
+
 answerFileCounter = ones(1,length(deepestAssignFolders));
 for i = 1:length(studentNumbers)
-    % Browse to every assignment folder, PLEASE NOTICE: here randomness is
-    % introduced here, but could be improved by implementing a random
+    % Browse to every assignment folder, PLEASE NOTICE: randomness is
+    % used here, but could be improved by implementing a random
     % generator everytime an assignment is chosen
     studentDir = num2str(studentNumbers(i));
     currStudentDir = [wkFolderName filesep studentDir];
     for j = 1:length(deepestAssignFolders)
         cnt = answerFileCounter(j); %
         currFile = [deepestAssignFolders{j} filesep answerFilesInDir{1,j}(cnt).name];
-        currFile = [currFile(1:end-5) ext];         % rename the file to a file without _ANT
+        % rename the file to a file without _ANT
+        currFile = [currFile(1:end-5) ext];         
         % file to copy
         sourceFile = [nameAssignmentFolder currFile];
         % create the right dir tree within student folder
         currFileClean = [currFile(1:end-36) ext];
+        % create the rel path string with final naming
         finFileLoc = [currStudentDir currFileClean];
         % Copy file from unique assignment dir to student folder with
         % subdirs
@@ -94,6 +94,12 @@ for i = 1:length(studentNumbers)
             answerFileCounter(j) = cnt + 1;
         end
     end
-    zip([wkFolderName filesep weekName '_' studentDir '.zip'],currStudentDir)
+    % Zip the assignment and give it the student number corresponding to the
+    % student.
+    currPath = pwd;
+    cd(currStudentDir);
+    zip(['..' filesep weekName '_' studentDir '.zip'],pwd)
+    cd(currPath);
+    % Remove the folder that is previously zipped
     removeShitFromDir(currStudentDir);
 end
