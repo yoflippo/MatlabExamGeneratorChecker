@@ -38,30 +38,15 @@
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-27 $
 % Creation of script.
 
+%% Start fresh
+debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
 
-clc; clear variables;
-tic;
 Constants
-
-%% Start fresh and remove every file, Command Window
-debugOutput(DEBUGOUTPUT,'Start fresh and remove every file, Command Window');
-
-clc; close all; close all hidden;
 addpath(genpath(pwd));
-
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);
 
-for i = 1:length(LISTWITHNEEDEDFOLDERS)
-    try
-        cd(LISTWITHNEEDEDFOLDERS{i});
-        cd ..
-    catch
-        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
-            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
-    end
-end
 
 %% Copy the folder called 'clean_source_assignments'.
 debugOutput(DEBUGOUTPUT,'Copy the folder called clean_source_assignments',1);
@@ -116,11 +101,11 @@ for wk = 1:length(namesWeekDirectories)
             %Check for the presence of files below to give the proper
             %header in the student specific assignment
             if (exist(fullfile(relpath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('header_question.m');
+                header = combineTextOfDifferentFiles('default_header.m','header_question.m');
             elseif (exist(fullfile(relpath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('header_script.m');
+                header = combineTextOfDifferentFiles('default_header.m','header_script.m');
             elseif (exist(fullfile(relpath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('header_function.m');
+                header = combineTextOfDifferentFiles('default_header.m','header_function.m');
             end
             % Create header with hash of file
             headerHash{1} = header{1};

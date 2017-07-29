@@ -15,7 +15,7 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-
+clc; clear variables; close all; close all hidden;
 DEBUGOUTPUT = 1;
 % make zero to delete base folder
 WEEK = 1; 
@@ -27,6 +27,22 @@ LISTWITHNEEDEDFOLDERS = {'helpercode' 'clean_source_assignments' 'studentnumbers
                     
 NAMEASSIGNMENTFOLDER = 'unique_assignments';
 STUDENTASSFOLDER = 'student_week_assignments';
-STUDENTSUBFOLDER = 'student_submission';
+STUDENTSUBFOLDER = 'student_submitted_assignments';
 EXT = '.m';
 SOLPOSTFIX = '_SOL';
+
+% Oooh Noo... some code in a file called Constants... shame on you author
+%% Check for the existence of needed supporting scripts/function files
+debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
+for i = 1:length(LISTWITHNEEDEDFOLDERS)
+    try
+        cd(LISTWITHNEEDEDFOLDERS{i});
+        cd ..
+    catch
+        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
+            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
+    end
+end
+% The basefolder should only be assigned if previous code has executed
+% correctly
+BASEFOLDER = pwd;

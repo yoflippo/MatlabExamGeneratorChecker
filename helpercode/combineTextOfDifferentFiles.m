@@ -24,19 +24,17 @@ function [outVar] = combineTextOfDifferentFiles(varargin)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               varargin:   <text>
-%               varargin:   <text>
+%               varargin:   different files
 %
 % RETURN:
-%               outvar:     <text>
-%               outvar:     <text>
+%               outvar:     The lines of the different files
 %
 % EXAMPLES:
-%
+%               combineTextOfDifferentFiles('header_function.m');
 %
 
-% $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
-%<Description>
+% $Revision: 0.0.0 $  $Date: 2017-07-29 $
+% Creation
 
 %% Read the data of file
 concatenatedTxt = {};

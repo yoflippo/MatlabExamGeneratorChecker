@@ -35,25 +35,9 @@
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-27 $
 % Creation of script.
 
-%% Create the assignments
-clc; clear variables;
+%% Start Fresh
 Constants
 debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
-
-%% Check for the existence of needed supporting scripts/function files
-debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);
-
-for i = 1:length(LISTWITHNEEDEDFOLDERS)
-    try
-        cd(LISTWITHNEEDEDFOLDERS{i});
-        cd ..
-    catch
-        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
-            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
-    end
-end
-
-%% Check for the needed existing files in every deepest folder
 
 %% Create a working folder called 'student-assignments'
 debugOutput(DEBUGOUTPUT,'Create a working folder called student-assignments',1);
@@ -116,9 +100,9 @@ for i = 1:length(studentNumbers)
         % file to copy
         sourceFile = [NAMEASSIGNMENTFOLDER currFile];
         % create the right dir tree within student folder
-        currFileClean = [currFile(1:end-36) EXT];
+        currFileClean = currFile(1:end-36);
         % create the rel path string with final naming
-        finFileLoc = [currStudentDir currFileClean];
+        finFileLoc = [currStudentDir currFileClean '_' num2str(studentDir) '_' EXT];
         % Copy file from unique assignment dir to student folder with
         % subdirs
         mkdir([wkFolderName filesep studentDir deepestAssignFolders{j}])

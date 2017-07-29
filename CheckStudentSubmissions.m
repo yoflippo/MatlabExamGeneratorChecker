@@ -51,9 +51,14 @@ if ~exist(subWkFolder)
     error('Needed subdirectory does not exist, execution of script is stopped!, put ZIPPED student submission in folder');
 end
 
+%% Check existence of  Matrix with studentnumbers and grades
+debugOutput(DEBUGOUTPUT,'Check existence of  Matrix with studentnumbers and grades',0);
 
 %% Check which students have submitted their assignments. Student without do not get any points
 debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. Student without do not get any points',0);
+% Get files in the folder for analysis
+files = dir(subWkFolder)
+
 
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
