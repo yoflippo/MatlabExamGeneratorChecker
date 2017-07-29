@@ -1,5 +1,5 @@
-function debugOutput(blGiveOutputToCW, message, varargin)
-%DEBUGOUTPUT for debug and info purposes
+function output = roundDecimals(number, decimals)
+%ROUNDDECIMALS Round numbers to a certain precision
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -17,35 +17,33 @@ function debugOutput(blGiveOutputToCW, message, varargin)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-%
+% 
 % DESCRIPTION:
 %
-%
+% 
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+% 
+% PARAMETERS:number, decimals
+%               number:   the number of which the precision had to be
+%               adjusted
+%               decimals:   number of decimals
 %
-% PARAMETERS:
-%               varargin:   <text>
-%               varargin:   <text>
-%
-% RETURN:
-%               outvar:     <text>
-%               outvar:     <text>
-%
+% RETURN:       
+%               output:     number with adjusted precision  
+% 
 % EXAMPLES:
+%               roundDecimals(1.123456789,2) gives 1.12
 %
-%
 
-% $Revision: 0.0.0 $  $Date: 2017-07-27 $
-% Creation of script.
+% $Revision: 0.0.0 $  $Date: 2017-07-29 $
+% Creation of script
 
-if nargin == 2
-    tic
-    disp(message);
-elseif nargin > 2
-    if blGiveOutputToCW
-      disp([num2str(roundDecimals(toc,3)) ': ' message]);         
-    end
-end
 
+%roundDecimals round data with specified number of decimals.
+%   RoundedNumber = roundDecimals(number,decimals) 
+%   By MS2013
+
+decimal = 10^decimals;
+output = sprintf('%g',(round(number*decimal))/decimal);
 
 end

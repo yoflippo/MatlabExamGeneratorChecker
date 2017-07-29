@@ -51,7 +51,7 @@ addpath(genpath(pwd));
 
 
 %% Check for the existence of needed supporting scripts/function files
-debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);
+debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
 
 for i = 1:length(listWithNeededFolder)
     try
@@ -64,7 +64,7 @@ for i = 1:length(listWithNeededFolder)
 end
 
 %% Copy the folder called 'clean_source_assignments'.
-debugOutput(DEBUGOUTPUT,'Copy the folder called clean_source_assignments',1);
+debugOutput(DEBUGOUTPUT,'Copy the folder called clean_source_assignments');
 
 % Delete previously generated folder
 removeShitFromDir(nameAssignmentFolder);
@@ -75,7 +75,7 @@ addpath(genpath(nameAssignmentFolder))
 fclose('all');
 
 %% Read the student number and convert the list to e-mailadresses
-debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
+debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses');
 
 studentFolder = listWithNeededFolder{3};
 studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
@@ -98,7 +98,7 @@ fclose(fid);
 save('studentNumbers.mat','studentNumbers');
 
 %% Create new filenames (with HASH code AND combine file names)
-debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
+debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)');
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
 for wk = 1:length(namesWeekDirectories)
     % find all files in weekX folder
@@ -116,11 +116,11 @@ for wk = 1:length(namesWeekDirectories)
             %Check for the presence of files below to give the proper
             %header in the student specific assignment
             if (exist(fullfile(relpath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('header_question.m');
+                header = combineTextOfDifferentFiles('top_mc_question.m');
             elseif (exist(fullfile(relpath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('header_script.m');
+                header = combineTextOfDifferentFiles('top_mc_script.m');
             elseif (exist(fullfile(relpath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('header_function.m');
+                header = combineTextOfDifferentFiles('header_script.m');
             end
             % Create header with hash of file
             headerHash{1} = header{1};
