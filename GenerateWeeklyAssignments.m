@@ -4,6 +4,8 @@
 % Week. These assignment need to be handed in on a set time (preferably
 % via an LMS like Blackboard).
 % The solutions from the students are automatically checked in with an script
+clc; clear variables;
+tic;
 Constants
 
 %% Start fresh and remove every file, Command Window
@@ -46,7 +48,7 @@ studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
 % doubles
 studentNumbers = load(studentFolderOutput{1});
 % Reshuffle the list with student numbers (removing patterns)
-studentNumbers = studentNumbers(randperm(length(studentNumbers)))
+studentNumbers = studentNumbers(randperm(length(studentNumbers)));
 % Convert the reshuffled list of student number to e-mailadresses
 studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
 % Write the list of e-mailadresses to a txt file
@@ -71,7 +73,7 @@ for wk = 1:length(namesWeekDirectories)
         currentFile = weekAssignments{fl};
         [relpath,namefile,ext] = fileparts(currentFile);
         % find m-file with the answer/solution file
-        if exist([relpath filesep namefile '_ANT' ext])
+        if exist([relpath filesep namefile '_SOL' ext])
             % check which types of questions are in the subfolder of the
             % current weekfolder
             subdirs = strsplit(relpath,filesep);
@@ -103,8 +105,8 @@ for wk = 1:length(namesWeekDirectories)
                 uniqueFN.Hash '_' ];
             makeMFileFromCells(uniqueFileName,headerHash)
             % Rename the ANS file
-            movefile([namefile '_ANT' ext],[extractBefore(namefile,'_versie')...
-                '_' uniqueFN.Hash '_ANT' ext]);
+            movefile([namefile SOLPOSTFIX ext],[extractBefore(namefile,'_versie')...
+                '_' uniqueFN.Hash SOLPOSTFIX ext]);
             fclose('all'); delete([namefile ext]);
             % Go back to current folder and clear variable
             clear headerHash
@@ -113,3 +115,4 @@ for wk = 1:length(namesWeekDirectories)
     end
 end
 cd ..
+toc

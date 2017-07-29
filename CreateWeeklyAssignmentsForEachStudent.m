@@ -1,5 +1,6 @@
 %% Create the assignments
 clc; clear variables;
+tic;
 Constants
 
 %% Check for the existence of needed supporting scripts/function files
@@ -54,10 +55,10 @@ deepestAssignFolders = GetDeepestFolders([nameAssignmentFolder filesep weekName]
 % Make relative path
 for i = 1:length(deepestAssignFolders)
     deepestAssignFolders{i} = extractAfter(deepestAssignFolders{i},nameAssignmentFolder);
-    % Count the number of assignment in every folder (with '_ANT')
+    % Count the number of assignment in every folder (with '_SOL')
     currPath = pwd;
     cd([nameAssignmentFolder filesep deepestAssignFolders{i}]);
-    answerFilesInDir{i} = dir('*_ANT*');
+    answerFilesInDir{i} = dir(['*' SOLPOSTFIX '*']);
     numberOfAssignmentInDir(i) = length(answerFilesInDir{i});
     cd(currPath);
 end
@@ -75,7 +76,7 @@ for i = 1:length(studentNumbers)
     for j = 1:length(deepestAssignFolders)
         cnt = answerFileCounter(j); %
         currFile = [deepestAssignFolders{j} filesep answerFilesInDir{1,j}(cnt).name];
-        % rename the file to a file without _ANT
+        % rename the file to a file without _SOL
         currFile = [currFile(1:end-5) ext];         
         % file to copy
         sourceFile = [nameAssignmentFolder currFile];
@@ -103,3 +104,4 @@ for i = 1:length(studentNumbers)
     % Remove the folder that is previously zipped
     removeShitFromDir(currStudentDir);
 end
+toc
