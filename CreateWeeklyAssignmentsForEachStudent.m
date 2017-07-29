@@ -1,7 +1,43 @@
+%CREATEWEEKLYASSIGNMENTSFOREACHSTUDENT
+%
+% ------------------------------------------------------------------------
+%    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% ------------------------------------------------------------------------
+% 
+% DESCRIPTION:
+% This file creates randomly assignments to students and zips to folder for
+% every student. This script depends on the Constants.m file (as does 
+% the GENERATEWEEKLYASSIGNMENTS script). For week1 to assign assignments to
+% a student the 'week' variable in Constant.m has to be changed to 1.
+%
+% 
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+% 
+%
+%
+
+% $Revisi0n: 0.0.0 $  $Date: 2017-07-27 $
+% Creation of script.
+
 %% Create the assignments
 clc; clear variables;
 tic;
 Constants
+debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');

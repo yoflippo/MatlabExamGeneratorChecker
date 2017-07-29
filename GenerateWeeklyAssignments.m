@@ -1,9 +1,44 @@
-%% Credits
+%GENERATEWEEKLYASSIGNMENTS
+%
+% ------------------------------------------------------------------------
+%    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% ------------------------------------------------------------------------
+% 
+% DESCRIPTION:
 % This file creates the assignments for Human Kinetic Movement student.
 % Every students get a personalized set of assignments at the end of every
 % Week. These assignment need to be handed in on a set time (preferably
 % via an LMS like Blackboard).
-% The solutions from the students are automatically checked in with an script
+% PLEASE NOTICE:
+% This script only needs to be runned once to create all unique
+% assignments. 
+% The CreateWeeklyAssignmenetsForEachStudent.m script has to
+% runned for every week.
+%
+% 
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+% 
+%
+%
+
+% $Revisi0n: 0.0.0 $  $Date: 2017-07-27 $
+% Creation of script.
+
+
 clc; clear variables;
 tic;
 Constants
