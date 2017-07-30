@@ -32,7 +32,7 @@
 
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-30 $
 % Creation
-Constants
+InitAll
 disp(['First unzip all files in folder ' STUDENTASSFOLDER])
 
 %% unzip the grand file with week assignments
@@ -61,15 +61,18 @@ for i = 1:length(mfiles)
 end
 cd ..
 
-
+%% Remove (if necessary) and create a folder for the submitted student assignments
+wkFolder = fullfile('..','..',STUDENTSUBFOLDER,WEEKNAME);
+removeShitFromDir(wkFolder) 
+currPath = pwd;
 %% Extract the zipped files and 
-wkFolder = ['student_submitted_ass_' WEEKNAME];
-mkdir(wkFolder)
+cd .. ; cd(STUDENTSUBFOLDER);
+mkdir(WEEKNAME);
+cd(currPath);
 cd(WEEKNAME)
 zfiles = dir('**/*.zip');
-for i = 1:length(zfiles)
-    movefile(zfiles(i).name,[fullfile('..',wkFolder) filesep]);
+for i = 1:length(zfiles)%
+    movefile(zfiles(i).name,[wkFolder filesep]);
 end
-cd ..
-% Go back
+removeShitFromDir(pwd)
 cd(BASEFOLDER)

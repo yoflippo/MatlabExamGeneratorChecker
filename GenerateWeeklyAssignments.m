@@ -39,7 +39,7 @@
 % Creation of script.
 
 %% Start fresh
-Constants
+InitAll
 debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
 
 %% Check for the existence of needed supporting scripts/function files
@@ -56,6 +56,12 @@ copyfiles(LISTWITHNEEDEDFOLDERS{2},NAMEASSIGNMENTFOLDER);
 addpath(genpath(NAMEASSIGNMENTFOLDER))
 % After copy Matlab does not release a file
 fclose('all');
+
+%% Remove (if necessary) and create a folder for the submitted student assignments
+debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
+
+subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
+removeShitFromDir(subWkFolder) 
 
 %% Read the student number and convert the list to e-mailadresses
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);

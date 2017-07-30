@@ -27,8 +27,7 @@
 
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
 % Creation of script
-clc; clear variables;
-Constants
+InitAll
 
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
@@ -39,7 +38,7 @@ if ~isempty(correct)
     disp('Script is STOPPED because the WEEK constant (see: Constants.m) has to be changed');
     return
 end
-subWkFolder = [STUDENTSUBFOLDER filesep WEEKNAME];             
+subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);     
 
 %% Check if needed folder exists, if not stop execution of script
 debugOutput(DEBUGOUTPUT,'Check if needed folder exists, if not stop execution of script',0);
@@ -62,14 +61,15 @@ debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. 
 load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))
 % Get files in the folder for analysis
 files = dir(subWkFolder);
-oldPath = pwd;
+
 cd(subWkFolder);
+studentsThatSubmitted = [];
 % Get studentnumbers of students that submitted AND unzip the folder
 for i = 3:length(files)
     studentsThatSubmitted{i-2} = files(i).name(end-11:end-4);
     unzip(fullfile(subWkFolder,files(i).name));
 end
-cd(oldPath);
+cd(BASEFOLDER);
 
 % Load the old studentNumbers
 load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
@@ -77,10 +77,19 @@ load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
 numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
 disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments']) 
 
-
-
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
 
+% Get Hash of original assignment folder
+dicWithHashes = GetDictionaryWithHashAndLocation(NAMEASSIGNMENTFOLDER);
+hashCodes = keys(dicWithHashes);
+
+% Iterate through student directories and read the hash strings from their
+% files. 
+
+% If a hash string is modified do something to register that
+
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
+
+% last but not least: copy the right answer to every student folder

@@ -36,7 +36,7 @@
 % Creation of script.
 
 %% Start Fresh
-Constants
+InitAll
 debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
 
 %% Create a working folder called 'student-assignments'
