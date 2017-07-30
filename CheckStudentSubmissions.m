@@ -58,6 +58,8 @@ debugOutput(DEBUGOUTPUT,'Check existence of  Matrix with studentnumbers and grad
 %% Check which students have submitted their assignments. Student without do not get any points
 debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. Student without do not get any points',0);
 
+% Find studentnumbers
+load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))
 % Get files in the folder for analysis
 files = dir(subWkFolder);
 oldPath = pwd;
@@ -68,6 +70,7 @@ for i = 3:length(files)
     unzip(fullfile(subWkFolder,files(i).name));
 end
 cd(oldPath);
+
 % Load the old studentNumbers
 load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
 % Display how many students did not submit

@@ -55,7 +55,7 @@ removeShitFromDir(dirToRemove);
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
 
 % Load the studentnumbers (randomly ordered)
-load([NAMEASSIGNMENTFOLDER filesep 'studentNumbers.mat']);
+load([NAMEASSIGNMENTFOLDER filesep STUDENTNUMBERMAT]);
 % Create weekfolders
 mkdir(wkFolderName)
 % Create a STUDENTASSFOLDER inside every weekfolder
@@ -144,8 +144,7 @@ debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and 
 
 currPath = pwd;
 cd(STUDENTASSFOLDER)
-zip(['Biostatica_Programmeren_StudentOpdrachten_' num2str(YEAR) '_' WEEKNAME ...
-    '.zip'],WEEKNAME)
+zip([NAMEZIPPEDWEEK num2str(YEAR) '_' WEEKNAME '.zip'],WEEKNAME)
 cd(currPath)
 removeShitFromDir(wkFolderName)
 

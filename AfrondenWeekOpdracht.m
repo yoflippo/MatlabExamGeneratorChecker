@@ -16,7 +16,7 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %               Dit script moet door studenten worden uitgevoerd als ze
 %               klaar zijn met de weekopdracht. Dit script pakt alle
@@ -24,10 +24,10 @@
 %               naam wordt voorzien. Als je dit script niet uitvoert en
 %               zelfstandig alle bestanden inpakt is het mogelijk dat er
 %               geen punten worden toegekend aan de weekopdracht.
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
-% 
+%
 % EXAMPLES:
 %               Typ in Command Window simpel: AfrondenWeekOpdracht en druk
 %               daarna op ENTER
@@ -55,7 +55,7 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %               Dit script moet door studenten worden uitgevoerd als ze
 %               klaar zijn met de weekopdracht. Dit script pakt alle
@@ -63,10 +63,10 @@
 %               naam wordt voorzien. Als je dit script niet uitvoert en
 %               zelfstandig alle bestanden inpakt is het mogelijk dat er
 %               geen punten worden toegekend aan de weekopdracht.
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
-% 
+%
 % EXAMPLES:
 %               Open dit script en druk op F5
 %
@@ -75,7 +75,11 @@
 % Creation of script
 
 % Extract studentnumber
-studentnummer;
+try
+    studentnummer;
+catch
+    error('studentnummer.m niet gevonden? Als je de bestanden en folderstructuur niet intact laat krijg je geen punten vooor de weekopdracht');
+end
 % Go to upper folder (the week folder)
 cd ..
 

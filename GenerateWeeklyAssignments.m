@@ -78,7 +78,7 @@ for i=1:length(studentEmailadresses)
 end
 fclose(fid);
 %save the studentnumbers for later use
-save('studentNumbers.mat','studentNumbers');
+save(STUDENTNUMBERMAT,'studentNumbers');
 
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
