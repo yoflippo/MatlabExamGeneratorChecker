@@ -32,7 +32,8 @@ STUDENTSUBFOLDER = 'student_submitted_assignments';
 NAMEZIPPEDWEEK = 'Biostatica_Programmeren_StudentOpdrachten_';
 EXT = '.m';
 SOLPOSTFIX = '_SOL';
-
+OTHERFILESINSTUDENTFOLDER = {'AfrondenWeekOpdracht.m' 'studentnummer.m'};
+ADJUSTEDHASH = 'AANGEPASTE_MFILE_GEEN_PUNTEN';
 % Oooh Noo... some code in a file called Constants... shame on you author
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');

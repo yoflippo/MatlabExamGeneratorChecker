@@ -2,6 +2,8 @@ function Dic = GetDictionaryWithHashAndLocation(LocationOfBaseFiles)
 %GETDICTIONARYWITHHASHANDLOCATION This function will get a dictionary with
 %all the HashCodes from the base files generated. This dictionary can be
 %used to quickly compare files.
+% 
+% THIS FILE DEPENDS ON InitAll.m
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -46,10 +48,26 @@ mfiles = readFilesInSubFolder(nameAssignmentFolder,'.m');
 
 % Filter the relevant files, only files with 'vraag' are relevant
 mfilesOI = strfind(mfiles,'vraag_'); %files of interest
+mfilesOI2 = strfind(mfiles,'opdracht_');
+% combine the two types of assignments
+tmp = mfilesOI;
+for i = length(mfilesOI)+1:length(mfilesOI)+length(mfilesOI2)
+    tmp{i} = mfilesOI2{i-length(mfilesOI)};
+end
+mfilesOI = tmp;
+% Test for a certain length
 mfiles = mfiles(cellfun('length',mfilesOI)==2);
 
+HIER GEBLEVEN IK WIL GRAAG ALLE MFILES DIE BEGINNEN MET OPDRACHT_ en VRAAG_ 
+worden gefilterd en in een dictionary worden gestopt zodat ik met CheckStudent-
+Submissions.m opdracht kan vergelijken met elkaar.
+
+Hierna moet ik opdrachten runnen en punten tellen (administratie bijhouden) 
+dat is een leuk en klein klusje. Ik dit jaar de hier gemaakte scripts nog wel
+verder moeten aanpassen om het helemaal netjes werkend te krijgen.
+
 % Further filter the files down to files without the postfix '_ans'
-mfilesOI = strfind(mfiles,'_ANT'); %files of interest
+mfilesOI = strfind(mfiles,SOLPOSTFIX); %files of interest
 mfilesOI = mfiles(cellfun('isempty',mfilesOI));
 
 % Get HashCode of each file

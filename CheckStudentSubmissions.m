@@ -16,14 +16,14 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
-% DESCRIPTION:
-% This script assumes that 
 %
-% 
+% DESCRIPTION:
+% This script assumes that
+%
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
-% 
+%
 
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
 % Creation of script
@@ -32,13 +32,13 @@ InitAll
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
 
-correct = input(['Is this the correct week?: ' num2str(WEEK) ... 
-                 ' (not giving an answer is YES)']);
+correct = input(['Is this the correct week?: ' num2str(WEEK) ...
+    ' (not giving an answer is YES)']);
 if ~isempty(correct)
     disp('Script is STOPPED because the WEEK constant (see: Constants.m) has to be changed');
     return
 end
-subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);     
+subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
 
 %% Check if needed folder exists, if not stop execution of script
 debugOutput(DEBUGOUTPUT,'Check if needed folder exists, if not stop execution of script',0);
@@ -75,7 +75,7 @@ cd(BASEFOLDER);
 load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
 % Display how many students did not submit
 numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
-disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments']) 
+disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
 
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
@@ -85,7 +85,37 @@ dicWithHashes = GetDictionaryWithHashAndLocation(NAMEASSIGNMENTFOLDER);
 hashCodes = keys(dicWithHashes);
 
 % Iterate through student directories and read the hash strings from their
-% files. 
+% files.
+oldPath = pwd;
+cd(subWkFolder);
+mfiles = dir('**/*.m');
+cd(oldPath)
+% If a certain file is manipulated put it in a folder GEEN_PUNTEN
+for i = 1:length(mfiles)
+    % Test for files that are not relevant
+    blTestIfCorrectFile = true;
+    for j = 1:length(OTHERFILESINSTUDENTFOLDER)
+        if isequal(OTHERFILESINSTUDENTFOLDER{j},mfiles(i).name)
+            blTestIfCorrectFile = false;
+            break;
+        end
+    end
+    % Get hashcode from current mfiles
+    if blTestIfCorrectFile
+        currFileAbsPath = fullfile(mfiles(i).folder,mfiles(i).name);
+        try
+            currHash = GetHashCodeFromMFile(currFileAbsPath);
+            % Check if hash if present in dictionary
+            dicWithHashes(currHash);
+        catch
+            % Move file in a folder in the variable ADJUSTEDHASH
+            oldPath = pwd;
+            cd(mfiles(i).folder);
+            mkdir(ADJUSTEDHASH);
+            movefile(currFileAbsPath,fullfile(mfiles(i).folder,ADJUSTEDHASH,mfiles(i).name));
+        end
+    end
+end
 
 % If a hash string is modified do something to register that
 
@@ -93,3 +123,4 @@ hashCodes = keys(dicWithHashes);
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
 
 % last but not least: copy the right answer to every student folder
+cd(BASEFOLDER);
