@@ -98,6 +98,7 @@ end
 
 cd(BASEFOLDER)
 cd(NAMEASSIGNMENTFOLDER)
+
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};

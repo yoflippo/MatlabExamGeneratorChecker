@@ -10,7 +10,7 @@ function output = readFilesInFolder(folder, ext)
 % EXAMPLE OUTPUT:
 %   'copyfiles_directory\week1\deelopdracht_1\vraag_1\vraag_1_versie_1_ANT.m'
 
-%% Find all subdirectories -- ## nothing to do with this funciton
+%% Find all subdirectories -- ## nothing to do with this function
 all_rel_subdirectories = strsplit(genpath(folder),';');
 all_rel_files = {}; filesCnt = 1;
 for i = 1:length(all_rel_subdirectories)

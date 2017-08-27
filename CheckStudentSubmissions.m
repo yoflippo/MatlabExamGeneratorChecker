@@ -84,8 +84,9 @@ disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
 
-% Get Hash of original assignment folder
+% Get Hash of original assignment folder AND save it in MAT-file
 dicWithHashes = GetDictionaryWithHashAndLocation(NAMEASSIGNMENTFOLDER,SOLPOSTFIX);
+save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicHashesAbsPath.mat'),'dicWithHashes')
 hashCodes = keys(dicWithHashes);
 
 % Iterate through student directories and read the hash strings from their
@@ -133,12 +134,19 @@ if isempty(relevantMFiles)
 end
 mfiles = mfiles(~cellfun('isempty',relevantMFiles));
 pointsPerAssignment = zeros(1,length(mfiles));
+nameOfAssignment = [];
 for i = 1:length(mfiles)
     tmp = mfiles(i);
     tmp = tmp{1};
     run(tmp(1:end-2));
+    % Get name of assignment and save it
+    foundSlashes = strfind(tmp,'\')
+    nameOfAssignment{i} = tmp(foundSlashes(end-1)+1:foundSlashes(end)-1);
     pointsPerAssignment(i) = deelpunten;
 end
+% Put in dictionary and save in MAT-file
+dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
+save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);

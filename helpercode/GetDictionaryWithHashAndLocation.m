@@ -41,6 +41,7 @@ function Dic = GetDictionaryWithHashAndLocation(LocationOfBaseFiles,SOLPOSTFIX)
 
 % $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
 %<Description>
+
 nameAssignmentFolder = LocationOfBaseFiles;
 
 % Get an overview of files
@@ -80,6 +81,9 @@ for h = 1:length(mfilesOI)
     hashPos = underscorePos{1,h}(NUMOFUNDERSCORES-1:NUMOFUNDERSCORES);
     HashCodes{h} = mfilesOI{1,h}(hashPos(1)+1:hashPos(2)-1) ;
 end
+
+% make an absolute path
+mfilesOI = fullfile(pwd,mfilesOI);
 
 % Combine the relevant files in a Container (dictionary) so the
 % hashcode is combined with a location for fast lookup

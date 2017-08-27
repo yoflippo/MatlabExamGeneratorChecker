@@ -138,7 +138,6 @@ for i = 1:length(studentNumbers)
     warning on
 end
 
-
 %% Zip the folder with zipped-assignments per student and delete that folder
 debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);
 
