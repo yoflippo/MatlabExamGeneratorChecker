@@ -34,7 +34,10 @@ EXT = '.m';
 SOLPOSTFIX = '_SOL';
 OTHERFILESINSTUDENTFOLDER = {'AfrondenWeekOpdracht.m' 'studentnummer.m'};
 ADJUSTEDHASH = 'AANGEPASTE_MFILE_GEEN_PUNTEN';
+NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
+NAMERESULTMAT = 'resultatenWeek';
 % Oooh Noo... some code in a file called Constants... shame on you author
+
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
 for i = 1:length(LISTWITHNEEDEDFOLDERS)

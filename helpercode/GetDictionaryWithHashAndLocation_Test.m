@@ -21,5 +21,8 @@
 % For more info: https://nl.mathworks.com/help/matlab/ref/runtests.html
 
 % Test unit case 1
-Dic = GetDictionaryWithHashAndLocation('testdata');
+cd ..
+InitAll
+cd helpercode
+Dic = GetDictionaryWithHashAndLocation('testdata',SOLPOSTFIX);
 assert(~isempty(Dic))

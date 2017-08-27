@@ -62,26 +62,30 @@ load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))
 % Get files in the folder for analysis
 files = dir(subWkFolder);
 
+% Get studentnumbers of students that submitted AND unzip the folder
 cd(subWkFolder);
 studentsThatSubmitted = [];
-% Get studentnumbers of students that submitted AND unzip the folder
 for i = 3:length(files)
     studentsThatSubmitted{i-2} = files(i).name(end-11:end-4);
     unzip(fullfile(subWkFolder,files(i).name));
 end
+addpath(genpath(pwd))
 cd(BASEFOLDER);
 
 % Load the old studentNumbers
 load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
 % Display how many students did not submit
 numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
+if numOfNotSubmitted == 0
+    error('Something went wrong: no student submission');
+end
 disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
 
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
 
 % Get Hash of original assignment folder
-dicWithHashes = GetDictionaryWithHashAndLocation(NAMEASSIGNMENTFOLDER);
+dicWithHashes = GetDictionaryWithHashAndLocation(NAMEASSIGNMENTFOLDER,SOLPOSTFIX);
 hashCodes = keys(dicWithHashes);
 
 % Iterate through student directories and read the hash strings from their
@@ -113,14 +117,29 @@ for i = 1:length(mfiles)
             cd(mfiles(i).folder);
             mkdir(ADJUSTEDHASH);
             movefile(currFileAbsPath,fullfile(mfiles(i).folder,ADJUSTEDHASH,mfiles(i).name));
+            cd(oldPath);
         end
     end
 end
 
-% If a hash string is modified do something to register that
+%% Get the number of points for all week assignments
+mfiles = readFilesInSubFolder(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME),'.m');
+relevantMFiles = strfind(mfiles,'points.m');
+if isempty(relevantMFiles)
+    error('Apparently there are NO points.m files found');
+end
+mfiles = mfiles(~cellfun('isempty',relevantMFiles));
+pointsPerAssignment = zeros(1,length(mfiles));
+for i = 1:length(mfiles)
+    tmp = mfiles(i);
+    tmp = tmp{1};
+    run(tmp(1:end-2));
+    pointsPerAssignment(i) = deelpunten;
+end
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
+
 
 % last but not least: copy the right answer to every student folder
 cd(BASEFOLDER);

@@ -1,8 +1,8 @@
-function Dic = GetDictionaryWithHashAndLocation(LocationOfBaseFiles)
+function Dic = GetDictionaryWithHashAndLocation(LocationOfBaseFiles,SOLPOSTFIX)
 %GETDICTIONARYWITHHASHANDLOCATION This function will get a dictionary with
 %all the HashCodes from the base files generated. This dictionary can be
 %used to quickly compare files.
-% 
+%
 % THIS FILE DEPENDS ON InitAll.m
 %
 % ------------------------------------------------------------------------
@@ -50,34 +50,37 @@ mfiles = readFilesInSubFolder(nameAssignmentFolder,'.m');
 mfilesOI = strfind(mfiles,'vraag_'); %files of interest
 mfilesOI2 = strfind(mfiles,'opdracht_');
 % combine the two types of assignments
-tmp = mfilesOI;
-for i = length(mfilesOI)+1:length(mfilesOI)+length(mfilesOI2)
-    tmp{i} = mfilesOI2{i-length(mfilesOI)};
+for i = 1:length(mfilesOI)
+    % add the items of second file to the first
+    if length(mfilesOI2{i}) > 1
+        mfilesOI{i} = mfilesOI2{i};
+    end
 end
-mfilesOI = tmp;
-% Test for a certain length
-mfiles = mfiles(cellfun('length',mfilesOI)==2);
 
-HIER GEBLEVEN IK WIL GRAAG ALLE MFILES DIE BEGINNEN MET OPDRACHT_ en VRAAG_ 
-worden gefilterd en in een dictionary worden gestopt zodat ik met CheckStudent-
-Submissions.m opdracht kan vergelijken met elkaar.
-
-Hierna moet ik opdrachten runnen en punten tellen (administratie bijhouden) 
-dat is een leuk en klein klusje. Ik dit jaar de hier gemaakte scripts nog wel
-verder moeten aanpassen om het helemaal netjes werkend te krijgen.
-
-% Further filter the files down to files without the postfix '_ans'
+% Further filter the files down to files without the postfix
 mfilesOI = strfind(mfiles,SOLPOSTFIX); %files of interest
 mfilesOI = mfiles(cellfun('isempty',mfilesOI));
 
 % Get HashCode of each file
+hashsize = 32;
 underscorePos = strfind(mfilesOI,'_');
-numUnderScores = length(underscorePos{2});
-hashPos = underscorePos{1,2}(numUnderScores-1:numUnderScores);
 
+% find hashcodes with more than 5 underscores, this number is based on the
+% actual paths with the filenames and the number of underscores, this could
+% change in another environment
+numberOfUnderScores = cellfun(@length,underscorePos);
+
+% extra filtering so only the right files remain
+NUMOFUNDERSCORES = max(numberOfUnderScores);
+mfilesOI = mfilesOI(numberOfUnderScores==NUMOFUNDERSCORES);
+underscorePos = strfind(mfilesOI,'_');
+
+% Get the hascodes
 for h = 1:length(mfilesOI)
+    hashPos = underscorePos{1,h}(NUMOFUNDERSCORES-1:NUMOFUNDERSCORES);
     HashCodes{h} = mfilesOI{1,h}(hashPos(1)+1:hashPos(2)-1) ;
 end
+
 % Combine the relevant files in a Container (dictionary) so the
 % hashcode is combined with a location for fast lookup
 Dic = containers.Map(HashCodes,mfilesOI);

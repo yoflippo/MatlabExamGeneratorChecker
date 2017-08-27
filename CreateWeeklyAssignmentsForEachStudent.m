@@ -42,7 +42,7 @@ debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
 %% Create a working folder called 'student-assignments'
 debugOutput(DEBUGOUTPUT,'Create a working folder called student-assignments',1);
 
-wkFolderName = [STUDENTASSFOLDER filesep WEEKNAME];
+wkFolderName = fullfile(STUDENTASSFOLDER, WEEKNAME);
 %remove folder if it exists
 if exist(STUDENTASSFOLDER) && isequal(WEEK,0)
     dirToRemove = STUDENTASSFOLDER;
@@ -55,12 +55,12 @@ removeShitFromDir(dirToRemove);
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
 
 % Load the studentnumbers (randomly ordered)
-load([NAMEASSIGNMENTFOLDER filesep STUDENTNUMBERMAT]);
+load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
 % Create weekfolders
 mkdir(wkFolderName)
 % Create a STUDENTASSFOLDER inside every weekfolder
 for i = 1:length(studentNumbers)
-    mkdir([wkFolderName filesep num2str(studentNumbers(i))]);
+    mkdir(fullfile(wkFolderName,num2str(studentNumbers(i))));
 end
 
 %% Get overview of file versions, and assign to studentNumbers. PLEASE NOTICE:
@@ -77,7 +77,7 @@ for i = 1:length(deepestAssignFolders)
     deepestAssignFoldersWithoutWeek{i} = extractAfter(deepestAssignFolders{i},WEEKNAME);
     % Count the number of assignment in every folder (with '_SOL')
     currPath = pwd;
-    cd([NAMEASSIGNMENTFOLDER filesep deepestAssignFolders{i}]);
+    cd(fullfile(NAMEASSIGNMENTFOLDER,deepestAssignFolders{i}));
     answerFilesInDir{i} = dir(['*' SOLPOSTFIX '*']);
     numberOfAssignmentInDir(i) = length(answerFilesInDir{i});
     cd(currPath);
@@ -95,7 +95,7 @@ for i = 1:length(studentNumbers)
     % used here, but could be improved by implementing a random
     % generator everytime an assignment is chosen
     studentDir = num2str(studentNumbers(i));
-    currStudentDir = [wkFolderName filesep studentDir];
+    currStudentDir = fullfile(wkFolderName,studentDir);
     for j = 1:length(deepestAssignFolders)
         cnt = answerFileCounter(j); %
         currFile = [deepestAssignFolders{j} filesep answerFilesInDir{1,j}(cnt).name];
@@ -122,7 +122,7 @@ for i = 1:length(studentNumbers)
         end
     end
     % Copy the finishing script that a student needs to use
-    copyfile(fullfile(pwd,'AfrondenWeekOpdracht.m'),fullfile(currStudentDir,WEEKNAME))
+    copyfile(fullfile(pwd,NAMEZIPMFILEFORSTUDENTS),fullfile(currStudentDir,WEEKNAME))
     % Create a file with the studentnumber
     fid = fopen(fullfile(currStudentDir,WEEKNAME,'studentnummer.m'),'w'); 
     fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);

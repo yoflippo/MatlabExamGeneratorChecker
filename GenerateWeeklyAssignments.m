@@ -57,12 +57,6 @@ addpath(genpath(NAMEASSIGNMENTFOLDER))
 % After copy Matlab does not release a file
 fclose('all');
 
-%% Remove (if necessary) and create a folder for the submitted student assignments
-debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
-
-subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
-removeShitFromDir(subWkFolder) 
-
 %% Read the student number and convert the list to e-mailadresses
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
 
@@ -85,7 +79,25 @@ end
 fclose(fid);
 %save the studentnumbers for later use
 save(STUDENTNUMBERMAT,'studentNumbers');
+cd(BASEFOLDER)
 
+%% Remove (if necessary) and create a folder for the submitted student assignments
+debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
+
+if ~isempty(input('Are you sure you want to delete ALL STUDENT SUBMISSIONS? No Answer: NO'))
+    subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
+    removeShitFromDir(subWkFolder)
+end
+
+%% Create a MAT file that stores the results of each student
+cd(STUDENTSUBFOLDER);
+studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
+for wk = 1:4
+    save([NAMERESULTMAT num2str(wk)],'studentMatrix');
+end
+
+cd(BASEFOLDER)
+cd(NAMEASSIGNMENTFOLDER)
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
 namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
@@ -101,7 +113,7 @@ for wk = 1:length(namesWeekDirectories)
             % check which types of questions are in the subfolder of the
             % current weekfolder
             subdirs = strsplit(relpath,filesep);
-            cd([subdirs{1} filesep subdirs{2}])
+            cd(fullfile(subdirs{1},subdirs{2}))
             %Check for the presence of files below to give the proper
             %header in the student specific assignment
             if (exist(fullfile(relpath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
@@ -130,7 +142,7 @@ for wk = 1:length(namesWeekDirectories)
             uniqueFileName = [extractBefore(namefile,'_versie') '_'...
                 uniqueFN.Hash '_' ];
             makeMFileFromCells(uniqueFileName,headerHash)
-            % Rename the ANS file
+            % Rename the SOL file
             movefile([namefile SOLPOSTFIX EXT],[extractBefore(namefile,'_versie')...
                 '_' uniqueFN.Hash SOLPOSTFIX EXT]);
             fclose('all'); delete([namefile EXT]);
@@ -140,5 +152,5 @@ for wk = 1:length(namesWeekDirectories)
         end
     end
 end
-cd ..
+cd(BASEFOLDER)
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);
