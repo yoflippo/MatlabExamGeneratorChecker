@@ -1,3 +1,5 @@
 clear all; close all; clc;
-load('dicWithHashes')
-CheckSingleStudentAssignment('11111111',dicWithHashes);
+load('dicHashesAbsPath')
+load('dicAssignmentsAndPoints')
+load('answerfiles_week1')
+CheckSingleStudentAssignment('11111111',dicWithHashes,dicNameAssignmentAndPoints,answerFilesInDir);

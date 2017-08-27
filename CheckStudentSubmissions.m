@@ -35,7 +35,7 @@ debugOutput(DEBUGOUTPUT,'Start with script');
 correct = input(['Is this the correct week?: ' num2str(WEEK) ...
     ' (not giving an answer is YES)']);
 if ~isempty(correct)
-    disp('Script is STOPPED because the WEEK constant (see: Constants.m) has to be changed');
+    disp('Script is STOPPED because the WEEK constant (see: initAll.m) has to be changed');
     return
 end
 subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
@@ -127,6 +127,8 @@ for i = 1:length(mfiles)
 end
 
 %% Get the number of points for all week assignments
+debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
+
 mfiles = readFilesInSubFolder(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME),'.m');
 relevantMFiles = strfind(mfiles,'points.m');
 if isempty(relevantMFiles)
@@ -140,11 +142,13 @@ for i = 1:length(mfiles)
     tmp = tmp{1};
     run(tmp(1:end-2));
     % Get name of assignment and save it
-    foundSlashes = strfind(tmp,'\')
+    foundSlashes = strfind(tmp,'\');
     nameOfAssignment{i} = tmp(foundSlashes(end-1)+1:foundSlashes(end)-1);
     pointsPerAssignment(i) = deelpunten;
 end
-% Put in dictionary and save in MAT-file
+
+%% Put in dictionary and save in MAT-file
+debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 

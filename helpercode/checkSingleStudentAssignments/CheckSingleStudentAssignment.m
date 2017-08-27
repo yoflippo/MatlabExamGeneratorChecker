@@ -1,4 +1,4 @@
-function result = CheckSingleStudentAssignment(studentdir, hashdic)
+function result = CheckSingleStudentAssignment(studentdir, dicWithHashes,dicNameAssignmentAndPoints,answerFilesInDir)
 %CHECKSINGLESTUDENTASSIGNMENT A function that checks a students week
 %assignment. 
 %
@@ -78,5 +78,7 @@ for i = 1:length(mfiles)
 end
 
 %% Find the associated solution files
+
+
 
 end

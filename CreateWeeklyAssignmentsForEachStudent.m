@@ -39,6 +39,12 @@
 InitAll
 debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
 
+correct = input(['Is this the correct week?: ' num2str(WEEK) ...
+    ' (not giving an answer is YES)']);
+if ~isempty(correct)
+    disp('Script is STOPPED because the WEEK (see: initAll.m) has to be changed');
+    return
+end
 %% Create a working folder called 'student-assignments'
 debugOutput(DEBUGOUTPUT,'Create a working folder called student-assignments',1);
 

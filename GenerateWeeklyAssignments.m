@@ -85,18 +85,22 @@ cd(BASEFOLDER)
 debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
 
 if ~isempty(input('Are you sure you want to delete ALL STUDENT SUBMISSIONS? No Answer: NO'))
-    subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
+    subWkFolder = STUDENTSUBFOLDER;
     removeShitFromDir(subWkFolder)
+    mkdir(STUDENTSUBFOLDER)
+    addpath(genpath(STUDENTSUBFOLDER))
+    
+    % Create a MAT file that stores the results of each student
+    cd(STUDENTSUBFOLDER);
+    studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
+    for wk = 1:4
+        save([NAMERESULTMAT num2str(wk)],'studentMatrix');
+        mkdir(['week' num2str(wk)]);
+        addpath(genpath(['week' num2str(wk)]));
+    end
+    cd(BASEFOLDER)
 end
 
-%% Create a MAT file that stores the results of each student
-cd(STUDENTSUBFOLDER);
-studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
-for wk = 1:4
-    save([NAMERESULTMAT num2str(wk)],'studentMatrix');
-end
-
-cd(BASEFOLDER)
 cd(NAMEASSIGNMENTFOLDER)
 
 %% Create new filenames (with HASH code AND combine file names)

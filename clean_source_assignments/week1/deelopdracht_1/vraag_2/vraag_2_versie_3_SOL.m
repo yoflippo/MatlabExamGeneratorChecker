@@ -8,4 +8,4 @@
 % B : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % C : stelling 1 is WAAR      en stelling 2 is WAAR
 % D : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
-Antwoord_Vraag2 = C;
+Antwoord = C;
