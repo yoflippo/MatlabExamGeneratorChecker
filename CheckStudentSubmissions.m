@@ -76,7 +76,7 @@ cd(BASEFOLDER);
 load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
 % Display how many students did not submit
 numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
-if numOfNotSubmitted == 0
+if length(studentsThatSubmitted) == 0
     error('Something went wrong: no student submission');
 end
 disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
@@ -116,7 +116,10 @@ for i = 1:length(mfiles)
             oldPath = pwd;
             cd(mfiles(i).folder);
             mkdir(ADJUSTEDHASH);
-            movefile(currFileAbsPath,fullfile(mfiles(i).folder,ADJUSTEDHASH,mfiles(i).name));
+            % replace point of filename with underscore, so it won't be
+            % recognised in other scripts as an m-file.
+            nameOfFile = strrep(mfiles(i).name,'.','_');            
+            movefile(currFileAbsPath,fullfile(mfiles(i).folder,ADJUSTEDHASH,nameOfFile));
             cd(oldPath);
         end
     end

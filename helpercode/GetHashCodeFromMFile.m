@@ -28,12 +28,10 @@ function [HashCode] = GetHashCodeFromMFile(fileNameWithLocation)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               varargin:   <text>
-%               varargin:   <text>
+%               fileNameWithLocation:  Is it not clear?
 %
 % RETURN:
-%               outvar:     <text>
-%               outvar:     <text>
+%               HashCode:     The hashcode of the m-file
 %
 % EXAMPLES:
 %
