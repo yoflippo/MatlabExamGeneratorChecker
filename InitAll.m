@@ -32,6 +32,7 @@ STUDENTSUBFOLDER = 'student_submitted_assignments';
 NAMEZIPPEDWEEK = 'Biostatica_Programmeren_StudentOpdrachten_';
 EXT = '.m';
 SOLPOSTFIX = '_SOL';
+CHECKPOSTFIX = '_CHECK';
 OTHERFILESINSTUDENTFOLDER = {'AfrondenWeekOpdracht.m' 'studentnummer.m'};
 ADJUSTEDHASH = 'AANGEPASTE_MFILE_GEEN_PUNTEN';
 NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';

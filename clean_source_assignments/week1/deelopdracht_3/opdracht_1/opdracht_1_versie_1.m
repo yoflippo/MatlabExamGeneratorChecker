@@ -1,3 +1,6 @@
 %% Opdracht 1
-% Maak een variabele aan met de naam: ikbeneenvariabele.
-% Geef de variabele de waarde 22
+% Maak een functie die kwadraat uitrekent
+function result = kwadraat(getal)
+
+
+end
