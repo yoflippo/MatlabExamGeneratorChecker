@@ -144,12 +144,13 @@ for wk = 1:length(namesWeekDirectories)
             % Go inside current folder
             cd(subdirs{end})
             % Create unique filename
-            uniqueFileName = [extractBefore(namefile,'_versie') '_'...
-                uniqueFN.Hash '_' ];
+            uniqueFileName = [extractBefore(namefile,'_versie') '_' uniqueFN.Hash '_' ];
             makeMFileFromCells(uniqueFileName,headerHash)
             % Rename the SOL file
             movefile([namefile SOLPOSTFIX EXT],[extractBefore(namefile,'_versie')...
                 '_' uniqueFN.Hash SOLPOSTFIX EXT]);
+            % Rename the CHECK file
+            
             fclose('all'); delete([namefile EXT]);
             % Go back to current folder and clear variable
             clear headerHash
