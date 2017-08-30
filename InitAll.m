@@ -30,6 +30,7 @@ NAMEASSIGNMENTFOLDER = 'unique_assignments';
 STUDENTASSFOLDER = 'student_week_assignments';
 STUDENTSUBFOLDER = 'student_submitted_assignments';
 NAMEZIPPEDWEEK = 'Biostatica_Programmeren_StudentOpdrachten_';
+BACKUPFOLDER = 'bu';
 EXT = '.m';
 SOLPOSTFIX = '_SOL';
 CHECKPOSTFIX = '_CHECK';

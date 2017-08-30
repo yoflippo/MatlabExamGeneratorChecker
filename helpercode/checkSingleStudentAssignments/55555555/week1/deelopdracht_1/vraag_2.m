@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |8c17a82f647928fada776f2fccfb3aec|
+%                    |84f7de881b678e490ae0c9e3f7c5b997|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -32,8 +32,8 @@ A = 1; B = 2; C = 3; D = 4;
 % Stelling 2: Een operator voert een handeling uit op één of meerder
 % operands.
 %
-% A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
-% B : stelling 1 is WAAR      en stelling 2 is WAAR
-% C : stelling 1 is NIET-WAAR en stelling 2 is WAAR
-% D : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
-Antwoord_Vraag2 = NaN;
+% A : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
+% B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
+% C : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
+% D : stelling 1 is WAAR      en stelling 2 is WAAR
+Antwoord = NaN;

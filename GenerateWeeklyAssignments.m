@@ -42,12 +42,28 @@
 InitAll
 debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
 
+%% Zip all files in case a deletion goes wrong
+debugOutput(DEBUGOUTPUT,'Zip all files in case a deletion goes wrong',1);
+
+% Get unique string
+d = char(datetime('now'));
+d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
+warning off;
+if input('Do you want to clean the Backup folder? Yes (1) No (nothing): ')
+    removeShitFromDir(BACKUPFOLDER);
+end
+mkdir(BACKUPFOLDER)
+addpath(genpath(BACKUPFOLDER))
+zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
+warning on;
+
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);
 
 
 %% Copy the folder called 'clean_source_assignments'.
-debugOutput(DEBUGOUTPUT,'Copy the folder called clean_source_assignments',1);
+debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' ...
+            NAMEASSIGNMENTFOLDER],1);
 
 % Delete previously generated folder
 removeShitFromDir(NAMEASSIGNMENTFOLDER);
@@ -84,7 +100,7 @@ cd(BASEFOLDER)
 %% Remove (if necessary) and create a folder for the submitted student assignments
 debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
 
-if ~isempty(input('Are you sure you want to delete ALL STUDENT SUBMISSIONS? No Answer: NO'))
+if input('Are you sure you want to delete ALL STUDENT SUBMISSIONS? YES (1), NO (nothing)')
     subWkFolder = STUDENTSUBFOLDER;
     removeShitFromDir(subWkFolder)
     mkdir(STUDENTSUBFOLDER)
@@ -100,12 +116,11 @@ if ~isempty(input('Are you sure you want to delete ALL STUDENT SUBMISSIONS? No A
     end
     cd(BASEFOLDER)
 end
-
 cd(NAMEASSIGNMENTFOLDER)
 
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
-namesWeekDirectories = {'week1' 'week2'}; % 'week3' 'week4'};
+namesWeekDirectories = {'week1' 'week2' 'week3' 'week4'};
 for wk = 1:length(namesWeekDirectories)
     % find all files in weekX folder
     weekAssignments = readFilesInSubFolder(namesWeekDirectories{wk},EXT);
@@ -156,7 +171,7 @@ for wk = 1:length(namesWeekDirectories)
                 movefile([namefile CHECKPOSTFIX EXT],[extractBefore(namefile,'_versie')...
                 '_' uniqueFN.Hash CHECKPOSTFIX EXT]);
             catch
-                error('There is a missing CHECK file');
+                error(['There is a missing CHECK file: ' namefile]);
             end
             
             fclose('all'); delete([namefile EXT]);

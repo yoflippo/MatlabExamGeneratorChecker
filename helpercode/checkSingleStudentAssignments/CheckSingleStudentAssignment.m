@@ -78,7 +78,22 @@ for i = 1:length(mfiles)
 end
 
 %% Find the associated solution files
-
+sumPoints = 0;
+for i = 1:length(mfilesWithHash)
+    % Get the check file for this assignment
+    absPathCheckfile = dicWithHashes(HashOfmfiles{1,i})
+    AbsPathSOLScript = replace(absPathCheckfile,'CHECK','SOL');
+    % Get the type of the file: opdracht_x, vraag_x
+    AbsPathStudentScript = mfilesWithHash{1,i};
+    [p,n,e] = fileparts(AbsPathStudentScript);
+    % Get the number of points for this assignment
+    pointsForCurrentAssignment = dicNameAssignmentAndPoints(n);
+    
+    %Start checking
+    run(absPathCheckfile);
+    % Calcule partialpoints
+    sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
+end
 
 
 end

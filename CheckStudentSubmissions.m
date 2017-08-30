@@ -152,6 +152,10 @@ debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
+%% Check all the CHECK files by running the SOL files on them
+debugOutput(DEBUGOUTPUT,'Check all the CHECK files by running the SOL files on them',0);
+
+
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
 

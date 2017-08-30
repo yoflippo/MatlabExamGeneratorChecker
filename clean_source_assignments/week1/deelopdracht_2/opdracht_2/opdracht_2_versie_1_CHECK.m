@@ -9,7 +9,7 @@
 
 % verwijderen van variabele
 clear ikbeneenvariabele
-
+    ResStudentScript = 0;
 % dit script neemt aan dat het te runnen script met het absolute path in de
 % variabele AbsPathStudentScript staat.
 
@@ -17,13 +17,11 @@ try
     run(AbsPathStudentScript);
 catch
     % het is fout gegaan. Een script dat niet runt krijgt geen punten.
-    ResStudentScript = 0;
     return;
 end
 
 if exist('ikbeneenvariabele')
-    ResStudentScript = 0.5;
-end
-if ikbeneenvariabele == 22
+    if ikbeneenvariabele == 22
     ResStudentScript = 1.0;
+end
 end
