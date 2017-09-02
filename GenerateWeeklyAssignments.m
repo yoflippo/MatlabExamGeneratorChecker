@@ -57,10 +57,6 @@ addpath(genpath(BACKUPFOLDER))
 zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
 warning on;
 
-%% Check for the existence of needed supporting scripts/function files
-debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files',1);
-
-
 %% Copy the folder called 'clean_source_assignments'.
 debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' ...
             NAMEASSIGNMENTFOLDER],1);
@@ -172,8 +168,7 @@ for wk = 1:length(namesWeekDirectories)
                 '_' uniqueFN.Hash CHECKPOSTFIX EXT]);
             catch
                 error(['There is a missing CHECK file: ' namefile]);
-            end
-            
+            end   
             fclose('all'); delete([namefile EXT]);
             % Go back to current folder and clear variable
             clear headerHash

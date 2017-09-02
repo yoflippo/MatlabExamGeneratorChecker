@@ -1,4 +1,7 @@
-
+function  checkCorrectnessAssignment(solution,check)
+%CHECKCORRECTNESSASSIGNMENT a function to check if the
+%solution/assignment/check files are usable.
+%
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
@@ -15,23 +18,9 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-clc; close all; close all hidden;  clear variables;
-addpath(genpath(pwd));
-DEBUGOUTPUT = 1;
-% make zero to delete base folder
-Constants
+% 
+% $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
+%<Description>
 
-%% Check for the existence of needed supporting scripts/function files
-debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
-for i = 1:length(LISTWITHNEEDEDFOLDERS)
-    try
-        cd(LISTWITHNEEDEDFOLDERS{i});
-        cd ..
-    catch
-        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
-            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
-    end
+
 end
-% The basefolder should only be assigned if previous code has executed
-% correctly
-BASEFOLDER = pwd;

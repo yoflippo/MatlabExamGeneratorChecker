@@ -1,4 +1,4 @@
-function result = CheckSingleStudentAssignment(studentdir, dicWithHashes,dicNameAssignmentAndPoints,answerFilesInDir)
+function result = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints,answerFilesInDir)
 %CHECKSINGLESTUDENTASSIGNMENT A function that checks a students week
 %assignment.
 %
@@ -69,8 +69,7 @@ cntFile = 1;
 for i = 1:length(mfiles)
     try
         absPath = fullfile(mfiles(i).folder,mfiles(i).name);
-        Hash = GetHashCodeFromMFile(absPath);
-        HashOfmfiles{cntFile} = Hash;
+        HashOfmfiles{cntFile} = GetHashCodeFromMFile(absPath);
         mfilesWithHash{cntFile} = absPath;
         cntFile = cntFile + 1;
     catch
@@ -81,7 +80,7 @@ end
 sumPoints = 0;
 for i = 1:length(mfilesWithHash)
     % Get the check file for this assignment
-    absPathCheckfile = dicWithHashes(HashOfmfiles{1,i})
+    absPathCheckfile = dicCheckFilesAbsPath(HashOfmfiles{1,i})
     AbsPathSOLScript = replace(absPathCheckfile,'CHECK','SOL');
     % Get the type of the file: opdracht_x, vraag_x
     AbsPathStudentScript = mfilesWithHash{1,i};
