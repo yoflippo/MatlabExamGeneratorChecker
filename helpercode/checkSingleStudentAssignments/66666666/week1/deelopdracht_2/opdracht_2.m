@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |18081a6eb3a4c06b6f47e541aa2fd67a|
+%                    |a8a75ac4c6810b9b90d4f7285fb9e1f0|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -21,5 +21,5 @@
 %% =================== BLIJF VAN VOORGAANDE CODE AF! ======================
 %
 %% Opdracht 1
-% Maak een variabele aan met de naam: ditiseenvar.
-% Geef de variabele de waarde 33
+% Maak een variabele aan met de naam: ikbeneenvariabele.
+% Geef de variabele de waarde 22

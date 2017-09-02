@@ -17,4 +17,6 @@ OTHERFILESINSTUDENTFOLDER = {'AfrondenWeekOpdracht.m' 'studentnummer.m'};
 ADJUSTEDHASH = 'AANGEPASTE_MFILE_GEEN_PUNTEN';
 NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
 NAMERESULTMAT = 'resultatenWeek';
+VAR_RESULT = 'ResStudentScript';
+WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4'};
 % Oooh Noo... some code in a file called Constants... shame on you author

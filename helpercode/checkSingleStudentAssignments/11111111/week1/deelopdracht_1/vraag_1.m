@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |46ff614bffcfdd07653f632390cfd664|
+%                    |02403fa1584da2ed2a3d2affe43861c9|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -31,8 +31,8 @@ A = 1; B = 2; C = 3; D = 4;
 % Stelling 2: In de workspace staan de bestanden van de huidige folder (de
 % folder waaruit Matlab werkt)
 %
-% A : stelling 1 is WAAR      en stelling 2 is WAAR
-% B : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
-% C : stelling 1 is NIET-WAAR en stelling 2 is WAAR
-% D : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
+% A : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
+% B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
+% C : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
+% D : stelling 1 is WAAR      en stelling 2 is WAAR
 Antwoord = NaN; % vul hier het juiste antwoord in A, B, C of D

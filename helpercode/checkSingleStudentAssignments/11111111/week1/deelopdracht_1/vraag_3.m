@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |eec4942ebb042b0ff56d8469b22312e0|
+%                    |afbbdc417b4871e78f7139b91cf45210|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -29,8 +29,8 @@ A = 1; B = 2; C = 3; D = 4;
 %% Vraag 2
 % Stelling 1: In Matlab laat de Current Folder zien in welke folder Matlab
 % op dit moment aan het werken.
-% Stelling 2: In het Command Window kun je niet zelf opdrachten/commandos
-% uitvoeren.
+% Stelling 2: De script editor wordt alleen zichtbaar als een script is
+% geopend.
 %
 % A : stelling 1 is WAAR      en stelling 2 is WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

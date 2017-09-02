@@ -116,10 +116,10 @@ cd(NAMEASSIGNMENTFOLDER)
 
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
-namesWeekDirectories = {'week1' 'week2' 'week3' 'week4'};
-for wk = 1:length(namesWeekDirectories)
+
+for wk = 1:length(WEEKFOLDERS)
     % find all files in weekX folder
-    weekAssignments = readFilesInSubFolder(namesWeekDirectories{wk},EXT);
+    weekAssignments = readFilesInSubFolder(WEEKFOLDERS{wk},EXT);
     % traverse the week folder
     for fl = 1:length(weekAssignments)
         currentFile = weekAssignments{fl};

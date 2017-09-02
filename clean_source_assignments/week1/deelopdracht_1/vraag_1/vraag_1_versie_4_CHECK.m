@@ -1,28 +1,26 @@
-% Dit script moet een ander script nakijken en testen.
-% Dit script:
-%               1 - neemt aan dat het te runnen script met het 
-%                   absolute path in de variabele AbsPathStudentScript staat. 
-%               2 - geeft een resultaat terug in de variabele ResStudentScript. 
-%                   Als alles goed is: ResStudentScript = 1. Als alles fout 
-%                   is: ResStudentScript = 0. Als de helft goed is: 
-%                   ResStudentScript = 0.5;
+% This script has to check and test another script
+% It 
+%               -   Give a result in the variable ResStudentScript. Perfect
+%                   grade = 1. Totally wrong result = 0.
 
-% verwijderen van variabele
+% Load the project constants
+Constants 
+% Generate the default Answers
 A=1;B=2;C=3;D=4;
+% Create the result variable for students
 ResStudentScript = 0;
 clear Antwoord
-
-% run SOL script
-run(AbsPathSOLScript)
+% run SOL script and save the correct answer
+run(replace(mfilename,CHECKPOSTFIX,SOLPOSTFIX))
 CorrectAntwoord = Antwoord;
-
-% run script van student
+clear Antwoord
+% run student script
 try
     run(AbsPathStudentScript);
 catch
     return;
 end
-
+% multiple choice checking is easy...
 if CorrectAntwoord == Antwoord;
     ResStudentScript = 1;
 end
