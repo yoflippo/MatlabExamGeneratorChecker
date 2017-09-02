@@ -1,6 +1,6 @@
 function result = CheckSingleStudentAssignment(studentdir, dicWithHashes,dicNameAssignmentAndPoints,answerFilesInDir)
 %CHECKSINGLESTUDENTASSIGNMENT A function that checks a students week
-%assignment. 
+%assignment.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -18,7 +18,7 @@ function result = CheckSingleStudentAssignment(studentdir, dicWithHashes,dicName
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %               1 - This functin expects an absolute path to the student folder
 %               or it expects to be in the correct current folder.
@@ -32,17 +32,17 @@ function result = CheckSingleStudentAssignment(studentdir, dicWithHashes,dicName
 %               5 - Need a dictionary with hash and number of points for
 %               each assignment..
 %
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-% 
+%
 % PARAMETERS:
 %               studentdir:   name of the student folder
 %               hashdic:   the dictionary with the hashes.
 %
-% RETURN:       
-%               result:     the percentage of right answers and solution. 
-%                           They are given as a percentage. 
-% 
+% RETURN:
+%               result:     the percentage of right answers and solution.
+%                           They are given as a percentage.
+%
 % EXAMPLES:
 %
 %
@@ -55,7 +55,7 @@ NAMEOFTHISCRIPT = 'CHECKSINGLESTUDENTASSIGNMENT';
 currPath = pwd;
 
 if isequal(exist(studentdir),0)
-   error([NAMEOFTHISCRIPT ': The accessed folder does not exists']) 
+    error([NAMEOFTHISCRIPT ': The accessed folder does not exists'])
 end
 
 %% Check the m-files in student directory
@@ -73,7 +73,7 @@ for i = 1:length(mfiles)
         HashOfmfiles{cntFile} = Hash;
         mfilesWithHash{cntFile} = absPath;
         cntFile = cntFile + 1;
-    catch        
+    catch
     end
 end
 
