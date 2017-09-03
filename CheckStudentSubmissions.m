@@ -199,11 +199,11 @@ load(fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]))
 
 % Iterate over every folder/studentnumber
 for sn = 1:length(trackStudentAssignment)
-    studentFolder = trackStudentAssignment{sn,1}
+    studentFolder = trackStudentAssignment{sn,1};
     points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ... 
                 dicNameAssignmentAndPoints,answerFilesInDir);
     grade = ((points/PointsToBeEarned)*9)+1;
-    studentMatrix(sn,2) = grade;
+    studentMatrix(sn,2) = round(grade,1);
 end
 
 % Copy the SOL files if 
