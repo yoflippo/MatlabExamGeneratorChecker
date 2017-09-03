@@ -59,6 +59,9 @@ debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. 
 
 % Find studentnumbers
 load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))
+% Remove directories from folder, they contain unzipped files and they are
+% unusable because you are running this script
+removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
 % Get files in the folder for analysis
 files = dir(subWkFolder);
 % Get studentnumbers of students that submitted AND unzip the folder
@@ -68,6 +71,7 @@ for i = 3:length(files)
     studentsThatSubmitted{i-2} = files(i).name(end-11:end-4);
     unzip(fullfile(subWkFolder,files(i).name));
 end
+% Add the studentfolder to path
 addpath(genpath(pwd))
 cd(BASEFOLDER);
 % Load the old studentNumbers
@@ -122,6 +126,22 @@ for i = 1:length(mfiles)
             cd(oldPath);
         end
     end
+end
+
+%% Check for each student if they have their correct assignmenets
+% Iterate over studentfolder to check if they present mfiles contains the
+% ASSIGNED files. A student could exchange assigned files with another
+% student
+debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assignmenets',0);
+
+% Load the information assigned for this week
+load(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]));
+
+for i = 1:length(trackStudentAssignment)
+    % Go inside student folder
+    cd(fullfile(STUDENTSUBFOLDER,WEEKNAME,trackStudentAssignment{i,1}));
+    % Get mfiles
+    dir('**\*.m');
 end
 
 %% Get the number of points for all week assignments

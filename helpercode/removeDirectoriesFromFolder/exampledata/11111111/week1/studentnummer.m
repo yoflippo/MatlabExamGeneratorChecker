@@ -1,0 +1,1 @@
+currentStudentNumber = num2str(11111111);

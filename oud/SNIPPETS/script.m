@@ -28,4 +28,4 @@
 %
 
 % $Revisi0n: 0.0.0 $  $Date: 20xx-xx-xx $
-%<Description>
+% Creation of the script
