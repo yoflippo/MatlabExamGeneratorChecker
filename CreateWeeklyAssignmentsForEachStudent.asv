@@ -99,13 +99,12 @@ answerFileCounter = ones(1,length(deepestAssignFolders));
 % create a variable to save their personal Hashes for anti-cheating
 % purposes, this cell is used to make a dictionary
 trackStudentAssignment = num2cell(zeros(length(studentNumbers), ... 
-                         length(deepestAssignFolders))+1);
+                         length(deepestAssignFolders)));
 for i = 1:length(studentNumbers)
     warning off
     % Browse to every assignment folder, PLEASE NOTICE: randonmness is used
     % by shuffling the studentnumbers in the studentlist.
     studentDir = num2str(studentNumbers(i));
-    trackStudentAssignment{i,1} = studentDir;
     currStudentDir = fullfile(wkFolderName,studentDir);
     % Loop through the assignments 
     for j = 1:length(deepestAssignFolders)
@@ -130,7 +129,7 @@ for i = 1:length(studentNumbers)
         copyfile(sourceFile,finFileLoc);
         % Get hash and save if for anti-cheating purposes
         hash = GetHashCodeFromMFile(fullfile(basePath,finFileLoc));
-        trackStudentAssignment{i,j+1} = hash;
+        trackStudentAssignment{
         % Reset counter if last file is reached
         if isequal(numberOfAssignmentInDir(j),answerFileCounter(j))
             answerFileCounter(j) = 1;
@@ -154,10 +153,6 @@ for i = 1:length(studentNumbers)
     removeShitFromDir(currStudentDir);
     warning on
 end
-
-%% Save the studentnumbers and their assigned hashes
-save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]) ... 
-    ,'trackStudentAssignment');
 
 %% Zip the folder with zipped-assignments per student and delete that folder
 debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);

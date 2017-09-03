@@ -124,9 +124,6 @@ for i = 1:length(mfiles)
     end
 end
 
-%% Check for each student if they have their correct assignmenets
-
-
 %% Get the number of points for all week assignments
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
 

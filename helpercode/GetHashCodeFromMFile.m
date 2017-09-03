@@ -1,4 +1,4 @@
-function [HashCode] = GetHashCodeFromMFile(fileNameWithLocation)
+function [HashCode] = GetHashCodeFromMFile(fileLocationAbsPath)
 %GETHASHCODEFROMMFILE This script extracts the HashCode from a certain
 %file.
 %
@@ -28,7 +28,7 @@ function [HashCode] = GetHashCodeFromMFile(fileNameWithLocation)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               fileNameWithLocation:  Is it not clear?
+%               fileLocationAbsPath:  Is it not clear?
 %
 % RETURN:
 %               HashCode:     The hashcode of the m-file
@@ -43,7 +43,7 @@ function [HashCode] = GetHashCodeFromMFile(fileNameWithLocation)
 %% Read the data of file
 delimiter = {''};
 formatSpec = '%s%[^\n\r]';
-fileID = fopen(fileNameWithLocation,'r');
+fileID = fopen(fileLocationAbsPath,'r');
 
 dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
     'TextType', 'string',  'ReturnOnError', false);
