@@ -1,4 +1,4 @@
-function result = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints,answerFilesInDir)
+function sumPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints,answerFilesInDir)
 %CHECKSINGLESTUDENTASSIGNMENT A function that checks a students week
 %assignment.
 %
@@ -51,6 +51,8 @@ function result = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,
 % Creation of the function file
 
 %% Check if directory exists
+% set a breakpoint in case of an error, so the program could be continued
+dbstop('if','error')
 NAMEOFTHISCRIPT = 'CHECKSINGLESTUDENTASSIGNMENT';
 currPath = pwd;
 
@@ -79,20 +81,26 @@ end
 %% Find the associated solution files
 sumPoints = 0;
 for i = 1:length(mfilesWithHash)
-    % Get the check file for this assignment
-    absPathCheckfile = dicCheckFilesAbsPath(HashOfmfiles{1,i})
-    % Save it in a variable used by the solution
-    AbsPathSOLScript = replace(absPathCheckfile,'CHECK','SOL');
-    % Get the type of the file: opdracht_x, vraag_x
-    AbsPathStudentScript = mfilesWithHash{1,i};
-    [p,n,e] = fileparts(AbsPathStudentScript);
-    % Get the number of points for this assignment
-    pointsForCurrentAssignment = dicNameAssignmentAndPoints(n);  
-    %Start checking
-    run(absPathCheckfile);
-    % Calcule partialpoints
-    sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
+    try
+        % Get the check file for this assignment
+        absPathCheckfile = dicCheckFilesAbsPath(HashOfmfiles{1,i});
+        % Save it in a variable used by the solution
+        AbsPathSOLScript = replace(absPathCheckfile,'CHECK','SOL');
+        % Get the type of the file: opdracht_x, vraag_x
+        AbsPathStudentScript = mfilesWithHash{1,i};
+        [p,n,e] = fileparts(AbsPathStudentScript);
+        % Get the number of points for this assignment
+        pointsForCurrentAssignment = dicNameAssignmentAndPoints(n);
+        %Start checking
+        run(absPathCheckfile);
+        % Calcule partialpoints
+        sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
+    catch
+        edit(mfilename)
+        pause
+    end
 end
-
-
+% no breakpoints in this file
+dbclear('in',mfilename)
+cd(currPath);
 end

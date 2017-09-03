@@ -131,7 +131,7 @@ end
 % Iterate over studentfolder to check if they present mfiles contains the
 % ASSIGNED files. A student could exchange assigned files with another
 % student
-debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assignmenets',0);
+debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assignments',0);
 
 % Load the information assigned for this week
 load(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]));
@@ -150,8 +150,7 @@ for i = 1:length(trackStudentAssignment)
             nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
             newNameOfCheatFile = strrep(nameOfFile,'.m','_m'); 
             %Get corresponding subfolder of assignment
-            [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j});
-            [a subdir] = GetPathOneLevelUp(a);
+            [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j},3);
             mkdir(fullfile(WEEKNAME,FOLDERCHEAT,subdir));
             movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT, ... 
                      subdir,newNameOfCheatFile));
@@ -162,8 +161,8 @@ end
 
 %% Get the number of points for all week assignments
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
-
-mfiles = readFilesInSubFolder(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME),'.m');
+relPathWeekFolderUnique = fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME);
+mfiles = readFilesInSubFolder(relPathWeekFolderUnique,'.m');
 relevantMFiles = strfind(mfiles,'points.m');
 if isempty(relevantMFiles)
     error('Apparently there are NO points.m files found');
@@ -188,7 +187,26 @@ dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
 %% Check all the CHECK files by running the SOL files on them
-debugOutput(DEBUGOUTPUT,'Check all the CHECK files by running the SOL files on them',0);
+debugOutput(DEBUGOUTPUT,'Check all the CHECK files by running the CHECK files on them',0);
+PointsToBeEarned = sum(pointsPerAssignment);
+% Load the answer files
+eval(['load(''answerfiles_week' num2str(WEEK) ''')'])
+% Go to folder with unzipped files
+relPath = fullfile(STUDENTSUBFOLDER,WEEKNAME);
+cd(relPath);
+% Load the studentMatrix in resultatenWeekx
+load(fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]))
+
+% Iterate over every folder/studentnumber
+for sn = 1:length(trackStudentAssignment)
+    studentFolder = trackStudentAssignment{sn,1}
+    points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ... 
+                dicNameAssignmentAndPoints,answerFilesInDir);
+    grade = ((points/PointsToBeEarned)*9)+1;
+    studentMatrix(sn,2) = grade;
+end
+
+% Copy the SOL files if 
 
 
 %% Check the answer of the students and track their points if correct
