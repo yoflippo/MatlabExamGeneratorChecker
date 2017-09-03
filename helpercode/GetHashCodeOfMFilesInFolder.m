@@ -1,4 +1,4 @@
-function HashCodes = CheckHashCodeOfMFilesInFolder(folder)
+function [HashCodes AbsPathHashCodes]= CheckHashCodeOfMFilesInFolder(absPathFolder)
 %CHECHHASCODEOFMFILESINFOLDER This function checks if all the m-files in
 %the given directory contain hashcodes as created by us. The goal is to
 %check if students altered the forbidden parts of the given code.
@@ -41,17 +41,23 @@ function HashCodes = CheckHashCodeOfMFilesInFolder(folder)
 % Creation of function
 
 % Get an overview of files
-mfiles = readFilesInSubFolder(folder,'.m');
-
-% Filter the relevant files, only files with 'vraag' are relevant
-mfilesOI = strfind(mfiles,'vraag_'); %files of interest
-mfiles = mfiles(cellfun('length',mfilesOI)==2);
-
-% Further filter the files down to files without the postfix '_ans'
-mfilesOI = strfind(mfiles,'_ANT'); %files of interest
-mfilesOI = mfiles(cellfun('isempty',mfilesOI));
-
+currPath = pwd;
+cd(absPathFolder)
+mfiles = dir('**\*.m');
 HashCodes = [];
-for i = 1:length(mfilesOI)
-    HashCodes{i} = GetHashCodeFromMFile(mfilesOI{1,i});
+AbsPathHashCodes = [];
+cnt = 1;
+for i = 1:length(mfiles)
+    try
+        absPath = fullfile(mfiles(i).folder,mfiles(i).name);
+        hash = GetHashCodeFromMFile(absPath);
+        HashCodes{cnt} = hash;
+        AbsPathHashCodes{cnt} = absPath;
+        cnt = cnt + 1;
+    catch
+    end
 end
+% only return unique values
+HashCodes = unique(HashCodes);
+AbsPathHashCodes = unique(AbsPathHashCodes);
+cd(currPath);

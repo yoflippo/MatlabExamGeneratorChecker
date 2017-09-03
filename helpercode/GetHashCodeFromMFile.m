@@ -40,6 +40,11 @@ function [HashCode] = GetHashCodeFromMFile(fileLocationAbsPath)
 % $Revision: 0.0.0 $  $Date: 2017-07-26 $
 % Creation of ilfe
 
+%% Check if File exists
+if exist(fileLocationAbsPath) == 0
+    error('The file does not exist');
+end
+
 %% Read the data of file
 delimiter = {''};
 formatSpec = '%s%[^\n\r]';
@@ -53,7 +58,7 @@ HashString = char(HashString(1));
 underscorePos = strfind(HashString,'|');
 lu = length(underscorePos);
 if lu ~= 2
-    error('the number of symbols that separate the Hashcode is incorrect');
+    error('No hashcode at expected location');
 end
 HashCode = HashString(underscorePos(1)+1:underscorePos(2)-1);
 

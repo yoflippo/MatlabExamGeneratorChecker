@@ -1,3 +1,6 @@
+function filename = GetFileNameFromPath(path)
+%GETFILENAMEFROMPATH extract a filename from a path
+%
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
@@ -14,13 +17,29 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
+% 
+% DESCRIPTION:
+%
+% 
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+% 
+% PARAMETERS:
+%               Path:   a path with a filename
+%
+% RETURN:       
+%               filename: string with filename
+% 
+% EXAMPLES:
+%
+%
 
-% A testscript can be runned by the Matlab unit test environment by calling
-% : result = runtests('<name of testscript>');
-% For more info: https://nl.mathworks.com/help/matlab/ref/assert.html
-% For more info: https://nl.mathworks.com/help/matlab/ref/runtests.html
+% $Revision: 0.0.0 $  $Date: 2017-09-03 $
+% Creation of the function
 
-% Test unit case 1
-absDataPath = fullfile(pwd,'helpercode\testdata\assignments\week1\deelopdracht_1\vraag_1');
-HashCodes = GetHashCodeOfMFilesInFolder(absDataPath);
-h = HashCodes;
+fileseps = strfind(path,filesep);
+filename = path(fileseps(end)+1:end);
+
+if isempty(strfind(filename,'.'))
+    error('GetFileNameFromPath: path does not contain file')
+end
+end

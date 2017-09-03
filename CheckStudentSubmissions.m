@@ -138,11 +138,23 @@ debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assig
 load(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]));
 
 for i = 1:length(trackStudentAssignment)
+    % Get hash codes of current student
+    HashCodesOfCurrentStudentAssigned = {trackStudentAssignment{i,2:end}};
     % Go inside student folder
-    cd(fullfile(STUDENTSUBFOLDER,WEEKNAME,trackStudentAssignment{i,1}));
-    % Get mfiles
-    mfilesOfStudent = dir('**\*.m');
-    
+    relPath = fullfile(STUDENTSUBFOLDER,WEEKNAME,trackStudentAssignment{i,1});
+    cd(relPath);
+    % Get hashcodes in student folder
+    [HashCodeCurrStud AbsPathCodeCurrStud] = GetHashCodeOfMFilesInFolder(WEEKNAME);
+    % Check if the assigned hashcodes are present
+    for j = 1:length(HashCodeCurrStud)
+        if isempty(find(ismember(HashCodesOfCurrentStudentAssigned,HashCodeCurrStud{j})))
+            mkdir(fullfile(WEEKNAME,FOLDERCHEAT));
+            nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
+            newNameOfCheatFile = strrep(nameOfFile,'.m','_m');           
+            movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT,newNameOfCheatFile));
+        end
+    end
+    cd(BASEFOLDER)
 end
 
 %% Get the number of points for all week assignments
