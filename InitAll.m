@@ -16,7 +16,7 @@
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
 clc; close all; close all hidden;  clear variables;
-addpath(genpath(pwd));
+addpath(genpath('helpercode'));
 DEBUGOUTPUT = 1;
 % make zero to delete base folder
 Constants

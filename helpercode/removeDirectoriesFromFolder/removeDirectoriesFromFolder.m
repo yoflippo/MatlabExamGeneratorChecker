@@ -39,6 +39,7 @@ function removeDirectoriesFromFolder(absPathOfFolder)
 % Creation of the function
 
 % Find all dirs
+warning off
 allShit = dir(absPathOfFolder);
 
 for i = 3:length(allShit)
@@ -48,5 +49,5 @@ for i = 3:length(allShit)
         rmdir(dirToRemove,'s');
     end
 end
-
+warning on
 end

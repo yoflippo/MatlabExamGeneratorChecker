@@ -61,6 +61,7 @@ debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. 
 load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))
 % Remove directories from folder, they contain unzipped files and they are
 % unusable because you are running this script
+addpath(genpath(fullfile(pwd,subWkFolder)))
 removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
 % Get files in the folder for analysis
 files = dir(subWkFolder);
@@ -71,8 +72,6 @@ for i = 3:length(files)
     studentsThatSubmitted{i-2} = files(i).name(end-11:end-4);
     unzip(fullfile(subWkFolder,files(i).name));
 end
-% Add the studentfolder to path
-addpath(genpath(pwd))
 cd(BASEFOLDER);
 % Load the old studentNumbers
 load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
@@ -82,6 +81,9 @@ if length(studentsThatSubmitted) == 0
     error('Something went wrong: no student submission');
 end
 disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
+
+
+%% TODO: check if studentnumber file in studentfolder has correct studentnumber
 
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
@@ -120,14 +122,14 @@ for i = 1:length(mfiles)
             mkdir(fullfile(p,ADJUSTEDHASH,subdir));
             % replace point of filename with underscore, so it won't be
             % recognised in other scripts as an m-file.
-            nameOfFile = strrep(mfiles(i).name,'.','_');            
+            nameOfFile = strrep(mfiles(i).name,'.','_');
             movefile(currFileAbsPath,fullfile(p,ADJUSTEDHASH,subdir,nameOfFile));
             cd(oldPath);
         end
     end
 end
 
-%% Check for each student if they have their correct assignmenets
+%% Check for each student if they have their correct assignments
 % Iterate over studentfolder to check if they present mfiles contains the
 % ASSIGNED files. A student could exchange assigned files with another
 % student
@@ -148,12 +150,12 @@ for i = 1:length(trackStudentAssignment)
     for j = 1:length(HashCodeCurrStud)
         if isempty(find(ismember(HashCodesOfCurrentStudentAssigned,HashCodeCurrStud{j})))
             nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
-            newNameOfCheatFile = strrep(nameOfFile,'.m','_m'); 
+            newNameOfCheatFile = strrep(nameOfFile,'.m','_m');
             %Get corresponding subfolder of assignment
-            [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j},3);
+            [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j},2);
             mkdir(fullfile(WEEKNAME,FOLDERCHEAT,subdir));
-            movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT, ... 
-                     subdir,newNameOfCheatFile));
+            movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT, ...
+                subdir,newNameOfCheatFile));
         end
     end
     cd(BASEFOLDER)
@@ -188,6 +190,8 @@ save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicN
 
 %% Check all the CHECK files by running the SOL files on them
 debugOutput(DEBUGOUTPUT,'Check all the CHECK files by running the CHECK files on them',0);
+
+addpath(genpath(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME)));
 PointsToBeEarned = sum(pointsPerAssignment);
 % Load the answer files
 eval(['load(''answerfiles_week' num2str(WEEK) ''')'])
@@ -198,15 +202,18 @@ cd(relPath);
 load(fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]))
 
 % Iterate over every folder/studentnumber
+
 for sn = 1:length(trackStudentAssignment)
-    studentFolder = trackStudentAssignment{sn,1};
-    points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ... 
-                dicNameAssignmentAndPoints,answerFilesInDir);
+    studentFolder = trackStudentAssignment{sn,1}
+    addpath(genpath(studentFolder));
+    points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
+        dicNameAssignmentAndPoints,answerFilesInDir);
     grade = ((points/PointsToBeEarned)*9)+1;
     studentMatrix(sn,2) = round(grade,1);
+    rmpath(genpath(studentFolder));
 end
-
-% Copy the SOL files if 
+rmpath(genpath(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME)));
+% Save the file with the results
 
 
 %% Check the answer of the students and track their points if correct

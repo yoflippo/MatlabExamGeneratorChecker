@@ -5,8 +5,8 @@ YEAR = 2017;
 LISTWITHNEEDEDFOLDERS = {'helpercode' 'clean_source_assignments' 'studentnumbers' ...
                         'clean_source_headers' };
 STUDENTNUMBERMAT = 'studentNumbers.mat';
-NAMEASSIGNMENTFOLDER = 'unique_assignments';
-STUDENTASSFOLDER = 'student_week_assignments';
+NAMEASSIGNMENTFOLDER = 'assignments';
+STUDENTASSFOLDER = 'student_assignments';
 STUDENTSUBFOLDER = 'student_submitted_assignments';
 NAMEZIPPEDWEEK = 'Biostatica_Programmeren_StudentOpdrachten_';
 BACKUPFOLDER = 'bu';

@@ -1,4 +1,6 @@
-%CREATEWEEKLYASSIGNMENTSFOREACHSTUDENT
+%CREATEWEEKASSIGNMENTS 
+%   This is the second file needed to generate files for the course. The
+%   file depends on the Constants.m and the WEEK variable. 
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -58,11 +60,12 @@ else
 end
 removeShitFromDir(dirToRemove);
 
+
 %% Create a student specific folder in every week folder
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
 
 % Load the studentnumbers, they are randomly presented
-load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
+load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
 % Create weekfolders
 mkdir(wkFolderName)
 % Create a STUDENTASSFOLDER inside every weekfolder
@@ -74,7 +77,7 @@ end
 debugOutput(DEBUGOUTPUT,'Get overview of file versions, and assign to studentNumbers',1);
 
 % The studentNumbers variable is randomly generated. So assignments in
-% folder can be assigned sequently to the studentnumbers without
+% folder can be assigned sequently to the studentNumbers without
 % introducing some kind of detectable order.
 global output; output = [];
 deepestAssignFolders = GetDeepestFolders(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME));
@@ -103,7 +106,7 @@ trackStudentAssignment = num2cell(zeros(length(studentNumbers), ...
 for i = 1:length(studentNumbers)
     warning off
     % Browse to every assignment folder, PLEASE NOTICE: randonmness is used
-    % by shuffling the studentnumbers in the studentlist.
+    % by shuffling the studentNumbers in the studentlist.
     studentDir = num2str(studentNumbers(i));
     trackStudentAssignment{i,1} = studentDir;
     currStudentDir = fullfile(wkFolderName,studentDir);
@@ -155,7 +158,7 @@ for i = 1:length(studentNumbers)
     warning on
 end
 
-%% Save the studentnumbers and their assigned hashes
+%% Save the studentNumbers and their assigned hashes
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]) ... 
     ,'trackStudentAssignment');
 

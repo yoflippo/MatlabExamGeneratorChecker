@@ -1,4 +1,6 @@
-%GENERATEWEEKLYASSIGNMENTS
+%GENERATEEVERYTHINGFORCOURSE
+%   The first step in using the files for the course. This script should be
+%   runned only once during the course.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -52,9 +54,10 @@ warning off;
 if input('Do you want to clean the Backup folder? Yes (1) No (nothing): ')
     removeShitFromDir(BACKUPFOLDER);
 end
-mkdir(BACKUPFOLDER)
-addpath(genpath(BACKUPFOLDER))
+mkdir(BACKUPFOLDER);
+addpath(genpath(BACKUPFOLDER));
 zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
+rmpath(genpath(BACKUPFOLDER));
 warning on;
 
 %% Copy the folder called 'clean_source_assignments'.
@@ -64,8 +67,14 @@ debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' .
 % Delete previously generated folder
 removeShitFromDir(NAMEASSIGNMENTFOLDER);
 % Copy files
-copyfiles(LISTWITHNEEDEDFOLDERS{2},NAMEASSIGNMENTFOLDER);
-addpath(genpath(NAMEASSIGNMENTFOLDER))
+subFoldersCleanSource = getFolders(LISTWITHNEEDEDFOLDERS{2});
+for sbdr = 1:length(subFoldersCleanSource)
+    source = fullfile(LISTWITHNEEDEDFOLDERS{2},subFoldersCleanSource{sbdr});
+    destin = fullfile(NAMEASSIGNMENTFOLDER,subFoldersCleanSource{sbdr});
+    copyfiles(source,destin);
+end
+
+% % % % addpath(genpath(NAMEASSIGNMENTFOLDER))
 % After copy Matlab does not release a file
 fclose('all');
 
@@ -96,30 +105,31 @@ cd(BASEFOLDER)
 %% Remove (if necessary) and create a folder for the submitted student assignments
 debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
 
-if input('Are you sure you want to delete ALL STUDENT SUBMISSIONS? YES (1), NO (nothing)')
-    subWkFolder = STUDENTSUBFOLDER;
-    removeShitFromDir(subWkFolder)
-    mkdir(STUDENTSUBFOLDER)
-    addpath(genpath(STUDENTSUBFOLDER))
-    
-    % Create a MAT file that stores the results of each student
-    cd(STUDENTSUBFOLDER);
-    studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
-    for wk = 1:4
-        save([NAMERESULTMAT num2str(wk)],'studentMatrix');
-        mkdir(['week' num2str(wk)]);
-        addpath(genpath(['week' num2str(wk)]));
-    end
-    cd(BASEFOLDER)
+removeShitFromDir(STUDENTSUBFOLDER)
+mkdir(STUDENTSUBFOLDER)
+% Create a MAT file that stores the results of each student
+cd(STUDENTSUBFOLDER);
+studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
+for wk = 1:4
+    save([NAMERESULTMAT num2str(wk)],'studentMatrix');
+    mkdir(['week' num2str(wk)]);
+    addpath(genpath(['week' num2str(wk)]));
 end
-cd(NAMEASSIGNMENTFOLDER)
+cd(BASEFOLDER)
+
 
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
+
+addpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
+addpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
+addpath(genpath(NAMEASSIGNMENTFOLDER))
+cd(NAMEASSIGNMENTFOLDER)
 savedHashes = []; cntHash = 1;
 for wk = 1:length(WEEKFOLDERS)
     % find all files in weekX folder
     weekAssignments = readFilesInSubFolder(WEEKFOLDERS{wk},EXT);
+    
     % traverse the week folder
     for fl = 1:length(weekAssignments)
         currentFile = weekAssignments{fl};
@@ -187,4 +197,7 @@ for wk = 1:length(WEEKFOLDERS)
     end
 end
 cd(BASEFOLDER)
+rmpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
+rmpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
+rmpath(genpath(NAMEASSIGNMENTFOLDER))
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);
