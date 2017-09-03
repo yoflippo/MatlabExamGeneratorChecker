@@ -175,7 +175,7 @@ for i = 1:length(mfiles)
     tmp = tmp{1};
     run(tmp(1:end-2));
     % Get name of assignment and save it
-    foundSlashes = strfind(tmp,'\');
+    foundSlashes = strfind(tmp,filesep);
     nameOfAssignment{i} = tmp(foundSlashes(end-1)+1:foundSlashes(end)-1);
     pointsPerAssignment(i) = deelpunten;
 end

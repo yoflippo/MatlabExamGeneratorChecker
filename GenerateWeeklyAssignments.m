@@ -59,7 +59,7 @@ warning on;
 
 %% Copy the folder called 'clean_source_assignments'.
 debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' ...
-            NAMEASSIGNMENTFOLDER],1);
+    NAMEASSIGNMENTFOLDER],1);
 
 % Delete previously generated folder
 removeShitFromDir(NAMEASSIGNMENTFOLDER);
@@ -116,7 +116,7 @@ cd(NAMEASSIGNMENTFOLDER)
 
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
-
+savedHashes = []; cntHash = 1;
 for wk = 1:length(WEEKFOLDERS)
     % find all files in weekX folder
     weekAssignments = readFilesInSubFolder(WEEKFOLDERS{wk},EXT);
@@ -143,7 +143,17 @@ for wk = 1:length(WEEKFOLDERS)
             end
             % Create header with hash of file
             headerHash{1} = header{1};
-            uniqueFN = generateUniqueFilename(namefile,YEAR);
+            % Be carefull, the following function needs unique data
+            uniqueFN = generateUniqueFilename([relpath filesep namefile],YEAR);
+            if ~isempty(savedHashes)
+                if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash)))
+                    error('A Non unique HASH has been created');
+                    cd(BASEFOLDER);
+                end
+            end
+            savedHashes{cntHash} = uniqueFN.Hash;
+            cntHash = cntHash + 1;
+            
             headerHash{2} = uniqueFN.HashCommentLine;
             % Grab default header text for every m-file
             for hh = 2:length(header)
@@ -165,10 +175,10 @@ for wk = 1:length(WEEKFOLDERS)
             % Rename the CHECK file
             try
                 movefile([namefile CHECKPOSTFIX EXT],[extractBefore(namefile,'_versie')...
-                '_' uniqueFN.Hash CHECKPOSTFIX EXT]);
+                    '_' uniqueFN.Hash CHECKPOSTFIX EXT]);
             catch
                 error(['There is a missing CHECK file: ' namefile]);
-            end   
+            end
             fclose('all'); delete([namefile EXT]);
             % Go back to current folder and clear variable
             clear headerHash
