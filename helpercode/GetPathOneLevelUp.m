@@ -1,5 +1,5 @@
-function [outVar] = GetPathOneLevelUp(varargin)
-%<NAMEINCAPTIALS> <short description>
+function [mydir nextSubDir] = GetPathOneLevelUp(varargin)
+%GETPATHONELEVELUP a function that shortens a path/directory
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -24,17 +24,43 @@ function [outVar] = GetPathOneLevelUp(varargin)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               varargin:   a path e.g. 'c:\temp\bestanden\'
+%               parameter1:   a path e.g. 'c:\temp\bestanden\'
+%               parameter2:   the number of levels up, default = 1
 %
 % RETURN:
-%               outvar:     the path one leve up: 'c:temp\
+%               LevelUpPath:     the path one leve up: 'c:temp\
+%               nameOfSubDirDown: the name of the previously deepest
+%                                   subdirectory
 %
+%
+% EXAMPLE 1    [a b] = GetPathOneLevelUp('c:\a\b\c\d\name.file')
+%               a =
+%                   'c:\a\b\c\d'
+%               b =
+%                   'name.file'
+%
+% EXAMPLE 2    [a b] = GetPathOneLevelUp('c:\a\b\c\d\name.file',2)
+%               a =
+%                   'c:\a\b\c'
+%               b =
+%                   'd'
 
 
 % $Revision: 0.0.0 $  $Date: 2017-07-29 $
 % Creation
+if length(varargin) > 1
+    num = varargin{2};
+else
+    num = 1;
+end
 mydir  = varargin{1};
-dirs   = strfind(mydir,filesep);
-outVar = mydir(1:dirs(end)-1);
+
+for i = 1:num
+    dirs   = strfind(mydir,filesep);
+    % save the removed sublevel
+    nextSubDir = mydir(dirs(end)+1:end);
+    % one level up
+    mydir = mydir(1:dirs(end)-1);
+end
 
 end

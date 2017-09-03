@@ -110,19 +110,18 @@ for i = 1:length(mfiles)
     % Get hashcode from current mfiles
     if blTestIfCorrectFile
         currFileAbsPath = fullfile(mfiles(i).folder,mfiles(i).name);
+        [p subdir] = GetPathOneLevelUp(currFileAbsPath,2);
         try
             currHash = GetHashCodeFromMFile(currFileAbsPath);
             % Check if hash if present in dictionary
             dicWithHashes(currHash);
         catch
             % Move file in a folder in the variable ADJUSTEDHASH
-            oldPath = pwd;
-            cd(mfiles(i).folder);
-            mkdir(ADJUSTEDHASH);
+            mkdir(fullfile(p,ADJUSTEDHASH,subdir));
             % replace point of filename with underscore, so it won't be
             % recognised in other scripts as an m-file.
             nameOfFile = strrep(mfiles(i).name,'.','_');            
-            movefile(currFileAbsPath,fullfile(mfiles(i).folder,ADJUSTEDHASH,nameOfFile));
+            movefile(currFileAbsPath,fullfile(p,ADJUSTEDHASH,subdir,nameOfFile));
             cd(oldPath);
         end
     end
@@ -148,10 +147,14 @@ for i = 1:length(trackStudentAssignment)
     % Check if the assigned hashcodes are present
     for j = 1:length(HashCodeCurrStud)
         if isempty(find(ismember(HashCodesOfCurrentStudentAssigned,HashCodeCurrStud{j})))
-            mkdir(fullfile(WEEKNAME,FOLDERCHEAT));
             nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
-            newNameOfCheatFile = strrep(nameOfFile,'.m','_m');           
-            movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT,newNameOfCheatFile));
+            newNameOfCheatFile = strrep(nameOfFile,'.m','_m'); 
+            %Get corresponding subfolder of assignment
+            [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j});
+            [a subdir] = GetPathOneLevelUp(a);
+            mkdir(fullfile(WEEKNAME,FOLDERCHEAT,subdir));
+            movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT, ... 
+                     subdir,newNameOfCheatFile));
         end
     end
     cd(BASEFOLDER)

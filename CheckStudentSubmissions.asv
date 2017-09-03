@@ -118,6 +118,7 @@ for i = 1:length(mfiles)
             % Move file in a folder in the variable ADJUSTEDHASH
             oldPath = pwd;
             cd(mfiles(i).folder);
+            
             mkdir(ADJUSTEDHASH);
             % replace point of filename with underscore, so it won't be
             % recognised in other scripts as an m-file.
@@ -148,11 +149,17 @@ for i = 1:length(trackStudentAssignment)
     % Check if the assigned hashcodes are present
     for j = 1:length(HashCodeCurrStud)
         if isempty(find(ismember(HashCodesOfCurrentStudentAssigned,HashCodeCurrStud{j})))
-            mkdir(fullfile(WEEKNAME,FOLDERCHEAT));
-            nameOfFile = strrep(AbsPathCodeCurrStud{j},'.m','_m');            
-            movefile(currFileAbsPath,fullfile(WEEKNAME,FOLDERCHEAT,nameOfFile));
+            nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
+            newNameOfCheatFile = strrep(nameOfFile,'.m','_m'); 
+            %Get corresponding subfolder of assignment
+            [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j});
+            [a subdir] = GetPathOneLevelUp(a);
+            mkdir(fullfile(WEEKNAME,FOLDERCHEAT,subdir));
+            movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT, ... 
+                     subdir,newNameOfCheatFile));
         end
     end
+    cd(BASEFOLDER)
 end
 
 %% Get the number of points for all week assignments
