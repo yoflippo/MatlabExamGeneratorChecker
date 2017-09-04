@@ -6,5 +6,5 @@ A = 1; B = 2; C = 3; D = 4;
 %                       Antwoord_VraagX = A;
 % Voorbeeld antwoord:
 %                       Antwoord_VraagY = B;
-%% =================== BLIJF VAN VOORGAANDE CODE AF! ======================
+% =================== BLIJF VAN VOORGAANDE CODE AF! ======================
 %

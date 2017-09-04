@@ -92,12 +92,12 @@ studentNumbers = studentNumbers(randperm(length(studentNumbers)));
 studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
 % Write the list of e-mailadresses to a txt file
 cd(NAMEASSIGNMENTFOLDER)
-fid = fopen('emailadressen.txt','w');
-for i=1:length(studentEmailadresses)
-    fprintf(fid,'%s',studentEmailadresses{i});
-    fprintf(fid,'\n');
-end
-fclose(fid);
+% % fid = fopen('emailadressen.txt','w');
+% % for i=1:length(studentEmailadresses)
+% %     fprintf(fid,'%s',studentEmailadresses{i});
+% %     fprintf(fid,'\n');
+% % end
+% % fclose(fid);
 %save the studentnumbers for later use
 save(STUDENTNUMBERMAT,'studentNumbers');
 cd(BASEFOLDER)
@@ -113,7 +113,6 @@ studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
 for wk = 1:4
     save([NAMERESULTMAT num2str(wk)],'studentMatrix');
     mkdir(['week' num2str(wk)]);
-    addpath(genpath(['week' num2str(wk)]));
 end
 cd(BASEFOLDER)
 

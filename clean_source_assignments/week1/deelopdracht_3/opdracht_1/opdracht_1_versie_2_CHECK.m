@@ -1,26 +1,20 @@
-% dit script neemt aan dat het te runnen script met het absolute path in de
-% variabele AbsPathStudentScript staat.
+function percentage = opdracht1_versie_2_CHECK(absPathStudentFile)
+%% This file expects that the _SOL and _CHECK file are in the same folder
+
+
+% get student filename
+[path file c] = fileparts(absPathStudentFile);
+
+solution = replace(mfilename,'_CHECK','_SOL');
 numberOfCorrect = 0;
-
-try
-    if opdracht_1_versie_1_SOL(2) == 4
-        numberOfCorrect = numberOfCorrect + 1;
+series = -3:3;
+for z = series
+    try
+        if eval([file '(z)']) == eval([solution '(z)'])
+            numberOfCorrect = numberOfCorrect + 1;
+        end
+    catch
     end
-catch
 end
 
-try
-    if opdracht_1_versie_1_SOL(0) == 0
-        numberOfCorrect = numberOfCorrect + 1;
-    end
-catch
-end
-
-try
-    if opdracht_1_versie_1_SOL(-1) == 1
-        numberOfCorrect = numberOfCorrect + 1;
-    end
-catch
-end
-
-ResStudentScript = numberOfCorrect/3;
+percentage = numberOfCorrect/length(series);
