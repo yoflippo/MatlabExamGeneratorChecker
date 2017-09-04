@@ -42,5 +42,8 @@ try
 catch
     disp('something went wrong with this file');
     edit(pathCheckFile);
+    edit(pathSolutionFile);
+    edit(pathEmptyFile);
+    return
 end
 rmpath(genpath(pathname))
