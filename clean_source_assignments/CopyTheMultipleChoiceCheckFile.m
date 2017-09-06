@@ -38,13 +38,17 @@ absPathTemplate = fullfile(GetPathOneLevelUp(mfilename('fullpath')),'CheckMCTemp
 %% Get all directories with Multiple Choice questions
 mcdirs = dir('**\*_Multiplechoice*.m');
 currPath = pwd;
-%% Find all files ending with _CHECK
+%% Find all files ending with _CHECK in a SUBDIRECTORY
 for i = 1:length(mcdirs)
    cd(mcdirs(i).folder)
    checkFiles = dir('**\*_CHECK*.m')
    % Copy the template
    for j = 1:length(checkFiles)
-       copyfile(absPathTemplate,fullfile(checkFiles(j).folder,checkFiles(j).name));
+       absPathDestination = fullfile(checkFiles(j).folder,checkFiles(j).name);
+       copyfile(absPathTemplate,absPathDestination);
+       % TODO: change the function name of destinationfile the match
+       % functionfilename.
+       
    end
 end
 cd(BASEFOLDER)

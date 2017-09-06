@@ -1,4 +1,4 @@
-function res = vraag_1_versie_3_CHECK(absPathStudentSol)
+function res = vraag_1_versie_4_CHECK(absPathStudentSol)
 % This script has to check and test another script
 % It
 %               -   Give a result in the variable ResStudentScript. Perfect

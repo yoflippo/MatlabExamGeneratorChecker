@@ -1,8 +1,9 @@
 %% Vraag 1
-% Stelling 1:   Matlab is een programmeeromgeving en een programmeertaal
+% Stelling 1:   Het resultaat van een regel code uit een script kan na 
+%               het uitvoeren te zien zijn in het Command Window
 %
-% Stelling 2:   In de Workspace staan de bestanden van de huidige folder (de
-%               folder waaruit Matlab werkt)
+% Stelling 2:   Om de output van een script te beperken plaatsen we aan het
+%               einde van een regel een ;  (puntkomma) 
 %
 % A : stelling 1 is WAAR      en stelling 2 is WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
