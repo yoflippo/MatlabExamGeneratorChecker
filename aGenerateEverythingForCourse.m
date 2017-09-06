@@ -34,7 +34,8 @@
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 %
-% TODO: save the generated files in a zip with date (for savety purposes)
+% TODO: generate the hashes not all at once but for each week separately in
+% the CreateWeekAssignments script.
 %
 
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-27 $
