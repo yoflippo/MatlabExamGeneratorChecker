@@ -13,8 +13,3 @@ copyfile(absPathData,absPathDataCopy);
 fclose('all');
 WriteLineOfFile(absPathDataCopy,5,'DIT IS EEN TEST DIT IS EEN TEST DIT IS EEN TEST');
 delete(absPathDataCopy);
-%% Make a copy
-copyfile(absPathData,absPathDataCopy);
-fclose('all');
-WriteLineOfFile(absPathDataCopy,50,'DIT IS EEN TEST DIT IS EE6666N TEST DIT IS EEN TEST');
-delete(absPathDataCopy);
