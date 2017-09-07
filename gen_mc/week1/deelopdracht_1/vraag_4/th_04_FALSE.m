@@ -1,2 +1,6 @@
-De naam van een script mag beginnen met een willekeurig
-symbool
+Bij het uitvoeren van de volgende code is het resultaat
+in de Command Window: ' >> a '
+--------------------------
+naam = 'Mark Schrauwen';
+naam(3)
+--------------------------

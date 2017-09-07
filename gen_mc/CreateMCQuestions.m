@@ -45,7 +45,6 @@ answerD = ReadLineOfFile(fullfile(pathOfThisFile,'mc_answer_3.m'));
 answerD = ['% D : ' char(answerD)];
 
 %% Browse the subfolder of weekx
-nVersionMC = 0;
 for nDirs = 1:length(folders)
     numberOfThesesFiles = thesesPathAnswer{nDirs,1}{3};
     currentFilePath =  thesesPathAnswer{nDirs,1}{1};
@@ -83,6 +82,7 @@ for nDirs = 1:length(folders)
     headerTxt = replace(headerTxt,'xxx',questionNumber);
     
     %% Generate Questions
+    nVersionMC = 0;
     for nMostIndices = 1:(length(randomFileIndexes)/2)
         cnt = 1;
         finalTxt{cnt,1} = headerTxt; cnt = cnt + 1;
@@ -112,7 +112,7 @@ for nDirs = 1:length(folders)
         % theses2
         currentIndex = randomFileIndexes(1);
         randomFileIndexes = randomFileIndexes(2:end);
-        ansTheses2 = thesesPathAnswer{nDirs,currentIndex}{2};      
+        ansTheses2 = thesesPathAnswer{nDirs,currentIndex}{2};
         theses2 = char(getTextOfFile(thesesPathAnswer{nDirs,currentIndex}{1}));
         preambleTheses2 = '% Stelling 2:   ';
         txtTheses2{1} = [preambleTheses2 theses2(1,:)];
