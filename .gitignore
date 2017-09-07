@@ -103,3 +103,4 @@ bu/
 *.asv
 test.m
 assignments/
+gen_mc/generated_questions/
