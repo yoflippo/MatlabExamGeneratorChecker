@@ -43,7 +43,7 @@ for nDirs = 1:length(folders)
     % generate final destination of current question, by inserting the
     % output folder
     absPathDestination = GetPathOneLevelUp(currentFilePath);
-    absPathDestination = replace(absPathDestination,weekDir,fullfile('generated_questions',weekDir))
+    absPathDestination = replace(absPathDestination,weekDir,fullfile('generated_questions',weekDir));
     % test for no sequentially (e.g. no '3 4 5 6' but '4 6 8 3'), the
     % sequential questions could be associated (TRUE / FALSE versions).
     while contains(num2str(diff(randomFileIndexes)),'1')
