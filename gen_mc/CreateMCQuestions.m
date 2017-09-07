@@ -35,10 +35,20 @@ copyfiles(fullfile(pathOfThisFile,weekDir),fullfile(outputDir,weekDir))
 emptyDirRecursiveMFiles(fullfile(outputDir,weekDir))
 
 %% Browse the subfolder of weekx
+nVersionMC = 0;
 for nDirs = 1:length(folders)
     numberOfThesesFiles = thesesPathAnswer{nDirs,1}{3};
     currentFilePath =  thesesPathAnswer{nDirs,1}{1};
     randomFileIndexes = randperm(numberOfThesesFiles);
+    % generate final destination of current question, by inserting the
+    % output folder
+    absPathDestination = GetPathOneLevelUp(currentFilePath);
+    absPathDestination = replace(absPathDestination,weekDir,fullfile('generated_questions',weekDir))
+    % test for no sequentially (e.g. no '3 4 5 6' but '4 6 8 3'), the
+    % sequential questions could be associated (TRUE / FALSE versions).
+    while contains(num2str(diff(randomFileIndexes)),'1')
+        randomFileIndexes = randperm(numberOfThesesFiles);
+    end
     % test for an even / odd number of files
     blOdd = mod(numberOfThesesFiles,2);
     if blOdd
@@ -56,19 +66,19 @@ for nDirs = 1:length(folders)
     
     %% Combine theses
     % theses1
-    currentIndex = randomFileIndexes(1)
+    currentIndex = randomFileIndexes(1);
     ansTheses1 = thesesPathAnswer{nDirs,currentIndex}{2};
-    randomFileIndexes = randomFileIndexes(2:end)
+    randomFileIndexes = randomFileIndexes(2:end);
     theses1 = char(getTextOfFile(thesesPathAnswer{nDirs,currentIndex}{1}));
     preambleTheses1 = '% Stelling 1:   ';
-    txtTheses1{1} = [preambleTheses1 theses1(1,:)]
+    txtTheses1{1} = [preambleTheses1 theses1(1,:)];
     finalTxt{cnt,1} = txtTheses1{1}; cnt = cnt + 1;
-
+    
     % add the right number of tabs to rest of text
     nLinesOfTheses1 = size(theses1); nLinesOfTheses1 = nLinesOfTheses1(1);
     if nLinesOfTheses1 > 1
         for otherLines = 2:nLinesOfTheses1
-            txtTheses1{otherLines} = ['%               ' theses1(otherLines,:)]
+            txtTheses1{otherLines} = ['%' sprintf('\t\t\t\t') theses1(otherLines,:)];
             finalTxt{cnt,1} = txtTheses1{otherLines}; cnt = cnt + 1;
         end
     end
@@ -76,18 +86,18 @@ for nDirs = 1:length(folders)
     finalTxt{cnt,1} = txtTheses1{nLinesOfTheses1+1}; cnt = cnt + 1;
     
     % theses2
-    currentIndex = randomFileIndexes(1)
+    currentIndex = randomFileIndexes(1);
     ansTheses2 = thesesPathAnswer{nDirs,currentIndex}{2};
-    randomFileIndexes = randomFileIndexes(2:end)
+    randomFileIndexes = randomFileIndexes(2:end);
     theses2 = char(getTextOfFile(thesesPathAnswer{nDirs,currentIndex}{1}));
     preambleTheses2 = '% Stelling 2:   ';
-    txtTheses2{1} = [preambleTheses2 theses2(1,:)]
+    txtTheses2{1} = [preambleTheses2 theses2(1,:)];
     finalTxt{cnt,1} =  txtTheses2{1}; cnt = cnt + 1;
     % add the right number of tabs to rest of text
     nLinesOfTheses2 = size(theses2); nLinesOfTheses2 = nLinesOfTheses2(1);
     if nLinesOfTheses2 > 1
         for otherLines = 2:nLinesOfTheses2
-            txtTheses2{otherLines} = ['%               ' theses2(otherLines,:)]
+            txtTheses2{otherLines} = ['%' sprintf('\t\t\t\t') theses2(otherLines,:)];
             finalTxt{cnt,1} =  txtTheses2{otherLines}; cnt = cnt + 1;
         end
     end
@@ -110,13 +120,23 @@ for nDirs = 1:length(folders)
     
     %% Calculate the right answers
     defaultAnswersTxt = ['A'; 'B'; 'C'; 'D';];
-    currentAnswer = defaultAnswersTxt((ansTheses2*2) + ansTheses1 +1)
-    solAnswerLine = ['Antwoord = ' currentAnswer ';']
+    currentAnswer = defaultAnswersTxt((ansTheses1 * 2) + ansTheses2 + 1);
+    solAnswerLine = ['Antwoord = ' currentAnswer ';'];
     % get answer line
     emptyAnswerLine = ReadLineOfFile(fullfile(pathOfThisFile,'mc_answer_line.m'));
-    
     % combine all the lines in a cell
     finalTxt{cnt,1} =  solAnswerLine;
-    
-    
+    % write final files
+    cd(absPathDestination);
+    [a nameQuestion] = GetPathOneLevelUp(absPathDestination);
+    % make question string
+    nVersionMC = nVersionMC + 1;
+    nameQuestion = [nameQuestion '_versie_' num2str(nVersionMC)];
+    nameQuestionSOL = [nameQuestion '_SOL'];
+    % write solution file
+    makeMFileFromCells(nameQuestionSOL,finalTxt);
+    % write empty file
+    finalTxt{cnt,1} = emptyAnswerLine;
+    makeMFileFromCells(nameQuestion,finalTxt);
+    cd(pathOfThisFile)
 end
