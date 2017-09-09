@@ -1,0 +1,1 @@
+Je kunt in Matlab niet vectoren met elkaar vermenigvuldigen.
