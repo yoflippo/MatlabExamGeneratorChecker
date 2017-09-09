@@ -29,6 +29,7 @@ for nDirs = 1:length(folders)
     end
     cd(pathOfThisFile);
 end
+absPathTemplateCheck = fullfile(pathOfThisFile,'TemplateCheckMC.m');
 
 %% Copy folder of weekx and empty the folder
 copyfiles(fullfile(pathOfThisFile,weekDir),fullfile(outputDir,weekDir))
@@ -52,11 +53,14 @@ for nDirs = 1:length(folders)
     % output folder
     absPathDestination = GetPathOneLevelUp(currentFilePath);
     absPathDestination = replace(absPathDestination,weekDir,fullfile('generated_questions',weekDir));
-    % test for an even / odd number of files
-    blOdd = mod(numberOfThesesFiles,2);
-    if blOdd
-        nFilesEven = numberOfThesesFiles+1;
-    end
+    
+    % copy the points.m file (containing the number of points of mc-q) and
+    % copy the TypeOfAssignment... file, so the CopyTheMultipleChoice..m
+    % file works)
+    fn = 'points.m';
+    copyfile(fullfile(pathOfThisFile,fn),fullfile(absPathDestination,fn));
+    fn = 'TypeOfAssignment_MultipleChoice.m';
+    copyfile(fullfile(pathOfThisFile,fn),fullfile(absPathDestination,fn));
     
     % Generate non-adjacent indices
     cnt = 1;
@@ -150,12 +154,20 @@ for nDirs = 1:length(folders)
         nVersionMC = nVersionMC + 1;
         nameQuestion = [nameQuestion '_versie_' num2str(nVersionMC)];
         nameQuestionSOL = [nameQuestion '_SOL'];
+        nameQuestionCHECK = [nameQuestion '_CHECK'];
         % write solution file
         makeMFileFromCells(nameQuestionSOL,finalTxt);
         % write empty file
         finalTxt{cnt,1} = emptyAnswerLine;
         makeMFileFromCells(nameQuestion,finalTxt);
         cd(pathOfThisFile)
+        % copy the template CHECK file
+        desAbsCheckFile = fullfile(absPathDestination,[nameQuestionCHECK '.m']);
+        copyfile(absPathTemplateCheck,desAbsCheckFile);
+        % rename the template function name ('xxx') with the current name
+        fnCopiedTemplate = ReadLineOfFile(desAbsCheckFile);
+        fnCopiedTemplate = replace(fnCopiedTemplate,'xxx',nameQuestionCHECK);
+        WriteLineOfFile(desAbsCheckFile,1,fnCopiedTemplate);
         % clear variable to prevent polution of files
         clear finalTxt
     end

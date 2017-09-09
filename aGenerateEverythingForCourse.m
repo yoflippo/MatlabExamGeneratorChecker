@@ -47,35 +47,42 @@ debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WE
 
 %% Zip all files in case a deletion goes wrong
 debugOutput(DEBUGOUTPUT,'Zip all files in case a deletion goes wrong',1);
-
-% Get unique string
-d = char(datetime('now'));
-d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
-warning off;
-if input('Do you want to clean the Backup folder? Yes (1) No (nothing): ')
-    removeShitFromDir(BACKUPFOLDER);
+if input('Do you want to Backup everything? Yes (1) No (nothing): ')   
+    % Get unique string
+    d = char(datetime('now'));
+    d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
+    warning off;
+    if input('Do you want to clean the Backup folder? Yes (1) No (nothing): ')
+        removeShitFromDir(BACKUPFOLDER);
+    end
+    mkdir(BACKUPFOLDER);
+    addpath(genpath(BACKUPFOLDER));
+    zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
+    rmpath(genpath(BACKUPFOLDER));
+    warning on;
 end
-mkdir(BACKUPFOLDER);
-addpath(genpath(BACKUPFOLDER));
-zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
-rmpath(genpath(BACKUPFOLDER));
-warning on;
-
-%% Copy the folder called 'clean_source_assignments'.
+%% Copy the folder called 'clean_source\assignments'.
 debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' ...
     NAMEASSIGNMENTFOLDER],1);
 
+pathOfThisFile = erase(mfilename('fullpath'),mfilename);
+
 % Delete previously generated folder
 removeShitFromDir(NAMEASSIGNMENTFOLDER);
-% Copy files
-subFoldersCleanSource = getFolders(LISTWITHNEEDEDFOLDERS{2});
-for sbdr = 1:length(subFoldersCleanSource)
-    source = fullfile(LISTWITHNEEDEDFOLDERS{2},subFoldersCleanSource{sbdr});
-    destin = fullfile(NAMEASSIGNMENTFOLDER,subFoldersCleanSource{sbdr});
-    copyfiles(source,destin);
-end
 
-% % % % addpath(genpath(NAMEASSIGNMENTFOLDER))
+% Find folder with the string week
+pth = 'clean_source\assignments';
+subFoldersCleanSource = getFolders(pth);
+weekFolders = strfind(subFoldersCleanSource,'week');
+% copy action
+for sbdr = 1:length(subFoldersCleanSource)
+    tmp = weekFolders(1,sbdr);
+    if ~isempty(tmp{1})
+        source = fullfile(pathOfThisFile,pth,subFoldersCleanSource{sbdr});
+        destin = fullfile(pathOfThisFile,NAMEASSIGNMENTFOLDER,subFoldersCleanSource{sbdr});
+        copyfiles(source,destin);
+    end
+end
 % After copy Matlab does not release a file
 fclose('all');
 

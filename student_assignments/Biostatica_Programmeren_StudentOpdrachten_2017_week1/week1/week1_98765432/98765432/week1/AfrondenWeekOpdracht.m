@@ -45,6 +45,18 @@ try
 catch
     error('Het bestand ''studentnummer.m'' niet gevonden!! Als je de bestanden en folderstructuur niet intact laat krijg je geen punten vooor de weekopdracht');
 end
+% Select script in editor
+% open([mfilename('fullpath') '.m']);
+% 
+% % Close this script
+% import java.awt.*;
+% import java.awt.event.*;
+% rob=Robot;
+% rob.keyPress(KeyEvent.VK_CONTROL)
+% rob.keyPress(KeyEvent.VK_W)
+% rob.keyRelease(KeyEvent.VK_CONTROL)
+% rob.keyRelease(KeyEvent.VK_W)
+
 % Go to upper folder (the week folder)
 cd ..
 % Message to student
@@ -54,13 +66,14 @@ disp(['Dat zip-bestand heet: Biostatica_ToSubmit_' currentStudentNumber '.zip'])
 % Zip the file
 zip(['..' filesep 'Biostatica_ToSubmit_' currentStudentNumber '.zip'],pwd)
 filebrowser
+
 cd ..
 disp(" ");
 disp(['Het zip-bestand staat hier: ']);
 disp(pwd);
+
+
+pause(2);
 if ispc
     winopen(pwd)
 end
-
-
-

@@ -2,8 +2,7 @@ WEEK = 1;
 WEEKNAME = ['week' num2str(WEEK)];
  % important determines the unique hashcode
 YEAR = 2017;
-LISTWITHNEEDEDFOLDERS = {'helpercode' 'clean_source_assignments' 'studentnumbers' ...
-                        'clean_source_headers' };
+
 STUDENTNUMBERMAT = 'studentNumbers.mat';
 NAMEASSIGNMENTFOLDER = 'assignments';
 STUDENTASSFOLDER = 'student_assignments';
@@ -20,4 +19,6 @@ NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
 NAMERESULTMAT = 'resultatenWeek';
 VAR_RESULT = 'ResStudentScript';
 WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4'};
+LISTWITHNEEDEDFOLDERS = {'helpercode' 'clean_source' 'studentnumbers' ...
+                        'oud' STUDENTSUBFOLDER};
 % Oooh Noo... some code in a file called Constants... shame on you author
