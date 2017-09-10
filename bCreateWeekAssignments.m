@@ -116,7 +116,7 @@ for i = 1:length(studentNumbers)
         cnt = answerFileCounter(j); 
         currFile = [deepestAssignFolders{j} filesep answerFilesInDir{1,j}(cnt).name];  
         % rename the file to a file without _SOL
-        currFile = replace(currFile,'_SOL','_');
+        currFile = replace(currFile,'_SOL','');
         % file to copy
         sourceFile = [NAMEASSIGNMENTFOLDER currFile];
         % remove redundant folder
@@ -126,13 +126,12 @@ for i = 1:length(studentNumbers)
         finFileLoc = [currStudentDir currFileClean EXT];
         % Copy file from unique assignment dir to student folder with
         % subdirs
-        basePath = GetPathOneLevelUp(mfilename('fullpath'));
         relPathCurrAssignment = [wkFolderName filesep studentDir ... 
                                 GetPathOneLevelUp(deepestAssignFolders{j})];
         mkdir(relPathCurrAssignment);
         copyfile(sourceFile,finFileLoc);
         % Get hash and save if for anti-cheating purposes
-        hash = GetHashCodeFromMFile(fullfile(basePath,finFileLoc));
+        hash = GetHashCodeFromMFile(fullfile(BASEFOLDER,finFileLoc));
         trackStudentAssignment{i,j+1} = hash;
         % Reset counter if last file is reached
         if isequal(numberOfAssignmentInDir(j),answerFileCounter(j))
@@ -142,7 +141,9 @@ for i = 1:length(studentNumbers)
         end
     end
     % Copy the finishing script that a student needs to use
-    copyfile(fullfile(pwd,NAMEZIPMFILEFORSTUDENTS),fullfile(currStudentDir,WEEKNAME))
+    finScriptStud = fullfile(BASEFOLDER,LISTWITHNEEDEDFOLDERS{2},'headers',...
+                    NAMEZIPMFILEFORSTUDENTS);
+    copyfile(finScriptStud,fullfile(currStudentDir,WEEKNAME));
     % Create a file with the studentnumber
     fid = fopen(fullfile(currStudentDir,WEEKNAME,'studentnummer.m'),'w'); 
     fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);

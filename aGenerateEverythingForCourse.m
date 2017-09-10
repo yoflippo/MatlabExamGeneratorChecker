@@ -47,7 +47,7 @@ debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WE
 
 %% Zip all files in case a deletion goes wrong
 debugOutput(DEBUGOUTPUT,'Zip all files in case a deletion goes wrong',1);
-if input('Do you want to Backup everything? Yes (1) No (nothing): ')   
+if input('Do you want to Backup everything? Yes (1) No (nothing): ')
     % Get unique string
     d = char(datetime('now'));
     d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
@@ -161,7 +161,8 @@ for wk = 1:length(WEEKFOLDERS)
             % Create header with hash of file
             headerHash{1} = header{1};
             % Be carefull, the following function needs unique data
-            uniqueFN = generateUniqueFilename([relpath filesep namefile],YEAR);
+            uniqueFN = generateUniqueFilename(fullfile(relpath,namefile),YEAR);
+            % Test if a Hash is unique, could be
             if ~isempty(savedHashes)
                 if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash)))
                     error('A Non unique HASH has been created');
@@ -184,19 +185,23 @@ for wk = 1:length(WEEKFOLDERS)
             % Go inside current folder
             cd(subdirs{end})
             % Create unique filename with constant length
-            uniqueFileName = [extractBefore(namefile,'_versie') '_' uniqueFN.Hash '_' ];
-            makeMFileFromCells(uniqueFileName,headerHash)
-            % Rename the SOL file
-            movefile([namefile SOLPOSTFIX EXT],[extractBefore(namefile,'_versie')...
-                '_' uniqueFN.Hash SOLPOSTFIX EXT]);
+            % % % %             uniqueFileName = [extractBefore(namefile,'_versie') '_' uniqueFN.Hash '_' ];
+            % % % %             makeMFileFromCells(uniqueFileName,headerHash)
+            delete([namefile EXT]);
+            makeMFileFromCells(namefile,headerHash)
+% % %             % Rename the SOL file
+% % %             movefile([namefile SOLPOSTFIX EXT],[extractBefore(namefile,'_versie')...
+% % %                 '_' uniqueFN.Hash SOLPOSTFIX EXT]);
             % Rename the CHECK file
-            try
-                movefile([namefile CHECKPOSTFIX EXT],[extractBefore(namefile,'_versie')...
-                    '_' uniqueFN.Hash CHECKPOSTFIX EXT]);
-            catch
+% % %             try
+% % %                 movefile([namefile CHECKPOSTFIX EXT],[extractBefore(namefile,'_versie')...
+% % %                     '_' uniqueFN.Hash CHECKPOSTFIX EXT]);
+% % %             catch
+            if exist([namefile CHECKPOSTFIX EXT]) ~= 2
                 error(['There is a missing CHECK file: ' namefile]);
             end
-            fclose('all'); delete([namefile EXT]);
+            fclose('all'); 
+% % %             delete([namefile EXT]);
             % Go back to current folder and clear variable
             clear headerHash
             cd ..; cd ..; cd ..;

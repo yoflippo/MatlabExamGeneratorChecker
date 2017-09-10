@@ -50,7 +50,8 @@ cd ..
 % Message to student
 clc
 disp('Er is nu zip-bestand aangemaakt die je moet opsturen: ')
-disp(['Dat zip-bestand heet: Biostatica_ToSubmit_' currentStudentNumber '.zip']);
+disp('Dat zip-bestand heet: ');
+disp(['                        Biostatica_ToSubmit_' currentStudentNumber '.zip'])
 % Zip the file
 zip(['..' filesep 'Biostatica_ToSubmit_' currentStudentNumber '.zip'],pwd)
 filebrowser
