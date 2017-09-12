@@ -178,6 +178,7 @@ for wk = 1:length(WEEKFOLDERS)
                 headerHash{length(headerHash)+1} = header{hh};
             end
             % Copy the clean/original file
+            clear clean_file
             clean_file = combineTextOfDifferentFiles([namefile EXT]);
             for hh = 1:length(clean_file)
                 headerHash{length(headerHash)+1} = clean_file{hh};

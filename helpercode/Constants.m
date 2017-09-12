@@ -3,7 +3,7 @@ WEEKNAME = ['week' num2str(WEEK)];
  % important determines the unique hashcode
 YEAR = 2017;
 
-STUDENTNUMBERMAT = 'studentNumbers.mat';
+STUDENTNUMBERMAT = 'studentNum.mat';
 NAMEASSIGNMENTFOLDER = 'assignments';
 STUDENTASSFOLDER = 'student_assignments';
 STUDENTSUBFOLDER = 'submitted';

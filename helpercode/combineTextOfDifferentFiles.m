@@ -53,6 +53,7 @@ for i = 1:length(varargin)
         concatenatedTxt{cnt} = dataArray{1,i}{1,1}{j};
         cnt = cnt + 1;
     end
+    clear dataArray
 end
 
 outVar = concatenatedTxt;

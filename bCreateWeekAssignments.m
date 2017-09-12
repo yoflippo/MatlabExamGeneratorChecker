@@ -65,7 +65,7 @@ removeShitFromDir(dirToRemove);
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
 
 % Load the studentnumbers, they are randomly presented
-load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
+load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
 % Create weekfolders
 mkdir(wkFolderName)
 % Create a STUDENTASSFOLDER inside every weekfolder
