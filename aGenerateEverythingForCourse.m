@@ -134,79 +134,74 @@ addpath(genpath(NAMEASSIGNMENTFOLDER))
 cd(NAMEASSIGNMENTFOLDER)
 savedHashes = []; cntHash = 1;
 for wk = 1:length(WEEKFOLDERS)
-    % find all files in weekX folder
-    weekAssignments = readFilesInSubFolder(WEEKFOLDERS{wk},EXT);
-    
-    % traverse the week folder
-    for fl = 1:length(weekAssignments)
-        currentFile = weekAssignments{fl};
-        [relpath,namefile,EXT] = fileparts(currentFile);
-        % find m-file with the answer/solution file
-        if exist([relpath filesep namefile '_SOL' EXT])
-            % check which types of questions are in the subfolder of the
-            % current weekfolder
-            subdirs = strsplit(relpath,filesep);
-            cd(fullfile(subdirs{1},subdirs{2}))
-            %Check for the presence of files below to give the proper
-            %header in the student specific assignment
-            if (exist(fullfile(relpath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('default_header.m','header_question.m');
-            elseif (exist(fullfile(relpath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('default_header.m','header_script.m');
-            elseif (exist(fullfile(relpath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)
-                header = combineTextOfDifferentFiles('default_header.m','header_function.m');
-            else
-                error('The current folder does not contain a type file');
-            end
-            % Create header with hash of file
-            headerHash{1} = header{1};
-            % Be carefull, the following function needs unique data
-            uniqueFN = generateUniqueFilename(fullfile(relpath,namefile),YEAR);
-            % Test if a Hash is unique, could be
-            if ~isempty(savedHashes)
-                if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash)))
-                    error('A Non unique HASH has been created');
-                    cd(BASEFOLDER);
+    try
+        % find all files in weekX folder
+        cd(WEEKFOLDERS{wk})
+        weekAssignments = dir('**\*.m');
+        cd ..
+        %     weekAssignments = readFilesInSubFolder(WEEKFOLDERS{wk},EXT);
+        
+        % traverse the week folder
+        for fl = 1:length(weekAssignments)
+            currentFile = weekAssignments(fl).name;
+            currFileAbsPath = weekAssignments(fl).folder;
+            currFileFull = fullfile(currFileAbsPath,currentFile);
+            % find m-file with the answer/solution file
+            if exist(fullfile(currFileAbsPath,replace(currentFile,'.m','_SOL.m')))
+                % check which types of questions are in the subfolder of the
+                % current weekfolder
+                subdirs = strsplit(currFileAbsPath,filesep);
+                cd(fullfile(subdirs{end-2},subdirs{end-1},subdirs{end}))
+                %Check for the presence of files below to give the proper
+                %header in the student specific assignment
+                if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
+                    header = combineTextOfDifferentFiles('default_header.m','header_question.m');
+                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
+                    header = combineTextOfDifferentFiles('default_header.m','header_script.m');
+                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)
+                    header = combineTextOfDifferentFiles('default_header.m','header_function.m');
+                else
+                    error('The current folder does not contain a type file');
                 end
+                % Create header with hash of file
+                headerHash{1} = header{1};
+                % Be carefull, the following function needs unique data
+                uniqueFN = generateUniqueFilename(currFileFull,YEAR);
+                % Test if a Hash is unique, could be
+                if ~isempty(savedHashes)
+                    if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash)))
+                        error('A Non unique HASH has been created');
+                        cd(BASEFOLDER);
+                    end
+                end
+                savedHashes{cntHash} = uniqueFN.Hash;
+                cntHash = cntHash + 1;
+                
+                headerHash{2} = uniqueFN.HashCommentLine;
+                % Grab default header text for every m-file
+                for hh = 2:length(header)
+                    headerHash{length(headerHash)+1} = header{hh};
+                end
+                % Copy the clean/original file
+                clear clean_file
+                clean_file = combineTextOfDifferentFiles(currFileFull);
+                for hh = 1:length(clean_file)
+                    headerHash{length(headerHash)+1} = clean_file{hh};
+                end
+                % Delete current file
+                delete(currFileFull);
+                makeMFileFromCells(replace(currFileFull,'.m',''),headerHash)
+                if exist(currFileFull) ~= 2
+                    error(['There is a missing CHECK file: ' namefile]);
+                end
+                fclose('all');
+                clear headerHash
+                cd ..; cd ..; cd ..;
             end
-            savedHashes{cntHash} = uniqueFN.Hash;
-            cntHash = cntHash + 1;
-            
-            headerHash{2} = uniqueFN.HashCommentLine;
-            % Grab default header text for every m-file
-            for hh = 2:length(header)
-                headerHash{length(headerHash)+1} = header{hh};
-            end
-            % Copy the clean/original file
-            clear clean_file
-            clean_file = combineTextOfDifferentFiles([namefile EXT]);
-            for hh = 1:length(clean_file)
-                headerHash{length(headerHash)+1} = clean_file{hh};
-            end
-            % Go inside current folder
-            cd(subdirs{end})
-            % Create unique filename with constant length
-            % % % %             uniqueFileName = [extractBefore(namefile,'_versie') '_' uniqueFN.Hash '_' ];
-            % % % %             makeMFileFromCells(uniqueFileName,headerHash)
-            delete([namefile EXT]);
-            makeMFileFromCells(namefile,headerHash)
-% % %             % Rename the SOL file
-% % %             movefile([namefile SOLPOSTFIX EXT],[extractBefore(namefile,'_versie')...
-% % %                 '_' uniqueFN.Hash SOLPOSTFIX EXT]);
-            % Rename the CHECK file
-% % %             try
-% % %                 movefile([namefile CHECKPOSTFIX EXT],[extractBefore(namefile,'_versie')...
-% % %                     '_' uniqueFN.Hash CHECKPOSTFIX EXT]);
-% % %             catch
-            if exist([namefile CHECKPOSTFIX EXT]) ~= 2
-                error(['There is a missing CHECK file: ' namefile]);
-            end
-            fclose('all'); 
-% % %             delete([namefile EXT]);
-            % Go back to current folder and clear variable
-            clear headerHash
-            cd ..; cd ..; cd ..;
         end
+    catch
+        cd(BASEFOLDER)
+        error(['problem with: ' WEEKFOLDERS{wk}]);
     end
 end
 cd(BASEFOLDER)
