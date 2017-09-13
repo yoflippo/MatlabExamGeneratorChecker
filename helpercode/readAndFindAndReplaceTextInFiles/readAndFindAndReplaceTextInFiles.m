@@ -1,6 +1,6 @@
-function output = readAndFindTextInFiles(varargin)
-%READANDFINDTEXTINFILES a function to find all kinds of strings in a
-%textfile
+function output = readAndFindAndReplaceTextInFiles(varargin)
+%READANDFINDANDREPLACETEXTINFILES a function that finds a string in a file
+% and replaces this file. BE CAREFULL USING IT!!!!
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -43,9 +43,9 @@ function output = readAndFindTextInFiles(varargin)
 % Creation of the function
 
 %% Parse varargin
-namefunction = 'readAndFindTextInFiles';
+namefunction = 'readAndFindAndReplaceTextInFiles';
 
-maxargin = 2*5;
+maxargin = 2*6-1;
 minargin = 2;
 if nargin < minargin
     error([ namefunction ':Needs at minimum' num2str(minargin) ' argument(s) ']);
@@ -71,6 +71,8 @@ for narg = 1:nargin
         case {'SEARCHSTRING', 'SS'}
             blAskUser = false;
             SearchString = varargin{narg+1};
+        case {'REPLACE'}
+            StringToReplace = varargin{narg+1};
         otherwise
     end
 end
@@ -94,6 +96,22 @@ cd(AbsPath)
 filesInPath = dir(['**' filesep '*' fExtension]);
 cd(oldPath)
 
+
+%% Warn user
+maxFiles = 20;
+if length(filesInPath) > 5 && length(filesInPath) < maxFiles
+    warning('Five or more files could be changed.. are you sure?')
+    warning('For YES enter: 476')
+    disp(' ');
+    if input('Enter: ')== 476
+    else
+        disp('Wise choice young grasshopper');
+        return;
+    end
+elseif length(filesInPath) >= maxFiles
+    error(['Too many files could be changed. The max is: ' num2str(maxFiles)])
+end
+
 %% Read every line in a file with the searchstring
 cnt = 0;
 output = [];
@@ -109,14 +127,27 @@ for nf = 1:length(filesInPath)
     try
         for nLines = 1:length(dataArray{1,1})
             line = dataArray{1,1}(nLines);
+            blFoundFile = false;
             % Search in the string
             if ~isempty(findstr(char(line),SearchString))
                 % Return all files with this particular searchstring
                 cnt = cnt + 1;
                 output{cnt} = absPathFn;
+                % REPLACE STRING
+                dataArray{1,1}(nLines) = replace(char(line),SearchString,StringToReplace);
+                blFoundFile = true;
                 break;
             end
         end
+        % Remove the file before writing 
+        delete(absPathFn)
+        % Write file with adjusted string
+        fileID = fopen(absPathFn,'w');
+        for i = 1:length(dataArray{1,1})
+            fprintf(fileID,'%s\r\n',dataArray{1,1}{i});
+        end
+        % close the file
+        fclose('all');
     catch
     end
 end

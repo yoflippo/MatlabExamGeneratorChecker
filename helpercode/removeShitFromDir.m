@@ -41,9 +41,9 @@ try
     fclose('all'); %close all files, because after copy Matlab does not release a file
     A = dir( dirToRemove );
     for k = 1:length(A)
-        delete([ dirToRemove  '\' A(k).name]);
+        delete([ dirToRemove  filesep A(k).name]);
     end
-    rmdir(dirToRemove,'s');
+%     rmdir(dirToRemove,'s');
     warning on
 catch
 end

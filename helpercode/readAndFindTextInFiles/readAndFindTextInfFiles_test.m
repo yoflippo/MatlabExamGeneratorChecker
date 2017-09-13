@@ -48,3 +48,7 @@ try
 catch
     assert(true);
 end
+
+% test a file in the testdata folder
+r = readAndFindTextInFiles('sS','61c94c63f5bd64da7455bcffaf075b23','abspath',pathOfTestData,'Ext','.m');
+assert(~isempty(r),'1 should give a result')
