@@ -69,12 +69,15 @@ pathOfThisFile = erase(mfilename('fullpath'),mfilename);
 
 % Delete previously generated folder
 removeShitFromDir(NAMEASSIGNMENTFOLDER);
-
+mkdir(NAMEASSIGNMENTFOLDER)
 % Find folder with the string week
-pth = 'clean_source\assignments';
+pth = fullfile('clean_source','assignments');
 subFoldersCleanSource = getFolders(pth);
 weekFolders = strfind(subFoldersCleanSource,'week');
 % copy action
+if length(subFoldersCleanSource) == 0
+    error(' the clean source folder is not found or empty!!');
+end
 for sbdr = 1:length(subFoldersCleanSource)
     tmp = weekFolders(1,sbdr);
     if ~isempty(tmp{1})
@@ -90,10 +93,11 @@ fclose('all');
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
 
 studentFolder = LISTWITHNEEDEDFOLDERS{3};
-studentFolderOutput = readFilesInSubFolder(studentFolder,'.txt');
+eval(['studentFolderOutput = dir(''studentnumber*' filesep '*.txt'');']);
 % go to the folder with studentnumbers. It is assumed to be a list with
-% doubles
-studentNumbers = load(studentFolderOutput{1});
+
+stdnmbFile = fullfile(studentFolderOutput(1).folder,studentFolderOutput(1).name);
+studentNumbers = load(stdnmbFile);
 % Reshuffle the list with student numbers (removing patterns)
 studentNumbers = studentNumbers(randperm(length(studentNumbers)));
 % Convert the reshuffled list of student number to e-mailadresses
@@ -137,10 +141,9 @@ for wk = 1:length(WEEKFOLDERS)
     try
         % find all files in weekX folder
         cd(WEEKFOLDERS{wk})
-        weekAssignments = dir('**\*.m');
+        weekAssignments = dir(['**' filesep '*.m']);
         cd ..
-        %     weekAssignments = readFilesInSubFolder(WEEKFOLDERS{wk},EXT);
-        
+     
         % traverse the week folder
         for fl = 1:length(weekAssignments)
             currentFile = weekAssignments(fl).name;
@@ -199,9 +202,13 @@ for wk = 1:length(WEEKFOLDERS)
                 cd ..; cd ..; cd ..;
             end
         end
-    catch
+    catch causeException
         cd(BASEFOLDER)
-        error(['problem with: ' WEEKFOLDERS{wk}]);
+        causeException   
+        rmpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
+        rmpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
+        rmpath(genpath(NAMEASSIGNMENTFOLDER))
+        error(['problem with: ' WEEKFOLDERS{wk}  ]);   
     end
 end
 cd(BASEFOLDER)
