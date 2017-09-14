@@ -52,3 +52,20 @@ end
 % test a file in the testdata folder
 r = readAndFindTextInFiles('sS','61c94c63f5bd64da7455bcffaf075b23','abspath',pathOfTestData,'Ext','.m');
 assert(~isempty(r),'1 should give a result')
+
+%% Test if user needs to select path
+r = readAndFindTextInFiles('ASKUSER','EXT','.m','SS','mfilename','EIF','SBP')
+assert(~isempty(r),'1 should give a result')
+
+
+%% Edit of m-files
+disp('check if file is opened')
+% edit file that is found
+r = readAndFindTextInFiles('sS','empty','abspath',pathOfTestData,'Ext','.m','EIF');
+assert(~isempty(r),'1 should give a result')
+
+%% Check if breakpoint is set
+disp('Check if breakpoint is set')
+% edit file that is found
+r = readAndFindTextInFiles('sS','Antwoord_Vraag1 = NaN;','abspath',pathOfTestData,'Ext','.m','EIF','sbp');
+assert(~isempty(r),'1 should give a result')

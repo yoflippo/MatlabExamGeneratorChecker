@@ -25,11 +25,17 @@ function output = readAndFindTextInFiles(varargin)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               'ext':  string with file extension
-%               'abspath':  string with absolute path of a directory
-%               'askuser': declare this string to ask the user for a path.
+%               'ext':          string with file extension
+%               'abspath':      string with absolute path of a directory
+%               'askuser':      declare this string to ask the user for a path.
 %               'searchstring': the searchstring
-%               'ss' : the searchstring
+%               'ss' :          the searchstring
+%               'editiffound' : open file in Matlab editor if found
+%               'eif' :         open file in Matlab editor if found
+%               'setbreakpoint':set a breakpoint in m-file if string is
+%                               found
+%               'sbp' :         set a breakpoint in m-file if string is
+%                               found
 %
 % RETURN:
 %               result: variabele with all files containing the string
@@ -45,7 +51,7 @@ function output = readAndFindTextInFiles(varargin)
 %% Parse varargin
 namefunction = 'readAndFindTextInFiles';
 
-maxargin = 2*5;
+maxargin = 2*5+2;
 minargin = 2;
 if nargin < minargin
     error([ namefunction ':Needs at minimum' num2str(minargin) ' argument(s) ']);
@@ -59,6 +65,8 @@ AbsPath = [];
 AskUserForPath = [];
 SearchString = [];
 blAskUser = false;
+blEdit = false;
+blBreakpoint = false;
 for narg = 1:nargin
     sc = upper(varargin{narg});
     switch sc
@@ -69,8 +77,11 @@ for narg = 1:nargin
         case {'ASKUSER'}
             blAskUser = true;
         case {'SEARCHSTRING', 'SS'}
-            blAskUser = false;
             SearchString = varargin{narg+1};
+        case {'EDITIFFOUND', 'EIF'}
+            blEdit = true;
+        case {'SETBREAKPOINT', 'SBP'}
+            blBreakpoint = true;
         otherwise
     end
 end
@@ -89,19 +100,27 @@ end
 
 
 %% Find all files in path
-oldPath = erase(mfilename('fullpath'),mfilename);
+thisPath = erase(mfilename('fullpath'),mfilename);
 cd(AbsPath)
 filesInPath = dir(['**' filesep '*' fExtension]);
-cd(oldPath)
+cd(thisPath)
 
 %% Read every line in a file with the searchstring
 cnt = 0;
 output = [];
 
+% only set breakpoint if an m-file is searched.
+if ~isequal(fExtension,'.m')
+    blBreakpoint = false;
+end
+
+currPath = pwd;
 for nf = 1:length(filesInPath)
     absPathFn = fullfile(filesInPath(nf).folder,filesInPath(nf).name);
+    % Go to folder
+    cd(filesInPath(nf).folder);
     delimiter = {''};
-    formatSpec = '%s%[^\n\r]';
+    formatSpec = '%s%[^\n]';
     fileID = fopen(absPathFn,'r');
     dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
         'TextType', 'string',  'ReturnOnError', false);
@@ -114,11 +133,25 @@ for nf = 1:length(filesInPath)
                 % Return all files with this particular searchstring
                 cnt = cnt + 1;
                 output{cnt} = absPathFn;
+                % Open file
+                if blEdit
+                    edit(absPathFn);
+                end
+                % Set breakpoint
+                try
+                    if blBreakpoint
+                        eval(['dbstop at ' num2str(nLines) ' in ' filesInPath(nf).name]);
+                    end
+                catch
+                    warning('file must contain an expression');
+                end
                 break;
             end
         end
     catch
+        cd(currPath)
     end
+    cd(currPath)
 end
 
 
