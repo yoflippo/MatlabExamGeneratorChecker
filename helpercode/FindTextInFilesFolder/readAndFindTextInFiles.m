@@ -100,7 +100,7 @@ end
 
 
 %% Find all files in path
-thisPath = erase(mfilename('fullpath'),mfilename);
+thisPath = fileparts(mfilename('fullpath'));
 cd(AbsPath)
 filesInPath = dir(['**' filesep '*' fExtension]);
 cd(thisPath)

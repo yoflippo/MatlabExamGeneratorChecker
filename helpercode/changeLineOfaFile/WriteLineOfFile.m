@@ -24,15 +24,15 @@ function WriteLineOfFile(varargin)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               varargin:   <text>
-%               varargin:   <text>
+%               absPath:   the absolute path of file
+%               lineNumber:  default 1
+%               txt: string to write
 %
 % RETURN:
-%               outvar:     <text>
-%               outvar:     <text>
+%               nothing
 %
 % EXAMPLES:
-%
+%               WriteLineOfFile(path,linenumber,txt);
 %
 
 % $Revision: 0.0.0 $  $Date: 2017-09-06 $
@@ -47,12 +47,20 @@ elseif nargin == 3
 elseif nargin > 3
     error([mabsPathFile 'does not handle: ' num2str(nargin) ' arguments']);
 end
+
 % read the file
 delimiter = {''};
 formatSpec = '%s%[^\n\r]';
 fileID = fopen(absPathFile,'r');
 dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
     'TextType', 'string',  'ReturnOnError', false);
+
+if length(dataArray{1,1}) < lineNumber
+   % Fill dataArray
+   for nEl = length(dataArray{1,1})+1:lineNumber-1
+       dataArray{1,1}(nEl) = '';
+   end
+end
 % write txt to line
 dataArray{1,1}(lineNumber) = lineTxt;
 % close the file

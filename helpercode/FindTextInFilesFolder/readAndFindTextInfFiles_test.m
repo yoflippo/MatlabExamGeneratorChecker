@@ -54,7 +54,7 @@ r = readAndFindTextInFiles('sS','61c94c63f5bd64da7455bcffaf075b23','abspath',pat
 assert(~isempty(r),'1 should give a result')
 
 %% Test if user needs to select path
-r = readAndFindTextInFiles('ASKUSER','EXT','.m','SS','mfilename','EIF','SBP')
+r = readAndFindTextInFiles('ASKUSER','EXT','.m','SS',['mfilename(''fullpath'')'],'EIF','SBP')
 assert(~isempty(r),'1 should give a result')
 
 

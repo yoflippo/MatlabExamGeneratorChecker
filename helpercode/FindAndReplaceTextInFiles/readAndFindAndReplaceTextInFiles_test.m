@@ -12,7 +12,7 @@ close all; clear all; clc;
 
 
 %% EXPECT CORRECT BEHAVIOR
-pathOfThisFile = erase(mfilename('fullpath'),mfilename);
+pathOfThisFile =  fileparts(mfilename('fullpath'));
 source = fullfile(pathOfThisFile,'templateData');
 des = fullfile(pathOfThisFile,'vraag_1');
 removeShitFromDir(des);

@@ -1,6 +1,6 @@
 data line 01 of file )(*&^tomaat%$#@ 
 data line 02 of file )!@#$%^&^%komkommer$%^&*()(*&^%$
-DIT IS EEN TEST
+data line 03 of file )(*&^%$kaas#@
 data line 04 of file )(*&^tyfus%$#@
 data line 05 of file )!@#$%^&eend^%$%^&*()(*&^%$
 data line 06 of file )(*&^%rood$#@
@@ -10,14 +10,3 @@ data line 09 of file )(*&^%fuckyou$#@
 data line 10 of file )(*&^cannister%$#@
 data line 11 of file )!@#$%^&^%toren$%^&*()(*&^%$
 data line 12 of file )(*&^groente%$#@
-
-
-
-
-
-
-
-
-
-
-

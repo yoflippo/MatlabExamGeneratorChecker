@@ -56,6 +56,6 @@ dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
     'TextType', 'string',  'ReturnOnError', false,'HeaderLines',headerlines);
 fclose(fileID);
 
-line = dataArray{1,1}(lineNumber);
+line = dataArray{1,1}(1);
 
 end %function
