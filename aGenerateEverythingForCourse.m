@@ -126,7 +126,7 @@ cd(STUDENTSUBFOLDER);
 studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
 for wk = 1:4
     save([NAMERESULTMAT num2str(wk)],'studentMatrix');
-%     mkdir(['week' num2str(wk)]);
+    %     mkdir(['week' num2str(wk)]);
 end
 cd(BASEFOLDER)
 
@@ -145,14 +145,15 @@ for wk = 1:length(WEEKFOLDERS)
         cd(WEEKFOLDERS{wk})
         weekAssignments = dir(['**' filesep '*.m']);
         cd ..
-     
+        
         % traverse the week folder
         for fl = 1:length(weekAssignments)
             currentFile = weekAssignments(fl).name;
             currFileAbsPath = weekAssignments(fl).folder;
             currFileFull = fullfile(currFileAbsPath,currentFile);
+            currentFileSOL = fullfile(currFileAbsPath,replace(currentFile,'.m','_SOL.m'));
             % find m-file with the answer/solution file
-            if exist(fullfile(currFileAbsPath,replace(currentFile,'.m','_SOL.m')))
+            if exist(currentFileSOL)
                 % check which types of questions are in the subfolder of the
                 % current weekfolder
                 subdirs = strsplit(currFileAbsPath,filesep);
@@ -161,6 +162,12 @@ for wk = 1:length(WEEKFOLDERS)
                 %header in the student specific assignment
                 if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
                     header = combineTextOfDifferentFiles('default_header.m','header_question.m');
+                    
+                    
+                    
+                    
+                    xxxx combineTextOfDiff busy improving
+                    
                 elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
                     header = combineTextOfDifferentFiles('default_header.m','header_script.m');
                 elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)
@@ -187,15 +194,25 @@ for wk = 1:length(WEEKFOLDERS)
                 for hh = 2:length(header)
                     headerHash{length(headerHash)+1} = header{hh};
                 end
+                headerHashSOL = headerHash;
                 % Copy the clean/original file
                 clear clean_file
                 clean_file = combineTextOfDifferentFiles(currFileFull);
                 for hh = 1:length(clean_file)
                     headerHash{length(headerHash)+1} = clean_file{hh};
                 end
+                % Copy the clean/original SOLUTION file
+                clear clean_file_SOL
+                clean_file_SOL = combineTextOfDifferentFiles(currentFileSOL);
+                for hh = 1:length(clean_file_SOL)
+                    headerHashSOL{length(headerHashSOL)+1} = clean_file_SOL{hh};
+                end
+                
                 % Delete current file
                 delete(currFileFull);
+                delete(currentFileSOL);
                 makeMFileFromCells(replace(currFileFull,'.m',''),headerHash)
+                makeMFileFromCells(replace(currentFileSOL,'.m',''),headerHashSOL)
                 if exist(currFileFull) ~= 2
                     error(['There is a missing CHECK file: ' namefile]);
                 end
@@ -206,11 +223,11 @@ for wk = 1:length(WEEKFOLDERS)
         end
     catch causeException
         cd(BASEFOLDER)
-        causeException   
+        causeException
         rmpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
         rmpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
         rmpath(genpath(NAMEASSIGNMENTFOLDER))
-        error(['problem with folder: ' WEEKFOLDERS{wk}  ]);   
+        error(['problem with folder: ' WEEKFOLDERS{wk}  ]);
     end
 end
 cd(BASEFOLDER)

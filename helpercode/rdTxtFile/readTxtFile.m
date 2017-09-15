@@ -97,5 +97,6 @@ while ischar(tline{c,1})
 end
 fclose(fileID);
 warning on
+tline{end,1} = [];
 outVar = tline;
 end

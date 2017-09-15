@@ -41,6 +41,7 @@ concatenatedTxt = {};
 cnt = 1;
 % fetch txt
 for i = 1:length(varargin)
+    % TODO: implement
     filename = varargin{i};
     delimiter = {''};
     formatSpec = '%s%[^\n\r]';
@@ -48,6 +49,9 @@ for i = 1:length(varargin)
     dataArray{i} = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
         'TextType', 'string',  'ReturnOnError', false);
     fclose(fileID);
+    
+    XXX add readTxtFile
+    
     % copy text lines
     for j = 1:length(dataArray{1,i}{1,1})
         concatenatedTxt{cnt} = dataArray{1,i}{1,1}{j};
