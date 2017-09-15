@@ -1,5 +1,5 @@
 function removeShitFromDir(dirToRemove)
-%REMOVESHITFROMDIR It does what it says it does
+%REMOVESHITFROMDIR Only removes files in a directory structure.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -17,8 +17,6 @@ function removeShitFromDir(dirToRemove)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-%
-% DESCRIPTION:
 %
 %
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)

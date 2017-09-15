@@ -172,3 +172,6 @@ for nDirs = 1:length(folders)
         clear finalTxt
     end
 end
+
+%% Test the generated MC-files
+CountNumberOfFALSE_TRUE;

@@ -69,7 +69,8 @@ pathOfThisFile = erase(mfilename('fullpath'),mfilename);
 
 % Delete previously generated folder
 removeShitFromDir(NAMEASSIGNMENTFOLDER);
-mkdir(NAMEASSIGNMENTFOLDER)
+% mkdir(NAMEASSIGNMENTFOLDER)
+
 % Find folder with the string week
 pth = fullfile('clean_source','assignments');
 subFoldersCleanSource = getFolders(pth);
@@ -118,13 +119,14 @@ cd(BASEFOLDER)
 debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
 
 removeShitFromDir(STUDENTSUBFOLDER)
-mkdir(STUDENTSUBFOLDER)
+% mkdir(STUDENTSUBFOLDER)
+
 % Create a MAT file that stores the results of each student
 cd(STUDENTSUBFOLDER);
 studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
 for wk = 1:4
     save([NAMERESULTMAT num2str(wk)],'studentMatrix');
-    mkdir(['week' num2str(wk)]);
+%     mkdir(['week' num2str(wk)]);
 end
 cd(BASEFOLDER)
 
@@ -208,7 +210,7 @@ for wk = 1:length(WEEKFOLDERS)
         rmpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
         rmpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
         rmpath(genpath(NAMEASSIGNMENTFOLDER))
-        error(['problem with: ' WEEKFOLDERS{wk}  ]);   
+        error(['problem with folder: ' WEEKFOLDERS{wk}  ]);   
     end
 end
 cd(BASEFOLDER)

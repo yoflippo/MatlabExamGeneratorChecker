@@ -43,6 +43,8 @@ function output = readAndFindAndReplaceTextInFiles(varargin)
 % Creation of the function
 
 %% Parse varargin
+
+disp('TODO: Make copies of files with replaced txt')
 namefunction = 'readAndFindAndReplaceTextInFiles';
 
 maxargin = 2*6-1;

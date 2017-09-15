@@ -1,8 +1,7 @@
 function res = xxx(absPathStudentSol)
 % This script has to check and test another script
-% It
-%               -   Give a result in the variable ResStudentScript. Perfect
-%                   grade = 1. Totally wrong result = 0.
+% It gives a result in the variable ResStudentScript. Perfect grade = 1. 
+% Totally wrong result = 0.
 
 % Load the project constants
 Constants
