@@ -43,21 +43,14 @@ cnt = 1;
 for i = 1:length(varargin)
     % TODO: implement
     filename = varargin{i};
-    delimiter = {''};
-    formatSpec = '%s%[^\n\r]';
-    fileID = fopen(filename,'r');
-    dataArray{i} = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
-        'TextType', 'string',  'ReturnOnError', false);
-    fclose(fileID);
-    
-    XXX add readTxtFile
+    txtCell = readTxtFile(filename);
     
     % copy text lines
-    for j = 1:length(dataArray{1,i}{1,1})
-        concatenatedTxt{cnt} = dataArray{1,i}{1,1}{j};
+    for j = 1:length(txtCell)
+        concatenatedTxt{cnt} = txtCell{j};
         cnt = cnt + 1;
     end
-    clear dataArray
+    clear txtCell
 end
 
 outVar = concatenatedTxt;

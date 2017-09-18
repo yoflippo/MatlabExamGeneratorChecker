@@ -17,7 +17,7 @@ function [outVar] = readTxtFile(varargin)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %               A function that literally reads a txt-file. Also taking in
 %               to account the empty lines. Other functions as: txtscan(),
@@ -25,15 +25,15 @@ function [outVar] = readTxtFile(varargin)
 %               function fileread() makes one long string of a file, so
 %               that is no option eather.
 %
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-% 
+%
 % PARAMETERS:
 %               fullpath:   the absolute path of a txt-file with filename.
 %
-% RETURN:       
-%               outvar:     a cell based variable.    
-% 
+% RETURN:
+%               outvar:     a cell based variable.
+%
 % EXAMPLES:
 %
 %
@@ -78,7 +78,7 @@ end
 % %         otherwise
 % %     end
 % % end
-% % 
+% %
 % % if isempty(fExtension)
 % %     error([ namefunction ' you need to specify an extension (see help)']);
 % % end
@@ -88,15 +88,24 @@ fileID = fopen(varargin{1},'r');
 c = 1;
 warning off
 tline{c,1} = fgets(fileID);
+tline{c,1} = removeReturnAndNewline(tline{c,1});
 while ischar(tline{c,1})
     c = c + 1;
-    tline{c,1} = fgets(fileID);
-    % Remove ' \n ' characters
-    tline{c,1} = strrep(tline{c,1},sprintf('\n'),'');
-    tline{c,1} = strrep(tline{c,1},sprintf('\r'),'');
+    tmp = fgets(fileID);
+    % Do not use EOF
+    if ~ischar(tmp)
+        break;
+    end
+    tline{c,1} = tmp;
+    tline{c,1} = removeReturnAndNewline(tline{c,1});
 end
 fclose(fileID);
 warning on
-tline{end,1} = [];
 outVar = tline;
+end
+
+% Remove ' \n ' and ' \r ' characters
+function r = removeReturnAndNewline(tline)
+r = strrep(tline,sprintf('\n'),'');
+r = strrep(r,sprintf('\r'),'');
 end

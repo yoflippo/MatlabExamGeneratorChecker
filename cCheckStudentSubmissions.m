@@ -69,12 +69,14 @@ files = dir(subWkFolder);
 cd(subWkFolder);
 studentsThatSubmitted = [];
 for i = 3:length(files)
+    erase(files(i).name,'.zip'); XXXXX
     studentsThatSubmitted{i-2} = files(i).name(end-11:end-4);
     unzip(fullfile(subWkFolder,files(i).name));
 end
 cd(BASEFOLDER);
-% Load the old studentNumbers
-load(fullfile(NAMEASSIGNMENTFOLDER,'studentNumbers.mat'));
+
+%% Load the old studentNumbers
+load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
 % Display how many students did not submit
 numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
 if length(studentsThatSubmitted) == 0
@@ -163,6 +165,7 @@ end
 
 %% Get the number of points for all week assignments
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
+
 relPathWeekFolderUnique = fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME);
 mfiles = readFilesInSubFolder(relPathWeekFolderUnique,'.m');
 relevantMFiles = strfind(mfiles,'points.m');
@@ -202,7 +205,6 @@ cd(relPath);
 load(fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]))
 
 % Iterate over every folder/studentnumber
-
 for sn = 1:length(trackStudentAssignment)
     studentFolder = trackStudentAssignment{sn,1}
     addpath(genpath(studentFolder));

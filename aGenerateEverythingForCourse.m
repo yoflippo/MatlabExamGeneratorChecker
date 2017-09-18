@@ -161,13 +161,7 @@ for wk = 1:length(WEEKFOLDERS)
                 %Check for the presence of files below to give the proper
                 %header in the student specific assignment
                 if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
-                    header = combineTextOfDifferentFiles('default_header.m','header_question.m');
-                    
-                    
-                    
-                    
-                    xxxx combineTextOfDiff busy improving
-                    
+                    header = combineTextOfDifferentFiles('default_header.m','header_question.m');    
                 elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
                     header = combineTextOfDifferentFiles('default_header.m','header_script.m');
                 elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)

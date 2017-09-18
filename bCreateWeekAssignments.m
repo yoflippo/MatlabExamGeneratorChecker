@@ -160,9 +160,14 @@ for nStud = 1:length(studentNumbers)
     finScriptStud = fullfile(BASEFOLDER,LISTWITHNEEDEDFOLDERS{2},'headers',...
         NAMEZIPMFILEFORSTUDENTS);
     copyfile(finScriptStud,fullfile(currStudentDir,WEEKNAME));
+    copyfile(finScriptStud,fullfile(currStudentDirSol,WEEKNAME));
     
     % Create a file with the studentnumber
     fid = fopen(fullfile(currStudentDir,WEEKNAME,'studentnummer.m'),'w');
+    fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
+    fclose(fid);
+        % Create a file with the studentnumber
+    fid = fopen(fullfile(currStudentDirSol,WEEKNAME,'studentnummer.m'),'w');
     fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
     fclose(fid);
     
