@@ -32,9 +32,7 @@ InitAll
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
 
-correct = input(['Is this the correct week?: ' num2str(WEEK) ...
-    ' (not giving an answer is YES)']);
-if ~isempty(correct)
+if ~askuser(['Is this the correct week?: ' num2str(WEEK)],true)
     disp('Script is STOPPED because the WEEK constant (see: initAll.m) has to be changed');
     return
 end
@@ -65,12 +63,14 @@ addpath(genpath(fullfile(pwd,subWkFolder)))
 removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
 % Get files in the folder for analysis
 files = dir(subWkFolder);
+
 % Get studentnumbers of students that submitted AND unzip the folder
 cd(subWkFolder);
 studentsThatSubmitted = [];
 for i = 3:length(files)
-    erase(files(i).name,'.zip'); XXXXX
-    studentsThatSubmitted{i-2} = files(i).name(end-11:end-4);
+    tmpTxt = erase(files(i).name,'.zip'); 
+    tmpTxt = erase(tmpTxt,[WEEKNAME '_']);
+    studentsThatSubmitted{i-2} = tmpTxt;
     unzip(fullfile(subWkFolder,files(i).name));
 end
 cd(BASEFOLDER);
@@ -191,8 +191,9 @@ debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
-%% Check all the CHECK files by running the SOL files on them
-debugOutput(DEBUGOUTPUT,'Check all the CHECK files by running the CHECK files on them',0);
+
+%% Check the answer of the students and track their points if correct
+debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
 
 addpath(genpath(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME)));
 PointsToBeEarned = sum(pointsPerAssignment);
@@ -218,8 +219,7 @@ rmpath(genpath(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME)));
 % Save the file with the results
 
 
-%% Check the answer of the students and track their points if correct
-debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
+
 
 
 % last but not least: copy the right answer to every student folder

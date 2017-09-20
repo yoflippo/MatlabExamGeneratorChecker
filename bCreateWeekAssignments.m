@@ -71,7 +71,7 @@ mkdir(wkFolderName)
 % Create a STUDENTASSFOLDER inside every weekfolder
 for i = 1:length(studentNumbers)
     ptmp = fullfile(wkFolderName,num2str(studentNumbers(i)));
-    ptmpSol = fullfile(wkFolderName,[num2str(studentNumbers(i)) '_SOL']);
+    ptmpSol = fullfile(wkFolderName,[num2str(studentNumbers(i)) SOLPOSTFIX]);
     if exist(ptmp) == 0
         mkdir(ptmp);
         mkdir(ptmpSol);
@@ -91,7 +91,7 @@ deepestAssignFolders = GetDeepestFolders(absPathCurrAssFolder);
 for nTypeAss = 1:length(deepestAssignFolders)
     deepestAssignFolders{nTypeAss} = extractAfter(deepestAssignFolders{nTypeAss},NAMEASSIGNMENTFOLDER);
     deepestAssignFoldersWithoutWeek{nTypeAss} = extractAfter(deepestAssignFolders{nTypeAss},WEEKNAME);
-    % Count the number of assignment in every folder (with '_SOL')
+    % Count the number of assignment in every folder (with 'SOLPOSTFIX')
     currPath = pwd;
     cd(fullfile(NAMEASSIGNMENTFOLDER,deepestAssignFolders{nTypeAss}));
     answerFilesInDir{nTypeAss} = dir(['*' SOLPOSTFIX '*']);
@@ -116,7 +116,7 @@ for nStud = 1:length(studentNumbers)
     % Browse to every assignment folder, PLEASE NOTICE: randonmness is used
     % by shuffling the studentNumbers in the studentlist.
     studentDir = num2str(studentNumbers(nStud));
-    studentDirSol = [studentDir '_SOL'];
+    studentDirSol = [studentDir SOLPOSTFIX];
     trackStudentAssignment{nStud,1} = studentDir;
     currStudentDir = fullfile(wkFolderName,studentDir);
     currStudentDirSol = fullfile(wkFolderName,studentDirSol);
@@ -125,8 +125,8 @@ for nStud = 1:length(studentNumbers)
         % initiate counter for current assignment
         cnt = answerFileCounter(nAss);
         currFileSol = [deepestAssignFolders{nAss} filesep answerFilesInDir{1,nAss}(cnt).name];
-        % rename the file to a file without _SOL
-        currFile = replace(currFileSol,'_SOL','');
+        % rename the file to a file without nTypeAss
+        currFile = replace(currFileSol,SOLPOSTFIX,'');
         % file to copy
         sourceFile = [NAMEASSIGNMENTFOLDER currFile];
         sourceFileSOL = [NAMEASSIGNMENTFOLDER currFileSol];
@@ -166,7 +166,7 @@ for nStud = 1:length(studentNumbers)
     fid = fopen(fullfile(currStudentDir,WEEKNAME,'studentnummer.m'),'w');
     fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
     fclose(fid);
-        % Create a file with the studentnumber
+    % Create a file with the studentnumber
     fid = fopen(fullfile(currStudentDirSol,WEEKNAME,'studentnummer.m'),'w');
     fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
     fclose(fid);
@@ -176,6 +176,9 @@ for nStud = 1:length(studentNumbers)
     currPath = pwd;
     cd(currStudentDir);
     zip(['..' filesep WEEKNAME '_' studentDir '.zip'],pwd)
+    cd(currPath);
+    cd(currStudentDirSol);
+    zip(['..' filesep WEEKNAME '_' studentDir SOLPOSTFIX '.zip'],pwd)
     cd(currPath);
     % Remove the folder that is previously zipped
     % %     removeShitFromDir(currStudentDir);
@@ -189,10 +192,14 @@ save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]) ...
 %% Zip the folder with zipped-assignments per student and delete that folder
 debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);
 
-currPath = pwd;
-cd(STUDENTASSFOLDER)
-zip([NAMEZIPPEDWEEK num2str(YEAR) '_' WEEKNAME '.zip'],WEEKNAME)
-cd(currPath)
-% removeShitFromDir(wkFolderName)
+if askuser(' Zip all files?',false)
+    cd(STUDENTASSFOLDER)
+    zip([NAMEZIPPEDWEEK num2str(YEAR) '_' WEEKNAME '.zip'],WEEKNAME)
+    cd(BASEFOLDER)
+end
+
+if askuser(' Empty the student_assignments folder?',false)
+    removeShitFromDir(wkFolderName)
+end
 
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);

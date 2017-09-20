@@ -44,49 +44,54 @@ function Dic = GetDictionaryWithHashAndLocation(LocationOfBaseFiles,SOLPOSTFIX)
 
 nameAssignmentFolder = LocationOfBaseFiles;
 
-% Get an overview of files
-mfiles = readFilesInSubFolder(nameAssignmentFolder,'.m');
+mfiles = dir([nameAssignmentFolder filesep '*.m']); 
 
-% Filter the relevant files, only files with 'vraag' are relevant
-mfilesOI = strfind(mfiles,'vraag_'); %files of interest
-mfilesOI2 = strfind(mfiles,'opdracht_');
-% combine the two types of assignments
-for i = 1:length(mfilesOI)
-    % add the items of second file to the first
-    if length(mfilesOI2{i}) > 1
-        mfilesOI{i} = mfilesOI2{i};
-    end
-end
-
-% Further filter the files down to files without the postfix
-mfilesOI = strfind(mfiles,SOLPOSTFIX); %files of interest
-mfilesOI = mfiles(cellfun('isempty',mfilesOI));
-
-% Get HashCode of each file
-hashsize = 32;
-underscorePos = strfind(mfilesOI,'_');
-
-% find hashcodes with more than 5 underscores, this number is based on the
-% actual paths with the filenames and the number of underscores, this could
-% change in another environment
-numberOfUnderScores = cellfun(@length,underscorePos);
-
-% extra filtering so only the right files remain
-NUMOFUNDERSCORES = max(numberOfUnderScores);
-mfilesOI = mfilesOI(numberOfUnderScores==NUMOFUNDERSCORES);
-underscorePos = strfind(mfilesOI,'_');
-
-% Get the hascodes
-for h = 1:length(mfilesOI)
-    hashPos = underscorePos{1,h}(NUMOFUNDERSCORES-1:NUMOFUNDERSCORES);
-    HashCodes{h} = mfilesOI{1,h}(hashPos(1)+1:hashPos(2)-1) ;
-end
-
-% make an absolute path
-mfilesOI = fullfile(pwd,mfilesOI);
-
-% Combine the relevant files in a Container (dictionary) so the
-% hashcode is combined with a location for fast lookup
-Dic = containers.Map(HashCodes,mfilesOI);
+  XXX
+  
+  Zoeken naar postfix en daar alle hashcodes uitlezen en opslaan in dictionary
+% % % % % % % % % % % % Get an overview of files
+% % % % % % % % % % % mfiles = readFilesInSubFolder(nameAssignmentFolder,'.m');
+% % % % % % % % % % % 
+% % % % % % % % % % % % Filter the relevant files, only files with 'vraag' are relevant
+% % % % % % % % % % % mfilesOI = strfind(mfiles,'vraag_'); %files of interest
+% % % % % % % % % % % mfilesOI2 = strfind(mfiles,'opdracht_');
+% % % % % % % % % % % % combine the two types of assignments
+% % % % % % % % % % % for i = 1:length(mfilesOI)
+% % % % % % % % % % %     % add the items of second file to the first
+% % % % % % % % % % %     if length(mfilesOI2{i}) > 1
+% % % % % % % % % % %         mfilesOI{i} = mfilesOI2{i};
+% % % % % % % % % % %     end
+% % % % % % % % % % % end
+% % % % % % % % % % % 
+% % % % % % % % % % % % Further filter the files down to files without the postfix
+% % % % % % % % % % % mfilesOI = strfind(mfiles,SOLPOSTFIX); %files of interest
+% % % % % % % % % % % mfilesOI = mfiles(cellfun('isempty',mfilesOI));
+% % % % % % % % % % % 
+% % % % % % % % % % % % Get HashCode of each file
+% % % % % % % % % % % hashsize = 32;
+% % % % % % % % % % % underscorePos = strfind(mfilesOI,'_');
+% % % % % % % % % % % 
+% % % % % % % % % % % % find hashcodes with more than 5 underscores, this number is based on the
+% % % % % % % % % % % % actual paths with the filenames and the number of underscores, this could
+% % % % % % % % % % % % change in another environment
+% % % % % % % % % % % numberOfUnderScores = cellfun(@length,underscorePos);
+% % % % % % % % % % % 
+% % % % % % % % % % % % extra filtering so only the right files remain
+% % % % % % % % % % % NUMOFUNDERSCORES = max(numberOfUnderScores);
+% % % % % % % % % % % mfilesOI = mfilesOI(numberOfUnderScores==NUMOFUNDERSCORES);
+% % % % % % % % % % % underscorePos = strfind(mfilesOI,'_');
+% % % % % % % % % % % 
+% % % % % % % % % % % % Get the hascodes
+% % % % % % % % % % % for h = 1:length(mfilesOI)
+% % % % % % % % % % %     hashPos = underscorePos{1,h}(NUMOFUNDERSCORES-1:NUMOFUNDERSCORES);
+% % % % % % % % % % %     HashCodes{h} = mfilesOI{1,h}(hashPos(1)+1:hashPos(2)-1) ;
+% % % % % % % % % % % end
+% % % % % % % % % % % 
+% % % % % % % % % % % % make an absolute path
+% % % % % % % % % % % mfilesOI = fullfile(pwd,mfilesOI);
+% % % % % % % % % % % 
+% % % % % % % % % % % % Combine the relevant files in a Container (dictionary) so the
+% % % % % % % % % % % % hashcode is combined with a location for fast lookup
+% % % % % % % % % % % Dic = containers.Map(HashCodes,mfilesOI);
 
 end
