@@ -140,6 +140,8 @@ debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assig
 % Load the information assigned for this week
 load(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]));
 
+XXXXXX nieuw test data maken
+
 for i = 1:length(trackStudentAssignment)
     % Get hash codes of current student
     HashCodesOfCurrentStudentAssigned = {trackStudentAssignment{i,2:end}};
@@ -148,7 +150,14 @@ for i = 1:length(trackStudentAssignment)
     cd(relPath);
     % Get hashcodes in student folder
     [HashCodeCurrStud AbsPathCodeCurrStud] = GetHashCodeOfMFilesInFolder(WEEKNAME);
-    % Check if the assigned hashcodes are present
+    %% Check if all files are unique, to prevent copies to get more points
+    if length(HashCodeCurrStud) ~= length(unique(HashCodeCurrStud))
+        keyboard %pause program
+        disp('Student has a copy of a file in his/hers directory');
+        HashCodeCurrStud = unique(HashCodeCurrStud);
+    end
+    
+    %% Check if the assigned hashcodes are present
     for j = 1:length(HashCodeCurrStud)
         if isempty(find(ismember(HashCodesOfCurrentStudentAssigned,HashCodeCurrStud{j})))
             nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
@@ -162,6 +171,7 @@ for i = 1:length(trackStudentAssignment)
     end
     cd(BASEFOLDER)
 end
+clear HashCodeCurrStud AbsPathCodeCurrStud
 
 %% Get the number of points for all week assignments
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
