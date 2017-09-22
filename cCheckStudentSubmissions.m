@@ -144,7 +144,7 @@ XXXXXX nieuw test data maken
 
 for i = 1:length(trackStudentAssignment)
     % Get hash codes of current student
-    HashCodesOfCurrentStudentAssigned = {trackStudentAssignment{i,2:end}};
+    HCodeCurrStud = {trackStudentAssignment{i,2:end}};
     % Go inside student folder
     relPath = fullfile(STUDENTSUBFOLDER,WEEKNAME,trackStudentAssignment{i,1});
     cd(relPath);
@@ -159,7 +159,7 @@ for i = 1:length(trackStudentAssignment)
     
     %% Check if the assigned hashcodes are present
     for j = 1:length(HashCodeCurrStud)
-        if isempty(find(ismember(HashCodesOfCurrentStudentAssigned,HashCodeCurrStud{j})))
+        if isempty(find(ismember(HCodeCurrStud,HashCodeCurrStud{j})))
             nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
             newNameOfCheatFile = strrep(nameOfFile,'.m','_m');
             %Get corresponding subfolder of assignment

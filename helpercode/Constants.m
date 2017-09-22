@@ -18,7 +18,8 @@ FOLDERCHEAT = 'BESTANDEN_NIET_AAN_JOU_TOEGEWEZEN';
 NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
 NAMERESULTMAT = 'resultatenWeek';
 VAR_RESULT = 'ResStudentScript';
+TESTFOLDER = 'fortesting';
 WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4'};
-LISTWITHNEEDEDFOLDERS = {'helpercode' 'clean_source' 'studentnumbers' ...
+LISTWITHNEEDEDFOLDERS = {'helpercode' 'clean_source' 'studentnumbers' TESTFOLDER ...
                         'oud' STUDENTSUBFOLDER};
 % Oooh Noo... some code in a file called Constants... shame on you author
