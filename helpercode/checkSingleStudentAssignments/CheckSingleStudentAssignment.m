@@ -83,16 +83,25 @@ sumPoints = 0;
 for i = 1:length(mfilesWithHash)
     try
         % Get the check file for this assignment
-        absPathCheckfile = dicCheckFilesAbsPath(HashOfmfiles{1,i});
+        AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
         % Save it in a variable used by the solution
-        AbsPathSOLScript = replace(absPathCheckfile,'CHECK','SOL');
+        absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
+        % Extra name of checking function and assume it is on the path
+        [a b c] = fileparts(absPathCheckfile);
+        
         % Get the type of the file: opdracht_x, vraag_x
-        AbsPathStudentScript = mfilesWithHash{1,i};     
+        AbsPathStudentScript = mfilesWithHash{1,i};
         [p,n,e] = fileparts(AbsPathStudentScript);
+        
         % Get the number of points for this assignment
         pointsForCurrentAssignment = dicNameAssignmentAndPoints(n);
+        
         %Start checking
-        run(absPathCheckfile);
+        q = char(39);
+        eval(['ResStudentScript = ' b '(' q AbsPathStudentScript q ')']);
+        
+        XXXXXXXXXXXXXXXXXXXXXXXXXXXXX DO SOMETHING ABOUT FILES met dezelfde naam
+        
         % Calcule partialpoints
         sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
     catch

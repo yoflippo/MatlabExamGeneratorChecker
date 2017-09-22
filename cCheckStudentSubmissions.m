@@ -68,7 +68,7 @@ files = dir(subWkFolder);
 cd(subWkFolder);
 studentsThatSubmitted = [];
 for i = 3:length(files)
-    tmpTxt = erase(files(i).name,'.zip'); 
+    tmpTxt = erase(files(i).name,'.zip');
     tmpTxt = erase(tmpTxt,[WEEKNAME '_']);
     studentsThatSubmitted{i-2} = tmpTxt;
     unzip(fullfile(subWkFolder,files(i).name));
@@ -84,15 +84,15 @@ if length(studentsThatSubmitted) == 0
 end
 disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
 
-
 %% TODO: check if studentnumber file in studentfolder has correct studentnumber
 
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
 
 % Get Hash of original assignment folder AND save it in MAT-file
-dicWithHashes = GetDictionaryWithHashAndLocation(NAMEASSIGNMENTFOLDER,SOLPOSTFIX);
-save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicHashesAbsPath.mat'),'dicWithHashes')
+assCurrWk = fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME);
+dicWithHashes = GetDictionaryWithHashAndLocation(assCurrWk,SOLPOSTFIX);
+save(fullfile(assCurrWk,'dicHashesAbsPath.mat'),'dicWithHashes')
 hashCodes = keys(dicWithHashes);
 
 % Iterate through student directories and read the hash strings from their
@@ -102,18 +102,18 @@ cd(subWkFolder);
 mfiles = dir('**/*.m');
 cd(oldPath)
 % If a certain file is manipulated put it in a folder GEEN_PUNTEN
-for i = 1:length(mfiles)
+for nSAss = 1:length(mfiles)
     % Test for files that are not relevant
     blTestIfCorrectFile = true;
     for j = 1:length(OTHERFILESINSTUDENTFOLDER)
-        if isequal(OTHERFILESINSTUDENTFOLDER{j},mfiles(i).name)
+        if isequal(OTHERFILESINSTUDENTFOLDER{j},mfiles(nSAss).name)
             blTestIfCorrectFile = false;
             break;
         end
     end
     % Get hashcode from current mfiles
     if blTestIfCorrectFile
-        currFileAbsPath = fullfile(mfiles(i).folder,mfiles(i).name);
+        currFileAbsPath = fullfile(mfiles(nSAss).folder,mfiles(nSAss).name);
         [p subdir] = GetPathOneLevelUp(currFileAbsPath,2);
         try
             currHash = GetHashCodeFromMFile(currFileAbsPath);
@@ -124,7 +124,7 @@ for i = 1:length(mfiles)
             mkdir(fullfile(p,ADJUSTEDHASH,subdir));
             % replace point of filename with underscore, so it won't be
             % recognised in other scripts as an m-file.
-            nameOfFile = strrep(mfiles(i).name,'.','_');
+            nameOfFile = strrep(mfiles(nSAss).name,'.','_');
             movefile(currFileAbsPath,fullfile(p,ADJUSTEDHASH,subdir,nameOfFile));
             cd(oldPath);
         end
@@ -140,36 +140,37 @@ debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assig
 % Load the information assigned for this week
 load(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]));
 
-XXXXXX nieuw test data maken
-
 for i = 1:length(trackStudentAssignment)
-    % Get hash codes of current student
-    HCodeCurrStud = {trackStudentAssignment{i,2:end}};
-    % Go inside student folder
-    relPath = fullfile(STUDENTSUBFOLDER,WEEKNAME,trackStudentAssignment{i,1});
-    cd(relPath);
-    % Get hashcodes in student folder
-    [HashCodeCurrStud AbsPathCodeCurrStud] = GetHashCodeOfMFilesInFolder(WEEKNAME);
-    %% Check if all files are unique, to prevent copies to get more points
-    if length(HashCodeCurrStud) ~= length(unique(HashCodeCurrStud))
-        keyboard %pause program
-        disp('Student has a copy of a file in his/hers directory');
-        HashCodeCurrStud = unique(HashCodeCurrStud);
-    end
-    
-    %% Check if the assigned hashcodes are present
-    for j = 1:length(HashCodeCurrStud)
-        if isempty(find(ismember(HCodeCurrStud,HashCodeCurrStud{j})))
-            nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
-            newNameOfCheatFile = strrep(nameOfFile,'.m','_m');
-            %Get corresponding subfolder of assignment
-            [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j},2);
-            mkdir(fullfile(WEEKNAME,FOLDERCHEAT,subdir));
-            movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT, ...
-                subdir,newNameOfCheatFile));
+    try %!!!
+        % Get hash codes of current student
+        HCodeCurrStud = {trackStudentAssignment{i,2:end}};
+        % Go inside student folder
+        relPath = fullfile(STUDENTSUBFOLDER,WEEKNAME,trackStudentAssignment{i,1});
+        cd(relPath);
+        % Get hashcodes in student folder
+        [HashCodeCurrStud AbsPathCodeCurrStud] = GetHashCodeOfMFilesInFolder(WEEKNAME);
+        %% Check if all files are unique, to prevent copies to get more points
+        if length(HashCodeCurrStud) ~= length(unique(HashCodeCurrStud))
+            keyboard %pause program
+            disp('Student has a copy of a file in his/hers directory');
+            HashCodeCurrStud = unique(HashCodeCurrStud);
         end
+        
+        %% Check if the assigned hashcodes are present
+        for j = 1:length(HashCodeCurrStud)
+            if isempty(find(ismember(HCodeCurrStud,HashCodeCurrStud{j})))
+                nameOfFile = GetFileNameFromPath(AbsPathCodeCurrStud{j});
+                newNameOfCheatFile = strrep(nameOfFile,'.m','_m');
+                %Get corresponding subfolder of assignment
+                [a subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j},2);
+                mkdir(fullfile(WEEKNAME,FOLDERCHEAT,subdir));
+                movefile(AbsPathCodeCurrStud{j},fullfile(WEEKNAME,FOLDERCHEAT, ...
+                    subdir,newNameOfCheatFile));
+            end
+        end
+        cd(BASEFOLDER)
+    catch
     end
-    cd(BASEFOLDER)
 end
 clear HashCodeCurrStud AbsPathCodeCurrStud
 

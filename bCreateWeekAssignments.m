@@ -60,6 +60,15 @@ else
 end
 removeShitFromDir(dirToRemove);
 
+%% Empty folder with files for testing
+debugOutput(DEBUGOUTPUT,'Empty folder with files for testing',1);
+currTestDir = fullfile(BASEFOLDER,TESTFOLDER,WEEKNAME);
+if ~exist(currTestDir)
+    mkdir(currTestDir);
+else
+    removeShitFromDir(currTestDir);
+end
+
 
 %% Create a student specific folder in every week folder
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
@@ -73,10 +82,8 @@ end
 % Create a STUDENTASSFOLDER inside every weekfolder
 for i = 1:length(studentNumbers)
     ptmp = fullfile(pathWkDirName,num2str(studentNumbers(i)));
-    ptmpSol = fullfile(pathWkDirName,'SOL',[num2str(studentNumbers(i))]);
     if exist(ptmp) == 0
         mkdir(ptmp);
-        mkdir(ptmpSol);
     end
 end
 
@@ -190,23 +197,34 @@ for nStud = 1:length(studentNumbers)
     cd(currStudentDirSol);
     zip(zipFilePathName,pwd)
     cd(currPath);
-    % Remove the folder that is previously zipped
-    removeShitFromDir(currStudentDir);
-    rmdir(currStudentDir);
-    removeShitFromDir(currStudentDirSol);
-    rmdir(currStudentDirSol);
+    
+    %% Important VARIABLE for creating test folders! Make zero if test files
+    % arent necessary. Please be aware that a high number of testfiles will
+    % cause needless overhead.
+    nTestFiles = 4;
+    if nTestFiles > length(studentNumbers)
+        nTestFiles = length(studentNumbers);
+    end
+    
+    %% Move the student folder that is previously zipped
+    if nTestFiles >= nStud
+        % Copy raw files
+        rawFilesTestDir = fullfile(currTestDir,'raw',studentDir);
+        rawFilesTestDirSol = fullfile(currTestDir,'rawsol',studentDir);
+        movefile(currStudentDir,rawFilesTestDir);
+        movefile(currStudentDirSol,rawFilesTestDirSol);
+    else
+        % Delete the remaing files
+        removeShitFromDir(currStudentDir);
+        rmdir(currStudentDir);
+        removeShitFromDir(currStudentDirSol);
+        rmdir(currStudentDirSol);
+    end
     warning on
 end
 
-%% Generate some test files for the Checking script
+%% Generate some test folders for the Checking script
 debugOutput(DEBUGOUTPUT,'Generate some test files for the Checking script',1);
-% Empty test folder
-currTestDir = fullfile(BASEFOLDER,TESTFOLDER,WEEKNAME);
-if ~exist(currTestDir)
-    mkdir(currTestDir);
-else
-    removeShitFromDir(currTestDir);
-end
 
 % Get the paths names of zip files
 currPath = pwd;
@@ -219,7 +237,6 @@ cd(currPath);
 
 % Now Generate nTestFiles different folders with student-assignments containing
 % no-answers to all answers.
-nTestFiles = 3;
 for nTDir = 0:nTestFiles
     % Create folder
     prcCorrect = round((nTDir/nTestFiles)*100);
@@ -228,13 +245,24 @@ for nTDir = 0:nTestFiles
     
     for nF = 1:nTestFiles
         if nTDir >= nF
-            absPathNA = fullfile(solZF(nF).folder,solZF(nF).name); 
+            absPathNA = fullfile(solZF(nF).folder,solZF(nF).name);
         else
-            absPathNA = fullfile(noAnsZF(nF).folder,noAnsZF(nF).name);       
+            absPathNA = fullfile(noAnsZF(nF).folder,noAnsZF(nF).name);
         end
-        copyfile(absPathNA,pathCurrTestDir);        
+        copyfile(absPathNA,pathCurrTestDir);
     end
 end
+
+%% Generate test folders with data to simulate students with wrong assignments
+debugOutput(DEBUGOUTPUT,'Generate test folders with data to simulate students with wrong assignments',1);
+
+% Todo: Generate a test folder in which students only have wrong assignments
+
+
+% Todo: Generate a test folder in which students have doubled their assignments
+
+
+
 
 %% Save the studentNumbers and their assigned hashes
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]) ...
