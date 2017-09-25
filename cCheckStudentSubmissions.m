@@ -28,6 +28,7 @@
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
 % Creation of script
 InitAll
+dbstop if error
 
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
@@ -216,8 +217,9 @@ cd(relPath);
 % Load the studentMatrix in resultatenWeekx
 load(fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]))
 
-% Iterate over every folder/studentnumber
-for sn = 1:length(trackStudentAssignment)
+%% Iterate over every unzipped folder/studentnumber
+folderUnzipped = dir;
+for sn = 1:length(find([folderUnzipped.isdir]==1))-2
     studentFolder = trackStudentAssignment{sn,1}
     addpath(genpath(studentFolder));
     points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...

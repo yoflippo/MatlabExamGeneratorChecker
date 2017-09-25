@@ -56,8 +56,11 @@ dbstop('if','error')
 NAMEOFTHISCRIPT = 'CHECKSINGLESTUDENTASSIGNMENT';
 currPath = pwd;
 
-if isequal(exist(studentdir),0)
-    error([NAMEOFTHISCRIPT ': The accessed folder does not exists'])
+currentFolder = fullfile(pwd,studentdir);
+if isequal(exist(currentFolder),0)
+    warning([NAMEOFTHISCRIPT ': The accessed folder does not exists'])
+    sumPoints = 0;
+    return
 end
 
 %% Check the m-files in student directory
@@ -98,9 +101,9 @@ for i = 1:length(mfilesWithHash)
         
         %Start checking
         q = char(39);
-        eval(['ResStudentScript = ' b '(' q AbsPathStudentScript q ')']);
+        eval(['ResStudentScript = ' b '(' q AbsPathStudentScript q ');']);
         
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXX DO SOMETHING ABOUT FILES met dezelfde naam
+% %         XXXXXXXXXXXXXXXXXXXXXXXXXXXXX DO SOMETHING ABOUT FILES met dezelfde naam
         
         % Calcule partialpoints
         sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
@@ -111,6 +114,6 @@ for i = 1:length(mfilesWithHash)
     end
 end
 % no breakpoints in this file
-dbclear('in',mfilename)
+% dbclear('in',mfilename)
 cd(currPath);
 end
