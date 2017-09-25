@@ -200,7 +200,7 @@ end
 %% Put in dictionary and save in MAT-file
 debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 
-dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
+XXXX dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
 
@@ -218,17 +218,19 @@ cd(relPath);
 load(fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]))
 
 %% Iterate over every unzipped folder/studentnumber
-folderUnzipped = dir;
-for sn = 1:length(find([folderUnzipped.isdir]==1))-2
+% Remove Check-files from path
+rmpath(genpath(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME)));
+
+strTrackStudent = cellstr(trackStudentAssignment);
+for sn = 1:length(strTrackStudent(:,1))
     studentFolder = trackStudentAssignment{sn,1}
-    addpath(genpath(studentFolder));
     points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
         dicNameAssignmentAndPoints,answerFilesInDir);
     grade = ((points/PointsToBeEarned)*9)+1;
     studentMatrix(sn,2) = round(grade,1);
     rmpath(genpath(studentFolder));
 end
-rmpath(genpath(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME)));
+
 % Save the file with the results
 
 

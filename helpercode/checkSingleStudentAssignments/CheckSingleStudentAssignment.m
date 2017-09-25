@@ -90,10 +90,17 @@ for i = 1:length(mfilesWithHash)
         % Save it in a variable used by the solution
         absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
         % Extra name of checking function and assume it is on the path
-        [a b c] = fileparts(absPathCheckfile);
-        
+        [a1 b1 c1] = fileparts(absPathCheckfile);
+        addpath(genpath(a1));
         % Get the type of the file: opdracht_x, vraag_x
         AbsPathStudentScript = mfilesWithHash{1,i};
+        [a2 b2 c2] = fileparts(AbsPathStudentScript);
+        addpath(genpath(a2));
+        
+
+
+        
+     
         [p,n,e] = fileparts(AbsPathStudentScript);
         
         % Get the number of points for this assignment
@@ -101,19 +108,28 @@ for i = 1:length(mfilesWithHash)
         
         %Start checking
         q = char(39);
-        eval(['ResStudentScript = ' b '(' q AbsPathStudentScript q ');']);
+        eval(['ResStudentScript = ' b1 '(' q AbsPathStudentScript q ');']);
         
-% %         XXXXXXXXXXXXXXXXXXXXXXXXXXXXX DO SOMETHING ABOUT FILES met dezelfde naam
-        
+        if ResStudentScript == 0
+            edit(b1)
+            edit(AbsPathStudentScript)
+            edit(AbsPathSOLScript);
+        end
+        % IMPORTANT: remove the path to prevent the use of the wrong
+        % check-files.
+        rmpath(genpath(a1));
+        rmpath(genpath(a2));
         % Calcule partialpoints
         sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
-    catch
+    catch something
+        disp(something)
         disp([NAMEOFTHISCRIPT ': Somethings wrong..'])
         edit(mfilename)
         pause
     end
 end
 % no breakpoints in this file
+
 % dbclear('in',mfilename)
 cd(currPath);
 end
