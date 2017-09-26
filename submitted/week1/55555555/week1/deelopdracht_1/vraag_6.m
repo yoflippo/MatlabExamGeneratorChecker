@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |22cf9433edf45eb4c5b097643311d392|
+%                    |ca13c70cfbe82f5666190feaa6ec78e2|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -24,17 +24,15 @@ A = 1; B = 2; C = 3; D = 4;
 %                       Antwoord = A;
 % =================== BLIJF VAN VOORGAANDE CODE AF! ======================
 %
-%% Vraag 7
+%% Vraag 6
 %
-% Stelling 1:   In de onderstaande code worden de laatste vier elementen
-%				van een vector afgedrukt:                               
-%				------------code--------------                          
-%				vector = 2:66;                                          
-%				vector(end-4:end)                                       
-%				------------code--------------                          
+% Stelling 1:   Zodra een vector in het geheugen staat, kan de vector in
+%				zijn geheel worden afgedrukt in het Command Window      
+%				door het typen van de naam van deze vector in het       
+%				Command Window                                          
 %
-% Stelling 2:   Als je in Matlab vectoren bij elkaar optelt dan wordt
-%				dit 'pair-wise addition' genoemd.                    
+% Stelling 2:   Met behulp van de colon operator kan een numerieke
+%				vector worden aangemaakt.                         
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

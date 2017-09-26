@@ -193,16 +193,15 @@ for i = 1:length(mfiles)
     run(tmp(1:end-2));
     % Get name of assignment and save it
     foundSlashes = strfind(tmp,filesep);
-    nameOfAssignment{i} = tmp(foundSlashes(end-1)+1:foundSlashes(end)-1);
+    nameOfAssignment{i} = tmp(foundSlashes(end-2)+1:foundSlashes(end)-1);
     pointsPerAssignment(i) = deelpunten;
 end
 
 %% Put in dictionary and save in MAT-file
 debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 
-XXXX dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
+dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
-
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
@@ -215,7 +214,8 @@ eval(['load(''answerfiles_week' num2str(WEEK) ''')'])
 relPath = fullfile(STUDENTSUBFOLDER,WEEKNAME);
 cd(relPath);
 % Load the studentMatrix in resultatenWeekx
-load(fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]))
+pathStudentResults = fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK)]);
+load(pathStudentResults)
 
 %% Iterate over every unzipped folder/studentnumber
 % Remove Check-files from path
@@ -228,14 +228,11 @@ for sn = 1:length(strTrackStudent(:,1))
         dicNameAssignmentAndPoints,answerFilesInDir);
     grade = ((points/PointsToBeEarned)*9)+1;
     studentMatrix(sn,2) = round(grade,1);
-    rmpath(genpath(studentFolder));
 end
-
+studentMatrix
 % Save the file with the results
+save([pathStudentResults '.mat'],'studentMatrix')
 
-
-
-
-
+XXXX
 % last but not least: copy the right answer to every student folder
 cd(BASEFOLDER);

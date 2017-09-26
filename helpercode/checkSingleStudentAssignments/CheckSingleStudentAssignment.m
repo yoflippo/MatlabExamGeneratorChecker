@@ -97,28 +97,30 @@ for i = 1:length(mfilesWithHash)
         [a2 b2 c2] = fileparts(AbsPathStudentScript);
         addpath(genpath(a2));
         
-
-
-        
-     
-        [p,n,e] = fileparts(AbsPathStudentScript);
-        
+        % Get the right string from the abspath of the studentscript to
+        % find the number of points using dicNameAssignmentAndPoints
+        pathWithoutExt = replace(AbsPathStudentScript,'.m','');
+        foundSlashes = strfind(pathWithoutExt,filesep);
+        assignment = AbsPathStudentScript(foundSlashes(end-1)+1:length(pathWithoutExt));
+      
         % Get the number of points for this assignment
-        pointsForCurrentAssignment = dicNameAssignmentAndPoints(n);
+        pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
         
         %Start checking
         q = char(39);
         eval(['ResStudentScript = ' b1 '(' q AbsPathStudentScript q ');']);
         
-        if ResStudentScript == 0
-            edit(b1)
-            edit(AbsPathStudentScript)
-            edit(AbsPathSOLScript);
-        end
+% % %         if ResStudentScript == 0
+% % %             edit(b1)
+% % %             edit(AbsPathStudentScript)
+% % %             edit(AbsPathSOLScript);
+% % %         end
         % IMPORTANT: remove the path to prevent the use of the wrong
         % check-files.
+        warning off
         rmpath(genpath(a1));
         rmpath(genpath(a2));
+        warning on
         % Calcule partialpoints
         sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
     catch something

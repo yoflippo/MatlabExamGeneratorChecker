@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |22cf9433edf45eb4c5b097643311d392|
+%                    |213fec0d447adb81dc96f01ab8504f5a|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -26,15 +26,15 @@ A = 1; B = 2; C = 3; D = 4;
 %
 %% Vraag 7
 %
-% Stelling 1:   In de onderstaande code worden de laatste vier elementen
+% Stelling 1:   In de onderstaande code worden de laatste vijf elementen
 %				van een vector afgedrukt:                               
 %				------------code--------------                          
 %				vector = 2:66;                                          
 %				vector(end-4:end)                                       
 %				------------code--------------                          
 %
-% Stelling 2:   Als je in Matlab vectoren bij elkaar optelt dan wordt
-%				dit 'pair-wise addition' genoemd.                    
+% Stelling 2:   Bij het optellen van vectoren in Matlab moet een programmeur
+%				opletten dat de vectoren een gelijke lengte hebben.         
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

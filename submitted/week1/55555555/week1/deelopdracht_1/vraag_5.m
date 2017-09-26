@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |22cf9433edf45eb4c5b097643311d392|
+%                    |298b73fec62428f037db2ff876905f6a|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -24,17 +24,19 @@ A = 1; B = 2; C = 3; D = 4;
 %                       Antwoord = A;
 % =================== BLIJF VAN VOORGAANDE CODE AF! ======================
 %
-%% Vraag 7
+%% Vraag 5
 %
-% Stelling 1:   In de onderstaande code worden de laatste vier elementen
-%				van een vector afgedrukt:                               
-%				------------code--------------                          
-%				vector = 2:66;                                          
-%				vector(end-4:end)                                       
-%				------------code--------------                          
+% Stelling 1:   Een vector kan alleen getallen bevatten. Deze getallen
+%				staan in een rij.                                     
 %
-% Stelling 2:   Als je in Matlab vectoren bij elkaar optelt dan wordt
-%				dit 'pair-wise addition' genoemd.                    
+% Stelling 2:   Bij het uitvoeren van de volgende code is het resultaat
+%				in de Command Window: ' ans =                          
+%				'a'                                                    
+%				'                                                      
+%				------------code--------------                         
+%				naam = 'Mark Schrauwen';                               
+%				naam(2)                                                
+%				------------code--------------                         
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
