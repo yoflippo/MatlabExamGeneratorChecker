@@ -1,0 +1,1 @@
+ de input van een functie kan alleen een vector zijn

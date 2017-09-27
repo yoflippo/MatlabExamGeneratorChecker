@@ -175,3 +175,4 @@ end
 
 %% Test the generated MC-files
 CountNumberOfFALSE_TRUE;
+datetime

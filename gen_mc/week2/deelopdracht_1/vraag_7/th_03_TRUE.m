@@ -1,0 +1,1 @@
+de functie strcmp() is hoofdletter gevoelig

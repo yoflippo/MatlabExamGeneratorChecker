@@ -1,0 +1,1 @@
+de functie strcmp() vergelijkt of twee vectoren identiek zijn

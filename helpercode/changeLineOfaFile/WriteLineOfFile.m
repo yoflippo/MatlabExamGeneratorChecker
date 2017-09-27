@@ -56,10 +56,10 @@ dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
     'TextType', 'string',  'ReturnOnError', false);
 
 if length(dataArray{1,1}) < lineNumber
-   % Fill dataArray
-   for nEl = length(dataArray{1,1})+1:lineNumber-1
-       dataArray{1,1}(nEl) = '';
-   end
+    % Fill dataArray
+    for nEl = length(dataArray{1,1})+1:lineNumber-1
+        dataArray{1,1}(nEl) = '';
+    end
 end
 % write txt to line
 dataArray{1,1}(lineNumber) = lineTxt;
@@ -68,12 +68,16 @@ fclose(fileID);
 % delete the current file
 delete(absPathFile)
 % write to file
-fileID = fopen(absPathFile,'w');
-for i = 1:length(dataArray{1,1})
-   fprintf(fileID,'%s\r\n',dataArray{1,1}{i});
+try
+    fileID = fopen(absPathFile,'w');
+    for i = 1:length(dataArray{1,1})
+        fprintf(fileID,'%s\r\n',dataArray{1,1}{i});
+    end
+    % close the file
+    fclose('all');
+catch
+    fclose('all');
 end
-% close the file
-fclose('all');
 
 
 end %function

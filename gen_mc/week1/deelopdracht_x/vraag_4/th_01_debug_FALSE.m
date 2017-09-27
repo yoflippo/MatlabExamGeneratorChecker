@@ -1,0 +1,1 @@
+Debuggen is het zetten van breakpoints in een programma.
