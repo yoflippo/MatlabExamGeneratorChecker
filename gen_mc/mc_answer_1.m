@@ -1,1 +1,0 @@
- stelling 1 is NIET-WAAR en stelling 2 is WAAR

@@ -1,1 +1,0 @@
-van de vector v=[ 7 1 2 9] krijg je bij de aanroep v(2:end) de waardes 2 3 4

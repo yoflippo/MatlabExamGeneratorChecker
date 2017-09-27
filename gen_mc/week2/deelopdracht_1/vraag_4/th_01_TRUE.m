@@ -1,1 +1,0 @@
-de eerste dimensie in matlab zijn de rijen 

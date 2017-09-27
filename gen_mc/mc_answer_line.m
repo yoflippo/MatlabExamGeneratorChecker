@@ -1,1 +1,0 @@
-Antwoord = NaN; % vul hier het juiste antwoord in A, B, C of D

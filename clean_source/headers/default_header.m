@@ -13,5 +13,6 @@
 % 3 - Elke variabele waar 'NaN' aan wordt toegekend moet JIJ bewerken.
 % 4 - Je mag geen aparte scripts/functies gebruiken ten zij dit expliciet
 %     is aangegeven
+% 5 - In jouw code mag de code 'clear all' niet voorkomen.
 % 
 % Opdrachtbeschrijving:

@@ -1,1 +1,0 @@
-Matlab is een programmeeromgeving en een programmeertaal

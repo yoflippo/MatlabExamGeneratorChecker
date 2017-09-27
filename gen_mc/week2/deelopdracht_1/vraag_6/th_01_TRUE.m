@@ -1,1 +1,0 @@
-de size van een vector v=[ 3 3 3 3] is 1 bij 4
