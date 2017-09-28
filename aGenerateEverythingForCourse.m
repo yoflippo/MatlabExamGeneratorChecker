@@ -61,6 +61,7 @@ if input('Do you want to Backup everything? Yes (1) No (nothing): ')
     rmpath(genpath(BACKUPFOLDER));
     warning on;
 end
+
 %% Copy the folder called 'clean_source\assignments'.
 debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' ...
     NAMEASSIGNMENTFOLDER],1);
@@ -126,7 +127,7 @@ cd(STUDENTSUBFOLDER);
 studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
 for wk = 1:4
     save([NAMERESULTMAT num2str(wk)],'studentMatrix');
-    %     mkdir(['week' num2str(wk)]);
+    mkdir(['week' num2str(wk)]);
 end
 cd(BASEFOLDER)
 
@@ -219,7 +220,8 @@ for wk = 1:length(WEEKFOLDERS)
             end
             estimatedRemainingTime(fl) = toc;
             clc
-            [wk etime(clock,t1) mean(estimatedRemainingTime)*length(weekAssignments)]
+            estPerc = round((etime(clock,t1) / mean(estimatedRemainingTime)*length(weekAssignments)/10000));
+            [['Generating files week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']
         end
     catch causeException
         cd(BASEFOLDER)

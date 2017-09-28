@@ -200,7 +200,7 @@ for nStud = 1:length(studentNumbers)
     %% Important VARIABLE for creating test folders! Make zero if test files
     % arent necessary. Please be aware that a high number of testfiles will
     % cause needless overhead.
-    nTestFiles = 4;
+    nTestFiles = 5;
     if nTestFiles > length(studentNumbers)
         nTestFiles = length(studentNumbers);
     end

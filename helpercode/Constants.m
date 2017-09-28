@@ -1,4 +1,4 @@
-WEEK = 2; 
+WEEK = 1; 
 WEEKNAME = ['week' num2str(WEEK)];
  % important determines the unique hashcode
 YEAR = 2017;

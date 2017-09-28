@@ -145,6 +145,7 @@ for i = 1:length(mfilesWithHash)
         disp([NAMEOFTHISCRIPT ': Somethings wrong..'])
         edit(mfilename)
         pause
+
     end
 end
 % no breakpoints in this file

@@ -36,19 +36,22 @@ function removeShitFromDir(dirToRemove)
 % $Revision: 0.0.1 $  $Date: 2017-07-28 $
 % Not removing the actual folder.
 
-try
-    warning off
-    rmpath(genpath(dirToRemove));
-    %close all files, because after copy Matlab does not release a file
-    fclose('all');
-    A = dir( dirToRemove );
-    for k = 3:length(A)
-        fileOrDir = fullfile(A(k).folder,A(k).name);
-        delete(fileOrDir);
-        rmdir(fileOrDir,'s');
-    end
-    warning on
-catch
-end
 
+warning off
+rmpath(genpath(dirToRemove));
+%close all files, because after copy Matlab does not release a file
+fclose('all');
+A = dir( dirToRemove );
+for k = 3:length(A)
+    fileOrDir = fullfile(A(k).folder,A(k).name);
+    try
+        if A(k).isdir
+            rmdir(fileOrDir,'s');
+        else
+            delete(fileOrDir);
+        end
+    catch
+    end 
+end
+warning on
 end %function%
