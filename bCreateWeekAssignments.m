@@ -47,18 +47,17 @@ if ~isempty(correct)
     disp('Script is STOPPED because the WEEK (see: initAll.m) has to be changed');
     return
 end
-
-%% Create a working folder for submitted student assignments
-debugOutput(DEBUGOUTPUT,'Create a working folder for submitted student assignments',1);
-
 pathWkDirName = fullfile(BASEFOLDER, STUDENTASSFOLDER, WEEKNAME);
-%remove folder if it exists
-if exist(STUDENTASSFOLDER) && isequal(WEEK,0)
-    dirToRemove = STUDENTASSFOLDER;
-else
-    dirToRemove = pathWkDirName;
-end
-removeShitFromDir(dirToRemove);
+% %% Create a working folder for submitted student assignments
+% debugOutput(DEBUGOUTPUT,'Create a working folder for submitted student assignments',1);
+% 
+% %remove folder if it exists
+% if exist(STUDENTASSFOLDER) && isequal(WEEK,0)
+%     dirToRemove = STUDENTASSFOLDER;
+% else
+%     dirToRemove = pathWkDirName;
+% end
+% removeShitFromDir(dirToRemove);
 
 %% Empty folder with files for testing
 debugOutput(DEBUGOUTPUT,'Empty folder with files for testing',1);

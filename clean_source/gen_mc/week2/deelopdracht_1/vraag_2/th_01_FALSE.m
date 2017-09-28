@@ -1,0 +1,1 @@
+met het volgende commando maak je een functie aan (output)=naamfunctie[input]

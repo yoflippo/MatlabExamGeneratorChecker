@@ -1,0 +1,1 @@
+de functie strcmpi() hoofdletter gevoelig

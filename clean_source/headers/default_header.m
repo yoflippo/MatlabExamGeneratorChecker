@@ -5,7 +5,7 @@
 %
 % 1 - De volgende door ons aangemaakte zaken mag jij NIET aanpassen!:
 %                           A: bestandsnamen
-%                           B: door ons aangemaakte commentaar
+%                           B: door ons aangemaakt commentaar
 %                           C: folders en folderstructuur
 %                           D: de code in deze codesectie
 %     Pas je toch iets aan dan krijg je GEEN punten voor deze weekopdracht.

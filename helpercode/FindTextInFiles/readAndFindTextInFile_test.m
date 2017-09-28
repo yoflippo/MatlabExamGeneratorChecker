@@ -12,4 +12,4 @@ des = fullfile(pathOfThisFile,'vraag_1','vraag_1_46ff614bffcfdd07653f632390cfd66
 [bool linenumber txt] = readAndFindTextInFile(des,'Voorbeeld antwoord:');
 assert(bool,'1 should give a result')
 assert(linenumber==23,'1 should give a result')
-assert(readAndFindTextInFile(des,'Voorbeeld antwoord :'),'1 should give a result')
+assert(~readAndFindTextInFile(des,'Voorbeeld antwoord :'),'1 should give a result')

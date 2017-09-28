@@ -179,7 +179,8 @@ clear HashCodeCurrStud AbsPathCodeCurrStud
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
 
 relPathWeekFolderUnique = fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME);
-mfiles = readFilesInSubFolder(relPathWeekFolderUnique,'.m');
+mfiles = readFilesInFolder(relPathWeekFolderUnique,'.m');
+
 relevantMFiles = strfind(mfiles,'points.m');
 if isempty(relevantMFiles)
     error('Apparently there are NO points.m files found');
@@ -233,6 +234,6 @@ studentMatrix
 % Save the file with the results
 save([pathStudentResults '.mat'],'studentMatrix')
 
-XXXX
+
 % last but not least: copy the right answer to every student folder
 cd(BASEFOLDER);

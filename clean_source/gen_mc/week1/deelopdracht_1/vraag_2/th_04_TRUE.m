@@ -1,0 +1,1 @@
+In Matlab is er geen operator voor een worteltrek operatie.

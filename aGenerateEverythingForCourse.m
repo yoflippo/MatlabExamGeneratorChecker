@@ -147,7 +147,10 @@ for wk = 1:length(WEEKFOLDERS)
         cd ..
         
         % traverse the week folder
+        estimatedRemainingTime = [];
+        t1 = clock;
         for fl = 1:length(weekAssignments)
+            tic;
             currentFile = weekAssignments(fl).name;
             currFileAbsPath = weekAssignments(fl).folder;
             currFileFull = fullfile(currFileAbsPath,currentFile);
@@ -161,7 +164,7 @@ for wk = 1:length(WEEKFOLDERS)
                 %Check for the presence of files below to give the proper
                 %header in the student specific assignment
                 if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
-                    header = combineTextOfDifferentFiles('default_header.m','header_question.m');    
+                    header = combineTextOfDifferentFiles('default_header.m','header_question.m');
                 elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
                     header = combineTextOfDifferentFiles('default_header.m','header_script.m');
                 elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)
@@ -214,6 +217,9 @@ for wk = 1:length(WEEKFOLDERS)
                 clear headerHash
                 cd ..; cd ..; cd ..;
             end
+            estimatedRemainingTime(fl) = toc;
+            clc
+            [wk etime(clock,t1) mean(estimatedRemainingTime)*length(weekAssignments)]
         end
     catch causeException
         cd(BASEFOLDER)

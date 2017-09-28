@@ -1,4 +1,4 @@
-function [bool] = readAndFindTextInFile(absPathOfFile,SearchString,NotInComment)
+function [bool linenumber linetxt] = readAndFindTextInFile(absPathOfFile,SearchString)
 
 absPathFn = absPathOfFile;
 delimiter = {''};
@@ -8,25 +8,25 @@ dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
     'TextType', 'string',  'ReturnOnError', false);
 fclose(fileID);
 
+bool = false;
+linenumber = [];
+linetxt = [];
 try
     for nLines = 1:length(dataArray{1,1})
-        line = dataArray{1,1}(nLines);
-        blFoundFile = false;
+        txt = dataArray{1,1}(nLines);      
         % Search in the string
-        if ~isempty(line)
-            if findstr(char(line),SearchString)
-              if NotInComment
-                  
-                  XXX MAKE IT SO THAT USER CAN CHECK FOR MATLAB COMMENTS IN FOUND STRING
-                  
-                 findstr(char(line),'%') 
-              end
-            blFoundFile = true;
-            break;
+        if ~isempty(txt)
+            if findstr(char(txt),SearchString)
+                findstr(char(txt),'%')
+                bool = true;
+                linenumber = nLines;
+                linetxt = txt;
+                break;
             end
         end
     end
-    bool = blFoundFile;
+
+
 catch
     error('Something went wrong');
 end

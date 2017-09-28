@@ -1,12 +1,12 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |6876b9c95b4a0e2c00d3fdaf56b76a29|
+%                    |6eab3a15ba6e9a10493757b6f57d6d48|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
 %
 % 1 - De volgende door ons aangemaakte zaken mag jij NIET aanpassen!:
 %                           A: bestandsnamen
-%                           B: door ons aangemaakte commentaar
+%                           B: door ons aangemaakt commentaar
 %                           C: folders en folderstructuur
 %                           D: de code in deze codesectie
 %     Pas je toch iets aan dan krijg je GEEN punten voor deze weekopdracht.
@@ -14,6 +14,7 @@
 % 3 - Elke variabele waar 'NaN' aan wordt toegekend moet JIJ bewerken.
 % 4 - Je mag geen aparte scripts/functies gebruiken ten zij dit expliciet
 %     is aangegeven
+% 5 - In jouw code mag de code 'clear all' niet voorkomen.
 % 
 % Opdrachtbeschrijving:
 % Deze opdracht bestaat uit een multiple choice vraag. Per vraag
@@ -23,15 +24,14 @@ A = 1; B = 2; C = 3; D = 4;
 % Voorbeeld antwoord:
 %                       Antwoord = A;
 % =================== BLIJF VAN VOORGAANDE CODE AF! ======================
-%
 %% Vraag 0
 %
-% Stelling 1:   Het resultaat van een regel code uit een script is na
+% Stelling 1:   In de Current Folder kan een gebruiker code typen en
+%				uitvoeren.                                          
+%
+% Stelling 2:   Het resultaat van een regel code uit een script is na
 %				het uitvoeren van die regel nooit te zien in het     
 %				Command Window                                       
-%
-% Stelling 2:   Om de output van een script te beperken plaatsen we aan het
-%				einde van een regel een ;  (puntkomma)                     
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
