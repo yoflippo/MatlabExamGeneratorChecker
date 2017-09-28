@@ -34,4 +34,8 @@ A = 1; B = 2; C = 3; D = 4;
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
-Antwoord = D;
+Antwoord = NaN; % vul hier het juiste antwoord in A, B, C of D
+ 
+% Jij hebt deze opdracht 0% goed gemaakt.
+% Indien je een score lager dan 100% hebt, bekijk dan het bestand
+% vraag_7_ANTWOORD.m voor de oplossing\uitwerking.

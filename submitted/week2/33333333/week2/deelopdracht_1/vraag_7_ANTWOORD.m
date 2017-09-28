@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |ec4242d26e9cbea5bad3bdfbd666ab59|
+%                    |9a0cf62cdfb876dec65fc5fd877a5aac|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -28,12 +28,10 @@ A = 1; B = 2; C = 3; D = 4;
 %
 % Stelling 1:   wanneer je find(v==10) uitvoerd over de vector v=[ 9 8 17 18 10 13] krijg je als antwoord 10
 %
-% Stelling 2:   de functie strcmp() is hoofdletter gevoelig
+% Stelling 2:   de functie strcmpi() hoofdletter gevoelig
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
-Antwoord = B;
- 
-% Jij hebt deze opdracht 100% goed gemaakt.
+Antwoord = A;

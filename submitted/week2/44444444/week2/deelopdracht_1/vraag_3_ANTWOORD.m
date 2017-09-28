@@ -1,5 +1,5 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |ec4242d26e9cbea5bad3bdfbd666ab59|
+%                    |4debacd907c7ddf28bd82e30188f4a20|
 % Alles wat je nodig hebt om deze opdracht te doen, staat in dit bestand!
 %
 % LEES EN BEGRIJP DE VOLGENDE REGELS:
@@ -24,16 +24,14 @@ A = 1; B = 2; C = 3; D = 4;
 % Voorbeeld antwoord:
 %                       Antwoord = A;
 % =================== BLIJF VAN VOORGAANDE CODE AF! ======================
-%% Vraag 7
+%% Vraag 3
 %
-% Stelling 1:   wanneer je find(v==10) uitvoerd over de vector v=[ 9 8 17 18 10 13] krijg je als antwoord 10
+% Stelling 1:   Je kan binnen een functie een andere functie aanroepen
 %
-% Stelling 2:   de functie strcmp() is hoofdletter gevoelig
+% Stelling 2:   met de help functie kan je precies zien wat de input en output variabelen kunnen zijn in een functie
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
-Antwoord = B;
- 
-% Jij hebt deze opdracht 100% goed gemaakt.
+Antwoord = D;

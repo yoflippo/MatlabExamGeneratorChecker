@@ -35,3 +35,5 @@ A = 1; B = 2; C = 3; D = 4;
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
 Antwoord = B;
+ 
+% Jij hebt deze opdracht 100% goed gemaakt.

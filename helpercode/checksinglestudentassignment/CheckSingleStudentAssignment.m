@@ -87,11 +87,14 @@ for i = 1:length(mfilesWithHash)
     try
         % Get the check file for this assignment
         AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
+        [z0 nmSol z1] = fileparts(AbsPathSOLScript);
+        
         % Save it in a variable used by the solution
         absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
-        % Extra name of checking function and assume it is on the path
+        % Extract name of checking function and assume it is on the path
         [a1 b1 c1] = fileparts(absPathCheckfile);
         addpath(genpath(a1));
+        
         % Get the type of the file: opdracht_x, vraag_x
         AbsPathStudentScript = mfilesWithHash{1,i};
         [a2 b2 c2] = fileparts(AbsPathStudentScript);
@@ -102,7 +105,7 @@ for i = 1:length(mfilesWithHash)
         pathWithoutExt = replace(AbsPathStudentScript,'.m','');
         foundSlashes = strfind(pathWithoutExt,filesep);
         assignment = AbsPathStudentScript(foundSlashes(end-1)+1:length(pathWithoutExt));
-      
+        
         % Get the number of points for this assignment
         pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
         
@@ -118,9 +121,25 @@ for i = 1:length(mfilesWithHash)
         warning on
         % Calcule partialpoints
         sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
-
+        
+        %% Write the result to the student file
+        percStudent = ResStudentScript * 100;
+        
         %% Some actions to report to the student
-            XXX first need to correct writeline function
+        if ResStudentScript < 1
+            % Copy the solution file
+            answerFile = [b2 '_ANTWOORD.m'];
+            copyfile(AbsPathSOLScript,fullfile(a2,answerFile));
+            txtResultStud{1} = ' ';
+            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+            txtResultStud{3} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
+            txtResultStud{4} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
+            WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+        else
+            txtResultStud{1} = ' ';
+            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+            WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+        end
     catch something
         disp(something)
         disp([NAMEOFTHISCRIPT ': Somethings wrong..'])
