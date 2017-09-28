@@ -118,6 +118,9 @@ for i = 1:length(mfilesWithHash)
         warning on
         % Calcule partialpoints
         sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
+
+        %% Some actions to report to the student
+            XXX first need to correct writeline function
     catch something
         disp(something)
         disp([NAMEOFTHISCRIPT ': Somethings wrong..'])

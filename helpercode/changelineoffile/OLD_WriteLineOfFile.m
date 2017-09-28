@@ -49,23 +49,29 @@ elseif nargin > 3
 end
 
 % read the file
-dataArray = readTxtFile(absPathFile);
+delimiter = {''};
+formatSpec = '%s%[^\n\r]';
+fileID = fopen(absPathFile,'r');
+dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
+    'TextType', 'string',  'ReturnOnError', false);
 
-if length(dataArray) < lineNumber
+if length(dataArray{1,1}) < lineNumber
     % Fill dataArray
-    for nEl = length(dataArray)+1:lineNumber-1
-        dataArray{nEl} = '';
+    for nEl = length(dataArray{1,1})+1:lineNumber-1
+        dataArray{1,1}(nEl) = '';
     end
 end
 % write txt to line
-dataArray{lineNumber} = lineTxt;
+dataArray{1,1}(lineNumber) = lineTxt;
+% close the file
+fclose(fileID);
 % delete the current file
 delete(absPathFile)
 % write to file
 try
     fileID = fopen(absPathFile,'w');
-    for i = 1:length(dataArray)
-        fprintf(fileID,'%s\r\n',dataArray{i});
+    for i = 1:length(dataArray{1,1})
+        fprintf(fileID,'%s\r\n',dataArray{1,1}{i});
     end
     % close the file
     fclose('all');

@@ -32,4 +32,4 @@ WriteLineOfFile(absPathDataCopy,lnmbr,txt);
 line = ReadLineOfFile(absPathDataCopy,lnmbr);
 assert(isequal(line,string(txt)));
 % delete(absPathDataCopy);
-
+'correct'
