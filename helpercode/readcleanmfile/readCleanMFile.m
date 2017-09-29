@@ -63,27 +63,50 @@ fclose(fileID);
 
 for nLns = 1:length(dataArray{1,1})
     line = dataArray{1,1}(nLns);
-    dataArray{1,1}(nLns) = removeReturnAndNewline(line);
+    dataArray{1,1}(nLns) = cleanCode(line);
 end
 
+dataArray{1,1} = removeEmpty(dataArray{1,1});
 outVar = dataArray{1,1};
-
 end
 
-% Remove ' \n ' and ' \r ' characters
-function r = removeReturnAndNewline(tline)
+%% Remove empty lines
+function oLines = removeEmpty(tline)
+cntLn = 1;
+for nL = 1:length(tline)
+    if ~isempty(char(tline(nL)))
+        txt(cntLn,1) = string(tline(nL));
+        cntLn = cntLn + 1;
+    end
+end
+oLines = txt;
+end
 
+%% Clean code
+function oCleanCode = cleanCode(tline)
+
+% Remove comments
 if ~isempty(tline) && contains(tline,'%')
     tline = extractBefore(string(tline),'%');
 elseif isempty(tline)
     tline = "";
-elseif ~contains(tline,'clc') && ~contains(tline,'clear') && ~contains(tline,'close')
-    tline = strrep(tline,newline,'');
-    tline = strrep(tline,sprintf('\tline'),'');
-    tline = strrep(tline,sprintf(' '),'');
-    tline = strrep(tline,sprintf('\t'),'');
 end
 
-r = tline;
+% remove all spaces, returns, newlines
+tline = erase(tline,newline);
+tline = erase(tline,sprintf('\r'));
+tline = erase(tline,sprintf(' '));
+tline = erase(tline,sprintf('\t'));
 
+% Put some spaces back
+keywords = {'clc;' 'clear' 'close' 'while' 'for' 'if' 'elseif' 'all' ...
+    'hidden;' 'cd'};
+for nkw = 1:length(keywords)
+    if contains(tline,keywords(nkw))
+        tline = insertAfter(tline,keywords(nkw),' ');
+    end
 end
+
+oCleanCode = tline;
+
+end %function

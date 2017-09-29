@@ -27,6 +27,9 @@ for i = 1:length(LISTWITHNEEDEDFOLDERS)
     try
         cd(LISTWITHNEEDEDFOLDERS{i});
         cd ..
+        if bullshit == 3
+           lala = txt; 
+        end
     catch  %  TEST
         error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
             'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
