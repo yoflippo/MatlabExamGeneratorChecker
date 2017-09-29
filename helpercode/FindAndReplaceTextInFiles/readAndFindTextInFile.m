@@ -17,7 +17,7 @@ try
         % Search in the string
         if ~isempty(txt)
             if findstr(char(txt),SearchString)
-                findstr(char(txt),'%')
+                findstr(char(txt),'%');
                 bool = true;
                 linenumber = nLines;
                 linetxt = txt;

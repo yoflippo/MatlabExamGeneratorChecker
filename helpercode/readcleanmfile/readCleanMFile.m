@@ -66,13 +66,13 @@ for nLns = 1:length(dataArray{1,1})
     dataArray{1,1}(nLns) = cleanCode(line);
 end
 
-dataArray{1,1} = removeEmpty(dataArray{1,1});
-outVar = dataArray{1,1};
+outVar = removeEmpty(dataArray{1,1});
 end
 
 %% Remove empty lines
 function oLines = removeEmpty(tline)
 cntLn = 1;
+txt = "";
 for nL = 1:length(tline)
     if ~isempty(char(tline(nL)))
         txt(cntLn,1) = string(tline(nL));
@@ -80,6 +80,7 @@ for nL = 1:length(tline)
     end
 end
 oLines = txt;
+
 end
 
 %% Clean code
