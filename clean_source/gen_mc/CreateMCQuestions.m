@@ -1,5 +1,6 @@
-%clear all; close all; clc;
+clear variables functions; close all; clc;
 
+fclose('all');
 %% Get path of output folder and empty it
 pathOfThisFile = erase(mfilename('fullpath'),mfilename);
 outputDir = fullfile(pathOfThisFile,'generated_questions');
@@ -53,9 +54,10 @@ for nWk = 1:length(weekDir)
         currentFilePath =  thesesPathAnswer{nDirs,1}{1};
         % generate final destination path of current question, by inserting the
         % output folder
+        XXXXXXXX SOMETHINGS GOING ONE HERE 
+        
         absPathDestination = GetPathOneLevelUp(currentFilePath);
-        absPathDestination = replace(absPathDestination,weekDir{nWk}, ...
-            fullfile('generated_questions',weekDir{nWk}));
+        absPathDestination = replace(absPathDestination,weekDir{nWk},fullfile('generated_questions',weekDir{nWk}));
         
         % copy the points.m file (containing the number of points of mc-q) and
         % copy the TypeOfAssignment... file, so the CopyTheMultipleChoice..m
@@ -73,14 +75,7 @@ for nWk = 1:length(weekDir)
                 randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
             end
         end
-        %     % another way to generate indices BUT OLD
-        %     randomFileIndexes = randperm(numberOfThesesFiles);
-        %     % test for no sequentially (e.g. no '3 4 5 6' but '4 6 8 3'), the
-        %     % sequential questions could be associated (TRUE / FALSE versions).
-        %     while contains(num2str(diff(randomFileIndexes)),'1')
-        %         randomFileIndexes = randperm(numberOfThesesFiles);
-        %     end
-        
+
         %% Combine to make one question
         % read header file line and give it the right question number
         headerTxt = ReadLineOfFile(fullfile(pathOfThisFile,'mc_header.m'));
@@ -172,9 +167,10 @@ for nWk = 1:length(weekDir)
             fnCopiedTemplate = replace(fnCopiedTemplate,'xxx',nameQuestionCHECK);
             WriteLineOfFile(desAbsCheckFile,1,fnCopiedTemplate);
             % clear variable to prevent polution of files
-            clear finalTxt
+            clear finalTxt 
         end
     end
+    clear thesesPathAnswer
 end
     %% Test the generated MC-files
     CountNumberOfFALSE_TRUE;

@@ -1,5 +1,9 @@
+clear all;
 InitAll
-wks = {'week1' 'week2'};
+
+
+global gWeekNames;
+gWeekNames = {'week1' 'week2'}; 
 
 %% Generate MC files
 disp('Generate MC files')
@@ -11,11 +15,12 @@ run('CreateMCQuestions.m')
 disp('Created MC-Questions')
 cd generated_questions
 apGenMcQ = pwd;
+toc
 
 %% Get deelopdracht_x folderS
 ass =[];
-for wk = 1:length(wks)
-    cd(wks{wk})
+for wk = 1:length(gWeekNames)
+    cd(gWeekNames{wk})
     ass{wk} = getFolders(pwd);
     cd ..
 end
@@ -26,8 +31,8 @@ toc
 %% Copy MC files
 disp('Copy MC files')
 tic
-for nWk = 1:length(wks)
-    currWkName = wks{nWk};
+for nWk = 1:length(gWeekNames)
+    currWkName = gWeekNames{nWk};
     try
         apGenMcQTmp = fullfile(apGenMcQ,currWkName);
         apFinMcQ = fullfile(pwd,'assignments',currWkName);
@@ -65,7 +70,7 @@ toc
 disp('Copy certain testfiles to directory submitted');
 tic
 % make path of testing files
-apTestFiles = fullfile(pwd,'fortesting','week1','correct_0');
+apTestFiles = fullfile(pwd,'fortesting','week1','correct_80');
 apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
 copyfiles(apTestFiles,apFinDes);
 toc
