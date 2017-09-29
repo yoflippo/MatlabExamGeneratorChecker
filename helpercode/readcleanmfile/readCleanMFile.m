@@ -101,7 +101,7 @@ tline = erase(tline,sprintf('\t'));
 
 % Put some spaces back
 keywords = {'clc;' 'clear' 'close' 'while' 'for' 'if' 'elseif' 'all' ...
-    'hidden;' 'cd'};
+    'hidden;' 'cd' '['};
 for nkw = 1:length(keywords)
     if contains(tline,keywords(nkw))
         tline = insertAfter(tline,keywords(nkw),' ');
