@@ -1,9 +1,9 @@
 clear all;
 InitAll
 
-
 global gWeekNames;
-gWeekNames = {'week1' 'week2'}; 
+global BASEFOLDER;
+gWeekNames = {'week1' 'week2'};
 
 %% Generate MC files
 disp('Generate MC files')
@@ -18,6 +18,7 @@ apGenMcQ = pwd;
 toc
 
 %% Get deelopdracht_x folderS
+global gWeekNames;
 ass =[];
 for wk = 1:length(gWeekNames)
     cd(gWeekNames{wk})
@@ -29,6 +30,7 @@ cd ..
 toc
 
 %% Copy MC files
+global gWeekNames;
 disp('Copy MC files')
 tic
 for nWk = 1:length(gWeekNames)
@@ -45,10 +47,12 @@ for nWk = 1:length(gWeekNames)
         disp('errMess');
     end
 end
+global BASEFOLDER;
 cd(BASEFOLDER)
 toc
 
 %% execute generated all assignments script
+global gWeekNames;
 disp('execute generate all script');
 tic
 try
@@ -58,6 +62,7 @@ end
 toc
 
 %% execute create week assignment scripts
+global gWeekNames;
 disp('execute create week assignment scripts');
 tic
 try
@@ -67,15 +72,17 @@ end
 toc
 
 %% Copy certain testfiles to directory submitted --- ADJUST FOR DIFFERENT TESTS!!!
+global gWeekNames;
 disp('Copy certain testfiles to directory submitted');
 tic
 % make path of testing files
-apTestFiles = fullfile(pwd,'fortesting','week1','correct_80');
+apTestFiles = fullfile(pwd,'fortesting','week1','correct_100');
 apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
 copyfiles(apTestFiles,apFinDes);
 toc
 
 %% execute check assignments
+global gWeekNames;
 disp('Execute check assignments');
 tic
 try
@@ -83,4 +90,20 @@ try
 catch
 end
 toc
+pause
+
+%% execute other check assignments
+apTestFiles = fullfile(pwd,'fortesting','week1','correct_0');
+apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
+copyfiles(apTestFiles,apFinDes);
+toc
+
+%% execute check assignments
+global gWeekNames;
+disp('Execute check assignments');
+tic
+try
+    run('cCheckStudentSubmissions.m')
+catch
+end
 toc

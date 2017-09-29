@@ -41,23 +41,16 @@
 InitAll
 debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
 
-correct = input(['Is this the correct week?: ' num2str(WEEK) ...
-    ' (not giving an answer is YES)']);
-if ~isempty(correct)
-    disp('Script is STOPPED because the WEEK (see: initAll.m) has to be changed');
-    return
-end
-pathWkDirName = fullfile(BASEFOLDER, STUDENTASSFOLDER, WEEKNAME);
-% %% Create a working folder for submitted student assignments
-% debugOutput(DEBUGOUTPUT,'Create a working folder for submitted student assignments',1);
-% 
-% %remove folder if it exists
-% if exist(STUDENTASSFOLDER) && isequal(WEEK,0)
-%     dirToRemove = STUDENTASSFOLDER;
-% else
-%     dirToRemove = pathWkDirName;
-% end
-% removeShitFromDir(dirToRemove);
+% % correct = input(['Is this the correct week?: ' num2str(WEEK) ...
+% %     ' (not giving an answer is YES)']);
+% % if ~isempty(correct)
+% %     disp('Script is STOPPED because the WEEK (see: initAll.m) has to be changed');
+% %     return
+% % end
+apWkDirName = fullfile(BASEFOLDER, STUDENTASSFOLDER, WEEKNAME);
+apWkDirNameSol = [apWkDirName '_SOL'];
+removeShitFromDir(apWkDirName);
+removeShitFromDir(apWkDirNameSol);
 
 %% Empty folder with files for testing
 debugOutput(DEBUGOUTPUT,'Empty folder with files for testing',1);
@@ -75,12 +68,12 @@ debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',
 % Load the studentnumbers, they are randomly presented
 load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
 % Create weekfolders
-if ~exist(pathWkDirName)
-    mkdir(pathWkDirName)
+if ~exist(apWkDirName)
+    mkdir(apWkDirName)
 end
 % Create a STUDENTASSFOLDER inside every weekfolder
 for i = 1:length(studentNumbers)
-    ptmp = fullfile(pathWkDirName,num2str(studentNumbers(i)));
+    ptmp = fullfile(apWkDirName,num2str(studentNumbers(i)));
     if exist(ptmp) == 0
         mkdir(ptmp);
     end
@@ -127,11 +120,11 @@ for nStud = 1:length(studentNumbers)
     % % %     studentDirSol = fullfile('SOL',studentDir);
     studentDirSol = studentDir;
     trackStudentAssignment{nStud,1} = studentDir;
-    currStudentDir = fullfile(pathWkDirName,studentDir);
-    % % %     currStudentDirSol = fullfile(pathWkDirName,studentDirSol);
+    currStudentDir = fullfile(apWkDirName,studentDir);
+    % % %     currStudentDirSol = fullfile(apWkDirName,studentDirSol);
     weekNameSol = [WEEKNAME SOLPOSTFIX];
-    pathWkDirNameSol = [pathWkDirName SOLPOSTFIX];
-    currStudentDirSol = fullfile(pathWkDirNameSol,studentDirSol);
+    apWkDirNameSol = [apWkDirName SOLPOSTFIX];
+    currStudentDirSol = fullfile(apWkDirNameSol,studentDirSol);
     if ~exist(currStudentDirSol)
         mkdir(currStudentDirSol)
     end
@@ -152,9 +145,9 @@ for nStud = 1:length(studentNumbers)
         finFileLocSOL = [currStudentDirSol currFileClean EXT];
         % Copy file from unique assignment dir to student folder with
         % subdirs
-        pathCurrAss = [pathWkDirName filesep studentDir ...
+        pathCurrAss = [apWkDirName filesep studentDir ...
             GetPathOneLevelUp(deepestAssignFolders{nAss})];
-        pathCurrAssSOL = [pathWkDirNameSol filesep studentDir ...
+        pathCurrAssSOL = [apWkDirNameSol filesep studentDir ...
             GetPathOneLevelUp(deepestAssignFolders{nAss})];
         mkdir(pathCurrAss);
         mkdir(pathCurrAssSOL);
@@ -200,7 +193,7 @@ for nStud = 1:length(studentNumbers)
     %% Important VARIABLE for creating test folders! Make zero if test files
     % arent necessary. Please be aware that a high number of testfiles will
     % cause needless overhead.
-    nTestFiles = 5;
+    nTestFiles = 10;
     if nTestFiles > length(studentNumbers)
         nTestFiles = length(studentNumbers);
     end
@@ -227,10 +220,10 @@ debugOutput(DEBUGOUTPUT,'Generate some test files for the Checking script',1);
 
 % Get the paths names of zip files
 currPath = pwd;
-cd(pathWkDirName);
+cd(apWkDirName);
 noAnsZF = dir(['**' filesep '*.zip']);
 cd(currPath);
-cd(pathWkDirNameSol);
+cd(apWkDirNameSol);
 solZF = dir(['**' filesep '*.zip']);
 cd(currPath);
 
@@ -277,7 +270,7 @@ if askuser(' Zip all files?',false)
 end
 
 if askuser(' Empty the student_assignments folder?',false)
-    removeShitFromDir(pathWkDirName)
+    removeShitFromDir(apWkDirName)
 end
 
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);

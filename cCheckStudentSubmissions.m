@@ -33,10 +33,10 @@ dbstop if error
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
 
-if ~askuser(['Is this the correct week?: ' num2str(WEEK)],true)
-    disp('Script is STOPPED because the WEEK constant (see: initAll.m) has to be changed');
-    return
-end
+% % if ~askuser(['Is this the correct week?: ' num2str(WEEK)],true)
+% %     disp('Script is STOPPED because the WEEK constant (see: initAll.m) has to be changed');
+% %     return
+% % end
 subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
 
 %% Check if needed folder exists, if not stop execution of script

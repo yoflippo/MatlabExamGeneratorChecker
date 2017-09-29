@@ -1,4 +1,4 @@
-function output = GetDeepestFolders(location)
+function oGDF = GetDeepestFolders(location)
 %GETDEEPESTFOLDERS This function needs this line to be present before calling 
 %this function: "global output;".
 %
@@ -26,28 +26,35 @@ function output = GetDeepestFolders(location)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               varargin:   <text>
-%               varargin:   <text>
+%               location:   abspath of directory
 %
 % RETURN:
-%               outvar:     <text>
-%               outvar:     <text>
+%               output:     The deepest folder of the directory. All leaves
+%                           of the directory tree.
 %
 % EXAMPLES:
-%
+%               blCheck = GetDeepestFolders('level1');
 %
 
 % $Revision: 0.0.0 $  $Date: 2017-07-26 $
 % Creation
-global output
+global oGDF;
+global base;
+if isempty(base) || base == 0
+    oGDF = [];
+    base = 1;
+else
+    base = base + 1;
+end
+
 currPath = pwd;
 cd(location);
 
 % find the folders
 dirResult = dir;
 %find directories
-% global output
-% output = []; %create variable
+% global oGDF
+% oGDF = []; %create variable
 %make variable accesable in every function call
 
 blHasDir = false;
@@ -59,8 +66,10 @@ for i = 3:length(dirResult) %skip the first two . .. directories
     end
 end
 if ~blHasDir
-    output{length(output)+1} = pwd;
+    oGDF{length(oGDF)+1} = pwd;
 end
 % Go back to upper folder
 cd(currPath);
+base = base -1;
+
 end

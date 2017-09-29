@@ -20,13 +20,24 @@
 % For more info: https://nl.mathworks.com/help/matlab/ref/assert.html
 % For more info: https://nl.mathworks.com/help/matlab/ref/runtests.html
 
-% Test unit case 1
+%% TEST
 clear all; close all; clc;
-global output;
-blCheck = GetDeepestFolders('testdata');
-% Make relative path
-for i = 1:length(blCheck)
-extractAfter(blCheck{i},'testdata')
+currPath = pwd;
+try
+    dirs = GetDeepestFolders('level1');
+catch
+    cd(currPath);
 end
 
-assert(~isempty(blCheck));
+assert(~isempty(dirs));
+assert(length(dirs) == 4);
+
+%% TEST
+try
+    dirs = GetDeepestFolders('level2');
+catch
+    cd(currPath);
+end
+
+assert(~isempty(dirs));
+assert(length(dirs) == 5);

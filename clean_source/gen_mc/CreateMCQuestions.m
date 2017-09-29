@@ -2,59 +2,66 @@ clear variables functions; close all; clc;
 
 fclose('all');
 %% Get path of output folder and empty it
-pathOfThisFile = erase(mfilename('fullpath'),mfilename);
-outputDir = fullfile(pathOfThisFile,'generated_questions');
+apOfThisFile = erase(mfilename('fullpath'),mfilename);
+outputDir = fullfile(apOfThisFile,'generated_questions');
 removeShitFromDir(outputDir)
-mkdir(outputDir)
+if ~exist(outputDir)
+    mkdir(outputDir)
+end
 
-%% Get deepest folders with theses
+%% Iterate over each available week
 weekDir = {'week1' 'week2'};
 
 for nWk = 1:length(weekDir)
-    folders = GetDeepestFolders(fullfile(pathOfThisFile,weekDir{nWk}));
+    folders = GetDeepestFolders(fullfile(apOfThisFile,weekDir{nWk}));
     
     %% Get absolute paths of theses files with there respective answers
+    theses = {zeros(1,length(folders))};
+    TPA = theses;
     for nDirs = 1:length(folders)
         cd(folders{nDirs});
         % get the theses files
         theses{nDirs} = dir('**\*th_*.m');
-        % make a cell array of theses path with solution
+        % make a cell array of theses path with their solution
         % loop through theses
-        for nThss = 1:length(theses{nDirs})
-            tmpName = theses{1,nDirs}(nThss).name;
-            tmpPath = theses{1,nDirs}(nThss).folder;
+        for nT = 1:length(theses{nDirs})
+            tmpName = theses{1,nDirs}(nT).name;
+            tmpPath = theses{1,nDirs}(nT).folder;
             if contains(tmpName,'TRUE')
                 tmpAnswer = true;
             else
                 tmpAnswer = false;
             end
-            thesesPathAnswer{nDirs,nThss} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
         end
-        cd(pathOfThisFile);
+        cd(apOfThisFile);
     end
-    absPathTemplateCheck = fullfile(pathOfThisFile,'TemplateCheckMC.m');
+    apTemplateCheck = fullfile(apOfThisFile,'TemplateCheckMC.m');
     
-    %% Copy folder of weekx and empty the folder
-    copyfiles(fullfile(pathOfThisFile,weekDir{nWk}),fullfile(outputDir,weekDir{nWk}))
-    emptyDirRecursiveMFiles(fullfile(outputDir,weekDir{nWk}))
+    %% Copy folder of weekXXX and empty the folder
+    apDesMC = fullfile(outputDir,weekDir{nWk});
+    apSrcThesis = fullfile(apOfThisFile,weekDir{nWk});
+    copyfiles(apSrcThesis,apDesMC);
+    % Remove the thesis files
+    emptyDirRecursiveMFiles(apDesMC);
     
     %% Generate answers (could be made randomnly)
-    answerA = ReadLineOfFile(fullfile(pathOfThisFile,'mc_answer_0.m'));
+    answerA = ReadLineOfFile(fullfile(apOfThisFile,'mc_answer_0.m'));
     answerA = ['% A : ' char(answerA)];
-    answerB = ReadLineOfFile(fullfile(pathOfThisFile,'mc_answer_1.m'));
+    answerB = ReadLineOfFile(fullfile(apOfThisFile,'mc_answer_1.m'));
     answerB = ['% B : ' char(answerB)];
-    answerC = ReadLineOfFile(fullfile(pathOfThisFile,'mc_answer_2.m'));
+    answerC = ReadLineOfFile(fullfile(apOfThisFile,'mc_answer_2.m'));
     answerC = ['% C : ' char(answerC)];
-    answerD = ReadLineOfFile(fullfile(pathOfThisFile,'mc_answer_3.m'));
+    answerD = ReadLineOfFile(fullfile(apOfThisFile,'mc_answer_3.m'));
     answerD = ['% D : ' char(answerD)];
     
     %% Browse the subfolder of weekx
+    
     for nDirs = 1:length(folders)
-        numberOfThesesFiles = thesesPathAnswer{nDirs,1}{3};
-        currentFilePath =  thesesPathAnswer{nDirs,1}{1};
+        numberOfThesesFiles = TPA{nDirs,1}{3};
+        currentFilePath =  TPA{nDirs,1}{1};
         % generate final destination path of current question, by inserting the
         % output folder
-        XXXXXXXX SOMETHINGS GOING ONE HERE 
         
         absPathDestination = GetPathOneLevelUp(currentFilePath);
         absPathDestination = replace(absPathDestination,weekDir{nWk},fullfile('generated_questions',weekDir{nWk}));
@@ -63,9 +70,9 @@ for nWk = 1:length(weekDir)
         % copy the TypeOfAssignment... file, so the CopyTheMultipleChoice..m
         % file works)
         fn = 'points.m';
-        copyfile(fullfile(pathOfThisFile,fn),fullfile(absPathDestination,fn));
+        copyfile(fullfile(apOfThisFile,fn),fullfile(absPathDestination,fn));
         fn = 'TypeOfAssignment_MultipleChoice.m';
-        copyfile(fullfile(pathOfThisFile,fn),fullfile(absPathDestination,fn));
+        copyfile(fullfile(apOfThisFile,fn),fullfile(absPathDestination,fn));
         
         % Generate non-adjacent indices
         cnt = 1;
@@ -75,10 +82,10 @@ for nWk = 1:length(weekDir)
                 randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
             end
         end
-
+        
         %% Combine to make one question
         % read header file line and give it the right question number
-        headerTxt = ReadLineOfFile(fullfile(pathOfThisFile,'mc_header.m'));
+        headerTxt = ReadLineOfFile(fullfile(apOfThisFile,'mc_header.m'));
         questionNumber = GetPathOneLevelUp(currentFilePath);
         questionNumber = questionNumber(end);
         headerTxt = replace(headerTxt,'xxx',questionNumber);
@@ -94,8 +101,8 @@ for nWk = 1:length(weekDir)
             % theses1
             currentIndex = randomFileIndexes(1);
             randomFileIndexes = randomFileIndexes(2:end);
-            ansTheses1 = thesesPathAnswer{nDirs,currentIndex}{2};
-            theses1 = char(getTextOfFile(thesesPathAnswer{nDirs,currentIndex}{1}));
+            ansTheses1 = TPA{nDirs,currentIndex}{2};
+            theses1 = char(getTextOfFile(TPA{nDirs,currentIndex}{1}));
             preambleTheses1 = '% Stelling 1:   ';
             txtTheses1{1} = [preambleTheses1 theses1(1,:)];
             finalTxt{cnt,1} = txtTheses1{1}; cnt = cnt + 1;
@@ -114,8 +121,8 @@ for nWk = 1:length(weekDir)
             % theses2
             currentIndex = randomFileIndexes(1);
             randomFileIndexes = randomFileIndexes(2:end);
-            ansTheses2 = thesesPathAnswer{nDirs,currentIndex}{2};
-            theses2 = char(getTextOfFile(thesesPathAnswer{nDirs,currentIndex}{1}));
+            ansTheses2 = TPA{nDirs,currentIndex}{2};
+            theses2 = char(getTextOfFile(TPA{nDirs,currentIndex}{1}));
             preambleTheses2 = '% Stelling 2:   ';
             txtTheses2{1} = [preambleTheses2 theses2(1,:)];
             finalTxt{cnt,1} =  txtTheses2{1}; cnt = cnt + 1;
@@ -141,7 +148,7 @@ for nWk = 1:length(weekDir)
             currentAnswer = defaultAnswersTxt((ansTheses1 * 2) + ansTheses2 + 1);
             solAnswerLine = ['Antwoord = ' currentAnswer ';'];
             % get answer line
-            emptyAnswerLine = ReadLineOfFile(fullfile(pathOfThisFile,'mc_answer_line.m'));
+            emptyAnswerLine = ReadLineOfFile(fullfile(apOfThisFile,'mc_answer_line.m'));
             % combine all the lines in a cell
             finalTxt{cnt,1} =  solAnswerLine;
             
@@ -158,20 +165,20 @@ for nWk = 1:length(weekDir)
             % write empty file
             finalTxt{cnt,1} = emptyAnswerLine;
             makeMFileFromCells(nameQuestion,finalTxt);
-            cd(pathOfThisFile)
+            cd(apOfThisFile)
             % copy the template CHECK file
             desAbsCheckFile = fullfile(absPathDestination,[nameQuestionCHECK '.m']);
-            copyfile(absPathTemplateCheck,desAbsCheckFile);
+            copyfile(apTemplateCheck,desAbsCheckFile);
             % rename the template function name ('xxx') with the current name
             fnCopiedTemplate = ReadLineOfFile(desAbsCheckFile);
             fnCopiedTemplate = replace(fnCopiedTemplate,'xxx',nameQuestionCHECK);
             WriteLineOfFile(desAbsCheckFile,1,fnCopiedTemplate);
             % clear variable to prevent polution of files
-            clear finalTxt 
+            clear finalTxt
         end
     end
-    clear thesesPathAnswer
+    clear TPA
 end
-    %% Test the generated MC-files
-    CountNumberOfFALSE_TRUE;
-    datetime
+%% Test the generated MC-files
+CountNumberOfFALSE_TRUE;
+datetime

@@ -221,7 +221,7 @@ for wk = 1:length(WEEKFOLDERS)
             estimatedRemainingTime(fl) = toc;
             clc
             estPerc = round((etime(clock,t1) / mean(estimatedRemainingTime)*length(weekAssignments)/10000));
-            [['Generating files week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']
+            [['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']
         end
     catch causeException
         cd(BASEFOLDER)

@@ -8,9 +8,9 @@ for i = 3:15
             randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
         end
     end
-    output(c,1:2) = [i length(randomFileIndexes)/2]
+    output(c,1:2) = [i length(randomFileIndexes)/2];
     c=c+1;   
     randomFileIndexes;
-    clear randomFileIndexes   
+    clear randomFileIndexes;   
 end
 output
