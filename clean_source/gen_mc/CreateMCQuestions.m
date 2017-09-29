@@ -1,4 +1,4 @@
-clear all; close all; clc;
+%clear all; close all; clc;
 
 %% Get path of output folder and empty it
 pathOfThisFile = erase(mfilename('fullpath'),mfilename);

@@ -144,7 +144,7 @@ for i = 1:length(mfilesWithHash)
         disp(something)
         disp([NAMEOFTHISCRIPT ': Somethings wrong..'])
         edit(mfilename)
-        pause
+        keyboard
 
     end
 end
