@@ -61,6 +61,10 @@ catch
 end
 toc
 
+%% Check all the files
+disp('Check all the files');
+assert(CheckSolCheckDirFunc(fullfile(BASEFOLDER,'assignments')));
+
 %% execute create week assignment scripts
 global gWeekNames;
 disp('execute create week assignment scripts');

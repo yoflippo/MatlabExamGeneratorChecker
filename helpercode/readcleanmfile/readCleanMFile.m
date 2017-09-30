@@ -95,13 +95,16 @@ end
 
 % remove all spaces, returns, newlines
 tline = erase(tline,newline);
+tline = erase(tline,sprintf('clear all;'));
 tline = erase(tline,sprintf('\r'));
 tline = erase(tline,sprintf(' '));
 tline = erase(tline,sprintf('\t'));
 
+
 % Put some spaces back
-keywords = {'clc;' 'clear' 'close' 'while' 'for' 'if' 'elseif' 'all' ...
-    'hidden;' 'cd' '['};
+keywords = {'clc;' 'close' 'cd' '[' '='};
+keywords = [keywords'
+    iskeyword()];
 for nkw = 1:length(keywords)
     if contains(tline,keywords(nkw))
         tline = insertAfter(tline,keywords(nkw),' ');
