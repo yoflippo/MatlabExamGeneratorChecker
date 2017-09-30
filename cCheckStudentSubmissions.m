@@ -1,3 +1,4 @@
+function averageGrade = cCheckStudentSubmissions()
 %CHECKSTUDENTSUBMISSIONS
 %
 % ------------------------------------------------------------------------
@@ -224,16 +225,19 @@ rmpath(genpath(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME)));
 
 strTrackStudent = cellstr(trackStudentAssignment);
 for sn = 1:length(strTrackStudent(:,1))
+    tic
     studentFolder = trackStudentAssignment{sn,1}
     points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
         dicNameAssignmentAndPoints,answerFilesInDir);
     grade = ((points/PointsToBeEarned)*9)+1;
     studentMatrix(sn,2) = round(grade,1);
+    toc
 end
 studentMatrix
 % Save the file with the results
 save([pathStudentResults '.mat'],'studentMatrix')
 
-
+averageGrade = mean(studentMatrix(:,2));
 % last but not least: copy the right answer to every student folder
 cd(BASEFOLDER);
+end

@@ -45,22 +45,22 @@
 InitAll
 debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
 
-%% Zip all files in case a deletion goes wrong
-debugOutput(DEBUGOUTPUT,'Zip all files in case a deletion goes wrong',1);
-if input('Do you want to Backup everything? Yes (1) No (nothing): ')
-    % Get unique string
-    d = char(datetime('now'));
-    d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
-    warning off;
-    if input('Do you want to clean the Backup folder? Yes (1) No (nothing): ')
-        removeShitFromDir(BACKUPFOLDER);
-    end
-    mkdir(BACKUPFOLDER);
-    addpath(genpath(BACKUPFOLDER));
-    zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
-    rmpath(genpath(BACKUPFOLDER));
-    warning on;
-end
+% % %% Zip all files in case a deletion goes wrong
+% % debugOutput(DEBUGOUTPUT,'Zip all files in case a deletion goes wrong',1);
+% % if input('Do you want to Backup everything? Yes (1) No (nothing): ')
+% %     % Get unique string
+% %     d = char(datetime('now'));
+% %     d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
+% %     warning off;
+% %     if input('Do you want to clean the Backup folder? Yes (1) No (nothing): ')
+% %         removeShitFromDir(BACKUPFOLDER);
+% %     end
+% %     mkdir(BACKUPFOLDER);
+% %     addpath(genpath(BACKUPFOLDER));
+% %     zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
+% %     rmpath(genpath(BACKUPFOLDER));
+% %     warning on;
+% % end
 
 %% Copy the folder called 'clean_source\assignments'.
 debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' ...

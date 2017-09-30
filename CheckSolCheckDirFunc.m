@@ -1,7 +1,15 @@
 function blAllOkay = CheckSolCheckDirFunc(directory)
 clc;
 cd(directory);
-checkFiles = dir('**/*_CHECK*.m');
+
+checkFiles = dir('**/*_SOL*.m');
+checkFilestmp = dir('**/*_CHECK*.m');
+if ~isequal(length(checkFiles),length(checkFilestmp))
+   disp(['number of SOLUTION files: ' num2str(length(checkFiles))]);
+   disp(['number of CHECK files: ' num2str(length(checkFilestmp))]);
+   error('CheckSolCheckDirFunc: number of _SOL and _CHECK files do not match!!');
+end
+
 blAllOkay = true;
 nFiles = length(checkFiles);
 nFilesT = num2str(nFiles);

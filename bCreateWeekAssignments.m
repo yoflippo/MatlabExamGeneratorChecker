@@ -260,17 +260,17 @@ debugOutput(DEBUGOUTPUT,'Generate test folders with data to simulate students wi
 save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]) ...
     ,'trackStudentAssignment');
 
-%% Zip the folder with zipped-assignments per student and delete that folder
-debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);
-
-if askuser(' Zip all files?',false)
-    cd(STUDENTASSFOLDER)
-    zip([NAMEZIPPEDWEEK num2str(YEAR) '_' WEEKNAME '.zip'],WEEKNAME)
-    cd(BASEFOLDER)
-end
-
-if askuser(' Empty the student_assignments folder?',false)
-    removeShitFromDir(apWkDirName)
-end
+% % %% Zip the folder with zipped-assignments per student and delete that folder
+% % debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);
+% % 
+% % if askuser(' Zip all files?',false)
+% %     cd(STUDENTASSFOLDER)
+% %     zip([NAMEZIPPEDWEEK num2str(YEAR) '_' WEEKNAME '.zip'],WEEKNAME)
+% %     cd(BASEFOLDER)
+% % end
+% % 
+% % if askuser(' Empty the student_assignments folder?',false)
+% %     removeShitFromDir(apWkDirName)
+% % end
 
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);

@@ -15,7 +15,7 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-clc; close all; close all hidden;  clear variables;
+clc; close all; close all hidden;
 fclose('all');
 addpath(genpath('helpercode'));
 DEBUGOUTPUT = 1;
