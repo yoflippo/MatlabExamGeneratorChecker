@@ -38,7 +38,7 @@ for nWk = 1:length(weekDir)
     end
     apTemplateCheck = fullfile(apOfThisFile,'TemplateCheckMC.m');
     
-    %% Copy folder of weekXXX and empty the folder
+    %% Copy folder of weekXXX and empty the folders to make a skeleton directory
     apDesMC = fullfile(outputDir,weekDir{nWk});
     apSrcThesis = fullfile(apOfThisFile,weekDir{nWk});
     copyfiles(apSrcThesis,apDesMC);
@@ -55,8 +55,7 @@ for nWk = 1:length(weekDir)
     answerD = ReadLineOfFile(fullfile(apOfThisFile,'mc_answer_3.m'));
     answerD = ['% D : ' char(answerD)];
     
-    %% Browse the subfolder of weekx
-    
+    %% Browse the subfolder of weekXXX  
     for nDirs = 1:length(folders)
         numberOfThesesFiles = TPA{nDirs,1}{3};
         currentFilePath =  TPA{nDirs,1}{1};
@@ -74,7 +73,10 @@ for nWk = 1:length(weekDir)
         fn = 'TypeOfAssignment_MultipleChoice.m';
         copyfile(fullfile(apOfThisFile,fn),fullfile(absPathDestination,fn));
         
-        % Generate non-adjacent indices
+        % Generate non-adjacent indices, adjacent indices have a high
+        % probability of containing questions with the same theme. Creating
+        % MC questions out of theses with the same theme is not what we
+        % want.
         cnt = 1;
         for ind = 1:numberOfThesesFiles-2
             for ind2 = ind+2:numberOfThesesFiles
@@ -102,7 +104,7 @@ for nWk = 1:length(weekDir)
             currentIndex = randomFileIndexes(1);
             randomFileIndexes = randomFileIndexes(2:end);
             ansTheses1 = TPA{nDirs,currentIndex}{2};
-            theses1 = char(getTextOfFile(TPA{nDirs,currentIndex}{1}));
+            theses1 = char(readTxtFile(TPA{nDirs,currentIndex}{1}));
             preambleTheses1 = '% Stelling 1:   ';
             txtTheses1{1} = [preambleTheses1 theses1(1,:)];
             finalTxt{cnt,1} = txtTheses1{1}; cnt = cnt + 1;
@@ -122,7 +124,7 @@ for nWk = 1:length(weekDir)
             currentIndex = randomFileIndexes(1);
             randomFileIndexes = randomFileIndexes(2:end);
             ansTheses2 = TPA{nDirs,currentIndex}{2};
-            theses2 = char(getTextOfFile(TPA{nDirs,currentIndex}{1}));
+            theses2 = char(readTxtFile(TPA{nDirs,currentIndex}{1}));
             preambleTheses2 = '% Stelling 2:   ';
             txtTheses2{1} = [preambleTheses2 theses2(1,:)];
             finalTxt{cnt,1} =  txtTheses2{1}; cnt = cnt + 1;

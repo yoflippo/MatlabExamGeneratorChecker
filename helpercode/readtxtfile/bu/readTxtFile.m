@@ -1,4 +1,4 @@
-function [oTxt oTxtBelowSep] = readTxtFile(varargin)
+function [outVar] = readTxtFile(varargin)
 %READTXTFILE A simple function that reads every line of a text-based file.
 %
 % ------------------------------------------------------------------------
@@ -44,27 +44,22 @@ function [oTxt oTxtBelowSep] = readTxtFile(varargin)
 %% Parse varargin
 
 namefunction = 'readTxtFile';
+maxargin = 1;
 minargin = 1;
-maxargin = minargin+1;
 if nargin < minargin
     error([ namefunction ':Needs at minimum' num2str(minargin) ' argument(s) ']);
-elseif nargin > maxargin
+end
+if nargin > maxargin
     error([ namefunction ':Needs max ' num2str(minargin) ' arguments ']);
 end
 
-%% Proces needed input
-if nargin >= minargin
-    apFile = varargin{1};
-end
-
-blSeparatorPresent = false;
-if nargin == maxargin
-    separator = varargin{2};
-    txtBelow = '';
-    blSeparatorPresent = true;
-end
-
-
+% % fExtension = [];
+% % AbsPath = [];
+% % AskUserForPath = [];
+% % SearchString = [];
+% % blAskUser = false;
+% % blEdit = false;
+% % blBreakpoint = false;
 % % for narg = 1:nargin
 % %     sc = upper(varargin{narg});
 % %     switch sc
@@ -88,60 +83,29 @@ end
 % %     error([ namefunction ' you need to specify an extension (see help)']);
 % % end
 
-blSeparatorFound = false;
-try
-    fileID = fopen(apFile,'r');
-    c = 1;
-    warning off
-    tline{c,1} = fgetl(fileID);
-%     tline{c,1} = removeReturnAndNewline(tline{c,1});
-    while ischar(tline{c,1})
-        c = c + 1;
-        tmp = fgetl(fileID);
-        % Do not use EOF
-        if ~ischar(tmp)
-            break;
-        end
-        
-        tline{c,1} = tmp;
-% %         tline{c,1} = removeReturnAndNewline(tline{c,1});
-        
-        %% Test for separator
-        if (blSeparatorPresent && contains(tmp,separator)) || blSeparatorFound
-            if contains(tmp,separator)
-                k = 1;
-            end
-            txtBelow{k,1} = tline{c,1};
-            blSeparatorFound = true;
-            k = k + 1;
-        else
-            lastline = c;
-        end
+
+fileID = fopen(varargin{1},'r');
+c = 1;
+warning off
+tline{c,1} = fgets(fileID);
+tline{c,1} = removeReturnAndNewline(tline{c,1});
+while ischar(tline{c,1})
+    c = c + 1;
+    tmp = fgets(fileID);
+    % Do not use EOF
+    if ~ischar(tmp)
+        break;
     end
-    fclose(fileID);
-    warning on
-    if tline{1} == -1
-        oTxt = '';
-    else
-        oTxt = tline;
-    end
-    
-    if blSeparatorFound
-        oTxtBelowSep = char(txtBelow);
-        % Remove line with separator
-        oTxtBelowSep = oTxtBelowSep(2:end,:);
-    else
-        oTxtBelowSep = '';
-    end
-catch
-    fclose(fileID);
+    tline{c,1} = tmp;
+    tline{c,1} = removeReturnAndNewline(tline{c,1});
+end
+fclose(fileID);
+warning on
+outVar = tline;
 end
 
-end %function readTxtFile
-
-% % % Remove ' \n ' and ' \r ' characters
-% % function r = removeReturnAndNewline(tline)
-% % r = strrep(tline,sprintf('\n'),'');
-% % r = strrep(r,sprintf('\r'),'');
-% % end
-
+% Remove ' \n ' and ' \r ' characters
+function r = removeReturnAndNewline(tline)
+r = strrep(tline,sprintf('\n'),'');
+r = strrep(r,sprintf('\r'),'');
+end
