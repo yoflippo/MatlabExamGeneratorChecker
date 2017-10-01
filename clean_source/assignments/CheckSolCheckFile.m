@@ -1,7 +1,7 @@
 clear all;
 
 %% To prevent manual actions
-matFile = 'Manually.mat'; 
+matFile = 'file.mat'; 
 if ~exist(matFile)
     [fn, pathname, filterindex] = uigetfile('*.m', 'Pick a file');
     tmpLocation = fullfile(pathname,fn);

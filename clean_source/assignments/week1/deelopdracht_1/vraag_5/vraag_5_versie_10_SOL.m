@@ -5,8 +5,9 @@
 %
 % Stelling 2:   Bij het uitvoeren van de volgende code is het resultaat
 %				in de Command Window: ' ans =                          
-%				'a'                                                    
-%				'                                                      
+%				                             'a'                       
+%				                      '                                
+%				                                                       
 %				------------code--------------                         
 %				naam = 'Mark Schrauwen';                               
 %				naam(3)                                                

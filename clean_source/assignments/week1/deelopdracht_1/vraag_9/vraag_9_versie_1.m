@@ -2,6 +2,7 @@
 %
 % Stelling 1:   In de onderstaande code worden twee vectoren element-by-element
 %				met elkaar vermenigvuldigd:                                    
+%				                                                               
 %				------------code--------------                                 
 %				vector = 0:10;                                                 
 %				vector2 = 1:11;                                                
@@ -10,6 +11,7 @@
 %
 % Stelling 2:   In de volgende code wordt er bij elk element van de vector
 %				de waarde 99 opgeteld:                                    
+%				                                                          
 %				------------code--------------                            
 %				vector = 0:10;                                            
 %				vector = vector + (100 - 1);                              

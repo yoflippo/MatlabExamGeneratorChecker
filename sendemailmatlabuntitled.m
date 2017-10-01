@@ -29,10 +29,21 @@ cd(thisWeek);
 
 %% Message for student
 chr = 'Beste student,';
+chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht'];
 chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];
 chr = [chr newline 'Je moet deze opdracht voor volgende week woensdag'];
 chr = [chr newline '23:59u inleveren via Blackboard.'];
+chr = [chr newline];
+chr = [chr newline 'Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een'];
+chr = [chr newline 'zip-bestand van al je werk. Dat specifieke zip-bestand MOET je'];
+chr = [chr newline 'uploaden via Blackboard. Indien je toch zelfstandig een'];
+chr = [chr newline 'zip-bestand maakt, wordt je opdracht NIET nagekeken!'];
+chr = [chr newline];
+chr = [chr newline 'Wij proberen jouw opdracht na het inlevermoment, binnen'];
+chr = [chr newline '5 werkdagen na te kijken. Je ontvangt je nagekeken werk'];
+chr = [chr newline 'op dit e-mailadres.'];
+chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];
 
@@ -43,10 +54,12 @@ for nZ = 1:length(zips)
    %% construct emailadres
    sEma = [sNum '@student.hhs.nl']
    sAtt = fullfile(pwd,zips(nZ).name) 
-   sendmail('yoflippo@gmail.com',...
-         'Biostatica Matlab eindopdracht week 1',chr,...
+   sendmail(sEma,...
+         'FYI Biostatica Matlab eindopdracht week 1',chr,...
          {sAtt});
 end
+
+
 cd(BASEFOLDER)
 % sendmail('yoflippo@gmail.com',...
 %          'Test Biostatica Matlab','Test Bericht',...

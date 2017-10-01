@@ -4,10 +4,13 @@
 %
 % Stelling 2:   In het onderstaande code voorbeeld is de correcte opbouw van een
 %				functie te zien:                                                
+%				                                                                
 %				======= Code =======                                            
+%				                                                                
 %				function [ output ] = naamFunctie( input                        
-%				%Hier komt code                                                 
+%				    %Hier komt code                                             
 %				end                                                             
+%				                                                                
 %				======= Code =======                                            
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR

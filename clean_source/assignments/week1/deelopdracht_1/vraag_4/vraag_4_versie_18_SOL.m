@@ -1,6 +1,7 @@
 %% Vraag 4
 %
 % Stelling 1:   De volgende code wordt in Matlab correct uitgevoerd:
+%				                                                    
 %				------------code--------------                      
 %				voornaam = 'Mark'                                   
 %				achternaam = 'Schrauwen'                            
@@ -9,6 +10,7 @@
 %
 % Stelling 2:   Bij het uitvoeren van de onderstaande code is de variabele
 %				'naam' een string.                                        
+%				                                                          
 %				------------code--------------                            
 %				naam = 'Mark Schrauwen';                                  
 %				naam(3)                                                   

@@ -2,6 +2,7 @@
 %
 % Stelling 1:   In de volgende code wordt alleen de waarde van het eerste 
 %				element drie keer zo groot.                               
+%				                                                          
 %				------------code--------------                            
 %				vector = 22:44;                                           
 %				vector * 3;                                               
@@ -9,6 +10,7 @@
 %
 % Stelling 2:   In de volgende code wordt er bij elk element van de vector
 %				de waarde 99 opgeteld:                                    
+%				                                                          
 %				------------code--------------                            
 %				vector = 0:10;                                            
 %				vector = vector + 99;                                     

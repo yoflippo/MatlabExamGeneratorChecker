@@ -4,6 +4,7 @@
 %				quotes of dubbele quotes. Voorbeeld: "tekst" of 'tekst'.
 %
 % Stelling 2:   De volgende code wordt in Matlab correct uitgevoerd:
+%				                                                    
 %				------------code--------------                      
 %				voornaam = 'Mark'                                   
 %				achternaam = 'Hark'                                 

@@ -3,6 +3,7 @@
 % Stelling 1:   Zie de onderstaande code. Je moet op regel 2 een     
 %				breakpoint plaatsen om direct te zien welke waarde in
 %				variabele deze opgeslagen.                           
+%				                                                     
 %				======= Code =======                                 
 %				1- % Vermenigvuldigen van a en b                     
 %				2- a = 3;                                            

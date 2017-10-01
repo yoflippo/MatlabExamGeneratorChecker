@@ -14,3 +14,17 @@ for ndf = 1:length(sf)
     delete(checkFile);
     delete(questFile);
 end
+
+sf = dir(['**' filesep '*points.m']);
+for ndf = 1:length(sf)
+    solFile = fullfile(sf(ndf).folder,sf(ndf).name);
+    delete(solFile);
+end
+
+sf = dir(['**' filesep '*TypeOfAssignment_Multiplechoice.m']);
+for ndf = 1:length(sf)
+    solFile = fullfile(sf(ndf).folder,sf(ndf).name);
+    delete(solFile);
+end
+
+cd(currPath)

@@ -73,6 +73,17 @@ catch
 end
 toc
 
+%% Check manually copied submitted files
+disp('Check manually copied submitted files');
+tic
+try
+    if ~isequal(cCheckStudentSubmissions(),1)
+        error('The average grade is not equal to 1');
+    end
+catch
+end
+toc
+
 %% Copy certain testfiles to directory submitted --- ADJUST FOR DIFFERENT TESTS!!!
 disp('Copy certain testfiles to directory submitted');
 tic

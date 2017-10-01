@@ -2,7 +2,7 @@
 %
 % Stelling 1:   Een functie kan niet meer dan een input hebben
 %
-% Stelling 2:   de input van een functie kan alleen een vector zijn
+% Stelling 2:    de input van een functie kan alleen een vector zijn
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

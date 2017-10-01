@@ -5,6 +5,7 @@
 %
 % Stelling 2:   Het code voorbeeld dat hieronder staat is een voorbeeld                   
 %				van netjes werken:                                                        
+%				                                                                          
 %				======= Code =======                                                      
 %				% Find studentnumbers                                                     
 %				load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))                     

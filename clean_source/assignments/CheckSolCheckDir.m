@@ -2,7 +2,7 @@ clear all; clc;
 currPath = pwd;
 
 %% To prevent manual actions
-matFile = 'Automatic.mat'; 
+matFile = 'dir.mat'; 
 if ~exist(matFile)
     pathname = uigetdir('Pick a DIR');
     save(matFile,'pathname');
@@ -11,7 +11,7 @@ else
 end
 
 cd(pathname);
-checkFiles = dir('**/*_CHECK*.m');
+checkFiles = dir('**/*_SOL*.m');
 
 for i = 1:length(checkFiles);
     %% Get info about current file

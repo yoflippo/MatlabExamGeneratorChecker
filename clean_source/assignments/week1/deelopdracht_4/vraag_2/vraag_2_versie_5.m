@@ -5,11 +5,13 @@
 %				2 - Fouten veroorzaakt door MAtlab    
 %
 % Stelling 2:   De onderstaande code heeft een programmeerfout:
+%				                                               
 %				======= Code =======                           
 %				varA = 1;                                      
 %				varB = 2;                                      
 %				% Optellen van de variabelen                   
 %				som = VarB + VarA                              
+%				                                               
 %				======= Code =======                           
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
