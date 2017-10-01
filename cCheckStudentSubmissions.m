@@ -61,7 +61,8 @@ debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. 
 load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))
 % Remove directories from folder, they contain unzipped files and they are
 % unusable because you are running this script
-addpath(genpath(fullfile(pwd,subWkFolder)))
+apSubmitted = fullfile(pwd,subWkFolder);
+addpath(genpath(apSubmitted))
 removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
 % Get files in the folder for analysis
 files = dir(subWkFolder);
@@ -73,7 +74,9 @@ for i = 3:length(files)
     tmpTxt = erase(files(i).name,'.zip');
     tmpTxt = erase(tmpTxt,[WEEKNAME '_']);
     studentsThatSubmitted{i-2} = tmpTxt;
-    unzip(fullfile(subWkFolder,files(i).name));
+    apCurrZip = fullfile(apSubmitted,files(i).name);
+    unzip(apCurrZip);
+    delete(apCurrZip);
 end
 cd(BASEFOLDER);
 
@@ -101,7 +104,7 @@ hashCodes = keys(dicWithHashes);
 % files.
 oldPath = pwd;
 cd(subWkFolder);
-mfiles = dir('**/*.m');
+mfiles = dir(['**' filesep '*.m']);
 cd(oldPath)
 % If a certain file is manipulated put it in a folder GEEN_PUNTEN
 for nSAss = 1:length(mfiles)
@@ -231,6 +234,22 @@ for sn = 1:length(strTrackStudent(:,1))
         dicNameAssignmentAndPoints,answerFilesInDir);
     grade = ((points/PointsToBeEarned)*9)+1;
     studentMatrix(sn,2) = round(grade,1);
+    % Give the student a grade, first make some text
+    t{1} = ['%Jouw cijfer is: ' num2str(grade) '.'];
+    t{2} = '%Kijk in elk m-file voor jouw score';
+    t{3} = '%Kijk eventueel in het ANTWOORD bestand om te zien wat er';
+    t{4} = '%fout is gegaan.';
+    makeMFileFromCells(fullfile(apSubmitted,studentFolder,'JouwCijfer'),t);
+    % Copy files to a new folder
+    nmNewFolder = ['Checked_' studentFolder];
+    copyfile(studentFolder,nmNewFolder);
+    % Zip checked folder
+    zipFilePathName = [nmNewFolder '.zip'];
+    zip(zipFilePathName,nmNewFolder)
+    % Remove Folder
+    dr = fullfile(apSubmitted,nmNewFolder);
+    removeShitFromDir(dr);
+    rmdir(dr);
     toc
 end
 studentMatrix

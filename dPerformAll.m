@@ -89,9 +89,10 @@ disp('Copy certain testfiles to directory submitted');
 tic
 apTestFiles = fullfile(pwd,'fortesting','week1','correct_0');
 apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
+removeShitFromDir(apFinDes);
 copyfiles(apTestFiles,apFinDes);
 disp('Execute check assignments');
-try
+    try
     if ~isequal(cCheckStudentSubmissions(),1)
         error('The average grade is not equal to 1');
     end
@@ -102,6 +103,7 @@ toc
 %% execute other check assignments
 apTestFiles = fullfile(pwd,'fortesting','week1','correct_100');
 apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
+removeShitFromDir(apFinDes);
 copyfiles(apTestFiles,apFinDes);
 disp('Execute check assignments');
 tic
@@ -112,4 +114,4 @@ try
 catch
 end
 toc
-pause
+cd(BASEFOLDER)
