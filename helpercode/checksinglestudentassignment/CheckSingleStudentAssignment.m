@@ -112,6 +112,11 @@ for i = 1:length(mfilesWithHash)
         pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
         
         %Start checking
+        clear txtResultStud;
+        txtResultStud{1} = ' ';
+        txtResultStud{2} = '%% Opmerkingen tijdens nakijken ';
+        txtResultStud{3} = ' ';
+        WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
         eval(['ResStudentScript = ' nmCHE '(' q AbsPathStudentScript q ');']);
         
         % IMPORTANT: remove the path to prevent the use of the wrong
@@ -129,16 +134,14 @@ for i = 1:length(mfilesWithHash)
         %% Some actions to report to the student
         if ResStudentScript < 1
             % Copy the solution file
-            answerFile = [nmSTUScript '_ANTWOORD.m'];
+            answerFile = [nmSTUScript '_UITWERKING.m'];
             copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));
-            txtResultStud{1} = ' ';
-            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
-            txtResultStud{3} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
-            txtResultStud{4} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
+            txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+            txtResultStud{2} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
+            txtResultStud{3} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
             WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
         else
-            txtResultStud{1} = ' ';
-            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+            txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
             WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
         end
     catch something
@@ -146,6 +149,13 @@ for i = 1:length(mfilesWithHash)
         disp([NAMEOFTHISCRIPT ': Somethings wrong..'])
         disp(['OPENING: ' AbsPathStudentScript]);
         edit(AbsPathStudentScript)
+        edit(nmCHE)
+        % Message with error, so student can learn from mistake
+        txtResultStud{1} = ' ';
+        txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.'];
+        txtResultStud{3} = ['% Tijdens het uitvoeren trad er een fout op, met deze melding:'];
+        txtResultStud{4} = ['% ' something.message];      
+        WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
         keyboard
     end
 end

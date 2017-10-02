@@ -94,26 +94,24 @@ end
 
 % remove all spaces, returns, newlines
 if ~contains(tline,["[","]","(",")","cd",'=='])
-    tline = erase(tline,sprintf('clear all;'));
-    tline = erase(tline,sprintf('clear all'));
     tline = erase(tline,newline);
     tline = erase(tline,sprintf('\r'));
     tline = erase(tline,sprintf(' '));
     tline = erase(tline,sprintf('\t'));
+    tline = erase(tline,sprintf('clear all;'));
 end
 
 % Put some spaces back
 if strlength(tline)>1
-    keywords = {'close' 'clear' '...'};
+    keywords = {'close' 'clear'};
     keywords = [keywords'
         iskeyword()];
     for nkw = 1:length(keywords)
         if contains(tline,keywords(nkw))
             tline = insertAfter(tline,keywords(nkw),' ');
+        elseif ~contains(tline,';')
+            tline = string([tline ';']);
         end
-    end
-    if ~contains(tline,';') && ~contains(tline,keywords)
-        tline = strcat(tline,';');
     end
 end
 oCleanCode = tline;

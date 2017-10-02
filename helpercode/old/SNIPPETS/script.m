@@ -1,4 +1,5 @@
-
+%<Name>
+%
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
@@ -15,31 +16,16 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
+% 
+% DESCRIPTION:
+%
+% 
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+% 
+% EXAMPLES:
+%
+%
 
-clc;
-close all;
-close all hidden
-clear variables; 
-clear all
-addpath(genpath('helpercode'))
-DEBUGOUTPUT = 1
-% make zero to delete base folder
-Constants
-
-%% Check for the existence of needed supporting scripts/function files
-debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
-for i = 1:length(LISTWITHNEEDEDFOLDERS)
-    try
-        cd(LISTWITHNEEDEDFOLDERS{i});
-        cd ..
-        if bullshit == 3
-           lala = txt
-        end
-    catch  %  TEST
-        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
-            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found'])
-    end
-end
-% The basefolder should only be assigned if previous code has executed
-% correctly
-BASEFOLDER = pwd; %TEST
+% $Revisi0n: 0.0.0 $  $Date: 20xx-xx-xx $
+%<Description>

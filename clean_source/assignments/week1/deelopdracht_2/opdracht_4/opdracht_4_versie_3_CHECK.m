@@ -48,15 +48,36 @@ if ~isempty(char(tmp))
     end
     
     %% Perform test
-    if isequal(firstnameANS,firstname)
-        res = res + (1/numtests);
+    try
+        if isequal(firstnameANS,firstname)
+            res = res + (1/numtests);
+        end
+    catch ErrMess
+        if ~contains(apStudentSol,'versie')
+            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+        end
     end
-    if isequal(lastnameANS,lastname)
-        res = res + (1/numtests);
+    
+    try
+        if isequal(lastnameANS,lastname)
+            res = res + (1/numtests);
+        end
+    catch ErrMess
+        if ~contains(apStudentSol,'versie')
+            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+        end
     end
-    if  isequal(fullnameANS,replace(fullname,' ',''))
-        res = res + (1/numtests);
+    
+    try
+        if  isequal(fullnameANS,replace(fullname,' ',''))
+            res = res + (1/numtests);
+        end
+    catch ErrMess
+        if ~contains(apStudentSol,'versie')
+            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+        end
     end
+    
     %% Check for literal answer
     if ~readAndFindTextInFile(absPathTmp,fullnameANS)
         res = res + (1/numtests);

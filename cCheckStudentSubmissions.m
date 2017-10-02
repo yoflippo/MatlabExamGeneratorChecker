@@ -117,7 +117,9 @@ save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicN
 
 % Delete a possible existing studentMatrix
 pathStudentResults = fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK) '.mat']);
-delete(pathStudentResults)
+if exist(pathStudentResults)
+    delete(pathStudentResults)
+end
 studentMatrix = [];
 
 %% Check the answer of the students and track their points if correct

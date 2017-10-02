@@ -100,8 +100,8 @@ eval(['studentFolderOutput = dir(''studentnumber*' filesep '*.txt'');']);
 
 stdnmbFile = fullfile(studentFolderOutput(1).folder,studentFolderOutput(1).name);
 studentNumbers = load(stdnmbFile);
-% Reshuffle the list with student numbers (removing patterns)
-studentNumbers = studentNumbers(randperm(length(studentNumbers)));
+% % % % % % Reshuffle the list with student numbers (removing patterns)
+% % % % % studentNumbers = studentNumbers(randperm(length(studentNumbers)));
 % Convert the reshuffled list of student number to e-mailadresses
 studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
 % Write the list of e-mailadresses to a txt file

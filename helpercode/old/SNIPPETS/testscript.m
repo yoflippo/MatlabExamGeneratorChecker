@@ -1,8 +1,8 @@
-function res = opdracht_5_versie_1_CHECK(apStudentSol)
+function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 % default
 res = 0;
-numtests = 1;
+numtests = XXX;
 
 
 %% Get cleaned temporary file
@@ -24,10 +24,12 @@ if ~isempty(char(tmp))
     end
     
     % Copy the correct answers
-    var1ANS = tijdas;
+    var1ANS = var1;
+    var2ANS = var2;
+    var3ANS = var3;
     
     % Remove solution variables from Workspace.
-    clear tijdas
+    clear var1XXX var2XXX var3XXX
     
     %% Run the original student scripts, if not working no points!
     try
@@ -38,7 +40,7 @@ if ~isempty(char(tmp))
     
     %% Perform tests for certain variables
     try
-        if isequal(var1ANS,tijdas)
+        if isequal(var1ANS,XXX)
             res = res + (1/numtests);
         end
     catch ErrMess
@@ -48,7 +50,7 @@ if ~isempty(char(tmp))
     end
     
     %     try
-    %         if isequal(var2ANS,var)
+    %         if isequal(var2ANS,XXX)
     %             res = res + (1/numtests);
     %         end
     %     catch ErrMess

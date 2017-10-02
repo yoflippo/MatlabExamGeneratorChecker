@@ -5,7 +5,7 @@ testData = {'testData_ReadCleanMFile1.m' 'testData_ReadCleanMFile2.m' };
 %% Expect a file called 'data.txt' in close proximity, get abs. path
 pathThisFile = fileparts(mfilename('fullpath'));
 absPathData = fullfile(pathThisFile,testData{1});
-fullNameCopTestdata = 'copy.m';
+fullNameCopTestdata = [endFile '.m'];
 absPathDataCopy = fullfile(pathThisFile,fullNameCopTestdata);
 
 

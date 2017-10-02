@@ -2,3 +2,5 @@ assignments/week1/
 submitted/
 student_assignments/
 fortesting/
+clean_source/gen_mc/generated_questions/
+*.exe

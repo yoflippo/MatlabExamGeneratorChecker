@@ -73,7 +73,7 @@ catch
 end
 toc
 
-%% Check manually copied submitted files
+%% Check manually copied submitted files (*&^%$#@#$%^&*&^%$#@#$%^&^%$#$%^&
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
 end
