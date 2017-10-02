@@ -58,7 +58,10 @@ for nWk = 1:length(weekDir)
     answerD = ['% D : ' char(answerD)];
     
     %% Browse the subfolder of weekXXX
+ 
     for nDirs = 1:length(folders)
+        clc;
+        disp(['CreateMCQuestions: ' num2str(nDirs) ' of ' num2str(length(folders)) ' folders processed.']);
         numberOfThesesFiles = TPA{nDirs,1}{3};
         currentFilePath =  TPA{nDirs,1}{1};
         % generate final destination path of current question, by inserting the
@@ -91,7 +94,7 @@ for nWk = 1:length(weekDir)
         % read header file line and give it the right question number
         headerTxt = ReadLineOfFile(fullfile(apOfThisFile,'mc_header.m'));
         questionNumber = GetPathOneLevelUp(currentFilePath);
-        questionNumber = questionNumber(end);
+        questionNumber = extractAfter(questionNumber(end-3:end),'_');
         headerTxt = replace(headerTxt,'xxx',questionNumber);
         
         %% Generate Questions
@@ -194,14 +197,14 @@ if ~isequal(lcf,lcft)
     disp(['number of SOLUTION files: ' num2str(length(checkFiles))]);
     disp(['number of CHECK files: ' num2str(length(checkFilestmp))]);
     if lcft > lcf
-       longest =  lcft;
+        longest =  lcft;
     else
         longest = lcf;
     end
     for nF = 1:longest
         if ~isequal(checkFiles(nF).Folder,checkFilestmp(nF).Folder)
-           checkFiles(nF).Folder
-           checkFilestmp(nF).Folder
+            checkFiles(nF).Folder
+            checkFilestmp(nF).Folder
         end
     end
     error('CheckSolCheckDirFunc: number of _SOL and _CHECK files do not match!!');

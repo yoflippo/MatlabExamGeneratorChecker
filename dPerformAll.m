@@ -74,6 +74,9 @@ end
 toc
 
 %% Check manually copied submitted files
+if ~isequal(pwd,BASEFOLDER)
+    cd(BASEFOLDER)
+end
 disp('Check manually copied submitted files');
 tic
 try

@@ -54,6 +54,8 @@ function sumPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPa
 % set a breakpoint in case of an error, so the program could be continued
 dbstop('if','error')
 NAMEOFTHISCRIPT = 'CHECKSINGLESTUDENTASSIGNMENT';
+% quote variable
+q = char(39);
 currPath = pwd;
 
 currentFolder = fullfile(pwd,studentdir);
@@ -87,18 +89,18 @@ for i = 1:length(mfilesWithHash)
     try
         % Get the check file for this assignment
         AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
-        [z0 nmSol z1] = fileparts(AbsPathSOLScript);
+        [apSOL nmSOL eSOL] = fileparts(AbsPathSOLScript);
         
         % Save it in a variable used by the solution
         absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
         % Extract name of checking function and assume it is on the path
-        [a1 b1 c1] = fileparts(absPathCheckfile);
-        addpath(genpath(a1));
+        [apCHE nmCHE eCHE] = fileparts(absPathCheckfile);
+        addpath(genpath(apCHE));
         
         % Get the type of the file: opdracht_x, vraag_x
         AbsPathStudentScript = mfilesWithHash{1,i};
-        [a2 b2 c2] = fileparts(AbsPathStudentScript);
-        addpath(genpath(a2));
+        [apSTU nmSTUScript eSTU] = fileparts(AbsPathStudentScript);
+        addpath(genpath(apSTU));
         
         % Get the right string from the abspath of the studentscript to
         % find the number of points using dicNameAssignmentAndPoints
@@ -110,14 +112,13 @@ for i = 1:length(mfilesWithHash)
         pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
         
         %Start checking
-        q = char(39);
-        eval(['ResStudentScript = ' b1 '(' q AbsPathStudentScript q ');']);
+        eval(['ResStudentScript = ' nmCHE '(' q AbsPathStudentScript q ');']);
         
         % IMPORTANT: remove the path to prevent the use of the wrong
         % check-files.
         warning off
-        rmpath(genpath(a1));
-        rmpath(genpath(a2));
+        rmpath(genpath(apCHE));
+        rmpath(genpath(apSTU));
         warning on
         % Calcule partialpoints
         sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
@@ -128,8 +129,8 @@ for i = 1:length(mfilesWithHash)
         %% Some actions to report to the student
         if ResStudentScript < 1
             % Copy the solution file
-            answerFile = [b2 '_ANTWOORD.m'];
-            copyfile(AbsPathSOLScript,fullfile(a2,answerFile));
+            answerFile = [nmSTUScript '_ANTWOORD.m'];
+            copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));
             txtResultStud{1} = ' ';
             txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
             txtResultStud{3} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
@@ -143,9 +144,9 @@ for i = 1:length(mfilesWithHash)
     catch something
         disp(something)
         disp([NAMEOFTHISCRIPT ': Somethings wrong..'])
-        edit(mfilename)
+        disp(['OPENING: ' AbsPathStudentScript]);
+        edit(AbsPathStudentScript)
         keyboard
-
     end
 end
 % no breakpoints in this file

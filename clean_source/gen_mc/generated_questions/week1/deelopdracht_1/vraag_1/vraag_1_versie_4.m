@@ -3,8 +3,8 @@
 % Stelling 1:   In de Workspace staan de bestanden van de huidige folder (de
 %				folder waaruit Matlab werkt)                                
 %
-% Stelling 2:   De naam van een script mag niet beginnen met een 
-%				willekeurig symbool                              
+% Stelling 2:   De naam van een script mag beginnen met een willekeurig
+%				symbool                                                
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

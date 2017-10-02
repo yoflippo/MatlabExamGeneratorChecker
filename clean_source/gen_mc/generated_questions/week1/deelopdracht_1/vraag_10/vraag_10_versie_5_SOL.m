@@ -1,4 +1,4 @@
-%% Vraag 0
+%% Vraag 10
 %
 % Stelling 1:   In de Command Prompt kan een gebruiker code typen en
 %				uitvoeren.                                          

@@ -1,6 +1,6 @@
 De onderstaande code maakt een numerieke vector aan (een 
-vector bestaande uit getallen) met een lengte van 10:
+vector bestaande uit getallen) met een lengte van 12:
 
 ------------code--------------
-vec = 1:10;
+vec = 3:14;
 ------------code--------------

@@ -5,10 +5,10 @@
 % Trek van de vector 'getallen' de waarde 1 af en stop het resultaat
 % van die handeling in de output variabele min1.
 %
-% Deze functie moet jezelf aanroepen m.b.v. een extra script.
-% Dat script moet jezelf maken en mag je  in dezelfde folder zetten als dit 
-% bestand. Dat script wordt niet nagekeken of gebruikt door ons.
+% De functie in dit bestand moet jezelf aanroepen m.b.v. een extra script
+% en dat script moet jezelf maken en mag je in dezelfde folder zetten
+% als dit bestand. Dat script wordt niet nagekeken of gebruikt door ons.
 
-function [plus1 min1] = opdracht1(getallen)
+function [plus1 min1] = opdracht_1(getallen)
 
 end

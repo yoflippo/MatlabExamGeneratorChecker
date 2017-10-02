@@ -1,0 +1,1 @@
+De rechteroperand in de volgende regel code: 2 ^ 8 is 8. 

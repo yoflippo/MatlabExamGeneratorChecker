@@ -1,7 +1,7 @@
 %% Vraag 3
 %
-% Stelling 1:   De script editor wordt alleen zichtbaar als een script is
-%				geopend.                                                 
+% Stelling 1:   Variabelen in Matlab mogen alleen beginnen met 
+%				alfanumerieke symbolen                         
 %
 % Stelling 2:   De naam van een variabele in Matlab moet zo kort mogelijk 
 %				zijn                                                      

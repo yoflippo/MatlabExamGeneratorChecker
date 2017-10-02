@@ -40,13 +40,13 @@ res = 0;
 try
     % run the empty file on the target CHECK function
     eval(['res = ' checkFunction '(pathEmptyFile);'])
-    if round(res,1) ~= 0
+    if round(res,1) ~= 0.0
         res
         error('The Check function should return a result of zero');
     end
     % run the SOLUTION file on the target CHECK function
     eval(['res = ' checkFunction '(pathSolutionFile);'])
-    if round(res,1) ~= 1
+    if round(res,1) ~= 1.0
         res
         error('The Check function should return a result of one');
     end

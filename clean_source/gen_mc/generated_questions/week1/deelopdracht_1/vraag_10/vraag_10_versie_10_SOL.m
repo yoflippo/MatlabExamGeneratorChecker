@@ -1,4 +1,4 @@
-%% Vraag 0
+%% Vraag 10
 %
 % Stelling 1:   Het resultaat van een regel code uit een script is na
 %				het uitvoeren van die regel nooit te zien in het     

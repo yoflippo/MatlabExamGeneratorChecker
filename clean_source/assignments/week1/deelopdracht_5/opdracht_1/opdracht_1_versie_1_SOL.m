@@ -7,6 +7,6 @@
 % Dat script mag je in dezelfde folder zetten als dit bestand.
 % Dat script wordt niet nagekeken of gebruikt door ons.
 
-function result = gemiddelde(getallen)
+function result = opdracht_1(getallen)
 result = sum(getallen)/length(getallen);
 end

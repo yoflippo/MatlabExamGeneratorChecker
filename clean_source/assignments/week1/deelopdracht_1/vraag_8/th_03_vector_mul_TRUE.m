@@ -1,0 +1,1 @@
+Je kunt in Matlab ook vectoren met elkaar vermenigvuldigen.

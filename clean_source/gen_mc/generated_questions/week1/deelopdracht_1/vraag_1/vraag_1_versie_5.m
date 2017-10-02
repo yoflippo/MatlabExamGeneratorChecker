@@ -1,9 +1,10 @@
 %% Vraag 1
 %
-% Stelling 1:   In de Workspace staan de variabelen die Matlab heeft
-%				gebruikt na het uitvoeren van een programma.        
+% Stelling 1:   In de Workspace staan de bestanden van de huidige folder (de
+%				folder waaruit Matlab werkt)                                
 %
-% Stelling 2:   Matlab is een programmeeromgeving en een programmeertaal
+% Stelling 2:   De naam van een script mag niet beginnen met een 
+%				willekeurig symbool                              
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

@@ -1,7 +1,7 @@
 %% Vraag 6
 %
-% Stelling 1:   De standaardfunctie mean() kan worden gebruikt om de gemiddelde
-%				waarde van alle elementen van een vector te berekenen.         
+% Stelling 1:   Met behulp van de functie std() kan de standaarddeviatie
+%				van de waardes van een vector worden berekend.          
 %
 % Stelling 2:   Met behulp van de functie median() kan de mediaan
 %				van een vector worden berekend.                  

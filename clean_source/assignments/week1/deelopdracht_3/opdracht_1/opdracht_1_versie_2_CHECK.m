@@ -7,7 +7,7 @@ function percentage = opdracht1_versie_2_CHECK(absPathStudentFile)
 
 solution = replace(mfilename,'_CHECK','_SOL');
 numberOfCorrect = 0;
-series = -3:3;
+series = -30:2:30;
 for z = series
     try
         if eval([file '(z)']) == eval([solution '(z)'])

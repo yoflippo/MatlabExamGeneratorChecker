@@ -1,0 +1,1 @@
+Met de functie randn() kun je willekeurige waardes produceren.

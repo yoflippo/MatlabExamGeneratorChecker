@@ -1,4 +1,4 @@
-%% Vraag 0
+%% Vraag 10
 %
 % Stelling 1:   Het resultaat van een regel code uit een script kan, na 
 %				het uitvoeren van de regel code, te zien zijn in het    

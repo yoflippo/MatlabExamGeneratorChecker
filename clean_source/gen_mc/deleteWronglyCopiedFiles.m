@@ -27,4 +27,10 @@ for ndf = 1:length(sf)
     delete(solFile);
 end
 
+sf = dir(['**' filesep '*(Case Conflict).m']);
+for ndf = 1:length(sf)
+    solFile = fullfile(sf(ndf).folder,sf(ndf).name);
+    delete(solFile);
+end
+
 cd(currPath)

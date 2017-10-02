@@ -1,0 +1,1 @@
+In Matlab is een string geen vector.

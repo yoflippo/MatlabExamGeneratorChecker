@@ -9,7 +9,7 @@
 % Dat script moet jezelf maken en mag je  in dezelfde folder zetten als dit 
 % bestand. Dat script wordt niet nagekeken of gebruikt door ons.
 
-function [plus1 min1] = opdracht1(getallen)
+function [plus1 min1] = opdracht_1(getallen)
     plus1 = getallen +1;
     min1 = getallen - 1;
 end

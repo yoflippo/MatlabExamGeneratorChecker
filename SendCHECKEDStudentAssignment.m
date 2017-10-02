@@ -33,13 +33,15 @@ chr = [chr newline 'Mark Schrauwen'];
 
 zips = dir(['**' filesep '*.zip']);
 for nZ = 1:length(zips)
-   %% extract student numbers
-   sNum = extractAfter(erase(zips(nZ).name,'.zip'),'Checked_');
-   %% construct emailadres
-   sEma = [sNum '@student.hhs.nl']
-   sAtt = fullfile(pwd,zips(nZ).name) 
-   sendmail(sEma,...
-         'Biostatica Matlab: eindopdracht week 1',chr,sAtt);
+    if contains(zips(nZ).name,'Checked')
+        %% extract student numbers
+        sNum = extractAfter(erase(zips(nZ).name,'.zip'),'Checked_');
+        %% construct emailadres
+        sEma = 'mjajschrauwenhhs@gmail.com' ; %[sNum '@student.hhs.nl']
+        sAtt = fullfile(pwd,zips(nZ).name);
+        sendmail(sEma,...
+            'Biostatica Matlab: nagekeken eindopdracht week 1',chr,sAtt);
+    end
 end
 
 cd(BASEFOLDER)

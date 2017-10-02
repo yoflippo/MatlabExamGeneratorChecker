@@ -56,7 +56,7 @@ disp(['                        Biostatica_ToSubmit_' currentStudentNumber '.zip'
 zip(['..' filesep 'Biostatica_ToSubmit_' currentStudentNumber '.zip'],pwd)
 filebrowser
 cd ..
-disp(" ");
+disp(' ');
 disp(['Het zip-bestand staat hier: ']);
 disp(pwd);
 if ispc

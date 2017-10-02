@@ -1,0 +1,1 @@
+Met de functie sqrt() kan gekwadrateerd worden.
