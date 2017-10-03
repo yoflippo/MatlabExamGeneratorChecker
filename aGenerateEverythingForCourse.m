@@ -101,18 +101,12 @@ eval(['studentFolderOutput = dir(''studentnumber*' filesep '*.txt'');']);
 stdnmbFile = fullfile(studentFolderOutput(1).folder,studentFolderOutput(1).name);
 studentNumbers = load(stdnmbFile);
 % % % % % % Reshuffle the list with student numbers (removing patterns)
+% RANDOMNNES
 % % % % % studentNumbers = studentNumbers(randperm(length(studentNumbers)));
 % Convert the reshuffled list of student number to e-mailadresses
 studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
 % Write the list of e-mailadresses to a txt file
 cd(NAMEASSIGNMENTFOLDER)
-% % fid = fopen('emailadressen.txt','w');
-% % for i=1:length(studentEmailadresses)
-% %     fprintf(fid,'%s',studentEmailadresses{i});
-% %     fprintf(fid,'\n');
-% % end
-% % fclose(fid);
-%save the studentnumbers for later use
 save(STUDENTNUMBERMAT,'studentNumbers');
 cd(BASEFOLDER)
 

@@ -16,6 +16,7 @@ cd('submitted');
 cd(thisWeek);
 
 %% Message for student
+chr = 'Chadier, dit is de versie met valsspelen.. ben benieuwd wat je vind.';
 chr = 'Beste student,';
 chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw nagekeken eindopdracht'];
@@ -30,18 +31,19 @@ chr = [chr newline 'Mark Schrauwen in RZ 2.17.1. '];
 chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];
-
+nSendMails = 0;
 zips = dir(['**' filesep '*.zip']);
 for nZ = 1:length(zips)
     if contains(zips(nZ).name,'Checked')
         %% extract student numbers
         sNum = extractAfter(erase(zips(nZ).name,'.zip'),'Checked_');
         %% construct emailadres
-        sEma = 'mjajschrauwenhhs@gmail.com' ; %[sNum '@student.hhs.nl']
+        sEma = [sNum '@student.hhs.nl'];
         sAtt = fullfile(pwd,zips(nZ).name);
         sendmail(sEma,...
             'Biostatica Matlab: nagekeken eindopdracht week 1',chr,sAtt);
+        nSendMails = nSendMails + 1;
     end
 end
-
+disp(['Send mails: ' num2str(nSendMails)]);
 cd(BASEFOLDER)

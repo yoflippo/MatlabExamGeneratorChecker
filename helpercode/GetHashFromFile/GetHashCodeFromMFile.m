@@ -44,6 +44,7 @@ function [HashCode] = GetHashCodeFromMFile(fileLocationAbsPath)
 % second line of the file
 
 %% Check if File exists
+dbstop if error
 if exist(fileLocationAbsPath) == 0
     error('The file does not exist');
 end
@@ -64,7 +65,9 @@ end
 underscorePos = strfind(lineWithHash,'|');
 lu = length(underscorePos);
 if lu ~= 2
-    error('No hashcode at expected location');
+    HashCode = [];
+    warning('No hashcode at expected location');
+    return;
 end
 HashCode = lineWithHash(underscorePos(1)+1:underscorePos(2)-1);
 

@@ -15,6 +15,9 @@ disp('Created MC-Questions')
 toc
 
 %% Get deelopdracht_x folderS
+if ~isequal(pwd,BASEFOLDER)
+    cd(BASEFOLDER)
+end
 tic
 apMCFiles = fullfile(pwd,LISTWITHNEEDEDFOLDERS{2});
 cd(apMCFiles)
@@ -33,6 +36,9 @@ toc
 
 %% Copy MC files
 disp('Copy MC files')
+if ~isequal(pwd,BASEFOLDER)
+    cd(BASEFOLDER)
+end
 tic
 for nWk = 1:length(gWeekNames)
     currWkName = gWeekNames{nWk};
@@ -44,8 +50,11 @@ for nWk = 1:length(gWeekNames)
             emptyDirRecursiveMFiles(fullfile(apFinMcQ,ass{nWk}{nDo}))
         end
         copyfiles(apGenMcQTmp,apFinMcQ);
+        if ~isequal(dir(apGenMcQTmp), dir(apFinMcQ))
+            error('Files not copied correctly');
+        end
     catch errMess
-        disp('errMess');
+        disp(errMess);
     end
 end
 cd(BASEFOLDER)
@@ -66,10 +75,14 @@ assert(CheckSolCheckDirFunc(fullfile(BASEFOLDER,'assignments')));
 
 %% execute create week assignment scripts
 disp('execute create week assignment scripts');
+if ~isequal(pwd,BASEFOLDER)
+    cd(BASEFOLDER)
+end
 tic
 try
-    run('bCreateWeekAssignments.m')
-catch
+    bCreateWeekAssignments();
+catch err
+    disp(err)
 end
 toc
 
@@ -95,7 +108,7 @@ apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
 removeShitFromDir(apFinDes);
 copyfiles(apTestFiles,apFinDes);
 disp('Execute check assignments');
-    try
+try
     if ~isequal(cCheckStudentSubmissions(),1)
         error('The average grade is not equal to 1');
     end

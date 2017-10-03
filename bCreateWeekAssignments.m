@@ -37,8 +37,10 @@
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-27 $
 % Creation of script.
 
+function bCreateWeekAssignments()
 %% Start Fresh
 InitAll
+dbstop if error
 debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(WEEK)]);
 
 % % correct = input(['Is this the correct week?: ' num2str(WEEK) ...
@@ -96,6 +98,9 @@ for nTypeAss = 1:length(deepestAssignFolders)
     currPath = pwd;
     cd(fullfile(NAMEASSIGNMENTFOLDER,deepestAssignFolders{nTypeAss}));
     answerFilesInDir{nTypeAss} = dir(['*' SOLPOSTFIX '*']);
+    if isequal(length(answerFilesInDir{nTypeAss}),0)
+        error('A folder without files detected');
+    end
     numberOfAssignmentInDir(nTypeAss) = length(answerFilesInDir{nTypeAss});
     cd(currPath);
 end
@@ -113,7 +118,7 @@ trackStudentAssignment = num2cell(zeros(length(studentNumbers), ...
     length(deepestAssignFolders))+1);
 
 for nStud = 1:length(studentNumbers)
-    warning off
+    
     % Browse to every assignment folder, PLEASE NOTICE: randonmness is used
     % by shuffling the studentNumbers in the studentlist.
     studentDir = num2str(studentNumbers(nStud));
@@ -130,37 +135,45 @@ for nStud = 1:length(studentNumbers)
     end
     % Loop through the assignments
     for nAss = 1:length(deepestAssignFolders)
-        % initiate counter for current assignment
-        cnt = answerFileCounter(nAss);
-        currFileSol = [deepestAssignFolders{nAss} filesep answerFilesInDir{1,nAss}(cnt).name];
-        % rename the file to a file without nTypeAss
-        currFile = replace(currFileSol,SOLPOSTFIX,'');
-        % file to copy
-        sourceFile = [NAMEASSIGNMENTFOLDER currFile];
-        sourceFileSOL = [NAMEASSIGNMENTFOLDER currFileSol];
-        % remove redundant folder
-        currFileClean = GetPathOneLevelUp(currFile);
-        % create the path string with final naming
-        finFileLoc = [currStudentDir currFileClean EXT];
-        finFileLocSOL = [currStudentDirSol currFileClean EXT];
-        % Copy file from unique assignment dir to student folder with
-        % subdirs
-        pathCurrAss = [apWkDirName filesep studentDir ...
-            GetPathOneLevelUp(deepestAssignFolders{nAss})];
-        pathCurrAssSOL = [apWkDirNameSol filesep studentDir ...
-            GetPathOneLevelUp(deepestAssignFolders{nAss})];
-        mkdir(pathCurrAss);
-        mkdir(pathCurrAssSOL);
-        copyfile(sourceFile,finFileLoc);
-        copyfile(sourceFileSOL,finFileLocSOL);
-        % Get hash and save if for anti-cheating purposes
-        hash = GetHashCodeFromMFile(finFileLoc);
-        trackStudentAssignment{nStud,nAss+1} = hash;
-        % Reset counter if last file is reached
-        if isequal(numberOfAssignmentInDir(nAss),answerFileCounter(nAss))
-            answerFileCounter(nAss) = 1;
-        else
-            answerFileCounter(nAss) = cnt + 1;
+        try
+            % initiate counter for current assignment
+            cnt = answerFileCounter(nAss);
+            currFileSol = [deepestAssignFolders{nAss} filesep answerFilesInDir{1,nAss}(cnt).name];
+            % rename the file to a file without nTypeAss
+            currFile = replace(currFileSol,SOLPOSTFIX,'');
+            % file to copy
+            sourceFile = [NAMEASSIGNMENTFOLDER currFile];
+            sourceFileSOL = [NAMEASSIGNMENTFOLDER currFileSol];
+            % remove redundant folder
+            currFileClean = GetPathOneLevelUp(currFile);
+            % create the path string with final naming
+            finFileLoc = [currStudentDir currFileClean EXT];
+            finFileLocSOL = [currStudentDirSol currFileClean EXT];
+            % Copy file from unique assignment dir to student folder with
+            % subdirs
+            pathCurrAss = [apWkDirName filesep studentDir ...
+                GetPathOneLevelUp(deepestAssignFolders{nAss})];
+            pathCurrAssSOL = [apWkDirNameSol filesep studentDir ...
+                GetPathOneLevelUp(deepestAssignFolders{nAss})];
+            mkdirIf(pathCurrAss);
+            mkdirIf(pathCurrAssSOL);
+            copyfile(sourceFile,finFileLoc);
+            copyfile(sourceFileSOL,finFileLocSOL);
+            % Get hash and save if for anti-cheating purposes
+            hash = GetHashCodeFromMFile(finFileLoc);
+            if isempty(hash)
+                error('No Hash File found!');
+            end
+            
+            trackStudentAssignment{nStud,nAss+1} = hash;
+            % Reset counter if last file is reached
+            if isequal(numberOfAssignmentInDir(nAss),answerFileCounter(nAss))
+                answerFileCounter(nAss) = 1;
+            else
+                answerFileCounter(nAss) = cnt + 1;
+            end
+        catch err
+            disp(err);
         end
     end
     
@@ -262,15 +275,16 @@ save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,['assignedHashes_' WEEKNAME]) ...
 
 % % %% Zip the folder with zipped-assignments per student and delete that folder
 % % debugOutput(DEBUGOUTPUT,'Zip the folder with zipped-assignments per student and delete that folder',1);
-% % 
+% %
 % % if askuser(' Zip all files?',false)
 % %     cd(STUDENTASSFOLDER)
 % %     zip([NAMEZIPPEDWEEK num2str(YEAR) '_' WEEKNAME '.zip'],WEEKNAME)
 % %     cd(BASEFOLDER)
 % % end
-% % 
+% %
 % % if askuser(' Empty the student_assignments folder?',false)
 % %     removeShitFromDir(apWkDirName)
 % % end
 
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);
+end
