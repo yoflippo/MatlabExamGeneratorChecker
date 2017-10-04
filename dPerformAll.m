@@ -8,6 +8,9 @@ gWeekNames = {'week1' 'week2'};
 
 %% Generate MC files
 %To Do give some output to user
+if ~isequal(pwd,BASEFOLDER)
+    cd(BASEFOLDER)
+end
 disp('Generate MC files')
 tic
 CreateMCQuestions(BASEFOLDER);
@@ -58,15 +61,21 @@ for nWk = 1:length(gWeekNames)
         disp(errMess);
     end
 end
+fclose('all');
 cd(BASEFOLDER)
 toc
 
 %% execute generated all assignments script
 disp('execute generate all script');
+if ~isequal(pwd,BASEFOLDER)
+    cd(BASEFOLDER)
+end
 tic
 try
     run('aGenerateEverythingForCourse.m')
-catch
+catch err
+    disp(err);
+    warning([mfilename ': aGenerateEverythingForCourse did not finish correctly']);
 end
 toc
 
@@ -88,19 +97,6 @@ catch err
 end
 toc
 
-%% Check manually copied submitted files (*&^%$#@#$%^&*&^%$#@#$%^&^%$#$%^&
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
-disp('Check manually copied submitted files');
-tic
-try
-    if ~isequal(cCheckStudentSubmissions(),1)
-        error('The average grade is not equal to 1');
-    end
-catch
-end
-toc
 
 %% Copy certain testfiles to directory submitted --- ADJUST FOR DIFFERENT TESTS!!!
 disp('Copy certain testfiles to directory submitted');
@@ -141,3 +137,18 @@ catch
 end
 toc
 cd(BASEFOLDER)
+
+return;
+%% Check manually copied submitted files (*&^%$#@#$%^&*&^%$#@#$%^&^%$#$%^&
+if ~isequal(pwd,BASEFOLDER)
+    cd(BASEFOLDER)
+end
+disp('Check manually copied submitted files');
+tic
+try
+    if ~isequal(cCheckStudentSubmissions(),1)
+        error('The average grade is not equal to 1');
+    end
+catch
+end
+toc

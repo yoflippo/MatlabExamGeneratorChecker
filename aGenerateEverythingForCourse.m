@@ -45,51 +45,6 @@
 InitAll
 debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
 
-% % %% Zip all files in case a deletion goes wrong
-% % debugOutput(DEBUGOUTPUT,'Zip all files in case a deletion goes wrong',1);
-% % if input('Do you want to Backup everything? Yes (1) No (nothing): ')
-% %     % Get unique string
-% %     d = char(datetime('now'));
-% %     d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
-% %     warning off;
-% %     if input('Do you want to clean the Backup folder? Yes (1) No (nothing): ')
-% %         removeShitFromDir(BACKUPFOLDER);
-% %     end
-% %     mkdir(BACKUPFOLDER);
-% %     addpath(genpath(BACKUPFOLDER));
-% %     zip(fullfile(BACKUPFOLDER,['zip_all_' d '.zip']),pwd)
-% %     rmpath(genpath(BACKUPFOLDER));
-% %     warning on;
-% % end
-
-%% Copy the folder called 'clean_source\assignments'.
-debugOutput(DEBUGOUTPUT,['Copy the folder called clean_source_assignments to ' ...
-    NAMEASSIGNMENTFOLDER],1);
-
-pathOfThisFile = erase(mfilename('fullpath'),mfilename);
-
-% Delete previously generated folder
-removeShitFromDir(NAMEASSIGNMENTFOLDER);
-% mkdir(NAMEASSIGNMENTFOLDER)
-
-% Find folder with the string week
-pth = fullfile('clean_source','assignments');
-subFoldersCleanSource = getFolders(pth);
-weekFolders = strfind(subFoldersCleanSource,'week');
-% copy action
-if length(subFoldersCleanSource) == 0
-    error(' the clean source folder is not found or empty!!');
-end
-for sbdr = 1:length(subFoldersCleanSource)
-    tmp = weekFolders(1,sbdr);
-    if ~isempty(tmp{1})
-        source = fullfile(pathOfThisFile,pth,subFoldersCleanSource{sbdr});
-        destin = fullfile(pathOfThisFile,NAMEASSIGNMENTFOLDER,subFoldersCleanSource{sbdr});
-        copyfiles(source,destin);
-    end
-end
-% After copy Matlab does not release a file
-fclose('all');
 
 %% Read the student number and convert the list to e-mailadresses
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
@@ -133,7 +88,8 @@ addpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
 addpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
 addpath(genpath(NAMEASSIGNMENTFOLDER))
 cd(NAMEASSIGNMENTFOLDER)
-savedHashes = []; cntHash = 1;
+savedHashes = []; 
+cntHash = 1;
 for wk = 1:length(WEEKFOLDERS)
     try
         % find all files in weekX folder
@@ -142,8 +98,6 @@ for wk = 1:length(WEEKFOLDERS)
         cd ..
         
         % traverse the week folder
-        estimatedRemainingTime = [];
-        t1 = clock;
         for fl = 1:length(weekAssignments)
             tic;
             currentFile = weekAssignments(fl).name;
@@ -151,7 +105,7 @@ for wk = 1:length(WEEKFOLDERS)
             currFileFull = fullfile(currFileAbsPath,currentFile);
             currentFileSOL = fullfile(currFileAbsPath,replace(currentFile,'.m','_SOL.m'));
             % find m-file with the answer/solution file
-            if exist(currentFileSOL)
+            if exist(currentFileSOL,'file')
                 % check which types of questions are in the subfolder of the
                 % current weekfolder
                 subdirs = strsplit(currFileAbsPath,filesep);
@@ -173,7 +127,7 @@ for wk = 1:length(WEEKFOLDERS)
                 uniqueFN = generateUniqueFilename(currFileFull,YEAR);
                 % Test if a Hash is unique, could be
                 if ~isempty(savedHashes)
-                    if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash)))
+                    if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
                         error('A Non unique HASH has been created');
                         cd(BASEFOLDER);
                     end
@@ -205,21 +159,20 @@ for wk = 1:length(WEEKFOLDERS)
                 delete(currentFileSOL);
                 makeMFileFromCells(replace(currFileFull,'.m',''),headerHash)
                 makeMFileFromCells(replace(currentFileSOL,'.m',''),headerHashSOL)
-                if exist(currFileFull) ~= 2
+                if ~exist(currFileFull,'file')
                     error(['There is a missing CHECK file: ' namefile]);
                 end
                 fclose('all');
                 clear headerHash
                 cd ..; cd ..; cd ..;
             end
-            estimatedRemainingTime(fl) = toc;
             clc
-            estPerc = round((etime(clock,t1) / mean(estimatedRemainingTime)*length(weekAssignments)/10000));
-            [['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']
+            estPerc = round(fl/length(weekAssignments),1)*100;
+            disp([['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']);
         end
     catch causeException
         cd(BASEFOLDER)
-        causeException
+        disp(causeException);
         rmpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
         rmpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
         rmpath(genpath(NAMEASSIGNMENTFOLDER))

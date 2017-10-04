@@ -58,15 +58,14 @@ for nWk = 1:length(weekDir)
     answerD = ['% D : ' char(answerD)];
     
     %% Browse the subfolder of weekXXX
- 
     for nDirs = 1:length(folders)
         clc;
         disp(['CreateMCQuestions: ' num2str(nDirs) ' of ' num2str(length(folders)) ' folders processed.']);
         numberOfThesesFiles = TPA{nDirs,1}{3};
         currentFilePath =  TPA{nDirs,1}{1};
+        
         % generate final destination path of current question, by inserting the
         % output folder
-        
         absPathDestination = GetPathOneLevelUp(currentFilePath);
         absPathDestination = replace(absPathDestination,weekDir{nWk},fullfile('generated_questions',weekDir{nWk}));
         
@@ -167,51 +166,97 @@ for nWk = 1:length(weekDir)
             nameQuestion = [nameQuestion '_versie_' num2str(nVersionMC)];
             nameQuestionSOL = [nameQuestion '_SOL'];
             nameQuestionCHECK = [nameQuestion '_CHECK'];
-            % write solution file
+           
+            % write solution file, sometimes creating/copying does not work
+            % reliable
+            apNameQuestionSOL = fullfile(absPathDestination,[nameQuestionSOL '.m']);
+            cd(absPathDestination)
             makeMFileFromCells(nameQuestionSOL,finalTxt);
-            % write empty file
+            while ~exist(apNameQuestionSOL,'file')
+                makeMFileFromCells(nameQuestionSOL,finalTxt);
+                warning([mfilename ': ' nameQuestion 'it not created!']);
+            end
+            
+            % write empty file, sometimes creating/copying does not work
+            % reliable
             finalTxt{cnt,1} = emptyAnswerLine;
+            apNameQuestion = fullfile(absPathDestination,[nameQuestion '.m']);        
             makeMFileFromCells(nameQuestion,finalTxt);
-            cd(apOfThisFile)
-            % copy the template CHECK file
-            desAbsCheckFile = fullfile(absPathDestination,[nameQuestionCHECK '.m']);
-            copyfile(apTemplateCheck,desAbsCheckFile);
+            while ~exist(apNameQuestion,'file')
+                makeMFileFromCells(nameQuestion,finalTxt);
+                warning([mfilename ': ' nameQuestion 'it not created!']);
+            end
+            
+            % copy the template CHECK file, sometimes creating/copying does not work
+            % reliable
+            apCheckFile = fullfile(absPathDestination,[nameQuestionCHECK '.m']);
+            copyfile(apTemplateCheck,apCheckFile);
+            while ~exist(apCheckFile,'file')
+                copyfile(apTemplateCheck,apCheckFile);
+                warning([mfilename ': ' nameQuestionCHECK 'it not created!']);
+            end
+            
             % rename the template function name ('xxx') with the current name
-            fnCopiedTemplate = ReadLineOfFile(desAbsCheckFile);
+            fnCopiedTemplate = ReadLineOfFile(apCheckFile);
             fnCopiedTemplate = replace(fnCopiedTemplate,'xxx',nameQuestionCHECK);
-            WriteLineOfFile(desAbsCheckFile,1,fnCopiedTemplate);
+            WriteLineOfFile(apCheckFile,1,fnCopiedTemplate);
             % clear variable to prevent polution of files
             clear finalTxt
+            % %             % Check multiple exist
+            % %             if ~exist(fullfile(absPathDestination,[nameQuestion '.m']))
+            % %                 error([mfilename ': ' nameQuestion 'it not created!']);
+            % %             elseif ~exist(fullfile(absPathDestination,[nameQuestionSOL '.m']))
+            % %                 error([mfilename ': ' nameQuestionSOL 'it not created!']);
+            % %             elseif ~exist(fullfile(absPathDestination,[nameQuestionCHECK '.m']))
+            % %                 error([mfilename ': ' nameQuestionCHECK 'it not created!']);
+            % %             end
         end
     end
     clear TPA
 end
 
-%% Test number of SOLUTION and CHECK files
-cd('generated_questions')
-checkFiles = dir('**/*_SOL*.m');
+%% Test number of SOLUTION and CHECK files, sometimes the copying of files does not go right...
+cd(outputDir)
+solFiles = dir('**/*_SOL*.m');
 checkFilestmp = dir('**/*_CHECK*.m');
-lcf = length(checkFiles);
+lcf = length(solFiles);
 lcft = length(checkFilestmp);
-if ~isequal(lcf,lcft)
-    disp(['number of SOLUTION files: ' num2str(length(checkFiles))]);
-    disp(['number of CHECK files: ' num2str(length(checkFilestmp))]);
-    if lcft > lcf
-        longest =  lcft;
-    else
-        longest = lcf;
-    end
-    for nF = 1:longest
-        if ~isequal(checkFiles(nF).Folder,checkFilestmp(nF).Folder)
-            checkFiles(nF).Folder
-            checkFilestmp(nF).Folder
+try
+    if ~isequal(lcf,lcft)
+        disp(['number of SOLUTION files: ' num2str(length(solFiles))]);
+        disp(['number of CHECK files: ' num2str(length(checkFilestmp))]);
+        if lcft > lcf
+            longest =  lcft;
+        else
+            longest = lcf;
+        end
+        for nF = 1:longest
+            % Extract names of files
+            tApSol = fullfile(solFiles(nF).folder,solFiles(nF).name);
+            tApChe = fullfile(checkFilestmp(nF).folder,checkFilestmp(nF).name);
+            tSolFileName = erase(solFiles(nF).name,'_SOL');
+            tCheFilename = erase(checkFilestmp(nF).name,'_CHECK');
+            
+            if ~isequal(tSolFileName,tCheFilename)
+                % Check for error in SOL file
+                if ~exist(tApSol,'file');
+                    warning(['Does not exist: ' tApSol]);
+                elseif ~exist(tApChe,'file')
+                    warning(['Does not exist: ' tApChe]);
+                elseif ~exist(replace(tApSol,'_SOL','_CHECK'))
+                    warning(['Does not exist: ' replace(tApSol,'_SOL','_CHECK')]);
+                elseif ~exist(replace(tApChe,'_SOL','_CHECK'))
+                    warning(['Does not exist: ' replace(tApChe,'_SOL','_CHECK')]);
+                end
+            end
         end
     end
+catch err
+    disp([mfilename ':' err]);
     error('CheckSolCheckDirFunc: number of _SOL and _CHECK files do not match!!');
-else
-    disp('number of SOLUTION and CHECK files match!');
 end
 
+disp('number of SOLUTION and CHECK files match!');
 
 %% Copy the generated files to clean_source assignment
 

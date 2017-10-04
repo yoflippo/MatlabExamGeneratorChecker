@@ -65,7 +65,7 @@ end
 underscorePos = strfind(lineWithHash,'|');
 lu = length(underscorePos);
 if lu ~= 2
-    warning('No hashcode at expected location');
+%    warning('No hashcode at expected location');
     return;
 end
 HashCode = lineWithHash(underscorePos(1)+1:underscorePos(2)-1);
