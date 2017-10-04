@@ -1,7 +1,9 @@
 %% Vraag 9
 %
-% Stelling 1:   In de Matlab doc of help functie krijg je geen andere gerelateerde
-%				functies te zien.                                                 
+% Stelling 1:   Bijna geen enkele Matlab gebruiker kent alle standaard functies
+%				die Matlab standaard heeft.                                    
+%				Het is belangrijk dat je als programmeur gebruik kunt maken    
+%				van de Matlab help-functionaliteit.                            
 %
 % Stelling 2:   Een Matlab functie heeft altijd: 
 %				- een naam                       

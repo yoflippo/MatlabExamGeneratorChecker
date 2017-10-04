@@ -4,7 +4,7 @@
 %				worden uitgevoerd: ^                                   
 %
 % Stelling 2:   In de volgende code regel heeft de min-operator 
-%				voorrang op de macht-operator: 76 – 6^2.        
+%				voorrang op de macht-operator: 76 ï¿½ 6^2.        
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

@@ -5,9 +5,8 @@
 %				Het is belangrijk dat je als programmeur gebruik kunt maken    
 %				van de Matlab help-functionaliteit.                            
 %
-% Stelling 2:   Een Matlab functie heeft altijd: 
-%				- een naam                       
-%				- een body                       
+% Stelling 2:   In de Matlab doc of help functie krijg je een andere gerelateerde
+%				functies te zien.                                                
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

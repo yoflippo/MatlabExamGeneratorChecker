@@ -53,14 +53,13 @@ function sumPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPa
 %% Check if directory exists
 % set a breakpoint in case of an error, so the program could be continued
 dbstop('if','error')
-NAMEOFTHISCRIPT = 'CHECKSINGLESTUDENTASSIGNMENT';
 % quote variable
 q = char(39);
 currPath = pwd;
 
 currentFolder = fullfile(pwd,studentdir);
 if isequal(exist(currentFolder),0)
-    warning([NAMEOFTHISCRIPT ': The accessed folder does not exists'])
+    warning([mfilename ': The accessed folder does not exists'])
     sumPoints = 0;
     return
 end
@@ -68,7 +67,7 @@ end
 %% Check the m-files in student directory
 % Get mfiles
 cd(studentdir);
-mfiles = dir('**/*.m');
+mfiles = dir(['**' filesep '*.m']);
 % Get files with hashcode
 mfilesWithHash = [];
 HashOfmfiles = [];
@@ -146,7 +145,7 @@ for i = 1:length(mfilesWithHash)
         end
     catch something
         disp(something)
-        disp([NAMEOFTHISCRIPT ': Somethings wrong..'])
+        disp([mfilename ': Somethings wrong..'])
         disp(['OPENING: ' AbsPathStudentScript]);
         edit(AbsPathStudentScript)
         edit(nmCHE)

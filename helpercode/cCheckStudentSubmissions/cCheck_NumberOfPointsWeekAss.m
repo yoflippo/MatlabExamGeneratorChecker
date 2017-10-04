@@ -1,22 +1,27 @@
 %% Get the number of points for all week assignments
 
 
-relPathWeekFolderUnique = fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME);
-mfiles = readFilesInFolder(relPathWeekFolderUnique,'.m');
-
-relevantMFiles = strfind(mfiles,'points.m');
-if isempty(relevantMFiles)
+apAssWk = fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME);
+cd(apAssWk);
+mfiles = dir(['**' filesep '*points*.m']);
+if isempty(mfiles)
     error('Apparently there are NO points.m files found');
 end
-mfiles = mfiles(~cellfun('isempty',relevantMFiles));
+
 pointsPerAssignment = zeros(1,length(mfiles));
+clear nameOfAssignment
 nameOfAssignment = [];
 for i = 1:length(mfiles)
-    tmp = mfiles(i);
-    tmp = tmp{1};
-    run(tmp(1:end-2));
-    % Get name of assignment and save it
-    foundSlashes = strfind(tmp,filesep);
-    nameOfAssignment{i} = tmp(foundSlashes(end-2)+1:foundSlashes(end)-1);
-    pointsPerAssignment(i) = deelpunten;
+    try
+        dr = mfiles(i).folder;
+        run(fullfile(dr,mfiles(i).name));
+        % Get assignment name + name of folder directly above it
+        tmp = extractAfter(dr,'week');
+        tmp= extractAfter(tmp,filesep);
+        nameOfAssignment{i} = tmp;     
+        pointsPerAssignment(i) = deelpunten;
+    catch err
+        disp(err);
+        error(mfilename);
+    end
 end

@@ -5,8 +5,8 @@ weeks = {'week1' 'week2' 'week3' 'week4'};
 for nWk = 1:length(weeks)
     try
         cd(fullfile(pathOfThisFile,weeks{nWk}));
-        nFalse = length(dir('**\*FALSE*.m'));
-        nTrue = length(dir('**\*TRUE*.m'));
+        nFalse = length(dir(['**' filesep '*FALSE*.m']));
+        nTrue = length(dir(['**' filesep '*TRUE*.m']));
         disp([weeks{nWk} ': TRUE = ' num2str(nTrue) ' | FALSE = ' num2str(nFalse)])
         cd(pathOfThisFile);
     catch

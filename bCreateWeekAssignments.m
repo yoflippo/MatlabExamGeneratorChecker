@@ -216,6 +216,8 @@ for nStud = 1:length(studentNumbers)
         % Copy raw files
         rawFilesTestDir = fullfile(currTestDir,'raw',studentDir);
         rawFilesTestDirSol = fullfile(currTestDir,'rawsol',studentDir);
+        mkdirIf(rawFilesTestDir);
+        mkdirIf(rawFilesTestDirSol);
         movefile(currStudentDir,rawFilesTestDir);
         movefile(currStudentDirSol,rawFilesTestDirSol);
     else

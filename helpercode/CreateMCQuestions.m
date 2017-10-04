@@ -211,7 +211,21 @@ if ~isequal(lcf,lcft)
 else
     disp('number of SOLUTION and CHECK files match!');
 end
-cd ..
+
+
+%% Copy the generated files to clean_source assignment
+
+
+for nw = 1:length(weekDir)
+    apCurrDir = fullfile(pwd,weekDir{nw});
+    cleanMcFolders = getFolders(apCurrDir);
+    for nMCF = 1:length(cleanMcFolders)
+        apAss = fullfile(GetPathOneLevelUp(apOfThisFile),'assignments',weekDir{nw},cleanMcFolders{nMCF});
+        removeShitFromDir(apAss);
+        copyfiles(fullfile(apCurrDir,cleanMcFolders{nMCF}),apAss);
+    end
+end
+cd ..;
 %% Test the generated MC-files
 CountNumberOfFALSE_TRUE;
 datetime

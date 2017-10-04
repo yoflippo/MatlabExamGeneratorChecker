@@ -41,12 +41,13 @@ try
     fclose('all'); %close all files, because after copy Matlab does not release a file
     oldPath = pwd;
     cd(dirToEmpty)
-    A = dir( '**\*.m' );
+    A = dir(['**' filesep '*.m']);
     for k = 1:length(A)
         delete(fullfile(A(k).folder,A(k).name));
     end
     warning on
     cd(oldPath);
-catch
+catch err
+    disp(['emptyDirRecursiveMFiles: ' err]);
 end
 end

@@ -105,6 +105,7 @@ cCheck_HashCodeIntact
 %% Check for each student if they have their correct assignments
 debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assignments',0);
 cCheck_StudentHasCorrectAssignment
+cd(BASEFOLDER);
 
 %% Get the number of points for all week assignments
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
@@ -113,7 +114,7 @@ cCheck_NumberOfPointsWeekAss
 %% Put in dictionary and save in MAT-file
 debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
-save(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
+save(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
 % Delete a possible existing studentMatrix
 pathStudentResults = fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK) '.mat']);
@@ -129,12 +130,14 @@ PointsToBeEarned = sum(pointsPerAssignment);
 % Load the answer files
 eval(['load(''answerfiles_week' num2str(WEEK) ''')'])
 % Go to folder with unzipped files
-relPath = fullfile(STUDENTSUBFOLDER,WEEKNAME);
-cd(relPath);
+apSubWk = fullfile(BASEFOLDER, STUDENTSUBFOLDER,WEEKNAME);
+cd(apSubWk);
 
 %% Iterate over every unzipped folder/studentnumber
 % Remove Check-files from path
+warning off
 rmpath(genpath(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME)));
+warning on
 
 strTrackStudent = cellstr(trackStudentAssignment);
 for sn = 1:length(strTrackStudent(:,1))
