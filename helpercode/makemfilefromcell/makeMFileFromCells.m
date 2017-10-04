@@ -48,6 +48,7 @@ function [outVar] = makeMFileFromCells(nameFile, txtInCellFormat)
 % $Revision: 0.0.0 $  $Date: 2017-07-15 $
 %<Description>
 
+nameFile = erase(nameFile,'.m');
 try
     FID = fopen([nameFile '.m'],'a');
     for i = 1:length(txtInCellFormat)

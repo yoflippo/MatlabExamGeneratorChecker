@@ -2,11 +2,11 @@ clear all; clc;
 currPath = pwd;
 
 %% To prevent manual actions
-matFile = 'dir.mat'; 
+matFile = 'dir.mat';
 if ~askuser('Use last dir?',true) || ~exist(matFile,'file')
     pathname = uigetdir('Pick a DIR');
     save(matFile,'pathname');
-else     
+else
     load(matFile);
 end
 
@@ -24,10 +24,12 @@ for i = 1:length(checkFiles);
     % Create a string of the SOL and CHECK file
     solutionFile = replace(filename,'.m','_SOL.m');
     checkFile = replace(filename,'.m','_CHECK.m');
+    cheatFile = replace(filename,'.m','_CHEAT.m'); %%%%%
     % Check files exist
     pathSolutionFile = fullfile(pathname,solutionFile);
     pathCheckFile = fullfile(pathname,checkFile);
     pathEmptyFile = fullfile(pathname,filename);
+    pathCheatFile = fullfile(pathname,cheatFile);
     if exist(pathSolutionFile) ~= 2
         error(['DOES NOT EXIST: ' solutionFile]);
     end
@@ -56,6 +58,14 @@ for i = 1:length(checkFiles);
         if round(res,1) ~= 1
             res
             error('The Check function should return a result of one');
+        end
+        % run the CHEAT file on the target CHECK function
+        if exist(cheatFile,'file')
+            eval(['res = ' checkFunction '(pathCheatFile);'])
+            if res == 1
+                res
+                error('The CHEAT function should return a result of less then one');
+            end
         end
         disp([extractAfter(pathCheckFile,'week') ': works correctly']);
     catch errMess

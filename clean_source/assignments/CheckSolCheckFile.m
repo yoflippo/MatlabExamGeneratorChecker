@@ -1,12 +1,12 @@
 clear all;
 
 %% To prevent manual actions
-matFile = 'file.mat'; 
+matFile = 'file.mat';
 if ~askuser('Use last file?',true) || ~exist(matFile)
     [fn, pathname, filterindex] = uigetfile('*.m', 'Pick a file');
     tmpLocation = fullfile(pathname,fn);
     save(matFile,'tmpLocation','fn','pathname','filterindex');
-else     
+else
     load(matFile);
 end
 
@@ -17,10 +17,12 @@ filename = erase(filename,'_SOL');
 % Create a string of the SOL and CHECK file
 solutionFile = replace(filename,'.m','_SOL.m');
 checkFile = replace(filename,'.m','_CHECK.m');
+cheatFile = replace(filename,'.m','_CHEAT.m'); %%%%%
 % Check files exist
 pathSolutionFile = fullfile(pathname,solutionFile);
 pathCheckFile = fullfile(pathname,checkFile);
 pathEmptyFile = fullfile(pathname,filename);
+pathCheatFile = fullfile(pathname,cheatFile);
 if exist(pathSolutionFile) ~= 2
     error(['DOES NOT EXIST: ' solutionFile]);
 end
@@ -49,6 +51,14 @@ try
     if round(res,1) ~= 1.0
         res
         error('The Check function should return a result of one');
+    end
+    % run the CHEAT file on the target CHECK function
+    if exist(cheatFile,'file')
+        eval(['res = ' checkFunction '(pathCheatFile);'])
+        if res == 1
+            res
+            error('The CHEAT function should return a result of less then one');
+        end
     end
     disp([filename ': works correctly']);
 catch catchMessage
