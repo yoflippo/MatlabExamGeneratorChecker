@@ -147,6 +147,7 @@ for sn = 1:length(strTrackStudent(:,1))
         points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
             dicNameAssignmentAndPoints,answerFilesInDir);
         grade = ((points/PointsToBeEarned)*9)+1;
+        studentMatrix(sn,1) = str2num(studentFolder);
         studentMatrix(sn,2) = round(grade,1);
         % Give the student a grade, first make some text
         cCheck_GradeText;

@@ -5,6 +5,7 @@ dbstop if error
 
 global gWeekNames;
 gWeekNames = {'week1' 'week2'};
+buAll
 
 %% Generate MC files
 %To Do give some output to user
@@ -98,7 +99,7 @@ end
 toc
 
 
-%% Copy certain testfiles to directory submitted --- ADJUST FOR DIFFERENT TESTS!!!
+%% TEST if all INcorrect solutions files pass
 disp('Copy certain testfiles to directory submitted');
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
@@ -119,7 +120,7 @@ catch err
 end
 toc
 
-%% execute other check assignments
+%% TEST if all correct solutions files pass
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
 end

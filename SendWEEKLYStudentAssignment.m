@@ -17,6 +17,7 @@ cd('student_assignments');
 cd(thisWeek);
 
 %% Message for student
+chr = ['Als je deze opdracht al hebt gedaan.. hoef je het niet nog eens te doen... mag wel..' newline newline ];
 chr = 'Beste student,';
 chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht'];
@@ -45,10 +46,11 @@ for nZ = 1:length(zips)
    %% extract student numbers
    sNum = extractAfter(erase(zips(nZ).name,'.zip'),'_');
    %% construct emailadres
-   sEma = [sNum '@student.hhs.nl']
+   sEma = {'mjschrau@hhs.nl' [sNum '@student.hhs.nl']}
    sAtt = fullfile(pwd,zips(nZ).name) 
    sendmail(sEma,...
          'Biostatica Matlab: eindopdracht week 1',chr,sAtt);
+   nSendMails = nSendMails + 1;
 end
-
+disp(['Send mails: ' num2str(nSendMails)]);
 cd(BASEFOLDER)
