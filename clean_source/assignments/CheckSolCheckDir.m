@@ -3,7 +3,7 @@ currPath = pwd;
 
 %% To prevent manual actions
 matFile = 'dir.mat'; 
-if ~exist(matFile)
+if ~askuser('Use last dir?',true) || ~exist(matFile,'file')
     pathname = uigetdir('Pick a DIR');
     save(matFile,'pathname');
 else     

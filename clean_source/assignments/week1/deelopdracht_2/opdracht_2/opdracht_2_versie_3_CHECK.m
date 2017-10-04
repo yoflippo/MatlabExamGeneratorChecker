@@ -1,65 +1,99 @@
-function res = opdracht_2_versie_3_CHECK(absPathStudentSol)
+function res = opdracht_2_versie_3_CHECK(apStudentSol)
 
+% default
 res = 0;
-numtests = 6;
+numtests = 2;
 
-% %% Opdracht 1
+%%========== PLACE SOLUTION IN COMMENTS HERE
+%% Opdracht 2
 % % Maak een variabele aan met de naam: boeya.
 % % Voer een berekening uit waarbij je de waardes 7 en 13 bij elkaar
 % % optelt.
-% % Test je script of het werkt.
+% 
 % boeya = 7 + 13;
-a = 7;
-b = 13;
-at = num2str(a);
-bt = num2str(b);
 
-%% Get cleaned temporary file
-[path name ext] =fileparts(absPathStudentSol);
-tmp = readCleanMFile(absPathStudentSol);
+%%==========
 
-%% Use the cleaned code to check for certain lines
+[path name ext] = fileparts(apStudentSol);
+tmp = readCleanMFile(apStudentSol);
+
 if ~isempty(char(tmp))
-    % Make temp file
-    absPathTmp = fullfile(path,'tmp');
-    makeMFileFromCells(absPathTmp,tmp);
-    absPathTmp = fullfile(path,'tmp.m');
     
-    %% Run the original student scripts, if not working no points!
+    %% Run the solution file - HAS TO WORK!!
     try
-        run(absPathStudentSol);
+        run(replace(mfilename,'_CHECK','_SOL'));
     catch
         return;
     end
     
-    %% Perform specific string test on the code, which lines should exists? Which NOT!?
+    % Copy the correct answers, this constructions allows us to test for
+    % certain variable names easily, by using the SOLUTION file.
+    nameVar1 = 'boeya';
+    eval(['var1ANS = ' nameVar1 ';']);
     
-    % Test for script specific variables and values
-    if exist('boeya')
-        if boeya == (a+b)
+    % Remove solution variables from Workspace.
+    eval(['clear ' nameVar1 ';']);
+    
+    %% Run the original student scripts, if not working no points!
+    try
+        run(apStudentSol);
+    catch
+        return;
+    end
+    
+    %% Perform tests for certain variables
+    try
+        if isequal(var1ANS,eval(nameVar1))
             res = res + (1/numtests);
+        end
+    catch ErrMess
+        % Test for a generated file! Could also be done by testing for Hash
+        if ~contains(apStudentSol,'versie')
+            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
         end
     end
     
-    if readAndFindTextInFile(absPathTmp,'+')
-        res = res + (1/numtests);
-    end
-    if readAndFindTextInFile(absPathTmp,num2str(a))
-        res = res + (1/numtests);
-    end
-    if readAndFindTextInFile(absPathTmp,num2str(b))
-        res = res + (1/numtests);
-    end
-    if ~readAndFindTextInFile(absPathTmp,num2str(a+b))
-        res = res + (1/numtests);
-    end
+    %     try
+    %         if isequal(var1ANS,eval(nameVar2))
+    %             res = res + (1/numtests);
+    %         end
+    %     catch ErrMess
+    %         if ~contains(apStudentSol,'versie')
+    %             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+    %         end
+    %     end
     
-    ts = [at '+' bt];
-    if readAndFindTextInFile(absPathTmp,ts) || readAndFindTextInFile(absPathTmp,fliplr(ts))
-        res = res + (1/numtests);
-    end
+    %     try
+    %         if isequal(var1ANS,eval(nameVar3))
+    %             res = res + (1/numtests);
+    %         end
+    %     catch ErrMess
+    %         if ~contains(apStudentSol,'versie')
+    %             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+    %         end
+    %     end
     
-
-    %% Delete temp file
-    delete(absPathTmp);
+        %% Check for literal values and variables
+        % Make temp file
+        absPathTmp = fullfile(path,'tmp');
+        makeMFileFromCells(absPathTmp,tmp);
+        absPathTmp = fullfile(path,'tmp.m');
+    
+        %% Check for literal answers, must be present
+        literal = '7+13';
+        if readAndFindTextInFile(absPathTmp,literal) || readAndFindTextInFile(absPathTmp,fliplr(literal))
+            res = res + (1/numtests);
+        end
+    
+%         %% Check for literal answers, CAN NOT BE PRESENT
+%         literal = 'XXX';
+%         if ~readAndFindTextInFile(absPathTmp,literal) && ~readAndFindTextInFile(absPathTmp,fliplr(literal))
+%             res = res + (1/numtests);
+%         end
+    
+    % HAVE YOU CHECKED the variable 'numtests'???
+        %% Delete temporary file
+        delete(absPathTmp);
 end
+
+end %function

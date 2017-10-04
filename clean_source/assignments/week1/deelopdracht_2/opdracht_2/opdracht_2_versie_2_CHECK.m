@@ -1,56 +1,78 @@
-function res = opdracht_2_versie_2_CHECK(absPathStudentSol)
+function res = opdracht_2_versie_1_CHECK(apStudentSol)
 
+% default
 res = 0;
-numtests = 6;
+numtests = 2;
 
-% pompidom = 11+22;
+%%========== PLACE SOLUTION IN COMMENTS HERE
+%% Opdracht 2
+% % % % Maak een variabele aan met de naam: pompidom.
+% % % % Voer een berekening uit waarbij je de waardes 11 en 22 bij elkaar
+% % % % optelt.
+% % % pompidom = 11+22;
+%%==========
 
-%% Get cleaned temporary file
-[path name ext] =fileparts(absPathStudentSol);
-tmp = readCleanMFile(absPathStudentSol);
+[path name ext] = fileparts(apStudentSol);
+tmp = readCleanMFile(apStudentSol);
 
-%% Use the cleaned code to check for certain lines
 if ~isempty(char(tmp))
-    % Make temp file
-    absPathTmp = fullfile(path,'tmp');
-    makeMFileFromCells(absPathTmp,tmp);
-    absPathTmp = fullfile(path,'tmp.m');
     
-    %% Run the original student scripts, if not working no points!
+    %% Run the solution file - HAS TO WORK!!
     try
-        run(absPathStudentSol);
+        run(replace(mfilename,'_CHECK','_SOL'));
     catch
         return;
     end
     
-    %% Perform specific string test on the code, which lines should exists? Which NOT!?
+    % Copy the correct answers, this constructions allows us to test for
+    % certain variable names easily, by using the SOLUTION file.
+    nameVar1 = 'pompidom';
+    eval(['var1ANS = ' nameVar1 ';']);
     
-    % Test for script specific variables and values
-    if exist('pompidom')
-        if pompidom == (11+22)
+    % Remove solution variables from Workspace.
+    eval(['clear ' nameVar1 ';']);
+    
+    %% Run the original student scripts, if not working no points!
+    try
+        run(apStudentSol);
+    catch
+        return;
+    end
+    
+    %% Perform tests for certain variables
+    try
+        if isequal(var1ANS,eval(nameVar1))
             res = res + (1/numtests);
+        end
+    catch ErrMess
+        % Test for a generated file! Could also be done by testing for Hash
+        if ~contains(apStudentSol,'versie')
+            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
         end
     end
     
-    if readAndFindTextInFile(absPathTmp,'+')
-        res = res + (1/numtests);
-    end
-    if readAndFindTextInFile(absPathTmp,'22')
-        res = res + (1/numtests);
-    end
-    if readAndFindTextInFile(absPathTmp,'11')
-        res = res + (1/numtests);
-    end
-    if ~readAndFindTextInFile(absPathTmp,(11+22))
-        res = res + (1/numtests);
-    end
     
-    ts = '11+22';
-    if readAndFindTextInFile(absPathTmp,ts) || readAndFindTextInFile(absPathTmp,fliplr(ts))
-        res = res + (1/numtests);
-    end
+        %% Check for literal values and variables
+        % Make temp file
+        absPathTmp = fullfile(path,'tmp');
+        makeMFileFromCells(absPathTmp,tmp);
+        absPathTmp = fullfile(path,'tmp.m');
     
-
-    %% Delete temp file
+        %% Check for literal answers, must be present
+        literal = '11+22';
+        if readAndFindTextInFile(absPathTmp,literal) || readAndFindTextInFile(absPathTmp,fliplr(literal))
+            res = res + (1/numtests);
+        end
+  
+    %     %% Check for literal answers, CAN NOT BE PRESENT
+    %     literal = 'XXX';
+    %     if ~readAndFindTextInFile(absPathTmp,literal) && ~readAndFindTextInFile(absPathTmp,fliplr(literal))
+    %         res = res + (1/numtests);
+    %     end
+    
+    %% HAVE YOU CHECKED the variable 'numtests'???
+    %     %% Delete temporary file
     delete(absPathTmp);
 end
+
+end %function

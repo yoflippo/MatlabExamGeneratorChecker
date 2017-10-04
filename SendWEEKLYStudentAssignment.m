@@ -18,16 +18,23 @@ cd(thisWeek);
 
 %% Message for student
 chr = ['Als je deze opdracht al hebt gedaan.. hoef je het niet nog eens te doen... mag wel..' newline newline ];
-chr = 'Beste student,';
+% chr = '';
+chr = [chr newline 'Beste student,'];
+chr = [chr newline newline 'Lees deze e-mail helemaal door!'];
 chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht'];
 chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];
-chr = [chr newline 'Je moet deze opdracht voor volgende week woensdag'];
+chr = [chr newline newline 'Je krijgt voor deze opdracht een cijfer dat NIET meetelt.'];
+chr = [chr newline 'Het cijfer geeft je een indicatie van hoe goed je de eindopdracht hebt gemaakt.'];
+chr = [chr newline 'Elke week eindopdracht is representatief voor het tentamen.'];
+chr = [chr newline 'Het tentamen wordt opgebouwd uit onderdelen van de weekeindopdrachten.'];
+chr = [chr newline 'Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.'];
+chr = [chr newline newline 'Je moet deze opdracht voor volgende week woensdag'];
 chr = [chr newline '23:59u inleveren via Blackboard.'];
 chr = [chr newline];
 chr = [chr newline 'Je mag de foldernamen, folderstructuren en bestandnamen'];
 chr = [chr newline 'van het zip-bestand NIET aanpassen!'];
-chr = [chr newline 'Doe je dat wel, dan wordt de opdrahct niet nagekeken.'];
+chr = [chr newline 'Doe je dat wel, dan wordt de opdracht niet nagekeken.'];
 chr = [chr newline];
 chr = [chr newline 'Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een'];
 chr = [chr newline 'zip-bestand van al je werk. Dat specifieke zip-bestand MOET je'];
@@ -39,8 +46,9 @@ chr = [chr newline '5 werkdagen na te kijken. Je ontvangt je nagekeken werk'];
 chr = [chr newline 'op dit e-mailadres.'];
 chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
-chr = [chr newline 'Mark Schrauwen'];
+chr = [chr newline 'Mark Schrauwen']
 
+%% Find zips and mail them
 zips = dir(['**' filesep '*.zip']);
 for nZ = 1:length(zips)
    %% extract student numbers
