@@ -16,8 +16,8 @@ cd('submitted');
 cd(thisWeek);
 
 %% Message for student
-chr = 'Chadier, dit is de versie met valsspelen.. ben benieuwd wat je vind.';
-chr = 'Beste student,';
+chr = 'Chadier, dit is de opnieuw nagekeken versie.';
+chr = [chr newline 'Beste student,'];
 chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw nagekeken eindopdracht'];
 chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];

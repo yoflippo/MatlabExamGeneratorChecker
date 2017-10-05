@@ -23,7 +23,7 @@ function [oTxt oTxtBelowSep] = readTxtFile(varargin)
 %               to account the empty lines. Other functions as: txtscan(),
 %               fgetl(), fgets() appear not to have this option. The
 %               function fileread() makes one long string of a file, so
-%               that is no option eather.
+%               that is no option.
 %
 %
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -40,6 +40,17 @@ function [oTxt oTxtBelowSep] = readTxtFile(varargin)
 
 % $Revision: 0.0.0 $  $Date: 2017-09-15 $
 % Creation of the function
+
+
+%%% THIS FUNCTION CAN BE IMPROVED VERY MUCH!!!!
+% % % % % % % % % delimiter = {'\n'};
+% % % % % % % % % formatSpec = '%s';
+% % % % % % % % % fileID = fopen(apScript,'r');
+% % % % % % % % % txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
+% % % % % % % % %     'TextType', 'string',  'ReturnOnError', false);
+% % % % % % % % % fclose(fileID);
+% % % % % % % % % txt = txt{1,1};
+
 
 %% Parse varargin
 
@@ -64,30 +75,6 @@ if nargin == maxargin
     blSeparatorPresent = true;
 end
 
-
-% % for narg = 1:nargin
-% %     sc = upper(varargin{narg});
-% %     switch sc
-% %         case {'EXT'}
-% %             fExtension = varargin{narg+1};
-% %         case {'ABSPATH'}
-% %             AbsPath = varargin{narg+1};
-% %         case {'ASKUSER'}
-% %             blAskUser = true;
-% %         case {'SEARCHSTRING', 'SS'}
-% %             SearchString = varargin{narg+1};
-% %         case {'EDITIFFOUND', 'EIF'}
-% %             blEdit = true;
-% %         case {'SETBREAKPOINT', 'SBP'}
-% %             blBreakpoint = true;
-% %         otherwise
-% %     end
-% % end
-% %
-% % if isempty(fExtension)
-% %     error([ namefunction ' you need to specify an extension (see help)']);
-% % end
-
 blSeparatorFound = false;
 try
     fileID = fopen(apFile,'r');
@@ -101,11 +88,9 @@ try
         % Do not use EOF
         if ~ischar(tmp)
             break;
-        end
-        
+        end     
         tline{c,1} = tmp;
-% %         tline{c,1} = removeReturnAndNewline(tline{c,1});
-        
+ 
         %% Test for separator
         if (blSeparatorPresent && contains(tmp,separator)) || blSeparatorFound
             if contains(tmp,separator)
@@ -138,10 +123,3 @@ catch
 end
 
 end %function readTxtFile
-
-% % % Remove ' \n ' and ' \r ' characters
-% % function r = removeReturnAndNewline(tline)
-% % r = strrep(tline,sprintf('\n'),'');
-% % r = strrep(r,sprintf('\r'),'');
-% % end
-
