@@ -36,7 +36,7 @@ function [outVar] = <functionName>(varargin)
 %
 
 % $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
-%<Description>
+% Creation of this function.
 
 
 end

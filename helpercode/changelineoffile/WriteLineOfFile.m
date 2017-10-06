@@ -48,24 +48,25 @@ elseif nargin > 3
     error([mabsPathFile 'does not handle: ' num2str(nargin) ' arguments']);
 end
 
-% read the file
-dataArray = readTxtFile(absPathFile);
+%% read the file
+txtFile = readTxtFile(absPathFile);
 
-if length(dataArray) < lineNumber
-    % Fill dataArray
-    for nEl = length(dataArray)+1:lineNumber-1
-        dataArray{nEl} = '';
+if length(txtFile) < lineNumber
+    % Fill txtFile
+    for nEl = length(txtFile)+1:lineNumber-1
+        txtFile(nEl) = '';
     end
 end
 % write txt to line
-dataArray{lineNumber} = lineTxt;
+txtFile(lineNumber) = lineTxt;
 % delete the current file
 delete(absPathFile)
-% write to file
+
+%% write to file
 try
     fileID = fopen(absPathFile,'w');
-    for i = 1:length(dataArray)
-        fprintf(fileID,'%s\r\n',dataArray{i});
+    for i = 1:length(txtFile)
+        fprintf(fileID,'%s\r\n',txtFile(i));
     end
     % close the file
     fclose('all');

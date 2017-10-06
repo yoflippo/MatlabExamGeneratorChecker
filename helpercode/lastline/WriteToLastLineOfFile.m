@@ -48,23 +48,23 @@ end
 
 
 % read the file
-dataArray = readTxtFile(absPathFile);
+txtFile = readTxtFile(absPathFile);
 
 % write txt to line
 if iscell(lineTxt) && max(size(lineTxt)) > 1
     for nl = 1:max(size(lineTxt))
-        dataArray{length(dataArray)+1} = lineTxt{nl};
+        txtFile{length(txtFile)+1} = lineTxt{nl};
     end
 else
-    dataArray{length(dataArray)+1} = lineTxt;
+    txtFile{length(txtFile)+1} = lineTxt;
 end
 % delete the current file
 delete(absPathFile)
 % write to file
 try
     fileID = fopen(absPathFile,'w');
-    for i = 1:length(dataArray)
-        fprintf(fileID,'%s\r\n',dataArray{i});
+    for i = 1:length(txtFile)
+        fprintf(fileID,'%s\r\n',txtFile{i});
     end
     % close the file
     fclose('all');

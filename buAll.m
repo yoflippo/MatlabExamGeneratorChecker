@@ -1,6 +1,5 @@
 %% Zip all files in case a deletion goes wrong
-d = char(datetime('now'));
-d = strrep(d,':','_'); d = strrep(d,' ','_'); d = strrep(d,'-','_');
+d = datetimetxt();
 warning off;
 apBU = fullfile(GetPathOneLevelUp(pwd),'Biostatica_Auto_Matlab_BU');
 mkdirIf(apBU);

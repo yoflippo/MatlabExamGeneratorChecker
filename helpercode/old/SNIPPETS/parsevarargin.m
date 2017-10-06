@@ -1,33 +1,27 @@
 %% Parse varargin
-namefunction = 'readAndFindTextInFiles';
 
-maxargin = 2*5+2;
+% Test for right input
 minargin = 2;
+maxargin = minargin+2;
 if nargin < minargin
-    error([ namefunction ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
 end
 if nargin > maxargin
-    error([ namefunction ':Needs max ' num2str(minargin) ' arguments ']);
+    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
 end
 
-fExtension = [];
-AbsPath = [];
-AskUserForPath = [];
+% Create variables that need to be filled
 SearchString = [];
 blAskUser = false;
-blEdit = false;
-blBreakpoint = false;
+
 for narg = 1:nargin
     sc = upper(varargin{narg});
     switch sc
-        case {'EXT'}
-            fExtension = varargin{narg+1};
-        case {'ABSPATH'}
-            AbsPath = varargin{narg+1};
         case {'ASKUSER'}
             blAskUser = true;
         case {'SEARCHSTRING', 'SS'}
             SearchString = varargin{narg+1};
         otherwise
+            % Do nothing in the case of varargin{narg+1};
     end
 end

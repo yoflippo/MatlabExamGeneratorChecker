@@ -20,7 +20,7 @@ function res = opdracht_1_versie_2_CHECK(apStudentSol)
 res = 0;
 numtests = 1;
 
-
+tmp = readCleanMFile(apStudentSol);
 
 
 %% Use the cleaned code to check for certain lines
@@ -57,9 +57,7 @@ if ~isempty(char(tmp))
             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
         end
     end
-        
-    %% Delete temporary file
-    delete(absPathTmp);
+
 end
 
 end %function

@@ -35,32 +35,20 @@ function [oTxt oTxtBelowSep] = readTxtFile(varargin)
 %               outvar:     a cell based variable.
 %
 % EXAMPLES:
-%
+%               [TXTFILE BELOW] = readTxtFile(apDataCopy,'%~>');
 %
 
 % $Revision: 0.0.0 $  $Date: 2017-09-15 $
 % Creation of the function
 
 
-%%% THIS FUNCTION CAN BE IMPROVED VERY MUCH!!!!
-% % % % % % % % % delimiter = {'\n'};
-% % % % % % % % % formatSpec = '%s';
-% % % % % % % % % fileID = fopen(apScript,'r');
-% % % % % % % % % txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
-% % % % % % % % %     'TextType', 'string',  'ReturnOnError', false);
-% % % % % % % % % fclose(fileID);
-% % % % % % % % % txt = txt{1,1};
-
-
 %% Parse varargin
-
-namefunction = 'readTxtFile';
 minargin = 1;
 maxargin = minargin+1;
 if nargin < minargin
-    error([ namefunction ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
 elseif nargin > maxargin
-    error([ namefunction ':Needs max ' num2str(minargin) ' arguments ']);
+    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
 end
 
 %% Proces needed input
@@ -71,55 +59,36 @@ end
 blSeparatorPresent = false;
 if nargin == maxargin
     separator = varargin{2};
-    txtBelow = '';
     blSeparatorPresent = true;
 end
 
-blSeparatorFound = false;
 try
+    %% Read file (as-is, with spaces and uglyness preserved)
+    delimiter = {'\n'};
+    formatSpec = '%s';
     fileID = fopen(apFile,'r');
-    c = 1;
-    warning off
-    tline{c,1} = fgetl(fileID);
-%     tline{c,1} = removeReturnAndNewline(tline{c,1});
-    while ischar(tline{c,1})
-        c = c + 1;
-        tmp = fgetl(fileID);
-        % Do not use EOF
-        if ~ischar(tmp)
-            break;
-        end     
-        tline{c,1} = tmp;
- 
-        %% Test for separator
-        if (blSeparatorPresent && contains(tmp,separator)) || blSeparatorFound
-            if contains(tmp,separator)
-                k = 1;
-            end
-            txtBelow{k,1} = tline{c,1};
-            blSeparatorFound = true;
-            k = k + 1;
-        else
-            lastline = c;
-        end
-    end
+    txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
+        'TextType', 'string',  'ReturnOnError', false);
     fclose(fileID);
-    warning on
-    if tline{1} == -1
-        oTxt = '';
-    else
-        oTxt = tline;
-    end
+    txt = txt{1,1};
     
-    if blSeparatorFound
-        oTxtBelowSep = char(txtBelow);
-        % Remove line with separator
-        oTxtBelowSep = oTxtBelowSep(2:end,:);
-    else
-        oTxtBelowSep = '';
-    end
+    %% Assign values
+    oTxtBelowSep = [];
+    oTxt = txt;
+    
+    %% Divide txt above/below separator, ignoring the separator
+    if blSeparatorPresent
+        for nL = 1:length(txt)
+            if contains(txt(nL),separator)
+                oTxt = txt(1:nL-1);
+                oTxtBelowSep = txt(nL+1:end);
+                break;
+            end
+        end
+    end 
 catch
-    fclose(fileID);
+    fclose('all');
 end
+
 
 end %function readTxtFile

@@ -40,7 +40,7 @@ faults = checkcode(apFile,'-id','-fullpath');
 
 %% Search struct faults for certain keywords which say a semicolon is
 % missing.
-ccKeywords = {'NOPRT' 'PRTCAL'};
+ccKeywords = {'NOPRT' 'PRTCAL' 'NOPTS'};
 index = [];
 for nK = 1:length(ccKeywords)
     index = [index find(strcmp({faults.id}, ccKeywords{nK})==1)];
@@ -49,19 +49,13 @@ index = sort(index);
 
 %% Read the file
 try
-    delimiter = {'\n'};
-    formatSpec = '%s';
-    fileID = fopen(apFile,'r');
-    txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
-        'TextType', 'string',  'ReturnOnError', false);
-    fclose(fileID);
-    txt = txt{1,1};
+    txt = readTxtFile(apFile);
 catch
     error([mfilename ': Could not read the file']);
 end
+
+
 %% Add semicolons
-
-
 % Browse through faults
 for n = 1:length(index)
     idx = faults(index(n)).line;
@@ -83,19 +77,9 @@ end
 catch
 end
 
-%% Write to file
-try
-    fileID = fopen(apFile,'w');
-    for i = 1:length(txt)
-        fprintf(fileID,'%s\r\n',txt{i});
-    end
-    % close the file
-    fclose('all');
-catch
-    fclose('all');
-    error([mfilename ': Could not write to the file']);
-end
 
+%% Write to file
+writetxtfile(apFile,txt);
 otxt = txt;
 
 end

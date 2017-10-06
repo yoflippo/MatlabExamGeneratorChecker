@@ -1,38 +1,80 @@
 clear all; close all; clc;
-endFile = 'test';
+tic
+nmCopy = 'copy.m';
 testData = {'testData_ReadCleanMFile1.m' 'testData_ReadCleanMFile2.m' };
 
 %% Expect a file called 'data.txt' in close proximity, get abs. path
 pathThisFile = fileparts(mfilename('fullpath'));
-absPathData = fullfile(pathThisFile,testData{1});
-fullNameCopTestdata = [endFile '.m'];
-absPathDataCopy = fullfile(pathThisFile,fullNameCopTestdata);
+apData = fullfile(pathThisFile,testData{1});
+apDataCopy = fullfile(pathThisFile,nmCopy);
 
 
 %% TEST: reading all lines of file
 % Copy shizzel
-copyfile(absPathData,absPathDataCopy);
+copyfile(apData,apDataCopy);
 fclose('all');
-delete(endFile)
 
-TXTFILE = readCleanMFile(absPathDataCopy);
+TXTFILE = readCleanMFile(apDataCopy);
 
 assert(~isempty(strfind(TXTFILE,'%')));
 assert(~isempty(strfind(TXTFILE,' ')));
-delete(absPathDataCopy);
-makeMFileFromCells(endFile,TXTFILE);
-open(endFile)
+delete(apDataCopy);
+makeMFileFromCells(nmCopy,TXTFILE);
+open(nmCopy)
 
 %% TEST: reading empty file
 % Copy shizzel
-absPathData = fullfile(pathThisFile,testData{2});
-copyfile(absPathData,absPathDataCopy);
+apData = fullfile(pathThisFile,testData{2});
+copyfile(apData,apDataCopy);
 fclose('all');
 
-TXTFILE = readCleanMFile(absPathDataCopy);
-assert(~isempty(TXTFILE));
+TXTFILE = readCleanMFile(apDataCopy);
+assert(isempty(TXTFILE));
+delete(apDataCopy);
 
-delete([endFile '.m'])
+%% TEST: new functionality
+% Copy shizzel
+apData = fullfile(pathThisFile,testData{1});
+copyfile(apData,apDataCopy);
+fclose('all');
+clear TXTFILE;
+TXTFILE = readCleanMFile('-ap',apDataCopy);
+delete(apDataCopy);
+assert(~isempty(strfind(TXTFILE,'%')));
+assert(~isempty(strfind(TXTFILE,' ')));
 
-%% Finally
-delete(absPathDataCopy)
+
+%% TEST: new functionality with creation of copied file to leave old file intact
+apData = fullfile(pathThisFile,testData{1});
+copyfile(apData,apDataCopy);
+fclose('all');
+clear TXTFILE;
+TXTFILE = readCleanMFile('-ap',apDataCopy,'-mc');
+delete(apDataCopy);
+apCopiedFile = replace(apDataCopy,'.m','_COPY.m');
+if exist(apCopiedFile)
+    delete(apCopiedFile);
+    assert(true)
+else
+    assert(false)
+end
+assert(~isempty(strfind(TXTFILE,'%')));
+assert(~isempty(strfind(TXTFILE,' ')));
+
+
+%% TEST: no spaces
+apData = fullfile(pathThisFile,testData{1});
+copyfile(apData,apDataCopy);
+fclose('all');
+clear TXTFILE;
+[TXTFILE a NOSPACES] = readCleanMFile('-ap',apDataCopy,'-mc','-ns');
+delete(apDataCopy);
+apCopiedFile = replace(apDataCopy,'.m','_COPY.m');
+if exist(apCopiedFile)
+    delete(apCopiedFile);
+    assert(true)
+else
+    assert(false)
+end
+% % % % assert(~all(ismember(NOSPACES,' ')));
+toc

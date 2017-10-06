@@ -58,28 +58,15 @@ for nL = 1:length(txt)
     end
 end
 
-% Remove empty lines
-txt(all(txt=="",2),:)=[];
 
 % Remove trailling space
 txt = deblank(txt);
-
-% Remove new created empty lines
+% Remove empty lines
 txt(all(txt=="",2),:)=[];
 
+
 %% Write to file
-try
-    fileID = fopen(apFile,'w');
-    for i = 1:length(txt)
-        fprintf(fileID,'%s\r\n',txt{i});
-    end
-    % close the file
-    fclose('all');
-catch err
-    fclose('all');
-    disp(err)
-    error([mfilename ': Could not write to the file']);
-end
+writetxtfile(apFile,txt);
 
 
 end

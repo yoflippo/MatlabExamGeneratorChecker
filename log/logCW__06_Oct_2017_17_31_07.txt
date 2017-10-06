@@ -1,0 +1,10 @@
+a
+{Undefined function or variable 'a'.
+} 
+a =1
+
+a =
+
+     1
+
+diary off

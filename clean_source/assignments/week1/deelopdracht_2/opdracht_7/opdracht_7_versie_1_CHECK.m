@@ -36,7 +36,7 @@ literalsA = {'NaN' 'koln=8' 'rijn=3'};
 
 %% Commence the TESTING !!!
 [path name ext] = fileparts(apStudentSol);
-[txtCleanedStudentSolution apCleaned] = readCleanMFile(apStudentSol);
+[txtCleanedStudentSolution apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
 
 if ~isempty(char(txtCleanedStudentSolution))
     %% Run the solution file - HAS TO WORK!!
@@ -54,11 +54,11 @@ if ~isempty(char(txtCleanedStudentSolution))
         eval(['clear ' nameVars{nV}  ';']);
     end
     
-    %% Run the original student scripts, if not working no points!
+    %% Run the cleaned student script, if not working no points!
     try
         run(apCleaned);
-        if exist(apClean,'file')
-            delete(apClean);
+        if exist(apCleaned,'file')
+            delete(apCleaned);
         end
     catch
         delete(apCleaned);

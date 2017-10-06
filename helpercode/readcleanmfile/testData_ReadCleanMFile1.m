@@ -43,3 +43,4 @@ end
 % The basefolder should only be assigned if previous code has executed
 % correctly
 BASEFOLDER = pwd; %TEST
+

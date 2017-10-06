@@ -1,4 +1,6 @@
 clear all;
+diary(fullfile(pwd,'log',['logCW_' mfilename '_' datetimetxt() '.txt']));
+datetime
 global BASEFOLDER;
 InitAll
 dbstop if error
@@ -37,7 +39,7 @@ end
 cd(BASEFOLDER);
 toc
 
-%% Copy MC files to clean_source -> assignments
+%% Copy files clean_source -> assignments
 disp('Copy MC files')
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
@@ -52,9 +54,9 @@ for nWk = 1:length(gWeekNames)
         copyfiles(apClnSrc,apFin);
         % Check the files in each folder
         cd(apClnSrc)
-        nFilesClnSrc = dir(['**' filesep '*.m']);
+        nFilesClnSrc = dirmf();
         cd(apFin)
-        nFilesFin = dir(['**' filesep '*.m']);
+        nFilesFin = dirmf();
         if ~isequal(length(nFilesFin), length(nFilesClnSrc))
             error('Files not copied correctly');
         end
@@ -66,7 +68,7 @@ fclose('all');
 cd(BASEFOLDER)
 toc
 
-%% execute generated all assignments script
+%% Execute generated all assignments script
 disp('execute generate all script');
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
@@ -84,7 +86,7 @@ toc
 disp('Check if al "checking" files are in working order');
 assert(CheckSolCheckDirFunc(fullfile(BASEFOLDER,'assignments')));
 
-%% execute create week assignment scripts
+%% execute create week assignment scripts, Create assignments for individual students
 disp('execute create week assignment scripts');
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
@@ -139,7 +141,17 @@ end
 toc
 cd(BASEFOLDER)
 
+datetime
+diary off
+
+%% Backup if all is working
+if askuser('Is all in working order?',false)
+    buAll
+end
+
+
 return;
+
 %% Check manually copied submitted files (*&^%$#@#$%^&*&^%$#@#$%^&^%$#$%^&
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
@@ -154,7 +166,7 @@ catch
 end
 toc
 
-%% Backup if all is working
-if askuser('Is all in working order?',false)
-    buAll
-end
+
+
+
+

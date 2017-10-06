@@ -1,12 +1,12 @@
 %% Vraag 8
 %
-% Stelling 1:   Bij het uitvoeren van de onderstaande code wordt de 
-%				vector drie keer zo lang:                           
-%				                                                    
-%				------------code--------------                      
-%				vector = 22:44;                                     
-%				vector * 3;                                         
-%				------------code--------------                      
+% Stelling 1:   In de volgende code wordt alleen de waarde van het eerste 
+%				element drie keer zo groot.                               
+%				                                                          
+%				------------code--------------                            
+%				vector = 22:44;                                           
+%				vector * 3;                                               
+%				------------code--------------                            
 %
 % Stelling 2:   Je kunt in Matlab niet vectoren met elkaar vermenigvuldigen.
 %

@@ -1,4 +1,4 @@
-function [oCopy, oApCopy] = readCleanMFile(apDes)
+function [oCopy, oApCopy, oNospaces] = readCleanMFile(varargin)
 %READCLEANMFILE A simple function that make a copy of an M-file and cleans
 %the copy.
 %
@@ -42,15 +42,69 @@ function [oCopy, oApCopy] = readCleanMFile(apDes)
 % $Revision: 0.0.0 $  $Date: 2017-09-29 $
 % Creation of the function
 
+%% Parse varargin
+
+% Test for right input
+minargin = 1;
+maxargin = minargin+4;
+if nargin < minargin
+    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+end
+if nargin > maxargin
+    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
+end
+
+if nargin == 1
+    apDes = varargin{1};
+    blMakeCopy = false;
+    blNoSpaces = false;
+else
+    % Create variables that need to be filled
+    apDes = [];
+    blMakeCopy = false;
+    blNoSpaces = false;
+    oNospaces = [];
+    
+    for narg = 1:nargin
+        sc = upper(varargin{narg});
+        switch sc
+            case {'-AP','AP', '-APDES'}
+                apDes = varargin{narg+1};
+            case {'-MAKECOPY', '-MC', 'MC'}
+                blMakeCopy = true;
+            case {'-NS', '-NOSPACES', 'NS'}
+                blNoSpaces = true;
+            otherwise
+                % Do nothing in the case of varargin{narg+1};
+        end
+    end
+    
+    if isempty(apDes)
+        error([mfilename ': no path given.']);
+    end
+end
+
 %% Make copy so original file is kept intact
 apCopy = replace(apDes,'.m','_COPY.m');
 copyfile(apDes,apCopy);
 
+
 %% Clean up!
 removeCommentsAndEmptyLines(apCopy);
 
+%% Remove spaces do not change file
+if blNoSpaces
+    oNospaces = nospaces(apCopy);
+end
+
 %% Give to output
 oCopy = addSemiColons(apCopy);
-oApCopy = apCopy;
+
+if blMakeCopy
+    oApCopy = apCopy;
+else
+    oApCopy = [];
+    delete(apCopy);
+end
 
 end %function
