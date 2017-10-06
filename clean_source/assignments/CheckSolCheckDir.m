@@ -49,31 +49,31 @@ for i = 1:length(checkFiles);
     try
         % run the empty file on the target CHECK function
         eval(['res = ' checkFunction '(pathEmptyFile);'])
-        if round(res,1) ~= 0
+        if round(res,1) ~= 0.0
             res
             error('The Check function should return a result of zero');
         end
         % run the SOLUTION file on the target CHECK function
         eval(['res = ' checkFunction '(pathSolutionFile);'])
-        if round(res,1) ~= 1
+        if round(res,1) ~= 1.0
             res
             error('The Check function should return a result of one');
         end
         % run the CHEAT file on the target CHECK function
         if exist(cheatFile,'file')
             eval(['res = ' checkFunction '(pathCheatFile);'])
-            if res == 1
+            if res > 0.5
                 res
                 error('The CHEAT function should return a result of less then one');
             end
         end
-        disp([extractAfter(pathCheckFile,'week') ': works correctly']);
-    catch errMess
+        disp([filename ': works correctly']);
+    catch catchMessage
         disp('something went wrong with this file');
-        disp(errMess);
         edit(pathCheckFile);
         edit(pathSolutionFile);
         edit(pathEmptyFile);
+        catchMessage
         return
     end
     rmpath(genpath(pathname))

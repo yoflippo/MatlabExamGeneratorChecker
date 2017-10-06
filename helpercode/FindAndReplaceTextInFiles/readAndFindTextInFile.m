@@ -1,4 +1,4 @@
-function [bool linenumber linetxt] = readAndFindTextInFile(absPathOfFile,SearchString)
+function [bool cntFound linenumber linetxt] = readAndFindTextInFile(absPathOfFile,SearchString)
 
 absPathFn = absPathOfFile;
 delimiter = {''};
@@ -11,9 +11,10 @@ fclose(fileID);
 bool = false;
 linenumber = [];
 linetxt = [];
+cntFound = 0;
 try
     for nLines = 1:length(dataArray{1,1})
-        txt = dataArray{1,1}(nLines);      
+        txt = dataArray{1,1}(nLines);
         % Search in the string
         if ~isempty(txt)
             if findstr(char(txt),SearchString)
@@ -21,7 +22,7 @@ try
                 bool = true;
                 linenumber = nLines;
                 linetxt = txt;
-                break;
+                cntFound = cntFound + 1;
             end
         end
     end

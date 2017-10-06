@@ -1,13 +1,23 @@
 clear all;
+
 diary(fullfile(pwd,'log',['logCW_' mfilename '_' datetimetxt() '.txt']));
 datetime
-global BASEFOLDER;
-InitAll
 dbstop if error
-
+global BASEFOLDER;
 global gWeekNames;
 gWeekNames = {'week1' 'week2'};
 
+InitAll
+
+if ismac
+    disp('Mac plaform')
+elseif isunix
+    disp('Linux plaform')
+elseif ispc
+    disp('Windows platform')
+else
+    disp('Platform not supported')
+end
 
 %% Generate MC files
 %To Do give some output to user

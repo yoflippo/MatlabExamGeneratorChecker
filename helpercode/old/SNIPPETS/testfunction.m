@@ -5,9 +5,7 @@ res = 0;
 
 %%==========
 
-%% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
-% SHOULD CHANGE!
-nameVars = {'XXX' 'XXX' 'XXX'};
+
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
 % NO SPACES ALLOWED!!
@@ -20,9 +18,8 @@ literalsA = {'NaN' 'XXX'};
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
-% 1- Variables with specific values and
-% 2- Literals that should be present and
-% 3- Lterals that should be abscent
+% 1- Literals that should be present and
+% 2- Lterals that should be abscent
 % You should take cornercases in to consideration as well. So add those
 % tests as well.
 
@@ -31,62 +28,35 @@ literalsA = {'NaN' 'XXX'};
 
 %% Commence the TESTING !!!
 [path name ext] = fileparts(apStudentSol);
+nmSolution = replace(mfilename,'_CHECK','_SOL');
 [txtCleanedStudentSolution apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
+[apClean nmClean extClean] = fileparts(apCleaned);
 %txtCleanedStudentSolution= readCleanMFile(apStudentSol);
 
 if ~isempty(char(txtCleanedStudentSolution))
-    %% Run the solution file - HAS TO WORK!!
-    try
-        run(replace(mfilename,'_CHECK','_SOL'));
-    catch
-        return;
-    end
+    %% Create compare the solution file with the student solution
     
-    % Get values and variables from the SOLUTION file
-    for nV = 1:length(nameVars)
-        % Save the variables in the SOLUTION FILE
-        eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
-        % Remove solution variables from Workspace.
-        eval(['clear ' nameVars{nV}  ';']);
-    end
-    
-    %% Run the cleaned student script, if not working no points!
-    try
-        if exist(apCleaned,'file')
-            run(apCleaned);
-            txtns = nospaces(apCleaned);
-            apNospaces = replace(apCleaned,'.m','_NS.m');
-        else
-            run(apStudentSol);
-            txtns = nospaces(apStudentSol);
-            apNospaces = replace(apStudentSol,'.m','_NS.m');
-        end
-        writetxtfile(apNospaces,txtns);
-    catch
-        delete(apCleaned);
-        delete(apNospaces);
-        return;
-    end
-    
-    %% Perform tests for certain variables in the Workspace
-    for nV = 1:length(nameVars)
+    series = 1:2:10;
+    for z = series
+        varInput = XXXX;
         try
-            eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
-            if blTest
+            if eval([nmClean '(varInput)']) == eval([nmSolution '(varInput)'])
                 res = res + 1;
             end
-        catch ErrMess
-            % Test for a generated file! Could also be done by testing for Hash
-            if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-            end
+        catch
         end
     end
     
+    
+    %% Create a file from the cleaned file that contains no spaces, for easy txt comparisons
+    txtns = nospaces(apCleaned);
+    apNospaces = replace(apCleaned,'.m','_NS.m');
+    writetxtfile(apNospaces,txtns);
     
     %% Check for literal answers that MUST BE PRESENT
     for nLp = 1:length(literalsP)
         lit = literalsP{nLp};
+        %             lit = lit(lit ~= ' ');% Remove spaces
         if readAndFindTextInFile(apNospaces,lit) || readAndFindTextInFile(apNospaces,fliplr(lit))
             res = res + 1;
         end
@@ -115,7 +85,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     
     
     %% Calculate the result
-    res = (res-nAbs)/(length(literalsP)+length(nameVars));
+    res = (res-nAbs)/(length(literalsP)+length(series));
     if res < 0
         res = 0;
     elseif res > 1
