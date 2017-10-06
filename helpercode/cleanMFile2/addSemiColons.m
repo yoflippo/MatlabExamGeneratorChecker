@@ -1,4 +1,4 @@
-function addSemiColons(apScript)
+function otxt = addSemiColons(apFile)
 %ADDSEMICOLONS A script that automatically adds semicolons to a file.
 %
 % ------------------------------------------------------------------------
@@ -24,7 +24,7 @@ function addSemiColons(apScript)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               apScript:   The absolute path of a script/function
+%               apFile:   The absolute path of a script/function
 %
 % RETURN:
 %               nothings
@@ -36,14 +36,14 @@ function addSemiColons(apScript)
 % $Revision: 0.0.0 $  $Date: 2017-05-10 $
 % Creation of script
 
-faults = checkcode(apScript,'-id','-fullpath');
+faults = checkcode(apFile,'-id','-fullpath');
 
 %% Search struct faults for certain keywords which say a semicolon is
 % missing.
-keywords = {'NOPRT' 'PRTCAL'};
+ccKeywords = {'NOPRT' 'PRTCAL'};
 index = [];
-for nK = 1:length(keywords)
-    index = [index find(strcmp({faults.id}, keywords{nK})==1)];
+for nK = 1:length(ccKeywords)
+    index = [index find(strcmp({faults.id}, ccKeywords{nK})==1)];
 end
 index = sort(index);
 
@@ -51,7 +51,7 @@ index = sort(index);
 try
     delimiter = {'\n'};
     formatSpec = '%s';
-    fileID = fopen(apScript,'r');
+    fileID = fopen(apFile,'r');
     txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
         'TextType', 'string',  'ReturnOnError', false);
     fclose(fileID);
@@ -61,8 +61,6 @@ catch
 end
 %% Add semicolons
 
-% Remove trailling space
-txt = deblank(txt);
 
 % Browse through faults
 for n = 1:length(index)
@@ -73,17 +71,21 @@ end
 % Add a semicolon for every file that ends with )
 bck = ')';
 % Walk through txt
+try
 for nL = (faults(1).line+1):length(txt)
     tmp = txt{nL}; % Remove cell bothersomeness and trailing spaces
-    if ~isempty(tmp) && contains(tmp(end-1:end),bck) && ~contains(tmp(end-1:end),';')
+    if ~isempty(tmp) && contains(tmp(end),bck) && ~contains(tmp(end),';') ...
+            && ~contains(tmp,iskeyword())
         tmp = [tmp ';'];
     end
     txt{nL} = tmp;
 end
+catch
+end
 
 %% Write to file
 try
-    fileID = fopen(apScript,'w');
+    fileID = fopen(apFile,'w');
     for i = 1:length(txt)
         fprintf(fileID,'%s\r\n',txt{i});
     end
@@ -94,5 +96,6 @@ catch
     error([mfilename ': Could not write to the file']);
 end
 
+otxt = txt;
 
 end

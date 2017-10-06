@@ -1,5 +1,6 @@
-function [outVar] = readTxtFile(varargin)
-%READTXTFILE A simple function that reads every line of a text-based file.
+function [oCopy, oApCopy] = readCleanMFile(apDes)
+%READCLEANMFILE A simple function that make a copy of an M-file and cleans
+%the copy.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -41,81 +42,15 @@ function [outVar] = readTxtFile(varargin)
 % $Revision: 0.0.0 $  $Date: 2017-09-29 $
 % Creation of the function
 
-%% Parse varargin
-namefunction = 'readCleanMFile';
-maxargin = 1;
-minargin = 1;
-if nargin < minargin
-    error([ namefunction ':Needs at minimum' num2str(minargin) ' argument(s) ']);
-end
-if nargin > maxargin
-    error([ namefunction ':Needs max ' num2str(minargin) ' arguments ']);
-end
+%% Make copy so original file is kept intact
+apCopy = replace(apDes,'.m','_COPY.m');
+copyfile(apDes,apCopy);
 
+%% Clean up!
+removeCommentsAndEmptyLines(apCopy);
 
-fileID = fopen(varargin{1},'r');
-c = 1;
-delimiter = {''};
-formatSpec = '%s%[^\n]';
-dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,...
-    'TextType', 'string',  'ReturnOnError', false);
-fclose(fileID);
-
-for nLns = 1:length(dataArray{1,1})
-    line = dataArray{1,1}(nLns);
-    dataArray{1,1}(nLns) = cleanCode(line);
-end
-
-outVar = removeEmpty(dataArray{1,1});
-end
-
-%% Remove empty lines
-function oLines = removeEmpty(tline)
-cntLn = 1;
-txt = "";
-for nL = 1:length(tline)
-    if ~isempty(char(tline(nL)))
-        txt(cntLn,1) = string(tline(nL));
-        cntLn = cntLn + 1;
-    end
-end
-oLines = txt;
-end
-
-%% Clean code
-function oCleanCode = cleanCode(tline)
-
-% Remove comments
-if ~isempty(tline) && contains(tline,'%')
-    tline = extractBefore(string(tline),'%');
-elseif isempty(tline)
-    tline = "";
-end
-
-% remove all spaces, returns, newlines
-if ~contains(tline,["[","]","(",")","cd",'=='])
-    tline = erase(tline,sprintf('clear all;'));
-    tline = erase(tline,sprintf('clear all'));
-    tline = erase(tline,newline);
-    tline = erase(tline,sprintf('\r'));
-    tline = erase(tline,sprintf(' '));
-    tline = erase(tline,sprintf('\t'));
-end
-
-% Put some spaces back
-if strlength(tline)>1
-    keywords = {'close' 'clear' '...'};
-    keywords = [keywords'
-        iskeyword()];
-    for nkw = 1:length(keywords)
-        if contains(tline,keywords(nkw))
-            tline = insertAfter(tline,keywords(nkw),' ');
-        end
-    end
-    if ~contains(tline,';') && ~contains(tline,keywords)
-        tline = strcat(tline,';');
-    end
-end
-oCleanCode = tline;
+%% Give to output
+oCopy = addSemiColons(apCopy);
+oApCopy = apCopy;
 
 end %function

@@ -9,9 +9,9 @@ nmFileDes = 'copy.m';
 copyfile(nmFileSrc,nmFileDes);
 
 apDes = fullfile(apThisFile,nmFileDes);
-decommentFile(apDes);
 removeCommentsAndEmptyLines(apDes);
-open(apDes)
-
+addSemiColons(apDes);
+open(apDes);
+run(apDes);
 % Delete copy of example
 delete(fullfile(apThisFile,nmFileDes));

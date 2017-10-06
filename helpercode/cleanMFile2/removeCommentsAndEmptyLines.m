@@ -61,6 +61,12 @@ end
 % Remove empty lines
 txt(all(txt=="",2),:)=[];
 
+% Remove trailling space
+txt = deblank(txt);
+
+% Remove new created empty lines
+txt(all(txt=="",2),:)=[];
+
 %% Write to file
 try
     fileID = fopen(apFile,'w');

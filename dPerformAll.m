@@ -5,7 +5,7 @@ dbstop if error
 
 global gWeekNames;
 gWeekNames = {'week1' 'week2'};
-buAll
+
 
 %% Generate MC files
 %To Do give some output to user
@@ -153,3 +153,8 @@ try
 catch
 end
 toc
+
+%% Backup if all is working
+if askuser('Is all in working order?',false)
+    buAll
+end
