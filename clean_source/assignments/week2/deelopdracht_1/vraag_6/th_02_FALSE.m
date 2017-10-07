@@ -1,0 +1,1 @@
+van een vector: v=[ 7 8 2 1] krijg je bij de aanroep v(1) de waarde 1

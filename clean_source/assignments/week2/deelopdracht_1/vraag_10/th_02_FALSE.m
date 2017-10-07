@@ -1,0 +1,1 @@
+Bij het opslaan van een functie geef je die een andere naam dan de functienaam 

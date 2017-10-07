@@ -1,0 +1,1 @@
+Bij het maken van een eigen functie geef je de output variabele dezelfde naam als je input variabele

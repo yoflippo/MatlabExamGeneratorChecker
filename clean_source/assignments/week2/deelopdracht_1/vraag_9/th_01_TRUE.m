@@ -1,0 +1,1 @@
+Wanneer je bij de functie strcmp() een 1 als antwoord krijgt betekend dat het geen wat je vergelijkt hetzelfde is.

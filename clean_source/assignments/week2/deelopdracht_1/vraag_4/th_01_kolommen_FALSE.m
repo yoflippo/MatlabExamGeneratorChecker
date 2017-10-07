@@ -1,0 +1,1 @@
+De eerste dimensie in Matlab zijn kolommen.
