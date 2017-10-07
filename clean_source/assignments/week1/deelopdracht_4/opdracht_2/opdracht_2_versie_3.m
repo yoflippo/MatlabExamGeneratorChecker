@@ -1,13 +1,5 @@
 %% Opdracht 2
-% Gegeven is onderstaande code om de spierdikte te berekenen.
-% De functie heeft twee 
-% Deze functie moet jezelf aanroepen m.b.v. een extra script.
-% Dat script moet jezelf maken en mag je  in dezelfde folder zetten als dit 
-% bestand. Dat script wordt niet nagekeken of gebruikt door ons.
-
-function spierdikte = opdracht_1(oppervlakte)
-    % De constante 'pi' zit standaard in Matlab, typ: 'pi' in het Command
-    % Window.
-    halvespierlengte = 10;
-
-end
+% Maak een functie die bij de input 'gtl' de waarde 100 optelt.
+% Die functie heet: 'opdracht_2' (zie hieronder). Geef de output de naam 'result'.
+% Maak zelf een script aan om deze functie te testen.
+% Dit bestand (wat je nu leest) mag enkel en alleen een functie bevatten.

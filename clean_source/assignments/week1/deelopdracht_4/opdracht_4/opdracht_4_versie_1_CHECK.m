@@ -1,14 +1,16 @@
-function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
+function res = opdracht_4_versie_1_CHECK(apStudentSol)
 res = 0;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-
+% % % % % % function result = opdracht_4(txt)
+% % % % % % result = ['opdracht_4: ' txt];
+% % % % % % end
 %%==========
 
 
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
-literalsP = {'XXX' 'XXX' 'XXX'};
+literalsP = {'function' 'result' 'opdracht_4(' 'opdracht_4(txt)' 'end' 'opdracht_4: '};
 % literalsP2t = {'XXX' 'XXX'}; % literals that are present 2 times.
 % FILL literalsA, With strings that should not be present.
 literalsA = {'NaN'};
@@ -35,9 +37,9 @@ nmSolution = replace(mfilename,'_CHECK','_SOL');
 if ~isempty(char(txtCleanedStudentSolution))
     %% Create compare the solution file with the student solution
     
-    series = 1:2:10;
-    for z = series
-        varInput = XXXX;
+    series = {'test1' 'mark' 'lollie'};
+    for z = 1:length(series)
+        varInput = series{z};
         try
             if eval([nmClean '(varInput)']) == eval([nmSolution '(varInput)'])
                 res = res + 1;
@@ -61,15 +63,15 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
     end
     
-    %% Check for literal answers that MUST BE PRESENT
-    for nLp = 1:length(literalsP2t)
-        lit = literalsP2t{nLp};
-        lit = lit(lit ~= ' ');% Remove spaces
-        [b n] = readAndFindTextInFile(apNospaces,lit);
-        if n >=2
-            res = res + 1;
-        end
-    end
+%     %% Check for literal answers that MUST BE PRESENT
+%     for nLp = 1:length(literalsP2t)
+%         lit = literalsP2t{nLp};
+%         lit = lit(lit ~= ' ');% Remove spaces
+%         [b n] = readAndFindTextInFile(apNospaces,lit);
+%         if n >=2
+%             res = res + 1;
+%         end
+%     end
     
     %% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
     nAbs = 0;

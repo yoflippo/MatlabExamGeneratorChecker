@@ -1,16 +1,21 @@
-function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
+function res = opdracht_3_versie_3_CHECK(apStudentSol)
 res = 0;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-
+% % % function spierdikte = opdracht_3(oppervlakte)
+% % %     halvespierlengte = 10;
+% % %     spierdikte = oppervlakte/(pi*halvespierlengte);
+% % % end
 %%==========
 
 
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
-literalsP = {'XXX' 'XXX' 'XXX'};
-% literalsP2t = {'XXX' 'XXX'}; % literals that are present 2 times.
+% NO SPACES ALLOWED!!
+literalsP = {'pi*halvespierlengte' 'opdracht_3' 'function' 'spierdikte'   };
+literalsP2t = {'spierdikte =' 'oppervlakte'};
 % FILL literalsA, With strings that should not be present.
+% NO SPACES ALLOWED!!
 literalsA = {'NaN'};
 
 
@@ -35,9 +40,9 @@ nmSolution = replace(mfilename,'_CHECK','_SOL');
 if ~isempty(char(txtCleanedStudentSolution))
     %% Create compare the solution file with the student solution
     
-    series = 1:2:10;
+    series = 0:2:10;
     for z = series
-        varInput = XXXX;
+        varInput = z;
         try
             if eval([nmClean '(varInput)']) == eval([nmSolution '(varInput)'])
                 res = res + 1;
@@ -56,7 +61,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     for nLp = 1:length(literalsP)
         lit = literalsP{nLp};
         lit = lit(lit ~= ' ');% Remove spaces
-        if readAndFindTextInFile(apNospaces,lit)
+        if readAndFindTextInFile(apNospaces,lit) || readAndFindTextInFile(apNospaces,fliplr(lit))
             res = res + 1;
         end
     end
@@ -105,6 +110,5 @@ try
     end
 catch
 end
-
 
 end %function

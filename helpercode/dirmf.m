@@ -1,6 +1,6 @@
 function odir = dirmf()
-%DIRMF The Matlab dir function specially for m-files. This function gets
-%the m-files of the current dir.
+%DIRMF The Matlab dir function specially for m-files. Please note that 
+% This function gets the m-files from the current dir (pwd).
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
