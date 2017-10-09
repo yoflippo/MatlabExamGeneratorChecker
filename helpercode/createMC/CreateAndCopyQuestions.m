@@ -203,14 +203,6 @@ for nWk = 1:length(weekDir)
                 WriteLineOfFile(apCheckFile,1,fnCopiedTemplate);
                 % clear variable to prevent polution of files
                 clear finalTxt
-                % %             % Check multiple exist
-                % %             if ~exist(fullfile(absPathDestination,[nameQuestion '.m']))
-                % %                 error([mfilename ': ' nameQuestion 'it not created!']);
-                % %             elseif ~exist(fullfile(absPathDestination,[nameQuestionSOL '.m']))
-                % %                 error([mfilename ': ' nameQuestionSOL 'it not created!']);
-                % %             elseif ~exist(fullfile(absPathDestination,[nameQuestionCHECK '.m']))
-                % %                 error([mfilename ': ' nameQuestionCHECK 'it not created!']);
-                % %             end
             end
         end
         clear TPA
@@ -278,7 +270,6 @@ cd ..;
 %% Test the generated MC-files
 CountNumberOfFALSE_TRUE;
 datetime
-cd(baseFolder);
 
 %% Copy the files to the right place
 copyMCToCleanSourceAssignment(baseFolder,apFin,weekDir);

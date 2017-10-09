@@ -3,72 +3,66 @@
 % the old. The scripts used in creating the exam are decoupled of the base
 % scripts. However, this does not mean that the helpercode is not used.
 
-clear all; %use with care
+clear all
+YEAR = 2017;
 
-%Go to path of this file
-apThisFile = fileparts(mfilename('fullpath'));
-cd(apThisFile)
-BASEFOLDER = GetPathOneLevelUp(apThisFile);
+%% Go to path of this file
+BASEFOLDEREX = fileparts(mfilename('fullpath'));
+cd(BASEFOLDEREX)
+BASEFOLDER = GetPathOneLevelUp(BASEFOLDEREX);
+addpath(genpath(fullfile(BASEFOLDEREX,'exam_helper')));
+addpath(genpath(fullfile(BASEFOLDER,'helpercode')));
 
-%% Make a dir of this exam
+%% Make a dir of this exam, with some extra directories, create some handy variables
 nmCurrExamDir = ['exam_' datetimetxt() ];
-mkdir(nmCurrExamDir)
+apCurrExam = fullfile(BASEFOLDEREX,'Created',nmCurrExamDir);
+mkdirIf(apCurrExam);
+mkdirIf(fullfile(apCurrExam,'fortesting'));
+apCurrExamLog = fullfile(apCurrExam,'log');
+mkdirIf(apCurrExamLog);
+weekNames = {'week1'};
 
 %% Some log settings
-diary(fullfile(pwd,nmCurrExamDir,['log_CW_' mfilename '_' datetimetxt() '.txt']));
+diary(fullfile(apCurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
 datetime
 ver
 dispPlatform
+clc
 dbstop if error
-weekNames = {'week1' 'week2'};
-BASEFOLDEREX = fileparts(mfilename('fullpath'));
-
-
-%% Regenerate files but this time for the EXAM folder
-%To Do give some output to user
-if ~isequal(pwd,BASEFOLDEREX)
-    cd(BASEFOLDEREX)
-end
-
-% % % % % %% Why???? should I redo everything or Why not????
-% % % % % %NOT: everything should be fine ass is
-% % % % % %NOT: all needed files are present
-% % % % % 
-% % % % % %REDO: all hash codes and dics are in different files which will take som
-% % % % % %redoing
-% % % % % %REDO: to have full control of what is needed
-% % % % % %REDO: newly created files, for the exam can be used now.
-
 
 %% Generate MC files
-apFin = fullfile(BASEFOLDEREX,nmCurrExamDir,'assignments');
-removeShitFromDir(apFin);
-CreateAndCopyQuestions(BASEFOLDER,apFin,weekNames);
+cd(BASEFOLDEREX)
+apCurrExamClean = fullfile(apCurrExam,'assignments');
+removeShitFromDir(apCurrExamClean);
+CreateAndCopyQuestions(BASEFOLDER,apCurrExamClean,weekNames);
 disp('Created MC-Questions')
+apFin = fullfile(apCurrExam,'exam');
 
-
-%% Redo the hashing of these files, make a custom file for this purpose
-% 1- Make sure a dic is made of all these files not just weekX
+%% Redo the hashing of the copied questions/assignments , make a custom file for this purpose
+% 1 - Make sure a dic is made of all these files not just weekX
+% 2 - Add the generation date to every exam file 
 % Try to find a way to extract separate parts of the rehashing script
 
 % check if a dictionary can contain everything needed bashed on only the
 % hash of a file.
+exam_addHashAndHeader
 
 %% Find ways to select folders
 % Important is to control the numbers of vragen/scripts/functions
 % IDEAS:
-% - Search for the number of Types of questions to make a selection.
+% -     Search for the number of Types of questions to make a selection.
 
-% 1 - Get folders with vragen/opdrachten and make a random selection
-%?but how to control the number of ass's?
-%+
+% -     Combine all assignments together in one pool and extract a certain
+% -     Give a number of each question
+% -     Rename the files and the internals of a file (maybe by using regex???)
+% --    test the working of a functionfile if name of function and name file
+%       are different
 
-% 2 - Make a preselection manually of certain folders
-%-Not automatically
+%% Creat a checking script
+% -     unzip all zip-files in submitted
+% -     Check for studentnumber
+% --    Find a way the student enters the studentnumber twice
+% -     loop through files
 
-% 3 - Combine all MC questions together in one pool and extract a certain
-% number of them.
-% Do the same thing for scripts 
-% Do the same thing for functions
-
-
+%% Finally, Clean up
+rmpath(genpath(fullfile(BASEFOLDEREX,'exam_helper')));

@@ -1,4 +1,4 @@
-function [ds] = datetimetxt()
+function [ds] = datetimetxt(varargin)
 %DATETIMESTRING Get the current date and time in string form.
 %
 % ------------------------------------------------------------------------
@@ -28,7 +28,7 @@ function [ds] = datetimetxt()
 %
 % RETURN:       
 %               ds:     a string with the date and time.
-% 
+%
 % EXAMPLES:
 %
 %
@@ -36,10 +36,30 @@ function [ds] = datetimetxt()
 % $Revision: 0.0.0 $  $Date: 2017-10-09 $
 % Creation of function.
 
+%% Parse varargin
+
+% Test for right input
+minargin = 0;
+maxargin = minargin+1;
+if nargin < minargin
+    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+end
+if nargin > maxargin
+    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
+end
+
+% Create variables that need to be filled
+blOnlyDate = false;
+if nargin == 1
+    blOnlyDate = true;
+end
 
 
 ds = char(datetime('now'));
 ds = strrep(ds,':','_');
+if blOnlyDate
+    ds = extractBefore(ds,' ')
+end
 ds = strrep(ds,' ','_');
 ds = strrep(ds,'-','_');
 end

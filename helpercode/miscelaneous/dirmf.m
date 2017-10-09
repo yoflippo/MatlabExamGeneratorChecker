@@ -1,4 +1,4 @@
-function odir = dirmf()
+function odir = dirmf(varargin)
 %DIRMF The Matlab dir function specially for m-files. Please note that 
 % This function gets the m-files from the current dir (pwd).
 %
@@ -31,12 +31,29 @@ function odir = dirmf()
 %               odir:   All m-files of current directory.
 % 
 % EXAMPLES:
-%
-%
+%               dirmf() -> get all mfiles in current path and subfolder.
+%               dirmf('CHECK') -> get all mfiles with 'CHECK' in name.
 
 % $Revision: 0.0.0 $  $Date: 2017-10-09 $
 % Creation of this function.
 
-odir = dir(['**' filesep '*.m']);
+odir = [];
+
+%% Parse varargin
+% Test for right input
+minargin = 0;
+maxargin = minargin+1;
+if nargin < minargin
+    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+end
+if nargin > maxargin
+    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
+end
+
+if isequal(nargin,0) %default behavior
+    odir = dir(['**' filesep '*.m']);
+else
+    odir = dir(['**' filesep '*' varargin{1} '*']);
+end
 
 end

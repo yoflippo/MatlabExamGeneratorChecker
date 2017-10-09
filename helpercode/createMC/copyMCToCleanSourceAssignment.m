@@ -9,8 +9,6 @@ for wk = 1:length(WeekNames)
     ass{wk} = getFolders(pwd);
     cd ..
 end
-cd(baseFolder);
-
 
 %% Copy files clean_source -> assignments
 for nWk = 1:length(WeekNames)
@@ -34,6 +32,5 @@ for nWk = 1:length(WeekNames)
     end
 end
 fclose('all');
-cd(baseFolder)
-
+cd(baseFolder);
 end

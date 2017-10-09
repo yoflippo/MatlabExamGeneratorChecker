@@ -39,11 +39,13 @@ function [HashCodes AbsPathHashCodes]= CheckHashCodeOfMFilesInFolder(absPathFold
 
 % $Revision: 0.0.0 $  $Date: 2017-07-26 $
 % Creation of function
+% $Revision: 0.0.1 $  $Date: 2017-10-09 $
+% Use of dirmf();
 
 % Get an overview of files
 currPath = pwd;
 cd(absPathFolder)
-mfiles = dir('**\*.m');
+mfiles = dirmf();
 HashCodes = [];
 AbsPathHashCodes = [];
 cnt = 1;

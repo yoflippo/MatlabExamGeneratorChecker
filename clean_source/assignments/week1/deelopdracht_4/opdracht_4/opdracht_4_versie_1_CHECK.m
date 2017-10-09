@@ -10,8 +10,9 @@ res = 0;
 
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
-literalsP = {'function' 'result' 'opdracht_4(' 'opdracht_4(txt)' 'end' 'opdracht_4: '};
-% literalsP2t = {'XXX' 'XXX'}; % literals that are present 2 times.
+literalsP = {   'function' 'result' 'opdracht_4(' 'opdracht_4(txt)' 'end' ...
+                'opdracht_4: ' 'txt'};
+literalsP2t = {'txt'}; % literals that are present 2 times.
 % FILL literalsA, With strings that should not be present.
 literalsA = {'NaN'};
 
