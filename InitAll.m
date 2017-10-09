@@ -33,6 +33,6 @@ for i = 1:length(LISTWITHNEEDEDFOLDERS)
             'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end
 end
-% The basefolder should only be assigned if previous code has executed
-% correctly
-BASEFOLDER = pwd;
+% The basefolder of the whole Matlab biostatica code. InitAll should be in
+% the root of this folder.
+BASEFOLDER = fileparts(mfilename('fullpath'));

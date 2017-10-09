@@ -1,1 +1,0 @@
-met een dubbelepunt (:) maak je een nieuwe rij aan binnen een matrix

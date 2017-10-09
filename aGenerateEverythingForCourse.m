@@ -50,7 +50,7 @@ debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WE
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
 
 studentFolder = LISTWITHNEEDEDFOLDERS{3};
-eval(['studentFolderOutput = dir(''studentnumber*' filesep '*.txt'');']);
+studentFolderOutput = dir('studentnumber*/*.txt');
 % go to the folder with studentnumbers. It is assumed to be a list with
 
 stdnmbFile = fullfile(studentFolderOutput(1).folder,studentFolderOutput(1).name);
@@ -114,9 +114,9 @@ for wk = 1:length(WEEKFOLDERS)
                 %header in the student specific assignment
                 if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
                     header = combineTextOfDifferentFiles('default_header.m','header_question.m');
-                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeScript.m'), 'file') == 2)
+                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_MakeScript.m'), 'file') == 2)
                     header = combineTextOfDifferentFiles('default_header.m','header_script.m');
-                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignments_MakeFunction.m'), 'file') == 2)
+                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_MakeFunction.m'), 'file') == 2)
                     header = combineTextOfDifferentFiles('default_header.m','header_function.m');
                 else
                     error('The current folder does not contain a type file');

@@ -1,1 +1,0 @@
-Met de standaardfunctie numel bereken je hoeveel elementen een matrix heeft.

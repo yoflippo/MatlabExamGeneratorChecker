@@ -1,1 +1,0 @@
-Met de standaardfunctie elements bereken je hoeveel elementen een matrix heeft.

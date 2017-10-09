@@ -1,81 +1,27 @@
+%% This files creates/checks everything expect for the exam.
 clear all;
-
 diary(fullfile(pwd,'log',['logCW_' mfilename '_' datetimetxt() '.txt']));
 datetime
+ver
+dispPlatform
 dbstop if error
 global BASEFOLDER;
 global gWeekNames;
-gWeekNames = {'week1' 'week2'};
+gWeekNames = {'week1'};
 
 InitAll
 
-if ismac
-    disp('Mac plaform')
-elseif isunix
-    disp('Linux plaform')
-elseif ispc
-    disp('Windows platform')
-else
-    disp('Platform not supported')
-end
-
-%% Generate MC files
+%% Generate MC files and copy all clean_source/assignments -> root/assignments
 %To Do give some output to user
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
 end
-disp('Generate MC files')
+disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
 tic
-CreateMCQuestions(BASEFOLDER);
+apFin = fullfile(BASEFOLDER,'assignments');
+% removeShitFromDir(apFin);
+CreateAndCopyQuestions(BASEFOLDER,apFin,gWeekNames);
 disp('Created MC-Questions')
-toc
-
-%% Get deelopdracht_x folderS
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
-tic
-apMCFiles = fullfile(pwd,LISTWITHNEEDEDFOLDERS{2});
-cd(apMCFiles)
-cd gen_mc
-cd generated_questions
-apGenMcQ = pwd;
-ass =[];
-for wk = 1:length(gWeekNames)
-    cd(gWeekNames{wk})
-    ass{wk} = getFolders(pwd);
-    cd ..
-end
-cd(BASEFOLDER);
-toc
-
-%% Copy files clean_source -> assignments
-disp('Copy MC files')
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
-tic
-for nWk = 1:length(gWeekNames)
-    currWkName = gWeekNames{nWk};
-    try
-        apClnSrc = fullfile(BASEFOLDER,'clean_source','assignments',currWkName);
-        apFin = fullfile(BASEFOLDER,'assignments',currWkName);
-        removeShitFromDir(fullfile(apFin))
-        copyfiles(apClnSrc,apFin);
-        % Check the files in each folder
-        cd(apClnSrc)
-        nFilesClnSrc = dirmf();
-        cd(apFin)
-        nFilesFin = dirmf();
-        if ~isequal(length(nFilesFin), length(nFilesClnSrc))
-            error('Files not copied correctly');
-        end
-    catch errMess
-        disp(errMess);
-    end
-end
-fclose('all');
-cd(BASEFOLDER)
 toc
 
 %% Execute generated all assignments script
@@ -96,7 +42,7 @@ toc
 disp('Check if al "checking" files are in working order');
 assert(CheckSolCheckDirFunc(fullfile(BASEFOLDER,'assignments')));
 
-%% execute create week assignment scripts, Create assignments for individual students
+%% Execute create week assignment scripts for individual students
 disp('execute create week assignment scripts');
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
@@ -109,7 +55,6 @@ catch err
     error('in bCreateWeekAssignments');
 end
 toc
-
 
 %% TEST if all INcorrect solutions files pass
 disp('Copy certain testfiles to directory submitted');
@@ -155,14 +100,14 @@ datetime
 diary off
 
 %% Backup if all is working
-if askuser('Is all in working order?',false)
+if askuser('Is all in working order?',true)
     buAll
 end
 
 
 return;
 
-%% Check manually copied submitted files (*&^%$#@#$%^&*&^%$#@#$%^&^%$#$%^&
+%% Check manually copied submitted files 
 if ~isequal(pwd,BASEFOLDER)
     cd(BASEFOLDER)
 end
