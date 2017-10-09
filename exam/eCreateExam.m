@@ -5,6 +5,10 @@
 
 clear all
 YEAR = 2017;
+nOfMulChoiceAssignment = 40;
+nOfScripts = 10;
+nOfFunctions = 10;
+weekNames = {'week1'}; % fill with the other weeks
 
 %% Go to path of this file
 BASEFOLDEREX = fileparts(mfilename('fullpath'));
@@ -20,7 +24,6 @@ mkdirIf(apCurrExam);
 mkdirIf(fullfile(apCurrExam,'fortesting'));
 apCurrExamLog = fullfile(apCurrExam,'log');
 mkdirIf(apCurrExamLog);
-weekNames = {'week1'};
 
 %% Some log settings
 diary(fullfile(apCurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
@@ -48,21 +51,29 @@ apFin = fullfile(apCurrExam,'exam');
 exam_addHashAndHeader
 
 %% Find ways to select folders
-% Important is to control the numbers of vragen/scripts/functions
-% IDEAS:
-% -     Search for the number of Types of questions to make a selection.
+AssInfo = getExamQuestionInfo(apCurrExamClean)
+cd(apCurrExamClean);
+save('AssInfo.mat','AssInfo')
 
-% -     Combine all assignments together in one pool and extract a certain
-% -     Give a number of each question
+%% Rename the files so that the string 'opdracht_X' in an assignment gets the 
+% right number.
+
 % -     Rename the files and the internals of a file (maybe by using regex???)
 % --    test the working of a functionfile if name of function and name file
 %       are different
 
-%% Creat a checking script
+%% Create the actual exam with a directory for each type of questions
+
+%% Create a folder with test data (everyting correct and incorrect) with dummy studentnumber
+
+%% Create a checking script
 % -     unzip all zip-files in submitted
 % -     Check for studentnumber
 % --    Find a way the student enters the studentnumber twice
 % -     loop through files
+
+%% Create a submission folder
+
 
 %% Finally, Clean up
 rmpath(genpath(fullfile(BASEFOLDEREX,'exam_helper')));

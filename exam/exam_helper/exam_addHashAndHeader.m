@@ -85,7 +85,8 @@ for wk = 1:length(weekNames)
                 cntHash = cntHash + 1;
                 
                 headerHash{2} = uniqueFN.HashCommentLine;
-                headerHash{3} = ['%                        ' nmCurrExamDir];
+                % Add exam date
+                headerHash{3} = ['%                            ' nmCurrExamDir];
                 % Grab default header text for every m-file
                 for hh = 2:length(header)
                     headerHash{length(headerHash)+1} = header{hh};

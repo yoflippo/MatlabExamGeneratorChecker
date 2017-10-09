@@ -36,7 +36,3 @@
 % Gebruik verder: 'halvespierlengte = 10;'.
 % De constante 'pi' zit standaard in Matlab, typ: 'pi' in het Command
 % Window.
-%
-% De functie in dit bestand moet je zelf aanroepen m.b.v. een extra script
-% en dat script moet je zelf maken en mag je in dezelfde folder zetten
-% als dit bestand. Dat script wordt niet nagekeken of gebruikt door ons.

@@ -37,7 +37,3 @@
 % 3 - Deel de maximum waarde door de minimum waarde geef die waarde als 
 % output terug.
 % 4 - De output van deze functie heet: 'MaxDivMin'.
-%
-% De functie in dit bestand moet je zelf aanroepen m.b.v. een extra script
-% en dat script moet je zelf maken en mag je in dezelfde folder zetten
-% als dit bestand. Dat script wordt niet nagekeken of gebruikt door ons.

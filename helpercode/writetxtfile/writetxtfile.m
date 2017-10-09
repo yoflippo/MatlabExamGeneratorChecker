@@ -67,7 +67,7 @@ try
     
 catch err
     fclose('all');
-    disp(err)
+    warning(err)
     error([mfilename ': Could not write to the file']);
 end
 
