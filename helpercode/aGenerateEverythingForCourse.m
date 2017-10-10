@@ -1,3 +1,5 @@
+function aGenerateEverythingForCourse()
+
 %GENERATEEVERYTHINGFORCOURSE
 %   The first step in using the files for the course. This script should be
 %   runned only once during the course.
@@ -43,7 +45,7 @@
 
 %% Start fresh
 InitAll
-debugOutput(DEBUGOUTPUT,['Start fresh: Generate all week assignments' num2str(WEEK)]);
+debugOutput(DEBUGOUTPUT,'Start fresh: Generate all week assignments');
 
 
 %% Read the student number and convert the list to e-mailadresses
@@ -69,16 +71,15 @@ cd(BASEFOLDER)
 debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
 
 removeShitFromDir(STUDENTSUBFOLDER)
-% mkdir(STUDENTSUBFOLDER)
-
-% Create a MAT file that stores the results of each student
-cd(STUDENTSUBFOLDER);
-studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
-for wk = 1:4
-    save([NAMERESULTMAT num2str(wk)],'studentMatrix');
-    mkdir(['week' num2str(wk)]);
-end
-cd(BASEFOLDER)
+% % % mkdir(STUDENTSUBFOLDER)
+% % % % Create a MAT file that stores the results of each student
+% % % cd(STUDENTSUBFOLDER);
+% % % studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
+% % % for wk = 1:4
+% % %     save([NAMERESULTMAT num2str(wk)],'studentMatrix');
+% % %     mkdir(['week' num2str(wk)]);
+% % % end
+% % % cd(BASEFOLDER)
 
 
 %% Create new filenames (with HASH code AND combine file names)
@@ -88,7 +89,7 @@ addpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
 addpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
 addpath(genpath(NAMEASSIGNMENTFOLDER))
 cd(NAMEASSIGNMENTFOLDER)
-savedHashes = []; 
+savedHashes = [];
 cntHash = 1;
 for wk = 1:length(WEEKFOLDERS)
     try

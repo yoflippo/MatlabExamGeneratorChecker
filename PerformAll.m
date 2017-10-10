@@ -1,10 +1,13 @@
-%% This files creates/checks every assignment and file 
+%% This files creates/checks every assignment and file
 clear all
 
 dbstop if error
 global BASEFOLDER;
 global gWeekNames;
-gWeekNames = {'week1'}; % Adjust me!!!
+Weeks = 1:2;
+for nW = Weeks
+    gWeekNames{1,nW} = ['week' num2str(nW)]; % Adjust me!!!
+end
 addpath(genpath('helpercode'));
 InitAll
 
@@ -16,9 +19,7 @@ dispPlatform
 
 %% Generate MC files and copy all clean_source/assignments -> root/assignments
 %To Do give some output to user
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
+cd(BASEFOLDER)
 disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
 tic
 apFin = fullfile(BASEFOLDER,'assignments');
@@ -29,9 +30,7 @@ toc
 
 %% Execute generated all assignments script
 disp('execute generate all script');
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
+cd(BASEFOLDER)
 tic
 try
     run('aGenerateEverythingForCourse.m')
@@ -52,46 +51,30 @@ if ~isequal(pwd,BASEFOLDER)
 end
 tic
 try
-    bCreateWeekAssignments();
+    bCreateWeekAssignments(Weeks);
 catch err
     disp(err)
     error('in bCreateWeekAssignments');
 end
 toc
 
-%% TEST if all INcorrect solutions files pass
-disp('Copy certain testfiles to directory submitted');
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
-tic
-apTestFiles = fullfile(pwd,'fortesting','week1','correct_0');
-apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
-removeShitFromDir(apFinDes);
-copyfiles(apTestFiles,apFinDes);
-disp('Execute check assignments');
-try
-    if ~isequal(cCheckStudentSubmissions(),1)
-        error('The average grade is not equal to 1');
-    end
-catch err
-    disp(err);
-    error(' cCheckStudentSubmissions() did not work properly');
-end
-toc
+
+%% Fill in week to test
+weekToCorrect = 1;
+weekNr = num2str(weekToCorrect);
+weekName = ['week' weekNr];
+
 
 %% TEST if all correct solutions files pass
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
-apTestFiles = fullfile(pwd,'fortesting','week1','correct_100');
-apFinDes = fullfile(pwd,STUDENTSUBFOLDER,'week1');
+cd(BASEFOLDER)
+apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_100');
+apFinDes = fullfile(pwd,STUDENTSUBFOLDER,weekName);
 removeShitFromDir(apFinDes);
 copyfiles(apTestFiles,apFinDes);
 disp('Execute check assignments');
 tic
 try
-    if ~isequal(cCheckStudentSubmissions(),10)
+    if ~isequal(cCheckStudentSubmissions(weekToCorrect),10)
         error('The average grade is not equal to 10');
     end
 catch
@@ -99,25 +82,41 @@ end
 toc
 cd(BASEFOLDER)
 
+
+%% TEST if all INcorrect solutions files pass
+disp('Copy certain testfiles to directory submitted');
+cd(BASEFOLDER)
+tic
+apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
+apFinDes = fullfile(pwd,STUDENTSUBFOLDER,weekName);
+removeShitFromDir(apFinDes);
+copyfiles(apTestFiles,apFinDes);
+disp('Execute check assignments');
+try
+    if ~isequal(cCheckStudentSubmissions(weekToCorrect),1)
+        error('The average grade is not equal to 1');
+    end
+catch err
+    disp(err);
+    error(' cCheckStudentSubmissions(week) did not work properly');
+end
+toc
 datetime
 diary off
 
+
 %% Backup if all is working
-if askuser('Is all in working order?',true)
-    buAll
-end
-
-
+disp('Making a backup');
+buAll
 return;
 
-%% Check manually copied submitted files 
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
-end
+
+%% Check manually copied submitted files
+cd(BASEFOLDER)
 disp('Check manually copied submitted files');
 tic
 try
-    if ~isequal(cCheckStudentSubmissions(),1)
+    if ~isequal(cCheckStudentSubmissions(weekToCorrect),1)
         error('The average grade is not equal to 1');
     end
 catch

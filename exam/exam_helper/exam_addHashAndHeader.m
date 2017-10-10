@@ -87,7 +87,15 @@ for wk = 1:length(weekNames)
                 headerHash{2} = uniqueFN.HashCommentLine;
                 % Add exam date
                 headerHash{3} = ['%                            ' nmCurrExamDir];
-                % Grab default header text for every m-file
+                
+                %% Get points of assignment
+                currPath = pwd;
+                cd(currFileAbsPath);
+                points
+                cd(currPath);        
+                headerHash{4} = ['%                              Deelpunten: ' num2str(deelpunten)];
+                
+                %% Grab default header text for every m-file
                 for hh = 2:length(header)
                     headerHash{length(headerHash)+1} = header{hh};
                 end

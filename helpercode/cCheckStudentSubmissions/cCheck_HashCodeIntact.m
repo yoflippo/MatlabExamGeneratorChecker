@@ -2,7 +2,7 @@
 
 
 % Get Hash of original assignment folder AND save it in MAT-file
-assCurrWk = fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME);
+assCurrWk = fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,weekName);
 dicWithHashes = GetDictionaryWithHashAndLocation(assCurrWk,SOLPOSTFIX);
 save(fullfile(assCurrWk,'dicHashesAbsPath.mat'),'dicWithHashes')
 hashCodes = keys(dicWithHashes);

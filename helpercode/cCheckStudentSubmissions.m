@@ -1,4 +1,4 @@
-function averageGrade = cCheckStudentSubmissions()
+function averageGrade = cCheckStudentSubmissions(Week)
 %CHECKSTUDENTSUBMISSIONS
 %
 % ------------------------------------------------------------------------
@@ -19,7 +19,7 @@ function averageGrade = cCheckStudentSubmissions()
 % ------------------------------------------------------------------------
 %
 % DESCRIPTION:
-% This script assumes that
+%
 %
 %
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -29,12 +29,13 @@ function averageGrade = cCheckStudentSubmissions()
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
 % Creation of script
 InitAll
-dbstop if error
+
 
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
-
-subWkFolder = fullfile(STUDENTSUBFOLDER,WEEKNAME);
+weekNr = num2str(Week);
+weekName = ['week' weekNr];
+subWkFolder = fullfile(STUDENTSUBFOLDER,weekName);
 
 %% Check if needed folder exists, if not stop execution of script
 debugOutput(DEBUGOUTPUT,'Check if needed folder exists, if not stop execution of script',0);
@@ -68,7 +69,7 @@ for i = 3:length(files)
     if contains(files(i).name,'.zip')
         if ~contains(files(i).name,'Checked')
             tmpTxt = erase(files(i).name,'.zip');
-            tmpTxt = erase(tmpTxt,[WEEKNAME '_']);
+            tmpTxt = erase(tmpTxt,[weekName '_']);
             tmpTxt = erase(tmpTxt,'Biostatica_ToSubmit_');
             studentsThatSubmitted{i-2} = tmpTxt;
             unzip(apCurrZip);
@@ -110,10 +111,10 @@ cCheck_NumberOfPointsWeekAss
 debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 
 dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
-save(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
+save(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,weekName,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
 % Delete a possible existing studentMatrix
-pathStudentResults = fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' num2str(WEEK) '.mat']);
+pathStudentResults = fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' weekNr '.mat']);
 if exist(pathStudentResults)
     delete(pathStudentResults)
 end
@@ -121,22 +122,22 @@ studentMatrix = [];
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
-addpath(genpath(fullfile(NAMEASSIGNMENTFOLDER,WEEKNAME)));
+addpath(genpath(fullfile(NAMEASSIGNMENTFOLDER,weekName)));
 PointsToBeEarned = sum(pointsPerAssignment);
 % Load the answer files
-eval(['load(''answerfiles_week' num2str(WEEK) ''')'])
+eval(['load(''answerfiles_week' weekNr ''')'])
 % Go to folder with unzipped files
-apSubWk = fullfile(BASEFOLDER, STUDENTSUBFOLDER,WEEKNAME);
+apSubWk = fullfile(BASEFOLDER, STUDENTSUBFOLDER,weekName);
 cd(apSubWk);
 
 %% Iterate over every unzipped folder/studentnumber
 % Remove Check-files from path
 warning off
-rmpath(genpath(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME)));
+rmpath(genpath(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,weekName)));
 warning on
 
 strTrackStudent = cellstr(trackStudentAssignment);
-for sn = 1:length(strTrackStudent(:,1))  
+for sn = 1:length(strTrackStudent(:,1))
     studentFolder = trackStudentAssignment{sn,1}
     if exist(studentFolder)
         tic

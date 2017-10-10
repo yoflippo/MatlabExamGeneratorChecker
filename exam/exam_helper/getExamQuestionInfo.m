@@ -1,4 +1,4 @@
-function [outVar] =getExamQuestionInfo(apExamDir)
+function [outVar] = getExamQuestionInfo(apExamDir)
 %GETEXAMQUESTIONINFO a function that collects all info needed to check the
 %exam questions. It contains the three different types of questions: MC,
 %script questions and functions. Each folder contains a file that says
@@ -61,6 +61,8 @@ for s = 1:length(substr)
     for nMrand = 1:nD
         nM = randIndexD(nMrand); % add the files in random order to struct.
         eval(['cd(exFiles.' substr{s} '(nM).folder)']);
+        %% Read points -> in deelpunten
+        points
         files = dirmf('_SOL');
         randIndexF = randperm(length(files)); % create random index
         for nFrand = 1:length(files)
@@ -73,6 +75,7 @@ for s = 1:length(substr)
         end
         eval(['exFiles.' substr{s} '(nMrand).files = files2;'])
         eval(['exFiles.' substr{s} '(nMrand).index = num2str(randIndexD(nM));'])
+        eval(['exFiles.' substr{s} '(nMrand).points = deelpunten;'])
         clear files;
     end
     %% Reorder the struct so every randomly assigned index is in an ascending order.

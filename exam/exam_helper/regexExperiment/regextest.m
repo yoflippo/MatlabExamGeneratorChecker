@@ -13,14 +13,17 @@ cd(ap.ThisFile);
 %info: https://nl.mathworks.com/help/matlab/ref/regexp.html
 %info: https://nl.mathworks.com/help/matlab/ref/regexprep.html
 
-for nF = 1:1%length(mfiles)
+for nF = 1:length(mfiles)
     currFile = fullfile(mfiles(nF).folder,mfiles(nF).name);
     txt = readTxtFile(currFile);
-    
-    %% find the words in a file   
-    words = {'opdracht_' 'opdracht '};
-    txtf = regexprep(txt,'(?i)opdracht[ _][0-9]*','Opdracht_X')
-    
+    txtFin = txt;
+    %% find the words in a file
+    words = {'Opdracht' 'Vraag'};
+    for nW = 1:length(words)
+        txtFin = regexprep(txtFin,['(?i)' words{nW} '[_][0-9]+'], [words{nW} '_X']);
+        txtFin = regexprep(txtFin,['(?i)' words{nW} '[ ][0-9]+'], [words{nW} ' X']);
+    end
+    txtFin
 end
 
 

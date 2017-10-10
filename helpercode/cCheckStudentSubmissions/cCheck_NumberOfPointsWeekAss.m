@@ -1,7 +1,7 @@
 %% Get the number of points for all week assignments
 
 
-apAssWk = fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,WEEKNAME);
+apAssWk = fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,weekName);
 cd(apAssWk);
 mfiles = dir(['**' filesep '*points*.m']);
 if isempty(mfiles)
