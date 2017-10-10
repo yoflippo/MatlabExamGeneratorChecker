@@ -67,6 +67,8 @@ save('AssInfo.mat','AssInfo')
 
 %% Create the actual exam with a directory for each type of questions
 
+%% Create a struct/mat-file with the assigned values.
+
 %% Create a folder with test data (everyting correct and incorrect) with dummy studentnumber
 
 %% Create a checking script
