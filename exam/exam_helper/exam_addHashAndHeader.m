@@ -34,8 +34,8 @@
 
 
 %% Create new filenames (with HASH code AND combine file names)
-addpath(genpath(apCurrExam))
-cd(apCurrExamClean)
+addpath(genpath(ap.CurrExam))
+cd(ap.CurrExamClean)
 
 savedHashes = []; 
 cntHash = 1;
@@ -124,9 +124,9 @@ for wk = 1:length(weekNames)
     catch causeException
         cd(BASEFOLDEREX)
         disp(causeException);
-        addpath(genpath(apCurrExam))
+        addpath(genpath(ap.CurrExam))
         error([mfilename ': problem with folder: ' weekNames{wk}  ]);
     end
 end
 cd(BASEFOLDEREX)
-rmpath(genpath(apCurrExam));
+rmpath(genpath(ap.CurrExam));

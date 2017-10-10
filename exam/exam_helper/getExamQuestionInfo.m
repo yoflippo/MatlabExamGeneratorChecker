@@ -7,6 +7,7 @@ function [outVar] =getExamQuestionInfo(apExamDir)
 %version has it's own name and hash code. This information is all collected
 %in to one struct.
 %
+% This function also randomly orders all the questions.
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
@@ -41,6 +42,10 @@ function [outVar] =getExamQuestionInfo(apExamDir)
 
 % $Revision: 0.0.0 $  $Date: 2017-10-09 $
 % Creation of this function.
+% TODO this function is not perfect. That is because MC-questions are
+% unique if no other MCQ has the same two thesisses. However it is possible
+% that this function uses two MCQ where MCQ1 has thesisA and MCQ2 also has
+% thesisA....
 
 %% Get exam subfolders
 cd(apExamDir)
@@ -51,18 +56,28 @@ exFiles.Fun = dirmf('TypeOfAssignment_MakeFunction');
 %% Add hash, path of every SOL file and add random index to struct
 substr = {'MC' 'Scr' 'Fun'};
 for s = 1:length(substr)
-    for nM = 1:length(eval(['exFiles.' substr{s}]))
+    nD = length(eval(['exFiles.' substr{s}]));
+    randIndexD = randperm(nD); % create random index
+    for nMrand = 1:nD
+        nM = randIndexD(nMrand); % add the files in random order to struct.
         eval(['cd(exFiles.' substr{s} '(nM).folder)']);
         files = dirmf('_SOL');
-        randIndex = randperm(length(files)); % create random index
-        for nF = 1:length(files)
+        randIndexF = randperm(length(files)); % create random index
+        for nFrand = 1:length(files)
+            nF = randIndexF(nFrand);  % add the files in random order to struct.
             cf = fullfile(files(nF).folder,files(nF).name);
-            files(nF).Hash = GetHashCodeFromMFile(cf);
-            files(nF).RandIndex = randIndex(nF);
+            % Make a second struct with a new index
+            files2(nFrand).folder = files(nF).folder;
+            files2(nFrand).name = files(nF).name;
+            files2(nFrand).Hash = GetHashCodeFromMFile(cf);
         end
-        eval(['exFiles.' substr{s} '(nM).files = files;'])
+        eval(['exFiles.' substr{s} '(nMrand).files = files2;'])
+        eval(['exFiles.' substr{s} '(nMrand).index = num2str(randIndexD(nM));'])
         clear files;
     end
+    %% Reorder the struct so every randomly assigned index is in an ascending order.
+    eval([' [tmp ind] = sort({(exFiles.' substr{s}  '.index)}); ']);
+    eval([' exFiles.' substr{s} ' = exFiles.' substr{s} '(ind); ']);
 end
 
 outVar = exFiles;
