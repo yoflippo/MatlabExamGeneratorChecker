@@ -1,7 +1,7 @@
 %% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
-%                    |39117e171be5563df5f16557314199f6|
+%                    |fa2f1aec874584dcdf3ccc0d81608f37|
 %
-% LEES EN BEGRIJP DE VOLGENDE REGELS:
+% LEES DE VOLGENDE REGELS:
 %
 % 1 - De volgende DOOR ONS AANGEMAAKTE zaken mag je NIET aanpassen!:
 %                           A: Bestandsnamen

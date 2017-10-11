@@ -67,20 +67,8 @@ cd(NAMEASSIGNMENTFOLDER)
 save(STUDENTNUMBERMAT,'studentNumbers');
 cd(BASEFOLDER)
 
-%% Remove (if necessary) and create a folder for the submitted student assignments
-debugOutput(DEBUGOUTPUT,'Remove (if necessary) and create a folder for the submitted student assignments',1);
-
+% Remove (if necessary) and create a folder for the submitted student assignments
 removeShitFromDir(STUDENTSUBFOLDER)
-% % % mkdir(STUDENTSUBFOLDER)
-% % % % Create a MAT file that stores the results of each student
-% % % cd(STUDENTSUBFOLDER);
-% % % studentMatrix = [studentNumbers zeros(length(studentNumbers),1)];
-% % % for wk = 1:4
-% % %     save([NAMERESULTMAT num2str(wk)],'studentMatrix');
-% % %     mkdir(['week' num2str(wk)]);
-% % % end
-% % % cd(BASEFOLDER)
-
 
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
@@ -125,7 +113,12 @@ for wk = 1:length(WEEKFOLDERS)
                 % Create header with hash of file
                 headerHash{1} = header{1};
                 % Be carefull, the following function needs unique data
-                uniqueFN = generateUniqueFilename(currFileFull,YEAR);
+                
+                
+                % TO DO change this line to not use absolute path but rel
+                % path from folder asignment
+                currFileRel = extractAfter(currFileFull,'Biostatica_Auto_Matlab');
+                uniqueFN = generateUniqueFilename(currFileRel,YEAR);
                 % Test if a Hash is unique, could be
                 if ~isempty(savedHashes)
                     if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
@@ -133,6 +126,9 @@ for wk = 1:length(WEEKFOLDERS)
                         cd(BASEFOLDER);
                     end
                 end
+                
+                
+                
                 savedHashes{cntHash} = uniqueFN.Hash;
                 cntHash = cntHash + 1;
                 

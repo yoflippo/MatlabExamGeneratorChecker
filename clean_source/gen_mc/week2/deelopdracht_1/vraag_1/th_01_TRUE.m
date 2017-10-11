@@ -1,1 +1,1 @@
-Een functie kan meerdere inputs hebben
+Een functie kan meerdere inputs hebben.

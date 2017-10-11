@@ -4,9 +4,9 @@ clear all
 dbstop if error
 global BASEFOLDER;
 global gWeekNames;
-Weeks = 1:2;
+Weeks = 1:2;  % Adjust me!!!
 for nW = Weeks
-    gWeekNames{1,nW} = ['week' num2str(nW)]; % Adjust me!!!
+    gWeekNames{1,nW} = ['week' num2str(nW)]; 
 end
 addpath(genpath('helpercode'));
 InitAll

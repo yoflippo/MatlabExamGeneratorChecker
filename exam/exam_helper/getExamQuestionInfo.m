@@ -50,38 +50,86 @@ function [outVar] = getExamQuestionInfo(apExamDir)
 %% Get exam subfolders
 cd(apExamDir)
 exFiles.MC = dirmf('TypeOfAssignment_Multiplechoice');
-exFiles.Scr = dirmf('TypeOfAssignment_MakeScript');
-exFiles.Fun = dirmf('TypeOfAssignment_MakeFunction');
+% exFiles.Scr = dirmf('TypeOfAssignment_MakeScript');
+% exFiles.Fun = dirmf('TypeOfAssignment_MakeFunction');
+ts1 = dirmf('TypeOfAssignment_MakeScript');
+ts2 = dirmf('TypeOfAssignment_MakeFunction');
+exFiles.FuncScrip = [ts1; ts2];
 
-%% Add hash, path of every SOL file and add random index to struct
-substr = {'MC' 'Scr' 'Fun'};
-for s = 1:length(substr)
-    nD = length(eval(['exFiles.' substr{s}]));
-    randIndexD = randperm(nD); % create random index
-    for nMrand = 1:nD
-        nM = randIndexD(nMrand); % add the files in random order to struct.
-        eval(['cd(exFiles.' substr{s} '(nM).folder)']);
-        %% Read points -> in deelpunten
-        points
-        files = dirmf('_SOL');
-        randIndexF = randperm(length(files)); % create random index
-        for nFrand = 1:length(files)
-            nF = randIndexF(nFrand);  % add the files in random order to struct.
-            cf = fullfile(files(nF).folder,files(nF).name);
-            % Make a second struct with a new index
-            files2(nFrand).folder = files(nF).folder;
-            files2(nFrand).name = files(nF).name;
-            files2(nFrand).Hash = GetHashCodeFromMFile(cf);
-        end
-        eval(['exFiles.' substr{s} '(nMrand).files = files2;'])
-        eval(['exFiles.' substr{s} '(nMrand).index = num2str(randIndexD(nM));'])
-        eval(['exFiles.' substr{s} '(nMrand).points = deelpunten;'])
-        clear files;
+%% MC, Add hash, path of every SOL file and add random index to struct
+nD = length(exFiles.MC);
+randIndexD = randperm(nD); % create random index
+for nM = 1:nD
+    nMrand = randIndexD(nM); % add the files in random order to struct.
+    cd(exFiles.MC(nMrand).folder)
+    %% Read points -> in deelpunten
+    points
+    files = dirmf('_SOL');
+    randIndexF = randpermSpace(length(files)); % create random index
+    for nF = 1:length(files)
+        nFrand = randIndexF(nF);  % add the files in random order to struct.
+        cf = fullfile(files(nFrand).folder,files(nFrand).name);
+        % Make a second struct with a new index
+        files2(nF).folder = files(nFrand).folder;
+        files2(nF).name = files(nFrand).name;
+        files2(nF).Hash = GetHashCodeFromMFile(cf);
     end
-    %% Reorder the struct so every randomly assigned index is in an ascending order.
-    eval([' [tmp ind] = sort({(exFiles.' substr{s}  '.index)}); ']);
-    eval([' exFiles.' substr{s} ' = exFiles.' substr{s} '(ind); ']);
+    exFiles.MC(nMrand).files = files2;
+    exFiles.MC(nMrand).index = randIndexD(nMrand);
+    exFiles.MC(nMrand).points = deelpunten;
+    exFiles.MC(nMrand).usedForExam = 0;
+    % Get week
+    [b e] = regexp(exFiles.MC(nMrand).folder,'week[0-9]+');
+    exFiles.MC(nMrand).weekNr = str2double(exFiles.MC(nMrand).folder(e));
+    
+    clear files files2;
 end
+% Reorder the struct so every randomly assigned index is in an ascending order.
+[tmp ind] = sort([exFiles.MC.index]);
+exFiles.MC = exFiles.MC(ind);
+
+
+
+
+
+%% Get the functions and the scripts
+nD = length(exFiles.FuncScrip);
+randIndexD = randperm(nD); % create random index
+for nM = 1:nD
+    nMrand = randIndexD(nM); % add the files in random order to struct.
+    cd(exFiles.FuncScrip(nMrand).folder)
+    %% Read points -> in deelpunten
+    points
+    files = dirmf('_SOL');
+    randIndexF = randperm(length(files)); % create random index
+    for nF = 1:length(files)
+        nFrand = randIndexF(nF);  % add the files in random order to struct.
+        cf = fullfile(files(nFrand).folder,files(nFrand).name);
+        % Make a second struct with a new index
+        files2(nF).folder = files(nFrand).folder;
+        files2(nF).name = files(nFrand).name;
+        files2(nF).Hash = GetHashCodeFromMFile(cf);
+    end
+    exFiles.FuncScrip(nMrand).files = files2;
+    exFiles.FuncScrip(nMrand).index = randIndexD(nMrand);
+    exFiles.FuncScrip(nMrand).points = deelpunten;
+    exFiles.FuncScrip(nMrand).usedForExam = 0;
+    % Get week
+    [b e] = regexp(exFiles.FuncScrip(nMrand).folder,'week[0-9]+');
+    exFiles.FuncScrip(nMrand).weekNr = str2double(exFiles.FuncScrip(nMrand).folder(e));
+    clear files files2;
+end
+%% Reorder the struct so every randomly assigned index is in an ascending order.
+[tmp ind] = sort([exFiles.FuncScrip.index]);
+exFiles.FuncScrip = exFiles.FuncScrip(ind);
+
+%% Reorder in number of points
+[tmp ind] = sort([exFiles.FuncScrip.points]);
+exFiles.FuncScrip = exFiles.FuncScrip(ind);
+
+%% Reorder in weeks
+[tmp ind] = sort([exFiles.FuncScrip.weekNr]);
+exFiles.FuncScrip = exFiles.FuncScrip(ind);
 
 outVar = exFiles;
 end

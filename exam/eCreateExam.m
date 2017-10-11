@@ -8,7 +8,7 @@ YEAR = 2017;
 nOfMulChoiceAssignment = 40;
 nOfScripts = 10;
 nOfFunctions = 10;
-weekNames = {'week1'}; % fill with the other weeks
+weekNames = {'week1' 'week2'}; % fill with the other weeks
 
 %% Go to path of this file
 mfilename('fullpath')
@@ -54,6 +54,7 @@ disp('Created MC-Questions')
 exam_addHashAndHeader
 
 %% Find ways to select folders
+ap.CurrExamCleanWk = fullfile(ap.CurrExamClean,weekNames{1});
 AssInfo = getExamQuestionInfo(ap.CurrExamClean);
 cd(ap.CurrExamClean);
 save('AssInfo.mat','AssInfo')
