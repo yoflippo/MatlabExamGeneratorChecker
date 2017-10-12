@@ -1,4 +1,4 @@
-function sumPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints,answerFilesInDir)
+function sumPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints)
 %CHECKSINGLESTUDENTASSIGNMENT A function that checks a students week
 %assignment.
 %
@@ -58,7 +58,7 @@ q = char(39);
 currPath = pwd;
 
 currentFolder = fullfile(pwd,studentdir);
-if isequal(exist(currentFolder),0)
+if isequal(exist(currentFolder,'dir'),0)
     warning([mfilename ': The accessed folder does not exists'])
     sumPoints = 0;
     return
@@ -69,8 +69,8 @@ end
 cd(studentdir);
 mfiles = dir(['**' filesep '*.m']);
 % Get files with hashcode
-mfilesWithHash = [];
-HashOfmfiles = [];
+mfilesWithHash = cell(1,length(mfiles));
+HashOfmfiles = mfilesWithHash;
 cntFile = 1;
 for i = 1:length(mfiles)
     try
@@ -85,77 +85,79 @@ end
 %% Find the associated solution files
 sumPoints = 0;
 for i = 1:length(mfilesWithHash)
-    try
-        % Get the check file for this assignment
-        AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
-        [apSOL nmSOL eSOL] = fileparts(AbsPathSOLScript);
-        
-        % Save it in a variable used by the solution
-        absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
-        % Extract name of checking function and assume it is on the path
-        [apCHE nmCHE eCHE] = fileparts(absPathCheckfile);
-        addpath(genpath(apCHE));
-        
-        % Get the type of the file: opdracht_x, vraag_x
-        AbsPathStudentScript = mfilesWithHash{1,i};
-        [apSTU nmSTUScript eSTU] = fileparts(AbsPathStudentScript);
-        addpath(genpath(apSTU));
-        
-        % Get the right string from the abspath of the studentscript to
-        % find the number of points using dicNameAssignmentAndPoints
-        pathWithoutExt = replace(AbsPathStudentScript,'.m','');
-        foundSlashes = strfind(pathWithoutExt,filesep);
-        assignment = AbsPathStudentScript(foundSlashes(end-1)+1:length(pathWithoutExt));
-        
-        % Get the number of points for this assignment
-        pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
-        
-        %Start checking
-        clear txtResultStud;
-        txtResultStud{1} = ' ';
-        txtResultStud{2} = '%% Opmerkingen tijdens nakijken ';
-        txtResultStud{3} = ' ';
-        WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
-        eval(['ResStudentScript = ' nmCHE '(' q AbsPathStudentScript q ');']);
-        
-        % IMPORTANT: remove the path to prevent the use of the wrong
-        % check-files.
-        warning off
-        rmpath(genpath(apCHE));
-        rmpath(genpath(apSTU));
-        warning on
-        % Calcule partialpoints
-        sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
-        
-        %% Write the result to the student file
-        percStudent = ResStudentScript * 100;
-        
-        %% Some actions to report to the student
-        if ResStudentScript < 1
-            % Copy the solution file
-            answerFile = [nmSTUScript '_UITWERKING.m'];
-            copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));
-            txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
-            txtResultStud{2} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
-            txtResultStud{3} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
+    if ~isempty(mfilesWithHash{i})
+        try
+            % Get the check file for this assignment
+            AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
+            % % %         [apSOL, nmSOL, eSOL] = fileparts(AbsPathSOLScript);
+            
+            % Save it in a variable used by the solution
+            absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
+            % Extract name of checking function and assume it is on the path
+            [apCHE, nmCHE, ~] = fileparts(absPathCheckfile);
+            addpath(genpath(apCHE));
+            
+            % Get the type of the file: opdracht_x, vraag_x
+            AbsPathStudentScript = mfilesWithHash{1,i};
+            [apSTU, nmSTUScript, ~] = fileparts(AbsPathStudentScript);
+            addpath(genpath(apSTU));
+            
+            % Get the right string from the abspath of the studentscript to
+            % find the number of points using dicNameAssignmentAndPoints
+            pathWithoutExt = replace(AbsPathStudentScript,'.m','');
+            foundSlashes = strfind(pathWithoutExt,filesep);
+            assignment = AbsPathStudentScript(foundSlashes(end-1)+1:length(pathWithoutExt));
+            
+            % Get the number of points for this assignment
+            pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
+            
+            %Start checking
+            clear txtResultStud;
+            txtResultStud{1} = ' ';
+            txtResultStud{2} = '%% Opmerkingen tijdens nakijken ';
+            txtResultStud{3} = ' ';
             WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
-        else
-            txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+            eval(['ResStudentScript = ' nmCHE '(' q AbsPathStudentScript q ');']);
+            
+            % IMPORTANT: remove the path to prevent the use of the wrong
+            % check-files.
+            warning off
+            rmpath(genpath(apCHE));
+            rmpath(genpath(apSTU));
+            warning on
+            % Calcule partialpoints
+            sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
+            
+            %% Write the result to the student file
+            percStudent = ResStudentScript * 100;
+            
+            %% Some actions to report to the student
+            if ResStudentScript < 1
+                % Copy the solution file
+                answerFile = [nmSTUScript '_UITWERKING.m'];
+                copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));
+                txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+                txtResultStud{2} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
+                txtResultStud{3} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
+                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+            else
+                txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+            end
+        catch something
+            disp(something)
+            disp([mfilename ': Somethings wrong..'])
+            disp(['OPENING: ' AbsPathStudentScript]);
+            edit(AbsPathStudentScript)
+            edit(nmCHE)
+            % Message with error, so student can learn from mistake
+            txtResultStud{1} = ' ';
+            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.'];
+            txtResultStud{3} = '% Tijdens het uitvoeren trad er een fout op, met deze melding:';
+            txtResultStud{4} = ['% ' something.message];
             WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+            keyboard
         end
-    catch something
-        disp(something)
-        disp([mfilename ': Somethings wrong..'])
-        disp(['OPENING: ' AbsPathStudentScript]);
-        edit(AbsPathStudentScript)
-        edit(nmCHE)
-        % Message with error, so student can learn from mistake
-        txtResultStud{1} = ' ';
-        txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.'];
-        txtResultStud{3} = ['% Tijdens het uitvoeren trad er een fout op, met deze melding:'];
-        txtResultStud{4} = ['% ' something.message];      
-        WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
-        keyboard
     end
 end
 % no breakpoints in this file

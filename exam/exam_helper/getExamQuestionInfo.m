@@ -62,10 +62,12 @@ randIndexD = randperm(nD); % create random index
 for nM = 1:nD
     nMrand = randIndexD(nM); % add the files in random order to struct.
     cd(exFiles.MC(nMrand).folder)
-    %% Read points -> in deelpunten
+    % Read points -> in deelpunten
     points
     files = dirmf('_SOL');
     randIndexF = randpermSpace(length(files)); % create random index
+    la = length(files);
+    files2 = struct('folder', cell(1, la), 'name', cell(1, la), 'Hash', cell(1, la));
     for nF = 1:length(files)
         nFrand = randIndexF(nF);  % add the files in random order to struct.
         cf = fullfile(files(nFrand).folder,files(nFrand).name);
@@ -79,13 +81,13 @@ for nM = 1:nD
     exFiles.MC(nMrand).points = deelpunten;
     exFiles.MC(nMrand).usedForExam = 0;
     % Get week
-    [b e] = regexp(exFiles.MC(nMrand).folder,'week[0-9]+');
+    [~, e] = regexp(exFiles.MC(nMrand).folder,'week[0-9]+');
     exFiles.MC(nMrand).weekNr = str2double(exFiles.MC(nMrand).folder(e));
     
     clear files files2;
 end
 % Reorder the struct so every randomly assigned index is in an ascending order.
-[tmp ind] = sort([exFiles.MC.index]);
+[~, ind] = sort([exFiles.MC.index]);
 exFiles.MC = exFiles.MC(ind);
 
 
@@ -115,20 +117,20 @@ for nM = 1:nD
     exFiles.FuncScrip(nMrand).points = deelpunten;
     exFiles.FuncScrip(nMrand).usedForExam = 0;
     % Get week
-    [b e] = regexp(exFiles.FuncScrip(nMrand).folder,'week[0-9]+');
+    [~, e] = regexp(exFiles.FuncScrip(nMrand).folder,'week[0-9]+');
     exFiles.FuncScrip(nMrand).weekNr = str2double(exFiles.FuncScrip(nMrand).folder(e));
     clear files files2;
 end
 %% Reorder the struct so every randomly assigned index is in an ascending order.
-[tmp ind] = sort([exFiles.FuncScrip.index]);
+[~, ind] = sort([exFiles.FuncScrip.index]);
 exFiles.FuncScrip = exFiles.FuncScrip(ind);
 
 %% Reorder in number of points
-[tmp ind] = sort([exFiles.FuncScrip.points]);
+[~, ind] = sort([exFiles.FuncScrip.points]);
 exFiles.FuncScrip = exFiles.FuncScrip(ind);
 
 %% Reorder in weeks
-[tmp ind] = sort([exFiles.FuncScrip.weekNr]);
+[~, ind] = sort([exFiles.FuncScrip.weekNr]);
 exFiles.FuncScrip = exFiles.FuncScrip(ind);
 
 outVar = exFiles;

@@ -40,10 +40,10 @@ subWkFolder = fullfile(STUDENTSUBFOLDER,weekName);
 %% Check if needed folder exists, if not stop execution of script
 debugOutput(DEBUGOUTPUT,'Check if needed folder exists, if not stop execution of script',0);
 
-if ~exist(STUDENTSUBFOLDER)
+if ~exist(STUDENTSUBFOLDER,'dir')
     mkdir(STUDENTSUBFOLDER)
 end
-if ~exist(subWkFolder)
+if ~exist(subWkFolder,'dir')
     mkdir(subWkFolder)
     error('Needed subdirectory does not exist, execution of script is stopped!, put ZIPPED student submission in folder');
 end
@@ -87,7 +87,7 @@ cd(BASEFOLDER);
 load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
 % Display how many students did not submit
 numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
-if length(studentsThatSubmitted) == 0
+if isempty(studentsThatSubmitted)
     error('Something went wrong: no student submission');
 end
 disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
@@ -115,10 +115,9 @@ save(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,weekName,'dicAssignmentsAndPoints.
 
 % Delete a possible existing studentMatrix
 pathStudentResults = fullfile(BASEFOLDER,STUDENTSUBFOLDER,['resultatenWeek' weekNr '.mat']);
-if exist(pathStudentResults)
+if exist(pathStudentResults,'dir')
     delete(pathStudentResults)
 end
-studentMatrix = [];
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
@@ -137,15 +136,16 @@ rmpath(genpath(fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,weekName)));
 warning on
 
 strTrackStudent = cellstr(trackStudentAssignment);
+studentMatrix = ones(length(strTrackStudent(:,1)),2);
 for sn = 1:length(strTrackStudent(:,1))
     studentFolder = trackStudentAssignment{sn,1}
-    if exist(studentFolder)
+    if exist(studentFolder,'dir')
         tic
         %% Check all the assigned assignments of individual students
         points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
-            dicNameAssignmentAndPoints,answerFilesInDir);
+            dicNameAssignmentAndPoints);
         grade = ((points/PointsToBeEarned)*9)+1;
-        studentMatrix(sn,1) = str2num(studentFolder);
+        studentMatrix(sn,1) = str2double(studentFolder);
         studentMatrix(sn,2) = round(grade,1);
         % Give the student a grade, first make some text
         cCheck_GradeText;
@@ -166,7 +166,7 @@ for sn = 1:length(strTrackStudent(:,1))
     end
 end
 studentMatrix
-save([pathStudentResults],'studentMatrix');
+save(pathStudentResults,'studentMatrix');
 averageGrade = mean(studentMatrix(:,2))
 
 cd(BASEFOLDER);

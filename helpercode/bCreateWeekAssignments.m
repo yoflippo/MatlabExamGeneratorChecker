@@ -53,7 +53,7 @@ for nW = Weeks
     %% Empty folder with files for testing
     debugOutput(DEBUGOUTPUT,'Empty folder with files for testing',1);
     currTestDir = fullfile(BASEFOLDER,TESTFOLDER,weekName);
-    if ~exist(currTestDir)
+    if ~exist(currTestDir,'dir')
         mkdir(currTestDir);
     else
         removeShitFromDir(currTestDir);
@@ -65,13 +65,13 @@ for nW = Weeks
     % Load the studentnumbers, they are randomly presented
     load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
     % Create weekfolders
-    if ~exist(apWkDirName)
+    if ~exist(apWkDirName,'dir')
         mkdir(apWkDirName)
     end
     % Create a STUDENTASSFOLDER inside every weekfolder
     for i = 1:length(studentNumbers)
         ptmp = fullfile(apWkDirName,num2str(studentNumbers(i)));
-        if exist(ptmp) == 0
+        if exist(ptmp,'dir') == 0
             mkdir(ptmp);
         end
     end
@@ -124,7 +124,7 @@ for nW = Weeks
         weekNameSol = [weekName SOLPOSTFIX];
         apWkDirNameSol = [apWkDirName SOLPOSTFIX];
         currStudentDirSol = fullfile(apWkDirNameSol,studentDirSol);
-        if ~exist(currStudentDirSol)
+        if ~exist(currStudentDirSol,'dir')
             mkdir(currStudentDirSol)
         end
         % Loop through the assignments

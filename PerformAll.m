@@ -77,7 +77,8 @@ try
     if ~isequal(cCheckStudentSubmissions(weekToCorrect),10)
         error('The average grade is not equal to 10');
     end
-catch
+catch err
+    error([mfilename ': ' err]);
 end
 toc
 cd(BASEFOLDER)
