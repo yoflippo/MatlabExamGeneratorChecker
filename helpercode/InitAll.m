@@ -20,19 +20,16 @@ fclose('all');
 addpath(genpath('helpercode'));
 DEBUGOUTPUT = 1;
 % make zero to delete base folder
-Constants
+con = ConstantsClass(GetPathOneLevelUp(fileparts(mfilename('fullpath'))));
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
-for i = 1:length(LISTWITHNEEDEDFOLDERS)
+for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
     try
-        cd(LISTWITHNEEDEDFOLDERS{i});
+        cd(con.LISTWITHNEEDEDFOLDERS{i});
         cd ..
     catch
         error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
-            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found']);
+            'The folder: ' con.LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end
 end
-% The basefolder of the whole Matlab biostatica code. InitAll should be in
-% the root of this folder.
-BASEFOLDER = GetPathOneLevelUp(fileparts(mfilename('fullpath')));

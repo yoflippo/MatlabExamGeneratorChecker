@@ -7,7 +7,7 @@ cd(apOfCleanSource);
 
 outputDir = fullfile(apOfCleanSource,'generated_questions');
 removeShitFromDir(outputDir)
-if ~exist(outputDir)
+if ~exist(outputDir,'dir')
     mkdir(outputDir)
 end
 
@@ -83,13 +83,14 @@ for nWk = 1:length(weekDir)
             % MC questions out of theses with the same theme is not what we
             % want.
             cnt = 1;
+            randomFileIndexes = zeros(1,numberOfThesesFiles^2);
             for ind = 1:numberOfThesesFiles-2
                 for ind2 = ind+2:numberOfThesesFiles
                     randomFileIndexes(cnt) = ind; cnt = cnt + 1;
                     randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
                 end
             end
-            
+            randomFileIndexes = randomFileIndexes(1:cnt-1);
             %% Combine to make one question
             % read header file line and give it the right question number
             headerTxt = ReadLineOfFile(fullfile(apOfCleanSource,'mc_header.m'));
@@ -99,8 +100,10 @@ for nWk = 1:length(weekDir)
             
             %% Generate Questions
             nVersionMC = 0;
+            
             for nMostIndices = 1:(length(randomFileIndexes)/2)
                 cnt = 1;
+                finalTxt = cell(20,1);
                 finalTxt{cnt,1} = headerTxt; cnt = cnt + 1;
                 finalTxt{cnt,1} = '%';       cnt = cnt + 1; %add empty line
                 
@@ -236,13 +239,13 @@ try
             
             if ~isequal(tSolFileName,tCheFilename)
                 % Check for error in SOL file
-                if ~exist(tApSol,'file');
+                if ~exist(tApSol,'file')
                     warning(['Does not exist: ' tApSol]);
                 elseif ~exist(tApChe,'file')
                     warning(['Does not exist: ' tApChe]);
-                elseif ~exist(replace(tApSol,'_SOL','_CHECK'))
+                elseif ~exist(replace(tApSol,'_SOL','_CHECK'),'file')
                     warning(['Does not exist: ' replace(tApSol,'_SOL','_CHECK')]);
-                elseif ~exist(replace(tApChe,'_SOL','_CHECK'))
+                elseif ~exist(replace(tApChe,'_SOL','_CHECK'),'file')
                     warning(['Does not exist: ' replace(tApChe,'_SOL','_CHECK')]);
                 end
             end

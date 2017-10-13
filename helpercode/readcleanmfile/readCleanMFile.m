@@ -100,6 +100,10 @@ end
 %% Give to output
 oCopy = addSemiColons(apCopy);
 
+%% check if oCopy contains -1
+if isequal(oCopy{1},-1)
+   oCopy = []; 
+end
 if blMakeCopy
     oApCopy = apCopy;
 else

@@ -2,7 +2,6 @@
 clear all
 
 dbstop if error
-global BASEFOLDER;
 global gWeekNames;
 Weeks = 1:2;  % Adjust me!!!
 for nW = Weeks
@@ -19,21 +18,21 @@ dispPlatform
 
 %% Generate MC files and copy all clean_source/assignments -> root/assignments
 %To Do give some output to user
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)
 disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
 tic
-apFin = fullfile(BASEFOLDER,'assignments');
+apFin = fullfile(con.BASEFOLDER,'assignments');
 % removeShitFromDir(apFin);
-CreateAndCopyQuestions(BASEFOLDER,apFin,gWeekNames);
+CreateAndCopyQuestions(con.BASEFOLDER,apFin,gWeekNames);
 disp('Created MC-Questions')
 toc
 
 %% Execute generated all assignments script
 disp('execute generate all script');
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)
 tic
 try
-    run('aGenerateEverythingForCourse.m')
+    aGenerateEverythingForCourse();
 catch err
     disp(err);
     warning([mfilename ': aGenerateEverythingForCourse did not finish correctly']);
@@ -42,12 +41,12 @@ toc
 
 %% Check if al 'checking' files are in working order
 disp('Check if al "checking" files are in working order');
-assert(CheckSolCheckDirFunc(fullfile(BASEFOLDER,'assignments')));
+assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
 
 %% Execute create week assignment scripts for individual students
 disp('execute create week assignment scripts');
-if ~isequal(pwd,BASEFOLDER)
-    cd(BASEFOLDER)
+if ~isequal(pwd,con.BASEFOLDER)
+    cd(con.BASEFOLDER)
 end
 tic
 try
@@ -66,9 +65,9 @@ weekName = ['week' weekNr];
 
 
 %% TEST if all correct solutions files pass
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)
 apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_100');
-apFinDes = fullfile(pwd,STUDENTSUBFOLDER,weekName);
+apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,weekName);
 removeShitFromDir(apFinDes);
 copyfiles(apTestFiles,apFinDes);
 disp('Execute check assignments');
@@ -81,15 +80,15 @@ catch err
     error([mfilename ': ' err]);
 end
 toc
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)
 
 
 %% TEST if all INcorrect solutions files pass
 disp('Copy certain testfiles to directory submitted');
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)
 tic
 apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
-apFinDes = fullfile(pwd,STUDENTSUBFOLDER,weekName);
+apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,weekName);
 removeShitFromDir(apFinDes);
 copyfiles(apTestFiles,apFinDes);
 disp('Execute check assignments');
@@ -113,7 +112,7 @@ return;
 
 
 %% Check manually copied submitted files
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)
 disp('Check manually copied submitted files');
 tic
 try

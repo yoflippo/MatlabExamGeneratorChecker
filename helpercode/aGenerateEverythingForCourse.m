@@ -51,7 +51,6 @@ debugOutput(DEBUGOUTPUT,'Start fresh: Generate all week assignments');
 %% Read the student number and convert the list to e-mailadresses
 debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
 
-studentFolder = LISTWITHNEEDEDFOLDERS{3};
 studentFolderOutput = dir('studentnumber*/*.txt');
 % go to the folder with studentnumbers. It is assumed to be a list with
 
@@ -60,33 +59,31 @@ studentNumbers = load(stdnmbFile);
 % % % % % % Reshuffle the list with student numbers (removing patterns)
 % RANDOMNNES
 % % % % % studentNumbers = studentNumbers(randperm(length(studentNumbers)));
-% Convert the reshuffled list of student number to e-mailadresses
-studentEmailadresses = makeEmailadres(studentNumbers,'@student.hhs.nl');
-% Write the list of e-mailadresses to a txt file
-cd(NAMEASSIGNMENTFOLDER)
-save(STUDENTNUMBERMAT,'studentNumbers');
-cd(BASEFOLDER)
+cd(con.NAMEASSIGNMENTFOLDER)
+save(con.STUDENTNUMBERMAT,'studentNumbers');
+cd(con.BASEFOLDER)
 
 % Remove (if necessary) and create a folder for the submitted student assignments
-removeShitFromDir(STUDENTSUBFOLDER)
+removeShitFromDir(con.STUDENTSUBFOLDER)
 
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
 
-addpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
-addpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
-addpath(genpath(NAMEASSIGNMENTFOLDER))
-cd(NAMEASSIGNMENTFOLDER)
-savedHashes = [];
-cntHash = 1;
-for wk = 1:length(WEEKFOLDERS)
+addpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}))
+addpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}))
+addpath(genpath(con.NAMEASSIGNMENTFOLDER))
+cd(con.NAMEASSIGNMENTFOLDER)
+
+for wk = 1:length(con.WEEKFOLDERS)
     try
         % find all files in weekX folder
-        cd(WEEKFOLDERS{wk})
-        weekAssignments = dir(['**' filesep '*.m']);
+        cd(con.WEEKFOLDERS{wk})
+        weekAssignments = dirmf();
         cd ..
         
         % traverse the week folder
+        savedHashes = strings(1,length(weekAssignments));
+        cntHash = 1;
         for fl = 1:length(weekAssignments)
             tic;
             currentFile = weekAssignments(fl).name;
@@ -113,24 +110,16 @@ for wk = 1:length(WEEKFOLDERS)
                 % Create header with hash of file
                 headerHash{1} = header{1};
                 % Be carefull, the following function needs unique data
-                
-                
-                % TO DO change this line to not use absolute path but rel
-                % path from folder asignment
                 currFileRel = extractAfter(currFileFull,'Biostatica_Auto_Matlab');
-                uniqueFN = generateUniqueFilename(currFileRel,YEAR);
+                uniqueFN = generateUniqueFilename(currFileRel,con.YEAR);
                 % Test if a Hash is unique, could be
-                if ~isempty(savedHashes)
-                    if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
-                        error('A Non unique HASH has been created');
-                        cd(BASEFOLDER);
-                    end
+                if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
+                    cd(con.BASEFOLDER);
+                    error('A Non unique HASH has been created');
+                else
+                    savedHashes(cntHash) = uniqueFN.Hash;
+                    cntHash = cntHash + 1;
                 end
-                
-                
-                
-                savedHashes{cntHash} = uniqueFN.Hash;
-                cntHash = cntHash + 1;
                 
                 headerHash{2} = uniqueFN.HashCommentLine;
                 % Grab default header text for every m-file
@@ -168,16 +157,16 @@ for wk = 1:length(WEEKFOLDERS)
             disp([['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']);
         end
     catch causeException
-        cd(BASEFOLDER)
+        cd(con.BASEFOLDER)
         disp(causeException);
-        rmpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
-        rmpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
-        rmpath(genpath(NAMEASSIGNMENTFOLDER))
-        error(['problem with folder: ' WEEKFOLDERS{wk}  ]);
+        rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}))
+        rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}))
+        rmpath(genpath(con.NAMEASSIGNMENTFOLDER))
+        error(['problem with folder: ' con.WEEKFOLDERS{wk}  ]);
     end
 end
-cd(BASEFOLDER)
-rmpath(genpath(LISTWITHNEEDEDFOLDERS{4}))
-rmpath(genpath(LISTWITHNEEDEDFOLDERS{2}))
-rmpath(genpath(NAMEASSIGNMENTFOLDER))
+cd(con.BASEFOLDER)
+rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}))
+rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}))
+rmpath(genpath(con.NAMEASSIGNMENTFOLDER))
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);

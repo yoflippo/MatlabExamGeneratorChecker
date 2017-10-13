@@ -45,14 +45,14 @@ for nW = Weeks
     
     weekNr = num2str(Weeks(nW));
     weekName = ['week' weekNr];
-    apWkDirName = fullfile(BASEFOLDER, STUDENTASSFOLDER, weekName);
-    apWkDirNameSol = [apWkDirName '_SOL'];
+    apWkDirName = fullfile(con.BASEFOLDER, con.STUDENTASSFOLDER, weekName);
+    apWkDirNameSol = [apWkDirName con.SOLPOSTFIX];
     removeShitFromDir(apWkDirName);
     removeShitFromDir(apWkDirNameSol);
     
     %% Empty folder with files for testing
     debugOutput(DEBUGOUTPUT,'Empty folder with files for testing',1);
-    currTestDir = fullfile(BASEFOLDER,TESTFOLDER,weekName);
+    currTestDir = fullfile(con.BASEFOLDER,con.TESTFOLDER,weekName);
     if ~exist(currTestDir,'dir')
         mkdir(currTestDir);
     else
@@ -63,12 +63,12 @@ for nW = Weeks
     debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
     
     % Load the studentnumbers, they are randomly presented
-    load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT));
+    load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
     % Create weekfolders
     if ~exist(apWkDirName,'dir')
         mkdir(apWkDirName)
     end
-    % Create a STUDENTASSFOLDER inside every weekfolder
+    % Create a con.STUDENTASSFOLDER inside every weekfolder
     for i = 1:length(studentNumbers)
         ptmp = fullfile(apWkDirName,num2str(studentNumbers(i)));
         if exist(ptmp,'dir') == 0
@@ -82,17 +82,18 @@ for nW = Weeks
     % The studentNumbers variable is randomly generated. So assignments in
     % folder can be assigned sequently to the studentNumbers without
     % introducing some kind of detectable order.
-    global output; output = [];
-    absPathCurrAssFolder = fullfile(BASEFOLDER,NAMEASSIGNMENTFOLDER,weekName);
+    absPathCurrAssFolder = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName);
     deepestAssignFolders = GetDeepestFolders(absPathCurrAssFolder);
     % Make path
-    for nTypeAss = 1:length(deepestAssignFolders)
-        deepestAssignFolders{nTypeAss} = extractAfter(deepestAssignFolders{nTypeAss},NAMEASSIGNMENTFOLDER);
-        deepestAssignFoldersWithoutWeek{nTypeAss} = extractAfter(deepestAssignFolders{nTypeAss},weekName);
+    nDeepestDir = length(deepestAssignFolders);
+    numberOfAssignmentInDir = zeros(1,nDeepestDir);
+    answerFilesInDir = cell(1,nDeepestDir);
+    for nTypeAss = 1:nDeepestDir
+        deepestAssignFolders{nTypeAss} = extractAfter(deepestAssignFolders{nTypeAss},con.NAMEASSIGNMENTFOLDER);
         % Count the number of assignment in every folder (with 'SOLPOSTFIX')
         currPath = pwd;
-        cd(fullfile(NAMEASSIGNMENTFOLDER,deepestAssignFolders{nTypeAss}));
-        answerFilesInDir{nTypeAss} = dir(['*' SOLPOSTFIX '*']);
+        cd(fullfile(con.NAMEASSIGNMENTFOLDER,deepestAssignFolders{nTypeAss}));
+        answerFilesInDir{nTypeAss} = dir(['*' con.SOLPOSTFIX '*']);
         if isequal(length(answerFilesInDir{nTypeAss}),0)
             error('A folder without files detected');
         end
@@ -100,7 +101,7 @@ for nW = Weeks
         cd(currPath);
     end
     % Save the answer files in the corresponding week folder
-    save(fullfile(NAMEASSIGNMENTFOLDER,weekName,['answerfiles_' weekName '.mat']),'answerFilesInDir');
+    save(fullfile(con.NAMEASSIGNMENTFOLDER,weekName,['answerfiles_' weekName '.mat']),'answerFilesInDir');
     
     %% Fill every student folder with the number of assignments
     debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments',1);
@@ -116,13 +117,10 @@ for nW = Weeks
         % Browse to every assignment folder, PLEASE NOTICE: randonmness is used
         % by shuffling the studentNumbers in the studentlist.
         studentDir = num2str(studentNumbers(nStud));
-        % % %     studentDirSol = fullfile('SOL',studentDir);
         studentDirSol = studentDir;
         trackStudentAssignment{nStud,1} = studentDir;
         currStudentDir = fullfile(apWkDirName,studentDir);
-        % % %     currStudentDirSol = fullfile(apWkDirName,studentDirSol);
-        weekNameSol = [weekName SOLPOSTFIX];
-        apWkDirNameSol = [apWkDirName SOLPOSTFIX];
+        apWkDirNameSol = [apWkDirName con.SOLPOSTFIX];
         currStudentDirSol = fullfile(apWkDirNameSol,studentDirSol);
         if ~exist(currStudentDirSol,'dir')
             mkdir(currStudentDirSol)
@@ -134,15 +132,15 @@ for nW = Weeks
                 cnt = answerFileCounter(nAss);
                 currFileSol = [deepestAssignFolders{nAss} filesep answerFilesInDir{1,nAss}(cnt).name];
                 % rename the file to a file without nTypeAss
-                currFile = replace(currFileSol,SOLPOSTFIX,'');
+                currFile = replace(currFileSol,con.SOLPOSTFIX,'');
                 % file to copy
-                sourceFile = [NAMEASSIGNMENTFOLDER currFile];
-                sourceFileSOL = [NAMEASSIGNMENTFOLDER currFileSol];
+                sourceFile = [con.NAMEASSIGNMENTFOLDER currFile];
+                sourceFileSOL = [con.NAMEASSIGNMENTFOLDER currFileSol];
                 % remove redundant folder
                 currFileClean = GetPathOneLevelUp(currFile);
                 % create the path string with final naming
-                finFileLoc = [currStudentDir currFileClean EXT];
-                finFileLocSOL = [currStudentDirSol currFileClean EXT];
+                finFileLoc = [currStudentDir currFileClean con.EXT];
+                finFileLocSOL = [currStudentDirSol currFileClean con.EXT];
                 % Copy file from unique assignment dir to student folder with
                 % subdirs
                 pathCurrAss = [apWkDirName filesep studentDir ...
@@ -172,8 +170,8 @@ for nW = Weeks
         end
         
         % Copy the finishing script that a student needs to use
-        finScriptStud = fullfile(BASEFOLDER,LISTWITHNEEDEDFOLDERS{2},'headers',...
-            NAMEZIPMFILEFORSTUDENTS);
+        finScriptStud = fullfile(con.BASEFOLDER,con.LISTWITHNEEDEDFOLDERS{2},'headers',...
+            con.NAMEZIPMFILEFORSTUDENTS);
         copyfile(finScriptStud,fullfile(currStudentDir,weekName));
         copyfile(finScriptStud,fullfile(currStudentDirSol,weekName));
         
@@ -261,7 +259,7 @@ for nW = Weeks
     % Todo: Generate a test folder in which students have doubled their assignments
     
     %% Save the studentNumbers and their assigned hashes
-    save(fullfile(NAMEASSIGNMENTFOLDER,weekName,['assignedHashes_' weekName]) ...
+    save(fullfile(con.NAMEASSIGNMENTFOLDER,weekName,['assignedHashes_' weekName]) ...
         ,'trackStudentAssignment');
 
 end

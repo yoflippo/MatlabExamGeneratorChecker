@@ -54,11 +54,11 @@ txtFile = readTxtFile(absPathFile);
 if length(txtFile) < lineNumber
     % Fill txtFile
     for nEl = length(txtFile)+1:lineNumber-1
-        txtFile(nEl) = '';
+        txtFile{nEl} = '';
     end
 end
 % write txt to line
-txtFile(lineNumber) = lineTxt;
+txtFile{lineNumber} = char(lineTxt);
 % delete the current file
 delete(absPathFile)
 
@@ -66,7 +66,7 @@ delete(absPathFile)
 try
     fileID = fopen(absPathFile,'w');
     for i = 1:length(txtFile)
-        fprintf(fileID,'%s\r\n',txtFile(i));
+        fprintf(fileID,'%s\r\n',txtFile{i});
     end
     % close the file
     fclose('all');
