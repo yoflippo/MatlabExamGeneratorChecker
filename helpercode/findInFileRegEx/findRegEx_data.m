@@ -19,7 +19,7 @@
 clc;
 close all;
 close all hidden
-clear variables; 
+clear variables;
 clear all
 addpath(genpath('helpercode'))
 DEBUGOUTPUT = 1
@@ -33,7 +33,7 @@ for i = 1:length(LISTWITHNEEDEDFOLDERS)
         cd(LISTWITHNEEDEDFOLDERS{i});
         cd ..
         if bullshit == 3
-           lala = txt
+            lala = txt
         end
     catch  %  TEST
         error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
@@ -43,4 +43,18 @@ end
 % The basefolder should only be assigned if previous code has executed
 % correctly
 BASEFOLDER = pwd; %TEST
-
+% appel
+try
+    cd(LISTWITHNEEDEDFOLDERS{i});
+    cd ..
+    if bullshit == 3
+        lala = txt
+    end
+catch  %  TEST
+    error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
+        'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found'])
+end
+%APPEL
+fiets = 3;
+sleutel = 2;
+brabrablauwrood

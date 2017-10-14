@@ -43,7 +43,7 @@ try
     % run the CHEAT file on the target CHECK function
     if exist(cheatFile,'file')
         eval(['res = ' checkFunction '(pathCheatFile);'])
-        if res > 0.25
+        if res > 0.2
             res
             error('The CHEAT function should return a result of less then one');
         end

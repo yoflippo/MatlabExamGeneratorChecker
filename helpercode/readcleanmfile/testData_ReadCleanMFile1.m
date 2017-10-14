@@ -40,6 +40,18 @@ for i = 1:length(LISTWITHNEEDEDFOLDERS)
             'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found'])
     end
 end
+for i = 1:length(LISTWITHNEEDEDFOLDERS)
+    try
+        cd(LISTWITHNEEDEDFOLDERS{i});
+        cd ..
+        if bullshit == 3
+           lala = txt
+        end
+    catch  %  TEST
+        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
+            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found'])
+    end
+end
 % The basefolder should only be assigned if previous code has executed
 % correctly
 BASEFOLDER = pwd; %TEST

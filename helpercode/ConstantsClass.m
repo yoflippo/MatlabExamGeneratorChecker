@@ -11,10 +11,12 @@ classdef ConstantsClass
         SOLPOSTFIX = '_SOL';
         CHECKPOSTFIX = '_CHECK';
         CHEATPOSTFIX = '_CHEAT';
-        OTHERFILESINSTUDENTFOLDER = {'AfrondenWeekOpdracht.m' 'studentnummer.m'};
+        NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
+        LASTASSIGNMENT = 'LaatsteOpdracht.m';
+        OTHERFILESINSTUDENTFOLDER = {ConstantsClass.NAMEZIPMFILEFORSTUDENTS 'studentnummer.m' ConstantsClass.LASTASSIGNMENT};
         ADJUSTEDHASH = 'AANGEPASTE_MFILE_GEEN_PUNTEN';
         FOLDERCHEAT = 'BESTANDEN_NIET_AAN_JOU_TOEGEWEZEN';
-        NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
+        
         NAMERESULTMAT = 'resultatenWeek';
         VAR_RESULT = 'ResStudentScript';
         TESTFOLDER = 'fortesting';

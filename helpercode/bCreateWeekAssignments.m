@@ -175,6 +175,19 @@ for nW = Weeks
         copyfile(finScriptStud,fullfile(currStudentDir,weekName));
         copyfile(finScriptStud,fullfile(currStudentDirSol,weekName));
         
+        %% Copy the finishing assignemnts that a student needs to use
+        finScriptStud = fullfile(con.BASEFOLDER,con.LISTWITHNEEDEDFOLDERS{2},'headers',...
+            con.LASTASSIGNMENT);
+        % get the number of assignments starting from 1
+        apCurrStudWk = fullfile(currStudentDir,weekName);
+        cd(apCurrStudWk);
+        numAssignment = getFolders(pwd);
+        nmLastAssignmentDir = ['deelopdracht_' num2str(length(numAssignment)+1)];
+        mkdirIf(nmLastAssignmentDir);
+        copyfile(finScriptStud,fullfile(apCurrStudWk,nmLastAssignmentDir));
+        copyfile(finScriptStud,fullfile(currStudentDirSol,weekName,nmLastAssignmentDir));
+        cd(con.BASEFOLDER);
+        
         % Create a file with the studentnumber
         fid = fopen(fullfile(currStudentDir,weekName,'studentnummer.m'),'w');
         fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
@@ -261,7 +274,7 @@ for nW = Weeks
     %% Save the studentNumbers and their assigned hashes
     save(fullfile(con.NAMEASSIGNMENTFOLDER,weekName,['assignedHashes_' weekName]) ...
         ,'trackStudentAssignment');
-
+    
 end
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);
 

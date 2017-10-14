@@ -59,7 +59,7 @@ tic
 try
     bCreateWeekAssignments(Weeks);
 catch err
-    error([mfilename 'in bCreateWeekAssignments: ' err.message])
+    error([mfilename ' in bCreateWeekAssignments: ' err.message])
 end
 toc
 

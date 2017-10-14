@@ -1,4 +1,4 @@
-clear all;
+clear variables; clc;
 
 %% To prevent manual actions
 matFile = 'file.mat';
