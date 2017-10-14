@@ -1,6 +1,6 @@
 %% Vraag 2
 %
-% Stelling 1:   Een operator voert een handeling uit op ï¿½ï¿½n of meerdere
+% Stelling 1:   Een operator voert een handeling uit op één of meerdere
 %				operands.                                              
 %
 % Stelling 2:   In Matlab is er een operator voor een worteltrek operatie.
@@ -10,3 +10,11 @@
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
 Antwoord = NaN; % vul hier het juiste antwoord in A, B, C of D
+
+
+
+
+
+
+
+

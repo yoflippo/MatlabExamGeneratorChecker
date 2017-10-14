@@ -46,7 +46,7 @@ catch
 end
 
 %% Remove spaces
-if isequal(txt{1},-1)
+if ~isempty(txt) && isequal(txt{1},-1)
     otxt = [];
 else
     otxt = strrep(txt,' ','');

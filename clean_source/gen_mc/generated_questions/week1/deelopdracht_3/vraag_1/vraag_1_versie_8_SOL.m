@@ -4,15 +4,14 @@
 %				1 - Slordig                                                   
 %				2 - Quick and Neat                                            
 %
-% Stelling 2:   Het code voorbeeld dat hieronder staat is een voorbeeld
-%				van netjes werken:                                     
-%				                                                       
-%				======= Code =======                                   
-%				load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))  
-%				addpath(genpath(fullfile(pwd,subWkFolder)))            
-%				removeDirectoriesFromFolder(fullfile(pwd,subWkFolder)) 
-%				files = dir(subWkFolder);                              
-%				======= Code =======                                   
+% Stelling 2:   Het code voorbeeld dat hieronder staat is een voorbeeld                                            
+%				van netjes werken:                                                                                 
+%				                                                                                                   
+%				======= Code =======                                                                               
+%				load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))                                              
+%				addpath(genpath(fullfile(pwd,subWkFolder))); removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
+%				files = dir(subWkFolder);                                                                          
+%				======= Code =======                                                                               
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

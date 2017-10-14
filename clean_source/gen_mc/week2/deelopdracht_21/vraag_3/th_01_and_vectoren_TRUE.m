@@ -1,0 +1,1 @@
+De logische AND-operator kan ook worden toegepast op een vector.

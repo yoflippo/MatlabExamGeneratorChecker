@@ -1,0 +1,1 @@
+De lengte van een vector v = [ 3 3 3 3] 4.

@@ -1,6 +1,8 @@
 %% Vraag 10
 %
-% Stelling 1:   In het onderstaande code voorbeeld geeft het commentaar  
+% Stelling 1:   Een met programmeerfouten kan niet worden uitgevoerd.
+%
+% Stelling 2:   In het onderstaande code voorbeeld geeft het commentaar  
 %				(aangegeven met het '%' teken) aan welke berekening moet 
 %				worden uitgevoerd.                                       
 %				                                                         
@@ -16,9 +18,6 @@
 %				6- som = aad ++ herre;                                   
 %				                                                         
 %				======= Code =======                                     
-%
-% Stelling 2:   Het is ongebruikelijk dat je als Matlab programmeur zelf functies
-%				schrijft.                                                        
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

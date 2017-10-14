@@ -1,0 +1,128 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   171014_1255
+
+----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.2.0.556344 (R2017a)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 15063)
+Java Version: Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.2         (R2017a)
+Simulink                                              Version 8.9         (R2017a)
+Computer Vision System Toolbox                        Version 7.3         (R2017a)
+Control System Toolbox                                Version 10.2        (R2017a)
+Curve Fitting Toolbox                                 Version 3.5.5       (R2017a)
+DSP System Toolbox                                    Version 9.4         (R2017a)
+Data Acquisition Toolbox                              Version 3.11        (R2017a)
+Embedded Coder                                        Version 6.12        (R2017a)
+Fixed-Point Designer                                  Version 5.4         (R2017a)
+Fuzzy Logic Toolbox                                   Version 2.2.25      (R2017a)
+Global Optimization Toolbox                           Version 3.4.2       (R2017a)
+HDL Coder                                             Version 3.10        (R2017a)
+Image Acquisition Toolbox                             Version 5.2         (R2017a)
+Image Processing Toolbox                              Version 10.0        (R2017a)
+Instrument Control Toolbox                            Version 3.11        (R2017a)
+MATLAB Coder                                          Version 3.3         (R2017a)
+MATLAB Compiler                                       Version 6.4         (R2017a)
+MATLAB Compiler SDK                                   Version 6.3.1       (R2017a)
+Optimization Toolbox                                  Version 7.6         (R2017a)
+Parallel Computing Toolbox                            Version 6.10        (R2017a)
+Signal Processing Toolbox                             Version 7.4         (R2017a)
+Simscape                                              Version 4.2         (R2017a)
+Simscape Electronics                                  Version 2.11        (R2017a)
+Simscape Power Systems                                Version 6.7         (R2017a)
+Spreadsheet Link                                      Version 3.3.1       (R2017a)
+Stateflow                                             Version 8.9         (R2017a)
+Statistics and Machine Learning Toolbox               Version 11.1        (R2017a)
+Symbolic Math Toolbox                                 Version 7.2         (R2017a)
+System Identification Toolbox                         Version 9.6         (R2017a)
+Vehicle Network Toolbox                               Version 3.3         (R2017a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+CreateMCQuestions: 2 of 25 folders processed.
+CreateMCQuestions: 3 of 25 folders processed.
+CreateMCQuestions: 4 of 25 folders processed.
+CreateMCQuestions: 5 of 25 folders processed.
+CreateMCQuestions: 6 of 25 folders processed.
+CreateMCQuestions: 7 of 25 folders processed.
+CreateMCQuestions: 8 of 25 folders processed.
+CreateMCQuestions: 9 of 25 folders processed.
+CreateMCQuestions: 10 of 25 folders processed.
+CreateMCQuestions: 11 of 25 folders processed.
+CreateMCQuestions: 12 of 25 folders processed.
+CreateMCQuestions: 13 of 25 folders processed.
+CreateMCQuestions: 14 of 25 folders processed.
+CreateMCQuestions: 15 of 25 folders processed.
+CreateMCQuestions: 16 of 25 folders processed.
+CreateMCQuestions: 17 of 25 folders processed.
+CreateMCQuestions: 18 of 25 folders processed.
+CreateMCQuestions: 19 of 25 folders processed.
+CreateMCQuestions: 20 of 25 folders processed.
+CreateMCQuestions: 21 of 25 folders processed.
+CreateMCQuestions: 22 of 25 folders processed.
+CreateMCQuestions: 23 of 25 folders processed.
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('WriteLineOfFile', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\changelineoffile\WriteLineOfFile.m', 72)" style="font-weight:bold">WriteLineOfFile</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\changelineoffile\WriteLineOfFile.m',72,0)">line 72</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 206)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',206,0)">line 206</a>)
+                WriteLineOfFile(apCheckFile,1,fnCopiedTemplate);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 33)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',33,0)">line 33</a>)
+CreateAndCopyQuestions(con.BASEFOLDER,apFin,gWeekNames);
+} 
+a = ConstantsClass
+
+a = 
+
+  <a href="matlab:helpPopup ConstantsClass" style="font-weight:bold">ConstantsClass</a> with properties:
+
+                         YEAR: 2017
+             STUDENTNUMBERMAT: 'studentNum.mat'
+         NAMEASSIGNMENTFOLDER: 'assignments'
+             STUDENTASSFOLDER: 'student_assignments'
+             STUDENTSUBFOLDER: 'submitted'
+               NAMEZIPPEDWEEK: 'Biostatica_Programmeren_StudentOpdrachten_'
+                          EXT: '.m'
+                   SOLPOSTFIX: '_SOL'
+                 CHECKPOSTFIX: '_CHECK'
+                 CHEATPOSTFIX: '_CHEAT'
+    OTHERFILESINSTUDENTFOLDER: {'AfrondenWeekOpdracht.m'  'studentnummer.m'}
+                 ADJUSTEDHASH: 'AANGEPASTE_MFILE_GEEN_PUNTEN'
+                  FOLDERCHEAT: 'BESTANDEN_NIET_AAN_JOU_TOEGEWEZEN'
+      NAMEZIPMFILEFORSTUDENTS: 'AfrondenWeekOpdracht.m'
+                NAMERESULTMAT: 'resultatenWeek'
+                   VAR_RESULT: 'ResStudentScript'
+                   TESTFOLDER: 'fortesting'
+            DIRSTUDENTNUMBERS: 'studentnumbers'
+                  DIRCLEANSRC: 'clean_source'
+        LISTWITHNEEDEDFOLDERS: {'helpercode'  'clean_source'  'studentnumbers'  'fortesting'  'submitted'}
+                  WEEKFOLDERS: {'week1'  'week2'  'week3'  'week4'}
+                   BASEFOLDER: 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab'
+                     DATETIME: '171014_1255'
+
+a = ConstantsClass;
+InitAll
+Check for the existence of needed supporting scripts/function files
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('InitAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m', 32)" style="font-weight:bold">InitAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m',32,0)">line 32</a>)
+PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)The folder: helpercode was not found
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m',32,1)">32  </a>        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
+if system_dependent('IsDebugMode')==1, dbquit; end
+InitAll
+Check for the existence of needed supporting scripts/function files
+PerformAll
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m' could not be cleared
+because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m' could not be cleared
+because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m' could not be cleared
+because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files

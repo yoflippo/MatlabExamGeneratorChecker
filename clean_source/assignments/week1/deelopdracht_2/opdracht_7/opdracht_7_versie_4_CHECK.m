@@ -14,7 +14,7 @@ nameVars = {'kol' 'rij'};
 literalsP = {'size('};
 % FILL literalsA, With strings that should not be present.
 % NO SPACES ALLOWED!!
-literalsA = {'NaN' 'koln=8' 'rijn=3'};
+literalsA = {'NaN' 'kol=13' 'rij=2'};
 
 
 
@@ -55,20 +55,16 @@ if ~isempty(char(txtCleanedStudentSolution))
         if exist(apCleaned,'file')
             run(apCleaned);
             txtns = nospaces(apCleaned);
-            apNospaces = replace(apCleaned,'.m','_NS.m');
         else
             run(apStudentSol);
             txtns = nospaces(apStudentSol);
-            apNospaces = replace(apStudentSol,'.m','_NS.m');
         end
-        writetxtfile(apNospaces,txtns);
     catch ErrMess
         % Test for a generated file! Could also be done by testing for Hash
         if ~contains(apStudentSol,'versie')
             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
         end
         delete(apCleaned);
-        delete(apNospaces);
         return;
     end
     
@@ -92,7 +88,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     for nLp = 1:length(literalsP)
         lit = literalsP{nLp};
         lit = lit(lit ~= ' ');% Remove spaces
-        if readAndFindTextInFile(apNospaces,lit)
+        if findRegEx(txtns,lit) > 0
             res = res + 1;
         else
             % Test for a generated file! Could also be done by testing for Hash
@@ -104,17 +100,15 @@ if ~isempty(char(txtCleanedStudentSolution))
     
     %% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
     nAbs = 0;
-    if ~isequal(res,0)
-        for nLa = 1:length(literalsA)
-            lit = literalsA{nLa};
-            lit = lit(lit ~= ' ');% Remove spaces
-            if readAndFindTextInFile(apNospaces,lit)
-                nAbs = nAbs + 1;
-            else
-                % Test for a generated file! Could also be done by testing for Hash
-                if ~contains(apStudentSol,'versie')
-                    WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
-                end
+    for nLa = 1:length(literalsA)
+        lit = literalsA{nLa};
+        lit = lit(lit ~= ' ');% Remove spaces
+        if findRegEx(txtns,lit) > 0
+            nAbs = nAbs + 1;
+        else
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
             end
         end
     end
@@ -122,9 +116,6 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Delete the tmp file
     if exist(apCleaned,'file')
         delete(apCleaned);
-    end
-    if exist(apNospaces,'file')
-        delete(apNospaces);
     end
     
     %% Calculate the result

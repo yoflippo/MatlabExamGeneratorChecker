@@ -13,10 +13,10 @@ txt = 'LAST LINE';
 WriteLineOfFile(apDataCopy,lnmbr,txt);
 
 %% TEST: reading all lines of file
-TXTFILE = readTxtFile_old(apDataCopy);
+% TXTFILE = readTxtFile_old(apDataCopy);
 TXTFILE2 = readTxtFile(apDataCopy);
 
-assert(isequal(txt,TXTFILE{lnmbr}));
+assert(isequal(txt,TXTFILE2{lnmbr}));
 
 
 %% TEST: reada file with separator

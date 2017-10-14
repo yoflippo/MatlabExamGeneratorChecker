@@ -1,6 +1,6 @@
 %% Vraag 2
 %
-% Stelling 1:   Een operator voert een handeling uit op ï¿½ï¿½n of meerdere
+% Stelling 1:   Een operator voert een handeling uit op één of meerdere
 %				operands.                                              
 %
 % Stelling 2:   De rechteroperand in de volgende regel code: 2 ^ 8 is 8. 
@@ -10,3 +10,11 @@
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
 Antwoord = D;
+
+
+
+
+
+
+
+

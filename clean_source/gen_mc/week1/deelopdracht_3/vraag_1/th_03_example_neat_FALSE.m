@@ -3,7 +3,6 @@ van netjes werken:
 
 ======= Code =======
 load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))
-addpath(genpath(fullfile(pwd,subWkFolder)))
-removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
+addpath(genpath(fullfile(pwd,subWkFolder))); removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
 files = dir(subWkFolder);
 ======= Code =======

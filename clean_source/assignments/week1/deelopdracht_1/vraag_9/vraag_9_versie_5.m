@@ -1,6 +1,6 @@
 %% Vraag 9
 %
-% Stelling 1:   In de volgende code wordt alleen bij ï¿½ï¿½n element
+% Stelling 1:   In de volgende code wordt alleen bij één element
 %				van de vector de waarde 99 opgeteld:            
 %				                                                
 %				------------code--------------                  
@@ -16,3 +16,5 @@
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
 Antwoord = NaN; % vul hier het juiste antwoord in A, B, C of D
+
+

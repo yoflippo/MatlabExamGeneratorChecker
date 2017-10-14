@@ -1,0 +1,1 @@
+De OR-operator kan ook worden toegepast op vectoren.

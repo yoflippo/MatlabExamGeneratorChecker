@@ -26,7 +26,7 @@ nameVars = {'koln' 'rijn'};
 literalsP = {'size('};
 % FILL literalsA, With strings that should not be present.
 % NO SPACES ALLOWED!!
-literalsA = {'NaN' 'koln=8' 'rijn=3'};
+literalsA = {'NaN' 'koln=7' 'rijn=3'};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and

@@ -13,7 +13,7 @@ numtests = 2;
 %%==========
 
 [path name ext] = fileparts(apStudentSol);
-tmp = readCleanMFile(apStudentSol);
+[~,~,tmp] = readCleanMFile('ap',apStudentSol,'ns');
 
 if ~isempty(char(tmp))
     

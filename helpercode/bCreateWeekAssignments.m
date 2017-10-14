@@ -185,7 +185,9 @@ for nW = Weeks
         nmLastAssignmentDir = ['deelopdracht_' num2str(length(numAssignment)+1)];
         mkdirIf(nmLastAssignmentDir);
         copyfile(finScriptStud,fullfile(apCurrStudWk,nmLastAssignmentDir));
-        copyfile(finScriptStud,fullfile(currStudentDirSol,weekName,nmLastAssignmentDir));
+        nmLastAssignmentSolDir = fullfile(currStudentDirSol,weekName,nmLastAssignmentDir);
+        mkdirIf(nmLastAssignmentSolDir);
+        copyfile(finScriptStud,nmLastAssignmentSolDir);
         cd(con.BASEFOLDER);
         
         % Create a file with the studentnumber

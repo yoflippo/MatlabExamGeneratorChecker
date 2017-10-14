@@ -1,0 +1,1 @@
+De OR-operator werkt op twee operands.

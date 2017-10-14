@@ -1,1 +1,0 @@
-Als je een rij-vector bestaat uit 1 rij
