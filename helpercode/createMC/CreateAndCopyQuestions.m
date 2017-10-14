@@ -58,7 +58,6 @@ for nWk = 1:length(weekDir)
     answerD = ['% D : ' char(answerD)];
     
     %% Browse the subfolder of weekXXX
-    %     try
     for nDirs = 1:length(folders)
         clc;
         disp(['CreateMCQuestions: ' num2str(nDirs) ' of ' num2str(length(folders)) ' folders processed.']);
@@ -213,10 +212,6 @@ for nWk = 1:length(weekDir)
         end
     end
     clear TPA
-    %     catch err
-    %         disp(err)
-    %         error([mfilename ': error']);
-    %     end
 end
 
 %% Test number of SOLUTION and CHECK files, sometimes the copying of files does not go right...
@@ -262,6 +257,14 @@ end
 
 disp('number of SOLUTION and CHECK files match!');
 
+%% Remove accidental files with _COPY postfix
+cd(outputDir)
+solFiles = dirmf('_COPY');
+for nC = 1:length(solFiles)
+   delete(fullfile(solFiles(nC).folder,solFiles(nC).name)); 
+end
+
+
 %% Copy the generated files to clean_source assignment
 for nw = 1:length(weekDir)
     apCurrDir = fullfile(pwd,weekDir{nw});
@@ -276,7 +279,6 @@ cd ..;
 
 %% Test the generated MC-files
 CountNumberOfFALSE_TRUE;
-datetime
 
 %% Copy the files to the right place
 copyMCToCleanSourceAssignment(baseFolder,apFin,weekDir);

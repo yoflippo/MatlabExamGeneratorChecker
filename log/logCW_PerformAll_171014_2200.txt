@@ -1,0 +1,769 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   171014_2200
+
+----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.2.0.556344 (R2017a)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 15063)
+Java Version: Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.2         (R2017a)
+Simulink                                              Version 8.9         (R2017a)
+Computer Vision System Toolbox                        Version 7.3         (R2017a)
+Control System Toolbox                                Version 10.2        (R2017a)
+Curve Fitting Toolbox                                 Version 3.5.5       (R2017a)
+DSP System Toolbox                                    Version 9.4         (R2017a)
+Data Acquisition Toolbox                              Version 3.11        (R2017a)
+Embedded Coder                                        Version 6.12        (R2017a)
+Fixed-Point Designer                                  Version 5.4         (R2017a)
+Fuzzy Logic Toolbox                                   Version 2.2.25      (R2017a)
+Global Optimization Toolbox                           Version 3.4.2       (R2017a)
+HDL Coder                                             Version 3.10        (R2017a)
+Image Acquisition Toolbox                             Version 5.2         (R2017a)
+Image Processing Toolbox                              Version 10.0        (R2017a)
+Instrument Control Toolbox                            Version 3.11        (R2017a)
+MATLAB Coder                                          Version 3.3         (R2017a)
+MATLAB Compiler                                       Version 6.4         (R2017a)
+MATLAB Compiler SDK                                   Version 6.3.1       (R2017a)
+Optimization Toolbox                                  Version 7.6         (R2017a)
+Parallel Computing Toolbox                            Version 6.10        (R2017a)
+Signal Processing Toolbox                             Version 7.4         (R2017a)
+Simscape                                              Version 4.2         (R2017a)
+Simscape Electronics                                  Version 2.11        (R2017a)
+Simscape Power Systems                                Version 6.7         (R2017a)
+Spreadsheet Link                                      Version 3.3.1       (R2017a)
+Stateflow                                             Version 8.9         (R2017a)
+Statistics and Machine Learning Toolbox               Version 11.1        (R2017a)
+Symbolic Math Toolbox                                 Version 7.2         (R2017a)
+System Identification Toolbox                         Version 9.6         (R2017a)
+Vehicle Network Toolbox                               Version 3.3         (R2017a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+CreateMCQuestions: 2 of 25 folders processed.
+CreateMCQuestions: 3 of 25 folders processed.
+CreateMCQuestions: 4 of 25 folders processed.
+CreateMCQuestions: 5 of 25 folders processed.
+CreateMCQuestions: 6 of 25 folders processed.
+CreateMCQuestions: 7 of 25 folders processed.
+CreateMCQuestions: 8 of 25 folders processed.
+CreateMCQuestions: 9 of 25 folders processed.
+CreateMCQuestions: 10 of 25 folders processed.
+CreateMCQuestions: 11 of 25 folders processed.
+CreateMCQuestions: 12 of 25 folders processed.
+CreateMCQuestions: 13 of 25 folders processed.
+CreateMCQuestions: 14 of 25 folders processed.
+CreateMCQuestions: 15 of 25 folders processed.
+CreateMCQuestions: 16 of 25 folders processed.
+CreateMCQuestions: 17 of 25 folders processed.
+CreateMCQuestions: 18 of 25 folders processed.
+CreateMCQuestions: 19 of 25 folders processed.
+CreateMCQuestions: 20 of 25 folders processed.
+CreateMCQuestions: 21 of 25 folders processed.
+CreateMCQuestions: 22 of 25 folders processed.
+CreateMCQuestions: 23 of 25 folders processed.
+CreateMCQuestions: 24 of 25 folders processed.
+CreateMCQuestions: 25 of 25 folders processed.
+CreateMCQuestions: 1 of 25 folders processed.
+CreateMCQuestions: 2 of 25 folders processed.
+CreateMCQuestions: 3 of 25 folders processed.
+CreateMCQuestions: 4 of 25 folders processed.
+CreateMCQuestions: 5 of 25 folders processed.
+CreateMCQuestions: 6 of 25 folders processed.
+CreateMCQuestions: 7 of 25 folders processed.
+CreateMCQuestions: 8 of 25 folders processed.
+CreateMCQuestions: 9 of 25 folders processed.
+CreateMCQuestions: 10 of 25 folders processed.
+CreateMCQuestions: 11 of 25 folders processed.
+CreateMCQuestions: 12 of 25 folders processed.
+CreateMCQuestions: 13 of 25 folders processed.
+CreateMCQuestions: 14 of 25 folders processed.
+CreateMCQuestions: 15 of 25 folders processed.
+CreateMCQuestions: 16 of 25 folders processed.
+CreateMCQuestions: 17 of 25 folders processed.
+CreateMCQuestions: 18 of 25 folders processed.
+CreateMCQuestions: 19 of 25 folders processed.
+CreateMCQuestions: 20 of 25 folders processed.
+CreateMCQuestions: 21 of 25 folders processed.
+CreateMCQuestions: 22 of 25 folders processed.
+CreateMCQuestions: 23 of 25 folders processed.
+CreateMCQuestions: 24 of 25 folders processed.
+CreateMCQuestions: 25 of 25 folders processed.
+number of SOLUTION and CHECK files match!
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+week1: TRUE = 82 | FALSE = 81
+week2: TRUE = 76 | FALSE = 80
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   171014_2202
+
+Created MC-Questions
+Elapsed time is 101.942308 seconds.
+execute generate all script
+CheckSolCheckFile
+Use last file? (not giving an answer is YES): 0
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolBase', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m', 18)" style="font-weight:bold">CheckSolBase</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m',18,0)">line 18</a>)
+DOES NOT EXIST:
+opdracht_3_versie_3_CHECK.m
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolCheckDir', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m', 10)" style="font-weight:bold">CheckSolCheckDir</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m',10,0)">line 10</a>)
+    CheckSolBase
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolBase', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m', 18)" style="font-weight:bold">CheckSolBase</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m',18,0)">line 18</a>)
+DOES NOT EXIST:
+opdracht_3_versie_3_CHECK.m
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolCheckDir', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m', 10)" style="font-weight:bold">CheckSolCheckDir</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m',10,0)">line 10</a>)
+    CheckSolBase
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+snippets testfunction
+open testscript
+open testfunction
+snippets testfunction
+open testfunction
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',15,1)">15  </a>literalsP2t = {'oppervlakte' 'spierdikte ='}; % literals that are present 2 times.
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',17,1)">17  </a>literalsA = {'NaN' 'pi*10' '10*pi'};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',29,1)">29  </a>[path name ext] = fileparts(apStudentSol);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+dbcont
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',14,1)">14  </a>literalsP = { '2*' 'oppervlakte/' 'halvespierlengte = 10' 'function spierdikte'};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',15,1)">15  </a>literalsP2t = {'oppervlakte' 'spierdikte ='}; % literals that are present 2 times.
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',17,1)">17  </a>literalsA = {'NaN' 'pi*10' '10*pi'};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',29,1)">29  </a>[path name ext] = fileparts(apStudentSol);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',30,1)">30  </a>nmSolution = replace(mfilename,'_CHECK','_SOL');
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+findRegEx(txtns,lit)
+
+ans =
+
+     2
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+(length(literalsP)+length(series)
+ (length(literalsP)+length(series)
+                                  
+{Error: Expression or
+statement is
+incorrect--possibly
+unbalanced (, {, or [.
+} 
+(length(literalsP)+length(series))
+
+ans =
+
+     9
+
+open testfunction
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_3_CHECK.m',98,1)">98  </a>    if res < 0
+if system_dependent('IsDebugMode')==1, dbcont; end
+opdracht_3_versie_3.m: works correctly
+{Error using
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolBase', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m', 15)" style="font-weight:bold">CheckSolBase</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m',15,0)">line 15</a>)
+DOES NOT EXIST:
+opdracht_3_versie_3_COPY_SOL.m
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolCheckDir', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m', 10)" style="font-weight:bold">CheckSolCheckDir</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m',10,0)">line
+10</a>)
+    CheckSolBase
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+something went wrong with this file
+
+catchMessage = 
+
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:fileparts:MustBeChar'
+       message: 'Input must be a row vector of characters.'
+         cause: {0×1 cell}
+         stack: [4×1 struct]
+
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+something went wrong with this file
+
+catchMessage = 
+
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:fileparts:MustBeChar'
+       message: 'Input must be a row vector of characters.'
+         cause: {0×1 cell}
+         stack: [4×1 struct]
+
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',34,1)">34  </a>nmSolution = replace(mfilename,'_CHECK','_SOL');
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',35,1)">35  </a>[txtCleanedStudentSolution apCleaned] = readCleanMFile(apStudentSol);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',36,1)">36  </a>[apClean nmClean extClean] = fileparts(apCleaned);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m',52,1)">52  </a>catch catchMessage
+if system_dependent('IsDebugMode')==1, dbquit; end
+CheckSolCheckFile
+Use last file? (not giving an answer is YES): {Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('askuser', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\miscellaneous\askuser.m', 42)" style="font-weight:bold">askuser</a>
+(<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\miscellaneous\askuser.m',42,0)">line 42</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolCheckFile', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckFile.m', 5)" style="font-weight:bold">CheckSolCheckFile</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckFile.m',5,0)">line 5</a>)
+if ~askuser('Use last file?',true) ||
+~exist(matFile)
+} 
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+open testfunction
+if system_dependent('IsDebugMode')==1, dbquit; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+if system_dependent('IsDebugMode')==1, dbquit; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+dbstep in
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\readcleanmfile\readCleanMFile.m',48,1)">48  </a>minargin = 1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',36,1)">36  </a>[apClean nmClean extClean] = fileparts(apCleaned);
+if system_dependent('IsDebugMode')==1, dbcont; end
+opdracht_3_versie_2.m: works correctly
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+opdracht_3_versie_2.m: works correctly
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+if system_dependent('IsDebugMode')==1, dbquit; end
+open testfunction
+dirmf('_COPY')
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[ans dirmf('COPY_')]
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[ans dirmf('COPY_')]
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+ans
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+t=dirmf('_COPY')
+
+t = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t dirmf('COPY_')]
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t dirmf('COPY_')]
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t, dirmf('COPY_')]
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t, dirmf('COPY_')]
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t, t]
+
+ans = 
+
+  2×2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t, t]
+
+ans = 
+
+  2×2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t, t]
+
+ans = 
+
+  2×2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t, t,t]
+
+ans = 
+
+  2×3 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[dirmf('COPY_') dirmf('COPY_')]
+
+ans = 
+
+  0×2 empty <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[dirmf('COPY_'), dirmf('COPY_')]
+
+ans = 
+
+  0×2 empty <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[dirmf('COPY'), dirmf('COPY')]
+
+ans = 
+
+  2×2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+dirmf('COPY')
+
+ans = 
+
+  2×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+[t;t]
+
+ans = 
+
+  4×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+snippets mserror
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+something went wrong with this file
+
+catchMessage = 
+
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'opdracht_3_versie_2_CHECK: Cannot CD to  (No directory specified).'
+         cause: {0×1 cell}
+         stack: [3×1 struct]
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolBase', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m', 15)" style="font-weight:bold">CheckSolBase</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m',15,0)">line 15</a>)
+DOES NOT EXIST:
+opdracht_3_versie_2_COPY_SOL.m
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolCheckDir', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m', 10)" style="font-weight:bold">CheckSolCheckDir</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m',10,0)">line 10</a>)
+    CheckSolBase
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+something went wrong with this file
+
+catchMessage = 
+
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'opdracht_3_versie_2_CHECK: Cannot CD to  (No directory specified).'
+         cause: {0×1 cell}
+         stack: [3×1 struct]
+
+opdracht_3_versie_3.m: works correctly
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',82,1)">82  </a>        currPath = pwd;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',83,1)">83  </a>        cd(fileparts(mfilename('fullname')))
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',90,1)">90  </a>    catch err
+fileparts(mfilename('fullname'))
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup char" style="font-weight:bold">char</a> array
+
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',82,1)">82  </a>        currPath = pwd; mfilename('fullname')
+dbstep
+
+ans =
+
+    'opdracht_3_versie_2_CHECK'
+
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',83,1)">83  </a>        cd(fileparts(mfilename('fullname')))
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',82,1)">82  </a>        currPath = pwd;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',83,1)">83  </a>        cd(fileparts(mfilename('fullpath')))
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',84,1)">84  </a>        cfiles = dirmf('_COPY');
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',85,1)">85  </a>        cfiles = [cfiles; dirmf('_NS')];
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',86,1)">86  </a>        for n = 1:length(cfiles)
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',87,1)">87  </a>            delete(fullfile(cfiles(n).folder,cfiles(n).name));
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',88,1)">88  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',87,1)">87  </a>            delete(fullfile(cfiles(n).folder,cfiles(n).name));
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',88,1)">88  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',87,1)">87  </a>            delete(fullfile(cfiles(n).folder,cfiles(n).name));
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',88,1)">88  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',87,1)">87  </a>            delete(fullfile(cfiles(n).folder,cfiles(n).name));
+dbstep
+[Warning: File
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_SOL_COPY_NS.m'
+not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_3_versie_2_CHECK', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m', 87)" style="font-weight:bold">opdracht_3_versie_2_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',87,0)">line 87</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolBase', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m', 38)" style="font-weight:bold">CheckSolBase</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolBase.m',38,0)">line 38</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSolCheckDir', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m', 10)" style="font-weight:bold">CheckSolCheckDir</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\CheckSolCheckDir.m',10,0)">line 10</a>)] 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',88,1)">88  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\assignments\week1\deelopdracht_4\opdracht_3\opdracht_3_versie_2_CHECK.m',89,1)">89  </a>        cd(currPath);
+open testfunction
+CheckSolCheckDir
+opdracht_3_versie_1.m: works correctly
+if system_dependent('IsDebugMode')==1, dbcont; end
+opdracht_3_versie_2.m: works correctly
+opdracht_3_versie_3.m: works correctly
+open testfunction

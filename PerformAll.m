@@ -7,12 +7,15 @@ Weeks = 1:2;  % Adjust me!!!
 for nW = Weeks
     gWeekNames{1,nW} = ['week' num2str(nW)]; 
 end
+warning off
+rmpath(genpath(fileparts(mfilename('fullpath'))));
+warning on
 addpath(genpath('helpercode'));
 InitAll
 
 
 %% Fill in week to test
-weekToCorrect = 1;
+weekToCorrect = 2;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
 
@@ -65,6 +68,7 @@ toc
 
 %% TEST if all correct solutions files pass
 cd(con.BASEFOLDER)
+disp(weekName);
 apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_100');
 apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,weekName);
 removeShitFromDir(apFinDes);

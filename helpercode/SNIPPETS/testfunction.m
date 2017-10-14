@@ -9,7 +9,7 @@ res = 0;
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
 literalsP = {'XXX' 'XXX' 'XXX'};
-% literalsP2t = {'XXX' 'XXX'}; % literals that are present 2 times.
+literalsP2t = {'XXX' 'XXX'}; % literals that are present 2 times.
 % FILL literalsA, With strings that should not be present.
 literalsA = {'NaN'};
 
@@ -33,10 +33,10 @@ nmSolution = replace(mfilename,'_CHECK','_SOL');
 %txtCleanedStudentSolution= readCleanMFile(apStudentSol);
 
 if ~isempty(char(txtCleanedStudentSolution))
-    %% Create compare the solution file with the student solution  
+    %% Create compare the solution file with the student solution
     series = 1:2:10;
     for z = series
-        varInput = XXXX;
+        varInput = 0:10; %%%%%%%%%% XXXXXXXXXXXX ADJUST ME XXXXXXXXXXXXX
         try
             if eval([nmClean '(varInput)']) == eval([nmSolution '(varInput)'])
                 res = res + 1;
@@ -52,14 +52,12 @@ if ~isempty(char(txtCleanedStudentSolution))
     
     %% Create a file from the cleaned file that contains no spaces, for easy txt comparisons
     txtns = nospaces(apCleaned);
-    apNospaces = replace(apCleaned,'.m','_NS.m');
-    writetxtfile(apNospaces,txtns);
     
     %% Check for literal answers that MUST BE PRESENT
     for nLp = 1:length(literalsP)
         lit = literalsP{nLp};
         lit = lit(lit ~= ' ');% Remove spaces
-        if readAndFindTextInFile(apNospaces,lit)
+        if findRegEx(txtns,lit) > 0
             res = res + 1;
         else
             % Test for a generated file! Could also be done by testing for Hash
@@ -73,8 +71,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     for nLp = 1:length(literalsP2t)
         lit = literalsP2t{nLp};
         lit = lit(lit ~= ' ');% Remove spaces
-        [b n] = readAndFindTextInFile(apNospaces,lit);
-        if n >=2
+        if findRegEx(txtns,lit) > 2
             res = res + 1;
         end
     end
@@ -85,7 +82,7 @@ if ~isempty(char(txtCleanedStudentSolution))
         for nLa = 1:length(literalsA)
             lit = literalsA{nLa};
             lit = lit(lit ~= ' ');% Remove spaces
-            if readAndFindTextInFile(apNospaces,lit)
+            if findRegEx(txtns,lit) > 0
                 nAbs = nAbs + 1;
             else
                 % Test for a generated file! Could also be done by testing for Hash
@@ -97,7 +94,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
     
     %% Calculate the result
-    res = (res-nAbs)/(length(literalsP)+length(series));
+    res = (res-nAbs)/(length(literalsP)+length(series)+length(literalsP2t));
     if res < 0
         res = 0;
     elseif res > 1
@@ -105,19 +102,19 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
 end
 
-%% Delete the tmp file
+%% Delete the tmp files
 try
-    if exist(apCleaned,'file')
-        delete(apCleaned);
+    currPath = pwd;
+    cd(fileparts(mfilename('fullpath')))
+    cfiles = dirmf('_COPY'); cfiles = [cfiles; dirmf('_NS')];
+    warning off
+    for n = 1:length(cfiles)
+        delete(fullfile(cfiles(n).folder,cfiles(n).name));
     end
-catch
+    warning on
+    cd(currPath);
+catch err
+    error([mfilename ': ' err.message]);
 end
-try
-    if exist(apNospaces,'file')
-        delete(apNospaces);
-    end
-catch
-end
-
 
 end %function

@@ -35,6 +35,7 @@ InitAll
 debugOutput(DEBUGOUTPUT,'Start with script');
 weekNr = num2str(Week);
 weekName = ['week' weekNr];
+disp(weekName);
 subWkFolder = fullfile(con.STUDENTSUBFOLDER,weekName);
 
 %% Check if needed folder exists, if not stop execution of script
