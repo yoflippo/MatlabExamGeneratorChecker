@@ -11,7 +11,7 @@ res = 0;
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
 % NO SPACES ALLOWED!!
-literalsP = {'max(beenlengtes)' 'min(beenlengtes)'};
+literalsP = {'max(beenlengtes)' 'min(beenlengtes)' '/'};
 % FILL literalsA, With strings that should not be present.
 % NO SPACES ALLOWED!!
 literalsA = {'NaN'};
@@ -30,10 +30,10 @@ literalsA = {'NaN'};
 
 
 %% Commence the TESTING !!!
-[path name ext] = fileparts(apStudentSol);
+[~ , ~ , ~] = fileparts(apStudentSol);
 nmSolution = replace(mfilename,'_CHECK','_SOL');
-[txtCleanedStudentSolution apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
-[apClean nmClean extClean] = fileparts(apCleaned);
+[txtCleanedStudentSolution, apCleaned] = readCleanMFile('ap',apStudentSol,'mc');
+[~, nmClean , ~] = fileparts(apCleaned);
 %txtCleanedStudentSolution= readCleanMFile(apStudentSol);
 
 if ~isempty(char(txtCleanedStudentSolution))
@@ -77,15 +77,23 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
     end
     
-    %% Delete the tmp file
-    if exist(apCleaned,'file')
-        delete(apCleaned);
-    end
-    if exist(apNospaces,'file')
-        delete(apNospaces);
+    %% Delete the tmp files
+    try
+        currPath = pwd;
+        cd(fileparts(mfilename('fullpath')))
+        cfiles = dirmf('_COPY');
+        cfiles = [cfiles; dirmf('_NS')];
+        warning off
+        for n = 1:length(cfiles)
+            delete(fullfile(cfiles(n).folder,cfiles(n).name));
+        end
+        warning on
+        cd(currPath);
+    catch err
+        error([mfilename ': ' err.message]);
     end
     
-       
+    
     %% Calculate the result
     res = (res-nAbs)/(length(literalsP)+length(series));
     if res < 0
