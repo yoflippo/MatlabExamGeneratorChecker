@@ -122,6 +122,7 @@ for wk = 1:length(con.WEEKFOLDERS)
                 end
                 
                 headerHash{2} = uniqueFN.HashCommentLine;
+                headerHash{3} = ['%                            ' con.DATETIME];
                 % Grab default header text for every m-file
                 for hh = 2:length(header)
                     headerHash{length(headerHash)+1} = header{hh};

@@ -1,6 +1,4 @@
-function otxt = nospaces(apFile)
-%ADDSEMICOLONS A script that automatically adds semicolons to a file.
-%
+
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
@@ -17,43 +15,32 @@ function otxt = nospaces(apFile)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-%
-% DESCRIPTION:
-%
-%
-% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-%
-% PARAMETERS:
-%               apFile:   The absolute path of a script/function
-%
-% RETURN:
-%               nothings
-%
-% EXAMPLES:
-%
-%
 
-% $Revision: 0.0.0 $  $Date: 2017-05-10 $
-% Creation of script
+clc;
+close all;
+close all hidden
+clear variables; 
+clear all
+addpath(genpath('helpercode'))
+DEBUGOUTPUT = 1
+% make zero to delete base folder
+Constants
 
-
-
-%% Read the file
-try
-    txt = readTxtFile(apFile);
-catch
-    error([mfilename ': Could not read the file']);
+%% Check for the existence of needed supporting scripts/function files
+debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
+for i = 1:length(LISTWITHNEEDEDFOLDERS)
+    try
+        cd(LISTWITHNEEDEDFOLDERS{i});
+        cd ..
+        if bullshit == 3
+           lala = txt
+        end
+    catch  %  TEST
+        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
+            'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found'])
+    end
 end
+% The basefolder should only be assigned if previous code has executed
+% correctly
+BASEFOLDER = pwd; %TEST
 
-%% Remove spaces
-if isequal(txt{1},-1)
-    otxt = [];
-else
-    otxt = strrep(txt,' ','');
-end
-
-% %% Write to file
-% writetxtfile(apFile,txt);
-% otxt = txt;
-
-end

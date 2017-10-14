@@ -26,11 +26,18 @@ classdef ConstantsClass
     end
     properties (SetAccess = private)
         BASEFOLDER
+        DATETIME
     end
     
     methods
-        function obj = ConstantsClass(apBase)
-            obj.BASEFOLDER = apBase;
+        %% Constructor: overloaded
+        function obj = ConstantsClass(varargin)
+            if isequal(nargin,1)
+                obj.BASEFOLDER = varargin{1};
+            else % Assume that this file is one dir deeper than basefolder
+                obj.BASEFOLDER = fileparts(fileparts(mfilename('fullpath')));
+            end
+            obj.DATETIME = datetimetxt();
         end
     end
 end %class

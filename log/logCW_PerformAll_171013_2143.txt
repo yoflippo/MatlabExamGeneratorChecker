@@ -1,0 +1,1871 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   171013_2143
+
+----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.2.0.556344 (R2017a)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 15063)
+Java Version: Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.2         (R2017a)
+Simulink                                              Version 8.9         (R2017a)
+Computer Vision System Toolbox                        Version 7.3         (R2017a)
+Control System Toolbox                                Version 10.2        (R2017a)
+Curve Fitting Toolbox                                 Version 3.5.5       (R2017a)
+DSP System Toolbox                                    Version 9.4         (R2017a)
+Data Acquisition Toolbox                              Version 3.11        (R2017a)
+Embedded Coder                                        Version 6.12        (R2017a)
+Fixed-Point Designer                                  Version 5.4         (R2017a)
+Fuzzy Logic Toolbox                                   Version 2.2.25      (R2017a)
+Global Optimization Toolbox                           Version 3.4.2       (R2017a)
+HDL Coder                                             Version 3.10        (R2017a)
+Image Acquisition Toolbox                             Version 5.2         (R2017a)
+Image Processing Toolbox                              Version 10.0        (R2017a)
+Instrument Control Toolbox                            Version 3.11        (R2017a)
+MATLAB Coder                                          Version 3.3         (R2017a)
+MATLAB Compiler                                       Version 6.4         (R2017a)
+MATLAB Compiler SDK                                   Version 6.3.1       (R2017a)
+Optimization Toolbox                                  Version 7.6         (R2017a)
+Parallel Computing Toolbox                            Version 6.10        (R2017a)
+Signal Processing Toolbox                             Version 7.4         (R2017a)
+Simscape                                              Version 4.2         (R2017a)
+Simscape Electronics                                  Version 2.11        (R2017a)
+Simscape Power Systems                                Version 6.7         (R2017a)
+Spreadsheet Link                                      Version 3.3.1       (R2017a)
+Stateflow                                             Version 8.9         (R2017a)
+Statistics and Machine Learning Toolbox               Version 11.1        (R2017a)
+Symbolic Math Toolbox                                 Version 7.2         (R2017a)
+System Identification Toolbox                         Version 9.6         (R2017a)
+Vehicle Network Toolbox                               Version 3.3         (R2017a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+CreateMCQuestions: 2 of 25 folders processed.
+CreateMCQuestions: 3 of 25 folders processed.
+CreateMCQuestions: 4 of 25 folders processed.
+CreateMCQuestions: 5 of 25 folders processed.
+CreateMCQuestions: 6 of 25 folders processed.
+CreateMCQuestions: 7 of 25 folders processed.
+CreateMCQuestions: 8 of 25 folders processed.
+CreateMCQuestions: 9 of 25 folders processed.
+CreateMCQuestions: 10 of 25 folders processed.
+CreateMCQuestions: 11 of 25 folders processed.
+CreateMCQuestions: 12 of 25 folders processed.
+CreateMCQuestions: 13 of 25 folders processed.
+CreateMCQuestions: 14 of 25 folders processed.
+CreateMCQuestions: 15 of 25 folders processed.
+CreateMCQuestions: 16 of 25 folders processed.
+CreateMCQuestions: 17 of 25 folders processed.
+CreateMCQuestions: 18 of 25 folders processed.
+CreateMCQuestions: 19 of 25 folders processed.
+CreateMCQuestions: 20 of 25 folders processed.
+CreateMCQuestions: 21 of 25 folders processed.
+CreateMCQuestions: 22 of 25 folders processed.
+CreateMCQuestions: 23 of 25 folders processed.
+CreateMCQuestions: 24 of 25 folders processed.
+CreateMCQuestions: 25 of 25 folders processed.
+CreateMCQuestions: 1 of 7 folders processed.
+CreateMCQuestions: 2 of 7 folders processed.
+CreateMCQuestions: 3 of 7 folders processed.
+CreateMCQuestions: 4 of 7 folders processed.
+CreateMCQuestions: 5 of 7 folders processed.
+CreateMCQuestions: 6 of 7 folders processed.
+CreateMCQuestions: 7 of 7 folders processed.
+number of SOLUTION and CHECK files match!
+week1: TRUE = 82 | FALSE = 79
+week2: TRUE = 21 | FALSE = 21
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   171013_2144
+
+Created MC-Questions
+Elapsed time is 45.692807 seconds.
+execute generate all script
+Check for the existence of needed supporting scripts/function files
+Start fresh: Generate all week assignments
+0: Read the student number and convert the list to e-mailadresses
+0.023: Create new filenames (with HASH code AND combine file names)
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 2, progress: 0%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 100%
+Give each assignment Hash-info week: 2, progress: 100%
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:cd:NonExistentDirectory'
+       message: 'Cannot CD to week3 (Name is nonexistent or not a directory).'
+         cause: {0×1 cell}
+         stack: [2×1 struct]
+
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'problem with folder: week3'
+         cause: {0×1 cell}
+         stack: [2×1 struct]
+
+[Warning: PerformAll: aGenerateEverythingForCourse did not finish correctly] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 38)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',38,0)">line 38</a>)] 
+Elapsed time is 0.430560 seconds.
+Check if al "checking" files are in working order
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Checked files: 1 of 421
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Checked files: 2 of 421
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+checkcode('CreateAndCopyQuestions.m')
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',10)">L 10</a> (C 5-9): EXIST with two input arguments is generally faster and clearer than with one input argument.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',88)">L 88</a> (C 21-37): The variable 'randomFileIndexes' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',89)">L 89</a> (C 21-37): The variable 'randomFileIndexes' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',104)">L 104</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',105)">L 105</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',115)">L 115</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',121)">L 121</a> (C 25-34): The variable 'txtTheses1' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',125)">L 125</a> (C 17-26): The variable 'txtTheses1' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',126)">L 126</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',135)">L 135</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',140)">L 140</a> (C 25-34): The variable 'txtTheses2' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',144)">L 144</a> (C 17-26): The variable 'txtTheses2' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',145)">L 145</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',148)">L 148</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',149)">L 149</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',150)">L 150</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',151)">L 151</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',160)">L 160</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',164)">L 164</a> (C 18): The value assigned here to 'a' appears to be unused. Consider replacing it by ~.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',164)">L 164</a> (C 20-31): Best practice is to separate output variables with commas.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',167)">L 167</a> (C 17-28): The variable 'nameQuestion' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',183)">L 183</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',239)">L 239</a> (C 41): Extra semicolon is unnecessary in IF statement before newline.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',243)">L 243</a> (C 25-29): EXIST with two input arguments is generally faster and clearer than with one input argument.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',245)">L 245</a> (C 25-29): EXIST with two input arguments is generally faster and clearer than with one input argument.
+
+opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',245)
+checkcode('CreateAndCopyQuestions.m')
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',10)">L 10</a> (C 5-9): EXIST with two input arguments is generally faster and clearer than with one input argument.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',88)">L 88</a> (C 21-37): The variable 'randomFileIndexes' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',89)">L 89</a> (C 21-37): The variable 'randomFileIndexes' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',104)">L 104</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',105)">L 105</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',115)">L 115</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',121)">L 121</a> (C 25-34): The variable 'txtTheses1' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',125)">L 125</a> (C 17-26): The variable 'txtTheses1' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',126)">L 126</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',135)">L 135</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',140)">L 140</a> (C 25-34): The variable 'txtTheses2' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',144)">L 144</a> (C 17-26): The variable 'txtTheses2' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',145)">L 145</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',148)">L 148</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',149)">L 149</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',150)">L 150</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',151)">L 151</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',160)">L 160</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',164)">L 164</a> (C 18): The value assigned here to 'a' appears to be unused. Consider replacing it by ~.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',164)">L 164</a> (C 20-31): Best practice is to separate output variables with commas.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',167)">L 167</a> (C 17-28): The variable 'nameQuestion' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',183)">L 183</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+
+opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',10)
+opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',88)
+Generate MC files and copy all clean_source/assignments -> root/assignments
+{Error: <a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',86,68)">File: CreateAndCopyQuestions.m Line: 86 Column: 68
+</a>Unbalanced or unexpected parenthesis or bracket.
+} 
+opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',86,68)
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',93,1)">93  </a>            randomFileIndexes = randomFileIndexes(1:cnt);
+randomFileIndexes = randomFileIndexes(1:cnt-1)
+
+randomFileIndexes =
+
+     1     3     1     4     1     5     2     4     2     5     3     5
+
+randomFileIndexes = zeros(1,numberOfThesesFiles*2);
+            for ind = 1:numberOfThesesFiles-2
+                for ind2 = ind+2:numberOfThesesFiles
+                    randomFileIndexes(cnt) = ind; cnt = cnt + 1;
+                    randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
+                end
+            end
+cnt = 1;
+            randomFileIndexes = zeros(1,numberOfThesesFiles*2);
+            for ind = 1:numberOfThesesFiles-2
+                for ind2 = ind+2:numberOfThesesFiles
+                    randomFileIndexes(cnt) = ind; cnt = cnt + 1;
+                    randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
+                end
+            end
+cnt = 1;
+            randomFileIndexes = zeros(1,numberOfThesesFiles^2);
+            for ind = 1:numberOfThesesFiles-2
+                for ind2 = ind+2:numberOfThesesFiles
+                    randomFileIndexes(cnt) = ind; cnt = cnt + 1;
+                    randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
+                end
+            end
+randomFileIndexes(1:cnt-1)
+
+ans =
+
+     1     3     1     4     1     5     2     4     2     5     3     5
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+checkcode('CreateAndCopyQuestions.m')
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',105)">L 105</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',106)">L 106</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',116)">L 116</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',122)">L 122</a> (C 25-34): The variable 'txtTheses1' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',126)">L 126</a> (C 17-26): The variable 'txtTheses1' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',127)">L 127</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',136)">L 136</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',141)">L 141</a> (C 25-34): The variable 'txtTheses2' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',145)">L 145</a> (C 17-26): The variable 'txtTheses2' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',146)">L 146</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',149)">L 149</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',150)">L 150</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',151)">L 151</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',152)">L 152</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',161)">L 161</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',165)">L 165</a> (C 18): The value assigned here to 'a' appears to be unused. Consider replacing it by ~.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',165)">L 165</a> (C 20-31): Best practice is to separate output variables with commas.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',168)">L 168</a> (C 17-28): The variable 'nameQuestion' appears to change size on every loop iteration. Consider preallocating for speed.
+<a href="matlab: opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',184)">L 184</a> (C 17-24): The variable 'finalTxt' appears to change size on every loop iteration. Consider preallocating for speed.
+
+opentoline('C:/Users/yoflippo/Dropbox/BT/00_ALG_BT/00-NEWCURR/Biostatica_Auto_Matlab/helpercode/createMC/CreateAndCopyQuestions.m',105)
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',106,1)">106 </a>                finalTxt = cell(1,50);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',107,1)">107 </a>                finalTxt{cnt,1} = headerTxt; cnt = cnt + 1;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',108,1)">108 </a>                finalTxt{cnt,1} = '%';       cnt = cnt + 1; %add empty line
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',112,1)">112 </a>                currentIndex = randomFileIndexes(1);
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+finalTxt
+
+finalTxt =
+
+  13×50 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+  Columns 1 through 15
+
+    ["%% Vraag 1"       ]    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '%'                      []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '% Stelling 1:   I…'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '%				o…'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '%'                      []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '% Stelling 2:   I…'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '%				g…'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '%'                      []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '% A : stelling 1 …'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '% B : stelling 1 …'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '% C : stelling 1 …'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    '% D : stelling 1 …'    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    'Antwoord = D;'          []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 16 through 33
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 34 through 50
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+cell(1,50)
+
+ans =
+
+  1×50 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+  Columns 1 through 18
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 19 through 36
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 37 through 50
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+cell(50,1)
+
+ans =
+
+  50×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',106,1)">106 </a>                finalTxt = cell(50,1);
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+ finalTxt{cnt,1}
+
+ans =
+
+    'Antwoord = D;'
+
+ a=  finalTxt{1:cnt,1}
+
+a = 
+
+    "%% Vraag 1"
+
+a=  finalTxt{1:cnt}
+
+a = 
+
+    "%% Vraag 1"
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',163,1)">163 </a>                finalTxt{cnt,1} =  solAnswerLine;
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',169,1)">169 </a>                nVersionMC = nVersionMC + 1;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',170,1)">170 </a>                nameQuestion = [nameQuestion '_versie_' num2str(nVersionMC)];
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',171,1)">171 </a>                nameQuestionSOL = [nameQuestion '_SOL'];
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',172,1)">172 </a>                nameQuestionCHECK = [nameQuestion '_CHECK'];
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',176,1)">176 </a>                apNameQuestionSOL = fullfile(absPathDestination,[nameQuestionSOL '.m']);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateMCQuestions: 2 of 25 folders processed.
+CreateMCQuestions: 3 of 25 folders processed.
+CreateMCQuestions: 4 of 25 folders processed.
+CreateMCQuestions: 5 of 25 folders processed.
+CreateMCQuestions: 6 of 25 folders processed.
+CreateMCQuestions: 7 of 25 folders processed.
+CreateMCQuestions: 8 of 25 folders processed.
+CreateMCQuestions: 9 of 25 folders processed.
+CreateMCQuestions: 10 of 25 folders processed.
+CreateMCQuestions: 11 of 25 folders processed.
+CreateMCQuestions: 12 of 25 folders processed.
+CreateMCQuestions: 13 of 25 folders processed.
+CreateMCQuestions: 14 of 25 folders processed.
+CreateMCQuestions: 15 of 25 folders processed.
+CreateMCQuestions: 16 of 25 folders processed.
+CreateMCQuestions: 17 of 25 folders processed.
+CreateMCQuestions: 18 of 25 folders processed.
+CreateMCQuestions: 19 of 25 folders processed.
+CreateMCQuestions: 20 of 25 folders processed.
+CreateMCQuestions: 21 of 25 folders processed.
+CreateMCQuestions: 22 of 25 folders processed.
+CreateMCQuestions: 23 of 25 folders processed.
+CreateMCQuestions: 24 of 25 folders processed.
+CreateMCQuestions: 25 of 25 folders processed.
+CreateMCQuestions: 1 of 7 folders processed.
+CreateMCQuestions: 2 of 7 folders processed.
+CreateMCQuestions: 3 of 7 folders processed.
+CreateMCQuestions: 4 of 7 folders processed.
+CreateMCQuestions: 5 of 7 folders processed.
+CreateMCQuestions: 6 of 7 folders processed.
+CreateMCQuestions: 7 of 7 folders processed.
+number of SOLUTION and CHECK files match!
+week1: TRUE = 82 | FALSE = 79
+week2: TRUE = 21 | FALSE = 21
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   171013_2158
+
+Created MC-Questions
+Elapsed time is 98.487691 seconds.
+PerformAll
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files

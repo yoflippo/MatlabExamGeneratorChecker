@@ -17,7 +17,8 @@ cd(thisWeek);
 
 %% Message for student
 chr = 'Chadier, dit is de opnieuw nagekeken versie.';
-chr = [chr newline 'Beste student,'];
+% chr = [chr newline 'Beste student,'];
+chr = 'Beste student,';
 chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw nagekeken eindopdracht'];
 chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];
@@ -46,4 +47,4 @@ for nZ = 1:length(zips)
     end
 end
 disp(['Send mails: ' num2str(nSendMails)]);
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)

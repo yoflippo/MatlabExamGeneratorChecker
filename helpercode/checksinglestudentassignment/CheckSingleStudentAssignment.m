@@ -132,7 +132,7 @@ for i = 1:length(mfilesWithHash)
             percStudent = ResStudentScript * 100;
             
             %% Some actions to report to the student
-            if ResStudentScript < 1
+            if round(ResStudentScript,1) < 1
                 % Copy the solution file
                 answerFile = [nmSTUScript '_UITWERKING.m'];
                 copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));

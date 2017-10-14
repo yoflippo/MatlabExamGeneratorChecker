@@ -1,106 +1,141 @@
 function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
-
-% default
 res = 0;
-numtests = XXX;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
 
 %%==========
 
-[path name ext] = fileparts(apStudentSol);
-tmp = readCleanMFile(apStudentSol);
+%% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
+% SHOULD CHANGE!
+nameVars = {'XXX' 'XXX' 'XXX'};
+% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
+% THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
+% NO SPACES ALLOWED!!
+literalsP = {'XXX' 'XXX' 'XXX'};
+% FILL literalsA, With strings that should not be present.
+% NO SPACES ALLOWED!!
+literalsA = {'NaN' 'XXX'};
 
-if ~isempty(char(tmp))
-    
+
+
+
+%% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
+% 1- Variables with specific values and
+% 2- Literals that should be present and
+% 3- Lterals that should be abscent
+% You should take cornercases in to consideration as well. So add those
+% tests as well.
+
+
+
+
+%% Commence the TESTING !!!
+[path name ext] = fileparts(apStudentSol);
+[txtCleanedStudentSolution apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
+%txtCleanedStudentSolution= readCleanMFile(apStudentSol);
+
+if ~isempty(char(txtCleanedStudentSolution))
     %% Run the solution file - HAS TO WORK!!
     try
         run(replace(mfilename,'_CHECK','_SOL'));
-    catch
+    catch ErrMess
         return;
     end
     
-    % Copy the correct answers, this constructions allows us to test for
-    % certain variable names easily, by using the SOLUTION file.
-    nameVar1 = '';
-    nameVar2 = '';
-    nameVar3 = '';
-    eval(['var1ANS = ' nameVar1 ';']);
-    eval(['var2ANS = ' nameVar2 ';']);
-    eval(['var3ANS = ' nameVar3 ';']);
-    
-    % Remove solution variables from Workspace.
-    eval(['clear ' nameVar1 ';']);
-    eval(['clear ' nameVar2 ';']);
-    eval(['clear ' nameVar3 ';']);
-    
-    %% Run the original student scripts, if not working no points!
-    try
-        run(apStudentSol);
-    catch
-        return;
+    % Get values and variables from the SOLUTION file
+    for nV = 1:length(nameVars)
+        % Save the variables in the SOLUTION FILE
+        eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
+        % Remove solution variables from Workspace.
+        eval(['clear ' nameVars{nV}  ';']);
     end
     
-    %% Perform tests for certain variables
+    %% Run the cleaned student script, if not working no points!
     try
-        if isequal(var1ANS,eval(nameVar1))
-            res = res + (1/numtests);
+        if exist(apCleaned,'file')
+            run(apCleaned);
+            txtns = nospaces(apCleaned);
+            apNospaces = replace(apCleaned,'.m','_NS.m');
+        else
+            run(apStudentSol);
+            txtns = nospaces(apStudentSol);
+            apNospaces = replace(apStudentSol,'.m','_NS.m');
         end
+        writetxtfile(apNospaces,txtns);
     catch ErrMess
         % Test for a generated file! Could also be done by testing for Hash
         if ~contains(apStudentSol,'versie')
             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
         end
+        delete(apCleaned);
+        delete(apNospaces);
+        return;
     end
     
-    %     try
-    %         if isequal(var2ANS,eval(nameVar2))
-    %             res = res + (1/numtests);
-    %         end
-    %     catch ErrMess
-    %         if ~contains(apStudentSol,'versie')
-    %             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-    %         end
-    %     end
+    %% Perform tests for certain variables in the Workspace
+    for nV = 1:length(nameVars)
+        try
+            eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
+            if blTest
+                res = res + 1;
+            end
+        catch ErrMess
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+            end
+        end
+    end
     
-    %     try
-    %         if isequal(var3ANS,eval(nameVar3))
-    %             res = res + (1/numtests);
-    %         end
-    %     catch ErrMess
-    %         if ~contains(apStudentSol,'versie')
-    %             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-    %         end
-    %     end
     
-    %% Check for literal values and variables
-    % Make temp file
-    absPathTmp = fullfile(path,'tmp');
-    makeMFileFromCells(absPathTmp,tmp);
-    absPathTmp = fullfile(path,'tmp.m');
+    %% Check for literal answers that MUST BE PRESENT
+    for nLp = 1:length(literalsP)
+        lit = literalsP{nLp};
+        lit = lit(lit ~= ' ');% Remove spaces
+        if readAndFindTextInFile(apNospaces,lit) || readAndFindTextInFile(apNospaces,fliplr(lit))
+            res = res + 1;
+        else
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP{nLp}]);
+            end
+        end
+    end
     
-    %     %% Check for literal answers that must be present,  REMOVE ALL SPACES FROM LITERAL!!
-    %     literal = 'XXX';
-    %     if readAndFindTextInFile(absPathTmp,literal) || readAndFindTextInFile(absPathTmp,fliplr(literal))
-    %         res = res + (1/numtests);
-    %     end
-    %
     %% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
-    literal = 'NaN';
-    if ~readAndFindTextInFile(absPathTmp,literal) && ~readAndFindTextInFile(absPathTmp,fliplr(literal))
-        res = res + (1/numtests);
+    nAbs = 0;
+    if ~isequal(res,0)
+        for nLa = 1:length(literalsA)
+            lit = literalsA{nLa};
+            lit = lit(lit ~= ' ');% Remove spaces
+            if readAndFindTextInFile(apNospaces,lit) && readAndFindTextInFile(apNospaces,fliplr(lit))
+                nAbs = nAbs + 1;
+            else
+                % Test for a generated file! Could also be done by testing for Hash
+                if ~contains(apStudentSol,'versie')
+                    WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
+                end
+            end
+        end
     end
     
-    %     %% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
-    %     literal = 'txtWithoutSpaces';
-    %     if ~readAndFindTextInFile(absPathTmp,literal) && ~readAndFindTextInFile(absPathTmp,fliplr(literal))
-    %         res = res + (1/numtests);
-    %     end
+    %% Delete the tmp file
+    if exist(apCleaned,'file')
+        delete(apCleaned);
+    end
+    if exist(apNospaces,'file')
+        delete(apNospaces);
+    end
     
-    %% HAVE YOU CHECKED the variable 'numtests'???
-    if exist(absPathTmp,'file')
-        delete(absPathTmp);
+    %% Calculate the result
+    res = (res-nAbs)/(length(literalsP)+length(nameVars));
+    if res < 0
+        res = 0;
+    elseif res > 1
+        res = 1;
     end
 end
+
+
 
 end %function

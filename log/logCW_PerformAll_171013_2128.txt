@@ -1,0 +1,637 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   171013_2128
+
+----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.2.0.556344 (R2017a)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 15063)
+Java Version: Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.2         (R2017a)
+Simulink                                              Version 8.9         (R2017a)
+Computer Vision System Toolbox                        Version 7.3         (R2017a)
+Control System Toolbox                                Version 10.2        (R2017a)
+Curve Fitting Toolbox                                 Version 3.5.5       (R2017a)
+DSP System Toolbox                                    Version 9.4         (R2017a)
+Data Acquisition Toolbox                              Version 3.11        (R2017a)
+Embedded Coder                                        Version 6.12        (R2017a)
+Fixed-Point Designer                                  Version 5.4         (R2017a)
+Fuzzy Logic Toolbox                                   Version 2.2.25      (R2017a)
+Global Optimization Toolbox                           Version 3.4.2       (R2017a)
+HDL Coder                                             Version 3.10        (R2017a)
+Image Acquisition Toolbox                             Version 5.2         (R2017a)
+Image Processing Toolbox                              Version 10.0        (R2017a)
+Instrument Control Toolbox                            Version 3.11        (R2017a)
+MATLAB Coder                                          Version 3.3         (R2017a)
+MATLAB Compiler                                       Version 6.4         (R2017a)
+MATLAB Compiler SDK                                   Version 6.3.1       (R2017a)
+Optimization Toolbox                                  Version 7.6         (R2017a)
+Parallel Computing Toolbox                            Version 6.10        (R2017a)
+Signal Processing Toolbox                             Version 7.4         (R2017a)
+Simscape                                              Version 4.2         (R2017a)
+Simscape Electronics                                  Version 2.11        (R2017a)
+Simscape Power Systems                                Version 6.7         (R2017a)
+Spreadsheet Link                                      Version 3.3.1       (R2017a)
+Stateflow                                             Version 8.9         (R2017a)
+Statistics and Machine Learning Toolbox               Version 11.1        (R2017a)
+Symbolic Math Toolbox                                 Version 7.2         (R2017a)
+System Identification Toolbox                         Version 9.6         (R2017a)
+Vehicle Network Toolbox                               Version 3.3         (R2017a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UnableToConvert'
+       message: 'The following error occurred converting from string to cell:Conversion to cell from string is not possible.'
+         cause: {}
+         stack: [3×1 struct]
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 211)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',211,0)">line 211</a>)
+CreateAndCopyQuestions: error
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 26)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',26,0)">line 26</a>)
+CreateAndCopyQuestions(con.BASEFOLDER,apFin,gWeekNames);
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',17,1)">17  </a>for nWk = 1:length(weekDir)
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',18,1)">18  </a>    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekDir{nWk}));
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',21,1)">21  </a>    theses = {zeros(1,length(folders))};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',22,1)">22  </a>    TPA = theses;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',23,1)">23  </a>    for nDirs = 1:length(folders)
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',24,1)">24  </a>        cd(folders{nDirs});
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',26,1)">26  </a>        theses{nDirs} = dir(['**' filesep '*th_*.m']);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',29,1)">29  </a>        for nT = 1:length(theses{nDirs})
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>                tmpAnswer = true;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>            else
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>                tmpAnswer = false;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>                tmpAnswer = true;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>            else
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>                tmpAnswer = false;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>                tmpAnswer = true;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',39,1)">39  </a>        cd(apOfCleanSource);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',40,1)">40  </a>    end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',24,1)">24  </a>        cd(folders{nDirs});
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',26,1)">26  </a>        theses{nDirs} = dir(['**' filesep '*th_*.m']);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',29,1)">29  </a>        for nT = 1:length(theses{nDirs})
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>            else
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>                tmpAnswer = false;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>                tmpAnswer = true;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>                tmpAnswer = true;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>            else
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>                tmpAnswer = false;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>            else
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>                tmpAnswer = false;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>                tmpAnswer = true;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',39,1)">39  </a>        cd(apOfCleanSource);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',40,1)">40  </a>    end
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',24,1)">24  </a>        cd(folders{nDirs});
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',26,1)">26  </a>        theses{nDirs} = dir(['**' filesep '*th_*.m']);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',29,1)">29  </a>        for nT = 1:length(theses{nDirs})
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>            else
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>                tmpAnswer = false;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>            end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>        end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>            tmpName = theses{1,nDirs}(nT).name;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            if contains(tmpName,'TRUE')
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateMCQuestions: 1 of 25 folders processed.
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UnableToConvert'
+       message: 'The following error occurred converting from string to cell:Conversion to cell from string is not possible.'
+         cause: {}
+         stack: [2×1 struct]
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 211)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',211,0)">line 211</a>)
+CreateAndCopyQuestions: error
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',17,1)">17  </a>for nWk = 1:length(weekDir)
+dbcont
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',61,1)">61  </a>    try
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateMCQuestions: 1 of 25 folders processed.
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',17,1)">17  </a>for nWk = 1:length(weekDir)
+dbcont
+CreateMCQuestions: 1 of 25 folders processed.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',201,1)">201 </a>                fnCopiedTemplate = ReadLineOfFile(apCheckFile);
+fnCopiedTemplate = ReadLineOfFile(apCheckFile)
+
+fnCopiedTemplate = 
+
+    "function res = xxx(absPathStudentSol)"
+
+fnCopiedTemplate = replace(fnCopiedTemplate,'xxx',nameQuestionCHECK)
+
+fnCopiedTemplate = 
+
+    "function res = vraag_1_versie_1_CHECK(absPathStudentSol)"
+
+WriteLineOfFile(apCheckFile,1,fnCopiedTemplate)
+{The following error occurred converting from string to cell:
+Conversion to cell from string is not possible.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('WriteLineOfFile', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\changelineoffile\WriteLineOfFile.m', 61)" style="font-weight:bold">WriteLineOfFile</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\changelineoffile\WriteLineOfFile.m',61,0)">line 61</a>)
+txtFile(lineNumber) = lineTxt;
+} 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',17,1)">17  </a>for nWk = 1:length(weekDir)
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateMCQuestions: 1 of 25 folders processed.
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+txtFile{lineNumber} = lineTxt
+
+txtFile =
+
+  27×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    ["function res = vraag_1_versie_1_CHECK(absPathStudentSol)"              ]
+    '% This script has to check and test another script'
+    '% It gives a result in the variable ResStudentScript. Perfect grade = 1.'
+    '% Totally wrong result = 0.'
+    ''
+    'con = ConstantsClass;'
+    '% Generate the default Answers'
+    'A=1;B=2;C=3;D=4;'
+    '% Create the result variable for students'
+    'res = 0;'
+    'clear Antwoord'
+    '% run SOL script and save the correct answer'
+    'run(replace(mfilename,con.CHECKPOSTFIX,con.SOLPOSTFIX))'
+    'CorrectAntwoord = Antwoord;'
+    'clear Antwoord'
+    '% run student script'
+    'try'
+    '    run(absPathStudentSol);'
+    'catch'
+    '    return;'
+    'end'
+    '% multiple choice checking is easy...'
+    'if CorrectAntwoord == Antwoord;'
+    '    res = 1;'
+    'end'
+    ''
+    'end'
+
+txtFile{lineNumber} = char(lineTxt)
+
+txtFile =
+
+  27×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'function res = vraag_1_versie_1_CHECK(absPathStudentSol)'
+    '% This script has to check and test another script'
+    '% It gives a result in the variable ResStudentScript. Perfect grade = 1.'
+    '% Totally wrong result = 0.'
+    ''
+    'con = ConstantsClass;'
+    '% Generate the default Answers'
+    'A=1;B=2;C=3;D=4;'
+    '% Create the result variable for students'
+    'res = 0;'
+    'clear Antwoord'
+    '% run SOL script and save the correct answer'
+    'run(replace(mfilename,con.CHECKPOSTFIX,con.SOLPOSTFIX))'
+    'CorrectAntwoord = Antwoord;'
+    'clear Antwoord'
+    '% run student script'
+    'try'
+    '    run(absPathStudentSol);'
+    'catch'
+    '    return;'
+    'end'
+    '% multiple choice checking is easy...'
+    'if CorrectAntwoord == Antwoord;'
+    '    res = 1;'
+    'end'
+    ''
+    'end'
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',203,1)">203 </a>                WriteLineOfFile(apCheckFile,1,fnCopiedTemplate);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\changelineoffile\WriteLineOfFile.m',61,1)">61  </a>txtFile{lineNumber} = char(lineTxt);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\changelineoffile\WriteLineOfFile.m',63,1)">63  </a>delete(absPathFile)
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\changelineoffile\WriteLineOfFile.m',66,1)">66  </a>try
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+= fopen(absPathFile,'w');
+ = fopen(absPathFile,'w');
+ 
+{Error: The expression to the left of the equals sign is not a valid target for an assignment.
+} 
+fileID = fopen(absPathFile,'w');
+for i = 1:length(txtFile)
+        fprintf(fileID,'%s\r\n',txtFile(i));
+    end
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fprintf')" style="font-weight:bold">fprintf</a>
+Function is not defined for 'cell' inputs.
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateMCQuestions: 1 of 25 folders processed.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',203,1)">203 </a>                WriteLineOfFile(apCheckFile,1,fnCopiedTemplate);
+dbstep
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',205,1)">205 </a>                clear finalTxt
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateMCQuestions: 2 of 25 folders processed.
+CreateMCQuestions: 3 of 25 folders processed.
+CreateMCQuestions: 4 of 25 folders processed.
+CreateMCQuestions: 5 of 25 folders processed.
+CreateMCQuestions: 6 of 25 folders processed.
+CreateMCQuestions: 7 of 25 folders processed.
+CreateMCQuestions: 8 of 25 folders processed.
+CreateMCQuestions: 9 of 25 folders processed.
+CreateMCQuestions: 10 of 25 folders processed.
+CreateMCQuestions: 11 of 25 folders processed.
+CreateMCQuestions: 12 of 25 folders processed.
+CreateMCQuestions: 13 of 25 folders processed.
+CreateMCQuestions: 14 of 25 folders processed.
+CreateMCQuestions: 15 of 25 folders processed.
+CreateMCQuestions: 16 of 25 folders processed.
+CreateMCQuestions: 17 of 25 folders processed.
+CreateMCQuestions: 18 of 25 folders processed.
+CreateMCQuestions: 19 of 25 folders processed.
+CreateMCQuestions: 20 of 25 folders processed.
+CreateMCQuestions: 21 of 25 folders processed.
+CreateMCQuestions: 22 of 25 folders processed.
+CreateMCQuestions: 23 of 25 folders processed.
+CreateMCQuestions: 24 of 25 folders processed.
+CreateMCQuestions: 25 of 25 folders processed.
+CreateMCQuestions: 1 of 7 folders processed.
+CreateMCQuestions: 2 of 7 folders processed.
+CreateMCQuestions: 3 of 7 folders processed.
+CreateMCQuestions: 4 of 7 folders processed.
+CreateMCQuestions: 5 of 7 folders processed.
+CreateMCQuestions: 6 of 7 folders processed.
+CreateMCQuestions: 7 of 7 folders processed.
+number of SOLUTION files: 390
+number of CHECK files: 354
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_13\vraag_13_versie_10_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_13\vraag_13_versie_9_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_14\vraag_14_versie_2_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_14\vraag_14_versie_3_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_15\vraag_15_versie_5_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_2\vraag_2_versie_10_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_2\vraag_2_versie_11_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_2\vraag_2_versie_31_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_3\vraag_3_versie_10_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_3\vraag_3_versie_1_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_4\vraag_4_versie_10_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_4\vraag_4_versie_15_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_4\vraag_4_versie_3_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_5\vraag_5_versie_1_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_5\vraag_5_versie_9_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_7\vraag_7_versie_10_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_7\vraag_7_versie_5_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_8\vraag_8_versie_10_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_1\vraag_8\vraag_8_versie_5_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_1\vraag_1_versie_2_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_1\vraag_1_versie_5_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_1\vraag_1_versie_6_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_1\vraag_1_versie_7_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_2\vraag_2_versie_11_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_2\vraag_2_versie_1_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_2\vraag_2_versie_5_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_3\vraag_3_versie_8_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_4\vraag_4_versie_1_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_4\vraag_4_versie_2_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_4\vraag_4_versie_5_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_7\vraag_7_versie_12_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_8\vraag_8_versie_9_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_9\vraag_9_versie_10_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_9\vraag_9_versie_4_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+[Warning: Does not exist:
+C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\clean_source\gen_mc\generated_questions\week1\deelopdracht_3\vraag_9\vraag_9_versie_5_CHECK.m] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 244)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',244,0)">line 244</a>)] 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('horzcat')" style="font-weight:bold">horzcat</a>
+The following error occurred converting from char to MException:
+Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m', 252)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',252,0)">line 252</a>)
+    disp([mfilename ':' err]);
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+PerformAll
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files

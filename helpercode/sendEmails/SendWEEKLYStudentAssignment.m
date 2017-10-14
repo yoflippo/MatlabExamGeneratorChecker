@@ -61,4 +61,4 @@ for nZ = 1:length(zips)
    nSendMails = nSendMails + 1;
 end
 disp(['Send mails: ' num2str(nSendMails)]);
-cd(BASEFOLDER)
+cd(con.BASEFOLDER)

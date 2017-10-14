@@ -1,5 +1,5 @@
 %% This files creates/checks every assignment and file
-clear all
+clear all;
 
 dbstop if error
 global gWeekNames;
@@ -9,6 +9,13 @@ for nW = Weeks
 end
 addpath(genpath('helpercode'));
 InitAll
+
+
+%% Fill in week to test
+weekToCorrect = 1;
+weekNr = num2str(weekToCorrect);
+weekName = ['week' weekNr];
+
 
 %% Do some logging for debugging purposes
 diary(fullfile(pwd,'log',['logCW_' mfilename '_' datetimetxt() '.txt']));
@@ -52,17 +59,9 @@ tic
 try
     bCreateWeekAssignments(Weeks);
 catch err
-    disp(err)
-    error('in bCreateWeekAssignments');
+    error([mfilename 'in bCreateWeekAssignments: ' err.message])
 end
 toc
-
-
-%% Fill in week to test
-weekToCorrect = 1;
-weekNr = num2str(weekToCorrect);
-weekName = ['week' weekNr];
-
 
 %% TEST if all correct solutions files pass
 cd(con.BASEFOLDER)
@@ -77,7 +76,7 @@ try
         error('The average grade is not equal to 10');
     end
 catch err
-    error([mfilename ': ' err]);
+    error([mfilename ': ' err.message]);
 end
 toc
 cd(con.BASEFOLDER)
@@ -97,7 +96,7 @@ try
         error('The average grade is not equal to 1');
     end
 catch err
-    disp(err);
+    disp(err.message);
     error(' cCheckStudentSubmissions(week) did not work properly');
 end
 toc
@@ -119,7 +118,8 @@ try
     if ~isequal(cCheckStudentSubmissions(weekToCorrect),1)
         error('The average grade is not equal to 1');
     end
-catch
+catch err
+    error([mfilename ': ' err.message]);
 end
 toc
 

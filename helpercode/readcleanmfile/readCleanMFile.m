@@ -104,6 +104,7 @@ oCopy = addSemiColons(apCopy);
 if isequal(oCopy{1},-1)
    oCopy = []; 
 end
+
 if blMakeCopy
     oApCopy = apCopy;
 else
