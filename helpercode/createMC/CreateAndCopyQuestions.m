@@ -1,8 +1,10 @@
-function CreateAndCopyQuestions(baseFolder,apFin,gWeekNames)
+%TODO: first copy then adjust
+
+function CreateAndCopyQuestions(ap,weekNames)
 
 fclose('all');
 %% Get path of output folder and empty it
-apOfCleanSource = fullfile(baseFolder,'clean_source','gen_mc');
+apOfCleanSource = fullfile(ap.BASEFOLDER,'clean_source','gen_mc');
 cd(apOfCleanSource);
 
 outputDir = fullfile(apOfCleanSource,'generated_questions');
@@ -12,10 +14,8 @@ if ~exist(outputDir,'dir')
 end
 
 %% Iterate over each available week
-weekDir = gWeekNames;
-
-for nWk = 1:length(weekDir)
-    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekDir{nWk}));
+for nWk = 1:length(weekNames)
+    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekNames{nWk}));
     
     %% Get absolute paths of theses files with there respective answers
     theses = {zeros(1,length(folders))};
@@ -41,8 +41,8 @@ for nWk = 1:length(weekDir)
     apTemplateCheck = fullfile(apOfCleanSource,'TemplateCheckMC.m');
     
     %% Copy folder of weekXXX and empty the folders to make a skeleton directory
-    apDesMC = fullfile(outputDir,weekDir{nWk});
-    apSrcThesis = fullfile(apOfCleanSource,weekDir{nWk});
+    apDesMC = fullfile(outputDir,weekNames{nWk});
+    apSrcThesis = fullfile(apOfCleanSource,weekNames{nWk});
     copyfiles(apSrcThesis,apDesMC);
     % Remove the thesis files
     emptyDirRecursiveMFiles(apDesMC);
@@ -60,14 +60,14 @@ for nWk = 1:length(weekDir)
     %% Browse the subfolder of weekXXX
     for nDirs = 1:length(folders)
         clc;
-        disp(['CreateMCQuestions: ' num2str(nDirs) ' of ' num2str(length(folders)) ' folders processed.']);
+        disp([mfilename ': ' num2str(nDirs) ' of ' num2str(length(folders)) ' folders processed of week' num2str(nWk)]);
         numberOfThesesFiles = TPA{nDirs,1}{3};
         currentFilePath =  TPA{nDirs,1}{1};
         
         % generate final destination path of current question, by inserting the
         % output folder
         absPathDestination = GetPathOneLevelUp(currentFilePath);
-        absPathDestination = replace(absPathDestination,weekDir{nWk},fullfile('generated_questions',weekDir{nWk}));
+        absPathDestination = replace(absPathDestination,weekNames{nWk},fullfile('generated_questions',weekNames{nWk}));
         
         % copy the points.m file (containing the number of points of mc-q) and
         % copy the TypeOfAssignment... file, so the CopyTheMultipleChoice..m
@@ -167,7 +167,7 @@ for nWk = 1:length(weekDir)
             
             %% Write final files
             cd(absPathDestination);
-            [a nameQuestion] = GetPathOneLevelUp(absPathDestination);
+            [~, nameQuestion] = GetPathOneLevelUp(absPathDestination);
             % make question string
             nVersionMC = nVersionMC + 1;
             nameQuestion = [nameQuestion '_versie_' num2str(nVersionMC)];
@@ -216,8 +216,8 @@ end
 
 %% Test number of SOLUTION and CHECK files, sometimes the copying of files does not go right...
 cd(outputDir)
-solFiles = dir('**/*_SOL*.m');
-checkFilestmp = dir('**/*_CHECK*.m');
+solFiles = dirmf('_SOL');
+checkFilestmp = dirmf('_CHECK');
 lcf = length(solFiles);
 lcft = length(checkFilestmp);
 try
@@ -258,21 +258,23 @@ end
 disp('number of SOLUTION and CHECK files match!');
 
 %% Remove accidental files with _COPY postfix
+disp('Remove accidental files with _COPY postfix');
 cd(outputDir)
 solFiles = dirmf('_COPY');
 for nC = 1:length(solFiles)
    delete(fullfile(solFiles(nC).folder,solFiles(nC).name)); 
 end
 
-
 %% Copy the generated files to clean_source assignment
-for nw = 1:length(weekDir)
-    apCurrDir = fullfile(pwd,weekDir{nw});
+disp('Copy the generated files to clean_source assignment');
+for nw = 1:length(weekNames)
+    apCurrDir = fullfile(pwd,weekNames{nw});
     cleanMcFolders = getFolders(apCurrDir);
     for nMCF = 1:length(cleanMcFolders)
-        apAss = fullfile(GetPathOneLevelUp(apOfCleanSource),'assignments',weekDir{nw},cleanMcFolders{nMCF});
+        apAss = fullfile(GetPathOneLevelUp(apOfCleanSource),'assignments',weekNames{nw},cleanMcFolders{nMCF});
         removeShitFromDir(apAss);
         copyfiles(fullfile(apCurrDir,cleanMcFolders{nMCF}),apAss);
+        disp([mfilename ': week ' num2str(nw) ',copied ' num2str(round(nMCF/length(cleanMcFolders),1)*100) '% of the files'])
     end
 end
 cd ..;
@@ -281,5 +283,6 @@ cd ..;
 CountNumberOfFALSE_TRUE;
 
 %% Copy the files to the right place
-copyMCToCleanSourceAssignment(baseFolder,apFin,weekDir);
+disp('Copy the files to the "assignment" place');
+copyMCToCleanSourceAssignment(ap.BASEFOLDER,ap.Assignments,weekNames);
 end

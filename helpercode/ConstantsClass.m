@@ -28,7 +28,8 @@ classdef ConstantsClass
     end
     properties (SetAccess = private)
         BASEFOLDER
-        DATETIME
+        DATETIME  
+        Assignments
     end
     
     methods
@@ -40,6 +41,7 @@ classdef ConstantsClass
                 obj.BASEFOLDER = fileparts(fileparts(mfilename('fullpath')));
             end
             obj.DATETIME = datetimetxt();
+            obj.Assignments = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
         end
     end
 end %class

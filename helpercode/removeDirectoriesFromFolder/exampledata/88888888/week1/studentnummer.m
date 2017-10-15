@@ -1,1 +1,0 @@
-currentStudentNumber = num2str(88888888);

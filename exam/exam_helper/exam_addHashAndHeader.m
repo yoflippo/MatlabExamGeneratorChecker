@@ -1,3 +1,4 @@
+function exam_addHashAndHeader(ap,weekNames,nm)
 %EXAM_ADDHASHANDHEADER
 %
 % ------------------------------------------------------------------------
@@ -35,7 +36,7 @@
 
 %% Create new filenames (with HASH code AND combine file names)
 addpath(genpath(ap.CurrExam))
-cd(ap.CurrExamClean)
+cd(ap.Assignments)
 
 savedHashes = []; 
 cntHash = 1;
@@ -43,7 +44,7 @@ for wk = 1:length(weekNames)
     try
         % find all files in weekX folder
         cd(weekNames{wk})
-        weekAssignments = dir(['**' filesep '*.m']);
+        weekAssignments = dirmf();
         cd ..
         
         % traverse the week folder
@@ -73,12 +74,12 @@ for wk = 1:length(weekNames)
                 % Create header with hash of file
                 headerHash{1} = header{1};
                 % Be carefull, the following function needs unique data
-                uniqueFN = generateUniqueFilename(currFileFull,YEAR);
+                uniqueFN = generateUniqueFilename(currFileFull,year(datetime));
                 % Test if a Hash is unique, could be
                 if ~isempty(savedHashes)
                     if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
                         error('A Non unique HASH has been created');
-                        cd(BASEFOLDEREX);
+                        cd(ap.BASEFOLDEREX);
                     end
                 end
                 savedHashes{cntHash} = uniqueFN.Hash;
@@ -86,7 +87,7 @@ for wk = 1:length(weekNames)
                 
                 headerHash{2} = uniqueFN.HashCommentLine;
                 % Add exam date
-                headerHash{3} = ['%                            ' nmCurrExamDir];
+                headerHash{3} = ['%                            ' nm.CurrExamDir];
                 
                 %% Get points of assignment
                 currPath = pwd;
@@ -130,11 +131,13 @@ for wk = 1:length(weekNames)
             disp([['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']);
         end
     catch causeException
-        cd(BASEFOLDEREX)
+        cd(ap.BASEFOLDEREX)
         disp(causeException);
         addpath(genpath(ap.CurrExam))
         error([mfilename ': problem with folder: ' weekNames{wk}  ]);
     end
 end
-cd(BASEFOLDEREX)
+cd(ap.BASEFOLDEREX)
 rmpath(genpath(ap.CurrExam));
+
+end%function

@@ -13,12 +13,10 @@ warning on
 addpath(genpath('helpercode'));
 InitAll
 
-
 %% Fill in week to test
 weekToCorrect = 2;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
-
 
 %% Do some logging for debugging purposes
 diary(fullfile(pwd,'log',['logCW_' mfilename '_' datetimetxt() '.txt']));
@@ -31,9 +29,8 @@ dispPlatform
 cd(con.BASEFOLDER)
 disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
 tic
-apFin = fullfile(con.BASEFOLDER,'assignments');
 % removeShitFromDir(apFin);
-CreateAndCopyQuestions(con.BASEFOLDER,apFin,gWeekNames);
+CreateAndCopyQuestions(con,gWeekNames);
 disp('Created MC-Questions')
 toc
 
@@ -107,12 +104,10 @@ toc
 datetime
 diary off
 
-
 %% Backup if all is working
 disp('Making a backup');
 buAll
 return;
-
 
 %% Check manually copied submitted files
 cd(con.BASEFOLDER)
@@ -126,8 +121,3 @@ catch err
     error([mfilename ': ' err.message]);
 end
 toc
-
-
-
-
-

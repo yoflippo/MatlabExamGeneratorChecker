@@ -1,5 +1,5 @@
-function [ds] = datetimetxt(varargin)
-%DATETIMESTRING Get the current date and time in string form.
+function emptyDirRecursiveMFiles(dirToEmpty)
+%REMOVESHITFROMDIR It does what it says it does
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -10,58 +10,44 @@ function [ds] = datetimetxt(varargin)
 %    (at your option) any later version.
 %
 %    This program is distributed in the hope that it will be useful,
-%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    but WITHOUT ANY WARRANTY; swithout even the implied warranty of
 %    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 %    GNU General Public License for more details.
 %
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %
-% 
-% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-% 
-% PARAMETERS:
-%               none
 %
-% RETURN:       
-%               ds:     a string with the date and time.
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+% PARAMETERS:
+%               dirToEmpty:   The directory to delete
+%
+% RETURN:
+%               nothing
 %
 % EXAMPLES:
+%               removeShitFromDir('temp/');
 %
-%
 
-% $Revision: 0.0.0 $  $Date: 2017-10-09 $
-% Creation of function.
-
-%% Parse varargin
-
-% Test for right input
-minargin = 0;
-maxargin = minargin+1;
-if nargin < minargin
-    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+% $Revision: 0.0.0 $  $Date: 2017-07-28 $
+% Creation of script
+try
+    warning off
+    rmpath(genpath(dirToEmpty))
+    fclose('all'); %close all files, because after copy Matlab does not release a file
+    oldPath = pwd;
+    cd(dirToEmpty)
+    A = dir(['**' filesep '*.m']);
+    for k = 1:length(A)
+        delete(fullfile(A(k).folder,A(k).name));
+    end
+    warning on
+    cd(oldPath);
+catch err
+    disp(['emptyDirRecursiveMFiles: ' err]);
 end
-if nargin > maxargin
-    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
 end
-
-% Create variables that need to be filled
-blOnlyDate = false;
-if nargin == 1
-    blOnlyDate = true;
-end
-
-
-if blOnlyDate
-    datetime.setDefaultFormats('default','yyMMdd');
-    ds = char(datetime);
-else
-    datetime.setDefaultFormats('default','yyMMddHHmm')
-    ds = char(datetime);
-end
-
-end
-
