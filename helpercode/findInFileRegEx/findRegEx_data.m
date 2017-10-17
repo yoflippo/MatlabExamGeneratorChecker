@@ -47,7 +47,7 @@ BASEFOLDER = pwd; %TEST
 try
     cd(LISTWITHNEEDEDFOLDERS{i});
     cd ..
-    if bullshit == 3
+    if bullshit bullshit == 3
         lala = txt
     end
 catch  %  TEST
@@ -55,6 +55,6 @@ catch  %  TEST
         'The folder: ' LISTWITHNEEDEDFOLDERS{i} ' was not found'])
 end
 %APPEL
-fiets = 3;
+fiets = 3; 
 sleutel = 2;
 brabrablauwrood

@@ -62,7 +62,7 @@ try
     end
     
     %% Count the number of occurences
-    numFound = length(lines);
+    numFound = length(txtIndex);
     
 catch err
     %     txterror = ['' newline];

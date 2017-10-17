@@ -52,6 +52,6 @@ checkingVar.literalsR = {'vec1 + 13' 'vec3 * 13'};
 
 
 %% Commence the TESTING !!!
-res = runChecksOnAssignment(mfilename,checkingVar,apStudentSol);
+res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function

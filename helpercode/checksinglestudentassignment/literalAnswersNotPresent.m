@@ -40,10 +40,22 @@ function nAbs = literalAnswersNotPresent(txtns,literalsA,apStudentSol)
 %% Check for literal answers, CAN NOT BE PRESENT
 nAbs = 0;
 for nLa = 1:length(literalsA)
+    numTimes = 1;
     lit = literalsA{nLa};
-    lit = lit(lit ~= ' ');% Remove spaces
+    if isstring(lit)  || ischar(lit)
+        lit = lit(lit ~= ' ');% Remove spaces
+        try
+            nPlusOne = literalsA{nLa+1};
+            if isnumeric(nPlusOne)
+                numTimes = nPlusOne;
+            end
+        catch
+        end
+    else
+        break;
+    end
     if findInString(txtns,lit) > 0
-        nAbs = nAbs + 1;
+        nAbs = nAbs + numTimes;
     else
         % Test for a generated file! Could also be done by testing for Hash
         if ~contains(apStudentSol,'versie')

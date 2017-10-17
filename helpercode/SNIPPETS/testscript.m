@@ -1,8 +1,10 @@
 function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
+
 %%========== PLACE SOLUTION IN COMMENTS HERE
 
 %%==========
+
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
@@ -33,6 +35,7 @@ checkingVar.literalsR = {'X Y' 'Z U'};
 
 
 %% Commence the TESTING !!!
-res = runChecksOnAssignment(mfilename,checkingVar,apStudentSol);
+res = 0;
+res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function

@@ -1,7 +1,8 @@
-function res = opdracht1_versie_1_CHECK(absPathStudentFile)
-%% This file expects that the _SOL and _CHECK file are in the same folder
+function res = opdracht1_versie_1_CHECK(apStudentSol)
 
+res = 0;
 
+%%========== PLACE SOLUTION IN COMMENTS HERE
 % % % % %% Opdracht 3
 % % % % % Gegeven is onderstaande code. Bereken het gemiddelde van de
 % % % % % vector 'getallen' zonder gebruik te maken van de standaard
@@ -14,53 +15,35 @@ function res = opdracht1_versie_1_CHECK(absPathStudentFile)
 % % % % function result = gemiddelde(getallen)
 % % % % result = sum(getallen)/length(getallen);
 % % % % end
+%%==========
 
 
-% Get student filename
-[path file c] = fileparts(absPathStudentFile);
-% Get a cleaned up version of the student code
-tmp = readCleanMFile(absPathStudentFile);
-% Get the check file
-solution = replace(mfilename,'_CHECK','_SOL');
-% Counter of correct tests
-numberOfCorrect = 0;
+%% FILL string cells below to test, if you are not using them, make them empty!
+% Variables that should be present in file
+checkingVar.testFunctionInput = {1:5 2:2:10 0:1};
+% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
+% The number to the right of the string designates the number of times the
+% string should be present.
+checkingVar.literalsP = {'getallen' 3 'result' 2 'function' 1 'length' 1 'sum' 1};
+% FILL literalsA, With strings that should not be present.
+checkingVar.literalsA = {'NaN' 'mean(' 4};
+% Reverse literals separated by spaces
+% FOR EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% THE REVERSED CASE:             '10+2' or  '100+vector1'
+checkingVar.literalsR = {};
 
-%% Check for certain strings
-% Make temp file
-absPathTmp = fullfile(path,'tmp.m');
-makeMFileFromCells(absPathTmp,tmp);
+    
 
-
-%% Perform Tests
-series = 1:10;
-if ~readAndFindTextInFile(absPathTmp,'mean')
-    for z = series
-        randNum = randn(1,z);
-        try
-            if eval([file '(randNum)']) == eval([solution '(randNum)'])
-                numberOfCorrect = numberOfCorrect + 1;
-            end
-        catch
-        end
-    end
-end
+%% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
+% 1- Literals that should be present and
+% 2- Lterals that should be abscent
+% You should take cornercases in to consideration as well. So add those
+% tests as well.
 
 
-%% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
-literalsA = {'NaN' 'mean('};
-nAbs = 0;
-for nLa = 1:length(literalsA)
-    if readAndFindTextInFile(absPathTmp,literalsA{nLa})
-        nAbs = nAbs + 5;
-    end
-end
 
-% Delete the tmp file
-delete(absPathTmp);
+%% Commence the TESTING !!!
+res = runChecksOnFunctionAssignment(mfilename,checkingVar,apStudentSol);
 
-%% Calculate result of student
-res = (numberOfCorrect-nAbs)/(length(series));
-if res<0
-    res = 0;
-end
 end %function

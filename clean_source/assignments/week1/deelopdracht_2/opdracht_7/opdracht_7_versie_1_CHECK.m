@@ -47,6 +47,6 @@ checkingVar.literalsR = {};
 
 
 %% Commence the TESTING !!!
-res = runChecksOnAssignment(mfilename,checkingVar,apStudentSol);
+res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function

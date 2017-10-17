@@ -1,5 +1,5 @@
-function removeCommentsAndEmptyLines(apFile)
-%REMOVECOMMENTSANDEMPTYLINES 
+function oTxt = removeCommentsAndEmptyLines(varargin)
+%REMOVECOMMENTSANDEMPTYLINES
 % A function that removes Matlab comments from a txt-file and removes empty
 % lines.
 %
@@ -38,6 +38,33 @@ function removeCommentsAndEmptyLines(apFile)
 % $Revision: 0.0.0 $  $Date: 2017-10-05 $
 % Creation of this file.
 
+%% Parse varargin
+
+% Test for right input
+minargin = 1;
+maxargin = minargin+2;
+if nargin < minargin
+    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+end
+if nargin > maxargin
+    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
+end
+
+% Create variables that need to be filled
+blOutputTxtNoFile = false;
+oTxt = [];
+for narg = 1:nargin
+    sc = upper(varargin{narg});
+    switch sc
+        case {'OT', 'ONLYTXT'}
+            blOutputTxtNoFile = true;
+        otherwise
+            apFile = varargin{narg};
+    end
+end
+
+
+
 %% Read the file
 try
     delimiter = {'\n'};
@@ -58,7 +85,6 @@ for nL = 1:length(txt)
     end
 end
 
-
 % Remove trailling space
 txt = deblank(txt);
 % Remove empty lines
@@ -66,7 +92,11 @@ txt(all(txt=="",2),:)=[];
 
 
 %% Write to file
-writetxtfile(apFile,txt);
+if ~blOutputTxtNoFile
+    writetxtfile(apFile,txt);
+else
+    oTxt = txt;
+end
 
 
 end

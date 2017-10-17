@@ -14,12 +14,13 @@ copyfile(nmData,apCopy)
 %% Words and the number of times they are present in file
 testwords0times = {'aappel' 'tering' 'Tering'};
 testwords1times = {'clc;' 'fiets' 'blauw' 'sleutel' };
-testwords2times = {'try' 'lala' 'bullshit'};
+testwords2times = {'try' 'lala'};
+testwords3times = {'bullshit'};
 
 %% TEST: txt multiple times
 txt = readTxtFile(apCopy);
 
-for nT = 0:2
+for nT = 0:3
     for nW = 1:length(eval(['testwords' num2str(nT) 'times']))
         [num, ind] = findRegEx(txt,eval(['testwords' num2str(nT) 'times{nW}']));
         assert(num==eval(num2str(nT)));

@@ -1,4 +1,4 @@
-function otxt = nospaces(apFile)
+function oTxt = nospaces(varargin)
 %ADDSEMICOLONS A script that automatically adds semicolons to a file.
 %
 % ------------------------------------------------------------------------
@@ -36,24 +36,48 @@ function otxt = nospaces(apFile)
 % $Revision: 0.0.0 $  $Date: 2017-05-10 $
 % Creation of script
 
+%% Parse varargin
 
+% Test for right input
+minargin = 1;
+maxargin = minargin+2;
+if nargin < minargin
+    error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+end
+if nargin > maxargin
+    error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
+end
+
+% Create variables that need to be filled
+blReadFromFile = true;
+for narg = 1:nargin
+    sc = upper(varargin{narg});
+    switch sc
+        case {'OT', 'ONLYTXT', '-ONLYTXT', '-OT'}
+            txt = varargin{narg+1};
+        otherwise
+            apFile = varargin{narg};
+    end
+end
 
 %% Read the file
-try
-    txt = readTxtFile(apFile);
-catch
-    error([mfilename ': Could not read the file']);
+if blReadFromFile
+    try
+        txt = readTxtFile(apFile);
+    catch
+        error([mfilename ': Could not read the file']);
+    end
 end
 
 %% Remove spaces
 if ~isempty(txt) && isequal(txt{1},-1)
-    otxt = [];
+    oTxt = [];
 else
-    otxt = strrep(txt,' ','');
+    oTxt = strrep(txt,' ','');
 end
 
 % %% Write to file
 % writetxtfile(apFile,txt);
-% otxt = txt;
+% oTxt = txt;
 
 end
