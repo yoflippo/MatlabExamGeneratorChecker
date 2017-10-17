@@ -7,6 +7,13 @@ for i = 1:length(checkFiles)
     %% Get info about current file
     fn = checkFiles(i).name;
     pathname = checkFiles(i).folder;
-    CheckSolBase(fn,pathname);
+    try
+        tic; CheckSolBase(fn,pathname); toc
+    catch  err   
+        deleteTemporaryFiles();
+        error([mfilename ': ' err.message newline ]);
+    end
 end
+
+
 cd(currPath)

@@ -17,4 +17,3 @@
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
 Antwoord = NaN; % vul hier het juiste antwoord in A, B, C of D
-

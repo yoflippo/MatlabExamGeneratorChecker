@@ -41,14 +41,17 @@ tic
 try
     aGenerateEverythingForCourse();
 catch err
-    disp(err);
-    warning([mfilename ': aGenerateEverythingForCourse did not finish correctly']);
+    %Has to be a warning to continue
+    warning([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
 end
 toc
 
-%% Check if al 'checking' files are in working order
-disp('Check if al "checking" files are in working order');
-assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
+%% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
+cd(con.NAMEASSIGNMENTFOLDER)
+if ~isequal(length(dirmf(con.CHECKPOSTFIX)),length(dirmf(con.SOLPOSTFIX)))
+    disp('Check if al "checking" files are in working order');
+    assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
+end
 
 %% Execute create week assignment scripts for individual students
 disp('execute create week assignment scripts');
@@ -59,7 +62,7 @@ tic
 try
     bCreateWeekAssignments(Weeks);
 catch err
-    error([mfilename ' in bCreateWeekAssignments: ' err.message])
+    error([mfilename ' in bCreateWeekAssignments: ' newline  err.message])
 end
 toc
 
@@ -97,8 +100,7 @@ try
         error('The average grade is not equal to 1');
     end
 catch err
-    disp(err.message);
-    error(' cCheckStudentSubmissions(week) did not work properly');
+    error([mfilename ', did not work properly: ' err.message]);
 end
 toc
 datetime

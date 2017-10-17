@@ -7,12 +7,15 @@ res = 0;
 
 
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
-% THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100' or 'size('
-literalsP = {'XXX' 'XXX' 'XXX'};
-literalsP2t = {'XXX' 'XXX'}; % literals that are present 2 times.
-% FILL literalsA, With strings that should not be present.
+% The number to the right of the string designates the number of times the
+% string should be present.
+literalsP = {'XXX' 2 'XXX' 1};
 literalsA = {'NaN'};
-
+% Reverse literals separated by spaces
+% FOR EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% THE REVERSED CASE:             '10+2' or  '100+vector1'
+literalsR = {'X Y' 'Z U'};
 
 
 
@@ -54,10 +57,10 @@ if ~isempty(char(txtCleanedStudentSolution))
     txtns = nospaces(apCleaned);
     
     %% Check for literal answers that MUST BE PRESENT
-    for nLp = 1:length(literalsP)
+    for nLp = 1:2:length(literalsP)
         lit = literalsP{nLp};
         lit = lit(lit ~= ' ');% Remove spaces
-        if findRegEx(txtns,lit) > 0
+        if findInString(txtns,lit) >= literalsP{nLp+1}
             res = res + 1;
         else
             % Test for a generated file! Could also be done by testing for Hash
@@ -66,15 +69,7 @@ if ~isempty(char(txtCleanedStudentSolution))
             end
         end
     end
-    
-    %% Check for literal answers that MUST BE PRESENT
-    for nLp = 1:length(literalsP2t)
-        lit = literalsP2t{nLp};
-        lit = lit(lit ~= ' ');% Remove spaces
-        if findRegEx(txtns,lit) > 2
-            res = res + 1;
-        end
-    end
+
     
     %% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
     nAbs = 0;
@@ -93,8 +88,24 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
     end
     
+    %% Check for literal answers that could be present reversed
+    for nLr = 1:length(literalsR)
+        lits = literalsR{nLr};
+        litRs = reverseSpaceSeparatedString(lits);
+        lit = lits(lits ~= ' ');      % Remove spaces
+        litR = litRs(litRs ~= ' ');   % Remove spaces
+        if findInString(txtns,lit) > 0 || findInString(txtns,litR) > 0
+            res = res + 1;
+        else
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% Moet in de code zitten: ' lits ' or ' litRs '.']);
+            end
+        end
+    end
+    
     %% Calculate the result
-    res = (res-nAbs)/(length(literalsP)+length(series)+length(literalsP2t));
+    res = (res-nAbs)/(length(literalsP)+length(series)+length(literalsR));
     if res < 0
         res = 0;
     elseif res > 1

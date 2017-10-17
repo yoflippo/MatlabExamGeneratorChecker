@@ -185,7 +185,7 @@ for i = 1:length(trackStudentAssignment)
             end
         end
         cd(con.BASEFOLDER)
-    catch
+    catch %% No error message, because this try is only here because I am too lazy
     end
 end
 clear HashCodeCurrStud AbsPathCodeCurrStud
@@ -214,11 +214,11 @@ for i = 1:length(mfiles)
         % Get assignment name + name of folder directly above it
         tmp = extractAfter(dr,'week');
         tmp= extractAfter(tmp,filesep);
-        nameOfAssignment{i} = tmp;     
+        nameOfAssignment{i} = tmp;
         pointsPerAssignment(i) = deelpunten;
     catch err
         disp(err);
-        error(mfilename);
+        error([mfilename ': E2 ' newline]);
     end
 end
 

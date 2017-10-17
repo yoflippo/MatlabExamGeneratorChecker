@@ -1,4 +1,4 @@
-function deleteTemporaryFiles()
+function [numOfDeleted] = deleteTemporaryFiles()
 %DELETETEMPORARYFILES A simple function that deletes temporarily created
 %files with certain postfixes in current folder.
 %
@@ -39,15 +39,16 @@ function deleteTemporaryFiles()
 % Creation of this function.
 
 try
-    % Add postfix of files that need to be deleted.
+    % Add postfixes of files that need to be deleted.
     tmpPostFixes = {'_COPY' '_NS'};
     cfiles = [];
     for nT = 1:length(tmpPostFixes)
         cfiles = [cfiles; dirmf(tmpPostFixes{nT})];
     end
-    
+    % Delete files
     warning off
-    for n = 1:length(cfiles)
+    numOfDeleted = length(cfiles);
+    for n = 1:numOfDeleted
         apFile2Del = fullfile(cfiles(n).folder,cfiles(n).name);
         delete(apFile2Del);
         if exist(apFile2Del,'file')
@@ -55,6 +56,7 @@ try
         end
     end
     warning on
+    
 catch err
     error([mfilename ': Delete the tmp files :' err.message]);
 end

@@ -12,7 +12,7 @@ apCopyEmpty = fullfile(apThisFile,nmCopy);
 copyfile(nmData,apCopy)
 
 %% Words and the number of times they are present in file
-testwords0times = {'Appel' 'tering'};
+testwords0times = {'aappel' 'tering' 'Tering'};
 testwords1times = {'clc;' 'fiets' 'blauw' 'sleutel' };
 testwords2times = {'try' 'lala' 'bullshit'};
 

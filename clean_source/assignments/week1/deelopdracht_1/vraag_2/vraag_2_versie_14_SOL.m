@@ -11,10 +11,3 @@
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
 Antwoord = D;
 
-
-
-
-
-
-
-

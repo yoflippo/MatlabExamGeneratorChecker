@@ -1,5 +1,5 @@
 function [numFound, lines, txtIndex] = findRegEx(txt,searchString)
-%FINDREGEX Search in a txt variable for a string (casesensitive).
+%FINDREGEX Search in a txt variable for a string (caseSensitive).
 % This function could come in handy when it is possible that the
 % searchString exists multiple times.
 %
@@ -26,37 +26,49 @@ function [numFound, lines, txtIndex] = findRegEx(txt,searchString)
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               varargin:   <text>
-%               varargin:   <text>
+%               txt:   A cell with txt.
+%               searchString:   String to be searched.
 %
 % RETURN:
-%               outvar:     <text>
-%               outvar:     <text>
-%
-% EXAMPLES:
-%
+%               numFound:   The number of times the searchString is found.
+%               lines:      The linenumbers
+%               txtIndex:   The index of the linenumber
 %
 
-% $Revision: 0.0.0 $  $Date: 20xx-xx-xx $
+% $Revision: 0.0.0 $  $Date: 2017-10-10 $
 % Creation of this function.
+% $Revision: 0.0.0 $  $Date: 2017-10-10 $
+% Replaced regex with strfind() because of operator symbols. The function
+% strfind() is faster.
 
 %% Default output
 lines = [];
 txtIndex = [];
 numFound = 0;
 
-%% Replace existing operators
-
-%% Use regex to find a certain string
-output_args = strfind(txt,searchString); %regexp(txt,searchString);
-
-%% Get the lines found
-lines = find(~cellfun(@isempty,output_args));
-if ~isempty(lines)
-    txtIndex = [output_args{lines}];
+try
+    %% Use regex to find a certain string
+    fndStrings = strfind(txt,searchString); %regexp(txt,searchString);
+    
+    %% Get the lines found
+    if isequal(length(fndStrings),1)
+        numFound = 1;
+        return;
+    end
+    
+    lines = find(~cellfun(@isempty,fndStrings));
+    if ~isempty(lines)
+        txtIndex = [fndStrings{lines}];
+    end
+    
+    %% Count the number of occurences
+    numFound = length(lines);
+    
+catch err
+    %     txterror = ['' newline];
+    %     txterror = [txterror '' newline];
+    error([mfilename ', ' newline err.message newline]);
 end
 
-%% Count the number of occurences
-numFound = length(lines);
 end
 

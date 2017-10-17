@@ -17,101 +17,36 @@ res = 0;
 % % % % % % [koln rijn] = size(matx);
 %%==========
 
-%% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
-% SHOULD CHANGE!
-nameVars = {'koln' 'rijn'};
+
+%% FILL string cells below to test, if you are not using them, make them empty!
+% Variables that should be present in file
+checkingVar.nameVars = {'koln' 'rijn'};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
-% THE STUDENT SOLUTION, e.g.: '2+10' or 'vector1+100'
-% NO SPACES ALLOWED!!
-literalsP = {'size('};
+% The number to the right of the string designates the number of times the
+% string should be present.
+checkingVar.literalsP = {'size(' 1};
 % FILL literalsA, With strings that should not be present.
-% NO SPACES ALLOWED!!
-literalsA = {'NaN' 'koln=8' 'rijn=3'};
+checkingVar.literalsA = {'NaN' 'koln=8' 'rijn=3'};
+% Reverse literals separated by spaces
+% FOR EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% THE REVERSED CASE:             '10+2' or  '100+vector1'
+checkingVar.literalsR = {};
+
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and
 % 2- Literals that should be present and
 % 3- Lterals that should be abscent
-% You should take some cornercases in to consideration as well.
+% You should take cornercases in to consideration as well. So add those
+% tests as well.
+
+
+% If the used tests above are not sufficient... design your own down... you
+% lazy cunt
+
 
 %% Commence the TESTING !!!
-[path name ext] = fileparts(apStudentSol);
-[txtCleanedStudentSolution apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
+res = runChecksOnAssignment(mfilename,checkingVar,apStudentSol);
 
-if ~isempty(char(txtCleanedStudentSolution))
-    %% Run the solution file - HAS TO WORK!!
-    try
-        run(replace(mfilename,'_CHECK','_SOL'));
-    catch
-        return;
-    end
-    
-    % Get values and variables from the SOLUTION file
-    for nV = 1:length(nameVars)
-        % Save the variables in the SOLUTION FILE
-        eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
-        % Remove solution variables from Workspace.
-        eval(['clear ' nameVars{nV}  ';']);
-    end
-    
-    %% Run the cleaned student script, if not working no points!
-    try
-        run(apCleaned);
-        if exist(apCleaned,'file')
-            delete(apCleaned);
-        end
-    catch
-        delete(apCleaned);
-        return;
-    end
-    
-    %% Perform tests for certain variables
-    for nV = 1:length(nameVars)
-        try
-            eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
-            if blTest
-                res = res + 1;
-            end
-        catch ErrMess
-            % Test for a generated file! Could also be done by testing for Hash
-            if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-            end
-        end
-    end
-    
-    %% Check for literal values and variables
-    % Make temp file
-    absPathTmp = fullfile(path,'tmp.m');
-    if exist(absPathTmp,'file')
-        delete(absPathTmp);
-    end
-    makeMFileFromCells(absPathTmp,txtCleanedStudentSolution);
-    
-    %% Check for literal answers, must be present
-    for nLp = 1:length(literalsP)
-        if readAndFindTextInFile(absPathTmp,literalsP{nLp}) || readAndFindTextInFile(absPathTmp,fliplr(literalsP{nLp}))
-            res = res + 1;
-        end
-    end
-    
-    %% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
-    nAbs = 0;
-    if ~isequal(res,0)
-        for nLa = 1:length(literalsA)
-            if readAndFindTextInFile(absPathTmp,literalsA{nLa}) || readAndFindTextInFile(absPathTmp,fliplr(literalsA{nLa}))
-                nAbs = nAbs + 1;
-            end
-        end
-    end
-    
-    %% Delete the tmp file
-    if exist(absPathTmp,'file')
-        delete(absPathTmp);
-    end
-end
-res = (res-nAbs)/(length(literalsP)+length(nameVars));
-if res<0
-    res = 0;
-end
 end %function

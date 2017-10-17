@@ -102,7 +102,7 @@ for nWk = 1:length(weekNames)
         
         for nMostIndices = 1:(length(randomFileIndexes)/2)
             cnt = 1;
-            finalTxt = cell(20,1);
+            finalTxt = cell(13,1);
             finalTxt{cnt,1} = headerTxt; cnt = cnt + 1;
             finalTxt{cnt,1} = '%';       cnt = cnt + 1; %add empty line
             

@@ -13,6 +13,7 @@ cheatFile = replace(filename,'.m','_CHEAT.m'); %%%%%
 pathSolutionFile = fullfile(path,solutionFile);
 pathCheckFile = fullfile(path,checkFile);
 pathEmptyFile = fullfile(path,filename);
+pathCheatFile = fullfile(path,cheatFile);
 
 %% Expect that CHECK file is a function that needs a SOLUTION file and STUDENTFILE
 addpath(genpath(path))
@@ -53,7 +54,7 @@ try
     disp([filename ': works correctly']);
 catch catchMessage
     edit(pathCheckFile);
-    error([mfilename ', something went wrong: ' catchMessage.message]);
+    error([newline mfilename ', something went wrong: ' catchMessage.message newline]);
 end
 rmpath(genpath(path))
 

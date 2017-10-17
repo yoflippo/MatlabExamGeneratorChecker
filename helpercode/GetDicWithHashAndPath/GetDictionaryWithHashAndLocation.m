@@ -62,6 +62,11 @@ end
 
 % Combine the relevant files in a Container (dictionary) so the
 % hashcode is combined with a location for fast lookup
-outVar = containers.Map(HashCodes,Paths);
+try
+    outVar = containers.Map(HashCodes,Paths);
+catch err
+    error([newline mfilename ',' err.message]);
+end
+
 
 end

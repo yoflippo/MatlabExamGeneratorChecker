@@ -1,2 +1,3 @@
-error([mfilename ': '  'XXX']);
-error([mfilename ': ' err.message]);
+txterror = ['' newline];
+txterror = [txterror '' newline];
+error([mfilename ': ' newline err.message newline txterror]);

@@ -45,6 +45,7 @@ function [HashCode] = GetHashCodeFromMFile(fileLocationAbsPath)
 
 %% Check if File exists
 dbstop if error
+% Has to be in comments for a proper error: HashCode = [];
 if exist(fileLocationAbsPath) == 0
     error('The file does not exist');
 end

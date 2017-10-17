@@ -21,4 +21,8 @@ txtCell{1} = txt;
 txtCell{2} = txt;
 WriteToLastLineOfFile(absPathDataCopy,txtCell);
 % delete(absPathDataCopy);
-'correct'
+disp([replace(mfilename,'_test','') ': is working correctly']);
+
+
+%% Cleanup
+delete(absPathDataCopy)

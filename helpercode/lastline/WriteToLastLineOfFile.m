@@ -36,6 +36,8 @@ function WriteToLastLineOfFile(varargin)
 
 % $Revision: 0.0.0 $  $Date: 2017-09-06 $
 % Creation of the function
+% $Revision: 0.0.0 $  $Date: 2017-09-06 $
+% Made the function much more efficient but less smart.
 
 absPathFile = varargin{1};
 if nargin <= 1
@@ -47,30 +49,41 @@ elseif nargin > 2
 end
 
 
-% read the file
-txtFile = readTxtFile(absPathFile);
+% % % % % % % read the file
+% % % % % % txtFile = readTxtFile(absPathFile);
+% % % % % %
+% % % % % % % write txt to line
+% % % % % % if iscell(lineTxt) && max(size(lineTxt)) > 1
+% % % % % %     for nl = 1:max(size(lineTxt))
+% % % % % %         txtFile{length(txtFile)+1} = lineTxt{nl};
+% % % % % %     end
+% % % % % % else
+% % % % % %     txtFile{length(txtFile)+1} = lineTxt;
+% % % % % % end
+% % % % % % % delete the current file
+% % % % % % delete(absPathFile)
+% % % % % % % write to file
+% % % % % % try
+% % % % % %     fileID = fopen(absPathFile,'w');
+% % % % % %     for i = 1:length(txtFile)
+% % % % % %         fprintf(fileID,'%s\r\n',txtFile{i});
+% % % % % %     end
+% % % % % %     % close the file
+% % % % % %     fclose('all');
+% % % % % % catch
+% % % % % %     fclose('all');
+% % % % % % end
 
-% write txt to line
-if iscell(lineTxt) && max(size(lineTxt)) > 1
-    for nl = 1:max(size(lineTxt))
-        txtFile{length(txtFile)+1} = lineTxt{nl};
+fid = fopen(absPathFile, 'a');
+if iscell(lineTxt)
+    for nl = 1:size(lineTxt)
+        fprintf(fid,'\r\n%s', lineTxt{nl,:});
     end
 else
-    txtFile{length(txtFile)+1} = lineTxt;
-end
-% delete the current file
-delete(absPathFile)
-% write to file
-try
-    fileID = fopen(absPathFile,'w');
-    for i = 1:length(txtFile)
-        fprintf(fileID,'%s\r\n',txtFile{i});
+    for nl = 1:size(lineTxt)
+        fprintf(fid,'\r\n%s', lineTxt(nl,:));
     end
-    % close the file
-    fclose('all');
-catch
-    fclose('all');
 end
-
+fclose(fid);
 
 end %function

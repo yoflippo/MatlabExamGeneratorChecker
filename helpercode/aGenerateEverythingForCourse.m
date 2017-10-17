@@ -95,7 +95,20 @@ for wk = 1:length(con.WEEKFOLDERS)
                 % check which types of questions are in the subfolder of the
                 % current weekfolder
                 subdirs = strsplit(currFileAbsPath,filesep);
-                cd(fullfile(subdirs{end-2},subdirs{end-1},subdirs{end}))
+                apCurrStudentFolder = fullfile(subdirs{end-2},subdirs{end-1},subdirs{end});
+                cd(apCurrStudentFolder)
+                % Check for presence of needed files
+                try
+                    if ~checkForPresenceTypeOfAssignmentPoints()
+                        txterror = ['TypeOfAssignment_XXX and/or points.m not present in Current Folder!!' newline];
+                        txterror = [txterror 'Folder:'  apCurrStudentFolder ' ' newline];
+                        error([newline txterror]);                   
+                    end
+                catch err
+                    error([newline err.message]);
+                    return;
+                end
+                
                 %Check for the presence of files below to give the proper
                 %header in the student specific assignment
                 if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
@@ -158,12 +171,12 @@ for wk = 1:length(con.WEEKFOLDERS)
             disp([['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']);
         end
     catch causeException
-        cd(con.BASEFOLDER)
+        cd(con.BASEFOLDER);
         disp(causeException);
-        rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}))
-        rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}))
-        rmpath(genpath(con.NAMEASSIGNMENTFOLDER))
-        error(['problem with folder: ' con.WEEKFOLDERS{wk}  ]);
+        rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}));
+        rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}));
+        rmpath(genpath(con.NAMEASSIGNMENTFOLDER));
+        error([mfilename ', ' newline con.WEEKFOLDERS{wk} ', ' causeException.message]);
     end
 end
 cd(con.BASEFOLDER)

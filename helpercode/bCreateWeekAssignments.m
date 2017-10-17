@@ -175,14 +175,16 @@ for nW = Weeks
         copyfile(finScriptStud,fullfile(currStudentDir,weekName));
         copyfile(finScriptStud,fullfile(currStudentDirSol,weekName));
         
-        %% Copy the finishing assignemnts that a student needs to use
+        %% Copy the finishing assignments that a student needs to use
         finScriptStud = fullfile(con.BASEFOLDER,con.LISTWITHNEEDEDFOLDERS{2},'headers',...
             con.LASTASSIGNMENT);
         % get the number of assignments starting from 1
         apCurrStudWk = fullfile(currStudentDir,weekName);
         cd(apCurrStudWk);
         numAssignment = getFolders(pwd);
-        nmLastAssignmentDir = ['deelopdracht_' num2str(length(numAssignment)+1)];
+        numLastAss = str2double(replace(numAssignment{end},'deelopdracht_',''))+1;
+        nmLastAssignmentDir = ['deelopdracht_' num2str(numLastAss)];
+        
         mkdirIf(nmLastAssignmentDir);
         copyfile(finScriptStud,fullfile(apCurrStudWk,nmLastAssignmentDir));
         nmLastAssignmentSolDir = fullfile(currStudentDirSol,weekName,nmLastAssignmentDir);
