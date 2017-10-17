@@ -17,7 +17,7 @@ literalsA = {'NaN'};
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 literalsR = {'X Y' 'Z U'};
 
- 
+    
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Literals that should be present and
