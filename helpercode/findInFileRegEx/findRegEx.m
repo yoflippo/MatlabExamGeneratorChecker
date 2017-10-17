@@ -45,8 +45,10 @@ lines = [];
 txtIndex = [];
 numFound = 0;
 
+%% Replace existing operators
+
 %% Use regex to find a certain string
-output_args = regexp(txt,searchString);
+output_args = strfind(txt,searchString); %regexp(txt,searchString);
 
 %% Get the lines found
 lines = find(~cellfun(@isempty,output_args));

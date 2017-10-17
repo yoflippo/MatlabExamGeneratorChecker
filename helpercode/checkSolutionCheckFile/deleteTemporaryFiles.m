@@ -40,7 +40,7 @@ function deleteTemporaryFiles()
 
 try
     % Add postfix of files that need to be deleted.
-    load('ListTempPostFixes.mat','tmpPostFixes');
+    tmpPostFixes = {'_COPY' '_NS'};
     cfiles = [];
     for nT = 1:length(tmpPostFixes)
         cfiles = [cfiles; dirmf(tmpPostFixes{nT})];

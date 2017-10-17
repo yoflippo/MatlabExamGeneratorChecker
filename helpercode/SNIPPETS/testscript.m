@@ -60,7 +60,6 @@ if ~isempty(char(txtCleanedStudentSolution))
         if exist(apCleaned,'file')
             run(apCleaned);
             txtns = nospaces(apCleaned);
-            error('Something wrong the readClean function');
         else
             run(apStudentSol);
             txtns = nospaces(apStudentSol);
@@ -122,7 +121,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Check for literal answers that could be present reversed
     for nLr = 1:length(literalsR)
         lits = literalsR{nLr};
-        litRs = reverseSpaceSeparatedString(lit);
+        litRs = reverseSpaceSeparatedString(lits);
         lit = lits(lits ~= ' ');      % Remove spaces
         litR = litRs(litRs ~= ' ');   % Remove spaces
         if findRegEx(txtns,lit) > 0 || findRegEx(txtns,litR) > 0
