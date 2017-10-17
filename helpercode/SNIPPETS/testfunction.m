@@ -1,4 +1,4 @@
-function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
+opefunction res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
@@ -15,14 +15,21 @@ checkingVar.testFunctionInput = {'XXX' 'XXX' 'XXX'};
 checkingVar.literalsP = {'XXX' 2 'XXX' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
-checkingVar.literalsA = {'NaN' 3}; 
+checkingVar.literalsA = {'NaN' 3};
 % Reverse literals separated by spaces
 % FOR EXAMPLE:
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {'X Y' 'Z U'};
 
-    
+% checkingVar below this line can be removed
+% Test for literals and their variants
+% THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
+checkingVar.literalsO = {{'Y' 'X'} {'X' 'Y'}};
+% Test for literals and their (reversed) variants
+% NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
+% THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
+checkingVar.literalsRO = {{'Y' 'X'}};
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

@@ -60,8 +60,29 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Check for literal answers that could be present reversed
     res = res + literalAnswersReversed(txtns,checkingVar.literalsR,apStudentSol);
     
+    %% Check for literal and their variants
+    numVariants = 0; 
+    try
+        res = res + literalAnswersThisOrThat(txtns,checkingVar.literalsO,apStudentSol);
+        numVariants = length(checkingVar.literalsO);
+    catch
+    end
+    
+    %% Check for literal and their variants AND their reverses
+    numVariantsRev = 0; 
+    try
+        res = res + literalAnswersThisOrThatAndRev(txtns,checkingVar.literalsRO,apStudentSol);
+        numVariantsRev = length(checkingVar.literalsRO);
+    catch
+    end
+    
     %% Calculate the result
-    res = (res-nAbs)/((length(checkingVar.literalsP)/2)+length(checkingVar.nameVars)+length(checkingVar.literalsR));
+    res = (res-nAbs)/((length(checkingVar.literalsP)/2) + ...
+                        length(checkingVar.nameVars)    + ...
+                        length(checkingVar.literalsR)   + ...
+                        numVariantsRev                  + ...
+                        numVariants ...
+                     );
     if res < 0
         res = 0;
     elseif res > 1

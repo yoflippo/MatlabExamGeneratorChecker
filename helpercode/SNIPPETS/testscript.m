@@ -21,6 +21,15 @@ checkingVar.literalsA = {'NaN' 'XXX'};
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {'X Y' 'Z U'};
 
+% checkingVar below this line can be removed
+% Test for literals and their variants
+% THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
+checkingVar.literalsO = {{'Y' 'X'} {'X' 'Y'}};
+% Test for literals and their (reversed) variants
+% NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
+% THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
+checkingVar.literalsRO = {{'Y' 'X'}};
+
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and
