@@ -55,7 +55,7 @@ for nLp = 1:2:length(literalsP)
     else
         % Test for a generated file! Could also be done by testing for Hash
         if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP{nLp} 'en moet er: ' num2str(literalsP{nLp+1}) ' inzitten.']);
+            WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP{nLp} ' en moet er: ' num2str(literalsP{nLp+1}) 'x in zitten.']);
         end
     end
 end

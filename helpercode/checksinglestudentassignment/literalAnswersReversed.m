@@ -50,7 +50,7 @@ for nLr = 1:length(literalsR)
     else
         % Test for a generated file! Could also be done by testing for Hash
         if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% Moet in de code zitten: ' lits ' or ' litRs '.']);
+            WriteToLastLineOfFile(apStudentSol,['% Moet in de code zitten: "' lits '" or "' litRs '".']);
         end
     end
 end

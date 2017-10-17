@@ -42,7 +42,7 @@ checkingVar.literalsR = {};
 % tests as well.
 
 
-% If the used tests above are not sufficient... design your own down... you
+% If the used tests above are not sufficient... design your own... you
 % lazy cunt
 
 
