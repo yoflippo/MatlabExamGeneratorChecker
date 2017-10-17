@@ -2,6 +2,7 @@ function [ sAssignedMC ] = createMCQ( AssInfo,nOfMulChoiceAssignment,nm )
 
 rpExamDirMC = fullfile(nm.Exam,'deelopdracht_1');
 mkdirIf(rpExamDirMC)
+removeShitFromDir(rpExamDirMC);
 rpExamDirMCSOL = fullfile([nm.Exam 'SOL'],'deelopdracht_1');
 mkdirIf(rpExamDirMCSOL)
 nMCQuestions = length(AssInfo.MC);
@@ -20,6 +21,7 @@ for n = 1:nOfMulChoiceAssignment
     nRound = nRound+1;
     % Assume the AssInfo is randomized
     Q = AssInfo.MC(nMC).files(nRound);
+    Qpoints = AssInfo.MC(nMC).points;
     % Create usefull information
     apQSOL = fullfile(Q.folder,Q.name);
     apQ = replace(apQSOL,'_SOL','');
@@ -33,6 +35,7 @@ for n = 1:nOfMulChoiceAssignment
     % Make a record of assignment in sAssignedMC
     sAssignedMC(nQ).apSOL = apQSOL;
     sAssignedMC(nQ).apQ = rpFinQ;
+    sAssignedMC(nQ).points = Qpoints;
 end
 
 end%function

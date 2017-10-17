@@ -7,6 +7,6 @@ for i = 1:length(checkFiles)
     %% Get info about current file
     fn = checkFiles(i).name;
     pathname = checkFiles(i).folder;
-    CheckSolBase
+    CheckSolBase(fn,pathname);
 end
 cd(currPath)

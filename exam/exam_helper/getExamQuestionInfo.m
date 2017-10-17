@@ -79,6 +79,7 @@ for nM = 1:nD
     exFiles.MC(nMrand).files = files2;
     exFiles.MC(nMrand).index = randIndexD(nMrand);
     exFiles.MC(nMrand).points = deelpunten;
+    exFiles.MC(nMrand).numVariants = length(files2);
     exFiles.MC(nMrand).usedForExam = 0;
     % Get week
     [~, e] = regexp(exFiles.MC(nMrand).folder,'week[0-9]+');
@@ -89,9 +90,6 @@ end
 % Reorder the struct so every randomly assigned index is in an ascending order.
 [~, ind] = sort([exFiles.MC.index]);
 exFiles.MC = exFiles.MC(ind);
-
-
-
 
 
 %% Get the functions and the scripts
@@ -115,6 +113,7 @@ for nM = 1:nD
     exFiles.FuncScrip(nMrand).files = files2;
     exFiles.FuncScrip(nMrand).index = randIndexD(nMrand);
     exFiles.FuncScrip(nMrand).points = deelpunten;
+    exFiles.FuncScrip(nMrand).numVariants = length(files2);
     exFiles.FuncScrip(nMrand).usedForExam = 0;
     % Get week
     [~, e] = regexp(exFiles.FuncScrip(nMrand).folder,'week[0-9]+');
@@ -129,9 +128,9 @@ exFiles.FuncScrip = exFiles.FuncScrip(ind);
 [~, ind] = sort([exFiles.FuncScrip.points]);
 exFiles.FuncScrip = exFiles.FuncScrip(ind);
 
-%% Reorder in weeks
-[~, ind] = sort([exFiles.FuncScrip.weekNr]);
-exFiles.FuncScrip = exFiles.FuncScrip(ind);
+% %% Reorder in weeks
+% [~, ind] = sort([exFiles.FuncScrip.weekNr]);
+% exFiles.FuncScrip = exFiles.FuncScrip(ind);
 
 outVar = exFiles;
 end

@@ -5,15 +5,20 @@ res = 0;
 
 %%==========
 
-%% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
-% SHOULD CHANGE!
+%% FILL string cells below to test, if you are not using them, make them empty!
+% Variables that should be present in file
 nameVars = {'XXX' 'XXX' 'XXX'};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
-% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100' or 'size('
-% PLEASE MIND THE REVERSED CASE: '10+2' or  '100+vector1'
-literalsP = {'XXX' 'XXX' 'XXX'};
+% The number to the right of the string designates the number of times the
+% string should be present.
+literalsP = {'XXX' 2 'XXX' 1};
 % FILL literalsA, With strings that should not be present.
 literalsA = {'NaN' 'XXX'};
+% Reverse literals separated by spaces
+% FOR EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% PLEASE MIND THE REVERSED CASE: '10+2' or  '100+vector1'
+literalsR = {'X Y' 'Z U'};
 
 
 
@@ -30,14 +35,15 @@ literalsA = {'NaN' 'XXX'};
 
 %% Commence the TESTING !!!
 [path name ext] = fileparts(apStudentSol);
+% Creates a copy with cleaned code
 [txtCleanedStudentSolution apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
-%txtCleanedStudentSolution= readCleanMFile(apStudentSol);
 
 if ~isempty(char(txtCleanedStudentSolution))
     %% Run the solution file - HAS TO WORK!!
     try
         run(replace(mfilename,'_CHECK','_SOL'));
     catch ErrMess
+            error([mfilename ': SERIEUS PROBLEM WITH SOL FILE ' ErrMess.message]);
         return;
     end
     
@@ -54,6 +60,7 @@ if ~isempty(char(txtCleanedStudentSolution))
         if exist(apCleaned,'file')
             run(apCleaned);
             txtns = nospaces(apCleaned);
+            error('Something wrong the readClean function');
         else
             run(apStudentSol);
             txtns = nospaces(apStudentSol);
@@ -84,10 +91,10 @@ if ~isempty(char(txtCleanedStudentSolution))
     
     
     %% Check for literal answers that MUST BE PRESENT
-    for nLp = 1:length(literalsP)
+    for nLp = 1:2:length(literalsP)
         lit = literalsP{nLp};
         lit = lit(lit ~= ' ');% Remove spaces
-        if findRegEx(txtns,lit) > 0
+        if findRegEx(txtns,lit) >= literalsP{nLp+1}
             res = res + 1;
         else
             % Test for a generated file! Could also be done by testing for Hash
@@ -112,13 +119,30 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
     end
     
+    %% Check for literal answers that could be present reversed
+    for nLr = 1:length(literalsR)
+        lits = literalsR{nLr};
+        litRs = reverseSpaceSeparatedString(lit);
+        lit = lits(lits ~= ' ');      % Remove spaces
+        litR = litRs(litRs ~= ' ');   % Remove spaces
+        if findRegEx(txtns,lit) > 0 || findRegEx(txtns,litR) > 0
+            res = res + 1;
+        else
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% Moet in de code zitten: ' lits ' or ' litRs '.']);
+            end
+        end
+    end
+    
+    
     %% Delete the tmp file
     if exist(apCleaned,'file')
         delete(apCleaned);
     end
     
     %% Calculate the result
-    res = (res-nAbs)/(length(literalsP)+length(nameVars));
+    res = (res-nAbs)/((length(literalsP)/2)+length(nameVars)+length(literalsR));
     if res < 0
         res = 0;
     elseif res > 1
@@ -126,6 +150,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
 end
 
-
+%% Delete the tmp files
+deleteTemporaryFiles()
 
 end %function

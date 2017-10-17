@@ -4,8 +4,8 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all
-nOfMulChoiceAssignment = 40;
-nOfScriptsFunctions = 10;
+nOfMulChoiceAssignment = 30;
+nOfScriptsFunctions = 15;
 weekNames = {'week1' 'week2'}; % fill with the other weeks
 
 %% Go to path of this file
@@ -24,7 +24,8 @@ nm.Exam = 'Tentamen';
 nm.CurrExamDir = [nm.Exam '_' datetimetxt() ];
 ap.CurrExam = fullfile(ap.BASEFOLDEREX,'Created',nm.CurrExamDir);
 mkdirIf(ap.CurrExam);
-mkdirIf(fullfile(ap.CurrExam,'submitted'));
+ap.Submitted = fullfile(ap.CurrExam,'submitted');
+mkdirIf(ap.Submitted);
 ap.CurrExamLog = fullfile(ap.CurrExam,'log');
 mkdirIf(ap.CurrExamLog);
 ap.Assignments = fullfile(ap.CurrExam,'assignments');
@@ -45,13 +46,8 @@ removeShitFromDir(ap.Assignments);
 CreateAndCopyQuestions(ap,weekNames);
 disp('Created MC-Questions')
 
-%% Redo the hashing of the copied questions/assignments , make a custom file for this purpose
-% 1 - Make sure a dic is made of all these files not just weekX
-% 2 - Add the generation date to every exam file
-% Try to find a way to extract separate parts of the rehashing script
+%% Redo the hashing of the copied questions/assignments 
 
-% check if a dictionary can contain everything needed bashed on only the
-% hash of a file.
 exam_addHashAndHeader(ap,weekNames,nm)
 disp('Added Hash and info to assignments')
 
@@ -59,15 +55,16 @@ disp('Added Hash and info to assignments')
 cd(ap.BASEFOLDEREX)
 ap.AssignmentsWk = fullfile(ap.Assignments,weekNames{1});
 AssInfo = getExamQuestionInfo(ap.Assignments);
-cd(ap.CurrExam);
 disp('Created a randomized struct with all the assignments')
 
-%% Rename the files so that the string 'opdracht_X' in an assignment gets the
+%% Assign randomized assignments for exam
+cd(ap.CurrExam);
 % right number.
 sAssignedtmp1 = createMCQ(AssInfo,nOfMulChoiceAssignment,nm);
 % Create a number of script/function assignments
-sAssignedtmp2 = createFuncScriptAss( AssInfo, nOfScriptsFunctions,nm );
+sAssignedtmp2 = createFuncScriptAss(AssInfo,nOfScriptsFunctions,nm);
 sAssigned = [sAssignedtmp1 sAssignedtmp2];
+disp(['Points for this exam: '  num2str(sum([sAssigned.points]))]);
 clear sAssignedtmp1 sAssignedtmp2 ans;
 save('Workspace.mat');
 
@@ -89,15 +86,18 @@ cd(ap.CurrExam);
 
 %% Create a checking script
 cd(ap.CurrExam)
-zip(fullfile(ap.CurrExam,[nm.CurrExamDir '.zip']),ap.ExamSrcDir);
+ap.CurrZipFile = fullfile(ap.CurrExam,[nm.CurrExamDir '.zip']);
+zip(ap.CurrZipFile,ap.ExamSrcDir);
 
-% -     unzip all zip-files in submitted
-% -     Check for studentnumber
-% --    Find a way the student enters the studentnumber twice
-% -     loop through files
+%% Check the zip-files in folder submitted
+copyfile(ap.CurrZipFile,ap.Submitted);
+
+IETS DOEN AAN MOGELIJK VALSPELEN DOORDAT STUDENTEN KOPIEEN TOEVOEGEN
+OPLOSSING, 
 
 
 %% Finally, Clean up
+disp('Finally, Clean up');
 warning off
 fclose('all');
 rmpath(genpath(ap.BASEFOLDEREX));

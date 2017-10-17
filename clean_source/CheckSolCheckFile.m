@@ -9,5 +9,4 @@ if ~askuser('Use last file?',true) || ~exist(matFile)
 else
     load(matFile);
 end
-
-CheckSolBase
+CheckSolBase(fn,pathname);

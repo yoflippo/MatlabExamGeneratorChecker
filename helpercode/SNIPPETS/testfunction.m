@@ -36,7 +36,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Create compare the solution file with the student solution
     series = 1:2:10;
     for z = series
-        varInput = 0:10; %%%%%%%%%% XXXXXXXXXXXX ADJUST ME XXXXXXXXXXXXX
+        varInput = 0:10; %%%%%%%%%% XXXXXXXXXXXX ADJUST ME Not Too manyXXXXXXXXXXXXX
         try
             if eval([nmClean '(varInput)']) == eval([nmSolution '(varInput)'])
                 res = res + 1;
@@ -101,20 +101,6 @@ if ~isempty(char(txtCleanedStudentSolution))
         res = 1;
     end
 end
-
-%% Delete the tmp files
-try
-    currPath = pwd;
-    cd(fileparts(mfilename('fullpath')))
-    cfiles = dirmf('_COPY'); cfiles = [cfiles; dirmf('_NS')];
-    warning off
-    for n = 1:length(cfiles)
-        delete(fullfile(cfiles(n).folder,cfiles(n).name));
-    end
-    warning on
-    cd(currPath);
-catch err
-    error([mfilename ': ' err.message]);
-end
+deleteTemporaryFiles();
 
 end %function

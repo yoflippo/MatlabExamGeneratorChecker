@@ -1,0 +1,86 @@
+function sAssigned = createFuncScriptAss(AssInfo,nOfScriptsFunctions,nm)
+%CREATEFUNCSCRIPTASS A function that creates a number of script/function
+%assignments based on a randomized struct (AssInfo).
+%
+% ------------------------------------------------------------------------
+%    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
+%
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% ------------------------------------------------------------------------
+% 
+% DESCRIPTION:
+%
+% 
+% BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
+% 
+% PARAMETERS: ,,
+%               AssInfo:                A struct with randomized MC and
+%                                       script assignments.
+%               nOfScriptsFunctions:    variabele with the number of
+%                                       assignments
+%               nm:                     structs with names used in
+%                                       eCreateExam.m
+%
+% RETURN:       
+%               sAssigned:    A struct with the chosen assignments.
+% 
+% EXAMPLES:
+%               sAssignedtmp2 = createFuncScriptAss( AssInfo, nOfScriptsFunctions,nm );
+%
+
+% $Revision: 0.0.0 $  $Date: 2017-10-13 $
+% Creation of this function.
+
+rpExamDirFS = fullfile(nm.Exam,'deelopdracht_2');
+mkdirIf(rpExamDirFS)
+mkdirIf(fullfile(rpExamDirFS,'data_bestanden'));
+rpExamDirFSSOL = fullfile([nm.Exam 'SOL'],'deelopdracht_2');
+mkdirIf(rpExamDirFSSOL)
+mkdirIf(fullfile(rpExamDirFSSOL,'data_bestanden'));
+numFS = length(AssInfo.FuncScrip);
+
+if nOfScriptsFunctions > numFS
+    warning([mfilename ': You are generating too many assignments. Continuing will lead to very similar assignments']);
+end
+
+sAssigned(1:nOfScriptsFunctions) = struct('apSOL',[],'apQ',[]);
+for n = 1:nOfScriptsFunctions
+    % Logic to deal with the number of questions
+    nRound = floor(n/numFS);
+    nFS = mod(n,numFS);
+    if isequal(nFS,0)
+        nFS = numFS;
+        nQ = nFS*nRound;
+    else
+        nQ = nFS+(nRound*numFS);
+    end
+    nRound = nRound+1;
+    % Assume the AssInfo is randomized
+    Q = AssInfo.FuncScrip(nFS).files(nRound);
+    apQSOL = fullfile(Q.folder,Q.name);
+    apQ = replace(apQSOL,'_SOL','');
+    % Copy function/script to new file
+    rpFinQ = fullfile(rpExamDirFS,['opdracht_' num2str(nQ) '.m']);
+    copyfile(apQ,rpFinQ);
+    rpFinQSOL = fullfile(rpExamDirFSSOL,['opdracht_' num2str(nQ) '.m']);
+    copyfile(apQSOL,rpFinQSOL);
+    % Rename all txt of new questions.
+    replaceVraagOpdracht(rpFinQ,nQ);
+    % Make a record of assignment in sAssigned
+    sAssigned(nQ).apSOL = apQSOL;
+    sAssigned(nQ).apQ = rpFinQ;
+end
+
+end%function
+
