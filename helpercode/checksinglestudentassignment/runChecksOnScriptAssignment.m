@@ -1,4 +1,4 @@
-function res = runChecksOnAssignment(callerName, checkingVar, apStudentSol)
+function res = runChecksOnScriptAssignment(callerName, checkingVar, apStudentSol)
 
 %RUNCHECKSONASSIGNMENT A helperfunction for the testing the answers of
 %students by comparing it to a Solution file. It combines different
@@ -45,44 +45,23 @@ if ~isempty(char(txtCleanedStudentSolution))
     
     %% Run the SOL file and the Student-solution and compare the used variables for their values
     try
-    [res, txtns] = compareScriptSolStudent(callerName,checkingVar.nameVars,apCleaned,apStudentSol);
+        [res, txtns] = compareScriptSolStudent(callerName,checkingVar.nameVars,apCleaned,apStudentSol);
     catch
         deleteTemporaryFiles();
         return;
     end
     
-    %% Check for literal answers that MUST BE PRESENT
-    res = res + literalAnswersPresent(txtns,checkingVar.literalsP,apStudentSol);
-    
-    %% Check for literal answers, CAN NOT BE PRESENT
-    nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol);
-    
-    %% Check for literal answers that could be present reversed
-    res = res + literalAnswersReversed(txtns,checkingVar.literalsR,apStudentSol);
-    
-    %% Check for literal and their variants
-    numVariants = 0; 
-    try
-        res = res + literalAnswersThisOrThat(txtns,checkingVar.literalsO,apStudentSol);
-        numVariants = length(checkingVar.literalsO);
-    catch
-    end
-    
-    %% Check for literal and their variants AND their reverses
-    numVariantsRev = 0; 
-    try
-        res = res + literalAnswersThisOrThatAndRev(txtns,checkingVar.literalsRO,apStudentSol);
-        numVariantsRev = length(checkingVar.literalsRO);
-    catch
-    end
+    %% Check all literals
+    [res2,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol);
+    res = res + res2;
     
     %% Calculate the result
     res = (res-nAbs)/((length(checkingVar.literalsP)/2) + ...
-                        length(checkingVar.nameVars)    + ...
-                        length(checkingVar.literalsR)   + ...
-                        numVariantsRev                  + ...
-                        numVariants ...
-                     );
+        length(checkingVar.nameVars)    + ...
+        num.Reversed                     + ...
+        num.VariantsRev                  + ...
+        num.Variants                       ...
+        );
     if res < 0
         res = 0;
     elseif res > 1

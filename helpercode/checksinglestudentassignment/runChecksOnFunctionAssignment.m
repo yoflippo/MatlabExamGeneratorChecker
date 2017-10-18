@@ -48,18 +48,17 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Create a file from the cleaned file that contains no spaces, for easy txt comparisons
     txtns = nospaces(apCleaned);
     
-    %% Check for literal answers that MUST BE PRESENT
-    res = res + literalAnswersPresent(txtns,checkingVar.literalsP,apStudentSol);
-
-    %% Check for literal answers, CAN NOT BE PRESENT
-    nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol);
-    
-    %% Check for literal answers that could be present reversed
-    res = res + literalAnswersReversed(txtns,checkingVar.literalsR,apStudentSol);
-    
+    %% Check all literals
+    [res2,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol);
+    res = res + res2;
     
     %% Calculate the result
-    res = (res-nAbs)/((length(checkingVar.literalsP)/2)+length(checkingVar.testFunctionInput)+length(checkingVar.literalsR));
+    res = (res-nAbs)/((length(checkingVar.literalsP)/2)             + ...
+        length(checkingVar.testFunctionInput)       + ...
+        num.Reversed                                + ...
+        num.VariantsRev                             + ...
+        num.Variants                                  ...
+        );
     if res < 0
         res = 0;
     elseif res > 1
@@ -67,7 +66,6 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
 end
 deleteTemporaryFiles();
-
 
 
 end
