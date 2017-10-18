@@ -1,4 +1,4 @@
-opefunction res = opdracht_XXX_versie_X_CHECK(apStudentSol)
+function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE

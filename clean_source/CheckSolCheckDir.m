@@ -9,11 +9,10 @@ for i = 1:length(checkFiles)
     pathname = checkFiles(i).folder;
     try
         tic; CheckSolBase(fn,pathname); toc
-    catch  err   
         deleteTemporaryFiles();
+    catch  err          
         error([mfilename ': ' err.message newline ]);
     end
 end
-
 
 cd(currPath)

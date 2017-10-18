@@ -48,12 +48,18 @@ for z = 1:length(testSeries)
     
     tVar = testSeries(z);
     if iscell(testSeries)
-        tVar = testSeries{z};     
+        tVar = testSeries{z};
     end
     
     try
-        if eval([nmStudentSolution '(tVar)']) == eval([solution '(tVar)'])
-            res = res + 1;
+        try
+            if isequal(eval([nmStudentSolution '(tVar)']) , eval([solution '(tVar)']))
+                res = res + 1;
+            end
+        catch
+            if isequal(eval([nmStudentSolution '(' tVar ')']) , eval([solution '(' tVar ')']))
+                res = res + 1;
+            end
         end
     catch ErrMess
         % Test for a generated nmStudentSolution! Could also be done by testing for Hash
