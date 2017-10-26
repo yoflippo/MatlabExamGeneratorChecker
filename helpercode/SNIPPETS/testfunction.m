@@ -31,6 +31,13 @@ checkingVar.literalsO = {{'Y' 'X'} {'X' 'Y'}};
 % THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
 checkingVar.literalsRO = {{'Y' 'X'}};
 
+checkingVar.nameVars = {'XXX' 'XXX'};
+checkingVar.literalsP = {'XXX' 2 'XXX' 1};
+checkingVar.literalsA = {'NaN' 'XXX' 2};
+checkingVar.literalsR = {'X Y' 'Z U'};
+checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
+checkingVar.literalsRO = {{'Y' 'X'}};
+
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Literals that should be present and

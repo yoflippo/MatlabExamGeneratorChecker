@@ -25,7 +25,8 @@ checkingVar.literalsA = {'NaN' 'pi*10' '10*pi'};
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {'pi * halvespierlengte'};
-
+checkingVar.literalsO = {};
+checkingVar.literalsRO = {};
     
 
 

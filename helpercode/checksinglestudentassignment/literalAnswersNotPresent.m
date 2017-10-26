@@ -51,8 +51,7 @@ for nLa = 1:length(literalsA)
             end
         catch
         end
-    else
-        break;
+
     end
     if findInString(txtns,lit) > 0
         nAbs = nAbs + numTimes;

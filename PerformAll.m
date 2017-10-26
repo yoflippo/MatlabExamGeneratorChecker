@@ -14,7 +14,7 @@ addpath(genpath('helpercode'));
 InitAll
 
 %% Fill in week to test
-weekToCorrect = 1;
+weekToCorrect = 2;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
 
@@ -42,7 +42,8 @@ try
     aGenerateEverythingForCourse();
 catch err
     %Has to be a warning to continue
-    warning([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
+    error([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
+    keyboard
 end
 toc
 

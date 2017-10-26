@@ -26,7 +26,8 @@ checkingVar.literalsA = {'NaN'};
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {'vector1 + 10' 'vector3 * 10'};
-
+checkingVar.literalsO = {};
+checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and

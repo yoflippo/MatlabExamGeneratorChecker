@@ -5,12 +5,12 @@
 % Je hebt een input variabele genaamd: txt.
 % De output variable heet "result".
 % De functie plakt de tekst van de input (txt) aan de tekst:
-% 'opdracht_4: ' en geeft dat terug aan "result".
+% 'opdracht: ' en geeft dat terug aan "result".
 %
 % Als de input variabele de volgende string bevat: 'Pectoralis'. 
-% Dan geeft de functie "opdracht_4: Pectoralis" terug.
+% Dan geeft de functie "opdracht: Pectoralis" terug.
 %
 % Dit bestand (wat je nu leest) mag enkel en alleen een functie bevatten.
 function result = opdracht_4(txt)
-result = ['opdracht_4: ' txt];
+result = ['opdracht: ' txt];
 end

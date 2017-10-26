@@ -12,19 +12,19 @@ props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFacto
 props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
 
-thisWeek = 'week1'
+thisWeek = 'week2'
 cd('student_assignments');
 cd(thisWeek);
 
 %% Message for student
-chr = ['Als je deze opdracht al hebt gedaan.. hoef je het niet nog eens te doen... mag wel..' newline newline ];
+chr = ['Ha Tester, stuur mij even een e-mail als je dit bericht hebt ontvangen..' newline newline ];
 % chr = '';
 chr = [chr newline 'Beste student,'];
 chr = [chr newline newline 'Lees deze e-mail helemaal door!'];
 chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht'];
 chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];
-chr = [chr newline newline 'Je krijgt voor deze opdracht een cijfer dat NIET meetelt.'];
+chr = [chr newline newline 'Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).'];
 chr = [chr newline 'Het cijfer geeft je een indicatie van hoe goed je de eindopdracht hebt gemaakt.'];
 chr = [chr newline 'Elke week eindopdracht is representatief voor het tentamen.'];
 chr = [chr newline 'Het tentamen wordt opgebouwd uit onderdelen van de weekeindopdrachten.'];
@@ -50,6 +50,7 @@ chr = [chr newline 'Mark Schrauwen']
 
 %% Find zips and mail them
 zips = dir(['**' filesep '*.zip']);
+nSendMails = 0;
 for nZ = 1:length(zips)
    %% extract student numbers
    sNum = extractAfter(erase(zips(nZ).name,'.zip'),'_');
@@ -57,7 +58,7 @@ for nZ = 1:length(zips)
    sEma = {'mjschrau@hhs.nl' [sNum '@student.hhs.nl']}
    sAtt = fullfile(pwd,zips(nZ).name) 
    sendmail(sEma,...
-         'Biostatica Matlab: eindopdracht week 1',chr,sAtt);
+         'Biostatica Matlab: eindopdracht week 2',chr,sAtt);
    nSendMails = nSendMails + 1;
 end
 disp(['Send mails: ' num2str(nSendMails)]);

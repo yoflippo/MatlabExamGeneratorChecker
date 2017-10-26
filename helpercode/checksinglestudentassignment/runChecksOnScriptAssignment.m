@@ -67,6 +67,11 @@ if ~isempty(char(txtCleanedStudentSolution))
     elseif res > 1
         res = 1;
     end
+else
+    if ~contains(apStudentSol,'versie')
+        WriteToLastLineOfFile(apStudentSol,'% Een leeg bestand valt niet na te kijken...');
+    end
 end
 
 deleteTemporaryFiles();
+end %function

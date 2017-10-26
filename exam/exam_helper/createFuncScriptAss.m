@@ -81,8 +81,8 @@ dff.L = L;
 %_|_________________________ time
 %        t1    t2   t3   t4   
 
-dff.t1 = 0.25; % L0
-dff.t2 = 0.60; % Lmax around 60% of exam
+dff.t1 = 0.15; % L0
+dff.t2 = 0.70; % Lmax around 60% of exam
 dff.t3 = 0.75; % Lmax
 dff.t4 = 0.95; % L0
 % Range

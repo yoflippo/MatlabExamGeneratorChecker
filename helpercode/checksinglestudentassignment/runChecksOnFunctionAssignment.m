@@ -53,20 +53,24 @@ if ~isempty(char(txtCleanedStudentSolution))
     res = res + res2;
     
     %% Calculate the result
-    res = (res-nAbs)/((length(checkingVar.literalsP)/2)             + ...
+    sm = ((length(checkingVar.literalsP)/2)         + ...
         length(checkingVar.testFunctionInput)       + ...
         num.Reversed                                + ...
         num.VariantsRev                             + ...
         num.Variants                                  ...
         );
+    res = (res-nAbs)/sm;
     if res < 0
         res = 0;
     elseif res > 1
         res = 1;
     end
+else
+    if ~contains(apStudentSol,'versie')
+        WriteToLastLineOfFile(apStudentSol,'% Een leeg bestand valt niet na te kijken...');
+    end
 end
+
 deleteTemporaryFiles();
-
-
-end
+end %function
 

@@ -5,7 +5,7 @@
 
 clear all
 nOfMulChoiceAssignment = 30;
-nOfScriptsFunctions = 15;
+nOfScriptsFunctions = 20;
 weekNames = {'week1' 'week2'}; % fill with the other weeks
 
 %% Go to path of this file
@@ -92,8 +92,8 @@ zip(ap.CurrZipFile,ap.ExamSrcDir);
 %% Check the zip-files in folder submitted
 copyfile(ap.CurrZipFile,ap.Submitted);
 
-IETS DOEN AAN MOGELIJK VALSPELEN DOORDAT STUDENTEN KOPIEEN TOEVOEGEN
-OPLOSSING, 
+% NOTE: IETS DOEN AAN MOGELIJK VALSPELEN DOORDAT STUDENTEN KOPIEEN TOEVOEGEN
+% OPLOSSING, 
 
 
 %% Finally, Clean up

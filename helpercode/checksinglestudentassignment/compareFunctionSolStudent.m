@@ -1,4 +1,4 @@
-function [res, txtns] = compareFunctionSolStudent(callerName,testSeries,apStudentSol)
+function [res] = compareFunctionSolStudent(callerName,testSeries,apStudentSol)
 
 %COMPARESCRIPTSOLSTUDENT A helperfunction for the testing the answers of
 %students by comparing it to a Solution file.
@@ -56,15 +56,14 @@ for z = 1:length(testSeries)
             if isequal(eval([nmStudentSolution '(tVar)']) , eval([solution '(tVar)']))
                 res = res + 1;
             end
-        catch
+        catch 
             if isequal(eval([nmStudentSolution '(' tVar ')']) , eval([solution '(' tVar ')']))
                 res = res + 1;
             end
         end
     catch ErrMess
-        % Test for a generated nmStudentSolution! Could also be done by testing for Hash
         if ~contains(apStudentSol,'versie')
-            txterror = ['% Deze code werkt niet met de input: ' num2str(varInput)];
+            txterror = ['% Deze code werkt niet met de input: ' num2str(tVar)];
             txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
             WriteToLastLineOfFile(apStudentSol,txterror);
         end

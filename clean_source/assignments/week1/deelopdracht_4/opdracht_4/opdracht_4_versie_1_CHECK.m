@@ -3,7 +3,7 @@ res = 0;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
 % % % % % % function result = opdracht_4(txt)
-% % % % % % result = ['opdracht_4: ' txt];
+% % % % % % result = ['opdracht: ' txt];
 % % % % % % end
 %%==========
 
@@ -16,7 +16,7 @@ checkingVar.testFunctionInput = {'XXX' 'XXXXXX' '____'};
 % The number to the right of the string designates the number of times the
 % string should be present.
 checkingVar.literalsP = {   'function' 1 'result' 2 'opdracht_4(' 1 'opdracht_4(txt)' 1 'end' 1 ...
-                                        'opdracht_4: ' 1 'txt' 2};
+                                        'opdracht: ' 1 'txt' 2};
 % FILL literalsA, With strings that should not be present.
 checkingVar.literalsA = {'NaN'};
 % Reverse literals separated by spaces
@@ -24,7 +24,8 @@ checkingVar.literalsA = {'NaN'};
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {};
-
+checkingVar.literalsO = {};
+checkingVar.literalsRO = {};
     
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

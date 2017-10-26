@@ -56,18 +56,6 @@ for nO = 1:length(literalsO)
         listTxt = [lit{n} '  ' listTxt];
     end
 
-    % testing the reverse
-% % % % % % % % % % % % %       blTmp = false; 
-% % % % % % % % % % % % %     listTxt = [];
-% % % % % % % % % % % % %     for n = 1:length(lit)
-% % % % % % % % % % % % %         listRev = reverseSpaceSeparatedString(lit{n});
-% % % % % % % % % % % % %         listTxt = [listRev '  ' listTxt];
-% % % % % % % % % % % % %         listRev = replace(listRev,' ','');
-% % % % % % % % % % % % %         blTmp = blTmp | findInString(txtns,listRev);
-% % % % % % % % % % % % %         listTxt = [lit{n} '  ' listTxt];
-% % % % % % % % % % % % %         tmp = replace(lit{n},' ','');
-% % % % % % % % % % % % %         blTmp = blTmp | findInString(txtns,tmp);     
-% % % % % % % % % % % % %     end
     
     if blTmp
         res = res + 1;
