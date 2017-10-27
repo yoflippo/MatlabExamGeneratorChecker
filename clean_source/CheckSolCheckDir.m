@@ -10,7 +10,7 @@ for i = 1:length(checkFiles)
     try
         tic; CheckSolBase(fn,pathname); toc
         deleteTemporaryFiles();
-    catch  err          
+    catch  err        
         error([mfilename ': ' err.message newline ]);
     end
 end

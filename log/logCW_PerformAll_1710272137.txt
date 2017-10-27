@@ -1,0 +1,2555 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1710272137
+
+----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.2.0.556344 (R2017a)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 15063)
+Java Version: Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.2         (R2017a)
+Simulink                                              Version 8.9         (R2017a)
+Computer Vision System Toolbox                        Version 7.3         (R2017a)
+Control System Toolbox                                Version 10.2        (R2017a)
+Curve Fitting Toolbox                                 Version 3.5.5       (R2017a)
+DSP System Toolbox                                    Version 9.4         (R2017a)
+Data Acquisition Toolbox                              Version 3.11        (R2017a)
+Embedded Coder                                        Version 6.12        (R2017a)
+Fixed-Point Designer                                  Version 5.4         (R2017a)
+Fuzzy Logic Toolbox                                   Version 2.2.25      (R2017a)
+Global Optimization Toolbox                           Version 3.4.2       (R2017a)
+HDL Coder                                             Version 3.10        (R2017a)
+Image Acquisition Toolbox                             Version 5.2         (R2017a)
+Image Processing Toolbox                              Version 10.0        (R2017a)
+Instrument Control Toolbox                            Version 3.11        (R2017a)
+MATLAB Coder                                          Version 3.3         (R2017a)
+MATLAB Compiler                                       Version 6.4         (R2017a)
+MATLAB Compiler SDK                                   Version 6.3.1       (R2017a)
+Optimization Toolbox                                  Version 7.6         (R2017a)
+Parallel Computing Toolbox                            Version 6.10        (R2017a)
+Signal Processing Toolbox                             Version 7.4         (R2017a)
+Simscape                                              Version 4.2         (R2017a)
+Simscape Electronics                                  Version 2.11        (R2017a)
+Simscape Power Systems                                Version 6.7         (R2017a)
+Spreadsheet Link                                      Version 3.3.1       (R2017a)
+Stateflow                                             Version 8.9         (R2017a)
+Statistics and Machine Learning Toolbox               Version 11.1        (R2017a)
+Symbolic Math Toolbox                                 Version 7.2         (R2017a)
+System Identification Toolbox                         Version 9.6         (R2017a)
+Vehicle Network Toolbox                               Version 3.3         (R2017a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateAndCopyQuestions: 1 of 25 folders processed of week1
+CreateAndCopyQuestions: 2 of 25 folders processed of week1
+CreateAndCopyQuestions: 3 of 25 folders processed of week1
+CreateAndCopyQuestions: 4 of 25 folders processed of week1
+CreateAndCopyQuestions: 5 of 25 folders processed of week1
+CreateAndCopyQuestions: 6 of 25 folders processed of week1
+CreateAndCopyQuestions: 7 of 25 folders processed of week1
+CreateAndCopyQuestions: 8 of 25 folders processed of week1
+CreateAndCopyQuestions: 9 of 25 folders processed of week1
+CreateAndCopyQuestions: 10 of 25 folders processed of week1
+CreateAndCopyQuestions: 11 of 25 folders processed of week1
+CreateAndCopyQuestions: 12 of 25 folders processed of week1
+CreateAndCopyQuestions: 13 of 25 folders processed of week1
+CreateAndCopyQuestions: 14 of 25 folders processed of week1
+CreateAndCopyQuestions: 15 of 25 folders processed of week1
+CreateAndCopyQuestions: 16 of 25 folders processed of week1
+CreateAndCopyQuestions: 17 of 25 folders processed of week1
+CreateAndCopyQuestions: 18 of 25 folders processed of week1
+CreateAndCopyQuestions: 19 of 25 folders processed of week1
+CreateAndCopyQuestions: 20 of 25 folders processed of week1
+CreateAndCopyQuestions: 21 of 25 folders processed of week1
+CreateAndCopyQuestions: 22 of 25 folders processed of week1
+CreateAndCopyQuestions: 23 of 25 folders processed of week1
+CreateAndCopyQuestions: 24 of 25 folders processed of week1
+CreateAndCopyQuestions: 25 of 25 folders processed of week1
+CreateAndCopyQuestions: 1 of 25 folders processed of week2
+CreateAndCopyQuestions: 2 of 25 folders processed of week2
+CreateAndCopyQuestions: 3 of 25 folders processed of week2
+CreateAndCopyQuestions: 4 of 25 folders processed of week2
+CreateAndCopyQuestions: 5 of 25 folders processed of week2
+CreateAndCopyQuestions: 6 of 25 folders processed of week2
+CreateAndCopyQuestions: 7 of 25 folders processed of week2
+CreateAndCopyQuestions: 8 of 25 folders processed of week2
+CreateAndCopyQuestions: 9 of 25 folders processed of week2
+CreateAndCopyQuestions: 10 of 25 folders processed of week2
+CreateAndCopyQuestions: 11 of 25 folders processed of week2
+CreateAndCopyQuestions: 12 of 25 folders processed of week2
+CreateAndCopyQuestions: 13 of 25 folders processed of week2
+CreateAndCopyQuestions: 14 of 25 folders processed of week2
+CreateAndCopyQuestions: 15 of 25 folders processed of week2
+CreateAndCopyQuestions: 16 of 25 folders processed of week2
+CreateAndCopyQuestions: 17 of 25 folders processed of week2
+CreateAndCopyQuestions: 18 of 25 folders processed of week2
+CreateAndCopyQuestions: 19 of 25 folders processed of week2
+CreateAndCopyQuestions: 20 of 25 folders processed of week2
+CreateAndCopyQuestions: 21 of 25 folders processed of week2
+CreateAndCopyQuestions: 22 of 25 folders processed of week2
+CreateAndCopyQuestions: 23 of 25 folders processed of week2
+CreateAndCopyQuestions: 24 of 25 folders processed of week2
+CreateAndCopyQuestions: 25 of 25 folders processed of week2
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the generated files to clean_source assignment
+CreateAndCopyQuestions: week 1,copied 50% of the files
+CreateAndCopyQuestions: week 1,copied 100% of the files
+CreateAndCopyQuestions: week 2,copied 50% of the files
+CreateAndCopyQuestions: week 2,copied 100% of the files
+week1: TRUE = 82 | FALSE = 81
+week2: TRUE = 76 | FALSE = 80
+Copy the files to the "assignment" place
+Created MC-Questions
+Elapsed time is 216.216335 seconds.
+execute generate all script
+Check for the existence of needed supporting scripts/function files
+Start fresh: Generate all week assignments
+0.001: Read the student number and convert the list to e-mailadresses
+0.478: Create new filenames (with HASH code AND combine file names)
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 0%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 1%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 2%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 3%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 4%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 5%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 6%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 7%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 8%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 9%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 10%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 11%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 12%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 13%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 14%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 15%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 16%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 17%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 18%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 19%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 20%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 21%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 22%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 23%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 24%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 25%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 26%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 27%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 28%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 29%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 30%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 31%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 32%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 33%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 34%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 35%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 36%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 37%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 38%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 39%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 40%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 41%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 42%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 43%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 44%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 45%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 46%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 47%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 48%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 49%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 50%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 51%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 52%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 53%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 54%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 55%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 56%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 57%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 58%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 59%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 60%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 61%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 62%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 63%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 64%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 65%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 66%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 67%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 68%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 69%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 70%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 71%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 72%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 73%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 74%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 75%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 76%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 77%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 78%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 79%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 80%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 81%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 82%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 83%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 84%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 85%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 86%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 87%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 88%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 89%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 90%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 91%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 92%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 93%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 94%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 95%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 96%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 97%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 98%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 99%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 1, progress: 100%
+Give each assignment Hash-info week: 2, progress: 0%
+Give each assignment Hash-info week: 2, progress: 0%
+Give each assignment Hash-info week: 2, progress: 0%
+Give each assignment Hash-info week: 2, progress: 0%
+Give each assignment Hash-info week: 2, progress: 0%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 1%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 2%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 3%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 4%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 5%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 6%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 7%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 8%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 9%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 10%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 11%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 12%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 13%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 14%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 15%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 16%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 17%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 18%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 19%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 20%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 21%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 22%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 23%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 24%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 25%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 26%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 27%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 28%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 29%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 30%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 31%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 32%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 33%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 34%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 35%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 36%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 37%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 38%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 39%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 40%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 41%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 42%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 43%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 44%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 45%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 46%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 47%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 48%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 49%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 50%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 51%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 52%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 53%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 54%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 55%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 56%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 57%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 58%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 59%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 60%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 61%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 62%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 63%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 64%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 65%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 66%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 67%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 68%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 69%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 70%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 71%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 72%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 73%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 74%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 75%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 76%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 77%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 78%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 79%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 80%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 81%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 82%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 83%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 84%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 85%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 86%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 87%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 88%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 89%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 90%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 91%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 92%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 93%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 94%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 95%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 96%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 97%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 98%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 99%
+Give each assignment Hash-info week: 2, progress: 100%
+Give each assignment Hash-info week: 2, progress: 100%
+Give each assignment Hash-info week: 2, progress: 100%
+Give each assignment Hash-info week: 2, progress: 100%
+Give each assignment Hash-info week: 2, progress: 100%
+Give each assignment Hash-info week: 2, progress: 100%
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:cd:NonExistentDirectory'
+       message: 'Cannot CD to week3 (Name is nonexistent or not a directory).'
+         cause: {0×1 cell}
+         stack: [2×1 struct]
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 45)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',45,0)">line 45</a>)
+PerformAll: E0 aGenerateEverythingForCourse,
+week3, Cannot CD to week3 (Name is nonexistent or not a directory).
+ aGenerateEverythingForCourse did not finish correctly
+} 
+if system_dependent('IsDebugMode')==1, dbcont; end
+execute create week assignment scripts
+Check for the existence of needed supporting scripts/function files
+Generating assignents for WEEK: 1
+0.308: Empty folder with files for testing
+1.093: Create a student specific folder in every week folder
+1.112: Get overview of files
+1.334: Fill every student folder with the number of assignments
+7.459: Generate some test files for the Checking script
+7.577: Generate test folders with data to simulate students with wrong assignments
+Generating assignents for WEEK: 2
+0.239: Empty folder with files for testing
+1.082: Create a student specific folder in every week folder
+1.094: Get overview of files
+1.279: Fill every student folder with the number of assignments
+7.289: Generate some test files for the Checking script
+7.41: Generate test folders with data to simulate students with wrong assignments
+7.421: END SCRIPT
+Elapsed time is 7.421625 seconds.
+week2
+Execute check assignments
+Check for the existence of needed supporting scripts/function files
+Start with script
+week2
+0.005: Check if needed folder exists, if not stop execution of script
+0.006: Check which students have submitted their assignments. Student without do not get any points
+0 students did not submit their assignments
+1.576: Check if the HASH-codes in every m-file of the students is intact
+3.397: Check for each student if they have their correct assignments
+4.116: Get the number of points for all week assignments
+4.404: Put in dictionary and save in MAT-file
+4.418: Check the answer of the students and track their points if correct
+
+studentFolder =
+
+    '15131459'
+
+Elapsed time is 8.201163 seconds.
+
+studentFolder =
+
+    '15013294'
+
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+Elapsed time is 7.768325 seconds.
+
+studentFolder =
+
+    '15109054'
+
+Elapsed time is 7.496066 seconds.
+
+studentFolder =
+
+    '16053486'
+
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+Elapsed time is 7.305730 seconds.
+
+studentFolder =
+
+    '16027078'
+
+Elapsed time is 7.339497 seconds.
+
+studentMatrix =
+
+    15131459          10
+    15013294          10
+    15109054          10
+    16053486          10
+    16027078          10
+
+
+averageGrade =
+
+    10
+
+Elapsed time is 7.363348 seconds.
+Making a backup
+Check for the existence of needed supporting scripts/function files
+
+thisWeek =
+
+    'week2'
+
+
+chr =
+
+    'Ha Tester, bij deze week 2 opdracht met nieuwe opdrachten. Alleen deelopdracht_2 is anders dus als je al werk hebt verricht, controleer dan die opdracht...
+     
+     
+     Beste student,
+     
+     Lees deze e-mail helemaal door!
+     
+     
+     In de bijlage van deze e-mail staat jouw eindopdracht
+     van week2 voor Biostatica Matlab.
+     
+     Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).
+     Het cijfer geeft je een indicatie van hoe goed je de eindopdracht hebt gemaakt.
+     Elke week eindopdracht is representatief voor het tentamen.
+     Het tentamen wordt opgebouwd uit onderdelen van de weekeindopdrachten.
+     Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.
+     
+     Je moet deze opdracht voor volgende week woensdag
+     23:59u inleveren via Blackboard.
+     
+     Je mag de foldernamen, folderstructuren en bestandnamen
+     van het zip-bestand NIET aanpassen!
+     Doe je dat wel, dan wordt de opdracht niet nagekeken.
+     
+     Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een
+     zip-bestand van al je werk. Dat specifieke zip-bestand MOET je
+     uploaden via Blackboard. Indien je toch zelfstandig een
+     zip-bestand maakt, wordt je opdracht NIET nagekeken!
+     
+     Wij proberen jouw opdracht na het inlevermoment, binnen
+     5 werkdagen na te kijken. Je ontvangt je nagekeken werk
+     op dit e-mailadres.
+     
+     
+     Met vriendelijke groet,
+     Mark Schrauwen'
+
+
+sEma =
+
+  1×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'mjschrau@hhs.nl'    '15013294@student.hhs.nl'
+
+
+sAtt =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\student_assignments\week2\week2_15013294.zip'
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2017a\toolbox\matlab\iofun\sendmail.m', 169)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\matlab\iofun\sendmail.m',169,0)">line 169</a>)
+Could not connect to SMTP host: smtp.gmail.com, port: 25;
+Permission denied: connect
+} 
+<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\matlab\iofun\sendmail.m',169,1)">169 </a>        error(message('MATLAB:sendmail:SmtpError', niceError))
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+sEma =
+
+  1×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'mjschrau@hhs.nl'    '15013294@student.hhs.nl'
+
+
+sAtt =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\student_assignments\week2\week2_15013294.zip'
+
+
+sEma =
+
+  1×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'mjschrau@hhs.nl'    '15109054@student.hhs.nl'
+
+
+sAtt =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\student_assignments\week2\week2_15109054.zip'
+
+
+sEma =
+
+  1×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'mjschrau@hhs.nl'    '15131459@student.hhs.nl'
+
+
+sAtt =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\student_assignments\week2\week2_15131459.zip'
+
+
+sEma =
+
+  1×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'mjschrau@hhs.nl'    '16027078@student.hhs.nl'
+
+
+sAtt =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\student_assignments\week2\week2_16027078.zip'
+
+
+sEma =
+
+  1×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'mjschrau@hhs.nl'    '16053486@student.hhs.nl'
+
+
+sAtt =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\student_assignments\week2\week2_16053486.zip'
+
+Send mails: 5

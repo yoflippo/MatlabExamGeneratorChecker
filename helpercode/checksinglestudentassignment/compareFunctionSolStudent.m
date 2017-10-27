@@ -41,22 +41,58 @@ function [res] = compareFunctionSolStudent(callerName,testSeries,apStudentSol)
 res = 0;
 [~, nmStudentSolution] = fileparts(apStudentSol);
 solution = replace(callerName,'_CHECK','_SOL');
+blDoubleOutput = false;
+blStruct = false;
+blDoubleInput = false;
 
+if isstruct(testSeries)
+    blStruct = true;
+    blDoubleOutput = testSeries.DOUBLE_OUTPUT;
+    try
+        blDoubleInput = testSeries.DOUBLE_INPUT;
+    catch
+    end
+    testData = testSeries.data;
+else
+    testData = testSeries;
+end
+
+if blDoubleInput && blDoubleOutput
+    error(' NOT IMPLEMENTED YET!!!!!!!!!!')
+end
 
 %% Perform Tests
-for z = 1:length(testSeries)
+for z = 1:length(testData)
     
-    tVar = testSeries(z);
-    if iscell(testSeries)
-        tVar = testSeries{z};
+    if ~blStruct
+        tVar = testData(z);
+    end
+    
+    if iscell(testData)
+        tVar = testData{z};
+        if iscell(tVar) && ~blDoubleInput
+            tVar = tVar{1};
+        end
     end
     
     try
         try
-            if isequal(eval([nmStudentSolution '(tVar)']) , eval([solution '(tVar)']))
-                res = res + 1;
+            if blDoubleOutput
+                eval(['[a1,b1] = ' nmStudentSolution '(tVar);']);
+                eval(['[a2,b2] = ' solution '(tVar);']);
+                if (isequal(a1,a2) && isequal(b1,b2)) || (isequal(a1,b2) && isequal(b1,a2))
+                    res = res + 1;
+                end
+            elseif blDoubleInput
+                if isequal(eval([nmStudentSolution '(tVar{1},tVar{2})']) , eval([solution '(tVar{1},tVar{2})']))
+                    res = res + 1;
+                end
+            else
+                if isequal(eval([nmStudentSolution '(tVar)']) , eval([solution '(tVar)']))
+                    res = res + 1;
+                end
             end
-        catch 
+        catch % Testing single numeric input
             if isequal(eval([nmStudentSolution '(' tVar ')']) , eval([solution '(' tVar ')']))
                 res = res + 1;
             end

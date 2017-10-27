@@ -43,7 +43,14 @@ res = 0;
 
 if ~isempty(char(txtCleanedStudentSolution))
     %% Create compare the solution file with the student solution
-    res = res + compareFunctionSolStudent(callerName,checkingVar.testFunctionInput,apStudentSol);
+%     res = res + compareFunctionSolStudent(callerName,checkingVar.testFunctionInput,apStudentSol);
+    res = res + compareFunctionSolStudent(callerName,checkingVar.testFunctionInput,apCleaned);
+    
+    try
+        data = checkingVar.testFunctionInput.data;
+    catch
+        data = checkingVar.testFunctionInput;
+    end
     
     %% Create a file from the cleaned file that contains no spaces, for easy txt comparisons
     txtns = nospaces(apCleaned);
@@ -54,7 +61,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     
     %% Calculate the result
     sm = ((length(checkingVar.literalsP)/2)         + ...
-        length(checkingVar.testFunctionInput)       + ...
+        length(data)                                + ...
         num.Reversed                                + ...
         num.VariantsRev                             + ...
         num.Variants                                  ...
@@ -63,6 +70,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     if res < 0
         res = 0;
     elseif res > 1
+        warning('result is too high!')
         res = 1;
     end
 else

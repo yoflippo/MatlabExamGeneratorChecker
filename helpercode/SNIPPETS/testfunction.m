@@ -8,7 +8,9 @@ function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput = {'XXX' 'XXX' 'XXX'};
+checkingVar.testFunctionInput.data = {'XXX' 'XXX' 'XXX'};
+checkingVar.testFunctionInput.DOUBLE_OUTPUT = false;
+checkingVar.testFunctionInput.DOUBLE_INPUT = false;
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
@@ -25,18 +27,19 @@ checkingVar.literalsR = {'X Y' 'Z U'};
 % checkingVar below this line can be removed
 % Test for literals and their variants
 % THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
-checkingVar.literalsO = {{'Y' 'X'} {'X' 'Y'}};
+checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
 % Test for literals and their (reversed) variants
 % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
 % THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
 checkingVar.literalsRO = {{'Y' 'X'}};
 
-checkingVar.nameVars = {'XXX' 'XXX'};
+checkingVar.testFunctionInput = {'XXX'};
 checkingVar.literalsP = {'XXX' 2 'XXX' 1};
-checkingVar.literalsA = {'NaN' 'XXX' 2};
-checkingVar.literalsR = {'X Y' 'Z U'};
-checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
-checkingVar.literalsRO = {{'Y' 'X'}};
+checkingVar.literalsA = {'NaN' 2};
+checkingVar.literalsR = {};
+checkingVar.literalsO = {};
+checkingVar.literalsRO = {};
+
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

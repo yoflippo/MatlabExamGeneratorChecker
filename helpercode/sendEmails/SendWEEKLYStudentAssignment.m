@@ -17,7 +17,7 @@ cd('student_assignments');
 cd(thisWeek);
 
 %% Message for student
-chr = ['Ha Tester, stuur mij even een e-mail als je dit bericht hebt ontvangen..' newline newline ];
+chr = ['Ha Tester, bij deze week 2 opdracht met nieuwe opdrachten. Alleen deelopdracht_2 is anders dus als je al werk hebt verricht, controleer dan die opdracht...' newline newline ];
 % chr = '';
 chr = [chr newline 'Beste student,'];
 chr = [chr newline newline 'Lees deze e-mail helemaal door!'];

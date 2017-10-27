@@ -51,16 +51,16 @@ for nLa = 1:length(literalsA)
             end
         catch
         end
-
-    end
-    if findInString(txtns,lit) > 0
-        nAbs = nAbs + numTimes;
-    else
-        % Test for a generated file! Could also be done by testing for Hash
-        if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
-        end
-    end
+        
+        if findInString(txtns,lit) > 0
+            nAbs = nAbs + numTimes;
+        else
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
+            end
+        end       
+    end   
 end
 
 

@@ -42,7 +42,7 @@ try
     aGenerateEverythingForCourse();
 catch err
     %Has to be a warning to continue
-    error([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
+    warning([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
     keyboard
 end
 toc
