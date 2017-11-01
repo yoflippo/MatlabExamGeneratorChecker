@@ -20,7 +20,7 @@ res = 0;
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput = {1:5 2:2:10 0:1};
+checkingVar.testFunctionInput = {{1:5} {2:2:10} {0:1}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.

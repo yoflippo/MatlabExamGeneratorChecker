@@ -87,6 +87,7 @@ end
 %% Make copy so original file is kept intact
 apCopy = replace(apDes,'.m','_COPY.m');
 copyfile(apDes,apCopy);
+fclose('all');
 
 
 %% Clean up!

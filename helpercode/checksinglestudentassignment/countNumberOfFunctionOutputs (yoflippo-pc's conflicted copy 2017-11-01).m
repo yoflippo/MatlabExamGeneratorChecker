@@ -39,9 +39,8 @@ function num_output = countNumberOfFunctionOutputs(apSol)
 % $Revision: 0.0.0 $  $Date: 2017-10-17 $
 % Creation of this function.
 
-txt = removeCommentsAndEmptyLines([apSol '.m'],'ot');
-% [txt, ~] = readCleanMFile(apSol)
-if sum(contains(txt,'function')) > 0
+txt = removeCommentsAndEmptyLines([apSol '.m',],'ot');
+if sum(contains(txt,'function'))
     [~, lines, ~] = findRegEx(txt,'function');
     tl = extractAfter(txt{lines},'function');
     if contains(tl,'=')
@@ -49,7 +48,7 @@ if sum(contains(txt,'function')) > 0
         if contains(tl,'[')
             tl = extractAfter(tl,'[');
             tl = extractBefore(tl,']');
-             numCommas = length(strfind(tl,','));
+             numCommas = length(strfind(tl,','))
              if isequal(numCommas,0)
              % Extra too many spaces
              tl = regexprep(tl,'(\[)( )+','[');

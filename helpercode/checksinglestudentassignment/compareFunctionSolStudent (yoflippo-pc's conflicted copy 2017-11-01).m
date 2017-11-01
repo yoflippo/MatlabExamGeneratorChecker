@@ -60,7 +60,7 @@ if length(testData) > 1
     else
         num_input = length(testData{1});
     end
-else
+elseif length(testData) == 1
     num_input = 1;
 end
 
@@ -69,7 +69,7 @@ num_output = countNumberOfFunctionOutputs(solution);
 
 %% Perform tests version 2
 for z = 1:length(testData)
-    
+
     tVar = testData(z);
     tVar = tVar{1};
     
@@ -84,11 +84,6 @@ for z = 1:length(testData)
             end
         case '1  1'
             try
-                % Remove the cell -- the cell-type is no part of Biostatica
-                % Matlab and so a test for a cell will never be present
-                if iscell(tVar)
-                    tVar = tVar{1};
-                end
                 if isequal(feval(nmStudentSolution,tVar) , feval(solution,tVar))
                     res = res + 1;
                 end
@@ -97,11 +92,6 @@ for z = 1:length(testData)
             end
         case '2  1'
             try
-                % Remove the cell -- the cell-type is no part of Biostatica
-                % Matlab and so a test for a cell will never be present
-                if iscell(tVar)
-                    tVar = tVar{1};
-                end
                 [oa, ob] = feval(nmStudentSolution,tVar);
                 [oas, obs] = feval(solution,tVar);
                 if isequal(oa,oas)
@@ -115,21 +105,16 @@ for z = 1:length(testData)
             end
         case '3  1'
             try
-                % Remove the cell -- the cell-type is no part of Biostatica
-                % Matlab and so a test for a cell will never be present
-                if iscell(tVar)
-                    tVar = tVar{1};
-                end
                 [oa, ob, oc] = feval(nmStudentSolution,tVar);
                 [oas, obs, ocs] = feval(solution,tVar);
                 if isequal(oa,oas)
                     res = res + 1/num_output;
                 end
                 if isequal(ob,obs)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
                 if isequal(oc,ocs)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
             catch ErrMess
                 procesError(apStudentSol,ErrMess,num_input);
@@ -152,7 +137,7 @@ for z = 1:length(testData)
                     res = res + 1/num_output;
                 end
                 if isequal(ob,obs)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
             catch ErrMess
                 procesError(apStudentSol,ErrMess,num_input);
@@ -165,29 +150,10 @@ for z = 1:length(testData)
                     res = res + 1/num_output;
                 end
                 if isequal(ob,obs)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
                 if isequal(oc,ocs)
-                    res = res + 1/num_output;
-                end
-            catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input);
-            end
-        case '4  2'
-            try
-                [oa, ob, oc,od] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oas, obs, ocs,ods] = feval(solution,tVar{1},tVar{2});
-                if isequal(oa,oas)
-                    res = res + 1/num_output;
-                end
-                if isequal(ob,obs)
-                    res = res + 1/num_output;
-                end
-                if isequal(oc,ocs)
-                    res = res + 1/num_output;
-                end
-                if isequal(od,ods)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
             catch ErrMess
                 procesError(apStudentSol,ErrMess,num_input);
@@ -210,7 +176,7 @@ for z = 1:length(testData)
                     res = res + 1/num_output;
                 end
                 if isequal(ob,obs)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
             catch ErrMess
                 procesError(apStudentSol,ErrMess,num_input);
@@ -223,14 +189,14 @@ for z = 1:length(testData)
                     res = res + 1/num_output;
                 end
                 if isequal(ob,obs)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
                 if isequal(oc,ocs)
-                    res = res + 1/num_output;
+                    res = res + 1/num_ouput;
                 end
             catch ErrMess
                 procesError(apStudentSol,ErrMess,num_input);
-            end
+            end          
         otherwise
     end
 end%for
@@ -241,7 +207,6 @@ end%function
 function procesError(apStudentSol,ErrMess,num_input)
 
 if ~contains(apStudentSol,'versie')
-    keyboard %CHECK IF IT WORKS
     if isequal(num_input,1)
         txterror = ['% Deze code werkt niet met de input: ' num2str(tVar)];
         txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];

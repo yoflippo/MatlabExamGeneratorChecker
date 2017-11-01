@@ -10,7 +10,7 @@ res = 0;
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput = {'XX' 'aaaaaa' '___asdfg'};
+checkingVar.testFunctionInput = {{'XX'} {'aaaaaa'} {'___asdfg'}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.

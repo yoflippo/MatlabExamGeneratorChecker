@@ -74,8 +74,8 @@ try
         'TextType', 'string',  'ReturnOnError', false);
     fclose('all');
     txt = txt{1,1};
-catch
-    error([mfilename ': Could not read the file']);
+catch err
+    error([mfilename ': Could not read the file: ' err.message]);
 end
 
 % Remove comments

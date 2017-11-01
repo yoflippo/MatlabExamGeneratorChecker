@@ -48,11 +48,12 @@ try
     % Delete files
     warning off
     numOfDeleted = length(cfiles);
+    fclose('all');
     for n = 1:numOfDeleted
         apFile2Del = fullfile(cfiles(n).folder,cfiles(n).name);
         delete(apFile2Del);
         if exist(apFile2Del,'file')
-            error([mfilename ', This file should be deleted: ' apFile2Del]);
+            error([newline mfilename ', This file should be deleted: ' apFile2Del]);
         end
     end
     warning on

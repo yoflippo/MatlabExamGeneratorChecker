@@ -8,7 +8,7 @@ function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput.data = {'XXX' 'XXX' 'XXX'};
+checkingVar.testFunctionInput.data = {{'XXX'} {1}};
 % % % % % % % % % % % % % checkingVar.testFunctionInput.DOUBLE_OUTPUT = false;
 % % % % % % % % % % % % % checkingVar.testFunctionInput.DOUBLE_INPUT = false;
 
