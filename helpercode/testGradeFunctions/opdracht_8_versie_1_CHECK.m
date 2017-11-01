@@ -1,21 +1,26 @@
-function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
+function res = opdracht_8_versie_1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-
+% % % % % % function opgeteldeWaarde = opdracht_8[bovenbeen, onderbeen]
+% % % % % % waardeBovenbeen=bovenbeen(end);
+% % % % % % waardeOnderbeen=onderbeen(:,3);
+% % % % % % opgeteldeWaarde= waardeBovenbeen+waardeOnderbeen;
+% % % % % % end
 %%==========
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput.data = {'XXX' 'XXX' 'XXX'};
-% % % % % % % % % % % % % checkingVar.testFunctionInput.DOUBLE_OUTPUT = false;
-% % % % % % % % % % % % % checkingVar.testFunctionInput.DOUBLE_INPUT = false;
-
+checkingVar.testFunctionInput.data = {{round(randn(1,20)*10) round(randn(1,20)*10)} ... 
+    {round(randn(1,20)*10) round(randn(1,20)*10)} ... 
+    };
+checkingVar.testFunctionInput.DOUBLE_OUTPUT = false;
+checkingVar.testFunctionInput.DOUBLE_INPUT = true;
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'XXX' 2 'XXX' 1};
+checkingVar.literalsP = {'bovenbeen(end)' 1 'onderbeen(:,3)' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3};
@@ -23,24 +28,16 @@ checkingVar.literalsA = {'NaN' 3};
 % FOR EXAMPLE:
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
-checkingVar.literalsR = {'X Y' 'Z U'};
+checkingVar.literalsR = {};
 
 % checkingVar below this line can be removed
 % Test for literals and their variants
 % THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
-checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
+checkingVar.literalsO = {};
 % Test for literals and their (reversed) variants
 % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
 % THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
-checkingVar.literalsRO = {{'Y' 'X'}};
-
-checkingVar.testFunctionInput = {'XXX'};
-checkingVar.literalsP = {'XXX' 2 'XXX' 1};
-checkingVar.literalsA = {'NaN' 2};
-checkingVar.literalsR = {};
-checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
-
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

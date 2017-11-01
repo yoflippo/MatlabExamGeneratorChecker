@@ -1,9 +1,9 @@
-%% Vraag 2
+%% Vraag 9
 %
-% Stelling 1:   Met de functie sqrt() kan gekwadrateerd worden.
+% Stelling 1:   Wanneer je bij de functie strcmp() een 0 als antwoord krijgt,
+%				betekend dat hetgeen wat je vergelijkt hetzelfde is.         
 %
-% Stelling 2:   In de volgende code regel heeft de min-operator 
-%				voorrang op de macht-operator: 76 – 6^2.        
+% Stelling 2:   Met een dubbele punt (:) maak je een nieuwe rij aan binnen een matrix.
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

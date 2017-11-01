@@ -80,3 +80,5 @@ delete(apCopy);
 
 %%
 disp([mfilename ': is working']);
+
+%% Error

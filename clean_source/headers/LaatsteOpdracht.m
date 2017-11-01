@@ -2,7 +2,7 @@
 % Hieronder volgt de laatste opdracht.
 %
 % Als jij deze opdracht hebt afgerond, gebruik dan 'AfrondenWeekOpdracht.m'
-% om jouw werk in automatisch in een zip-bestand te zetten.
+% om jouw werk automatisch in een zip-bestand te zetten.
 %
 % Deze laatste opdracht bestaat uit  6  onderdelen.
 %
@@ -16,7 +16,7 @@ Naam = 'Voornaam Achternaam';
 
 %% 3 -   Wat vond je van de moeilijkheidsgraad van deze weekeindoprachten?
 %        Je kunt kiezen uit 1: (gemakkelijk) tot en met 5 (heel erg moeilijk).
-Moeilijkheisgraad = NaN; %getal tussen 1 tot en met 5
+Moeilijkheidsgraad = NaN; %getal tussen 1 tot en met 5
 
 %% 4 -   Wat vond je van de hoeveelheid vragen/opdrachten?
 %        Je kunt kiezen uit 1 (te weinig) tot en met 5 (veel te veel).
@@ -29,7 +29,7 @@ Hoeveelheid = NaN; %getal tussen 1 tot en met 5
 %% 6 -   Je bent klaar, bedankt voor het opschrijven van je mening, 
 %        dat helpt ons het onderwijs beter te maken.
 %        Voer nu 'AfrondenWeekOpdracht.m' uit (openen en uitvoeren) en
-%        lever het automatisch gegeneerde bestand in.\
+%        lever het automatisch gegeneerde bestand in.
 %
 % Einde van de opdrachtsbeschrijving.
 

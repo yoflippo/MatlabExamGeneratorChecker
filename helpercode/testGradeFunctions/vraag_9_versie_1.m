@@ -1,9 +1,9 @@
-%% Vraag 2
+%% Vraag 9
 %
-% Stelling 1:   Een operator voert een handeling uit op één of meerdere
-%				operands.                                              
+% Stelling 1:   Wanneer je bij de functie strcmp() een 0 als antwoord krijgt,
+%				betekend dat hetgeen wat je vergelijkt hetzelfde is.         
 %
-% Stelling 2:   Met de functie sqrt() kan gekwadrateerd worden.
+% Stelling 2:   Met een dubbele punt (:) maak je een nieuwe rij aan binnen een matrix.
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

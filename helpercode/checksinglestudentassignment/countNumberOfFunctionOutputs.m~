@@ -1,6 +1,8 @@
-function nAbs = literalAnswersNotPresent(txtns,literalsA,apStudentSol)
-%LITERALANSWERSNOTPRESENT A helperfunction for the testing the answers of
-%students.
+function [outputArg1,outputArg2] = countNumberOfFunctionOutputs(inputArg1,inputArg2)
+
+
+%COMPARESCRIPTSOLSTUDENT A helperfunction for the testing the answers of
+%students by comparing it to a Solution file.
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2017  M. Schrauwen (markschrauwen@gmail.com)
@@ -37,32 +39,35 @@ function nAbs = literalAnswersNotPresent(txtns,literalsA,apStudentSol)
 % $Revision: 0.0.0 $  $Date: 2017-10-17 $
 % Creation of this function.
 
-%% Check for literal answers, CAN NOT BE PRESENT
-nAbs = 0;
-for nLa = 1:length(literalsA)
-    numTimes = 1;
-    lit = literalsA{nLa};
-    if isstring(lit)  || ischar(lit)
-        lit = lit(lit ~= ' ');% Remove spaces
-        try
-            nPlusOne = literalsA{nLa+1};
-            if isnumeric(nPlusOne)
-                numTimes = nPlusOne;
-            end
-        catch
-        end
-        
-        if findInString(txtns,lit) > 0
-            nAbs = nAbs + numTimes;
+
+
+[txt, ~] = readCleanMFile(apStudentSol)
+if contains(txt,'function')
+    [~, lines, ~] = findRegEx(txt,'function');
+    tl = extractAfter(txt{lines},'function');
+    if contains(tl,'=')
+        tl = extractBefore(tl,'=');
+        if contains(tl,'[')
+            tl = extractAfter(tl,'[');
+            tl = extractBefore(tl,']');
+             numCommas = length(strfind(tl,','))
+             if isequal(numCommas,0)
+             % Extra too many spaces
+             t = regexprep('[  var    var          var  ]','(\[)( )+','[');
+             t = regexprep(t,'( )+(\])',']'); 
+             regexprep(t,'( )+',' ')
+             numSpaces = length(strfind(tl,' '));
+             num_output = numSpaces + 1;
+             else
+                 num_output = numCommas + 1;
+             end
         else
-            % Test for a generated file! Could also be done by testing for Hash
-            if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
-            end
-        end       
-    end   
+            num_output = 1;
+        end
+    end
+else
+    error([mfilename ': ' newline 'The solution file does not contain the keyword: FUNCTION!']);
 end
 
-
-
 end
+
