@@ -1,0 +1,1 @@
+deelpunten = 4;
