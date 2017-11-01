@@ -1,6 +1,6 @@
 function [res] = compareFunctionSolStudent(callerName,testSeries,apStudentSol)
 
-%COMPARESCRIPTSOLSTUDENT A helperfunction for the testing the answers of
+%COMPAREFUNCTIONSOLSTUDENT A helperfunction for the testing the answers of
 %students by comparing it to a Solution file.
 %
 % ------------------------------------------------------------------------
@@ -35,78 +35,191 @@ function [res] = compareFunctionSolStudent(callerName,testSeries,apStudentSol)
 %               res:            The result (value between 0..1)
 
 
-% $Revision: 0.0.0 $  $Date: 2017-10-17 $
+% $Revision: 0.0.0 $  $Date: 2017-10-30 $
 % Creation of this function.
 
 res = 0;
 [~, nmStudentSolution] = fileparts(apStudentSol);
 solution = replace(callerName,'_CHECK','_SOL');
-blDoubleOutput = false;
+
 blStruct = false;
-blDoubleInput = false;
+num_input = 0;
+num_output = 0;
 
 if isstruct(testSeries)
     blStruct = true;
-    blDoubleOutput = testSeries.DOUBLE_OUTPUT;
-    try
-        blDoubleInput = testSeries.DOUBLE_INPUT;
-    catch
-    end
     testData = testSeries.data;
-else
+else % keeping backwards compatibility
     testData = testSeries;
 end
 
-if blDoubleInput && blDoubleOutput
-    error(' NOT IMPLEMENTED YET!!!!!!!!!!')
+%% Test for number of inputs of function by checking testdata
+if length(testData) > 1
+    if ~isequal(length(testData{1}),length(testData{2}))
+        error([mfilename ': ' newline 'The function test inputs of the checkfile are incorrect!']);
+    else
+        num_input = length(testData{1});
+    end
+elseif length(testData) == 1
+    num_input = 1;
 end
 
-%% Perform Tests
+%% Test for number of outputs of assignment by checking the SOLUTION
+num_output = countNumberOfFunctionOutputs(solution);
+
+%% Perform tests version 2
 for z = 1:length(testData)
-    
-    if ~blStruct
-        tVar = testData(z);
-    end
-    
-    if iscell(testData)
-        tVar = testData{z};
-        if iscell(tVar) && ~blDoubleInput
-            tVar = tVar{1};
-        end
-    end
-    
-    try
-        try
-            if blDoubleOutput
-                eval(['[a1,b1] = ' nmStudentSolution '(tVar);']);
-                eval(['[a2,b2] = ' solution '(tVar);']);
-                if (isequal(a1,a2) && isequal(b1,b2)) || (isequal(a1,b2) && isequal(b1,a2))
-                    res = res + 1;
-                end
-            elseif blDoubleInput
-                if isequal(eval([nmStudentSolution '(tVar{1},tVar{2})']) , eval([solution '(tVar{1},tVar{2})']))
-                    res = res + 1;
-                end
-            else
-                if isequal(eval([nmStudentSolution '(tVar)']) , eval([solution '(tVar)']))
-                    res = res + 1;
-                end
-            end
-        catch % Testing single numeric input
-            if isequal(eval([nmStudentSolution '(' tVar ')']) , eval([solution '(' tVar ')']))
-                res = res + 1;
-            end
-        end
-    catch ErrMess
-        if ~contains(apStudentSol,'versie')
-            txterror = ['% Deze code werkt niet met de input: ' num2str(tVar)];
-            txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
-            WriteToLastLineOfFile(apStudentSol,txterror);
-        end
-    end
-end
 
-
+    tVar = testData(z);
+    tVar = tVar{1};
+    
+    switch num2str([num_output num_input])
+        case '1  0'
+            try
+                if isequal(feval(nmStudentSolution) , feval(solution))
+                    res = res + 1;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '1  1'
+            try
+                if isequal(feval(nmStudentSolution,tVar) , feval(solution,tVar))
+                    res = res + 1;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '2  1'
+            try
+                [oa, ob] = feval(nmStudentSolution,tVar);
+                [oas, obs] = feval(solution,tVar);
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+                if isequal(ob,obs)
+                    res = res + 1/num_output;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '3  1'
+            try
+                [oa, ob, oc] = feval(nmStudentSolution,tVar);
+                [oas, obs, ocs] = feval(solution,tVar);
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+                if isequal(ob,obs)
+                    res = res + 1/num_ouput;
+                end
+                if isequal(oc,ocs)
+                    res = res + 1/num_ouput;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '1  2'
+            try
+                [oa] = feval(nmStudentSolution,tVar{1},tVar{2});
+                [oas] = feval(solution,tVar{1},tVar{2});
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '2  2'
+            try
+                [oa, ob] = feval(nmStudentSolution,tVar{1},tVar{2});
+                [oas, obs] = feval(solution,tVar{1},tVar{2});
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+                if isequal(ob,obs)
+                    res = res + 1/num_ouput;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '3  2'
+            try
+                [oa, ob, oc] = feval(nmStudentSolution,tVar{1},tVar{2});
+                [oas, obs, ocs] = feval(solution,tVar{1},tVar{2});
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+                if isequal(ob,obs)
+                    res = res + 1/num_ouput;
+                end
+                if isequal(oc,ocs)
+                    res = res + 1/num_ouput;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '1  3'
+            try
+                [oa] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
+                [oas] = feval(solution,tVar{1},tVar{2},tVar{3});
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '2  3'
+            try
+                [oa, ob] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
+                [oas, obs] = feval(solution,tVar{1},tVar{2},tVar{3});
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+                if isequal(ob,obs)
+                    res = res + 1/num_ouput;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end
+        case '3  3'
+            try
+                [oa, ob, oc] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
+                [oas, obs, ocs] = feval(solution,tVar{1},tVar{2},tVar{3});
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+                if isequal(ob,obs)
+                    res = res + 1/num_ouput;
+                end
+                if isequal(oc,ocs)
+                    res = res + 1/num_ouput;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input);
+            end          
+        otherwise
+    end
+end%for
 
 end%function
 
+
+function procesError(apStudentSol,ErrMess,num_input)
+
+if ~contains(apStudentSol,'versie')
+    if isequal(num_input,1)
+        txterror = ['% Deze code werkt niet met de input: ' num2str(tVar)];
+        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
+        WriteToLastLineOfFile(apStudentSol,txterror);
+    elseif isequal(num_input,2)
+        txterror = ['% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2})];
+        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
+        WriteToLastLineOfFile(apStudentSol,txterror);
+    elseif isequal(num_input,3)
+        txterror = ['% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2}) ' en ' num2str(tVar{3})  ];
+        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
+        WriteToLastLineOfFile(apStudentSol,txterror);
+    end
+end
+
+end %function

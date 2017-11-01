@@ -39,8 +39,8 @@ function num_output = countNumberOfFunctionOutputs(apSol)
 % $Revision: 0.0.0 $  $Date: 2017-10-17 $
 % Creation of this function.
 
-[txt, ~] = readCleanMFile(apSol)
-if contains(txt,'function')
+txt = removeCommentsAndEmptyLines([apSol '.m',],'ot');
+if sum(contains(txt,'function'))
     [~, lines, ~] = findRegEx(txt,'function');
     tl = extractAfter(txt{lines},'function');
     if contains(tl,'=')
