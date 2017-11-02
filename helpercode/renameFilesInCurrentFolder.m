@@ -1,4 +1,3 @@
-
 numOld = 5;
 nameO = ['opdracht_' num2str(numOld)];
 mfiles = dirmf(nameO);

@@ -5,6 +5,7 @@ currPath = pwd;
 typeOfAssFiles = dirmf('Make');
 for i = 1:length(typeOfAssFiles)
     %% Get info about current file
+<<<<<<< HEAD
     pathname = typeOfAssFiles(i).folder;
     cd(pathname)
     checkFiles = dirmf('_SOL');
@@ -17,6 +18,15 @@ for i = 1:length(typeOfAssFiles)
         catch  err
             error([mfilename ': ' err.message newline ]);
         end
+=======
+    fn = checkFiles(i).name;
+    pathname = checkFiles(i).folder;
+    try
+        tic; CheckSolBase(fn,pathname); toc
+        deleteTemporaryFiles();
+    catch  err        
+        error([mfilename ': ' err.message newline ]);
+>>>>>>> origin/master
     end
 end
 
