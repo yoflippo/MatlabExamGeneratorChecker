@@ -14,6 +14,3 @@
 %
 % Maak deze functie aan.
 
-balSnelheid = [78    78    98    68    48    98    78    64    72    46];
-balAfstand =  [6     5     3    10     9     5     6     6     8     4];
-
