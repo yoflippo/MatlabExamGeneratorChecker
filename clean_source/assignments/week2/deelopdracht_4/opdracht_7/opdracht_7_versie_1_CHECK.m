@@ -2,41 +2,28 @@ function res = opdracht_7_versie_1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % 
-% % % % % % % function [totaalElementen, laatsteWaarde] = opdracht_7(vector)
-% % % % % % % totaalElementen = numel(vector)
-% % % % % % % laatsteWaarde = vector(end)
-% % % % % % % end
-
+% % % % % % % % % % % % % function output = opdracht_7(input)
+% % % % % % % % % % % % % 
+% % % % % % % % % % % % % if isequal(input,1)
+% % % % % % % % % % % % %     output = 66:99;
+% % % % % % % % % % % % % elseif isequal(input,0)
+% % % % % % % % % % % % %     output = 55:99;
+% % % % % % % % % % % % % else
+% % % % % % % % % % % % %     output = 0:10;
+% % % % % % % % % % % % % end
+% % % % % % % % % % % % %     
+% % % % % % % % % % % % % end
 %%==========
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput.data = {{round(randn(1,20)*10)} {round(randn(1,20)*10)} ...
-    {round(randn(1,10)*10)} {round(randn(1,20)*10)}};
-checkingVar.testFunctionInput.DOUBLE_OUTPUT = true;
-% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
-% The number to the right of the string designates the number of times the
-% string should be present.
-checkingVar.literalsP = {'numel(vector)' 1 'vector(end)' 1 'vector' 1};
-% FILL literalsA, With strings that should not be present.
-% The numeric directly to the right represents the weight
-checkingVar.literalsA = {'NaN' 3};
-% Reverse literals separated by spaces
-% FOR EXAMPLE:
-% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
-% THE REVERSED CASE:             '10+2' or  '100+vector1'
+checkingVar.testFunctionInput = {1 0 -1 2 55};
+checkingVar.literalsP = {'output' 4 '66:99' 1 '55:99' 1};
+checkingVar.literalsA = {'NaN' 3 'switch' 3};
 checkingVar.literalsR = {};
-
-% checkingVar below this line can be removed
-% Test for literals and their variants
-% THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
 checkingVar.literalsO = {};
-% Test for literals and their (reversed) variants
-% NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
-% THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
-checkingVar.literalsRO = {};
+checkingVar.literalsRO = {{'isequal(input,0)' 'input == 0'} {'isequal(input,1)' 'input == 1'}};
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

@@ -13,7 +13,8 @@ function res = opdracht_6_versie_1_CHECK(apStudentSol)
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput = {{0.5} {1.2} {2} {-0.3} {-0.8}};
+checkingVar.testFunctionInput = {{0.5} {1.2} {2} 
+    {-0.3} {-0.8} {randn(1)}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.

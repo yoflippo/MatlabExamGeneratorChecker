@@ -19,7 +19,7 @@ checkingVar.testFunctionInput.DOUBLE_INPUT = false;
 checkingVar.literalsP = {'XXX' 2 'XXX' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
-checkingVar.literalsA = {'NaN' 3};
+checkingVar.literalsA = {'NaN' 3 'inputvar1 = ' 3};
 % Reverse literals separated by spaces
 % FOR EXAMPLE:
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'

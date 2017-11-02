@@ -1,30 +1,37 @@
 function res = opdracht_1_versie_2_CHECK(apStudentSol)
-
+res = 0;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % %% Opdracht 1
-% % % % % % % % Maak een matrix A aan: A =    2  56   3
-% % % % % % % %                               8  9    23
-% % % % % % % %                               81 7    67
-% % % % % % % % Stop de eerste rijvector van matrix A in een variabele genaamd 'B'. Je
-% % % % % % % % mag geen getallen toekennen aan B. Je moet een Matlab commando gebruiken
-% % % % % % % % om de rijvector van A toe te kennen aan variabele B.
-% % % % % % % 
-% % % % % % % A = [2 56 3; 8 9 23; 81 7 67];
-% % % % % % % B = A(1,:);
+% % % % % % % % varA = 1;
+% % % % % % % % varB = 0;
+% % % % % % % % resultaat = varA & varB;
+% % % % % % % % % Ook goed resultaat = varA && varB;
 %%==========
 
-
 %% FILL string cells below to test, if you are not using them, make them empty!
-
-% Variables that should be present in file and that should be compared to
-% the SOLUTION:
-checkingVar.nameVars = {'A' 'B'};
-checkingVar.literalsP = {'B = A(1,:);' 1 'A(1' 1};
-checkingVar.literalsA = {'NaN' 'A(:,1)' 2};
+% Variables that should be present in file
+checkingVar.nameVars = {'resultaat'};
+% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
+% The number to the right of the string designates the number of times the
+% string should be present.
+checkingVar.literalsP = {'varA' 2 'varB' 2};
+% FILL literalsA, With strings that should not be present.
+checkingVar.literalsA = {'resultaat = NaN'};
+% Reverse literals separated by spaces
+% FOR EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {};
+
+% checkingVar below this line can be removed
+% Test for literals and their variants
+% THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
 checkingVar.literalsO = {};
-checkingVar.literalsRO = {};
+% Test for literals and their (reversed) variants
+% NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
+% THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
+checkingVar.literalsRO = {{'varA & varB' 'varA && varB'}};
+
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and

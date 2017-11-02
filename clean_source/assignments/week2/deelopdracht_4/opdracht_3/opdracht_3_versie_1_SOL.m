@@ -1,7 +1,8 @@
 %% Opdracht 3
-% Maak de volgende variabelen aan:  versnelling = [].
-% Laat met een bestaande functie zien, dat deze variabele leeg is. 
+% Een student wil testen of de lengte van persoon A hoger is dan de lengte
+% van persoon B. De variabele result krijgt het resultaat van deze
+% relationele test. Hieronder staan al wat door ons verzorgde variabelen:
 
-versnelling = [];
-isempty(versnelling);
-
+lengteA = 180;
+lengteB = 190;
+result = lengteA > lengteB; % Hier komt een test m.b.v. een relationele operator

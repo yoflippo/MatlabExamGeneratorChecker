@@ -1,17 +1,35 @@
 %% Opdracht 5
-% Je wilt weten wanneer een auto een snelheid heeft langzamer dan 50km/h. 
+% Maak een functie met de naam opdracht_5.
+% De functie heeft twee inputs genaamd: AA en B.
+% De functie heeft twee outputs genaamd: CC en D.
 %
-% Dit zijn de gemeten snelheden (1 rij- of kolomvector):
-% 30    33    54    58     8    13    26     4    37    24
-% 13    15    64    48    33
+% M.b.v. de functie strlength() kun je de lengte van een string opvragen.
+% Als de lengte van de string in input AA groter is dan 8 moet de
+% string aan CC worden meegegeven. In elk ander geval wordt "CC = '';" (een
+% lege string).
+% Als de lengte van de string in input B kleiner is dan 8 moet de
+% string aan D worden meegegeven. In elk ander geval wordt "D = '';" (een
+% lege string).
 %
-% Stop de snelheden in een variabele genaamd: 'snelheidAuto'.
+% Voorbeeld aanroep:
+%                   [AA b] = opdracht_5_versie_1_SOL('abcdeabcdea','abc') 
+% geeft als output:
+%                   AA = 'abcdeabcdea'
+%                   b = 'abc'
 %
-% Gebruik hiertoe een functie die alle indices opvraagt van waardes 
-% lager dan 50 km/h.
-% Stop de gevonden indices in een variabele genaamd 'indSnelheden'.
 
-snelheidAuto = [30    33    54    58     8    13    26     4    37    24  13    15    64    48    33];
-indSnelheden = find(snelheidAuto<50);
+function [CC, D] = opdracht_5(AA,B)
+   
+if strlength(AA) > 8
+    CC = AA;
+else
+    CC = '';
+end
 
+if strlength(B) < 8
+    D = B;
+else
+    D = '';
+end
 
+end

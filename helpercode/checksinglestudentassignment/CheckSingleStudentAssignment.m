@@ -88,7 +88,7 @@ for i = 1:length(mfilesWithHash)
     if ~isempty(mfilesWithHash{i})
         try
             % Get the check file for this assignment
-            AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
+            AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i})
             % % %         [apSOL, nmSOL, eSOL] = fileparts(AbsPathSOLScript);
             
             % Save it in a variable used by the solution

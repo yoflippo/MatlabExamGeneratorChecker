@@ -1,14 +1,19 @@
 %% Opdracht 5
-% Je wilt weten wanneer een bergbeklimmer hoger is dan 311 meter. 
-% Je hebt om de 10 minuten gemeten hoe hoog hij zit.
+% Maak een functie met de naam opdracht_5.
+% De functie heeft twee inputs genaamd: A en B.
+% De functie heeft twee outputs genaamd: C en D.
 %
-% Gebruik een functie die alle indices vind van de getallen groter dan 311. 
-% De data moet in de een variabele genaamd 'hoogteBergbeklimmer' staan.
+% M.b.v. de functie strlength() kun je de lengte van een string opvragen.
+% Als de lengte van de string in input A groter is dan 10 moet de
+% string aan C worden meegegeven. In elk ander geval wordt "C = '';" (een
+% lege string).
+% Als de lengte van de string in input B kleiner is dan 10 moet de
+% string aan D worden meegegeven. In elk ander geval wordt "D = '';" (een
+% lege string).
 %
-% Dit zijn de waardes van de variabele 'hoogteBergbeklimmer' : 
-% 301   303   305   313   323   306   311   320   320 319   320   320
-% 310   317   314   309   319   316   320   314
+% Voorbeeld aanroep:
+%                   [a b] = opdracht_5_versie_1_SOL('abcdeabcdea','abc') 
+% geeft als output:
+%                   a = 'abcdeabcdea'
+%                   b = 'abc'
 %
-% De gevonden indices stop je in een variabele genaamd 'tijdstippen'.
-
-

@@ -2,34 +2,53 @@ function res = opdracht_5_versie_1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % hoogteBergbeklimmer = [301   303   305   313   323   306   311   320   320 319   320   320   310   317   314   309   319   316   320   314];
-% % % tijdstippen = find(hoogteBergbeklimmer > 311);
+% % % % % % % % % % % function [C, D] = opdracht_5(A,B)
+% % % % % % % % % % %    
+% % % % % % % % % % % if strlength(A) > 10
+% % % % % % % % % % %     C = A;
+% % % % % % % % % % % else
+% % % % % % % % % % %     C = '';
+% % % % % % % % % % % end
+% % % % % % % % % % % 
+% % % % % % % % % % % if strlength(B) < 10
+% % % % % % % % % % %     D = B;
+% % % % % % % % % % % else
+% % % % % % % % % % %     D = '';
+% % % % % % % % % % % end
+% % % % % % % % % % % 
+% % % % % % % % % % % end
 %%==========
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
-
-checkingVar.nameVars = {'hoogteBergbeklimmer' 'tijdstippen'};
-checkingVar.literalsP = {'find(hoogteBergbeklimmer >' 1 '> 311' 1};
-checkingVar.literalsA = {'NaN'};
+% Variables that should be present in file
+checkingVar.testFunctionInput = {{'XaX','XaX'} {'XXXXXYYYYYZ','XXXXXYYYYYZ'}  {'XXXXXYYYYY','XXXXXYYYaaYYZ'}};
+% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
+% The number to the right of the string designates the number of times the
+% string should be present.
+checkingVar.literalsP = {'strlength(A)' 1 'strlength(B)' 1 'D = B' 1 'C = A' 1 'B' 3 'D' 3};
+% FILL literalsA, With strings that should not be present.
+% The numeric directly to the right represents the weight
+checkingVar.literalsA = {'NaN' 3};
+% Reverse literals separated by spaces
+% FOR EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'strlength(B) < 10' '10 > strlength(B)'} {'strlength(A) > 10' '10 < strlength(A)'}};
 checkingVar.literalsRO = {};
 
+
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
-% 1- Variables with specific values and
-% 2- Literals that should be present and
-% 3- Lterals that should be abscent
+% 1- Literals that should be present and
+% 2- Lterals that should be abscent
 % You should take cornercases in to consideration as well. So add those
 % tests as well.
 
 
-% If the used tests above are not sufficient... design your own... you
-% lazy cunt
-
 
 %% Commence the TESTING !!!
 res = 0;
-res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
+res = runChecksOnFunctionAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function

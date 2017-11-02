@@ -8,8 +8,10 @@
 % De output is de afgetrekte waarde van het laatste element van de vector
 % bovenbeen en het tweede element van de vector onderbeen.
 
-function afgetrekteWaarde = optellen(bovenbeen, onderbeen)
+function afgetrekteWaarde = opdracht_8(bovenbeen, onderbeen)
+
 waardeBovenbeen=bovenbeen(end);
 waardeOnderbeen=onderbeen(:,2);
 afgetrekteWaarde= waardeBovenbeen-waardeOnderbeen;
+
 end

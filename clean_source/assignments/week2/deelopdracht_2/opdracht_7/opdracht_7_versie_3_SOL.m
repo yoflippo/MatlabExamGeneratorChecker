@@ -8,7 +8,9 @@
 % teruggeven.
 
 function [aantalRijen, aantalKolommen] = opdracht_7(data)
-grootte=size(data);
-aantalRijen=grootte(1);
-aantalKolommen= grootte(2);
+
+grootte = size(data);
+aantalRijen = grootte(1);
+aantalKolommen = grootte(2);
+
 end

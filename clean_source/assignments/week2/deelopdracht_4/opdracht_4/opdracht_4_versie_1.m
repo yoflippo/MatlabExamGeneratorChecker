@@ -1,8 +1,18 @@
 %% Opdracht 4
-% Maak een string aan met de naam  S1 en als waarde soleus
-% en een string met de naam S2 met als waarde quadriceps. 
+% Maak een function genaamd opdracht_4.
+% In deze opdracht maak je enkel gebruik van operatoren en een
+% if-statement (geen else-statement).
 %
-% Laat met een bestaande functie zien, dat ze *niet* het zelfde zijn.
-% Stop de output van deze bestaande functie in de variabele 'vgl'
-
-
+% Geef deze functie de volgende inputs:
+% Gastronemicus, RectusFemoris, Brachialis
+%
+% Als de Gastronemicus ongelijk is aan 0 of 1 moet de output van de functie
+% altijd -1 zijn.
+% In elk ander geval moet je de waardes in RectusFemoris en Brachialis bij
+% elkaar optellen.
+%
+% Voorbeelden:
+% 1- opdracht_4(1,2,3)  geeft terug: -1
+% 2- opdracht_4(2,2,3)  geeft terug:  5
+% 3- opdracht_4(2,-1,1) geeft terug:  0
+%

@@ -5,6 +5,8 @@
 % de input en de waarde van het laatste element van de input.
 
 function [totaalElementen, laatsteWaarde] = opdracht_7(vector)
+
 totaalElementen = numel(vector);
 laatsteWaarde = vector(end);
+
 end

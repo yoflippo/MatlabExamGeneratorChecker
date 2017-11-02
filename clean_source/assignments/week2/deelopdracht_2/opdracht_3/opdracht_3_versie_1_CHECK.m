@@ -2,13 +2,9 @@ function res = opdracht_3_versie_1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % %% Opdracht 3
-% % % % % % % % Maak de volgende variabelen aan:  versnelling=[].
-% % % % % % % % Laat met een bestaande functie zien dat deze variabele leeg is. 
-% % % % % % % 
-% % % % % % % versnelling = [];
-% % % % % % % isempty(versnelling);
-% % % % % % % 
+
+% % % versnelling = [];
+% % % isempty(versnelling);
 
 %%==========
 

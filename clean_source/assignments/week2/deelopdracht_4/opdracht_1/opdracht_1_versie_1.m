@@ -1,7 +1,8 @@
 %% Opdracht 1
-% Maak een matrix A aan: A =    2  56   3
-%                               8  9    23
-%                               81 7    67
-% Stop de eerste kolomvector van matrix A in een variabele genaamd 'B'. Je
-% mag geen getallen toekennen aan B. Je moet een Matlab commando gebruiken
-% om de kolomvector van A toe te kennen aan variabele B.
+% Gebruik de OR-operator en alle hieronder geschreven variabelen.
+% De OR-operands zijn: varA en varB. Het resultaat van de OR-operator moet
+% in de variabele 'resultaat' komen.
+
+varA = 1;
+varB = 0;
+resultaat = NaN;

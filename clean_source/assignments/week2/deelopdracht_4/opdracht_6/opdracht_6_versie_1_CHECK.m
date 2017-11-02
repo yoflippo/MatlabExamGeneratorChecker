@@ -2,48 +2,48 @@ function res = opdracht_6_versie_1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % % function [cosHoek, sinHoek] = opdracht_6(hoek)
-% % % % % % % % 
-% % % % % % % % cosHoek = cos(hoek);
-% % % % % % % % sinHoek = sin(hoek);
-% % % % % % % % 
-% % % % % % % % end
+% % % % % % % % % % % % % function outputvar = opdracht_6(inputvar)
+% % % % % % % % % % % % % 
+% % % % % % % % % % % % % switch inputvar
+% % % % % % % % % % % % %     case 1
+% % % % % % % % % % % % %         outputvar = 'een';
+% % % % % % % % % % % % %     case 2
+% % % % % % % % % % % % %         outputvar = 'twee';
+% % % % % % % % % % % % %     case 4 %Merk op dat volgorde er bij een switch-statement niet toe doet.
+% % % % % % % % % % % % %         outputvar = 'vier';
+% % % % % % % % % % % % %     case 3
+% % % % % % % % % % % % %         outputvar = 'drie';
+% % % % % % % % % % % % %     case 5
+% % % % % % % % % % % % %         outputvar = 'vijf';
+% % % % % % % % % % % % %     otherwise
+% % % % % % % % % % % % % end
+% % % % % % % % % % % % % 
+% % % % % % % % % % % % % end
 %%==========
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
-% Variables that should be present in file
-checkingVar.testFunctionInput = {{0.5} {1.2} {2} 
-    {-0.3} {-0.8} {randn(1)}};
-% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
-% The number to the right of the string designates the number of times the
-% string should be present.
-checkingVar.literalsP = {'hoek' 3 '= cos(hoek)' 1 '= sin(hoek)' 1};
-% FILL literalsA, With strings that should not be present.
-% The numeric directly to the right represents the weight
-checkingVar.literalsA = {'NaN' 3};
-% Reverse literals separated by spaces
-% FOR EXAMPLE:
-% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
-% THE REVERSED CASE:             '10+2' or  '100+vector1'
-checkingVar.literalsR = {};
 
-% checkingVar below this line can be removed
-% Test for literals and their variants
-% THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
+% Variables that should be present in file and that should be compared to
+% the SOLUTION:
+checkingVar.testFunctionInput = {1 2 3 4 5 6 7};
+checkingVar.literalsP = {'case' 5 'switch' 1 'outputvar' 5};
+checkingVar.literalsA = {'NaN' 'if' 2 'else' 2 'zes' 1 };
+checkingVar.literalsR = {};
 checkingVar.literalsO = {};
-% Test for literals and their (reversed) variants
-% NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
-% THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
 checkingVar.literalsRO = {};
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
-% 1- Literals that should be present and
-% 2- Lterals that should be abscent
+% 1- Variables with specific values and
+% 2- Literals that should be present and
+% 3- Lterals that should be abscent
 % You should take cornercases in to consideration as well. So add those
 % tests as well.
 
+
+% If the used tests above are not sufficient... design your own... you
+% lazy cunt
 
 
 %% Commence the TESTING !!!

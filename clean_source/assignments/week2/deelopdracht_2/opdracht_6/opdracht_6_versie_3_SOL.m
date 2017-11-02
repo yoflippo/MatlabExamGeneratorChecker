@@ -6,6 +6,8 @@
 % input terug geeft.
 
 function [gemiddelde, mediaan]= opdracht_6(balSnelheid)
+
 gemiddelde = mean(balSnelheid);
 mediaan = median(balSnelheid);
+
 end

@@ -11,7 +11,7 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-thisWeek = 'week1'
+thisWeek = 'week2'
 cd('submitted');
 cd(thisWeek);
 

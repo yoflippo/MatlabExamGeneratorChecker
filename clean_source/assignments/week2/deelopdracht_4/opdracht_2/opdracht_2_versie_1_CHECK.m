@@ -1,17 +1,25 @@
 function res = opdracht_2_versie_1_CHECK(apStudentSol)
-
+res = 0;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % % positie = [0 0.1 0.2 0.3 0.3 0.25 0.3 0.25 0.2 0.2 0.1 0.05 0];
-% % % % % % % % laatsteElement = positie(end);
+% % % % Een student heeft de volgende logische operatoren gebruikt, maar er gaat
+% % % % iets fout. Pas het programma aan.
+% % % 
+% % % vectorA = [1 2 3];
+% % % vectorB = [3 2 1];
+% % % result = vectorA | vectorB
 %%==========
 
+%% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
+% SHOULD CHANGE!
+nameVars = {'vectorA' 'vectorB' 'result'};
+% FILL literalsA, With strings that should not be present.
+literalsA = {'NaN' '||'};
 
-%% FILL string cells below to test, if you are not using them, make them empty!
 
-checkingVar.nameVars = {'laatsteElement' 'snelheid'};
-checkingVar.literalsP = {'snelheid(end)' 1 'snelheid(' 1};
-checkingVar.literalsA = {'NaN' 'snelheid(13)' 2};
+checkingVar.nameVars = nameVars;
+checkingVar.literalsP = {};
+checkingVar.literalsA = literalsA;
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
@@ -24,12 +32,9 @@ checkingVar.literalsRO = {};
 % tests as well.
 
 
-% If the used tests above are not sufficient... design your own... you
-% lazy cunt
 
 
 %% Commence the TESTING !!!
-res = 0;
 res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function

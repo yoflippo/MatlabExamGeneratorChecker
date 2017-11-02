@@ -5,6 +5,8 @@
 % en het aantal elementen van die matrix.
 
 function [grootte, aantalElementen] = opdracht_7(M)
+
 grootte = size(M);
 aantalElementen = numel(M);
+
 end

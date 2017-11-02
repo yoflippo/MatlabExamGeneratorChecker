@@ -54,15 +54,38 @@ for nLa = 1:length(literalsA)
         
         if findInString(txtns,lit) > 0
             nAbs = nAbs + numTimes;
-        else
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
                 WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
-            end
-        end       
-    end   
+            end      
+        end
+    end
 end
 
+%% Check if function and test for assignmnents to inputs
+if contains(txtns{1},'function')
+    %% Get the function input
+    fline = txtns{1};
+    ln = extractAfter(fline,'(');
+    ln = extractBefore(ln,')');
+    inputs = split(ln,',');
+    
+    %% Check for inputparameter assignment
+    for nI = 1:length(inputs)
+        toFind = [inputs{nI} '='];
+        toFindNot = [toFind '='];
+        if findInString(txtns,toFind) > 0 && findInString(txtns,toFindNot) == 0
+            nAbs = nAbs + numTimes;
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                errTxt = ['% Je mag in een functie NIET schrijven naar de inputvariabelen: ' toFind];
+                WriteToLastLineOfFile(apStudentSol,errTxt);
+            end      
+        end
+        
+    end
+    
+end
 
 
 end

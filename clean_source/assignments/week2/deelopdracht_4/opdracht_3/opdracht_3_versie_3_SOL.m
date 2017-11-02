@@ -1,7 +1,9 @@
 %% Opdracht 3
-% Maak de volgende variabelen aan:  GPSdata = [].
-% Laat met een bestaande functie zien dat deze variabele leeg is. 
+% Een student wil testen of persoon B even groot is als persoon A. 
+% De variabele 'result' krijgt het resultaat van deze
+% relationele test. Hieronder staan al wat door ons verzorgde variabelen:
 
-GPSdata = [];
-isempty(GPSdata);
-
+lengteA = 200;
+lengteB = 190;
+result = lengteB == lengteA; % Hier komt een test m.b.v. een relationele operator
+% ook goed isequal(lengteB,lengteA)

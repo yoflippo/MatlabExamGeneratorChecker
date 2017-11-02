@@ -1,4 +1,4 @@
-function res = opdracht_3_versie_1_CHECK(apStudentSol)
+function res = opdracht_3_versie_2_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE

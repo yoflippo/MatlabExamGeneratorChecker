@@ -1,25 +1,25 @@
 function res = opdracht_3_versie_1_CHECK(apStudentSol)
-
+res = 0;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-
-% % % versnelling = [];
-% % % isempty(versnelling);
-
+% % % % % % lengteA = 180;
+% % % % % % lengteB = 190;
+% % % % % % result = lengteA > lengteB; % Hier komt een test m.b.v. een relationele operator
 %%==========
 
+%% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
+% SHOULD CHANGE!
+nameVars = {'result'};
+% FILL literalsA, With strings that should not be present.
+literalsA = {'NaN'};
 
-%% FILL string cells below to test, if you are not using them, make them empty!
 
-% Variables that should be present in file and that should be compared to
-% the SOLUTION:
-checkingVar.nameVars = {'versnelling'};
-checkingVar.literalsP = {'isempty(versnelling)' 1 'versnelling = []' 1};
-checkingVar.literalsA = {'NaN'};
+checkingVar.nameVars = nameVars;
+checkingVar.literalsP = {};
+checkingVar.literalsA = literalsA;
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'lengteA > lengteB' 'lengteB < lengteA'} };
 checkingVar.literalsRO = {};
-
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and
@@ -29,12 +29,9 @@ checkingVar.literalsRO = {};
 % tests as well.
 
 
-% If the used tests above are not sufficient... design your own... you
-% lazy cunt
 
 
 %% Commence the TESTING !!!
-res = 0;
 res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function
