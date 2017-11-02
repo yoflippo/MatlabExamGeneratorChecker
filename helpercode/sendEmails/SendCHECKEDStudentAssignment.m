@@ -16,8 +16,6 @@ cd('submitted');
 cd(thisWeek);
 
 %% Message for student
-chr = 'Chadier, dit is de opnieuw nagekeken versie.';
-% chr = [chr newline 'Beste student,'];
 chr = 'Beste student,';
 chr = [chr newline newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw nagekeken eindopdracht'];
@@ -26,6 +24,7 @@ chr = [chr newline];
 chr = [chr newline 'In het zip-bestand zit een m-file met de naam: "JouwCijfer.m".'];
 chr = [chr newline 'Als een vraag/opdracht niet 100% correct is, wordt de uitwerking'];
 chr = [chr newline 'er bij gegeven. Zo kun je leren van je fouten.'];
+chr = [chr newline newline 'Onderaan jouw uitwerking staat extra informatie over wat er fout is gegaan.']
 chr = [chr newline];
 chr = [chr newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
 chr = [chr newline 'Mark Schrauwen in RZ 2.17.1. '];
@@ -42,7 +41,7 @@ for nZ = 1:length(zips)
         sEma = [sNum '@student.hhs.nl'];
         sAtt = fullfile(pwd,zips(nZ).name);
         sendmail(sEma,...
-            'Biostatica Matlab: nagekeken eindopdracht week 1',chr,sAtt);
+            'Biostatica Matlab: nagekeken eindopdracht week 2',chr,sAtt);
         nSendMails = nSendMails + 1;
     end
 end

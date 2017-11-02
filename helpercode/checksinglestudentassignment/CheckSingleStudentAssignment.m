@@ -88,7 +88,7 @@ for i = 1:length(mfilesWithHash)
     if ~isempty(mfilesWithHash{i})
         try
             % Get the check file for this assignment
-            AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i})
+            AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
             % % %         [apSOL, nmSOL, eSOL] = fileparts(AbsPathSOLScript);
             
             % Save it in a variable used by the solution
@@ -136,12 +136,12 @@ for i = 1:length(mfilesWithHash)
                 % Copy the solution file
                 answerFile = [nmSTUScript '_UITWERKING.m'];
                 copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));
-                txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+                txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(round(percStudent)) '% goed gemaakt.' newline];
                 txtResultStud{2} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
                 txtResultStud{3} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
                 WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
             else
-                txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(percStudent) '% goed gemaakt.'];
+                txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(round(percStudent)) '% goed gemaakt.'];
                 WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
             end
         catch something
@@ -152,7 +152,7 @@ for i = 1:length(mfilesWithHash)
             edit(nmCHE)
             % Message with error, so student can learn from mistake
             txtResultStud{1} = ' ';
-            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.'];
+            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.' newline];
             txtResultStud{3} = '% Tijdens het uitvoeren trad er een fout op, met deze melding:';
             txtResultStud{4} = ['% ' something.message];
             WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);

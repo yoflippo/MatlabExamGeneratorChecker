@@ -1,4 +1,4 @@
-In de Command Window wordt de 'Kort' afgedrukt:
+In de Command Window wordt het woord 'Kort' afgedrukt:
 
 ======= Code =======
 

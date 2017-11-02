@@ -26,3 +26,4 @@ function output = opdracht_4(Gastronemicus, RectusFemoris, Brachialis)
     end
 
 end
+

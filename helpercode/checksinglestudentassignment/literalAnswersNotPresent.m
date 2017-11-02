@@ -78,7 +78,7 @@ if contains(txtns{1},'function')
             nAbs = nAbs + numTimes;
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
-                errTxt = ['% Je mag in een functie NIET schrijven naar de inputvariabelen: ' toFind];
+                errTxt = ['% Je mag niet schrijven naar een inputvariabele: ' toFind];
                 WriteToLastLineOfFile(apStudentSol,errTxt);
             end      
         end
