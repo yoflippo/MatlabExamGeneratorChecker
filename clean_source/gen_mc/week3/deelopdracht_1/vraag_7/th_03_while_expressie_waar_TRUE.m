@@ -1,0 +1,1 @@
+De while-lus herhaalt zichzelf als de expressie true is.
