@@ -46,7 +46,7 @@ try
 catch ErrMess
     keyboard
     open(replace(callerName,'_CHECK','_SOL'));
-    error([mfilename ': SERIEUS PROBLEM WITH SOL FILE ' ErrMess.message]);
+    error([mfilename ': SERIOUS PROBLEM WITH SOL FILE ' ErrMess.message]);
     return;
 end
 

@@ -46,7 +46,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Run the SOL file and the Student-solution and compare the used variables for their values
     try
         [res, txtns] = compareScriptSolStudent(callerName,checkingVar.nameVars,apCleaned,apStudentSol);
-    catch
+    catch err
         deleteTemporaryFiles();
         return;
     end

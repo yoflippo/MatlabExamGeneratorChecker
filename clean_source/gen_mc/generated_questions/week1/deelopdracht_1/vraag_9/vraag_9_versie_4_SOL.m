@@ -1,6 +1,6 @@
 %% Vraag 9
 %
-% Stelling 1:   In de volgende code wordt alleen bij één element
+% Stelling 1:   In de volgende code wordt alleen bij ï¿½ï¿½n element
 %				van de vector de waarde 99 opgeteld:            
 %				                                                
 %				------------code--------------                  

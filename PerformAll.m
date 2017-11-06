@@ -3,7 +3,7 @@ clear all;
 
 dbstop if error
 global gWeekNames;
-Weeks = 1:2;  % Adjust me!!!
+Weeks = 1:3;  % Adjust me!!!
 for nW = Weeks
     gWeekNames{1,nW} = ['week' num2str(nW)]; 
 end

@@ -56,9 +56,12 @@ try
         return;
     end
     
-    lines = find(~cellfun(@isempty,fndStrings));
-    if ~isempty(lines)
-        txtIndex = [fndStrings{lines}];
+    try
+        lines = find(~cellfun(@isempty,fndStrings));
+        if ~isempty(lines)
+            txtIndex = [fndStrings{lines}];
+        end
+    catch
     end
     
     %% Count the number of occurences

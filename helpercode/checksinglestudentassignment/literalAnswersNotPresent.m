@@ -43,7 +43,10 @@ for nLa = 1:length(literalsA)
     numTimes = 1;
     lit = literalsA{nLa};
     if isstring(lit)  || ischar(lit)
+        litR = lit;
         lit = lit(lit ~= ' ');% Remove spaces
+        litR = reverseSpaceSeparatedString(litR);
+        litR = litR(litR ~= ' ');
         try
             nPlusOne = literalsA{nLa+1};
             if isnumeric(nPlusOne)
@@ -52,7 +55,7 @@ for nLa = 1:length(literalsA)
         catch
         end
         
-        if findInString(txtns,lit) > 0
+        if findInString(txtns,lit) > 0 || findInString(txtns,litR) > 0
             nAbs = nAbs + numTimes;
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
