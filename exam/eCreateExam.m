@@ -6,7 +6,7 @@
 clear all
 nOfMulChoiceAssignment = 30;
 nOfScriptsFunctions = 20;
-weekNames = {'week1' 'week2'}; % fill with the other weeks
+weekNames = {'week1' 'week2' 'week3'}; % fill with the other weeks
 
 %% Go to path of this file
 mfilename('fullpath')
@@ -94,6 +94,9 @@ copyfile(ap.CurrZipFile,ap.Submitted);
 
 % NOTE: IETS DOEN AAN MOGELIJK VALSPELEN DOORDAT STUDENTEN KOPIEEN TOEVOEGEN
 % OPLOSSING, 
+
+%% Create testing files for a few students
+generateTestExams(ap.CurrExam);
 
 
 %% Finally, Clean up
