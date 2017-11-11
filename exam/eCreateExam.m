@@ -101,7 +101,7 @@ removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams'),ap.Submitted);
 
 %% Check test exams
-addpath(genpath(ap.Assignments));
+
 cd(ap.Submitted);
 checkSubmittedExams(sAssigned);
 
@@ -113,4 +113,5 @@ fclose('all');
 rmpath(genpath(ap.BASEFOLDEREX));
 rmpath(genpath(ap.HELPERCODE));
 rmpath(genpath(ap.CurrExam));
+rmpath(genpath(ap.Assignments));
 warning on

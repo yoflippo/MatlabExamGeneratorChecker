@@ -6,14 +6,15 @@ for nS = 1:length(examInfo)
     apSOL = examInfo(nS).apSOL;
     
     apCHECK = replace(apSOL,'_SOL','_CHECK');
-    [~,nameCheckFunction] = fileparts(apCHECK)
+    [path,nameCheckFunction] = fileparts(apCHECK);
+    addpath(genpath(path));
     res = feval(nameCheckFunction,apSOL);
-    if res>0
+    if res==0
         open(apSOL)
         keyboard
-        HIER GAAT NOG IETS FOUT
     end
-    resT = res + resT;
+    resT = res + resT; MAAL AANTAL PUNTEN
+    rmpath(genpath(path));
 end
 
 grade = 1 + ((res*9)/points);
