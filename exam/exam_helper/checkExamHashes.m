@@ -17,7 +17,7 @@ function checkExamHashes()
     
     %% Find non-unique files and remove them
     [~,ia,ic] = unique(HashCodes,'first');
-    nonunique = setdiff(ic,ia)
+    nonunique = setdiff(ic,ia);
     for nu = 1:length(nonunique)
         nonun_file = AbsPathHashCodes(nonunique(nu));
         nonun_file = nonun_file{1};

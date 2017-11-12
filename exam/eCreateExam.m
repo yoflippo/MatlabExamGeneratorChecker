@@ -97,14 +97,27 @@ copyfile(ap.CurrZipFile,ap.Submitted);
 
 %% Create testing files for a few students
 generateTestExams(ap.CurrExam);
+
+
+%% Check test exams without solutions
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams'),ap.Submitted);
-
-%% Check test exams
-
 cd(ap.Submitted);
-checkSubmittedExams(sAssigned);
+grades = checkSubmittedExams(sAssigned);
+if mean(grades(:,2)) > 1
+    error('The exam grade should be 1')
+end
+cd ..
 
+%% Check test exams WITH solutions
+removeShitFromDir(ap.Submitted)
+copyfiles(fullfile('Test_Exams','exams_SOL'),ap.Submitted);
+cd(ap.Submitted);
+grades = checkSubmittedExams(sAssigned);
+if mean(grades(:,2)) < 10
+    error('The exam grade should be a TEN!!')
+end
+cd ..
 
 %% Finally, Clean up
 disp('Finally, Clean up');
