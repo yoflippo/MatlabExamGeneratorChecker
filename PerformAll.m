@@ -14,7 +14,7 @@ addpath(genpath('helpercode'));
 InitAll
 
 %% Fill in week to test
-weekToCorrect = 2;
+weekToCorrect = 1;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
 
@@ -67,6 +67,25 @@ catch err
 end
 toc
 
+%% TEST if all INcorrect solutions files pass
+disp('Copy certain testfiles to directory submitted');
+cd(con.BASEFOLDER)
+tic
+apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
+apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,weekName);
+removeShitFromDir(apFinDes);
+copyfiles(apTestFiles,apFinDes);
+disp('Execute check assignments');
+try
+    if ~isequal(cCheckStudentSubmissions(weekToCorrect),1)
+        error('The average grade is not equal to 1');
+    end
+catch err
+    error([mfilename ', did not work properly: ' err.message]);
+end
+toc
+
+
 %% TEST if all correct solutions files pass
 cd(con.BASEFOLDER)
 disp(weekName);
@@ -87,27 +106,9 @@ toc
 cd(con.BASEFOLDER)
 
 
-%% TEST if all INcorrect solutions files pass
-disp('Copy certain testfiles to directory submitted');
-cd(con.BASEFOLDER)
-tic
-apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
-apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,weekName);
-removeShitFromDir(apFinDes);
-copyfiles(apTestFiles,apFinDes);
-disp('Execute check assignments');
-try
-    if ~isequal(cCheckStudentSubmissions(weekToCorrect),1)
-        error('The average grade is not equal to 1');
-    end
-catch err
-    error([mfilename ', did not work properly: ' err.message]);
-end
-toc
+%% Backup if all is working
 datetime
 diary off
-
-%% Backup if all is working
 disp('Making a backup');
 buAll
 return;

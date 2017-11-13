@@ -54,6 +54,7 @@ debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. 
 
 % Find studentnumbers
 load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT))
+
 % Remove directories from folder, they contain unzipped files and they are
 % unusable because you are running this script
 apSubmitted = fullfile(pwd,subWkFolder);
@@ -252,6 +253,7 @@ warning on
 
 strTrackStudent = cellstr(trackStudentAssignment);
 studentMatrix = ones(length(strTrackStudent(:,1)),2);
+cnt = 1;
 for sn = 1:length(strTrackStudent(:,1))
     studentFolder = trackStudentAssignment{sn,1}
     if exist(studentFolder,'dir')
@@ -262,6 +264,8 @@ for sn = 1:length(strTrackStudent(:,1))
         grade = ((points/PointsToBeEarned)*9)+1;
         studentMatrix(sn,1) = str2double(studentFolder);
         studentMatrix(sn,2) = round(grade,1);
+        checkedStudent(cnt) = studentMatrix(sn,2);
+        cnt = cnt + 1;
         % Give the student a grade, first make some text
         cCheck_GradeText;
         makeMFileFromCells(fullfile(apSubmitted,studentFolder,'JouwCijfer'),t);
@@ -277,12 +281,13 @@ for sn = 1:length(strTrackStudent(:,1))
         rmdir(dr);
         toc
     else
+        studentMatrix(sn,1) = str2double(studentFolder);
         studentMatrix(sn,2) = round(1.0,1);
     end
 end
 studentMatrix
 save(pathStudentResults,'studentMatrix');
-averageGrade = mean(studentMatrix(:,2))
+averageGrade = mean(checkedStudent)
 
 cd(con.BASEFOLDER);
 
