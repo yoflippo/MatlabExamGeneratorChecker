@@ -1,0 +1,147 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1711151415
+
+----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.2.0.556344 (R2017a)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 15063)
+Java Version: Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.2         (R2017a)
+Simulink                                              Version 8.9         (R2017a)
+Aerospace Blockset                                    Version 3.19        (R2017a)
+Aerospace Toolbox                                     Version 2.19        (R2017a)
+Bioinformatics Toolbox                                Version 4.8         (R2017a)
+Communications System Toolbox                         Version 6.4         (R2017a)
+Computer Vision System Toolbox                        Version 7.3         (R2017a)
+Control System Toolbox                                Version 10.2        (R2017a)
+Curve Fitting Toolbox                                 Version 3.5.5       (R2017a)
+DSP System Toolbox                                    Version 9.4         (R2017a)
+Data Acquisition Toolbox                              Version 3.11        (R2017a)
+Database Toolbox                                      Version 7.1         (R2017a)
+Embedded Coder                                        Version 6.12        (R2017a)
+Fixed-Point Designer                                  Version 5.4         (R2017a)
+Fuzzy Logic Toolbox                                   Version 2.2.25      (R2017a)
+Global Optimization Toolbox                           Version 3.4.2       (R2017a)
+HDL Coder                                             Version 3.10        (R2017a)
+Image Acquisition Toolbox                             Version 5.2         (R2017a)
+Image Processing Toolbox                              Version 10.0        (R2017a)
+Instrument Control Toolbox                            Version 3.11        (R2017a)
+MATLAB Coder                                          Version 3.3         (R2017a)
+MATLAB Compiler                                       Version 6.4         (R2017a)
+MATLAB Compiler SDK                                   Version 6.3.1       (R2017a)
+Mapping Toolbox                                       Version 4.5         (R2017a)
+Model Predictive Control Toolbox                      Version 5.2.2       (R2017a)
+Neural Network Toolbox                                Version 10.0        (R2017a)
+OPC Toolbox                                           Version 4.0.3       (R2017a)
+Optimization Toolbox                                  Version 7.6         (R2017a)
+Parallel Computing Toolbox                            Version 6.10        (R2017a)
+Partial Differential Equation Toolbox                 Version 2.4         (R2017a)
+Phased Array System Toolbox                           Version 3.4         (R2017a)
+Robotics System Toolbox                               Version 1.4         (R2017a)
+Robust Control Toolbox                                Version 6.3         (R2017a)
+Signal Processing Toolbox                             Version 7.4         (R2017a)
+SimEvents                                             Version 5.2         (R2017a)
+Simscape                                              Version 4.2         (R2017a)
+Simscape Driveline                                    Version 2.12        (R2017a)
+Simscape Electronics                                  Version 2.11        (R2017a)
+Simscape Fluids                                       Version 2.2         (R2017a)
+Simscape Multibody                                    Version 5.0         (R2017a)
+Simscape Power Systems                                Version 6.7         (R2017a)
+Simulink 3D Animation                                 Version 7.7         (R2017a)
+Simulink Coder                                        Version 8.12        (R2017a)
+Simulink Control Design                               Version 4.5         (R2017a)
+Simulink Design Optimization                          Version 3.2         (R2017a)
+Simulink Desktop Real-Time                            Version 5.4         (R2017a)
+Simulink Real-Time                                    Version 6.6         (R2017a)
+Simulink Verification and Validation                  Version 3.13        (R2017a)
+Spreadsheet Link                                      Version 3.3.1       (R2017a)
+Stateflow                                             Version 8.9         (R2017a)
+Statistics and Machine Learning Toolbox               Version 11.1        (R2017a)
+Symbolic Math Toolbox                                 Version 7.2         (R2017a)
+System Identification Toolbox                         Version 9.6         (R2017a)
+Vehicle Network Toolbox                               Version 3.3         (R2017a)
+Wavelet Toolbox                                       Version 4.18        (R2017a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+CreateAndCopyQuestions: 1 of 25 folders processed of week1
+CreateAndCopyQuestions: 2 of 25 folders processed of week1
+CreateAndCopyQuestions: 3 of 25 folders processed of week1
+CreateAndCopyQuestions: 4 of 25 folders processed of week1
+CreateAndCopyQuestions: 5 of 25 folders processed of week1
+CreateAndCopyQuestions: 6 of 25 folders processed of week1
+CreateAndCopyQuestions: 7 of 25 folders processed of week1
+CreateAndCopyQuestions: 8 of 25 folders processed of week1
+CreateAndCopyQuestions: 9 of 25 folders processed of week1
+CreateAndCopyQuestions: 10 of 25 folders processed of week1
+CreateAndCopyQuestions: 11 of 25 folders processed of week1
+CreateAndCopyQuestions: 12 of 25 folders processed of week1
+CreateAndCopyQuestions: 13 of 25 folders processed of week1
+CreateAndCopyQuestions: 14 of 25 folders processed of week1
+CreateAndCopyQuestions: 15 of 25 folders processed of week1
+CreateAndCopyQuestions: 16 of 25 folders processed of week1
+CreateAndCopyQuestions: 17 of 25 folders processed of week1
+CreateAndCopyQuestions: 18 of 25 folders processed of week1
+CreateAndCopyQuestions: 19 of 25 folders processed of week1
+CreateAndCopyQuestions: 20 of 25 folders processed of week1
+CreateAndCopyQuestions: 21 of 25 folders processed of week1
+CreateAndCopyQuestions: 22 of 25 folders processed of week1
+CreateAndCopyQuestions: 23 of 25 folders processed of week1
+CreateAndCopyQuestions: 24 of 25 folders processed of week1
+CreateAndCopyQuestions: 25 of 25 folders processed of week1
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the generated files to clean_source assignment
+CreateAndCopyQuestions: week 1,copied 50% of the files
+CreateAndCopyQuestions: week 1,copied 100% of the files
+week1: TRUE = 82 | FALSE = 81
+week2: TRUE = 76 | FALSE = 80
+week3: TRUE = 58 | FALSE = 57
+Copy the files to the "assignment" place
+Created MC-Questions
+Elapsed time is 30.359821 seconds.
+execute generate all script
+Check for the existence of needed supporting scripts/function files
+Start fresh: Generate all week assignments
+0: Read the student number and convert the list to e-mailadresses
+0.02: Create new filenames (with HASH code AND combine file names)
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:cd:NonExistentDirectory'
+       message: 'Cannot CD to week1 (Name is nonexistent or not a directory).'
+         cause: {0×1 cell}
+         stack: [2×1 struct]
+
+[Warning: PerformAll: E0 aGenerateEverythingForCourse,
+week1, Cannot CD to week1 (Name is nonexistent or not a directory).
+ aGenerateEverythingForCourse did not finish correctly] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 46)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',46,0)">line 46</a>)] 
+dbcont
+Elapsed time is 6.408448 seconds.
+execute create week assignment scripts
+Check for the existence of needed supporting scripts/function files
+Generating assignents for WEEK: 1
+0.133: Empty folder with files for testing
+0.139: Create a student specific folder in every week folder
+0.263: Get overview of files
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 67)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',67,0)">line 67</a>)
+PerformAll in bCreateWeekAssignments:
+Cannot CD to Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\assignments\week1 (Name is nonexistent or not a directory).
+} 
+<a href="matlab: opentoline('Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',67,1)">67  </a>    error([mfilename ' in bCreateWeekAssignments: ' newline  err.message])
+if system_dependent('IsDebugMode')==1, dbquit; end
+PerformAll
+[Warning: The file 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m' could not be cleared because it contains MATLAB code that is
+currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m' could not be cleared because it contains MATLAB code that
+is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m' could not be cleared because it contains MATLAB code that
+is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('Z:\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\PerformAll.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files

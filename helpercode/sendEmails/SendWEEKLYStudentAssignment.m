@@ -12,40 +12,42 @@ props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFacto
 props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
 
-thisWeek = 'week2'
+thisWeek = 'week1'
 cd('student_assignments');
 cd(thisWeek);
 
 %% Message for student
-chr = ['Ha Tester, bij deze week 2 opdracht met nieuwe opdrachten. Alleen deelopdracht_2 is anders dus als je al werk hebt verricht, controleer dan die opdracht...' newline newline ];
-% chr = '';
+chr = '';
 chr = [chr newline 'Beste student,'];
 chr = [chr newline newline 'Lees deze e-mail helemaal door!'];
-chr = [chr newline newline ];
+chr = [chr newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht'];
 chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];
-chr = [chr newline newline 'Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).'];
-chr = [chr newline 'Het cijfer geeft je een indicatie van hoe goed je de eindopdracht hebt gemaakt.'];
-chr = [chr newline 'Elke week eindopdracht is representatief voor het tentamen.'];
-chr = [chr newline 'Het tentamen wordt opgebouwd uit onderdelen van de weekeindopdrachten.'];
+chr = [chr newline];
+chr = [chr newline 'Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).'];
 chr = [chr newline 'Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.'];
-chr = [chr newline newline 'Je moet deze opdracht voor volgende week woensdag'];
+chr = [chr newline];
+chr = [chr newline 'Je mag de foldernamen, folderstructuren en bestandsnamen'];
+chr = [chr newline 'van het zip-bestand NIET aanpassen!'];
+chr = [chr newline];
+chr = [chr newline 'Doe je dat wel, dan wordt de opdracht niet nagekeken.'];
+chr = [chr newline 'Je moet deze opdracht voor volgende week woensdag'];
 chr = [chr newline '23:59u inleveren via Blackboard.'];
 chr = [chr newline];
-chr = [chr newline 'Je mag de foldernamen, folderstructuren en bestandnamen'];
-chr = [chr newline 'van het zip-bestand NIET aanpassen!'];
-chr = [chr newline 'Doe je dat wel, dan wordt de opdracht niet nagekeken.'];
-chr = [chr newline];
 chr = [chr newline 'Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een'];
-chr = [chr newline 'zip-bestand van al je werk. Dat specifieke zip-bestand MOET je'];
+chr = [chr newline 'zip-bestand van al je werk. Dat specifieke zip-bestand moet je'];
 chr = [chr newline 'uploaden via Blackboard. Indien je toch zelfstandig een'];
 chr = [chr newline 'zip-bestand maakt, wordt je opdracht NIET nagekeken!'];
 chr = [chr newline];
 chr = [chr newline 'Wij proberen jouw opdracht na het inlevermoment, binnen'];
-chr = [chr newline '5 werkdagen na te kijken. Je ontvangt je nagekeken werk'];
+chr = [chr newline '10 werkdagen na te kijken. Je ontvangt je nagekeken werk'];
 chr = [chr newline 'op dit e-mailadres.'];
+chr = [chr newline 'Je bonuscijfer is nog niet bekend als je aan je tentamen begint.'];
 chr = [chr newline];
-chr = [chr newline newline 'Met vriendelijke groet,'];
+chr = [chr newline 'Stuur bij vragen/onduidelijkheden een e-mail naar mjschrau@hhs.nl'];
+chr = [chr newline 'Emails naar dit e-mailadres worden NIET gelezen.'];
+chr = [chr newline];
+chr = [chr newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen']
 
 %% Find zips and mail them
@@ -55,10 +57,10 @@ for nZ = 1:length(zips)
    %% extract student numbers
    sNum = extractAfter(erase(zips(nZ).name,'.zip'),'_');
    %% construct emailadres
-   sEma = {'mjschrau@hhs.nl' [sNum '@student.hhs.nl']}
+   sEma = {[sNum '@student.hhs.nl']}
    sAtt = fullfile(pwd,zips(nZ).name) 
    sendmail(sEma,...
-         'Biostatica Matlab: eindopdracht week 2',chr,sAtt);
+         ['Biostatica Matlab: eindopdracht ' thisWeek],chr,sAtt);
    nSendMails = nSendMails + 1;
 end
 disp(['Send mails: ' num2str(nSendMails)]);

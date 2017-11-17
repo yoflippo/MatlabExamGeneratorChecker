@@ -3,7 +3,7 @@ clear all;
 
 dbstop if error
 global gWeekNames;
-Weeks = 1:3;  % Adjust me!!!
+Weeks = 1;  % Adjust me!!!
 for nW = Weeks
     gWeekNames{1,nW} = ['week' num2str(nW)]; 
 end
@@ -44,7 +44,7 @@ catch err
     %Has to be a warning to continue
     warning([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
     keyboard
-end
+en
 toc
 
 %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
