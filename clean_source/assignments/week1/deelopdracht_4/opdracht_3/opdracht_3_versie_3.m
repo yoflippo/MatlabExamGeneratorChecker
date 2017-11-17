@@ -7,7 +7,6 @@
 % Gebruik verder: 
 %                   - 'halvespierlengte = 10;'.
 %                   - 'halvespierdikte = oppervlakte gedeeld door pi * 
-%                                           halvespierlengte *
-%                                           halvespierdikte
+%                                           halvespierlengte 
 % De constante 'pi' zit standaard in Matlab, typ: 'pi' in het Command
 % Window.

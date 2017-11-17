@@ -1,4 +1,4 @@
-function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
+function res = opdracht_3_versie_3_CHECK(apStudentSol)
 res = 0;
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
@@ -12,7 +12,7 @@ res = 0;
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput = {2 5 6 8 9 10};
+checkingVar.testFunctionInput = {2 5 6 8 9 10 33};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.

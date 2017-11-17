@@ -11,8 +11,8 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
-
-thisWeek = 'week1'
+weeknum = '1'
+thisWeek = ['week' weeknum]
 cd('student_assignments');
 cd(thisWeek);
 
@@ -22,7 +22,7 @@ chr = [chr newline 'Beste student,'];
 chr = [chr newline newline 'Lees deze e-mail helemaal door!'];
 chr = [chr newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht'];
-chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];
+chr = [chr newline 'van week ' weeknum ' voor Biostatica Matlab.'];
 chr = [chr newline];
 chr = [chr newline 'Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).'];
 chr = [chr newline 'Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.'];
@@ -60,7 +60,7 @@ for nZ = 1:length(zips)
    sEma = {[sNum '@student.hhs.nl']}
    sAtt = fullfile(pwd,zips(nZ).name) 
    sendmail(sEma,...
-         ['Biostatica Matlab: eindopdracht ' thisWeek],chr,sAtt);
+         ['Biostatica Matlab: eindopdracht week: ' weeknum],chr,sAtt);
    nSendMails = nSendMails + 1;
 end
 disp(['Send mails: ' num2str(nSendMails)]);
