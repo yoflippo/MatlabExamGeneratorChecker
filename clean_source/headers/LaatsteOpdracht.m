@@ -137,9 +137,13 @@ else
     txt{1} = 'Beste student,';
     txt{2} = 'Schrijf hier op wat je de opdrachten vond.';
     txt{3} = 'Wij lezen het liefst veel kritiek in je commentaar.';
-    txt{4} = 'Sla dit bestand op!';
-    txt{4} = '';
-    txt{5} = 'JOUW COMMENTAAR:';
+    txt{4} = 'LET OP! Zorg dat je specifiek bent. Zonder voorbeelden is het';
+    txt{5} = 'bijna onmogelijk voor ons om verbeteringen door te voeren op';
+    txt{6} = 'basis van jouw commentaar';
+    txt{7} = '';
+    txt{8} = 'Sla dit bestand op!';
+    txt{9} = '';
+    txt{10} = 'JOUW COMMENTAAR:';
     fileID = fopen(apTxtFile,'a');
     for i = 1:length(txt)
         fprintf(fileID,'%s\r\n',txt{i});

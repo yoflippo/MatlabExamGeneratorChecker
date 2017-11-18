@@ -1,100 +1,50 @@
-function res = opdracht_6_versie_3_CHECK(apStudentSol)
+function res = opdracht_6_versie_2_CHECK(apStudentSol)
 
 % default
 res = 0;
-
+numtests = 6;
+q = char(39);
 %%========== PLACE SOLUTION IN COMMENTS HERE
 %% Opdracht 6
-% % % % Zie de onderstaande vectoren. 
-% % % % 1 -   Tel bij de eerste vector de waarde 13 op en sla dit op in de 
-% % % %       variabele vector1.
-% % % % 2 -   Trek van de tweede vector de waarde 13 af en sla dit op in de 
-% % % %       variabele vector2.
-% % % % 3 -   Vermenigvuldig de derde vector met de waarde 13 en sla dit op
-% % % %       in de variabele vector3.
-% % % 
-% % % vec1 = 20:0.1:22;
-% % % vec2 = 10:29;
-% % % vec3 = 33:40;
-% % % 
-% % % vector1 = vec1+13;
-% % % vector2 = vec2-13;
-% % % vector3 = vec3*13;
+% % % % % % % vec1 = 20:0.1:22;
+% % % % % % % vec2 = 10:29;
+% % % % % % % vec3 = 33:40;
+% % % % % % % 
+% % % % % % % vector1 = vec1+3;
+% % % % % % % vector2 = vec2-6;
+% % % % % % % vector3 = vec3*9;
 %%==========
 
-[path name ext] = fileparts(apStudentSol);
-tmp = readCleanMFile(apStudentSol);
+%% FILL string cells below to test, if you are not using them, make them empty!
+% Variables that should be present in file
+checkingVar.nameVars = {'vector1' 'vector2' 'vector3'};
+% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
+% The number to the right of the string designates the number of times the
+% string should be present.
+checkingVar.literalsP = {};
+% FILL literalsA, With strings that should not be present.
+checkingVar.literalsA = {'NaN' 3};
+% Reverse literals separated by spaces
+% FOR EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% THE REVERSED CASE:             '10+2' or  '100+vector1'
+checkingVar.literalsR = {'vec1 + 3' 'vec3 * 9'};
+checkingVar.literalsO = {{'vec2-6' '-6 + vec2'}};
+checkingVar.literalsRO = {};
 
-if ~isempty(char(tmp))
-    
-    %% Run the solution file - HAS TO WORK!!
-    try
-        run(replace(mfilename,'_CHECK','_SOL'));
-    catch
-        return;
-    end
-    
-    % Copy the correct answers, this constructions allows us to test for
-    % certain variable names easily, by using the SOLUTION file.
-    % This part must run without errors!
-    nameVars = {'vector1' 'vector2' 'vector3'};
-    
-    for nV = 1:length(nameVars)
-        % Save the variables in the SOLUTION FILE
-        eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
-        % Remove solution variables from Workspace.
-        eval(['clear ' nameVars{nV}  ';']);
-    end
-    
-    
-    %% Run the original student scripts, if not working no points!
-    try
-        run(apStudentSol);
-    catch
-        return;
-    end
-    
-    %% Perform tests for certain variables
-    for nV = 1:length(nameVars)
-        try
-            eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
-            if blTest
-                res = res + 1;
-            end
-        catch ErrMess
-            % Test for a generated file! Could also be done by testing for Hash
-            if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-            end
-        end
-    end
-    
-    %% Check for literal values and variables
-    % Make temp file
-    absPathTmp = fullfile(path,'tmp');
-    makeMFileFromCells(absPathTmp,tmp);
-    absPathTmp = fullfile(path,'tmp.m');
-    
-    %% Check for literal answers, must be present
-    literalsP = {'vec3*9' 'vec2-6' 'vec1+3'};
-    for nLp = 1:length(literalsP)
-        if readAndFindTextInFile(absPathTmp,literalsP{nLp}) || readAndFindTextInFile(absPathTmp,fliplr(literalsP{nLp}))
-            res = res + 1;
-        end
-    end
-    
-    %% Check for literal answers, CAN NOT BE PRESENT,  REMOVE ALL SPACES FROM LITERAL!!
-    literalsA = {'NaN'};  %<------- FILL THIS CELL
-    for nLa = 1:length(literalsA)
-        if ~readAndFindTextInFile(absPathTmp,literalsA{nLa}) && ~readAndFindTextInFile(absPathTmp,fliplr(literalsA{nLa}))
-            res = res + 1;
-        end
-    end
-    
-    %% Delete the tmp file
-    if exist(absPathTmp,'file')
-        delete(absPathTmp);
-    end
-end
-res = res/(length(literalsA)+length(literalsP)+length(nameVars));
+%% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
+% 1- Variables with specific values and
+% 2- Literals that should be present and
+% 3- Lterals that should be abscent
+% You should take cornercases in to consideration as well. So add those
+% tests as well.
+
+
+% If the used tests above are not sufficient... design your own... you
+% lazy cunt
+
+
+%% Commence the TESTING !!!
+res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
+
 end %function

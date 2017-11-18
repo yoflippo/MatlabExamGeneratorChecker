@@ -1,5 +1,5 @@
 Zie het onderstaande code voorbeeld.
-De functie heeft twee outputs.
+De output variabele 'text2' krijgt de string: 'empty'.
 
 ======= Code =======
 
