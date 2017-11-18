@@ -3,7 +3,8 @@
 %      5;
 %      8;
 %      12]
-% Maak met behulp van v in 1 regel deze matrix m aan:
+% Maak een function die met 1 coderegel de vector v
+% zou omzetten naar de matrix m:
 % m = [3  3  3;
 %      5  5  5;
 %      8  8  8;
@@ -12,12 +13,17 @@
 %      5  5  5;
 %      8  8  8;
 %      12 12 12;
-% De code van regel 7-14 werkt ook, maar is verboden:
+% Noem deze function: 'opdracht6'
+% De code van regel 8-15 werkt ook, maar is verboden:
+% input variabele krijgt de naam v
+% output variabele krijgt de naam m
 
-% oplossing:
 v = [3;
      5;
      8;
      12];
-
+ 
+% oplossing:
+function m = opdracht6(v)
 m = repmat(v,2,3);
+end

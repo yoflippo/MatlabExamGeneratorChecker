@@ -1,18 +1,16 @@
-% Hieronder staat een regel waarmee je een
-% grafiek van een logaritmische functie tekent.
-% Maak een nieuw figuur met de function
-% figure. Maak alle waarden in signaal die kleiner
-% zijn dan 10 gelijk aan nul. Plot de aangepaste
-% grafiek met de bijbehorende tijdstippen
-% in het nieuwe figure. 
+% Hieronder staat code waarmee je een grafiek van een logaritmische 
+% functie tekent. Maak een nieuw figuur aan. Maak alle waarden in 'signaal'
+% die kleiner zijn dan 10 gelijk aan nul. 
+% Ken die aangepaste vector toe aan een variabele 'data'. 
+% Plot 'data' met de bijbehorende tijdstippen in het nieuwe figure. 
 
-clearvars
 close all
 t = 0:0.01:pi;
 signaal = exp(t);
 plot(t,signaal)
 
-% oplossing:
+% De oplossing:
 signaal(signaal < 10) = 0;
+data = signaal;
 figure
-plot(t,signaal)
+plot(t,data)

@@ -1,12 +1,18 @@
 % Gegeven de rijvector v:
 % v = [3 5 8 12]
-% Maak met behulp van v in 1 regel deze matrix m aan:
+% Maak een function die met 1 coderegel de vector v
+% zou omzetten naar de matrix m:
 % m = [3 5 8 12 3 5 8 12;
 %      3 5 8 12 3 5 8 12;
 %      3 5 8 12 3 5 8 12;
 %      3 5 8 12 3 5 8 12];
-% De code van regel 4-7 werkt ook, maar is verboden:
+% Noem deze function: 'opdracht6'
+% De code van regel 5-8 werkt ook, maar is verboden:
+% input variabele krijgt de naam v
+% output variabele krijgt de naam m
 
-% oplossing:
 v = [3 5 8 12];
+% oplossing:
+function m = opdracht6(v)
 m = repmat(v,4,2);
+end

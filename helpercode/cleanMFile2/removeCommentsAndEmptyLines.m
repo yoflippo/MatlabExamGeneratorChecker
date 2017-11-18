@@ -90,6 +90,8 @@ txt = deblank(txt);
 % Remove empty lines
 txt(all(txt=="",2),:)=[];
 
+%% Remove 'clear' variants
+txt = strrep(txt,'clear','%clear');
 
 %% Write to file
 if ~blOutputTxtNoFile

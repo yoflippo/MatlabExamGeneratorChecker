@@ -40,12 +40,12 @@ checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
 % 1:'vecD & vecC' 2:'vecD && vecC' 3:'vecC & vecD' 4:'vecC && vecD'
 checkingVar.literalsRO = {{'Y' 'X'}};
 
-checkingVar.nameVars = {'XXX' 'XXX'};
-checkingVar.literalsP = {'XXX' 2 'XXX' 1};
-checkingVar.literalsA = {'NaN' 'XXX' 2};
-checkingVar.literalsR = {'X Y' 'Z U'};
-checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
-checkingVar.literalsRO = {{'Y' 'X'}};
+checkingVar.nameVars = {};
+checkingVar.literalsP = {};
+checkingVar.literalsA = {};
+checkingVar.literalsR = {};
+checkingVar.literalsO = {};
+checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and

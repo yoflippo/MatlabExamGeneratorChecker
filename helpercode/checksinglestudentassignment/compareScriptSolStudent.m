@@ -72,7 +72,7 @@ catch ErrMess
     txterror = 'Het script of de functie van de student kan niet worden uitgevoerd!';
     if ~contains(apStudentSol,'versie')
         WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-        WriteToLastLineOfFile(apStudentSol,['% ' txterror]);        
+        WriteToLastLineOfFile(apStudentSol,['% ' txterror]);
     end
     delete(apCleaned);
     error(txterror);
