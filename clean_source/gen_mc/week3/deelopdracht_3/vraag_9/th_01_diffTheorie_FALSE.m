@@ -1,0 +1,1 @@
+De diff() functie differientieert numeriek het aangeboden signaal.

@@ -34,6 +34,7 @@ CreateAndCopyQuestions(con,gWeekNames);
 disp('Created MC-Questions')
 toc
 
+
 %% Execute generated all assignments script
 disp('execute generate all script');
 cd(con.BASEFOLDER)
@@ -44,7 +45,7 @@ catch err
     %Has to be a warning to continue
     warning([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
     keyboard
-en
+end
 toc
 
 %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal

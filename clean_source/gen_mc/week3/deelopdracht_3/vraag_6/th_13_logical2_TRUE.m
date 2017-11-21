@@ -8,4 +8,4 @@ D2 = signal(logical([1 0 1 0 1 0 1]))
 ======= Code =======
 
 Na het uitvoeren van de voorgaande code bevat D2 exact
-7 elementen.
+4 elementen.

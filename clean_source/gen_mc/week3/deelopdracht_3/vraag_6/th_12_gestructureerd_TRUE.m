@@ -1,4 +1,4 @@
-Gegeven odnerstaande code. C = A(b:end) is netter geprogrammeerd
+Gegeven onderstaande code. C = A(b:end) is netter geprogrammeerd
 dan C = A(2:end). 
 
 ======= Code =======
