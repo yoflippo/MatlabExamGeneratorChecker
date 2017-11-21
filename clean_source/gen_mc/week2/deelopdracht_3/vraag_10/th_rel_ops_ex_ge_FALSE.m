@@ -1,4 +1,4 @@
-De volgende code wordt geevalueerd tot een logische nul:
+De volgende code wordt geevalueerd tot een logische 1:
 
 
 ======= Code =======

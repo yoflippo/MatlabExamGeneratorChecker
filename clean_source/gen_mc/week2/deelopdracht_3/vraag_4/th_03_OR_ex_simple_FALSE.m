@@ -1,4 +1,4 @@
-De volgende code geeft een logische 1 terug:
+De volgende code geeft een logische 0 terug:
 
 ======= Code =======
 

@@ -1,7 +1,7 @@
-De volgende code geeft een logische 0 terug:
+De volgende code geeft een logische 1 terug:
 
 ======= Code =======
 
-1 | 1
+0 | 1
 
 ======= Code =======

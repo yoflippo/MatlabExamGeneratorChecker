@@ -1,10 +1,6 @@
-De OR-operator geeft ook bij getallen ongelijk aan nul een logische
-1 terug.
-
-Bijvoorbeeld:
+De OR-operator geeft in onderstaand voorbeeld een 
+logische 0 terug.
 
 ======= Code =======
-
 2 | 3
-
 ======= Code =======
