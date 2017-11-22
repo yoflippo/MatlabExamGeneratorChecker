@@ -1,20 +1,20 @@
 %% Opdracht 3
-% Maak een functie om de HELE spierdikte te berekenen (Jan Zwammerdan).
+% Maak een functie om de HELE spierdikte te berekenen (Jan Swammerdam).
 %
 % De naam van deze functie is 'opdracht_3'.
 % De input van de functie moet 'oppervlakte' heten.
-% De output van de functie moet 'spierdikte' heten.
+% De output van de functie moet 'heleSpierdikte' heten.
 % Gebruik verder: 
 %                   - 'halvespierlengte = 10;'.
-%                   - 'halvespierdikte = oppervlakte gedeeld door pi * 
-%                                           halvespierlengte
+%                   - 'halvespierdikte = oppervlakte gedeeld door 
+%                                        (pi * halvespierlengte)
 % De constante 'pi' zit standaard in Matlab, typ: 'pi' in het Command
 % Window.
 
 
-function spierdikte = opdracht_3(oppervlakte)
+function heleSpierdikte = opdracht_3(oppervlakte)
     halvespierlengte = 10;
-    % Keer 2 voor de hele spierdikte, vergeet je dat dan staat er een
+    % Keer 2 voor de hele heleSpierdikte, vergeet je dat dan staat er een
     % programmeerfout in de code.
-    spierdikte = 2*(oppervlakte/(pi*halvespierlengte));
+    heleSpierdikte = 2*(oppervlakte/(pi*halvespierlengte));
 end

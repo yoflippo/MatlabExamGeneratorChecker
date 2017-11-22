@@ -16,7 +16,7 @@ checkingVar.testFunctionInput = {2 5 6 8 9 10 33};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = { 'oppervlakte/' 1 'halvespierlengte = 10' 1 'function' 1 'spierdikte' 2 'pi' 1};
+checkingVar.literalsP = { 'oppervlakte/' 1 'halvespierlengte = 10' 1 'function' 1 'heleSpierdikte' 2 'pi' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 'pi*10' '10*pi'}; 
