@@ -116,8 +116,12 @@ for i = 1:length(mfilesWithHash)
             txtResultStud{1} = ' ';
             txtResultStud{2} = '%% Opmerkingen tijdens nakijken ';
             txtResultStud{3} = ' ';
-            WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
-            ResStudentScript = feval(nmCHE,AbsPathStudentScript)
+            try
+                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+            catch warn
+                warning([mfilename ': cannot write to -> ' AbsPathStudentScript newline warn.message]);
+            end
+            ResStudentScript = feval(nmCHE,AbsPathStudentScript);
             % IMPORTANT: remove the path to prevent the use of the wrong
             % check-files.
             warning off
@@ -154,7 +158,11 @@ for i = 1:length(mfilesWithHash)
             txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.' newline];
             txtResultStud{3} = '% Tijdens het uitvoeren trad er een fout op, met deze melding:';
             txtResultStud{4} = ['% ' something.message];
-            WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+            try
+                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+            catch warn
+                warning([mfilename ': cannot write to -> ' AbsPathStudentScript newline warn.message]);
+            end
             keyboard
         end
     end

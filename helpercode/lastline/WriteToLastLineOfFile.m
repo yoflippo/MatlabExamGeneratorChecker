@@ -73,7 +73,7 @@ end
 % % % % % % catch
 % % % % % %     fclose('all');
 % % % % % % end
-
+fclose('all');
 fid = fopen(absPathFile, 'a');
 if iscell(lineTxt)
     for nl = 1:size(lineTxt)
@@ -84,6 +84,6 @@ else
         fprintf(fid,'\r\n%s', lineTxt(nl,:));
     end
 end
-fclose(fid);
+fclose('all');
 
 end %function

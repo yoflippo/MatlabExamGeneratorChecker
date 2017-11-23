@@ -59,8 +59,7 @@ for nZ = 1:nMailsToSend
         %% construct emailadres
         sEma = {[sNum '@student.hhs.nl']};
         sAtt = fullfile(pwd,zips(nZ).name) ;
-        sendmail(sEma,...
-            ['Biostatica Matlab: eindopdracht week: ' weeknum],chr,sAtt);
+        sendEmailrecursive(sEma,thisWeek,chr,sAtt)
         nSendMails = nSendMails + 1;
     catch err
         keyboard
@@ -68,3 +67,16 @@ for nZ = 1:nMailsToSend
 end
 disp(['Send mails: ' num2str(nSendMails)]);
 cd(con.BASEFOLDER)
+
+
+function sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+try
+    sendmail(sEma,...
+        ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
+catch
+    pause(1) %Sometimes the the sendmail function does not work properly
+    sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+    keyboard
+end
+
+end

@@ -11,39 +11,54 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-thisWeek = 'week2'
+thisWeek = 'week1'
 cd('submitted');
 cd(thisWeek);
 
 %% Message for student
 chr = 'Beste student,';
-chr = [chr newline newline ];
+chr = [chr newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw nagekeken eindopdracht'];
 chr = [chr newline 'van ' thisWeek ' voor Biostatica Matlab.'];
 chr = [chr newline];
 chr = [chr newline 'In het zip-bestand zit een m-file met de naam: "JouwCijfer.m".'];
 chr = [chr newline 'Als een vraag/opdracht niet 100% correct is, wordt de uitwerking'];
 chr = [chr newline 'er bij gegeven. Zo kun je leren van je fouten.'];
-chr = [chr newline newline 'Onderaan jouw uitwerking staat extra informatie over wat er fout is gegaan.']
+chr = [chr newline newline 'Onderaan jouw uitwerking kan extra informatie staan over wat er fout is gegaan.']
 chr = [chr newline];
+chr = [chr newline 'Op deze e-mail wordt niet door ons gereageerd.'];
 chr = [chr newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
 chr = [chr newline 'Mark Schrauwen in RZ 2.17.1. '];
 chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];
+
+%% Send mails
 nSendMails = 0;
 zips = dir(['**' filesep '*.zip']);
 for nZ = 1:length(zips)
     if contains(zips(nZ).name,'Checked')
         %% extract student numbers
-        sNum = extractAfter(erase(zips(nZ).name,'.zip'),'Checked_');
+        sNum = findStudentNumberInTxt(zips(nZ).name);
         %% construct emailadres
-        sEma = [sNum '@student.hhs.nl'];
+        sEma = [sNum '@student.hhs.nl']
         sAtt = fullfile(pwd,zips(nZ).name);
-        sendmail(sEma,...
-            'Biostatica Matlab: nagekeken eindopdracht week 2',chr,sAtt);
+        sendEmailrecursive(sEma,thisWeek,chr,sAtt)
         nSendMails = nSendMails + 1;
+        end
     end
+    disp(['Send mails: ' num2str(nSendMails)]);
+    cd(con.BASEFOLDER)
 end
-disp(['Send mails: ' num2str(nSendMails)]);
-cd(con.BASEFOLDER)
+
+function sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+try
+    sendmail(sEma,...
+        ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
+catch
+    pause(1) %Sometime the the sendmail function does not work properly
+    sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+    keyboard
+end
+
+end
