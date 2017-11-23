@@ -3,9 +3,11 @@ clear all;
 
 dbstop if error
 global gWeekNames;
-Weeks = 1;  % Adjust me!!!
-for nW = Weeks
-    gWeekNames{1,nW} = ['week' num2str(nW)]; 
+Weeks = 2;  % Adjust me!!!
+cnt = 1;
+for nW = 1:length(Weeks)
+    gWeekNames{cnt,nW} = ['week' num2str(Weeks(nW))]; 
+    cnt = cnt +1 ;
 end
 warning off
 rmpath(genpath(fileparts(mfilename('fullpath'))));
@@ -40,7 +42,7 @@ disp('execute generate all script');
 cd(con.BASEFOLDER)
 tic
 try
-    aGenerateEverythingForCourse();
+    aGenerateEverythingForCourse(gWeekNames);
 catch err
     %Has to be a warning to continue
     warning([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
@@ -115,14 +117,13 @@ buAll
 return;
 
 %% Check manually copied submitted files
+% BU Cleaned submitted files from students before checking
+cd(con.STUDENTSUBFOLDER)
+zip(fullfile(con.BASEFOLDER,'submitted_bu',['bu_beforeChecking_wk' num2str(weekToCorrect) '_' datetimetxt() '.zip' ]),fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER))
 cd(con.BASEFOLDER)
 disp('Check manually copied submitted files');
-tic
 try
-    if ~isequal(cCheckStudentSubmissions(weekToCorrect),1)
-        error('The average grade is not equal to 1');
-    end
+    cCheckStudentSubmissions(weekToCorrect)
 catch err
     error([mfilename ': ' err.message]);
 end
-toc

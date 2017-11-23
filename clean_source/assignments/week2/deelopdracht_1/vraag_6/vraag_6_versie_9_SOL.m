@@ -1,6 +1,6 @@
 %% Vraag 6
 %
-% Stelling 1:   De lengte van een vector v = [ 3 3 3 3] 4.
+% Stelling 1:   De lengte van een vector v = [3 3 3 3] is 4.
 %
 % Stelling 2:   De functie length() is bedoeld voor vectoren.
 %				De functie size() is bedoeld voor matrices.  

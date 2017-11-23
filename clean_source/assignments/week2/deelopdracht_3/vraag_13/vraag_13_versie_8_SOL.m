@@ -1,12 +1,13 @@
 %% Vraag 13
 %
-% Stelling 1:   In de Command Window wordt 'dag' afgedrukt:
+% Stelling 1:   In de Command Window wordt 'hoi' afgedrukt:
 %				                                           
 %				======= Code =======                       
 %				                                           
 %				A = 1;                                     
 %				B = 2;                                     
-%				if A >= B                                  
+%				C = 0;                                     
+%				if (A >= B) | (C)                          
 %				    'hoi'                                  
 %				else                                       
 %				    'dag'                                  
@@ -14,22 +15,12 @@
 %				                                           
 %				======= Code =======                       
 %
-% Stelling 2:   In de Command Window wordt de langste spier afgedrukt:
-%				                                                      
-%				======= Code =======                                  
-%				                                                      
-%				lengte_brachialis = 10;                               
-%				lengte_biceps = 7;                                    
-%				if lengte_brachialis > lengte_biceps                  
-%				    'Brachialis'                                      
-%				else                                                  
-%				    'Biceps'                                          
-%				end                                                   
-%				                                                      
-%				======= Code =======                                  
+% Stelling 2:   Als een Matlab bestand niet kan worden gevonden, terwijl het 
+%				wel bestaat, dan staat het bestand waarschijnlijk wel in het 
+%				Matlab path.                                                 
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
 % C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
 % D : stelling 1 is WAAR      en stelling 2 is WAAR
-Antwoord = D;
+Antwoord = A;

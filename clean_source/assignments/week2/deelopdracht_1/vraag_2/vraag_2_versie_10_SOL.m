@@ -3,7 +3,7 @@
 % Stelling 1:   Je kan binnen een functie een andere functie aanroepen.
 %
 % Stelling 2:   Wanneer je meerdere output variabelen van een functie wilt krijgen,
-%				gebruik je blokhaken: [] het aanroepen.                            
+%				gebruik je blokhaken: [] bij het aanroepen.                        
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

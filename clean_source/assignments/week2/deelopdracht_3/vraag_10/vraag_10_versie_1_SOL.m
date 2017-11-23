@@ -9,14 +9,14 @@
 %				                                                      
 %				======= Code =======                                  
 %
-% Stelling 2:   De volgende code wordt geevalueerd tot een logische nul:
-%				                                                        
-%				                                                        
-%				======= Code =======                                    
-%				                                                        
-%				ge(1,2)                                                 
-%				                                                        
-%				======= Code =======                                    
+% Stelling 2:   De volgende code wordt geevalueerd tot een logische 1:
+%				                                                      
+%				                                                      
+%				======= Code =======                                  
+%				                                                      
+%				ge(1,2)                                               
+%				                                                      
+%				======= Code =======                                  
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

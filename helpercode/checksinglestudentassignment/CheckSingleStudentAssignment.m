@@ -117,8 +117,7 @@ for i = 1:length(mfilesWithHash)
             txtResultStud{2} = '%% Opmerkingen tijdens nakijken ';
             txtResultStud{3} = ' ';
             WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
-            eval(['ResStudentScript = ' nmCHE '(' q AbsPathStudentScript q ');']);
-            
+            ResStudentScript = feval(nmCHE,AbsPathStudentScript)
             % IMPORTANT: remove the path to prevent the use of the wrong
             % check-files.
             warning off
@@ -160,8 +159,5 @@ for i = 1:length(mfilesWithHash)
         end
     end
 end
-% no breakpoints in this file
-
-% dbclear('in',mfilename)
 cd(currPath);
 end

@@ -1,7 +1,18 @@
 %AFRONDENWEEKOPDRACHT
 %
+%                              ||
+%                              ||
+%                              \/
+%
+%
 %
 %                    Open dit script en druk op F5
+%
+%
+%
+%                               /\
+%                               ||
+%                               ||
 %
 %
 % ------------------------------------------------------------------------
@@ -39,11 +50,225 @@
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
 % Creation of script
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% STOP!!!!!!!!!!!!!!!!!!!!!!!
+
+%% TERUG NAAR BOVEN, DAAR STAAT WAT JE MOET DOEN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% STOPPPEN!
+
+% TERUG NAAR BOVEN, DAAR STAAT WAT JE MOET DOEN!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % Extract studentnumber
+mf = fileparts(mfilename('fullpath'));
+if ~isequal(pwd,mf)
+    warning off
+    rmpath(genpath(mf))
+    error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP "Change Folder"  DRUKKEN!'  sprintf('\r\n') sprintf('\r\n')])
+end
 try
     studentnummer;
 catch
-    error('Het bestand ''studentnummer.m'' niet gevonden!! Als je de bestanden en folderstructuur niet intact laat krijg je geen punten vooor de weekopdracht');
+    error(['Het bestand ''studentnummer.m'' niet gevonden!!'   sprintf('\r\n') 'Als je de bestanden en folderstructuur niet intact laat krijg je geen punten voor de week eindopdracht'  sprintf('\r\n') 'Zorg eerst dat je alles netjes hebt hersteld!'] );
 end
 % Go to upper folder (the week folder)
 cd ..

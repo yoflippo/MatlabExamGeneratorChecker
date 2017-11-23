@@ -53,8 +53,8 @@ if ~isempty(char(tmp))
             res = res + (1/numtests);
         end
     catch ErrMess
-        if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+        if ~contains(absPathStudentSol,'versie')
+            WriteToLastLineOfFile(absPathStudentSol,['% ' ErrMess.message]);
         end
     end
     
@@ -63,8 +63,8 @@ if ~isempty(char(tmp))
             res = res + (1/numtests);
         end
     catch ErrMess
-        if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+        if ~contains(absPathStudentSol,'versie')
+            WriteToLastLineOfFile(absPathStudentSol,['% ' ErrMess.message]);
         end
     end
     
@@ -73,8 +73,8 @@ if ~isempty(char(tmp))
             res = res + (1/numtests);
         end
     catch ErrMess
-        if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+        if ~contains(absPathStudentSol,'versie')
+            WriteToLastLineOfFile(absPathStudentSol,['% ' ErrMess.message]);
         end
     end
     %% Check for literal answer

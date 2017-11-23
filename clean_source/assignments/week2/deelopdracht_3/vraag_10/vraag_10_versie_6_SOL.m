@@ -1,13 +1,13 @@
 %% Vraag 10
 %
-% Stelling 1:   De volgende code wordt geevalueerd tot een logische nul:
-%				                                                        
-%				                                                        
-%				======= Code =======                                    
-%				                                                        
-%				2 <= 2                                                  
-%				                                                        
-%				======= Code =======                                    
+% Stelling 1:   De volgende code wordt geevalueerd tot een logische 1:
+%				                                                      
+%				                                                      
+%				======= Code =======                                  
+%				                                                      
+%				2 <= 2                                                
+%				                                                      
+%				======= Code =======                                  
 %
 % Stelling 2:   De volgende code wordt geevalueerd tot een logische 1.
 %				                                                      

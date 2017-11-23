@@ -1,6 +1,6 @@
 %% Vraag 6
 %
-% Stelling 1:   De lengte van een vector v = [ 3 3 3 3] 4.
+% Stelling 1:   De lengte van een vector v = [3 3 3 3] is 4.
 %
 % Stelling 2:   Bij een bestaande vector v=[ 7 1 2 9] krijg je bij de aanroep: 
 %				v(2:end)                                                       

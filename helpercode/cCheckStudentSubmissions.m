@@ -33,6 +33,7 @@ InitAll
 
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
+dbstop if error
 weekNr = num2str(Week);
 weekName = ['week' weekNr];
 disp(weekName);
@@ -64,26 +65,27 @@ removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
 files = dir(subWkFolder);
 
 % Get studentnumbers of students that submitted AND unzip the folder
-cd(subWkFolder);
-studentsThatSubmitted = cell(1,length(files)-2);
-for i = 3:length(files)
-    apCurrZip = fullfile(apSubmitted,files(i).name);
-    if contains(files(i).name,'.zip')
-        if ~contains(files(i).name,'Checked')
-            tmpTxt = erase(files(i).name,'.zip');
-            tmpTxt = erase(tmpTxt,[weekName '_']);
-            tmpTxt = erase(tmpTxt,'Biostatica_ToSubmit_');
-            studentsThatSubmitted{i-2} = tmpTxt;
-            unzip(apCurrZip);
-            % % %     delete(apCurrZip);
-        else %delete Checked zipfiles
-            delete(apCurrZip);
+try
+    cd(subWkFolder);
+    studentsThatSubmitted = cell(1,length(files)-2);
+    for i = 3:length(files)
+        apCurrZip = fullfile(apSubmitted,files(i).name);
+        if contains(files(i).name,'.zip')
+            if ~contains(files(i).name,'Checked')
+                studentsThatSubmitted{i-2} = findStudentNumberInTxt(files(i).name);
+                unzip(apCurrZip);
+                % % %     delete(apCurrZip);
+            else %delete Checked zipfiles
+                delete(apCurrZip);
+            end
+        else
+            delete(apCurrZip)
         end
-    else
-        delete(apCurrZip)
     end
+    cd(con.BASEFOLDER);
+catch err
+    error([mfilename ': Something went wrong with unzipping!' newline err.message newline txterror]);
 end
-cd(con.BASEFOLDER);
 
 %% Load the old studentNumbers
 load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
@@ -108,42 +110,49 @@ save(fullfile(assCurrWk,'dicHashesAbsPath.mat'),'dicWithHashes')
 
 % Iterate through student directories and read the hash strings from their
 % files.
-oldPath = pwd;
-cd(subWkFolder);
-mfiles = dir(['**' filesep '*.m']);
-cd(oldPath)
-% If a certain file is manipulated put it in a folder GEEN_PUNTEN
-for nSAss = 1:length(mfiles)
-    % Test for files that we use but should not be checked
-    blTestIfCorrectFile = true;
-    for j = 1:length(con.OTHERFILESINSTUDENTFOLDER)
-        if isequal(con.OTHERFILESINSTUDENTFOLDER{j},mfiles(nSAss).name)
+try
+    oldPath = pwd;
+    cd(subWkFolder);
+    mfiles = dir(['**' filesep '*.m']);
+    cd(oldPath)
+    % If a certain file is manipulated put it in a folder GEEN_PUNTEN
+    for nSAss = 1:length(mfiles)
+        % Test for files that we use but should not be checked
+        blTestIfCorrectFile = true;
+        for j = 1:length(con.OTHERFILESINSTUDENTFOLDER)
+            if isequal(con.OTHERFILESINSTUDENTFOLDER{j},mfiles(nSAss).name)
+                blTestIfCorrectFile = false;
+                break;
+            end
+        end
+        % Test for student made files
+        if ~contains(mfiles(nSAss).name,'vraag') && ~contains(mfiles(nSAss).name,'opdracht')
             blTestIfCorrectFile = false;
-            break;
+        end
+        % Get hashcode from current mfiles
+        if blTestIfCorrectFile
+            currFileAbsPath = fullfile(mfiles(nSAss).folder,mfiles(nSAss).name);
+            [p, subdir] = GetPathOneLevelUp(currFileAbsPath,2);
+            [~,~,endSnum] = findStudentNumberInTxt(currFileAbsPath);
+            p = fullfile(currFileAbsPath(1:endSnum),weekName)
+            try
+                currHash = GetHashCodeFromMFile(currFileAbsPath);
+                % Check if hash if present in dictionary
+                dicWithHashes(currHash);
+            catch
+                % Move file in a folder in the variable ADJUSTEDHASH
+                mkdir(fullfile(p,con.ADJUSTEDHASH,subdir));
+                % replace point of filename with underscore, so it won't be
+                % recognised in other scripts as an m-file.
+                nameOfFile = strrep(mfiles(nSAss).name,'.','_');
+                movefile(currFileAbsPath,fullfile(p,con.ADJUSTEDHASH,subdir,nameOfFile));
+                cd(oldPath);
+            end
         end
     end
-    % Test for student made files
-    if ~contains(mfiles(nSAss).name,'vraag') && ~contains(mfiles(nSAss).name,'opdracht')
-        blTestIfCorrectFile = false;
-    end
-    % Get hashcode from current mfiles
-    if blTestIfCorrectFile
-        currFileAbsPath = fullfile(mfiles(nSAss).folder,mfiles(nSAss).name);
-        [p, subdir] = GetPathOneLevelUp(currFileAbsPath,2);
-        try
-            currHash = GetHashCodeFromMFile(currFileAbsPath);
-            % Check if hash if present in dictionary
-            dicWithHashes(currHash);
-        catch
-            % Move file in a folder in the variable ADJUSTEDHASH
-            mkdir(fullfile(p,con.ADJUSTEDHASH,subdir));
-            % replace point of filename with underscore, so it won't be
-            % recognised in other scripts as an m-file.
-            nameOfFile = strrep(mfiles(nSAss).name,'.','_');
-            movefile(currFileAbsPath,fullfile(p,con.ADJUSTEDHASH,subdir,nameOfFile));
-            cd(oldPath);
-        end
-    end
+catch err
+    keyboard
+    warning([mfilename ': ' newline err.message newline txterror]);
 end
 
 %% Check for each student if they have their correct assignments
@@ -258,27 +267,32 @@ for sn = 1:length(strTrackStudent(:,1))
     studentFolder = trackStudentAssignment{sn,1}
     if exist(studentFolder,'dir')
         tic
-        %% Check all the assigned assignments of individual students
-        points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
-            dicNameAssignmentAndPoints);
-        grade = ((points/PointsToBeEarned)*9)+1;
-        studentMatrix(sn,1) = str2double(studentFolder);
-        studentMatrix(sn,2) = round(grade,1);
-        checkedStudent(cnt) = studentMatrix(sn,2);
-        cnt = cnt + 1;
-        % Give the student a grade, first make some text
-        cCheck_GradeText;
-        makeMFileFromCells(fullfile(apSubmitted,studentFolder,'JouwCijfer'),t);
-        % Copy files to a new folder
-        nmNewFolder = ['Checked_' studentFolder];
-        copyfile(studentFolder,nmNewFolder);
-        % Zip checked folder
-        zipFilePathName = [nmNewFolder '.zip'];
-        zip(zipFilePathName,nmNewFolder)
-        % Remove Folder
-        dr = fullfile(apSubmitted,nmNewFolder);
-        removeShitFromDir(dr);
-        rmdir(dr);
+        try
+            % Check all the assigned assignments of individual students
+            points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
+                dicNameAssignmentAndPoints);
+            grade = ((points/PointsToBeEarned)*9)+1;
+            studentMatrix(sn,1) = str2double(studentFolder);
+            studentMatrix(sn,2) = round(grade,1);
+            checkedStudent(cnt) = studentMatrix(sn,2);
+            cnt = cnt + 1;
+            % Give the student a grade, first make some text
+            cCheck_GradeText;
+            makeMFileFromCells(fullfile(apSubmitted,studentFolder,'JouwCijfer'),t);
+            % Copy files to a new folder
+            nmNewFolder = ['Checked_' studentFolder];
+            copyfile(studentFolder,nmNewFolder);
+            % Zip checked folder
+            zipFilePathName = [nmNewFolder '.zip'];
+            zip(zipFilePathName,nmNewFolder)
+            % Remove Folder
+            dr = fullfile(apSubmitted,nmNewFolder);
+            removeShitFromDir(dr);
+            rmdir(dr);
+        catch err
+            disp([newline 'DO YOUR MAGIC MAESTRO!' newline]);
+            keyboard
+        end
         toc
     else
         studentMatrix(sn,1) = str2double(studentFolder);

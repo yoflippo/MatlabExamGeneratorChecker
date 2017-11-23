@@ -1,4 +1,4 @@
-In de onderstaande code worden de laatste vier elementen
+In de onderstaande code worden de laatste vier elementen   
 van een vector afgedrukt:
 
 ------------code--------------

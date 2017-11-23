@@ -11,16 +11,15 @@
 %				                                       
 %				======= Code =======                   
 %
-% Stelling 2:   De volgende kan niet worden geevalueerd
-%				                                       
-%				                                       
-%				======= Code =======                   
-%				                                       
-%				vecA = [0 1 0];                        
-%				vecB = [1 1 1];                        
-%				vecA || vecB                           
-%				                                       
-%				======= Code =======                   
+% Stelling 2:   De volgende kan niet worden geevalueerd:
+%				                                        
+%				======= Code =======                    
+%				                                        
+%				vecA = [0 1 0];                         
+%				vecB = [1 1 1];                         
+%				vecA || vecB                            
+%				                                        
+%				======= Code =======                    
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

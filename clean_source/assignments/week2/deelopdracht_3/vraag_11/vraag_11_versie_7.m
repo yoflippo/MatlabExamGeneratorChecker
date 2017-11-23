@@ -1,15 +1,14 @@
 %% Vraag 11
 %
-% Stelling 1:   De volgende kan niet worden geevalueerd
-%				                                       
-%				                                       
-%				======= Code =======                   
-%				                                       
-%				vecA = [0 1 0];                        
-%				vecB = [1 1 1];                        
-%				vecA && vecB                           
-%				                                       
-%				======= Code =======                   
+% Stelling 1:   De volgende code kan niet worden geevalueerd:
+%				                                             
+%				======= Code =======                         
+%				                                             
+%				vecA = [0 1 0];                              
+%				vecB = [1 1 1];                              
+%				vecA && vecB                                 
+%				                                             
+%				======= Code =======                         
 %
 % Stelling 2:   Een element-wise logische operator bestaat altijd uit 1 symbool:
 %				                                                                

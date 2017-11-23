@@ -40,7 +40,7 @@ function bCreateWeekAssignments(Weeks)
 %% Start Fresh
 InitAll
 dbstop if error
-for nW = Weeks
+for nW = length(Weeks)
     debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(Weeks(nW))]);
     
     weekNr = num2str(Weeks(nW));

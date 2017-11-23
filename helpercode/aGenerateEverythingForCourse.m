@@ -1,4 +1,4 @@
-function aGenerateEverythingForCourse()
+function aGenerateEverythingForCourse(weekFolders)
 
 %GENERATEEVERYTHINGFORCOURSE
 %   The first step in using the files for the course. This script should be
@@ -74,10 +74,10 @@ addpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}))
 addpath(genpath(con.NAMEASSIGNMENTFOLDER))
 cd(con.NAMEASSIGNMENTFOLDER)
 
-for wk = 1:length(con.WEEKFOLDERS)
+for wk = 1:length(weekFolders)
     try
         % find all files in weekX folder
-        cd(con.WEEKFOLDERS{wk})
+        cd(weekFolders{wk})
         weekAssignments = dirmf();
         cd ..
         
@@ -176,7 +176,7 @@ for wk = 1:length(con.WEEKFOLDERS)
         rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}));
         rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}));
         rmpath(genpath(con.NAMEASSIGNMENTFOLDER));
-        error([mfilename ', ' newline con.WEEKFOLDERS{wk} ', ' causeException.message]);
+        error([mfilename ', ' newline weekFolders{wk} ', ' causeException.message]);
     end
 end
 cd(con.BASEFOLDER)
