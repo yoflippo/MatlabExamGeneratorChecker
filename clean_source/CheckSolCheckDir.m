@@ -3,6 +3,8 @@ currPath = pwd;
 
 %% This file checks the SOL/CHECK/empty files in the current folder.
 typeOfAssFiles = dirmf('Make');
+
+tic
 for i = 1:length(typeOfAssFiles)
     %% Get info about current file
     pathname = typeOfAssFiles(i).folder;
@@ -12,7 +14,7 @@ for i = 1:length(typeOfAssFiles)
         try
             fn = checkFiles(j).name;
             pathname = checkFiles(j).folder;
-            tic; CheckSolBase(fn,pathname); toc
+            CheckSolBase(fn,pathname); 
             deleteTemporaryFiles();
         catch  err
             error([mfilename ': ' err.message newline ]);
@@ -20,5 +22,6 @@ for i = 1:length(typeOfAssFiles)
 
     end
 end
-
+toc
 cd(currPath)
+%% 

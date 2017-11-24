@@ -46,6 +46,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Run the SOL file and the Student-solution and compare the used variables for their values
     try
         [res, txtns] = compareScriptSolStudent(callerName,checkingVar.nameVars,apCleaned,apStudentSol);
+        resinput = res;
     catch err
         deleteTemporaryFiles();
         return;
@@ -67,11 +68,17 @@ if ~isempty(char(txtCleanedStudentSolution))
     elseif res > 1
         res = 1;
     end
+    
+    if isequal(resinput,length(checkingVar.nameVars)) && res < 1
+        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
+    end
+    
 else
     if ~contains(apStudentSol,'versie')
         WriteToLastLineOfFile(apStudentSol,'% Een leeg bestand valt niet na te kijken...');
     end
 end
+
 
 deleteTemporaryFiles();
 end %function

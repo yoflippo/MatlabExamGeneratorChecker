@@ -63,10 +63,10 @@ try
             fprintf(fileID,'%s\r\n',txt(i));
         end
     end
-    fclose('all');
+    fclose(fileID);
     
 catch err
-    fclose('all');
+    fclose(fileID);
     warning(err)
     error([mfilename ': Could not write to the file']);
 end

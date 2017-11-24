@@ -43,9 +43,9 @@ res = 0;
 
 if ~isempty(char(txtCleanedStudentSolution))
     %% Create compare the solution file with the student solution
-%     res = res + compareFunctionSolStudent(callerName,checkingVar.testFunctionInput,apStudentSol);
+    %     res = res + compareFunctionSolStudent(callerName,checkingVar.testFunctionInput,apStudentSol);
     res = res + compareFunctionSolStudent(callerName,checkingVar.testFunctionInput,apCleaned);
-    
+    resinput = res;
     try
         data = checkingVar.testFunctionInput.data;
     catch
@@ -74,11 +74,18 @@ if ~isempty(char(txtCleanedStudentSolution))
         warning('result is too high!')
         res = 1;
     end
+    
+    if isequal(resinput,length(checkingVar.testFunctionInput)) && res < 1
+        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
+    end
+    
 else
     if ~contains(apStudentSol,'versie')
         WriteToLastLineOfFile(apStudentSol,'% Een leeg bestand valt niet na te kijken...');
     end
 end
+
+
 
 deleteTemporaryFiles();
 end %function
