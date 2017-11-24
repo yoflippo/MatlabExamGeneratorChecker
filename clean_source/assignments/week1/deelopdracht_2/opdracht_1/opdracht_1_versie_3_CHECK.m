@@ -1,53 +1,63 @@
 function res = opdracht_1_versie_3_CHECK(apStudentSol)
 
-% default
+
+%%========== PLACE SOLUTION IN COMMENTS HERE
+% % % % % % % % % %% Opdracht 1
+% % % % % % % % % % Maak een variabele aan met de naam: variable.
+% % % % % % % % % % Geef de variabele de waarde 'tekstineenstring';
+% % % % % % % % % variable = 'tekstineenstring';
+%%==========
+
+
+%% FILL string cells below to test, if you are not using them, make them empty!
+
+% Variables that should be present in file and that should be compared to
+% the SOLUTION:
+checkingVar.nameVars = {'variable'};
+% FILL literalsP,  WITH CODE THAT SHOULD BE PRESENT IN
+% The number to the right of the string designates the number of times the
+% string should be present.
+checkingVar.literalsP = {'tekstineenstring' 1};
+% FILL literalsA, With strings that should not be present. The number to
+% the right represents the weight of the error. Default weight = 1.
+checkingVar.literalsA = {};
+% Reverse literals separated by spaces
+% EXAMPLE:
+% THE STUDENT SOLUTION, e.g.:    {'2 + 10'  'vector1 + 100'}
+% Will test for:  {'2 + 10'       | '10 + 2'      }    AND
+% Will test for:  {'100 + vector' | 'vector + 100'}
+% Every case and it reverse will be tested.
+checkingVar.literalsR = {};
+
+%====== checkingVar below this line can be removed
+% Test for literals and their variants
+% EXAMPLE: {'varA>varB' 'varB<varA'}
+checkingVar.literalsO = {};
+% Test for literals and their (reversed) variants
+% NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x) and
+% so the reversed case (which would be an error made by the student) could
+% be accepted as correct.
+%
+% EXAMPLE: {'vecD & vecC' 'vecD && vecC'}
+% Now one of these 4 strings have to be present: 
+% 1:'vecD & vecC' 2:'vecD && vecC' 3:'vecC & vecD' 4:'vecC && vecD'
+checkingVar.literalsRO = {};
+
+
+%% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
+% 1- Variables with specific values and
+% 2- Literals that should be present and
+% 3- Lterals that should be abscent
+% You should take cornercases in to consideration as well. So add those
+% tests as well.
+
+
+% If the used tests above are not sufficient... design your own... you
+% lazy cunt
+
+
+%% Commence the TESTING !!!
 res = 0;
-numtests = 1;
-
-
-% % % %% Opdracht 1
-% % % % Maak een variabele aan met de naam: variable.
-% % % % Geef de variabele de waarde 'tekstineenstring';
-% % % variable = 'tekstineenstring';
-
-[path name ext] = fileparts(apStudentSol);
-tmp = readCleanMFile(apStudentSol);
-
-%% Use the cleaned code to check for certain lines
-if ~isempty(char(tmp))
-   
-    %% Run the solution file - HAS TO WORK!!
-    try
-        run(replace(mfilename,'_CHECK','_SOL'));
-    catch
-        return;
-    end
-    
-    % Copy the correct answers
-    nameVar1 = 'variable';
-    eval(['var1ANS = ' nameVar1 ';']);
-    
-    % Remove solution variables from Workspace.
-    eval(['clear ' nameVar1 ';']);
-    
-    %% Run the original student scripts, if not working no points!
-    try
-        run(apStudentSol);
-    catch
-        return;
-    end
-    
-    %% Perform tests for certain variables
-    try
-        if isequal(var1ANS,eval(nameVar1))
-            res = res + (1/numtests);
-        end
-    catch ErrMess
-        if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-        end
-    end
-
-end
+res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function
