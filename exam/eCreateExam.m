@@ -11,8 +11,13 @@ weekNames = {'week1' 'week2' 'week3'}; % fill with the other weeks
 %% Go to path of this file
 mfilename('fullpath')
 ap.BASEFOLDEREX = fileparts(mfilename('fullpath'));
-cd(ap.BASEFOLDEREX)
+
 ap.BASEFOLDER = fileparts(ap.BASEFOLDEREX);
+% Make a backup before creation of exam
+cd(ap.BASEFOLDER)
+dos(['start WinRaR a -r -m5 -mt16 ..' filesep 'Biostatica_Auto_Matlab_bu' filesep datetimetxt() 'beforeExam ' pwd filesep '*.*'])
+cd(ap.BASEFOLDEREX)
+
 ap.EXAMHELPER = fullfile(ap.BASEFOLDEREX,'exam_helper');
 addpath(genpath(ap.EXAMHELPER));
 ap.HELPERCODE = fullfile(ap.BASEFOLDER,'helpercode');
@@ -40,7 +45,7 @@ dispPlatform
 clc
 dbstop if error
 
-%% Generate MC files
+%% Generate MC files keep original files intact
 cd(ap.BASEFOLDEREX)
 removeShitFromDir(ap.Assignments);
 CreateAndCopyQuestions(ap,weekNames);

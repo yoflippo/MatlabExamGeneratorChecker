@@ -3,8 +3,8 @@
 %
 % LET OP!
 % Exacte naamgeving is heel belangrijk! Merk bv. het verschil op tussen
-% de twee variabelen: 'mekker' en de variabele 'Mekker'. Matlab maakt dus 
-% onderscheid tussen kleine letters en hoofdletters.
+% de variabelen: 'Ab', 'aB' en 'ab'. Matlab maakt onderscheid tussen kleine
+% letters en hoofdletters.
 %
 % =================== BLIJF VAN VOORGAANDE CODE AF! ======================
  

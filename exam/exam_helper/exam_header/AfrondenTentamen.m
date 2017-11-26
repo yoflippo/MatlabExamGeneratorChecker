@@ -1,7 +1,15 @@
 %AFRONDENTENTAMEN
 %
 %
+%                              ||
+%                              \/
+%
+%
 %               Druk op F5 en lees het Command Window.
+%
+%
+%                              /\
+%                              ||
 %
 %
 % ------------------------------------------------------------------------
@@ -39,7 +47,158 @@
 % $Revisi0n: 0.0.0 $  $Date: 2017-10-12 $
 % Creation of script
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% JIJ HEBT HIER NIETS TE ZOEKEN TERUG NAAR BOVEN!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 %% Ask for studentnumber
+mf = fileparts(mfilename('fullpath'));
+if ~isequal(pwd,mf)
+    warning off
+    rmpath(genpath(mf))
+    error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP "Change Folder"  DRUKKEN!'  sprintf('\r\n') sprintf('\r\n')])
+end
+
+newline = sprintf('\r\n'); %Matlab 2014 does not have the newline command
 apThisFile = fileparts(mfilename('fullpath'));
 cd(apThisFile)
 clc;
@@ -63,7 +222,7 @@ while isempty(input('Heb je jouw studentennummer correct ingevoerd? Ja = 1, Ande
     end
 end
 
-
+cd(apThisFile)
 cd ..
 apStartFile = fullfile(pwd,'deelopdracht_0');
 cd(apStartFile)
