@@ -3,7 +3,7 @@
 % heleboel opvolgende cosinuswaardes. Trek steeds de opvolgende waardes
 % van elkaar af (de tweede min de eerste) en stop het resultaat in een 
 % vector genaamd 'diffSignaal'.
-% Plot dit signaal in de nieuwe figure (geen tijdstippen op de x-as).
+% Plot dit signaal in het nieuwe figure (geen tijdstippen op de x-as).
 
 close all
 t = 0:0.01:pi;

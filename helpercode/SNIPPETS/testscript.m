@@ -46,6 +46,7 @@ checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
+checkingVar.literalsSL = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and

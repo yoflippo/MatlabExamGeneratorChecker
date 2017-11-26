@@ -35,6 +35,14 @@ catch err
     warning(err.message);
 end
 
+%% Check for literals on the same line
+num.SameLine = 0;
+try
+    res = res + literalSameLine(txtns,checkingVar.literalsSL,apStudentSol);
+    num.SameLine = length(checkingVar.literalsRO);
+catch err
+%     warning(err.message);
+end
 
 end
 

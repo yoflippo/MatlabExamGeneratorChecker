@@ -61,6 +61,7 @@ try
         if ~isempty(lines)
             txtIndex = [fndStrings{lines}];
         end
+        lines = lines';
     catch
     end
     

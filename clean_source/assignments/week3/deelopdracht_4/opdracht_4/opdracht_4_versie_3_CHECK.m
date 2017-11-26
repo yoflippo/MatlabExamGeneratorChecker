@@ -1,28 +1,28 @@
-function res = opdracht_4_versie_1_CHECK(apStudentSol)
+function res = opdracht_4_versie_3_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-
-% % % % % % % % % % % % close all
-% % % % % % % % % % % % t = 0:0.01:pi;
-% % % % % % % % % % % % signaal = cos(t);
-% % % % % % % % % % % % plot(t,signaal)
-% % % % % % % % % % % % 
-% % % % % % % % % % % % % oplossing:
-% % % % % % % % % % % % diffSignaal = diff(signaal);
-% % % % % % % % % % % % figure
-% % % % % % % % % % % % plot(diffSignaal)
+% % % % % % % % % % % 
+% % % % % % % % % % % close all
+% % % % % % % % % % % t = 0:0.01:pi;
+% % % % % % % % % % % signaal = tan(t);
+% % % % % % % % % % % plot(t,signaal)
+% % % % % % % % % % % 
+% % % % % % % % % % % % oplossing:
+% % % % % % % % % % % diffSignaal = diff(signaal);
+% % % % % % % % % % % figure
+% % % % % % % % % % % plot(diffSignaal)
 
 %%==========
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 
-checkingVar.nameVars = {};
-checkingVar.literalsP = {};
+checkingVar.nameVars = {'diffSignaal'};
+checkingVar.literalsP = {'figure' 1 'plot(diffSignaal)' 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'for' 'diff('}};
 checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
@@ -40,5 +40,5 @@ checkingVar.literalsRO = {};
 %% Commence the TESTING !!!
 res = 0;
 res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
-
+close all
 end %function

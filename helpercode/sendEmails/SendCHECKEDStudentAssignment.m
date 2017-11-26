@@ -45,7 +45,6 @@ for nZ = 1:length(zips)
         sAtt = fullfile(pwd,zips(nZ).name);
         sendEmailrecursive(sEma,thisWeek,chr,sAtt)
         nSendMails = nSendMails + 1;
-        end
     end
     disp(['Send mails: ' num2str(nSendMails)]);
     cd(con.BASEFOLDER)
@@ -55,9 +54,12 @@ function sendEmailrecursive(sEma,thisWeek,chr,sAtt)
 try
     sendmail(sEma,...
         ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
-catch
+catch err
+    warning(err.message)
     pause(1) %Sometime the the sendmail function does not work properly
+        'repeat'
     sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+
     keyboard
 end
 
