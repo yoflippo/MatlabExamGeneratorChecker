@@ -15,7 +15,7 @@ ap.BASEFOLDEREX = fileparts(mfilename('fullpath'));
 ap.BASEFOLDER = fileparts(ap.BASEFOLDEREX);
 % Make a backup before creation of exam
 cd(ap.BASEFOLDER)
-dos(['start WinRaR a -r -m5 -mt16 ..' filesep 'Biostatica_Auto_Matlab_bu' filesep datetimetxt() 'beforeExam ' pwd filesep '*.*'])
+dos(['start WinRaR a -r -m5 -mt16 ' [ap.BASEFOLDER '_BU'] filesep datetimetxt() 'beforeExam ' pwd filesep '*.*'])
 cd(ap.BASEFOLDEREX)
 
 ap.EXAMHELPER = fullfile(ap.BASEFOLDEREX,'exam_helper');

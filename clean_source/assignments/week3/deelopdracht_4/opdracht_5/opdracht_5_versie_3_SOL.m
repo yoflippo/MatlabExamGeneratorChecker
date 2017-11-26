@@ -21,5 +21,5 @@ end
 figure
 plot(kniehoekAchter,phiVoor)
 title("Kniehoek acterzijde tegen kniehoek voorzijde");
-xlable('kniehoek achter');
-ylable('kniehoek voor');
+xlabel('kniehoek achter');
+ylabel('kniehoek voor');

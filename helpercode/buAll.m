@@ -7,4 +7,7 @@
 % % zip(fullfile(apBU,['zip_all_' d '.zip']),con.BASEFOLDER);
 % % rmpath(genpath(apBU));
 % % warning on;
-dos(['start WinRaR a -r -m5 -mt16 ..' filesep 'Biostatica_Auto_Matlab_bu' filesep datetimetxt() ' ' pwd filesep '*.*'])
+function buAll(apBasefolder,extraString)
+
+dos(['start WinRaR a -r -m5 -mt20 ' [apBasefolder '_BU'] ...
+    filesep datetimetxt() extraString ' ' apBasefolder filesep '*.*']);

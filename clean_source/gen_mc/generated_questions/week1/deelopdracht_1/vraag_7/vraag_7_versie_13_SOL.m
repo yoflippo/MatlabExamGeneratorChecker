@@ -1,12 +1,12 @@
 %% Vraag 7
 %
-% Stelling 1:   In de onderstaande code worden de laatste vier elementen
-%				van een vector afgedrukt:                               
-%				                                                        
-%				------------code--------------                          
-%				vector = 2:66;                                          
-%				vector(end-4:end)                                       
-%				------------code--------------                          
+% Stelling 1:   In de onderstaande code worden de laatste vier elementen   
+%				van een vector afgedrukt:                                  
+%				                                                           
+%				------------code--------------                             
+%				vector = 2:66;                                             
+%				vector(end-4:end)                                          
+%				------------code--------------                             
 %
 % Stelling 2:   Bij het optellen van vectoren in Matlab moet een programmeur
 %				opletten dat de vectoren een gelijke lengte hebben.         

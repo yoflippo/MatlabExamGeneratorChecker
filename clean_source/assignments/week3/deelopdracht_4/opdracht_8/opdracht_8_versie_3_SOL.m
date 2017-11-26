@@ -16,10 +16,10 @@
 
 close all
 balVast = logical([1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1]);
-Pos = [30 31 33 35 38 36 34 32 30 28 26 24 22 22 23 24];
+Pos = [30 31 33 35 37 36 34 32 32 28 26 24 22 22 23 24];
 
 % oplossing:
 d = diff(Pos);
 naarVoren = d > 0;
 balVast2 = balVast(1:end-1);
-vastNaarVoren = (balVast2 == 1 & naarVoren ==1) 
+vastNaarVoren = (balVast2 == 1 & naarVoren ==1) ;

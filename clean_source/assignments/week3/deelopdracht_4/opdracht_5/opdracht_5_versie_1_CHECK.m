@@ -28,7 +28,7 @@ checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
-checkingVar.literalsSL = {{'for' 'phi'} {'L3' 'L2' 'L1'}}
+checkingVar.literalsSL = {{'for' 'phi'} {'L3' 'L2' 'L1'}};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and
@@ -45,5 +45,5 @@ checkingVar.literalsSL = {{'for' 'phi'} {'L3' 'L2' 'L1'}}
 %% Commence the TESTING !!!
 res = 0;
 res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
-
+close all
 end %function

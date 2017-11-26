@@ -75,7 +75,7 @@ if ~isempty(char(txtCleanedStudentSolution))
         res = 1;
     end
     
-    if isequal(resinput,length(checkingVar.testFunctionInput)) && res < 1
+    if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.testFunctionInput)) && res < 1
         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
     end
     

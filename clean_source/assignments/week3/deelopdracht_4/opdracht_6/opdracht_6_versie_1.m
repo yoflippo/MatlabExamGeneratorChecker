@@ -6,6 +6,6 @@
 %      3 5 8 12 3 5 8 12;
 %      3 5 8 12 3 5 8 12];
 %
-% Noem deze function: 'opdracht6'. De input variabele krijgt de naam 'v'
+% Noem deze function: 'opdracht_6'. De input variabele krijgt de naam 'v'
 % de output variabele krijgt de naam 'm'.
 % Test de door jou geschreven functie ook met andere vectoren.

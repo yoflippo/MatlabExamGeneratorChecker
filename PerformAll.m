@@ -14,6 +14,7 @@ rmpath(genpath(fileparts(mfilename('fullpath'))));
 warning on
 addpath(genpath('helpercode'));
 InitAll
+buAll(pwd,'')
 
 %% Fill in week to test
 weekToCorrect = 1;
@@ -113,7 +114,7 @@ cd(con.BASEFOLDER)
 datetime
 diary off
 disp('Making a backup');
-buAll
+buAll(con.BASEFOLDER,'')
 return;
 
 %% Check manually copied submitted files

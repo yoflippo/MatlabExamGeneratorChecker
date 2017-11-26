@@ -10,6 +10,6 @@
 % de output variabele krijgt de naam 'm'.
 % Test de door jou geschreven functie ook met andere vectoren.
 
-function m = opdracht6(v)
+function m = opdracht_6(v)
 m = repmat(v,4,2);
 end
