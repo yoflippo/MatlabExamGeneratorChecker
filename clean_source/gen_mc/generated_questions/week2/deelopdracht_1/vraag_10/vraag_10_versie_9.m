@@ -1,7 +1,7 @@
 %% Vraag 10
 %
-% Stelling 1:   Bij het opslaan van een functie geef je het bestand
-%				een andere naam dan de functie zelf.               
+% Stelling 1:   De tweede output van de standaard functie max() geeft je 
+%				het index nummer.                                        
 %
 % Stelling 2:   Een functie kan worden aangeroepen vanuit je Command Window.
 %

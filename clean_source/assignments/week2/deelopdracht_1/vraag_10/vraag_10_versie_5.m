@@ -1,10 +1,14 @@
 %% Vraag 10
 %
-% Stelling 1:   De tweede output van de standaard functie max() geeft je 
+% Stelling 1:   De eerste output van de standaard functie max() geeft je 
 %				het index nummer.                                        
 %
-% Stelling 2:   Bij het opslaan van een functie geef je het bestand
-%				dezelfde naam als de functie.                      
+% Stelling 2:   Met de onderstaande code kies je alle waarden van de 
+%				eerste kolom:                                        
+%				                                                     
+%				------------code--------------                       
+%				A(:1)                                                
+%				------------code--------------                       
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

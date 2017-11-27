@@ -1,4 +1,4 @@
-%% ==================== BLIJF VAN DE VOLGENDE CODE AF! ====================
+%% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %
 % LEES DE VOLGENDE REGELS:
 %

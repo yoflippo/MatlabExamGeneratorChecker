@@ -2,5 +2,5 @@
 % specifieke opdracht staat hieronder.
 %
 %
-% =================== BLIJF VAN VOORGAANDE CODE AF! ======================
+%% =========== BLIJF VAN HET BOVENSTAANDE CODE COMMENTAAR AF! =============
  

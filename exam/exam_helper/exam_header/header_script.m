@@ -6,5 +6,5 @@
 % de variabelen: 'Ab', 'aB' en 'ab'. Matlab maakt onderscheid tussen kleine
 % letters en hoofdletters.
 %
-% =================== BLIJF VAN VOORGAANDE CODE AF! ======================
+%% =========== BLIJF VAN HET BOVENSTAANDE CODE COMMENTAAR AF! =============
  

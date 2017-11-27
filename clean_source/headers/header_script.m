@@ -6,5 +6,5 @@
 % de twee variabelen: 'mekker' en de variabele 'Mekker'. Matlab maakt dus 
 % onderscheid tussen kleine letters en hoofdletters.
 %
-% =================== BLIJF VAN VOORGAANDE CODE AF! ======================
+%% =========== BLIJF VAN HET BOVENSTAANDE CODE COMMENTAAR AF! =============
  

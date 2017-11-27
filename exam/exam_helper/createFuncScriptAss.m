@@ -18,12 +18,12 @@ function sAssigned = createFuncScriptAss(AssInfo,nOfScriptsFunctions,nm)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-% 
+%
 % PARAMETERS: ,,
 %               AssInfo:                A struct with randomized MC and
 %                                       script assignments.
@@ -32,9 +32,9 @@ function sAssigned = createFuncScriptAss(AssInfo,nOfScriptsFunctions,nm)
 %               nm:                     structs with names used in
 %                                       eCreateExam.m
 %
-% RETURN:       
+% RETURN:
 %               sAssigned:    A struct with the chosen assignments.
-% 
+%
 % EXAMPLES:
 %               sAssignedtmp2 = createFuncScriptAss( AssInfo, nOfScriptsFunctions,nm );
 %
@@ -46,10 +46,10 @@ function sAssigned = createFuncScriptAss(AssInfo,nOfScriptsFunctions,nm)
 rpExamDirFS = fullfile(nm.Exam,'deelopdracht_2');
 mkdirIf(rpExamDirFS)
 removeShitFromDir(rpExamDirFS);
-mkdirIf(fullfile(rpExamDirFS,'data_bestanden'));
+mkdirIf(fullfile(rpExamDirFS,'Databestanden'));
 rpExamDirFSSOL = fullfile([nm.Exam 'SOL'],'deelopdracht_2');
 mkdirIf(rpExamDirFSSOL)
-mkdirIf(fullfile(rpExamDirFSSOL,'data_bestanden'));
+mkdirIf(fullfile(rpExamDirFSSOL,'Databestanden'));
 numFS = length(AssInfo.FuncScrip);
 
 if nOfScriptsFunctions > numFS
@@ -59,14 +59,14 @@ if nOfScriptsFunctions > numFS
 end
 numVariants = sum([AssInfo.FuncScrip.numVariants]);
 if nOfScriptsFunctions >= sum([AssInfo.FuncScrip.numVariants])
-     error([mfilename ': You want to generate more assignments than are availabe: ' num2str(nOfScriptsFunctions) ' of ' num2str(numVariants)]);   
+    error([mfilename ': You want to generate more assignments than are availabe: ' num2str(nOfScriptsFunctions) ' of ' num2str(numVariants)]);
 end
 
 %% Get the dff of assignments and their indices
 for nD = 1:10
-   eval(['L(' num2str(nD)  ').ind = find([AssInfo.FuncScrip.points] == ' num2str(nD) ');']);
-   eval(['L(' num2str(nD)  ').num = length(L(' num2str(nD)  ').ind);']);
-   L(nD).selected = 0;
+    eval(['L(' num2str(nD)  ').ind = find([AssInfo.FuncScrip.points] == ' num2str(nD) ');']);
+    eval(['L(' num2str(nD)  ').num = length(L(' num2str(nD)  ').ind);']);
+    L(nD).selected = 0;
 end
 dff.L = L;
 
@@ -79,22 +79,22 @@ dff.L = L;
 % |       _/q         z\
 % |______/              \___
 %_|_________________________ time
-%        t1    t2   t3   t4   
+%        t1    t2   t3   t4
 
-dff.t1 = 0.15; % L0
-dff.t2 = 0.70; % Lmax around 60% of exam
-dff.t3 = 0.75; % Lmax
+dff.t1 = 0.10; % L0
+dff.t2 = 0.70; % Lmax
+dff.t3 = 0.80; % Lmax
 dff.t4 = 0.95; % L0
 % Range
 dff.min = min([AssInfo.FuncScrip.points]);
 dff.max = max([AssInfo.FuncScrip.points]);
 % Difficulty phases
-dff.tIndex0 = 1; 
+dff.tIndex0 = 1;
 dff.tIndex1 = round(dff.t1 * nOfScriptsFunctions);
 dff.tIndex2 = round(dff.t2 * nOfScriptsFunctions);
 dff.tIndex3 = round(dff.t3 * nOfScriptsFunctions);
 dff.tIndex4 = round(dff.t4 * nOfScriptsFunctions);
-dff.tIndex5 = nOfScriptsFunctions; 
+dff.tIndex5 = nOfScriptsFunctions;
 % Indices
 dff.t01 = round(linspace(dff.min,dff.min,dff.tIndex1-dff.tIndex0));
 dff.t12 = round(linspace(dff.min+1,dff.max-1,dff.tIndex2-dff.tIndex1));
@@ -104,10 +104,11 @@ dff.t45 = round(linspace(dff.min,dff.min,dff.tIndex5+1-dff.tIndex4));
 % Get index based on dff.pX
 indices = [dff.t01 dff.t12 dff.t23 dff.t34 dff.t45];
 plot(indices); grid on; ylim([0 dff.max+1]); xlim([1 nOfScriptsFunctions]);
-yticks(round([linspace(dff.min,dff.max,length(1:dff.max))]))%ytickformat('%1d') 
-ylabel('Difficulty (1-10)' ); xlabel('Number of assignments')
-title(['Difficulty of this exam: ' extractAfter(nm.CurrExamDir,'_')]); 
+yticks(round([linspace(dff.min,dff.max,length(1:dff.max))]))%ytickformat('%1d')
+ylabel('Points per assignment' ); xlabel('Number of assignments')
+title(['Difficulty of this exam: ' extractAfter(nm.CurrExamDir,'_') ' (Totalpoints: ' num2str(sum(indices)) ')']);
 savefig([nm.CurrExamDir '_DifficultyProgress.fig'])
+
 %% The actual assignment by assuming a randomized struct AssInfo.
 sAssigned(1:nOfScriptsFunctions) = struct('apSOL',[],'apQ',[]);
 for n = 1:nOfScriptsFunctions
@@ -119,18 +120,18 @@ for n = 1:nOfScriptsFunctions
     % Some logic in case all variants of question are used...
     nWhile = 1;
     try
-    while nRound > AssInfo.FuncScrip(nFS).numVariants
-        nn = nWhile + n;
-        dff.L(indices(nn)).selected = dff.L(indices(nn)).selected + 1;
-        nRound = ceil(dff.L(indices(nn)).selected / dff.L(indices(nn)).num);
-        nFS = mod(dff.L(indices(nn)).selected + dff.L(indices(nn)).num-1,dff.L(indices(nn)).num)+1;
-        nFS = dff.L(indices(nn)).ind(nFS);
-        nWhile = nWhile + 1;
-    end
-    % Assume the AssInfo is randomized
-    Q = AssInfo.FuncScrip(nFS).files(nRound);
-    Qpoints = AssInfo.FuncScrip(nFS).points;
-    catch err    
+        while nRound > AssInfo.FuncScrip(nFS).numVariants
+            nn = nWhile + n;
+            dff.L(indices(nn)).selected = dff.L(indices(nn)).selected + 1;
+            nRound = ceil(dff.L(indices(nn)).selected / dff.L(indices(nn)).num);
+            nFS = mod(dff.L(indices(nn)).selected + dff.L(indices(nn)).num-1,dff.L(indices(nn)).num)+1;
+            nFS = dff.L(indices(nn)).ind(nFS);
+            nWhile = nWhile + 1;
+        end
+        % Assume the AssInfo is randomized
+        Q = AssInfo.FuncScrip(nFS).files(nRound);
+        Qpoints = AssInfo.FuncScrip(nFS).points;
+    catch err
         error([mfilename ': Probably too litte variants of assignments.' newline err.message]);
     end
     
@@ -140,6 +141,17 @@ for n = 1:nOfScriptsFunctions
     % Copy function/script to new file
     rpFinQ = fullfile(rpExamDirFS,['opdracht_' num2str(n) '.m']);
     copyfile(apQ,rpFinQ);
+    
+    % Copy dir with data files
+    dirWithDataFiles = GetPathOneLevelUp(apQ,2);
+    addpath(genpath(dirWithDataFiles));
+    if exist(fullfile(dirWithDataFiles,'Databestanden'),'dir')
+        copyfile(fullfile(dirWithDataFiles,'Databestanden'),fullfile(fileparts(rpFinQ),'Databestanden'));
+        copyfile(fullfile(dirWithDataFiles,'Databestanden'),fullfile(fileparts(rpFinQSOL),'Databestanden'))
+    end
+    rmpath(genpath(dirWithDataFiles));
+    
+    % Copy solution
     rpFinQSOL = fullfile(rpExamDirFSSOL,['opdracht_' num2str(n) '.m']);
     copyfile(apQSOL,rpFinQSOL);
     % Rename all txt of new questions.
