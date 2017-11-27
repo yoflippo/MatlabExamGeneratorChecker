@@ -1,43 +1,41 @@
 %% Vraag 14
 %
-% Stelling 1:   In de Command Window wordt het woord 'Kort' afgedrukt:
-%				                                                      
-%				======= Code =======                                  
-%				                                                      
-%				Persoon = 'Herre'                                     
-%				                                                      
-%				switch Persoon                                        
-%				    case 'Mark'                                       
-%				        'Jippie'                                      
-%				    case 'Herre'                                      
-%				        'Klopt'                                       
-%				    otherwise                                         
-%				        'Niemand'                                     
-%				end                                                   
-%				                                                      
-%				======= Code =======                                  
+% Stelling 1:   In de Command Window wordt het woord 'Klopt' afgedrukt:
+%				                                                       
+%				======= Code =======                                   
+%				                                                       
+%				Persoon = 'Herre'                                      
+%				                                                       
+%				switch Persoon                                         
+%				    case 'Mark'                                        
+%				        'Jippie'                                       
+%				    case 'Herre'                                       
+%				        'Klopt'                                        
+%				    otherwise                                          
+%				        'Niemand'                                      
+%				end                                                    
+%				                                                       
+%				======= Code =======                                   
 %
-% Stelling 2:   De twee code voorbeelden doen exact hetzelfde:
-%				                                              
-%				======= Code1 =======                         
-%				spier = 1                                     
-%				switch spier                                  
-%				    case 1                                    
-%				        'Brachialis'                          
-%				    otherwise                                 
-%				        'Geen spier'                          
-%				end                                           
-%				======= Code1 =======                         
-%				                                              
-%				                                              
-%				======= Code2 =======                         
-%				spier = 1                                     
-%				if spier == 1                                 
-%				    'Brachialis'                              
-%				else                                          
-%				    'Geen spier'                              
-%				end                                           
-%				======= Code2 =======                         
+% Stelling 2:   In de Command Window wordt de 'Brachialis' afgedrukt:
+%				                                                     
+%				======= Code =======                                 
+%				                                                     
+%				spier = 1                                            
+%				switch spier                                         
+%				    case 1                                           
+%				        'Brachialis'                                 
+%				    case 2                                           
+%				        'Rector femoris'                             
+%				    case 3                                           
+%				        'Quadriceps'                                 
+%				    case 4                                           
+%				        'tibialis'                                   
+%				    otherwise                                        
+%				        'Geen spier'                                 
+%				end                                                  
+%				                                                     
+%				======= Code =======                                 
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

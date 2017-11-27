@@ -13,7 +13,7 @@
 %
 % Stelling 2:   Zie het onderstaande code voorbeeld.                     
 %				De input(-parameter) 'fake' wordt in de onderstaande code
-%				niet gebruikt.                                           
+%				gebruikt.                                                
 %				                                                         
 %				======= Code =======                                     
 %				                                                         

@@ -2,25 +2,20 @@
 %
 % Stelling 1:   De volgende code wordt geevalueerd tot een logische 1:
 %				                                                      
-%				                                                      
 %				======= Code =======                                  
-%				var = 1;                                              
-%				var = 0;                                              
-%				var2 = 1;                                             
+%				var1 = 1;                                             
+%				var2 = 0;                                             
+%				var3 = 1;                                             
 %				                                                      
-%				var | var                                             
+%				var2 | var2                                           
 %				======= Code =======                                  
 %
-% Stelling 2:   De OR-operator geeft ook bij getallen ongelijk aan nul een logische
-%				1 terug.                                                           
-%				                                                                   
-%				Bijvoorbeeld:                                                      
-%				                                                                   
-%				======= Code =======                                               
-%				                                                                   
-%				2 | 3                                                              
-%				                                                                   
-%				======= Code =======                                               
+% Stelling 2:   De OR-operator geeft in onderstaand voorbeeld een 
+%				logische 0 terug.                                 
+%				                                                  
+%				======= Code =======                              
+%				2 | 3                                             
+%				======= Code =======                              
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

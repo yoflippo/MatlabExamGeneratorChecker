@@ -1,6 +1,6 @@
 %% Vraag 9
 %
-% Stelling 1:   De volgende code wordt geevalueerd tot een logische 1:
+% Stelling 1:   De volgende code wordt geevalueerd tot een logische 0:
 %				                                                      
 %				======= Code =======                                  
 %				                                                      

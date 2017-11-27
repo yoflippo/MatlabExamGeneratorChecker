@@ -1,7 +1,7 @@
 %% Vraag 1
 %
 % Stelling 1:   In Matlab laat de Current Folder zien in welke folder Matlab
-%				op dit moment aan het werken.                               
+%				op dit moment aan het werken is.                            
 %
 % Stelling 2:   De naam van een script mag niet beginnen met een 
 %				willekeurig symbool                              

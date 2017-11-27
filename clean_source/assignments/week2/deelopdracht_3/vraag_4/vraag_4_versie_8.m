@@ -4,7 +4,7 @@
 %				1 - OR()                                                   
 %				2 - |||                                                    
 %
-% Stelling 2:   De volgende code geeft een logische 1 terug:
+% Stelling 2:   De volgende code geeft een logische 0 terug:
 %				                                            
 %				======= Code =======                        
 %				                                            

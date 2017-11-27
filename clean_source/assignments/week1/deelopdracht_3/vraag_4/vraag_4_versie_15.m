@@ -1,7 +1,7 @@
 %% Vraag 4
 %
 % Stelling 1:   Als je een breakpoint zet op een bepaalde regel, dan is die
-%				regel als uitgevoerd door Matlab.                          
+%				regel al uitgevoerd door Matlab.                           
 %
 % Stelling 2:   Als je programma is gestopt m.b.v. een breakpoint dan
 %				kun je niet de variabelen van de Workspace bekijken. 

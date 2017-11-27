@@ -2,7 +2,7 @@
 %
 % Stelling 1:   De OR-operator werkt op twee operands.
 %
-% Stelling 2:   De volgende code geeft een logische 1 terug:
+% Stelling 2:   De volgende code geeft een logische 0 terug:
 %				                                            
 %				======= Code =======                        
 %				                                            

@@ -8,7 +8,7 @@
 %				                                                      
 %				======= Code =======                                  
 %
-% Stelling 2:   De volgende code wordt geevalueerd tot een logische 1:
+% Stelling 2:   De volgende code wordt geevalueerd tot een logische 0:
 %				                                                      
 %				======= Code =======                                  
 %				                                                      

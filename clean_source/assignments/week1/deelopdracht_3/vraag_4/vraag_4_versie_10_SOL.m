@@ -16,7 +16,7 @@
 %				======= Code =======                                 
 %
 % Stelling 2:   Als je een breakpoint zet op een bepaalde regel, dan is die
-%				regel als uitgevoerd door Matlab.                          
+%				regel al uitgevoerd door Matlab.                           
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

@@ -1,7 +1,7 @@
 %% Vraag 1
 %
 % Stelling 1:   In Matlab laat de Current Folder zien in welke folder Matlab
-%				op dit moment aan het werken.                               
+%				op dit moment aan het werken is.                            
 %
 % Stelling 2:   In de Workspace staan de variabelen die Matlab heeft
 %				gebruikt na het uitvoeren van een programma.        

@@ -1,0 +1,1 @@
+Het is mogelijk om een .mat file te openen met Excel.

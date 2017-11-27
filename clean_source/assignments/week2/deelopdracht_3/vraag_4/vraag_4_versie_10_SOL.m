@@ -5,11 +5,11 @@
 %				2 - ||                                                     
 %				3 - |                                                      
 %
-% Stelling 2:   De volgende code geeft een logische 0 terug:
+% Stelling 2:   De volgende code geeft een logische 1 terug:
 %				                                            
 %				======= Code =======                        
 %				                                            
-%				1 | 1                                       
+%				0 | 1                                       
 %				                                            
 %				======= Code =======                        
 %

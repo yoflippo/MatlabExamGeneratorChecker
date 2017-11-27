@@ -6,7 +6,7 @@
 % Geef deze functie de volgende inputs:
 % Gastronemicus, RectusFemoris, Brachialis
 %
-% Als de Gastronemicus ongelijk is aan 0 of 1 moet de output van de functie
+% Als de Gastronemicus gelijk is aan 0 of 1 moet de output van de functie
 % altijd -1 zijn.
 % In elk ander geval moet je de waardes in RectusFemoris en Brachialis bij
 % elkaar optellen.
