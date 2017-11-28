@@ -96,7 +96,12 @@ for nW = length(Weeks)
         DirDatabestanden = deepestAssignFolders(fndDirDatabestanden);
         deepestAssignFolders(fndDirDatabestanden)=[];
     end
-    deepestAssignFolders(contains(deepestAssignFolders,'deelopdracht_0')==1)=[];
+    fndAss0 = contains(deepestAssignFolders,'deelopdracht_0')==1;
+    apAss0 = [];
+    if any(fndAss0)
+        apAss0 = deepestAssignFolders(fndAss0);
+        deepestAssignFolders(fndAss0)=[];
+    end
     
     % Make path
     nDeepestDir = length(deepestAssignFolders);
@@ -203,11 +208,17 @@ for nW = length(Weeks)
             rp = fullfile(apCurrStudWk,rpDatabestanden{1});
             mkdir(rp);
             copyfiles(DirDatabestanden{1},rp);
-            %SOL    
+            %SOL
             rp = fullfile(apCurrStudWkSOL,rpDatabestanden{1});
             mkdir(rp);
             copyfiles(DirDatabestanden{1},rp);
         end
+        
+        if any(fndAss0)
+            copyfiles(apAss0{1},fullfile(apCurrStudWk,'deelopdracht_0'));
+            copyfiles(apAss0{1},fullfile(apCurrStudWkSOL,'deelopdracht_0'));
+        end
+        
         numAssignment = getFolders(pwd);
         numLastAss = str2double(replace(numAssignment{end},'deelopdracht_',''))+1;
         nmLastAssignmentDir = ['deelopdracht_' num2str(numLastAss)];

@@ -11,7 +11,7 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
-weeknum = '2'
+weeknum = '3'
 thisWeek = ['week' weeknum]
 cd('student_assignments');
 cd(thisWeek);
@@ -59,9 +59,11 @@ for nZ = 1:nMailsToSend
         %% construct emailadres
         sEma = {[sNum '@student.hhs.nl']};
         sAtt = fullfile(pwd,zips(nZ).name) ;
-        sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+        sendmail(sEma,...
+        ['Biostatica Matlab: ' thisWeek ' eindopdracht'],chr,sAtt);
         nSendMails = nSendMails + 1;
     catch err
+        sNum
         keyboard
     end
 end
@@ -69,14 +71,14 @@ disp(['Send mails: ' num2str(nSendMails)]);
 cd(con.BASEFOLDER)
 
 
-function sendEmailrecursive(sEma,thisWeek,chr,sAtt)
-try
-    sendmail(sEma,...
-        ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
-catch
-    pause(1) %Sometimes the the sendmail function does not work properly
-    sendEmailrecursive(sEma,thisWeek,chr,sAtt)
-    keyboard
-end
-
-end
+% function sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+% try
+%     sendmail(sEma,...
+%         ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
+% catch
+%     pause(5) %Sometimes the the sendmail function does not work properly
+%     sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+%     keyboard
+% end
+% 
+% end

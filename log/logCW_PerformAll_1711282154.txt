@@ -2722,3 +2722,3710 @@ studentMatrix =
     13123580          10
     15125343           1
     14068826          10
+    17031656           1
+    17014387           1
+    17041813           1
+    17054206           1
+    17041740           1
+    13046535          10
+    17039436           1
+    17126975           1
+    16102037           1
+    17038391           1
+    17099986           1
+    17109272           1
+    17039231           1
+    17085659           1
+    11030852          10
+    15049426          10
+    17021936           1
+    17062179           1
+    16129660           1
+    17062780           1
+    17114993           1
+    16073312           1
+    17068541           1
+    17109817           1
+    17015413           1
+    17083303           1
+    17071410           1
+    17069610           1
+    17040450           1
+    17075424           1
+    17100178           1
+    17047145           1
+    17130182           1
+    17094992           1
+    17143802           1
+    16049284           1
+    17054141           1
+    17119359           1
+    16013891           1
+    17009812           1
+    17059496           1
+    17019923           1
+    17068975           1
+    17063264           1
+    17086299           1
+    17105331           1
+    16030451           1
+    16109031           1
+    17044960           1
+    17095824           1
+    16011104           1
+    16105370           1
+    17001463           1
+    17051339           1
+    17127874           1
+    17027284           1
+    16012259           1
+    17137454           1
+    17079160           1
+    17048230           1
+    16077253           1
+    17082153           1
+    17095107           1
+    17125383           1
+    17116562           1
+    17142385           1
+    17099544           1
+    17026091           1
+    17067278           1
+    16085256           1
+
+
+averageGrade =
+
+    10
+
+Elapsed time is 9.966172 seconds.
+execute create week assignment scripts
+Check for the existence of needed supporting scripts/function files
+Generating assignents for WEEK: 3
+4.873: Empty folder with files for testing
+5.77: Create a student specific folder in every week folder
+6.012: Get overview of files
+6.286: Fill every student folder with the number of assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\bCreateWeekAssignments.m',217,1)">217 </a>        if any(fndAss0)
+copyfiles(apAss0,apCurrStudWk);
+[Warning: copyfiles: Argument must contain a character vector.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfiles', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\copyFiles\copyfiles.m', 43)" style="font-weight:bold">copyfiles</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\copyFiles\copyfiles.m',43,0)">line 43</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('bCreateWeekAssignments', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\bCreateWeekAssignments.m', 217)" style="font-weight:bold">bCreateWeekAssignments</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\bCreateWeekAssignments.m',217,0)">line 217</a>)] 
+copyfiles(apAss0{1},apCurrStudWk);
+copyfiles(apAss0{1},fullfile(apCurrStudWk,'deelopdracht_0'));
+if system_dependent('IsDebugMode')==1, dbquit; end
+execute create week assignment scripts
+Check for the existence of needed supporting scripts/function files
+Generating assignents for WEEK: 3
+0.372: Empty folder with files for testing
+0.38: Create a student specific folder in every week folder
+0.574: Get overview of files
+0.742: Fill every student folder with the number of assignments
+127.774: Generate some test files for the Checking script
+127.959: Generate test folders with data to simulate students with wrong assignments
+128.012: END SCRIPT
+Elapsed time is 128.017512 seconds.
+Copy certain testfiles to directory submitted
+Execute check assignments
+Check for the existence of needed supporting scripts/function files
+Start with script
+week3
+0.005: Check if needed folder exists, if not stop execution of script
+0.006: Check which students have submitted their assignments. Student without do not get any points
+101 students did not submit their assignments
+1.698: Check if the HASH-codes in every m-file of the students is intact
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+3.679: Check for each student if they have their correct assignments
+4.533: Get the number of points for all week assignments
+4.792: Put in dictionary and save in MAT-file
+4.805: Check the answer of the students and track their points if correct
+
+studentFolder =
+
+    '17006953'
+
+
+studentFolder =
+
+    '17052424'
+
+
+studentFolder =
+
+    '17094879'
+
+
+studentFolder =
+
+    '17136423'
+
+
+studentFolder =
+
+    '17017459'
+
+
+studentFolder =
+
+    '17098351'
+
+
+studentFolder =
+
+    '17042690'
+
+
+studentFolder =
+
+    '17068029'
+
+
+studentFolder =
+
+    '17055148'
+
+
+studentFolder =
+
+    '17128560'
+
+
+studentFolder =
+
+    '17067499'
+
+
+studentFolder =
+
+    '17110513'
+
+
+studentFolder =
+
+    '16021754'
+
+
+studentFolder =
+
+    '17082625'
+
+
+studentFolder =
+
+    '17080533'
+
+
+studentFolder =
+
+    '17139678'
+
+
+studentFolder =
+
+    '17040752'
+
+
+studentFolder =
+
+    '16092201'
+
+
+studentFolder =
+
+    '17060311'
+
+
+studentFolder =
+
+    '17104343'
+
+
+studentFolder =
+
+    '17039770'
+
+
+studentFolder =
+
+    '17017475'
+
+
+studentFolder =
+
+    '17085187'
+
+
+studentFolder =
+
+    '17071488'
+
+
+studentFolder =
+
+    '17029848'
+
+
+studentFolder =
+
+    '17052386'
+
+
+studentFolder =
+
+    '17086620'
+
+
+studentFolder =
+
+    '17029198'
+
+
+studentFolder =
+
+    '16132327'
+
+
+studentFolder =
+
+    '17033659'
+
+
+studentFolder =
+
+    '17015111'
+
+
+studentFolder =
+
+    '17058880'
+
+
+studentFolder =
+
+    '17056306'
+
+
+studentFolder =
+
+    '13123580'
+
+Elapsed time is 11.037187 seconds.
+
+studentFolder =
+
+    '15125343'
+
+
+studentFolder =
+
+    '14068826'
+
+Elapsed time is 11.076799 seconds.
+
+studentFolder =
+
+    '17031656'
+
+
+studentFolder =
+
+    '17014387'
+
+
+studentFolder =
+
+    '17041813'
+
+
+studentFolder =
+
+    '17054206'
+
+
+studentFolder =
+
+    '17041740'
+
+
+studentFolder =
+
+    '13046535'
+
+Elapsed time is 11.128587 seconds.
+
+studentFolder =
+
+    '17039436'
+
+
+studentFolder =
+
+    '17126975'
+
+
+studentFolder =
+
+    '16102037'
+
+
+studentFolder =
+
+    '17038391'
+
+
+studentFolder =
+
+    '17099986'
+
+
+studentFolder =
+
+    '17109272'
+
+
+studentFolder =
+
+    '17039231'
+
+
+studentFolder =
+
+    '17085659'
+
+
+studentFolder =
+
+    '11030852'
+
+Elapsed time is 10.706557 seconds.
+
+studentFolder =
+
+    '15049426'
+
+Elapsed time is 10.469809 seconds.
+
+studentFolder =
+
+    '17021936'
+
+
+studentFolder =
+
+    '17062179'
+
+
+studentFolder =
+
+    '16129660'
+
+
+studentFolder =
+
+    '17062780'
+
+
+studentFolder =
+
+    '17114993'
+
+
+studentFolder =
+
+    '16073312'
+
+
+studentFolder =
+
+    '17068541'
+
+
+studentFolder =
+
+    '17109817'
+
+
+studentFolder =
+
+    '17015413'
+
+
+studentFolder =
+
+    '17083303'
+
+
+studentFolder =
+
+    '17071410'
+
+
+studentFolder =
+
+    '17069610'
+
+
+studentFolder =
+
+    '17040450'
+
+
+studentFolder =
+
+    '17075424'
+
+
+studentFolder =
+
+    '17100178'
+
+
+studentFolder =
+
+    '17047145'
+
+
+studentFolder =
+
+    '17130182'
+
+
+studentFolder =
+
+    '17094992'
+
+
+studentFolder =
+
+    '17143802'
+
+
+studentFolder =
+
+    '16049284'
+
+
+studentFolder =
+
+    '17054141'
+
+
+studentFolder =
+
+    '17119359'
+
+
+studentFolder =
+
+    '16013891'
+
+
+studentFolder =
+
+    '17009812'
+
+
+studentFolder =
+
+    '17059496'
+
+
+studentFolder =
+
+    '17019923'
+
+
+studentFolder =
+
+    '17068975'
+
+
+studentFolder =
+
+    '17063264'
+
+
+studentFolder =
+
+    '17086299'
+
+
+studentFolder =
+
+    '17105331'
+
+
+studentFolder =
+
+    '16030451'
+
+
+studentFolder =
+
+    '16109031'
+
+
+studentFolder =
+
+    '17044960'
+
+
+studentFolder =
+
+    '17095824'
+
+
+studentFolder =
+
+    '16011104'
+
+
+studentFolder =
+
+    '16105370'
+
+
+studentFolder =
+
+    '17001463'
+
+
+studentFolder =
+
+    '17051339'
+
+
+studentFolder =
+
+    '17127874'
+
+
+studentFolder =
+
+    '17027284'
+
+
+studentFolder =
+
+    '16012259'
+
+
+studentFolder =
+
+    '17137454'
+
+
+studentFolder =
+
+    '17079160'
+
+
+studentFolder =
+
+    '17048230'
+
+
+studentFolder =
+
+    '16077253'
+
+
+studentFolder =
+
+    '17082153'
+
+
+studentFolder =
+
+    '17095107'
+
+
+studentFolder =
+
+    '17125383'
+
+
+studentFolder =
+
+    '17116562'
+
+
+studentFolder =
+
+    '17142385'
+
+
+studentFolder =
+
+    '17099544'
+
+
+studentFolder =
+
+    '17026091'
+
+
+studentFolder =
+
+    '17067278'
+
+
+studentFolder =
+
+    '16085256'
+
+
+studentMatrix =
+
+    17006953           1
+    17052424           1
+    17094879           1
+    17136423           1
+    17017459           1
+    17098351           1
+    17042690           1
+    17068029           1
+    17055148           1
+    17128560           1
+    17067499           1
+    17110513           1
+    16021754           1
+    17082625           1
+    17080533           1
+    17139678           1
+    17040752           1
+    16092201           1
+    17060311           1
+    17104343           1
+    17039770           1
+    17017475           1
+    17085187           1
+    17071488           1
+    17029848           1
+    17052386           1
+    17086620           1
+    17029198           1
+    16132327           1
+    17033659           1
+    17015111           1
+    17058880           1
+    17056306           1
+    13123580           1
+    15125343           1
+    14068826           1
+    17031656           1
+    17014387           1
+    17041813           1
+    17054206           1
+    17041740           1
+    13046535           1
+    17039436           1
+    17126975           1
+    16102037           1
+    17038391           1
+    17099986           1
+    17109272           1
+    17039231           1
+    17085659           1
+    11030852           1
+    15049426           1
+    17021936           1
+    17062179           1
+    16129660           1
+    17062780           1
+    17114993           1
+    16073312           1
+    17068541           1
+    17109817           1
+    17015413           1
+    17083303           1
+    17071410           1
+    17069610           1
+    17040450           1
+    17075424           1
+    17100178           1
+    17047145           1
+    17130182           1
+    17094992           1
+    17143802           1
+    16049284           1
+    17054141           1
+    17119359           1
+    16013891           1
+    17009812           1
+    17059496           1
+    17019923           1
+    17068975           1
+    17063264           1
+    17086299           1
+    17105331           1
+    16030451           1
+    16109031           1
+    17044960           1
+    17095824           1
+    16011104           1
+    16105370           1
+    17001463           1
+    17051339           1
+    17127874           1
+    17027284           1
+    16012259           1
+    17137454           1
+    17079160           1
+    17048230           1
+    16077253           1
+    17082153           1
+    17095107           1
+    17125383           1
+    17116562           1
+    17142385           1
+    17099544           1
+    17026091           1
+    17067278           1
+    16085256           1
+
+
+averageGrade =
+
+     1
+
+Elapsed time is 10.581173 seconds.
+week3
+Execute check assignments
+Check for the existence of needed supporting scripts/function files
+Start with script
+week3
+0.005: Check if needed folder exists, if not stop execution of script
+0.006: Check which students have submitted their assignments. Student without do not get any points
+101 students did not submit their assignments
+1.624: Check if the HASH-codes in every m-file of the students is intact
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\11030852\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13046535\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\13123580\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\14068826\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+
+p =
+
+    'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\submitted\week3\15049426\week3'
+
+3.666: Check for each student if they have their correct assignments
+4.468: Get the number of points for all week assignments
+4.696: Put in dictionary and save in MAT-file
+4.708: Check the answer of the students and track their points if correct
+
+studentFolder =
+
+    '17006953'
+
+
+studentFolder =
+
+    '17052424'
+
+
+studentFolder =
+
+    '17094879'
+
+
+studentFolder =
+
+    '17136423'
+
+
+studentFolder =
+
+    '17017459'
+
+
+studentFolder =
+
+    '17098351'
+
+
+studentFolder =
+
+    '17042690'
+
+
+studentFolder =
+
+    '17068029'
+
+
+studentFolder =
+
+    '17055148'
+
+
+studentFolder =
+
+    '17128560'
+
+
+studentFolder =
+
+    '17067499'
+
+
+studentFolder =
+
+    '17110513'
+
+
+studentFolder =
+
+    '16021754'
+
+
+studentFolder =
+
+    '17082625'
+
+
+studentFolder =
+
+    '17080533'
+
+
+studentFolder =
+
+    '17139678'
+
+
+studentFolder =
+
+    '17040752'
+
+
+studentFolder =
+
+    '16092201'
+
+
+studentFolder =
+
+    '17060311'
+
+
+studentFolder =
+
+    '17104343'
+
+
+studentFolder =
+
+    '17039770'
+
+
+studentFolder =
+
+    '17017475'
+
+
+studentFolder =
+
+    '17085187'
+
+
+studentFolder =
+
+    '17071488'
+
+
+studentFolder =
+
+    '17029848'
+
+
+studentFolder =
+
+    '17052386'
+
+
+studentFolder =
+
+    '17086620'
+
+
+studentFolder =
+
+    '17029198'
+
+
+studentFolder =
+
+    '16132327'
+
+
+studentFolder =
+
+    '17033659'
+
+
+studentFolder =
+
+    '17015111'
+
+
+studentFolder =
+
+    '17058880'
+
+
+studentFolder =
+
+    '17056306'
+
+
+studentFolder =
+
+    '13123580'
+
+Elapsed time is 10.677077 seconds.
+
+studentFolder =
+
+    '15125343'
+
+
+studentFolder =
+
+    '14068826'
+
+Elapsed time is 10.851666 seconds.
+
+studentFolder =
+
+    '17031656'
+
+
+studentFolder =
+
+    '17014387'
+
+
+studentFolder =
+
+    '17041813'
+
+
+studentFolder =
+
+    '17054206'
+
+
+studentFolder =
+
+    '17041740'
+
+
+studentFolder =
+
+    '13046535'
+
+Elapsed time is 10.609850 seconds.
+
+studentFolder =
+
+    '17039436'
+
+
+studentFolder =
+
+    '17126975'
+
+
+studentFolder =
+
+    '16102037'
+
+
+studentFolder =
+
+    '17038391'
+
+
+studentFolder =
+
+    '17099986'
+
+
+studentFolder =
+
+    '17109272'
+
+
+studentFolder =
+
+    '17039231'
+
+
+studentFolder =
+
+    '17085659'
+
+
+studentFolder =
+
+    '11030852'
+
+Elapsed time is 10.471606 seconds.
+
+studentFolder =
+
+    '15049426'
+
+Elapsed time is 10.221368 seconds.
+
+studentFolder =
+
+    '17021936'
+
+
+studentFolder =
+
+    '17062179'
+
+
+studentFolder =
+
+    '16129660'
+
+
+studentFolder =
+
+    '17062780'
+
+
+studentFolder =
+
+    '17114993'
+
+
+studentFolder =
+
+    '16073312'
+
+
+studentFolder =
+
+    '17068541'
+
+
+studentFolder =
+
+    '17109817'
+
+
+studentFolder =
+
+    '17015413'
+
+
+studentFolder =
+
+    '17083303'
+
+
+studentFolder =
+
+    '17071410'
+
+
+studentFolder =
+
+    '17069610'
+
+
+studentFolder =
+
+    '17040450'
+
+
+studentFolder =
+
+    '17075424'
+
+
+studentFolder =
+
+    '17100178'
+
+
+studentFolder =
+
+    '17047145'
+
+
+studentFolder =
+
+    '17130182'
+
+
+studentFolder =
+
+    '17094992'
+
+
+studentFolder =
+
+    '17143802'
+
+
+studentFolder =
+
+    '16049284'
+
+
+studentFolder =
+
+    '17054141'
+
+
+studentFolder =
+
+    '17119359'
+
+
+studentFolder =
+
+    '16013891'
+
+
+studentFolder =
+
+    '17009812'
+
+
+studentFolder =
+
+    '17059496'
+
+
+studentFolder =
+
+    '17019923'
+
+
+studentFolder =
+
+    '17068975'
+
+
+studentFolder =
+
+    '17063264'
+
+
+studentFolder =
+
+    '17086299'
+
+
+studentFolder =
+
+    '17105331'
+
+
+studentFolder =
+
+    '16030451'
+
+
+studentFolder =
+
+    '16109031'
+
+
+studentFolder =
+
+    '17044960'
+
+
+studentFolder =
+
+    '17095824'
+
+
+studentFolder =
+
+    '16011104'
+
+
+studentFolder =
+
+    '16105370'
+
+
+studentFolder =
+
+    '17001463'
+
+
+studentFolder =
+
+    '17051339'
+
+
+studentFolder =
+
+    '17127874'
+
+
+studentFolder =
+
+    '17027284'
+
+
+studentFolder =
+
+    '16012259'
+
+
+studentFolder =
+
+    '17137454'
+
+
+studentFolder =
+
+    '17079160'
+
+
+studentFolder =
+
+    '17048230'
+
+
+studentFolder =
+
+    '16077253'
+
+
+studentFolder =
+
+    '17082153'
+
+
+studentFolder =
+
+    '17095107'
+
+
+studentFolder =
+
+    '17125383'
+
+
+studentFolder =
+
+    '17116562'
+
+
+studentFolder =
+
+    '17142385'
+
+
+studentFolder =
+
+    '17099544'
+
+
+studentFolder =
+
+    '17026091'
+
+
+studentFolder =
+
+    '17067278'
+
+
+studentFolder =
+
+    '16085256'
+
+
+studentMatrix =
+
+    17006953           1
+    17052424           1
+    17094879           1
+    17136423           1
+    17017459           1
+    17098351           1
+    17042690           1
+    17068029           1
+    17055148           1
+    17128560           1
+    17067499           1
+    17110513           1
+    16021754           1
+    17082625           1
+    17080533           1
+    17139678           1
+    17040752           1
+    16092201           1
+    17060311           1
+    17104343           1
+    17039770           1
+    17017475           1
+    17085187           1
+    17071488           1
+    17029848           1
+    17052386           1
+    17086620           1
+    17029198           1
+    16132327           1
+    17033659           1
+    17015111           1
+    17058880           1
+    17056306           1
+    13123580          10
+    15125343           1
+    14068826          10
+    17031656           1
+    17014387           1
+    17041813           1
+    17054206           1
+    17041740           1
+    13046535          10
+    17039436           1
+    17126975           1
+    16102037           1
+    17038391           1
+    17099986           1
+    17109272           1
+    17039231           1
+    17085659           1
+    11030852          10
+    15049426          10
+    17021936           1
+    17062179           1
+    16129660           1
+    17062780           1
+    17114993           1
+    16073312           1
+    17068541           1
+    17109817           1
+    17015413           1
+    17083303           1
+    17071410           1
+    17069610           1
+    17040450           1
+    17075424           1
+    17100178           1
+    17047145           1
+    17130182           1
+    17094992           1
+    17143802           1
+    16049284           1
+    17054141           1
+    17119359           1
+    16013891           1
+    17009812           1
+    17059496           1
+    17019923           1
+    17068975           1
+    17063264           1
+    17086299           1
+    17105331           1
+    16030451           1
+    16109031           1
+    17044960           1
+    17095824           1
+    16011104           1
+    16105370           1
+    17001463           1
+    17051339           1
+    17127874           1
+    17027284           1
+    16012259           1
+    17137454           1
+    17079160           1
+    17048230           1
+    16077253           1
+    17082153           1
+    17095107           1
+    17125383           1
+    17116562           1
+    17142385           1
+    17099544           1
+    17026091           1
+    17067278           1
+    16085256           1
+
+
+averageGrade =
+
+    10
+
+Elapsed time is 10.329454 seconds.
+Check for the existence of needed supporting scripts/function files
+
+weeknum =
+
+    '3'
+
+
+thisWeek =
+
+    'week3'
+
+
+chr =
+
+    '
+     Beste student,
+     
+     Lees deze e-mail helemaal door!
+     
+     In de bijlage van deze e-mail staat jouw eindopdracht
+     van week 3 voor Biostatica Matlab.
+     
+     Op Blackboard staan de uiterlijke inlevermomenten van de week eindopdrachten.
+     
+     Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).
+     Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.
+     
+     Je mag de foldernamen, folderstructuren en bestandsnamen
+     van het zip-bestand NIET aanpassen!
+     
+     Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een
+     zip-bestand van al je werk. Dat specifieke zip-bestand moet je
+     uploaden via Blackboard. Indien je toch zelfstandig een
+     zip-bestand maakt, wordt je opdracht NIET nagekeken!
+     
+     Wij proberen jouw opdracht na het inlevermoment, binnen
+     10 werkdagen na te kijken. Je ontvangt je nagekeken werk
+     op dit e-mailadres.
+     Je bonuscijfer is nog niet bekend als je aan je tentamen begint.
+     
+     Stuur bij vragen/onduidelijkheden een e-mail naar mjschrau@hhs.nl
+     E-mails naar dit e-mailadres worden NIET gelezen.
+     
+     Met vriendelijke groet,
+     Mark Schrauwen'
+
+ function sendEmailrecursive(sEma,thisWeek,chr,sAtt)
+ 
+{Error: Function definitions are not permitted in this context.
+} 
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2017a\toolbox\matlab\iofun\sendmail.m', 162)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\matlab\iofun\sendmail.m',162,0)">line 162</a>)
+} 
+SendWEEKLYStudentAssignment
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('InitAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m', 32)" style="font-weight:bold">InitAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m',32,0)">line 32</a>)
+PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)The folder: helpercode was not found
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 3)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',3,0)">line 3</a>)
+InitAll
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+SendWEEKLYStudentAssignment
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m' could
+not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m' could
+not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m' could
+not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files
+
+weeknum =
+
+    '3'
+
+
+thisWeek =
+
+    'week3'
+
+
+chr =
+
+    '
+     Beste student,
+     
+     Lees deze e-mail helemaal door!
+     
+     In de bijlage van deze e-mail staat jouw eindopdracht
+     van week 3 voor Biostatica Matlab.
+     
+     Op Blackboard staan de uiterlijke inlevermomenten van de week eindopdrachten.
+     
+     Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).
+     Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.
+     
+     Je mag de foldernamen, folderstructuren en bestandsnamen
+     van het zip-bestand NIET aanpassen!
+     
+     Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een
+     zip-bestand van al je werk. Dat specifieke zip-bestand moet je
+     uploaden via Blackboard. Indien je toch zelfstandig een
+     zip-bestand maakt, wordt je opdracht NIET nagekeken!
+     
+     Wij proberen jouw opdracht na het inlevermoment, binnen
+     10 werkdagen na te kijken. Je ontvangt je nagekeken werk
+     op dit e-mailadres.
+     Je bonuscijfer is nog niet bekend als je aan je tentamen begint.
+     
+     Stuur bij vragen/onduidelijkheden een e-mail naar mjschrau@hhs.nl
+     E-mails naar dit e-mailadres worden NIET gelezen.
+     
+     Met vriendelijke groet,
+     Mark Schrauwen'
+
+['Biostatica Matlab: week ' thisWeek ' eindopdracht']
+
+ans =
+
+    'Biostatica Matlab: week week3 eindopdracht'
+
+['Biostatica Matlab: ' thisWeek ' eindopdracht']
+
+ans =
+
+    'Biostatica Matlab: week3 eindopdracht'
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+SendWEEKLYStudentAssignment
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files
+
+weeknum =
+
+    '3'
+
+
+thisWeek =
+
+    'week3'
+
+
+chr =
+
+    '
+     Beste student,
+     
+     Lees deze e-mail helemaal door!
+     
+     In de bijlage van deze e-mail staat jouw eindopdracht
+     van week 3 voor Biostatica Matlab.
+     
+     Op Blackboard staan de uiterlijke inlevermomenten van de week eindopdrachten.
+     
+     Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).
+     Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.
+     
+     Je mag de foldernamen, folderstructuren en bestandsnamen
+     van het zip-bestand NIET aanpassen!
+     
+     Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een
+     zip-bestand van al je werk. Dat specifieke zip-bestand moet je
+     uploaden via Blackboard. Indien je toch zelfstandig een
+     zip-bestand maakt, wordt je opdracht NIET nagekeken!
+     
+     Wij proberen jouw opdracht na het inlevermoment, binnen
+     10 werkdagen na te kijken. Je ontvangt je nagekeken werk
+     op dit e-mailadres.
+     Je bonuscijfer is nog niet bekend als je aan je tentamen begint.
+     
+     Stuur bij vragen/onduidelijkheden een e-mail naar mjschrau@hhs.nl
+     E-mails naar dit e-mailadres worden NIET gelezen.
+     
+     Met vriendelijke groet,
+     Mark Schrauwen'
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',64,1)">64  </a>        nSendMails = nSendMails + 1;
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+SendWEEKLYStudentAssignment
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m'
+could not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('InitAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m', 32)" style="font-weight:bold">InitAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m',32,0)">line 32</a>)
+PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)The folder: helpercode was not found
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 3)" style="font-weight:bold">SendWEEKLYSt
