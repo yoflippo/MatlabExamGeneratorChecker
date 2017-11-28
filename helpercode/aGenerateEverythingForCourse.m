@@ -102,7 +102,7 @@ for wk = 1:length(weekFolders)
                     if ~checkForPresenceTypeOfAssignmentPoints()
                         txterror = ['TypeOfAssignment_XXX and/or points.m not present in Current Folder!!' newline];
                         txterror = [txterror 'Folder:'  apCurrStudentFolder ' ' newline];
-                        error([newline txterror]);                   
+                        error([newline txterror]);
                     end
                 catch err
                     error([newline err.message]);

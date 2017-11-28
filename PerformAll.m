@@ -3,10 +3,10 @@ clear all;
 
 dbstop if error
 global gWeekNames;
-Weeks = 2;  % Adjust me!!!
+Weeks = 3;  % Adjust me!!!
 cnt = 1;
 for nW = 1:length(Weeks)
-    gWeekNames{cnt,nW} = ['week' num2str(Weeks(nW))]; 
+    gWeekNames{cnt,nW} = ['week' num2str(Weeks(nW))];
     cnt = cnt +1 ;
 end
 warning off
@@ -17,7 +17,7 @@ InitAll
 buAll(pwd,'')
 
 %% Fill in week to test
-weekToCorrect = 1;
+weekToCorrect = 3;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
 
@@ -65,11 +65,13 @@ if ~isequal(pwd,con.BASEFOLDER)
 end
 tic
 try
-    bCreateWeekAssignments(Weeks);
+    bCreateWeekAssignments(con,Weeks);
 catch err
     error([mfilename ' in bCreateWeekAssignments: ' newline  err.message])
 end
 toc
+
+
 
 %% TEST if all INcorrect solutions files pass
 disp('Copy certain testfiles to directory submitted');

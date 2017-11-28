@@ -1,4 +1,4 @@
-function bCreateWeekAssignments(Weeks)
+function bCreateWeekAssignments(con,Weeks)
 %CREATEWEEKASSIGNMENTS
 %   This is the second file needed to generate files for the course. The
 %   file depends on the Constants.m and the WEEK variable.
@@ -41,8 +41,13 @@ function bCreateWeekAssignments(Weeks)
 InitAll
 dbstop if error
 for nW = length(Weeks)
-    debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(Weeks(nW))]);
     
+    % Copy assignment zero
+    apAss0 = fullfile(con.Assignments,['week' num2str(Weeks(nW))],'deelopdracht_0');
+    mkdirIf(apAss0);
+    copyfiles(fullfile(con.BASEFOLDER,con.DIRHEADER,'deelopdracht_0'),apAss0);
+    
+    debugOutput(DEBUGOUTPUT,['Generating assignents for WEEK: ' num2str(Weeks(nW))]);
     weekNr = num2str(Weeks(nW));
     weekName = ['week' weekNr];
     apWkDirName = fullfile(con.BASEFOLDER, con.STUDENTASSFOLDER, weekName);
@@ -84,6 +89,15 @@ for nW = length(Weeks)
     % introducing some kind of detectable order.
     absPathCurrAssFolder = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName);
     deepestAssignFolders = GetDeepestFolders(absPathCurrAssFolder);
+    % Remove useless directories
+    fndDirDatabestanden = contains(deepestAssignFolders,'Databestanden')==1;
+    DirDatabestanden = [];
+    if any(fndDirDatabestanden)
+        DirDatabestanden = deepestAssignFolders(fndDirDatabestanden);
+        deepestAssignFolders(fndDirDatabestanden)=[];
+    end
+    deepestAssignFolders(contains(deepestAssignFolders,'deelopdracht_0')==1)=[];
+    
     % Make path
     nDeepestDir = length(deepestAssignFolders);
     numberOfAssignmentInDir = zeros(1,nDeepestDir);
@@ -94,7 +108,7 @@ for nW = length(Weeks)
         currPath = pwd;
         cd(fullfile(con.NAMEASSIGNMENTFOLDER,deepestAssignFolders{nTypeAss}));
         answerFilesInDir{nTypeAss} = dir(['*' con.SOLPOSTFIX '*']);
-        if isequal(length(answerFilesInDir{nTypeAss}),0)
+        if isequal(length(answerFilesInDir{nTypeAss}),0) && ~contains(deepestAssignFolders{nTypeAss},'Databestanden')  && ~contains(deepestAssignFolders{nTypeAss},'deelopdracht_0')
             error('A folder without files detected');
         end
         numberOfAssignmentInDir(nTypeAss) = length(answerFilesInDir{nTypeAss});
@@ -165,7 +179,7 @@ for nW = length(Weeks)
                     answerFileCounter(nAss) = cnt + 1;
                 end
             catch err
-                disp(err);
+                warning(err);
             end
         end
         
@@ -180,12 +194,25 @@ for nW = length(Weeks)
             con.LASTASSIGNMENT);
         % get the number of assignments starting from 1
         apCurrStudWk = fullfile(currStudentDir,weekName);
+        apCurrStudWkSOL = fullfile(currStudentDirSol,weekName);
+        
         cd(apCurrStudWk);
+        % Copy Databestanden
+        if any(fndDirDatabestanden)
+            rpDatabestanden = extractAfter(DirDatabestanden,['week' num2str(Weeks(nW))]);
+            rp = fullfile(apCurrStudWk,rpDatabestanden{1});
+            mkdir(rp);
+            copyfiles(DirDatabestanden{1},rp);
+            %SOL    
+            rp = fullfile(apCurrStudWkSOL,rpDatabestanden{1});
+            mkdir(rp);
+            copyfiles(DirDatabestanden{1},rp);
+        end
         numAssignment = getFolders(pwd);
         numLastAss = str2double(replace(numAssignment{end},'deelopdracht_',''))+1;
         nmLastAssignmentDir = ['deelopdracht_' num2str(numLastAss)];
         
-        mkdirIf(nmLastAssignmentDir);
+        mkdirIf(fullfile(apCurrStudWk,nmLastAssignmentDir));
         copyfile(finScriptStud,fullfile(apCurrStudWk,nmLastAssignmentDir));
         nmLastAssignmentSolDir = fullfile(currStudentDirSol,weekName,nmLastAssignmentDir);
         mkdirIf(nmLastAssignmentSolDir);
@@ -278,7 +305,6 @@ for nW = length(Weeks)
     %% Save the studentNumbers and their assigned hashes
     save(fullfile(con.NAMEASSIGNMENTFOLDER,weekName,['assignedHashes_' weekName]) ...
         ,'trackStudentAssignment');
-    
 end
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);
 

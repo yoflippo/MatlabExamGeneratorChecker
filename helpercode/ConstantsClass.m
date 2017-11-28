@@ -22,6 +22,7 @@ classdef ConstantsClass
         TESTFOLDER = 'fortesting';
         DIRSTUDENTNUMBERS = 'studentnumbers';
         DIRCLEANSRC = 'clean_source';
+        DIRHEADER = [ConstantsClass.DIRCLEANSRC filesep 'headers'];
         LISTWITHNEEDEDFOLDERS = {'helpercode' ConstantsClass.DIRCLEANSRC ConstantsClass.DIRSTUDENTNUMBERS ...
             ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};
         WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4'};
