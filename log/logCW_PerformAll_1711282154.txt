@@ -6428,4 +6428,68 @@ Check for the existence of needed supporting scripts/function files
 {Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('InitAll', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m', 32)" style="font-weight:bold">InitAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\InitAll.m',32,0)">line 32</a>)
 PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)The folder: helpercode was not found
 
-Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 3)" style="font-weight:bold">SendWEEKLYSt
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 3)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',3,0)">line 3</a>)
+InitAll
+} 
+if system_dependent('IsDebugMode')==1, dbcont; end
+SendWEEKLYStudentAssignment
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m' could
+not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m' could
+not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+[Warning: The file
+'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m' could
+not be cleared because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('SendWEEKLYStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m', 2)" style="font-weight:bold">SendWEEKLYStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\sendEmails\SendWEEKLYStudentAssignment.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files
+
+weeknum =
+
+    '3'
+
+
+thisWeek =
+
+    'week3'
+
+
+chr =
+
+    '
+     Beste student,
+     
+     Lees deze e-mail helemaal door!
+     
+     In de bijlage van deze e-mail staat jouw eindopdracht
+     van week 3 voor Biostatica Matlab.
+     
+     Op Blackboard staan de uiterlijke inlevermomenten van de week eindopdrachten.
+     
+     Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).
+     Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.
+     
+     Je mag de foldernamen, folderstructuren en bestandsnamen
+     van het zip-bestand NIET aanpassen!
+     
+     Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een
+     zip-bestand van al je werk. Dat specifieke zip-bestand moet je
+     uploaden via Blackboard. Indien je toch zelfstandig een
+     zip-bestand maakt, wordt je opdracht NIET nagekeken!
+     
+     Wij proberen jouw opdracht na het inlevermoment, binnen
+     10 werkdagen na te kijken. Je ontvangt je nagekeken werk
+     op dit e-mailadres.
+     Je bonuscijfer is nog niet bekend als je aan je tentamen begint.
+     
+     Stuur bij vragen/onduidelijkheden een e-mail naar mjschrau@hhs.nl
+     E-mails naar dit e-mailadres worden NIET gelezen.
+     
+     Met vriendelijke groet,
+     Mark Schrauwen'
+
+Send mails: 25
+buAll(pwd,'')

@@ -76,7 +76,10 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
     
     if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.testFunctionInput)) && res < 1
-        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
+        edit(apStudentSol)
+        edit(callerName)
+        edit(replace(callerName,'CHECK','SOL'))
+        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test 
     end
     
 else

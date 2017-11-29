@@ -28,7 +28,7 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
     try
         cd(con.LISTWITHNEEDEDFOLDERS{i});
         cd ..
-    catch
+    catch err
         error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
             'The folder: ' con.LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end

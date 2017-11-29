@@ -71,6 +71,9 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
     
     if length(checkingVar.nameVars) > 0 && ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.nameVars)) && res < 1 
+        edit(apStudentSol)
+        edit(callerName)
+        edit(replace(callerName,'CHECK','SOL'))
         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
     end
     
