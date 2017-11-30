@@ -10,10 +10,10 @@ function res = opdracht_2_versie_1_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'laatsteElement' 'snelheid'};
-checkingVar.literalsP = {'snelheid(end)' 1 'snelheid(' 1};
+checkingVar.literalsP = {};
 checkingVar.literalsA = {'NaN' 'snelheid(13)' 2};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'snelheid(end,end)' 'snelheid(end)' }};
 checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

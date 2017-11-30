@@ -1,6 +1,5 @@
 %% This files creates/checks every assignment and file
 clear all;
-
 dbstop if error
 global gWeekNames;
 Weeks = 3;  % Adjust me!!!
@@ -15,8 +14,7 @@ warning on
 addpath(genpath('helpercode'));
 InitAll
 buAll(pwd,'')
-
-%% Fill in week to test
+% Fill in week to test
 weekToCorrect = 2;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
@@ -121,6 +119,7 @@ return;
 
 %% Check manually copied submitted files
 % BU Cleaned submitted files from students before checking
+cd(con.BASEFOLDER)
 cd(con.STUDENTSUBFOLDER)
 zip(fullfile(con.BASEFOLDER,'submitted_bu',['bu_beforeChecking_wk' num2str(weekToCorrect) '_' datetimetxt() '.zip' ]),fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER))
 cd(con.BASEFOLDER)

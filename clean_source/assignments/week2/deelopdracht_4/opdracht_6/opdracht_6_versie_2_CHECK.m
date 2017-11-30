@@ -29,7 +29,7 @@ function res = opdracht_6_versie_1_CHECK(apStudentSol)
 % the SOLUTION:
 checkingVar.testFunctionInput = {6 7 8 9 10 11 12};
 checkingVar.literalsP = {'case' 5 'switch' 1 'outputvar' 5 '-1' 1};
-checkingVar.literalsA = {'NaN' 'if' 2 'else' 2};
+checkingVar.literalsA = {'NaN' 'if' 10 'else' 10};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

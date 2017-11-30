@@ -3,7 +3,8 @@
 % en een string met de naam S2 met als waarde quadriceps. 
 %
 % Laat met een bestaande functie zien, dat ze *niet* het zelfde zijn.
-% Stop de output van deze bestaande functie in de variabele 'vgl'
+% Stop de output van deze bestaande functie in de variabele 'vgl'.
+% Je mag geen if-statement gebruiken.
 
 S1='soleus';
 S2='quadriceps';

@@ -11,7 +11,7 @@ function res = opdracht_2_versie_1_CHECK(apStudentSol)
 
 checkingVar.nameVars = {'laatsteElement' 'positie'};
 checkingVar.literalsP = {'positie(end)' 1 'positie(' 1};
-checkingVar.literalsA = {'NaN' 'positie(13)' 2};
+checkingVar.literalsA = {'NaN' 'positie(13)' 4 'positie(1,13)' 4};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

@@ -44,19 +44,16 @@ res = 0;
 for nO = 1:length(literalsO)
     lit = literalsO{nO};
     lLit = length(literalsO{nO});
-    keyboard %%%%%%%%%%%%%%%%%%%%5
-    if mod(lLit,2)
-        error([mfilename ': The literalsO have to be even!!' ]);
-    end
-    
-    blTmp = false; 
+    blTmp = false;
     listTxt = [];
     for n = 1:length(lit)
         lit = replace(lit,' ','');
         blTmp = blTmp | findInString(txtns,lit{n});
         listTxt = [lit{n} '  ' listTxt];
+        if blTmp % if true we can stop
+            break;
+        end
     end
-
     
     if blTmp
         res = res + 1;
@@ -68,5 +65,4 @@ for nO = 1:length(literalsO)
     end
 end
 
-
-end
+end %function

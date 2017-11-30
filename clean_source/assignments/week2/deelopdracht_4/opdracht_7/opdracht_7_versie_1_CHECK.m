@@ -19,11 +19,11 @@ function res = opdracht_7_versie_1_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
 checkingVar.testFunctionInput = {1 0 -1 2 55};
-checkingVar.literalsP = {'output' 4 '66:99' 1 '55:99' 1};
+checkingVar.literalsP = {};
 checkingVar.literalsA = {'NaN' 3 'switch' 3};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
-checkingVar.literalsRO = {{'isequal(input,0)' 'input == 0'} {'isequal(input,1)' 'input == 1'}};
+checkingVar.literalsO = {{'66:99' '66:1:99'} {'55:1:99' '55:99'}};
+checkingVar.literalsRO = {};
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

@@ -20,7 +20,7 @@ checkingVar.testFunctionInput = {{1,2,3} {0,2,3} {2,2,3} {3,3,3} {-1,2,-2}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'output = 10' 1};
+checkingVar.literalsP = {'= 10' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3};

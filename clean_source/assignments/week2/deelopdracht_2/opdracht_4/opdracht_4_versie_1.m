@@ -4,5 +4,5 @@
 %
 % Laat met een bestaande functie zien, dat ze *niet* het zelfde zijn.
 % Stop de output van deze bestaande functie in de variabele 'vgl'
-
+% Je mag geen if-statement gebruiken.
 

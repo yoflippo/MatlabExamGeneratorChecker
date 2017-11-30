@@ -8,9 +8,9 @@ res = 0;
 %%==========
 
 %% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
-checkingVar.nameVars = {'result'};
-checkingVar.literalsP = {};
-checkingVar.literalsA = {'NaN'};
+checkingVar.nameVars = {};
+checkingVar.literalsP = {'result=' 1};
+checkingVar.literalsA = {'NaN' 'strcmp'};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {{  'lengteA == lengteB' 'lengteB == lengteA' ... 
                             'isequal(lengteA,lengteB)' 'isequal(lengteB,lengteA)'} };

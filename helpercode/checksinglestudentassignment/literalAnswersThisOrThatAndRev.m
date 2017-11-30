@@ -58,6 +58,9 @@ for nO = 1:length(literalsRO)
         listTxt = [lit{n} '  ' listTxt];
         tmp = replace(lit{n},' ','');
         blTmp = blTmp | findInString(txtns,tmp);
+        if blTmp % if true we can stop
+            break;
+        end
     end
     
     if blTmp

@@ -13,9 +13,9 @@ checkingVar.nameVars = {'resultaat'};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'varA' 2 'varB' 2 '|' 1};
+checkingVar.literalsP = {'varA' 2 'varB' 2};
 % FILL literalsA, With strings that should not be present.
-checkingVar.literalsA = {'resultaat=NaN'};
+checkingVar.literalsA = {'resultaat=NaN' 2 'resultaat =1' 2};
 % Reverse literals separated by spaces
 % FOR EXAMPLE:
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
@@ -25,11 +25,11 @@ checkingVar.literalsR = {};
 % checkingVar below this line can be removed
 % Test for literals and their variants
 % THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'varA | varB' 'varA || varB' 'or(varA, varB)' 'varB | varA' 'varB || varA' 'or(varB, varA)'}};
 % Test for literals and their (reversed) variants
 % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
 % THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
-checkingVar.literalsRO = {{'varA | varB' 'varA || varB'}};
+checkingVar.literalsRO = {};
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

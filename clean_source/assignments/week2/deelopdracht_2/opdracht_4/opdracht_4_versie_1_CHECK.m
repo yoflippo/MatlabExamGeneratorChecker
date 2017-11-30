@@ -19,14 +19,14 @@ function res = opdracht_4_versie_1_CHECK(apStudentSol)
 
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
-checkingVar.nameVars = {'S1' 'S2' 'vgl'};
+checkingVar.nameVars = {'vgl'};
 % FILL literalsP,  WITH CODE THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'strcmp(S1,S2)' 1 'strcmp(S1,S2)' 1 'vgl = strcmp(S1,S2)' 1};
+checkingVar.literalsP = {'strcmp(S1,S2)' 1 'strcmp(S1,S2)' 1};
 % FILL literalsA, With strings that should not be present. The number to
 % the right represents the weight of the error. Default weight = 1.
-checkingVar.literalsA = {'NaN'};
+checkingVar.literalsA = {'NaN' 'vgl=1' 'vgl=0' 'if'};
 % Reverse literals separated by spaces
 % EXAMPLE:
 % THE STUDENT SOLUTION, e.g.:    {'2 + 10'  'vector1 + 100'}

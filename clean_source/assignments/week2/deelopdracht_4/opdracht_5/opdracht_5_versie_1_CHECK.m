@@ -35,7 +35,7 @@ checkingVar.literalsA = {'NaN' 3};
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {};
-checkingVar.literalsO = {{'strlength(B) < 10' '10 > strlength(B)'} {'strlength(A) > 10' '10 < strlength(A)'}};
+checkingVar.literalsO = {{'< 10' '10 >'}};
 checkingVar.literalsRO = {};
 
 

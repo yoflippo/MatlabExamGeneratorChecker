@@ -1,4 +1,4 @@
-function nAbs = literalAnswersNotPresent(txtns,literalsA,apStudentSol)
+function nAbs = literalAnswersNotPresent(txtns,literalsA,apStudentSol,txtclean)
 %LITERALANSWERSNOTPRESENT A helperfunction for the testing the answers of
 %students.
 %
@@ -75,9 +75,9 @@ if contains(txtns{1},'function')
     
     %% Check for inputparameter assignment
     for nI = 1:length(inputs)
-        toFind = [inputs{nI} '='];
+        toFind = [' ' inputs{nI} '='];
         toFindNot = [toFind '='];
-        if findInString(txtns,toFind) > 0 && findInString(txtns,toFindNot) == 0
+        if findInString(txtclean,toFind) > 0 && findInString(txtclean,toFindNot) == 0
             nAbs = nAbs + numTimes;
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')

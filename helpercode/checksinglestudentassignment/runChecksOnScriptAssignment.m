@@ -53,7 +53,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
     
     %% Check all literals
-    [res2,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol);
+    [res2,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
     res = res + res2;
     
     %% Calculate the result
@@ -69,11 +69,15 @@ if ~isempty(char(txtCleanedStudentSolution))
     elseif res > 1
         res = 1;
     end
-    
-    if length(checkingVar.nameVars) > 0 && ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.nameVars)) && res < 1 
-        edit(apStudentSol)
-        edit(callerName)
-        edit(replace(callerName,'CHECK','SOL'))
+                                                                                 % all outputs/variables are correct         %but result is too low  
+    if length(checkingVar.nameVars) > 0 && ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.nameVars)) && res < 1             && res > 0
+        edit(apStudentSol);
+        edit(replace(callerName,'CHECK','SOL'));
+        % Open clean source CheckFile
+        apCheckAss = feval('which',callerName);
+        apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
+        edit(callerName);
+        edit(apCheckClean);
         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
     end
     

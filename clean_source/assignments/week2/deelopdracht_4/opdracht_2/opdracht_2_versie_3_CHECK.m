@@ -15,7 +15,7 @@ nameVars = {'A' 'B' 'C' 'resultaat'};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-literalsP = {'A' 2 'B' 2 'C' 2 '&' 1 'A=1' 1 'B=0' 1 'C=1' 1};
+literalsP = {'A=1' 1 'B=0' 1 'C=1' 1};
 % FILL literalsA, With strings that should not be present.
 literalsA = {'NaN' 'resultaat=0'};
 % Reverse literals separated by spaces
@@ -27,8 +27,8 @@ checkingVar.nameVars = nameVars;
 checkingVar.literalsP = literalsP;
 checkingVar.literalsA = literalsA;
 checkingVar.literalsR = literalsR;
-checkingVar.literalsO = {};
-checkingVar.literalsRO = {{'B &' 'B &&'} {'A | C' 'A || C'}};
+checkingVar.literalsO = {{'and(' '&' '&&'}};
+checkingVar.literalsRO = {}; 
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

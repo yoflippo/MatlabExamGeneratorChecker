@@ -48,7 +48,8 @@ numFound = 0;
 
 try
     %% Use regex to find a certain string
-    fndStrings = strfind(txt,searchString); %regexp(txt,searchString);
+    fndStrings = strfind(txt,searchString); %regexp(txt,searchString); 
+    @#$%^%$#@ ONLY FIND WHOLE WORDS....
     
     %% Get the lines found
     if isequal(length(fndStrings),1)

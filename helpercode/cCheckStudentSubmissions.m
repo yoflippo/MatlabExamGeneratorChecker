@@ -114,16 +114,13 @@ try
     % Remove .asv files
     asvFiles = dirmf('.asv');
     for nA = 1:length(asvFiles)
-       delete(fullfile(asvFiles(nA).folder,asvFiles(nA).name)); 
+        delete(fullfile(asvFiles(nA).folder,asvFiles(nA).name));
     end
     cd(con.BASEFOLDER);
-    %%%%%%%%%%%%%%%%%%%%%%%%%5
-    save()
-    keyboard
 catch err
     error([mfilename ': Something went wrong with unzipping!' newline err.message newline]);
 end
-%% 
+%%
 %% Load the old studentNumbers
 load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
 % Display how many students did not submit
@@ -171,7 +168,7 @@ try
             currFileAbsPath = fullfile(mfiles(nSAss).folder,mfiles(nSAss).name);
             [p, subdir] = GetPathOneLevelUp(currFileAbsPath,2);
             [~,~,endSnum] = findStudentNumberInTxt(currFileAbsPath);
-            p = fullfile(currFileAbsPath(1:endSnum),weekName)
+            p = fullfile(currFileAbsPath(1:endSnum),weekName);
             try
                 currHash = GetHashCodeFromMFile(currFileAbsPath);
                 % Check if hash if present in dictionary
@@ -199,10 +196,8 @@ debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assig
 % ASSIGNED files. A student could exchange assigned files with another
 % student
 
-
 % Load the information assigned for this week
 load(fullfile(con.NAMEASSIGNMENTFOLDER,weekName,['assignedHashes_' weekName]));
-
 for i = 1:length(trackStudentAssignment)
     try %!!!
         % Get hash codes of current student
@@ -240,8 +235,7 @@ cd(con.BASEFOLDER);
 
 %% Get the points for each assignment and make dic with points + nameOfAssignment
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
-%% Get the number of points for all week assignments
-
+% Get the number of points for all week assignments
 
 apAssWk = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName);
 cd(apAssWk);
@@ -318,6 +312,7 @@ for sn = 1:length(strTrackStudent(:,1))
             makeMFileFromCells(fullfile(apSubmitted,studentFolder,'JouwCijfer'),t);
             % Copy files to a new folder
             nmNewFolder = ['Checked_' studentFolder];
+            mkdirIf(nmNewFolder)
             copyfile(studentFolder,nmNewFolder);
             % Zip checked folder
             zipFilePathName = [nmNewFolder '.zip'];

@@ -1,5 +1,5 @@
 %% Opdracht 3
 % Maak de volgende variabelen aan:  GPSdata = [].
-% Laat met een bestaande functie zien, dat deze variabele leeg is. 
-
-
+% Er is een speciale specifieke Matlab functie waarmee je laat zien dat een
+% variabele leeg is. Gebruik deze functie hieronder om te illustreren dat
+% de bovengenoemde variabele leeg is.

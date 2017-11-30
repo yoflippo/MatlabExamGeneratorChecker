@@ -1,4 +1,4 @@
-function [res,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol)
+function [res,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol,txtclean)
 
 res = 0;
 
@@ -6,7 +6,7 @@ res = 0;
 res = res + literalAnswersPresent(txtns,checkingVar.literalsP,apStudentSol);
 
 %% Check for literal answers, CAN NOT BE PRESENT
-nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol);
+nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol,txtclean);
 
 %% Check for literal answers that could be present reversed
 num.Reversed = 0;

@@ -11,8 +11,8 @@ function res = opdracht_2_versie_1_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'laatsteElement' 'positie'};
-checkingVar.literalsP = {'positie(end,end)' 1 'positie(' 1};
-checkingVar.literalsA = {'NaN' 'positie(13)' 2};
+checkingVar.literalsP = {'positie(' 1};
+checkingVar.literalsA = {'NaN' 'positie(1' 5 'positie(3' 5 };
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

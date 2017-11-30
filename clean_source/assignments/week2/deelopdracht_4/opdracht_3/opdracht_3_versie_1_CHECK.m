@@ -9,7 +9,7 @@ res = 0;
 
 %% FILL nameVars WITH VARIABLES PRESENT IN SOLUTION FILE THAT THE STUDENT
 % SHOULD CHANGE!
-nameVars = {'result'};
+nameVars = {};
 % FILL literalsA, With strings that should not be present.
 literalsA = {'NaN'};
 

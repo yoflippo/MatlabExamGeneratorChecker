@@ -20,10 +20,10 @@ function res = opdracht_1_versie_2_CHECK(apStudentSol)
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
 checkingVar.nameVars = {'A' 'B'};
-checkingVar.literalsP = {'B = A(1,:);' 1 'A(1' 1};
+checkingVar.literalsP = {'B = ' 1 'A(1' 1};
 checkingVar.literalsA = {'NaN' 'A(:,1)' 2};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'A(1,1:3)' 'A(1,:)' 'A(1,1:end)'}};
 checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

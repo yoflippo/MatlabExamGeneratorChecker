@@ -56,7 +56,7 @@ if ~isempty(char(txtCleanedStudentSolution))
     txtns = nospaces(apCleaned);
     
     %% Check all literals
-    [res2,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol);
+    [res2,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
     res = res + res2;
     
     %% Calculate the result
@@ -75,11 +75,15 @@ if ~isempty(char(txtCleanedStudentSolution))
         res = 1;
     end
     
-    if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.testFunctionInput)) && res < 1
-        edit(apStudentSol)
-        edit(callerName)
-        edit(replace(callerName,'CHECK','SOL'))
-        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test 
+    if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.testFunctionInput)) && res < 1 && res > 0
+        edit(apStudentSol);
+        edit(replace(callerName,'CHECK','SOL'));
+        % Open clean source CheckFile
+        apCheckAss = feval('which',callerName);
+        edit(callerName);
+        apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
+        edit(apCheckClean);
+        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
     end
     
 else

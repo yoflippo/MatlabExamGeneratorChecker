@@ -18,10 +18,10 @@ function res = opdracht_1_versie_1_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'A' 'B'};
-checkingVar.literalsP = {'B = A(:,1)' 1 ':' 1 'A(:,' 1 };
+checkingVar.literalsP = {'B = ' 1 ':' 1 'A(' 1 };
 checkingVar.literalsA = {'NaN' 'A(1,:)' 2};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'A(1:3,1)' 'A(:,1)' 'A(1:3,1)'}};  
 checkingVar.literalsRO = {};
 
 

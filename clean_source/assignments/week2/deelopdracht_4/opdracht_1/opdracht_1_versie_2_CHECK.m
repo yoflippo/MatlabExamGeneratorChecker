@@ -10,7 +10,7 @@ res = 0;
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.nameVars = {'resultaat'};
+checkingVar.nameVars = {};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
@@ -26,11 +26,11 @@ checkingVar.literalsR = {};
 % checkingVar below this line can be removed
 % Test for literals and their variants
 % THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'varA & varB' 'varA && varB' 'and(varA,varB)' 'varB & varA' 'varB && varA' 'and(varB,varA)'}};
 % Test for literals and their (reversed) variants
 % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
 % THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
-checkingVar.literalsRO = {{'varA & varB' 'varA && varB'}};
+checkingVar.literalsRO = {};
 
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

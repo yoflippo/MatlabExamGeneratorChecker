@@ -21,7 +21,7 @@ checkingVar.testFunctionInput.data = {{randn(3,3)} {randn(3,3)} {randn(3,3)}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'Matrix(' 2};
+checkingVar.literalsP = {};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3};

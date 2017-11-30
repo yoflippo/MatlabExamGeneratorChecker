@@ -24,7 +24,7 @@ checkingVar.testFunctionInput = {{1:5} {2:2:10} {0:1}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'getallen' 3 'result' 2 'function' 1 'length' 1 'sum' 1};
+checkingVar.literalsP = {'getallen' 3 'result' 2 'function' 1  'sum' 1};
 % FILL literalsA, With strings that should not be present.
 checkingVar.literalsA = {'NaN' 'mean(' 4};
 % Reverse literals separated by spaces
@@ -32,7 +32,7 @@ checkingVar.literalsA = {'NaN' 'mean(' 4};
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'length' 'numel'}};
 checkingVar.literalsRO = {};
     
 

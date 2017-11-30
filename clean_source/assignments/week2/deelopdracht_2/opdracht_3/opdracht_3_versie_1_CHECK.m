@@ -14,10 +14,10 @@ function res = opdracht_3_versie_1_CHECK(apStudentSol)
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
 checkingVar.nameVars = {'versnelling'};
-checkingVar.literalsP = {'isempty(versnelling)' 1 'versnelling = []' 1};
+checkingVar.literalsP = {'versnelling = []' 1};
 checkingVar.literalsA = {'NaN'};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'isempty(versnelling)' 'numel(versnelling)'}};
 checkingVar.literalsRO = {};
 
 
