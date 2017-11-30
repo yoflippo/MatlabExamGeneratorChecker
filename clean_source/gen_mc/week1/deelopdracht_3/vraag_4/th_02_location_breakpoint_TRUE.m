@@ -1,6 +1,6 @@
-Zie de onderstaande code. Je moet op regel 3 een 
-breakpoint plaatsen om direct te zien welke waarde in
-variabele deze opgeslagen.
+Zie de onderstaande code. Als je op regel 3 een breakpoint
+plaatst en Matlab stopt bij die regel dan is de code
+in regel 2 reeds uitgevoerd door Matlab.
 
 ======= Code =======
 1- % Vermenigvuldigen van a en b

@@ -1,4 +1,4 @@
-De volgende code wordt in Matlab correct uitgevoerd:
+De volgende code wordt uitgevoerd zonder foutmeldingen:
 
 ------------code--------------
 voornaam = 'Mark'

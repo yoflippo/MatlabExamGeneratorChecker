@@ -142,7 +142,7 @@
 
 
 
-%% STOP JIJ MOET TERUG NAAR BOVEN 
+%% STOP JIJ MOET TERUG NAAR BOVEN
 
 
 
@@ -312,9 +312,10 @@ clear variables
 close all
 clc
 try
-cd(mfilename('fullpath'))
+    cd(fileparts(mfilename('fullpath')))
 catch
-       error([newline newline newline newline 'Jij moet eerst de week eindopdracht uitpakken (unzippen)!' newline 'DOE DAT NU!' newline 'Doe je dat niet, dan loop je punten mis of gaan er zaken fout die niet fout mogen gaan.']); 
+    error([newline newline newline newline 'Jij moet eerst de week eindopdracht uitpakken (unzippen)!' newline 'DOE DAT NU!' newline 'Doe je dat niet, dan loop je punten mis of gaan er zaken fout die niet fout mogen gaan.']);
 end
-% [~,msg,~] =  fileattrib
+cd ..;
+disp('Alles gaat goed! Ga aan de slag met deelopdracht_1')
 

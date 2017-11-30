@@ -44,6 +44,7 @@ res = 0;
 for nO = 1:length(literalsO)
     lit = literalsO{nO};
     lLit = length(literalsO{nO});
+    keyboard %%%%%%%%%%%%%%%%%%%%5
     if mod(lLit,2)
         error([mfilename ': The literalsO have to be even!!' ]);
     end

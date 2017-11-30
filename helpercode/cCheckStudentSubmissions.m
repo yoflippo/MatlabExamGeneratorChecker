@@ -117,10 +117,13 @@ try
        delete(fullfile(asvFiles(nA).folder,asvFiles(nA).name)); 
     end
     cd(con.BASEFOLDER);
+    %%%%%%%%%%%%%%%%%%%%%%%%%5
+    save()
+    keyboard
 catch err
     error([mfilename ': Something went wrong with unzipping!' newline err.message newline]);
 end
-
+%% 
 %% Load the old studentNumbers
 load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
 % Display how many students did not submit

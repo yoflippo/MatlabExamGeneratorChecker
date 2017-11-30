@@ -1,4 +1,4 @@
-De volgende code wordt in Matlab correct uitgevoerd:
+De volgende code plakt 'voornaam' en 'achternaam' aan elkaar:
 
 ------------code--------------
 voornaam = 'Mark'

@@ -1,1 +1,1 @@
-Delen gaat in Matlab met de vermenigvuldig operator: '/'
+Delen gaat in Matlab met de deel-operator: '/'
