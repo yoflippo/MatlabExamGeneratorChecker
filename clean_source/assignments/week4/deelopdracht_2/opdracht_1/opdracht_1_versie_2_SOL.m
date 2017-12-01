@@ -1,5 +1,4 @@
-% Opdracht 1
-
+%% Opdracht 1
 % In de onderstaande code staat een fout. Los de foutmelding op.
 % Let op! Bij het oplossen mag je geen variabele verwijderen.
 
