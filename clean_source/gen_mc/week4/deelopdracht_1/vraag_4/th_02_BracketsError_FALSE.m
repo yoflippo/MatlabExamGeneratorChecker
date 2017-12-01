@@ -1,0 +1,1 @@
+De volgende code geeft een foutmelding: z = tan(t);
