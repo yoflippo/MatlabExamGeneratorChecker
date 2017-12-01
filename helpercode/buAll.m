@@ -9,5 +9,5 @@
 % % warning on;
 function buAll(apBasefolder,extraString)
 
-dos(['start WinRaR a -r -m5 -mt20 ' [apBasefolder '_BU'] ...
+dos(['start WinRaR a -r -m5 -mt16 ' [apBasefolder '_BU'] ...
     filesep datetimetxt() extraString ' ' apBasefolder filesep '*.*']);

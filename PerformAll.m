@@ -2,7 +2,7 @@
 clear all;
 dbstop if error
 global gWeekNames;
-Weeks = 3;  % Adjust me!!!
+Weeks = 4;  % Adjust me!!!
 cnt = 1;
 for nW = 1:length(Weeks)
     gWeekNames{cnt,nW} = ['week' num2str(Weeks(nW))];
@@ -15,7 +15,7 @@ addpath(genpath('helpercode'));
 InitAll
 buAll(pwd,'')
 % Fill in week to test
-weekToCorrect = 2;
+weekToCorrect = 4;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
 

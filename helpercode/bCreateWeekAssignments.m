@@ -84,9 +84,6 @@ for nW = length(Weeks)
     %% Get overview of files
     debugOutput(DEBUGOUTPUT,'Get overview of files',1);
     
-    % The studentNumbers variable is randomly generated. So assignments in
-    % folder can be assigned sequently to the studentNumbers without
-    % introducing some kind of detectable order.
     absPathCurrAssFolder = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName);
     deepestAssignFolders = GetDeepestFolders(absPathCurrAssFolder);
     % Remove useless directories
@@ -125,9 +122,14 @@ for nW = length(Weeks)
     %% Fill every student folder with the number of assignments
     debugOutput(DEBUGOUTPUT,'Fill every student folder with the number of assignments',1);
     
+    %%%%%%%%%%%%%%%% MAKE RANDOM BY A RANDOMIZED START ASSIGNMENT
     answerFileCounter = ones(1,length(deepestAssignFolders));
-    % create a variable to save their personal Hashes for anti-cheating
-    % purposes, this cell is used to make a dictionary
+    for n = 1:length(answerFileCounter)
+        tn = randperm(numberOfAssignmentInDir(n));
+        answerFileCounter(n) = tn(1);
+    end
+    %%%%%%%%%%%%%%%% MAKE RANDOM BY A RANDOMIZED START ASSIGNMENT 
+    
     trackStudentAssignment = num2cell(zeros(length(studentNumbers), ...
         length(deepestAssignFolders))+1);
     

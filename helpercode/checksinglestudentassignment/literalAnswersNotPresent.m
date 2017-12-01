@@ -60,7 +60,7 @@ for nLa = 1:length(literalsA)
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
                 WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
-            end      
+            end
         end
     end
 end
@@ -77,13 +77,13 @@ if contains(txtns{1},'function')
     for nI = 1:length(inputs)
         toFind = [' ' inputs{nI} '='];
         toFindNot = [toFind '='];
-        if findInString(txtclean,toFind) > 0 && findInString(txtclean,toFindNot) == 0
+        if findArgAssignment(txtclean,toFind)
             nAbs = nAbs + numTimes;
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
                 errTxt = ['% Je mag niet schrijven naar een inputvariabele: ' toFind];
                 WriteToLastLineOfFile(apStudentSol,errTxt);
-            end      
+            end
         end
         
     end
@@ -92,3 +92,19 @@ end
 
 
 end
+
+function blFound = findArgAssignment(txt,searchString)
+blFound = false;
+try
+    fndStrings = regexp(txt,['(?<!\.)\<' searchString '\>(?!\.)[ =]']); %regexp('demon= demo = _demo= kdemon= demo= demo ==','(?<!\.)\<demo\>(?!\.)[ =]')
+    for n=1:length(fndStrings)
+        if ~isempty(fndStrings{n}) && contains(txt(n),'==')
+            blFound = true;
+        end
+    end
+catch err
+    error([mfilename ', ' newline err.message newline]);
+end
+
+end
+

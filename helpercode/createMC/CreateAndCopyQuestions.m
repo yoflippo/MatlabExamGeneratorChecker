@@ -60,7 +60,7 @@ for nWk = 1:length(weekNames)
     %% Browse the subfolder of weekXXX
     for nDirs = 1:length(folders)
         clc;
-        disp([mfilename ': ' num2str(nDirs) ' of ' num2str(length(folders)) ' folders processed of week' num2str(nWk)]);
+        disp([mfilename ': ' num2str(nDirs) ' of ' num2str(length(folders)) ' folders processed of ' weekNames{nWk}]);
         numberOfThesesFiles = TPA{nDirs,1}{3};
         currentFilePath =  TPA{nDirs,1}{1};
         

@@ -168,7 +168,7 @@ for wk = 1:length(weekFolders)
             end
             clc
             estPerc = round(fl/length(weekAssignments),2)*100;
-            disp([['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']);
+            disp([['Give each assignment Hash-info week: ' weekFolders{wk}] ', progress: ' num2str(estPerc) '%']);
         end
     catch causeException
         cd(con.BASEFOLDER);
