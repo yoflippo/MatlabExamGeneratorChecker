@@ -50,6 +50,11 @@ res = 0;
 for nLp = 1:2:length(literalsP)
     lit = literalsP{nLp};
     lit = lit(lit ~= ' ');% Remove spaces
+    ZORGEN DAT HIER MET STRING KAN WORDEN OMGEGAAN
+% % % % % % % % % % % %     quotes = strfind(lit,"'")
+% % % % % % % % % % % %     find(quotes==1)
+% % % % % % % % % % % %     find(quotes==strlength(lit)
+    
     if findInString(txtns,lit) >= literalsP{nLp+1}
         res = res + 1;
     else

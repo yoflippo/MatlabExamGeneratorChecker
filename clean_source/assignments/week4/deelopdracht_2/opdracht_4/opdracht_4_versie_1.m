@@ -1,17 +1,19 @@
-
-% Opdracht 4 
-% Het onderstaande programma is een bestaand programma, maar er staan fouten in.
-% Jij moet deze fouten gaan oplossen. 
-% Je hebt hiervoor ook het bestand Gaan1.txt nodig. 
-% Let op! Je mag geen variabelen verwijderen, wel aanpassen. 
+%% Opdracht 4 
+% Het onderstaande programma is een bestaand programma, maar er staan 
+% fouten in. Jij moet deze fouten gaan oplossen. 
+% Je hebt hiervoor ook het bestand Gaan1.txt (zie folder Databestanden) 
+% nodig. Let op! Je mag geen variabelen verwijderen, wel aanpassen. 
+%
 % Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'Toppie!!'. 
+% LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
+% is, links onder zie je dan busy staan. Zorg dat busy weg is voordat je
+% doorgaat.   
 
 
 %% ----------------Programma------------------------------------%%
 
 % ReadFORCEPLATE
 % Dit script leest Forceplate bestanden van BT in.
-% Er staan test bestanden in de folder Forceplate toebehoren
 
 %    Copyright (C) 2014  M. Schrauwen, Karen de Vreede
 %
@@ -32,13 +34,12 @@
 
 % addpath(genpath('Forceplate toebehoren'));
 close all;
-clear all;
 clc
 
 % bestand kiezen door de gebruiker
 % [fileName pathName] = uigetfile('*.*');
 % Naam = fullfile(pathName,fileName);
-data = load('Gaan1.txt);
+data = load(fullfile('bestanden','Gaan1.txt'));
 
 % gebruiker geeft, indien bekend, de frequentie van de meting op
 l = length(data(:,,1));
@@ -83,10 +84,10 @@ xlabel(labelXas);
 grid on
 
 %Het eenvoudig berekenen van Centre of Pressure
-x = -data(:,4)*100//data(:,3);       %%!!
+x = -data(:,4)*100//data(:,3);        
 y = -data(:,5)*100./data(:,3);
 %Het schuiven van het COP patroon zodat het precies in het midden wordt getekend.
-maxx = abs(maximaal(max(x)));       %%!!
+maxx = abs(maximaal(max(x)));        
 minx = abs(min(min(x)));
 maxy = abs(max(max(y)));
 miny = abs(min(min(y)));
@@ -96,7 +97,7 @@ x = x + (bereikx-maxx);
 y = y + (bereiky-maxy);
 
 subplot(aantalSubPlots,1,3);
-plot(x,y);
+Plot(x,y);
 ylabel('afstand y (cm)');
 title('Forceplate: COP');
 legend('COP');

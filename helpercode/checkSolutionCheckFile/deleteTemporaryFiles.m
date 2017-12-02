@@ -40,7 +40,7 @@ function [numOfDeleted] = deleteTemporaryFiles()
 
 try
     % Add postfixes of files that need to be deleted.
-    tmpPostFixes = {'_COPY' '_NS'};
+    tmpPostFixes = {'_COPY' '_NS' '.asv'};
     cfiles = [];
     for nT = 1:length(tmpPostFixes)
         cfiles = [cfiles; dirmf(tmpPostFixes{nT})];

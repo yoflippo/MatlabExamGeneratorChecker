@@ -1,16 +1,8 @@
-% Opdracht 3
-
-% In de onderstaande code staan fouten. Los de foutmelding op.
-% Let op! Bij het oplossen mag je geen variabelen verwijderen.
-
-
-
+%% Opdracht 3
+% In de onderstaande code staan fouten. Los de foutmelding op. Let op! Bij
+% het oplossen mag je geen variabelen verwijderen.
 
 honkbalVersnelling =  (12 32 12 39 18 37 27 19 30 19 20);
-maximaleVersnelling = Max(honkbalVersnelling);
-
+maximaleVersnelling = max(honkbalVersneling);
 % de index van de maximaleVersnelling vinden:
-
-indexMaximaleVersnelling = honkbalversnelling(find(maximaleversnelling);
-
-
+indexMaximaleVersnelling = honkbalVersnelling(find(maximaleVersnelling));

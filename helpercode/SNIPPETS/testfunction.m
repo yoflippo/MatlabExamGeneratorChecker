@@ -9,38 +9,43 @@ function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
 
-checkingVar.testFunctionInput.data = {'XXX' 'XXX' 'XXX'};
 
-% FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
-% The number to the right of the string designates the number of times the
-% string should be present.
-checkingVar.literalsP = {'function' 1 'XXX' 1};
-% FILL literalsA, With strings that should not be present.
-% The numeric directly to the right represents the weight
-checkingVar.literalsA = {'NaN' 3 'inputvar1 = ' 3};
-% Reverse literals separated by spaces
-% FOR EXAMPLE:
-% THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
-% THE REVERSED CASE:             '10+2' or  '100+vector1'
-checkingVar.literalsR = {'X Y' 'Z U'};
-
-% checkingVar below this line can be removed
-% Test for literals and their variants
-% THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
-checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
-% Test for literals and their (reversed) variants
-% NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
-% THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
-checkingVar.literalsRO = {{'Y' 'X'}};
-
-checkingVar.testFunctionInput = {'XXX'};
-checkingVar.literalsP = {'XXX' 2 'XXX' 1};
-checkingVar.literalsA = {'NaN' 2};
+checkingVar.testFunctionInput = {};
+checkingVar.literalsP = {};
+checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
 
-
+%% Commence the TESTING !!!
+res = 0;
+res = runChecksOnFunctionAssignment(mfilename,checkingVar,apStudentSol);
+close all
+%% Junk that could be usefull
+% % % % % % % % % 
+% % % % % % % % % checkingVar.testFunctionInput.data = {'XXX' 'XXX' 'XXX'};
+% % % % % % % % % 
+% % % % % % % % % % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
+% % % % % % % % % % The number to the right of the string designates the number of times the
+% % % % % % % % % % string should be present.
+% % % % % % % % % checkingVar.literalsP = {'function' 1 'XXX' 1};
+% % % % % % % % % % FILL literalsA, With strings that should not be present.
+% % % % % % % % % % The numeric directly to the right represents the weight
+% % % % % % % % % checkingVar.literalsA = {'NaN' 3 'inputvar1 = ' 3};
+% % % % % % % % % % Reverse literals separated by spaces
+% % % % % % % % % % FOR EXAMPLE:
+% % % % % % % % % % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
+% % % % % % % % % % THE REVERSED CASE:             '10+2' or  '100+vector1'
+% % % % % % % % % checkingVar.literalsR = {'X Y' 'Z U'};
+% % % % % % % % % 
+% % % % % % % % % % checkingVar below this line can be removed
+% % % % % % % % % % Test for literals and their variants
+% % % % % % % % % % THIS IS AN USEFUL EXAMPLE: varA > varB  and  varB < varA
+% % % % % % % % % checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
+% % % % % % % % % % Test for literals and their (reversed) variants
+% % % % % % % % % % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x)
+% % % % % % % % % % THIS IS AN USEFUL EXAMPLE: varA == varB (with reverse: varB == varA)
+% % % % % % % % % checkingVar.literalsRO = {{'Y' 'X'}};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Literals that should be present and
@@ -50,8 +55,6 @@ checkingVar.literalsRO = {};
 
 
 
-%% Commence the TESTING !!!
-res = 0;
-res = runChecksOnFunctionAssignment(mfilename,checkingVar,apStudentSol);
+
 
 end %function

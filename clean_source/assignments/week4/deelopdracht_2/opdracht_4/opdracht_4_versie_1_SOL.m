@@ -1,9 +1,9 @@
-
-% Opdracht 4 
-% Het onderstaande programma is een bestaand programma, maar er staan fouten in.
-% Jij moet deze fouten gaan oplossen. 
-% Je hebt hiervoor ook het bestand Gaan1.txt nodig. 
-% Let op! Je mag geen variabelen verwijderen, wel aanpassen. 
+%% Opdracht 4 
+% Het onderstaande programma is een bestaand programma, maar er staan 
+% fouten in. Jij moet deze fouten gaan oplossen. 
+% Je hebt hiervoor ook het bestand Gaan1.txt (zie folder Databestanden) 
+% nodig. Let op! Je mag geen variabelen verwijderen, wel aanpassen. 
+%
 % Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'Toppie!!'. 
 % LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
 % is, links onder zie je dan busy staan. Zorg dat busy weg is voordat je
@@ -14,7 +14,6 @@
 
 % ReadFORCEPLATE
 % Dit script leest Forceplate bestanden van BT in.
-% Er staan test bestanden in de folder Forceplate toebehoren
 
 %    Copyright (C) 2014  M. Schrauwen, Karen de Vreede
 %
@@ -35,13 +34,12 @@
 
 % addpath(genpath('Forceplate toebehoren'));
 close all;
-clear all;
 clc
 
 % bestand kiezen door de gebruiker
 % [fileName pathName] = uigetfile('*.*');
 % Naam = fullfile(pathName,fileName);
-data = load('Gaan1.txt');   %%!!
+data = load(fullfile('Databestanden','Gaan1.txt'));   %%!!
 
 % gebruiker geeft, indien bekend, de frequentie van de meting op
 l = length(data(:,1));     %%!! data ipv Data
