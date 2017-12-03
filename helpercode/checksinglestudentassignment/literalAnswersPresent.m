@@ -1,4 +1,4 @@
-function res = literalAnswersPresent(txtns,literalsP,apStudentSol)
+function [res, sumWeights] = literalAnswersPresent(txtns,literalsP,apStudentSol)
 %LITERALANSWERSPRESENT A helperfunction for the testing the answers of
 %students.
 %
@@ -47,14 +47,30 @@ function res = literalAnswersPresent(txtns,literalsP,apStudentSol)
 res = 0;
 
 %% Check for literal answers that MUST BE PRESENT
-for nLp = 1:length(literalsP)
+lenLiteralsP = length(literalsP);
+sumWeights = 0;
+for nLp = 1:lenLiteralsP
+    currWeight = 0;
     try
         lit = literalsP{nLp};
-        % % %     lit = lit(lit ~= ' ');% Remove spaces
-        % % %     lit = lit(lit ~= " ");
-        lit = replace(lit,' ','');
-        edit(mfilename) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-        if findInString(txtns,lit) >= literalsP{nLp+1}
+        lit = replace(lit,' ',''); % Gives error when not numeric
+        % Test if number of times present is stated
+        currWeight = 1;
+        if isnumeric(literalsP{nLp+1})
+            if findInString(txtns,lit) >= literalsP{nLp+1}
+                try
+                    if isnumeric(literalsP{nLp+2}) % Possible weight of present string
+                        res = res + literalsP{nLp+2};
+                        currWeight = literalsP{nLp+2};
+                    else
+                        res = res + 1;
+                    end
+                catch
+                    res = res + 1; % Weight of presence is 1
+                end
+            end
+        elseif findInString(txtns,lit) >= 1 % nNmber of times present not stated, default=1
+            keyboard
             res = res + 1;
         else
             % Test for a generated file! Could also be done by testing for Hash
@@ -64,6 +80,7 @@ for nLp = 1:length(literalsP)
         end
     catch
     end
+    sumWeights = sumWeights + currWeight;
 end
 
 

@@ -26,7 +26,7 @@ checkingVar.testFunctionInput.data = {{0.5,30} {0,0} {-1,-1} {pi,45}};
 checkingVar.literalsP = {'cos' 1 'sin' 1 'cosd' 1 'sind' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
-checkingVar.literalsA = {'NaN' 3 'cos(hoekGraden)' 2 ' sin(hoekGraden)' 2 'sin(hoekRad)' 2 ' cos(hoekRad)' 2};
+checkingVar.literalsA = {'NaN' 3 'cos(hoekGraden)' 2 ' sin(hoekGraden)' 2 'sind(hoekRad)' 2 ' cosd(hoekRad)' 2};
 % Reverse literals separated by spaces
 % FOR EXAMPLE:
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'

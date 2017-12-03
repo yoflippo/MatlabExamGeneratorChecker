@@ -36,6 +36,6 @@ checkingVar.literalsRO = {};
 
 %% Commence the TESTING !!!
 res = 0;
-res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
+[res,num] = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 
 end %function

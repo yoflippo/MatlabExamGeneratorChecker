@@ -1,4 +1,4 @@
-function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
+function res = opdracht_4_versie_2_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
@@ -7,8 +7,10 @@ function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
-checkingVar.nameVars = {};
-checkingVar.literalsP = {};
+checkingVar.nameVars = {'data' 'xas' 'labelXas' 'miny'};
+checkingVar.literalsP = {"data = load('Gaan8.txt');" 1 "xas = 0:samplePeriod:(l/fs)-samplePeriod;" 1  ... 
+    "labelXas = 'Aantal samples';" 1 "plot(xas,data(:,5), 'g');" 1 "y = -data(:,5)*100./data(:,3);" 1 ... 
+    "miny = abs(min(min(y)));" 1 };
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

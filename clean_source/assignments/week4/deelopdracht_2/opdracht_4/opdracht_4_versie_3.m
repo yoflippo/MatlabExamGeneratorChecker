@@ -1,14 +1,15 @@
-
-% Opdracht 4 
-% Het onderstaande programma is een bestaand programma, maar er staan syntax fouten in.
-% Jij moet deze fouten gaan oplossen. 
-% Je hebt hiervoor ook het bestand Gaan8.txt nodig. 
-% LET OP: Je mag code verwijderen, maar geen volledige variabelen.
-% Je mag de namen van variabelen wel aanpassen. 
-% Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'LEKKER BEZIG!!'. 
+%% Opdracht 4 
+% Het onderstaande programma is een bestaand programma, maar er staan 
+% fouten in. Jij moet deze fouten gaan oplossen. 
+% Je hebt hiervoor ook het bestand Gaan8.txt (zie folder Databestanden) 
+% nodig. 
+% 
+% Let op! Je mag geen variabelen verwijderen. Zorg dat door minimale
+% ingrepen de syntactische fouten uit de code worden gehaald.
+%
+% Je hebt het goed gedaan krijg je een plot te zien.
 % LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
-% is, links onder zie je dan busy staan. Wacht tot busy weg is voordat je
-% doorgaat.  
+% is. 
 
 
 %% ----------------Programma------------------------------------%%
@@ -36,7 +37,6 @@
 
 % addpath(genpath('Forceplate toebehoren'));
 close all;
-clear all;
 clc
 
 % bestand kiezen door de gebruiker
@@ -106,6 +106,3 @@ title('Forceplate: COP');
 legend('COP');
 xlabel('afstand x (cm));
 grid on
-
-Message = 'LEKKER BEZIG!!' ;
-h = msgbox(Message);

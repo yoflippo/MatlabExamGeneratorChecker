@@ -1,13 +1,15 @@
-
-% Opdracht 4 
-% Het onderstaande programma is een bestaand programma, maar er staan fouten in.
-% Jij moet deze fouten gaan oplossen. 
-% Je hebt hiervoor ook het bestand Gaan8.txt nodig. 
-% Let op! Je mag geen variabelen verwijderen, wel aanpassen. 
-% Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'LEKKER BEZIG!!'. 
+%% Opdracht 4 
+% Het onderstaande programma is een bestaand programma, maar er staan 
+% fouten in. Jij moet deze fouten gaan oplossen. 
+% Je hebt hiervoor ook het bestand Gaan8.txt (zie folder Databestanden) 
+% nodig. 
+% 
+% Let op! Je mag geen variabelen verwijderen. Zorg dat door minimale
+% ingrepen de syntactische fouten uit de code worden gehaald.
+%
+% Je hebt het goed gedaan krijg je een plot te zien.
 % LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
-% is, links onder zie je dan busy staan. Wacht tot busy weg is voordat je
-% doorgaat.  
+% is. 
 
 
 %% ----------------Programma------------------------------------%%
@@ -35,13 +37,12 @@
 
 % addpath(genpath('Forceplate toebehoren'));
 close all;
-clear all;
 clc
 
 % bestand kiezen door de gebruiker
 % [fileName pathName] = uigetfile('*.*');
 % Naam = fullfile(pathName,fileName);
-data = load('Gaan8.txt');    %%!!
+data = load('Gaan8.txt');                   %%!!
 
 % gebruiker geeft, indien bekend, de frequentie van de meting op
 l = length(data(:,1));    
@@ -76,7 +77,7 @@ grid on
 subplot(aantalSubPlots,1,2);
 plot(xas,data(:,4), 'r');
 hold on;
-plot(xas,data(:,5), 'g');            %%!!
+plot(xas,data(:,5), 'g');                   %%!!
 hold on;
 plot(xas,data(:,6), 'b');
 ylabel('Moment (Nm)');
@@ -87,12 +88,12 @@ grid on
 
 %Het eenvoudig berekenen van Centre of Pressure
 x = -data(:,4)*100./data(:,3);         
-y = -data(:,5)*100./data(:,3);          %%!! x ipv * 
+y = -data(:,5)*100./data(:,3);              %%!! x ipv * 
 %Het schuiven van het COP patroon zodat het precies in het midden wordt getekend.
 maxx = abs(max(max(x)));                
 minx = abs(min(min(x)));
 maxy = abs(max(max(y)));
-miny = abs(min(min(y)));  %%!!
+miny = abs(min(min(y)));                    %%!!
 bereikx = (maxx+minx)/2;
 bereiky = (maxy+miny)/2;
 x = x + (bereikx-maxx);
@@ -105,6 +106,3 @@ title('Forceplate: COP');
 legend('COP');
 xlabel('afstand x (cm)');
 grid on
-
-Message = 'LEKKER BEZIG!!' ;
-h = msgbox(Message);

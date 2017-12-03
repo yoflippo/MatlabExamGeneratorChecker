@@ -2,11 +2,14 @@
 % Het onderstaande programma is een bestaand programma, maar er staan 
 % fouten in. Jij moet deze fouten gaan oplossen. 
 % Je hebt hiervoor ook het bestand Gaan1.txt (zie folder Databestanden) 
-% nodig. Let op! Je mag geen variabelen verwijderen, wel aanpassen. 
+% nodig. 
+% 
+% Let op! Je mag geen variabelen verwijderen. Zorg dat door minimale
+% ingrepen de syntactische fouten uit de code worden gehaald.
 %
 % Je hebt het goed gedaan krijg je een plot te zien.
 % LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
-% is.
+% is. 
  
 
 
@@ -97,7 +100,7 @@ x = x + (bereikx-maxx);
 y = y + (bereiky-maxy);
 
 subplot(aantalSubPlots,1,3);
-plot(x,y); %%!!
+plot(x,y);                          %%!!
 ylabel('afstand y (cm)');
 title('Forceplate: COP');
 legend('COP');

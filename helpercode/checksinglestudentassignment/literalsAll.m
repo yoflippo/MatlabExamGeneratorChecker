@@ -1,9 +1,11 @@
-function [res,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol,txtclean)
+function [res,nAbs,num,weights] = literalsAll(txtns,checkingVar,apStudentSol,txtclean)
 
 res = 0;
 
 %% Check for literal answers that MUST BE PRESENT
-res = res + literalAnswersPresent(txtns,checkingVar.literalsP,apStudentSol);
+[resP, w] = literalAnswersPresent(txtns,checkingVar.literalsP,apStudentSol);
+res = res + resP;
+weights.laPresent = w;
 
 %% Check for literal answers, CAN NOT BE PRESENT
 nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol,txtclean);
