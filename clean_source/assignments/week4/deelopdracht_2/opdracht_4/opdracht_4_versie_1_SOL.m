@@ -4,10 +4,10 @@
 % Je hebt hiervoor ook het bestand Gaan1.txt (zie folder Databestanden) 
 % nodig. Let op! Je mag geen variabelen verwijderen, wel aanpassen. 
 %
-% Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'Toppie!!'. 
+% Je hebt het goed gedaan krijg je een plot te zien.
 % LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
-% is, links onder zie je dan busy staan. Zorg dat busy weg is voordat je
-% doorgaat.  
+% is.
+ 
 
 
 %% ----------------Programma------------------------------------%%
@@ -74,7 +74,7 @@ grid on
 subplot(aantalSubPlots,1,2);
 plot(xas,data(:,4), 'r');
 hold on;
-plot(xas,data(:,5), 'g');
+plot(xas,data(:,5), 'g'); %%!!
 hold on;
 plot(xas,data(:,6), 'b');
 ylabel('Moment (Nm)');
@@ -97,12 +97,9 @@ x = x + (bereikx-maxx);
 y = y + (bereiky-maxy);
 
 subplot(aantalSubPlots,1,3);
-plot(x,y);
+plot(x,y); %%!!
 ylabel('afstand y (cm)');
 title('Forceplate: COP');
 legend('COP');
 xlabel('afstand x (cm)');
 grid on
-
-Message = 'Toppie!!' ;
-h = msgbox(Message);

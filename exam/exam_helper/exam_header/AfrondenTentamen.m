@@ -193,6 +193,7 @@
 %% Ask for studentnumber
 mf = fileparts(mfilename('fullpath'));
 if ~isequal(pwd,mf)
+    dbclear all
     warning off
     rmpath(genpath(mf))
     error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP "Change Folder"  DRUKKEN!'  sprintf('\r\n') sprintf('\r\n')])
@@ -230,12 +231,13 @@ studentnummer
 
 warningtxt = 'Je moet nu echt goed gaan opletten, als je niet correct je studentnummer invoert, kunnen wij jouw tentamen niet nakijken!';
 warningtxt = [warningtxt newline 'Als je niet zeker bent, of je bij "opdracht_0" je juiste studentnummer hebt ingevoerd, doe dit dan opnieuw!'];
-warningtxt = [warningtxt newline];
-warningtxt = [warningtxt newline 'Voer vervolgens opnieuw dit bestand uit!'];
-warningtxt = [warningtxt newline];
+% warningtxt = [warningtxt newline];
+warningtxt = [warningtxt newline 'Voer vervolgens opnieuw: ' mfilename ' uit!'];
+% warningtxt = [warningtxt newline];
 warningtxt = [warningtxt newline 'Dit script stopt nu en StartTentamen.m wordt geopend!'];
 
 if ~isequal(studentnumber,snumber)
+    warning on
     warning(warningtxt)
     open(fullfile(apStartFile,'StartTentamen.m'));
     return;

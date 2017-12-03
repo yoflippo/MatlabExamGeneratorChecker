@@ -46,7 +46,8 @@ try
     % run the CHEAT file on the target CHECK function
     cheatMax = 0.2;
     if exist(cheatFile,'file')
-        eval(['res = ' checkFunction '(pathCheatFile);'])
+        %         eval(['res = ' checkFunction '(pathCheatFile);'])
+        res = feval(checkFunction,pathCheatFile)
         if res > cheatMax
             error(['The CHEAT function should return a result of: ' num2str(cheatMax) ' but is: ' num2str(res)]);
         end

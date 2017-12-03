@@ -18,22 +18,22 @@ function res = literalAnswersPresent(txtns,literalsP,apStudentSol)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-% 
+%
 % PARAMETERS:
 %               txtns:          The txt of the cleaned file (readCleanMfile)
 %                               without spaces.
 %               literalsP:      The literals that must be present in the file.
 %               apStudentSol:   The absolute path of the student solution.
 %
-% RETURN:       
+% RETURN:
 %               res:            The result (value between 0..1)
 %
-% EXAMPLE:      
+% EXAMPLE:
 %               %% Check for literal answers that MUST BE PRESENT
 %               literalsP = {'XXX' 2 'XXX' 1};
 %               res = res + literalAnswersPresent(txtns,literalsP,apStudentSol);
@@ -47,21 +47,22 @@ function res = literalAnswersPresent(txtns,literalsP,apStudentSol)
 res = 0;
 
 %% Check for literal answers that MUST BE PRESENT
-for nLp = 1:2:length(literalsP)
-    lit = literalsP{nLp};
-    lit = lit(lit ~= ' ');% Remove spaces
-    ZORGEN DAT HIER MET STRING KAN WORDEN OMGEGAAN
-% % % % % % % % % % % %     quotes = strfind(lit,"'")
-% % % % % % % % % % % %     find(quotes==1)
-% % % % % % % % % % % %     find(quotes==strlength(lit)
-    
-    if findInString(txtns,lit) >= literalsP{nLp+1}
-        res = res + 1;
-    else
-        % Test for a generated file! Could also be done by testing for Hash
-        if ~contains(apStudentSol,'versie')
-            WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP{nLp} ' en moet er: ' num2str(literalsP{nLp+1}) 'x in zitten.']);
+for nLp = 1:length(literalsP)
+    try
+        lit = literalsP{nLp};
+        % % %     lit = lit(lit ~= ' ');% Remove spaces
+        % % %     lit = lit(lit ~= " ");
+        lit = replace(lit,' ','');
+        edit(mfilename) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+        if findInString(txtns,lit) >= literalsP{nLp+1}
+            res = res + 1;
+        else
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP{nLp} ' en moet er: ' num2str(literalsP{nLp+1}) 'x in zitten.']);
+            end
         end
+    catch
     end
 end
 

@@ -1,4 +1,4 @@
-function res = opdracht_4_versie_1_CHECK(apStudentSol)
+function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
@@ -7,10 +7,9 @@ function res = opdracht_4_versie_1_CHECK(apStudentSol)
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
-checkingVar.nameVars = {'data' 'labelXas' 'maxx'};
-checkingVar.literalsP = {"data = load(fullfile('Databestanden','Gaan1.txt'));" 1 ...
-    'plot(x,y);' 1 'maxx = abs(max(max(x)));' 1 };
-checkingVar.literalsA = {'xas = 0:samplePeriod:(l/fs)--samplePeriod;' 1 'x = -data(:,4)*100/data(:,3);' 1 'maxx = abs(maximaal(max(x)));' 1 'Plot(x,y);' 1};
+checkingVar.nameVars = {};
+checkingVar.literalsP = {};
+checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

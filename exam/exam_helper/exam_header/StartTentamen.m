@@ -340,6 +340,9 @@ apThisFile = fileparts(mfilename('fullpath'));
 apStudentNumber = fullfile(apThisFile,'studentnummer.m');
 fileID = fopen(apStudentNumber,'w');
 fprintf(fileID,'%s\r\n',['studentnumber = ' num2str(snumber) ';']);
+clc
+fullname = input('Geef nu je volledige naam: ','s')
+fprintf(fileID,'%s\r\n',['fullname = ' char(39) fullname char(39) ';']);
 fclose('all');
 
 clc;
