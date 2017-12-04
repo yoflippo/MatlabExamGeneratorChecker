@@ -84,7 +84,8 @@ if ~isempty(char(txtCleanedStudentSolution))
         res = 1;
     end
     
-    if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.testFunctionInput)) && res < 1 && res > 0
+    if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.testFunctionInput)) ... 
+            && res < 1 && res > 0 && ~contains(pwd,'clean_source')
         edit(apStudentSol);
         edit(replace(callerName,'CHECK','SOL'));
         % Open clean source CheckFile

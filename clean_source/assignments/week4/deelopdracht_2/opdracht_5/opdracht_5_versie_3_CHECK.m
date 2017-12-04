@@ -1,4 +1,4 @@
-function res = opdracht_5_versie_1_CHECK(apStudentSol)
+function res = opdracht_5_versie_2_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
@@ -11,8 +11,9 @@ function res = opdracht_5_versie_1_CHECK(apStudentSol)
 
 
 checkingVar.testFunctionInput = {};
-checkingVar.literalsP = {'x = 0;' 1 'stap = (tophoek/numsteps);' 1 ... 
-    '[yp y yendoffoot yheup]' 1 'T1(2,:) = r;' 1 'T1(1,3)' 1 };
+checkingVar.literalsP = {'T1(2,:) = r;' 1   'model(2,:,i) = T1(2,i)+model(2,:,i);' 1 ...
+    'derdeElementT1 = T1(1,4)' 1 ' model(1,:,i) = T1(1,i)+model(1,:,i);' 1 ... 
+    'T1(1,i+1) = T1(1,i)+stapboog;' 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

@@ -4,8 +4,9 @@
 % gekregen en aangepast, maar tijdens het aanpassen zijn er fouten in het
 % programma geslopen.
 %
-% Het is jouw taak om alle syntactische fouten uit het programma te
-% verwijderen.
+% Het is jouw taak om alle fouten uit het programma te verwijderen. Als je
+% twijfelt over een mogelijke programmeerfout, neem dan aan dat het code
+% commentaar correct is.
 %
 % LET OP: Je moet de code aanpassen om fouten te verwijderen. Enkel foute
 % code verwijderen gaat niet werken. Je moet code verbeteren.
@@ -37,7 +38,7 @@ close all
 % INPUTS
 r =30; % straal van de rockervoet. Maak de straal 0 en je krijgt een model zonder rocker
 tophoek = 50; % tophoek tussen de benen
-numsteps = 20; % aantal animatie stappen
+numsteps = 5; % aantal animatie stappen
 booghoek = 80; %  cirkelsegment van de rockervoet moet minimaal gelijk zijn aan de tophoek
 beenlengte= 90; % spreekt voor zich
 time = 0.01; % Pauseduur in de animatie

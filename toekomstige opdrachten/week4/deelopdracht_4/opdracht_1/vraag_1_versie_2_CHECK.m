@@ -1,16 +1,21 @@
-function res = opdracht_4_versie_3_CHECK(apStudentSol)
+function res = opdracht_1_versie_1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-
+% % var1 = (1:10)';
+% % var2 = (11:20)';
+% % var3 = (21:30)';
+% %  
+% % var = [var1 var2 var3];
+% % dlmwrite('output.xls',var);
 %%==========
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
-checkingVar.nameVars = {'data'};
-checkingVar.literalsP = {"data = load('Gaan8.txt');" 1 "xas = 0:samplePeriod:(l/fs)-samplePeriod;" 1 ...
-    "xas = 0:l-1;" 1 "subplot(aantalSubPlots,1,2); " 1 "legend('X', 'Y', 'Z');" 1 "x = x + (bereikx-maxx);" 1 ... 
-    "xlabel('afstand x (cm)');" 1 };
+
+
+checkingVar.nameVars = {'vars' 'var1' 'var2' 'var3'};
+checkingVar.literalsP = {"dlmwrite('output" 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
@@ -22,6 +27,11 @@ checkingVar.literalsSL = {};
 res = 0;
 res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 close all
+xlsfiles = dirmf('.xls');
+for nx = 1:length(xlsfiles)
+   delete(fullfile(xlsfiles(nx).folder,xlsfiles(nx).name)); 
+end
+
 %% Junk, but could be usefull
 % % % % 
 % % % % % Variables that should be present in file and that should be compared to

@@ -1,12 +1,21 @@
-% Opdracht 5
-% Het onderstaande programma is een bestaand programma, maar er staan syntax fouten in.
-% Jij moet deze fouten gaan oplossen. 
+%% Opdracht 5
+% Het onderstaande programma in de functie genaamd opdracht_5 heb jij
+% gekregen van een medestudent. Die student heeft het programma van Aad
+% gekregen en aangepast, maar tijdens het aanpassen zijn er fouten in het
+% programma geslopen.
+%
+% Het is jouw taak om alle fouten uit het programma te verwijderen. Als je
+% twijfelt over een mogelijke programmeerfout, neem dan aan dat het code
+% commentaar correct is.
+%
+% LET OP: Je moet de code aanpassen om fouten te verwijderen. Enkel foute
+% code verwijderen gaat niet werken. Je moet code verbeteren.
+% 
+% Je hebt het goed gedaan wanneer je een animatie in een figure krijgt te 
+% zien. 
 
-% LET OP: Je mag code verwijderen, maar geen volledige variabelen.
-% Je mag de namen van variabelen wel aanpassen. 
-% Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'WHIEHOEE'. 
 
-function opdracht_5()
+function [x,stap,model,T1,derdeElementT1] = opdracht_5()
 %% ---------------- Programma ------------------ %%
 % Dit script geeft je een basale bouwsteen voor een verder zelf te bouwen
 % model van de rocker shoe. In deze kale vorm heeft het model (in wording)
@@ -29,10 +38,10 @@ close all
 % INPUTS
 r =30; % straal van de rockervoet. Maak de straal 0 en je krijgt een model zonder rocker
 tophoek = 50; % tophoek tussen de benen
-numsteps = 20; % aantal animatie stappen
+numsteps = 5; % aantal animatie stappen
 booghoek = 80; %%!! %  de booghoek moet 80 zijn 
 beenlengte= 90; % spreekt voor zich
-time = 0.1; % Pauseduur in de animatie
+time = 0.01; % Pauseduur in de animatie
 
 
 
@@ -99,8 +108,8 @@ for i =1:numsteps+1
     model(2,:,i) = T1(2,i)+model(2,:,i);  
 end
 
-% hier pak je het tiende element van de eerste rij van T1 
-derdeElementT1 = T1(1,10)          %%!!
+% hier pak je het 4de element van de eerste rij van T1 
+derdeElementT1 = T1(1,4)          %%!!
 
 %  De animatie plotten
 figure('units','normalized','outerposition',[0 0 1 1],'Name', ' Rocker Animation ');

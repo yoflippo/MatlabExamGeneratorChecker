@@ -1,9 +1,9 @@
-clear variables; clc;
+clear variables; 
+clc;
 currPath = pwd;
 
 %% This file checks the SOL/CHECK/empty files in the current folder.
 typeOfAssFiles = dirmf('Make');
-dbclear all
 tic
 for i = 1:length(typeOfAssFiles)
     %% Get info about current file
