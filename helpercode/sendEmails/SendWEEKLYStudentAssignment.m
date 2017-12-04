@@ -11,7 +11,7 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
-weeknum = '3'
+weeknum = '4'
 thisWeek = ['week' weeknum]
 cd('student_assignments');
 cd(thisWeek);
@@ -21,6 +21,7 @@ chr = '';
 chr = [chr newline 'Beste student,'];
 chr = [chr newline newline 'Lees deze e-mail helemaal door!'];
 chr = [chr newline ];
+chr = [chr 'Deze week een eindopdracht met minder opdrachten.' newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht'];
 chr = [chr newline 'van week ' weeknum ' voor Biostatica Matlab.'];
 chr = [chr newline ];
@@ -52,15 +53,23 @@ chr = [chr newline 'Mark Schrauwen']
 zips = dir(['**' filesep '*.zip']);
 nSendMails = 0;
 nMailsToSend = length(zips);
+oldPath = pwd;
+cd ..
+sendFolder = [thisWeek '_send'];
+mkdirIf(sendFolder);
+apSendFolder = fullfile(pwd,sendFolder)
+cd(oldPath)
+%% Start sending
 for nZ = 1:nMailsToSend
     try
-        %% extract student numbers
+        % extract student numbers
         sNum = extractAfter(erase(zips(nZ).name,'.zip'),'_');
         %% construct emailadres
         sEma = {[sNum '@student.hhs.nl']};
-        sAtt = fullfile(pwd,zips(nZ).name) ;
+        sAtt = fullfile(zips(nZ).folder,zips(nZ).name) ;
         sendmail(sEma,...
         ['Biostatica Matlab: ' thisWeek ' eindopdracht'],chr,sAtt);
+        movefile(sAtt,apSendFolder);
         nSendMails = nSendMails + 1;
     catch err
         sNum
