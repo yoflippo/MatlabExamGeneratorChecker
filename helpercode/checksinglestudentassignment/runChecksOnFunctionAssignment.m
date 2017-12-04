@@ -84,17 +84,17 @@ if ~isempty(char(txtCleanedStudentSolution))
         res = 1;
     end
     
-    if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.testFunctionInput)) ... 
-            && res < 1 && res > 0 && ~contains(pwd,'clean_source')
-        edit(apStudentSol);
-        edit(replace(callerName,'CHECK','SOL'));
-        % Open clean source CheckFile
-        apCheckAss = feval('which',callerName);
-        edit(callerName);
-        apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
-        edit(apCheckClean);
-        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
-    end
+%     if  ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(data)) ... 
+%             && res < 1 && res > 0 && ~contains(pwd,'clean_source')
+%         edit(apStudentSol);
+%         edit(replace(callerName,'CHECK','SOL'));
+%         % Open clean source CheckFile
+%         apCheckAss = feval('which',callerName);
+%         edit(callerName);
+%         apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
+%         edit(apCheckClean);
+%         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
+%     end
     
 else
     if ~contains(apStudentSol,'versie')

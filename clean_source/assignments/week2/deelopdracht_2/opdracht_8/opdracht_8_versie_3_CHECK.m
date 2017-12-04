@@ -21,7 +21,7 @@ checkingVar.testFunctionInput.data = {{round(randn(1,20)*10) round(randn(1,20)*1
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'bovenbeen(end)' 1 'onderbeen(2)' 1 './' 1};
+checkingVar.literalsP = {'bovenbeen(end)' 1 'onderbeen(2)' 1 '/' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3};

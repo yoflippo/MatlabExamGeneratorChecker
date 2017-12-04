@@ -15,7 +15,7 @@ checkingVar.nameVars = {'GPSdata'};
 % FILL literalsP,  WITH CODE THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'isempty(GPSdata)' 1};
+checkingVar.literalsP = {};
 % FILL literalsA, With strings that should not be present. The number to
 % the right represents the weight of the error. Default weight = 1.
 checkingVar.literalsA = {'NaN' };
@@ -30,7 +30,7 @@ checkingVar.literalsR = {};
 %====== checkingVar below this line can be removed
 % Test for literals and their variants
 % EXAMPLE: {'varA>varB' 'varB<varA'}
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'size(GPSdata)' 'isempty(GPSdata)' }};
 % Test for literals and their (reversed) variants
 % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x) and
 % so the reversed case (which would be an error made by the student) could

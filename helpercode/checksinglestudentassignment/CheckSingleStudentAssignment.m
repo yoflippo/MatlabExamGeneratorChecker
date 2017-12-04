@@ -130,7 +130,7 @@ for i = 1:length(mfilesWithHash)
             warning on
             % Calcule partialpoints
             sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
-%             pointsForCurrentAssignment
+            %             pointsForCurrentAssignment
             %% Write the result to the student file
             percStudent = ResStudentScript * 100;
             
@@ -153,6 +153,7 @@ for i = 1:length(mfilesWithHash)
             disp(['OPENING: ' AbsPathStudentScript]);
             edit(AbsPathStudentScript)
             edit(nmCHE)
+            edit(AbsPathSOLScript)
             % Message with error, so student can learn from mistake
             txtResultStud{1} = ' ';
             txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.' newline];
@@ -163,7 +164,7 @@ for i = 1:length(mfilesWithHash)
             catch warn
                 warning([mfilename ': cannot write to -> ' AbsPathStudentScript newline warn.message]);
             end
-            keyboard
+            %             keyboard
         end
     end
 end

@@ -12,6 +12,6 @@ function gedeeldeWaarde = opdracht_8(bovenbeen, onderbeen)
 
 waardeBovenbeen=bovenbeen(end);
 waardeOnderbeen=onderbeen(2);
-gedeeldeWaarde= waardeBovenbeen ./ waardeOnderbeen;
+gedeeldeWaarde= waardeBovenbeen / waardeOnderbeen;
 
 end

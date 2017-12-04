@@ -12,7 +12,7 @@
 function opgeteldeWaarde = opdracht_8(bovenbeen, onderbeen)
 
 waardeBovenbeen=bovenbeen(end);
-waardeOnderbeen=onderbeen(:,3);
+waardeOnderbeen=onderbeen(3);
 opgeteldeWaarde= waardeBovenbeen+waardeOnderbeen;
 
 end

@@ -11,7 +11,7 @@
 function afgetrekteWaarde = opdracht_8(bovenbeen, onderbeen)
 
 waardeBovenbeen=bovenbeen(end);
-waardeOnderbeen=onderbeen(:,2);
+waardeOnderbeen=onderbeen(2);
 afgetrekteWaarde= waardeBovenbeen-waardeOnderbeen;
 
 end

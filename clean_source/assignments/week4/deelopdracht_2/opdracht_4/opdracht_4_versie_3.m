@@ -42,7 +42,8 @@ clc
 % bestand kiezen door de gebruiker
 % [fileName pathName] = uigetfile('*.*');
 % Naam = fullfile(pathName,fileName);
-data = loading('Gaan8.txt');    
+addpath(genpath(fullfile('..','Databestanden')))
+data = load('Gaan8.txt');    
 
 % gebruiker geeft, indien bekend, de frequentie van de meting op
 l = length(data(:,1));    

@@ -20,7 +20,7 @@ checkingVar.testFunctionInput.DOUBLE_INPUT = true;
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'bovenbeen(end)' 1 'onderbeen(:,3)' 1};
+checkingVar.literalsP = {'bovenbeen(end)' 1 'onderbeen(3)' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3};

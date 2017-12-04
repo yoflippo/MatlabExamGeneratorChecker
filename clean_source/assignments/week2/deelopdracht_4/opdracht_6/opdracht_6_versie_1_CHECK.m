@@ -27,7 +27,7 @@ function res = opdracht_6_versie_1_CHECK(apStudentSol)
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
 checkingVar.testFunctionInput = {1 2 3 4 5 6 7};
-checkingVar.literalsP = {'case' 5 'switch' 1 'outputvar' 5};
+checkingVar.literalsP = {'case' 5 'switch' 1};
 checkingVar.literalsA = {'NaN' 'if' 2 'else' 2 'zes' 1 };
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

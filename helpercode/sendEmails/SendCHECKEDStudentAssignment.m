@@ -11,7 +11,7 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-thisWeek = 'week1'
+thisWeek = 'week2'
 cd('submitted');
 cd(thisWeek);
 
@@ -33,34 +33,30 @@ chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];
 
-%% Send mails
-nSendMails = 0;
+%% Make dir send
 zips = dir(['**' filesep '*.zip']);
+nSendMails = 0;
+nMailsToSend = length(zips);
+oldPath = pwd;
+cd ..
+sendFolder = [thisWeek '_send'];
+mkdirIf(sendFolder);
+apSendFolder = fullfile(pwd,sendFolder)
+cd(oldPath)
+%% Send mails
 for nZ = 1:length(zips)
     if contains(zips(nZ).name,'Checked')
         %% extract student numbers
         sNum = findStudentNumberInTxt(zips(nZ).name);
         %% construct emailadres
         sEma = [sNum '@student.hhs.nl']
-        sAtt = fullfile(pwd,zips(nZ).name);
-        sendEmailrecursive(sEma,thisWeek,chr,sAtt)
-        nSendMails = nSendMails + 1;
+        sAtt = fullfile(zips(nZ).folder,zips(nZ).name);
+        sendmail(sEma,...
+        ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
+        movefile(sAtt,apSendFolder);
+        clc
+        nSendMails = nSendMails + 1
     end
     disp(['Send mails: ' num2str(nSendMails)]);
     cd(con.BASEFOLDER)
-end
-
-function sendEmailrecursive(sEma,thisWeek,chr,sAtt)
-try
-    sendmail(sEma,...
-        ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
-catch err
-    warning(err.message)
-    pause(1) %Sometime the the sendmail function does not work properly
-        'repeat'
-    sendEmailrecursive(sEma,thisWeek,chr,sAtt)
-
-    keyboard
-end
-
 end
