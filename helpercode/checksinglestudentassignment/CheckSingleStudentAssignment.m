@@ -130,7 +130,7 @@ for i = 1:length(mfilesWithHash)
             warning on
             % Calcule partialpoints
             sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
-            
+%             pointsForCurrentAssignment
             %% Write the result to the student file
             percStudent = ResStudentScript * 100;
             

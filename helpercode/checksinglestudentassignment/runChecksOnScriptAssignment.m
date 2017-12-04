@@ -74,7 +74,8 @@ if ~isempty(char(txtCleanedStudentSolution))
         res = 1;
     end
                                                                                  % all outputs/variables are correct         %but result is too low  
-    if length(checkingVar.nameVars) > 0 && ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.nameVars)) && res < 1             && res > 0
+    if length(checkingVar.nameVars) > 0 && ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.nameVars)) && res < 1      ...
+        && res > 0 && ~contains(pwd,'clean_source')
         edit(apStudentSol);
         edit(replace(callerName,'CHECK','SOL'));
         % Open clean source CheckFile

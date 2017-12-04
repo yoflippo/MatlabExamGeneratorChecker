@@ -281,7 +281,7 @@ if ~contains(apStudentSol,'versie')
         txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
         WriteToLastLineOfFile(apStudentSol,txterror);
     else
-        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
+        txterror = [newline 'Matlab error bericht: ' ErrMess.message];
         WriteToLastLineOfFile(apStudentSol,txterror);
     end
 end
