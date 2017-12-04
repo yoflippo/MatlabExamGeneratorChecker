@@ -40,6 +40,7 @@ function num_output = countNumberOfFunctionOutputs(apSol)
 % Creation of this function.
 
 txt = removeCommentsAndEmptyLines([apSol '.m'],'ot');
+num_output = 0;
 % [txt, ~] = readCleanMFile(apSol)
 if sum(contains(txt,'function')) > 0
     [~, lines, ~] = findRegEx(txt,'function');

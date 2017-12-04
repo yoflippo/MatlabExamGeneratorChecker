@@ -83,7 +83,7 @@ dff.L = L;
 
 dff.t1 = 0.10; % L0
 dff.t2 = 0.70; % Lmax
-dff.t3 = 0.80; % Lmax
+dff.t3 = 0.75; % Lmax
 dff.t4 = 0.95; % L0
 % Range
 dff.min = min([AssInfo.FuncScrip.points]);

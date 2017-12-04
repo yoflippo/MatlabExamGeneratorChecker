@@ -1,6 +1,6 @@
 %% Vraag 2
 %
-% Stelling 1:   Delen gaat in Matlab met de vermenigvuldig operator: '%'
+% Stelling 1:   Delen gaat in Matlab met de deel-operator: '%'
 %
 % Stelling 2:   De rechteroperand in de volgende regel code: 2 ^ 8 is 8. 
 %

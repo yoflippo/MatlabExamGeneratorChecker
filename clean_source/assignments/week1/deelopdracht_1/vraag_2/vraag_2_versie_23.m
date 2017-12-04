@@ -1,6 +1,6 @@
 %% Vraag 2
 %
-% Stelling 1:   Delen gaat in Matlab met de vermenigvuldig operator: '/'
+% Stelling 1:   Delen gaat in Matlab met de deel-operator: '/'
 %
 % Stelling 2:   Met de functie sqrt() kan gekwadrateerd worden.
 %

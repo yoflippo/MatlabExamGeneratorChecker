@@ -1,6 +1,6 @@
 %% Vraag 2
 %
-% Stelling 1:   Delen gaat in Matlab met de vermenigvuldig operator: '/'
+% Stelling 1:   Delen gaat in Matlab met de deel-operator: '/'
 %
 % Stelling 2:   In de volgende code regel heeft de min-operator 
 %				voorrang op de macht-operator: 76 – 6^2.        

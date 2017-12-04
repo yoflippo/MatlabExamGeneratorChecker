@@ -33,7 +33,6 @@
 % versie 1.00 november 2015
 % gemaakt door A.Lagerberg
 
-clear all
 close all
 % INPUTS
 r =30; % straal van de rockervoet. Maak de straal 0 en je krijgt een model zonder rocker

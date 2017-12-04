@@ -25,7 +25,7 @@
 % versie 1.00 november 2015
 % gemaakt door A.Lagerberg
 
-clear all
+function opdracht_5()
 close all
 % INPUTS
 r =30; % straal van de rockervoet. Maak de straal 0 en je krijgt een model zonder rocker
@@ -62,9 +62,9 @@ yendoffoot = y-r;
 xheup = x ;
 yheup = beenlengte-r;           
 % alle punten die samen het model vormen in een matrix stoppen
-% maak een vector aan:
-model(1,:)= xp x xendoffoot xheup;
 
+% maak een vector aan:
+model(1,:)= xp x xendoffoot xheup];
 % maak een vector aan:
 model(2,:) = [yp y yendoffoot yheup]; 
 
@@ -126,12 +126,6 @@ for i = 1:numsteps+1     %%!! de f van for is weg gevallen
     end
 end
 
-
-
-
-message = 'WHIEHOOOEE';
-
- msgbox(message)
-
+end%function
 
 

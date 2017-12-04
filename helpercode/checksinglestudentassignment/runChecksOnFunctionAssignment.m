@@ -52,6 +52,11 @@ if ~isempty(char(txtCleanedStudentSolution))
         data = checkingVar.testFunctionInput;
     end
     
+    % For a function without input
+    if isempty(data)
+        data = 1;
+    end
+    
     %% Create a file from the cleaned file that contains no spaces, for easy txt comparisons
     txtns = nospaces(apCleaned);
     
@@ -66,7 +71,11 @@ if ~isempty(char(txtCleanedStudentSolution))
         num.VariantsRev                             + ...
         num.Variants                                  ...
         );
-    res = (res-nAbs)/sm;
+    if sm == 0
+        res = 0;
+    else
+        res = (res-nAbs)/sm;
+    end
     if res < 0
         warning('result is too low!')
         res = 0;

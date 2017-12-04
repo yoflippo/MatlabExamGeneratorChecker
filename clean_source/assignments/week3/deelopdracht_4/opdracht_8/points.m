@@ -1,1 +1,1 @@
-deelpunten = 5;
+deelpunten = 4;

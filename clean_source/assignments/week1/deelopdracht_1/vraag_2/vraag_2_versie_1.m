@@ -3,7 +3,7 @@
 % Stelling 1:   In Matlab kan machtverheffing met de volgende operator 
 %				worden uitgevoerd: ^                                   
 %
-% Stelling 2:   Delen gaat in Matlab met de vermenigvuldig operator: '%'
+% Stelling 2:   Delen gaat in Matlab met de deel-operator: '%'
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

@@ -63,9 +63,6 @@ cd(con.NAMEASSIGNMENTFOLDER)
 save(con.STUDENTNUMBERMAT,'studentNumbers');
 cd(con.BASEFOLDER)
 
-% Remove (if necessary) and create a folder for the submitted student assignments
-removeShitFromDir(con.STUDENTSUBFOLDER)
-
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
 

@@ -6,6 +6,7 @@
 % Je mag de namen van variabelen wel aanpassen. 
 % Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'WHIEHOEE'. 
 
+function opdracht_5()
 %% ---------------- Programma ------------------ %%
 % Dit script geeft je een basale bouwsteen voor een verder zelf te bouwen
 % model van de rocker shoe. In deze kale vorm heeft het model (in wording)
@@ -24,7 +25,6 @@
 % versie 1.00 november 2015
 % gemaakt door A.Lagerberg
 
-clear all
 close all
 % INPUTS
 r =30; % straal van de rockervoet. Maak de straal 0 en je krijgt een model zonder rocker
@@ -123,11 +123,7 @@ or i = 1:numsteps+1
     end
 end
 
-message = 'WHIEHOOOEE';
-
- msgbox(message)
-
-
+end%function
 
 
 

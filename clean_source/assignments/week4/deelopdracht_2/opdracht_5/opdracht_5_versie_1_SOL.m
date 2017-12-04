@@ -1,11 +1,20 @@
-% Opdracht 5
-% Het onderstaande programma is een bestaand programma, maar er staan syntax fouten in.
-% Jij moet deze fouten gaan oplossen. 
+%% Opdracht 5
+% Het onderstaande programma in de functie genaamd opdracht_5 heb jij
+% gekregen van een medestudent. Die student heeft het programma van Aad
+% gekregen en aangepast, maar tijdens het aanpassen zijn er fouten in het
+% programma geslopen.
+%
+% Het is jouw taak om alle syntactische fouten uit het programma te
+% verwijderen.
+%
+% LET OP: Je moet de code aanpassen om fouten te verwijderen. Enkel foute
+% code verwijderen gaat niet werken. Je moet code verbeteren.
+% 
+% Je hebt het goed gedaan wanneer je een animatie in een figure krijgt te 
+% zien. 
 
-% LET OP: Je mag code verwijderen, maar geen volledige variabelen.
-% Je mag de namen van variabelen wel aanpassen. 
-% Je hebt het goed gedaan wanneer je een pop-up krijgt met: 'LEKKER BEZIG!!'. 
 
+function [x,stap,model,T1,derdeElementT1] = opdracht_5()
 
 %% ---------------- Programma ------------------ %%
 % Dit script geeft je een basale bouwsteen voor een verder zelf te bouwen
@@ -25,7 +34,6 @@
 % versie 1.00 november 2015
 % gemaakt door A.Lagerberg
 
-clear all
 close all
 % INPUTS
 r =30; % straal van de rockervoet. Maak de straal 0 en je krijgt een model zonder rocker
@@ -33,9 +41,7 @@ tophoek = 50; % tophoek tussen de benen
 numsteps = 20; % aantal animatie stappen
 booghoek = 80; %  cirkelsegment van de rockervoet moet minimaal gelijk zijn aan de tophoek
 beenlengte= 90; % spreekt voor zich
-time = 0.1; % Pauseduur in de animatie
-
- % !! op regel 38 is clear all toegevoegd, deze moeten ze verwijderen 
+time = 0.01; % Pauseduur in de animatie
 
 % BEREKENINGEN
 x = 0; %startpositie (x coordinaat centrum cirkelsegment) %% !!
@@ -71,8 +77,9 @@ starthoek = (tophoek/2);
 Rm = [cos(starthoek) -sin(starthoek);sin(starthoek) cos(starthoek)];
 model = Rm*model;
 % model animeren
-%roteren over een staphoek (rechtsom dus -) (steeds over dezelfde hoek dus 1 matrix volstaat voor de hele
-%animatie. Elk geroteerd model wordt apart opgeslagen (3d matrix)
+%roteren over een staphoek (rechtsom dus -) (steeds over dezelfde hoek dus
+%1 matrix volstaat voor de hele animatie. Elk geroteerd model wordt apart 
+%opgeslagen (3d matrix)
 Rstapm =  [cos(-stap) -sin(-stap);sin(-stap) cos(-stap)];
 for i =1:numsteps+1
     model(:,:,i+1) = Rstapm*model(:,:,i);
@@ -122,12 +129,6 @@ for i = 1:numsteps+1
     end
 end
 
-
-
-message = 'LEKKER BEZIG';
-
- msgbox(message)
-
-
+end%function
 
 

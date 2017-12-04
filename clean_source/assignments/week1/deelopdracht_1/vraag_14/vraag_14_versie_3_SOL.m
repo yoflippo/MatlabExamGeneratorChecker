@@ -1,7 +1,7 @@
 %% Vraag 14
 %
 % Stelling 1:   De standaard Matlab functie length() geeft bij een kolomvector
-%				het aantal rijen van de vector terug.                         
+%				het aantal kolommen van de vector terug.                      
 %
 % Stelling 2:   Met de functie randn() kun je enkel positieve waarde genereren.
 %

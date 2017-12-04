@@ -60,8 +60,9 @@ if length(testData) > 1
     else
         num_input = length(testData{1});
     end
-else
-    num_input = 1;
+else %In case we need to test a function without inputs
+    num_input = 0;
+    testData = 1;
 end
 
 %% Test for number of outputs of assignment by checking the SOLUTION
@@ -70,8 +71,10 @@ num_output = countNumberOfFunctionOutputs(solution);
 %% Perform tests version 2
 for z = 1:length(testData)
     
-    tVar = testData(z);
-    tVar = tVar{1};
+    if num_input ~= 0
+        tVar = testData(z);
+        tVar = tVar{1};
+    end
     
     switch num2str([num_output num_input])
         case '1  0'
@@ -231,7 +234,30 @@ for z = 1:length(testData)
             catch ErrMess
                 procesError(apStudentSol,ErrMess,num_input,tVar);
             end
+        case '5  0'           
+            try
+                [oa, ob, oc, od, oe] = feval(nmStudentSolution);
+                [oas, obs, ocs, ods, oes] = feval(solution);
+                if isequal(oa,oas)
+                    res = res + 1/num_output;
+                end
+                if isequal(ob,obs)
+                    res = res + 1/num_output;
+                end
+                if isequal(oc,ocs)
+                    res = res + 1/num_output;
+                end
+                if isequal(od,ods)
+                    res = res + 1/num_output;
+                end
+                if isequal(oe,oes)
+                    res = res + 1/num_output;
+                end
+            catch ErrMess
+                procesError(apStudentSol,ErrMess,num_input,[]);
+            end
         otherwise
+            warning([newline mfilename ': ' newline 'NO RIGHT CASE!!' newline]);
     end
 end%for
 
@@ -241,7 +267,7 @@ end%function
 function procesError(apStudentSol,ErrMess,num_input,tVar)
 
 if ~contains(apStudentSol,'versie')
-%     keyboard %CHECK IF IT WORKS
+    %     keyboard %CHECK IF IT WORKS
     if isequal(num_input,1)
         txterror = ['% Deze code werkt niet met de input: ' num2str(tVar)];
         txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
@@ -252,6 +278,9 @@ if ~contains(apStudentSol,'versie')
         WriteToLastLineOfFile(apStudentSol,txterror);
     elseif isequal(num_input,3)
         txterror = ['% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2}) ' en ' num2str(tVar{3})  ];
+        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
+        WriteToLastLineOfFile(apStudentSol,txterror);
+    else
         txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
         WriteToLastLineOfFile(apStudentSol,txterror);
     end

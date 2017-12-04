@@ -2,22 +2,21 @@
 %
 % Stelling 1:   De volgende code wordt geevalueerd tot een logische 1:
 %				                                                      
-%				                                                      
 %				======= Code =======                                  
 %				                                                      
 %				ge(1,2)                                               
 %				                                                      
 %				======= Code =======                                  
 %
-% Stelling 2:   De volgende twee code regels doen exact hetzelfde:
-%				                                                  
-%				                                                  
-%				======= Code =======                              
-%				                                                  
-%				ge(1,2)                                           
-%				1 > 2                                             
-%				                                                  
-%				======= Code =======                              
+% Stelling 2:   De volgende twee code regels doen exact hetzelfde  
+%				(neem aan dat in variabele a en b een getal staat):
+%				                                                   
+%				======= Code =======                               
+%				                                                   
+%				ge(a,b)                                            
+%				a > b                                              
+%				                                                   
+%				======= Code =======                               
 %
 % A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
 % B : stelling 1 is NIET-WAAR en stelling 2 is WAAR

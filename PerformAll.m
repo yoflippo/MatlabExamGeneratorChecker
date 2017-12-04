@@ -30,7 +30,6 @@ dispPlatform
 cd(con.BASEFOLDER)
 disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
 tic
-% removeShitFromDir(apFin);
 CreateAndCopyQuestions(con,gWeekNames);
 disp('Created MC-Questions')
 toc

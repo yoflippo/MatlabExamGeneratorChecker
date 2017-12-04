@@ -1,12 +1,12 @@
 %% Vraag 4
 %
-% Stelling 1:   De volgende code wordt in Matlab correct uitgevoerd:
-%				                                                    
-%				------------code--------------                      
-%				voornaam = 'Mark'                                   
-%				achternaam = 'Schrauwen'                            
-%				volledigeNaam = voornaam + achternaam               
-%				------------code--------------                      
+% Stelling 1:   De volgende code plakt 'voornaam' en 'achternaam' aan elkaar:
+%				                                                             
+%				------------code--------------                               
+%				voornaam = 'Mark'                                            
+%				achternaam = 'Schrauwen'                                     
+%				volledigeNaam = voornaam + achternaam                        
+%				------------code--------------                               
 %
 % Stelling 2:   Bij het aan elkaar maken van meerdere strings m.b.v.            
 %				rechte haken wordt er automatisch een spatie geplaats           
