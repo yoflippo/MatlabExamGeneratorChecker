@@ -31,6 +31,7 @@ function averageGrade = cCheckStudentSubmissions(Week)
 InitAll
 
 
+
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
 dbstop if error

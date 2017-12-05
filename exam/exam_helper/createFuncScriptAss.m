@@ -72,19 +72,19 @@ dff.L = L;
 
 %% Define the difficulty progress of the exam.
 %       PROGRESS OF dff OF EXAM
-% dff
-% |             _p_ _
-% |           _/     \
-% |         _/        \
-% |       _/q         z\
-% |______/              \___
-%_|_________________________ time
+%  dff
+%  |             _p_ _
+%  |           _/     \
+%  |         _/        \
+%  |       _/q         z\
+% 1|______/              \___
+%_ |_________________________ time
 %        t1    t2   t3   t4
 
-dff.t1 = 0.10; % L0
-dff.t2 = 0.70; % Lmax
-dff.t3 = 0.75; % Lmax
-dff.t4 = 0.95; % L0
+dff.t1 = 0.20; % L0
+dff.t2 = 0.75; % Lmax
+dff.t3 = 0.80; % Lmax
+dff.t4 = 0.90; % L0
 % Range
 dff.min = min([AssInfo.FuncScrip.points]);
 dff.max = max([AssInfo.FuncScrip.points]);

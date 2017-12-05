@@ -2375,4 +2375,279 @@ Send mails: 47
 
 sEma =
 
-    '1707
+    '17071410@student.hhs.nl'
+
+
+nSendMails =
+
+    48
+
+Send mails: 48
+
+sEma =
+
+    '17071488@student.hhs.nl'
+
+
+nSendMails =
+
+    49
+
+Send mails: 49
+
+sEma =
+
+    '17075424@student.hhs.nl'
+
+
+nSendMails =
+
+    50
+
+Send mails: 50
+
+sEma =
+
+    '17079160@student.hhs.nl'
+
+
+nSendMails =
+
+    51
+
+Send mails: 51
+
+sEma =
+
+    '17085659@student.hhs.nl'
+
+
+nSendMails =
+
+    52
+
+Send mails: 52
+
+sEma =
+
+    '17086299@student.hhs.nl'
+
+
+nSendMails =
+
+    53
+
+Send mails: 53
+
+sEma =
+
+    '17086620@student.hhs.nl'
+
+
+nSendMails =
+
+    54
+
+Send mails: 54
+
+sEma =
+
+    '17094879@student.hhs.nl'
+
+
+nSendMails =
+
+    55
+
+Send mails: 55
+
+sEma =
+
+    '17094992@student.hhs.nl'
+
+
+nSendMails =
+
+    56
+
+Send mails: 56
+
+sEma =
+
+    '17095107@student.hhs.nl'
+
+
+nSendMails =
+
+    57
+
+Send mails: 57
+
+sEma =
+
+    '17095824@student.hhs.nl'
+
+
+nSendMails =
+
+    58
+
+Send mails: 58
+
+sEma =
+
+    '17098351@student.hhs.nl'
+
+
+nSendMails =
+
+    59
+
+Send mails: 59
+
+sEma =
+
+    '17099544@student.hhs.nl'
+
+
+nSendMails =
+
+    60
+
+Send mails: 60
+
+sEma =
+
+    '17099986@student.hhs.nl'
+
+
+nSendMails =
+
+    61
+
+Send mails: 61
+
+sEma =
+
+    '17104343@student.hhs.nl'
+
+
+nSendMails =
+
+    62
+
+Send mails: 62
+
+sEma =
+
+    '17105331@student.hhs.nl'
+
+
+nSendMails =
+
+    63
+
+Send mails: 63
+
+sEma =
+
+    '17109272@student.hhs.nl'
+
+
+nSendMails =
+
+    64
+
+Send mails: 64
+
+sEma =
+
+    '17109817@student.hhs.nl'
+
+
+nSendMails =
+
+    65
+
+Send mails: 65
+
+sEma =
+
+    '17116562@student.hhs.nl'
+
+
+nSendMails =
+
+    66
+
+Send mails: 66
+
+sEma =
+
+    '17125383@student.hhs.nl'
+
+
+nSendMails =
+
+    67
+
+Send mails: 67
+
+sEma =
+
+    '17128560@student.hhs.nl'
+
+
+nSendMails =
+
+    68
+
+Send mails: 68
+
+sEma =
+
+    '17130182@student.hhs.nl'
+
+
+nSendMails =
+
+    69
+
+Send mails: 69
+
+sEma =
+
+    '17136423@student.hhs.nl'
+
+
+nSendMails =
+
+    70
+
+Send mails: 70
+
+sEma =
+
+    '17139678@student.hhs.nl'
+
+
+nSendMails =
+
+    71
+
+Send mails: 71
+
+sEma =
+
+    '17142385@student.hhs.nl'
+
+
+nSendMails =
+
+    72
+
+Send mails: 72
+zip(fullfile(con.BASEFOLDER,'submitted_bu',['bu_beforeChecking_wk' num2str(weekToCorrect) '_' datetimetxt() '.zip' ]),fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER))
+{Undefined function or variable 'weekToCorrect'.
+} 
+Check for the existence of needed supporting scripts/function files

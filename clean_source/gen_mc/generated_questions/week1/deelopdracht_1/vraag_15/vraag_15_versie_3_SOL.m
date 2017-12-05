@@ -1,7 +1,7 @@
 %% Vraag 15
 %
-% Stelling 1:   Met de functie fliplr() kun je van een rijvector een kolomvector
-%				maken.                                                          
+% Stelling 1:   Met de functie fliplr() kun je van een rijvector een 
+%				kolomvector maken.                                   
 %
 % Stelling 2:   In het onderstaande code voorbeeld worden de door randn()     
 %				gegeneerde waardes omgedraaid afgedrukt in het Command Window:

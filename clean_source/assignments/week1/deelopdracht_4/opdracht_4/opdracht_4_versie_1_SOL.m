@@ -10,7 +10,7 @@
 % Als de input variabele de volgende string bevat: 'Pectoralis'. 
 % Dan geeft de functie "opdracht: Pectoralis" terug.
 %
-% Dit bestand (wat je nu leest) mag enkel en alleen een functie bevatten.
+% Een function file mag enkel en alleen een functie bevatten. 
 function result = opdracht_4(txt)
 result = ['opdracht: ' txt];
 end

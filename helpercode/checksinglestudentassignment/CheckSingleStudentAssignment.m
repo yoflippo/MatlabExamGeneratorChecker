@@ -164,7 +164,7 @@ for i = 1:length(mfilesWithHash)
             catch warn
                 warning([mfilename ': cannot write to -> ' AbsPathStudentScript newline warn.message]);
             end
-            %             keyboard
+            keyboard
         end
     end
 end

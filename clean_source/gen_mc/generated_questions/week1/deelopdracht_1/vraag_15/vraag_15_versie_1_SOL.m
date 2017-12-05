@@ -1,7 +1,7 @@
 %% Vraag 15
 %
-% Stelling 1:   Met de functie fliplr() kun je van een rijvector een kolomvector
-%				maken.                                                          
+% Stelling 1:   Met de functie fliplr() kun je van een rijvector een 
+%				kolomvector maken.                                   
 %
 % Stelling 2:   Met de functie whos() krijg je de eerste 10 variabelen uit de
 %				Workspace te zien.                                           

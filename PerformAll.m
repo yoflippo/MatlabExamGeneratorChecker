@@ -128,3 +128,4 @@ try
 catch err
     error([mfilename ': ' err.message]);
 end
+diary off

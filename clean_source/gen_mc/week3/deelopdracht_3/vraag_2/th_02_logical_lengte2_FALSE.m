@@ -1,7 +1,7 @@
 Gegeven: de variabele signal in onderstaande code bevat een 
-aantal getallen die kleiner zijn dan nul. Stelling: Na uitvoering
-van onderstaande code hebben bestaat variabele signal uit minder
-elementen dan de variabele signalGTzero.
+aantal getallen die kleiner zijn dan nul. 
+Na uitvoering van onderstaande code hebben bestaat variabele 
+signal uit minder elementen dan de variabele signalGTzero.
 
 <<< begin code >>>
 

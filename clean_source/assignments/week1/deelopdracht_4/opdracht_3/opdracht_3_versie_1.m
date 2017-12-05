@@ -7,4 +7,4 @@
 % Bereken het gemiddelde van de vector 'getallen' zonder gebruik te maken
 % van de standaard Matlab functie mean().
 %
-% Dit bestand (wat je nu leest) mag enkel en alleen een functie bevatten.
+% Een function file mag enkel en alleen een functie bevatten. 

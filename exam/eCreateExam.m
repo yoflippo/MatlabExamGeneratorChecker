@@ -5,13 +5,14 @@
 
 clear all
 nOfMulChoiceAssignment = 40;
-nOfScriptsFunctions = 25;
-weekNames = {'week1' 'week2' 'week3'}; % fill with the other weeks
+nOfScriptsFunctions = 20;
+weekNames = {'week1' 'week2' 'week3' 'week4'}; 
 
 %% Go to path of this file
 mfilename('fullpath')
 ap.BASEFOLDEREX = fileparts(mfilename('fullpath'));
 ap.BASEFOLDER = fileparts(ap.BASEFOLDEREX);
+warning off; rmpath(genpath(ap.BASEFOLDER)); warning on;
 ap.EXAMHELPER = fullfile(ap.BASEFOLDEREX,'exam_helper');
 addpath(genpath(ap.EXAMHELPER));
 ap.HELPERCODE = fullfile(ap.BASEFOLDER,'helpercode');
@@ -24,7 +25,7 @@ dos(['start WinRaR a -r -m5 -mt16 ' [ap.BASEFOLDER '_BU'] filesep datetimetxt() 
 cd(ap.BASEFOLDEREX)
 
 %% Make a dir of this exam, with some extra directories, create some handy variables
-nm.Exam = 'Tentamen';
+nm.Exam = 'Tentamen_VOORBEELD';
 nm.CurrExamDir = [nm.Exam '_' datetimetxt() ];
 ap.CurrExam = fullfile(ap.BASEFOLDEREX,'Created',nm.CurrExamDir);
 mkdirIf(ap.CurrExam);

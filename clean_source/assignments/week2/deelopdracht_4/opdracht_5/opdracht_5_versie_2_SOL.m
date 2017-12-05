@@ -12,7 +12,7 @@
 % lege string).
 %
 % Voorbeeld aanroep:
-%                   [AA b] = opdracht_5_versie_1_SOL('abcdeabcdea','abc') 
+%                   [AA b] = opdracht_5('abcdeabcdea','abc') 
 % geeft als output:
 %                   AA = 'abcdeabcdea'
 %                   b = 'abc'

@@ -32,13 +32,15 @@ try
         error(['DOES NOT EXIST: ' filename]);
     end
     % run the empty file on the target CHECK function
-    eval(['res = ' checkFunction '(pathEmptyFile);'])
+    %     eval(['res = ' checkFunction '(pathEmptyFile);']).
+    res=feval(checkFunction,pathEmptyFile);
     if round(res,1) ~= 0.0
         edit(pathEmptyFile);
         error(['The Check function should return a result of 0 but is: ' num2str(res)]);
     end
     % run the SOLUTION file on the target CHECK function
-    eval(['res = ' checkFunction '(pathSolutionFile);'])
+%     eval(['res = ' checkFunction '(pathSolutionFile);'])
+    res=feval(checkFunction,pathSolutionFile);
     if round(res,1) ~= 1.0
         edit(pathSolutionFile);
         error(['The Check function should return a result of 1 but is: ' num2str(res)]);

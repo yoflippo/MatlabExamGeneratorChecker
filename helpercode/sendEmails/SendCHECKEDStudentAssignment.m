@@ -11,7 +11,10 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-thisWeek = 'week2'
+studentNumbers = load(fullfile('studentnumbers','studentnumbers.txt'))
+strStudentNumbers = string(num2str(studentNumbers));
+
+thisWeek = 'week3'
 cd('submitted');
 cd(thisWeek);
 
@@ -26,12 +29,13 @@ chr = [chr newline 'Als een vraag/opdracht niet 100% correct is, wordt de uitwer
 chr = [chr newline 'er bij gegeven. Zo kun je leren van je fouten.'];
 chr = [chr newline newline 'Onderaan jouw uitwerking kan extra informatie staan over wat er fout is gegaan.']
 chr = [chr newline];
-chr = [chr newline 'Op deze e-mail wordt niet door ons gereageerd.'];
+chr = [chr newline 'Op deze e-mail wordt niet gereageerd.'];
 chr = [chr newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
 chr = [chr newline 'Mark Schrauwen in RZ 2.17.1. '];
 chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];
+
 
 %% Make dir send
 zips = dir(['**' filesep '*.zip']);
@@ -46,17 +50,59 @@ cd(oldPath)
 %% Send mails
 for nZ = 1:length(zips)
     if contains(zips(nZ).name,'Checked')
-        %% extract student numbers
-        sNum = findStudentNumberInTxt(zips(nZ).name);
-        %% construct emailadres
-        sEma = [sNum '@student.hhs.nl']
-        sAtt = fullfile(zips(nZ).folder,zips(nZ).name);
-        sendmail(sEma,...
-        ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
-        movefile(sAtt,apSendFolder);
-        clc
+        try
+            %% extract student numbers
+            sNum = findStudentNumberInTxt(zips(nZ).name);
+            indices = contains(strStudentNumbers,sNum);
+            if any(indices)
+                %% construct emailadres
+                sEma = [sNum '@student.hhs.nl']
+                sAtt = fullfile(zips(nZ).folder,zips(nZ).name);
+                sendmail(sEma,...
+                    ['Biostatica Matlab: nagekeken eindopdracht ' thisWeek],chr,sAtt);
+                % Remove studentnumber from list
+                strStudentNumbers = strStudentNumbers(not(indices))
+                movefile(sAtt,apSendFolder);
+                clc
+            else
+                error([mfilename ': Something is wrong, student has submitted that is not in the list']);
+            end
+        catch
+            save('strStudentNumbers.mat','strStudentNumbers')
+            error([mfilename ': sending of Checked e-mails stopped...']);
+        end
         nSendMails = nSendMails + 1
     end
     disp(['Send mails: ' num2str(nSendMails)]);
     cd(con.BASEFOLDER)
+end
+
+%% Message for student that did not submit.
+chrns = 'Beste student,';
+chrns = [chrns newline ];
+chrns = [chrns newline 'Wij hebben geen eindopdracht van jou ontvangen of'];
+chrns = [chrns newline 'je hebt de verkeerde bestanden opgestuurd '];
+chrns = [chrns newline 'van ' thisWeek ' voor Biostatica Matlab.'];
+chrns = [chrns newline];
+chrns = [chrns newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
+chrns = [chrns newline 'Mark Schrauwen in RZ 2.17.1. '];
+chrns = [chrns newline];
+chrns = [chrns newline 'Op deze e-mail wordt niet gereageerd.'];
+chrns = [chrns newline];
+chrns = [chrns newline newline 'Met vriendelijke groet,'];
+chrns = [chrns newline 'Mark Schrauwen'];
+
+%% Send students without submission an e-mail
+for nS = 1:length(strStudentNumbers)
+    % extract student numbers
+    sNum = strStudentNumbers(nS);
+    % construct emailadres
+    sEma = [char(sNum) '@student.hhs.nl']
+    try
+        sendmail(sEma,...
+            ['Biostatica Matlab: geen/foute eindopdracht ' thisWeek],chrns);
+    catch err
+        save('strStudentNumbers.mat','strStudentNumbers')
+        error([newline mfilename ': ' newline err.message newline]);
+    end
 end
