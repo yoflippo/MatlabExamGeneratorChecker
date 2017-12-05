@@ -15,7 +15,7 @@ addpath(genpath('helpercode'));
 InitAll
 buAll(pwd,'')
 % Fill in week to test
-weekToCorrect = 2;
+weekToCorrect = 1;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
 

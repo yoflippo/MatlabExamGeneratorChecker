@@ -19,13 +19,8 @@ ap.HELPERCODE = fullfile(ap.BASEFOLDER,'helpercode');
 ap.EXAMHELPERHEADER = fullfile(ap.EXAMHELPER,'exam_header');
 addpath(genpath(ap.HELPERCODE));
 
-% Make a backup before creation of exam
-cd(ap.BASEFOLDER)
-dos(['start WinRaR a -r -m5 -mt16 ' [ap.BASEFOLDER '_BU'] filesep datetimetxt() 'beforeExam ' pwd filesep '*.*'])
-cd(ap.BASEFOLDEREX)
-
 %% Make a dir of this exam, with some extra directories, create some handy variables
-nm.Exam = 'Tentamen_VOORBEELD';
+nm.Exam = 'Tentamen';
 nm.CurrExamDir = [nm.Exam '_' datetimetxt() ];
 ap.CurrExam = fullfile(ap.BASEFOLDEREX,'Created',nm.CurrExamDir);
 mkdirIf(ap.CurrExam);
@@ -123,6 +118,10 @@ if mean(grades(:,2)) < 10
     error('The exam grade should be a TEN!!')
 end
 cd ..
+
+%% Make a backup
+cd(ap.BASEFOLDER)
+dos(['start WinRaR a -r -m5 -mt16 ' [ap.BASEFOLDER '_BU'] filesep datetimetxt() 'beforeExam ' pwd filesep '*.*'])
 
 %% Finally, Clean up
 disp('Finally, Clean up');
