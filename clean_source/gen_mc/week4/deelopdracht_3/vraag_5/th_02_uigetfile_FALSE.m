@@ -1,6 +1,6 @@
-De onderstaande functie aanroep van uigetfile() opent
-een window (venster) waarin alle bestandstypes zijn te
-zien:
+De onderstaande functie aanroep uigetfile() opent
+een window (venster) waarin alle mogelijke 
+bestandstypes zijn te zien:
 
 ======= Code =======
 

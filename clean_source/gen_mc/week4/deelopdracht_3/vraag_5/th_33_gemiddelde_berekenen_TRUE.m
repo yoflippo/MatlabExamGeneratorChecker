@@ -1,5 +1,5 @@
-Matlab kan het gemiddelde niet berekenen omdat die 
-niet weet welke waarde G heeft:
+Matlab kan het gemiddelde van vector G niet berekenen 
+omdat die niet weet welke waarde G heeft:
 
 
 ------------code--------------

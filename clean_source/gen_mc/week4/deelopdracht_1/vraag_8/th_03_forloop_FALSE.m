@@ -1,5 +1,5 @@
-In de onderstaande for-loop is de variabele vectorA 
-een vector
+In de onderstaande for-loop wordt de variabele vectorA 
+een vector.
 
 ----------code-----------
 VectorB = 0:1:10;

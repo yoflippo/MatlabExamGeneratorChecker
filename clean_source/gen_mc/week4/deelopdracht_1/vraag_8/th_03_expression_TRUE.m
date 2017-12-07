@@ -1,4 +1,4 @@
-De volgende code geeft een foutmelding: 
+De volgende code geeft geen foutmelding: 
 
 --------Code-----------
 n=[1 21 31 23 12]

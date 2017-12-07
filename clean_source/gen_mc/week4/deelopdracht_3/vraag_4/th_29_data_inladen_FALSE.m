@@ -1,5 +1,6 @@
 De volgende code laadt het data-bestand met de naam 
-'datafile.txt' in:
+'datafile.txt' in (neem aan dat 'datafile.txt' bestaat en 
+door Matlab vindbaar is):
 
 ------------code--------------
 

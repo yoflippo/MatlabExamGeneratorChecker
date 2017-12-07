@@ -1,2 +1,2 @@
-Met de function 'uichoosefile()' kies je een bestand om 
-in te laden in Matlab. 
+Met de function 'uichoosefile()' kan de gebruiker een 
+bestand selecteren. 

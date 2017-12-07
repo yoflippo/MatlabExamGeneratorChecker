@@ -1,5 +1,5 @@
 De volgende code zal data inladen in Matlab (neem aan dat
-'datafile.txt' bestaat):
+'datafile.txt' bestaat en door Matlab vindbaar is):
 
 ------------code--------------
 

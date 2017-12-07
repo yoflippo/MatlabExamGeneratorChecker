@@ -4,6 +4,6 @@ Matlab geef dit resultaat terug: C =  2   27   21
  
 G = [1 3 3];
 B = [2 9 7]
-C = +G.*-B
+C = G.*-B
 
 ------------code--------------
