@@ -106,6 +106,3 @@ title('Forceplate: COP');
 legend('COP');
 xlabel('afstand x (cm)');
 grid on
-
-Message = 'LEKKER BEZIG!!' ;
-h = msgbox(Message);

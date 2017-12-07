@@ -81,9 +81,11 @@ dff.L = L;
 %_ |_________________________ time
 %        t1    t2   t3   t4
 
+% THIS SETTING DOES NOT ALLOW FOR THE MOST DIFFICULT ASSIGNMENTS TO BE PART
+% OF THE EXAM
 dff.t1 = 0.20; % L0
 dff.t2 = 0.75; % Lmax
-dff.t3 = 0.80; % Lmax
+dff.t3 = 0.75; % Lmax
 dff.t4 = 0.90; % L0
 % Range
 dff.min = min([AssInfo.FuncScrip.points]);

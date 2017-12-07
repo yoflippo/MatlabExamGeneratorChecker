@@ -4,8 +4,8 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all
-nOfMulChoiceAssignment = 40;
-nOfScriptsFunctions = 20;
+nOfMulChoiceAssignment = 30;
+nOfScriptsFunctions = 15;
 weekNames = {'week1' 'week2' 'week3' 'week4'}; 
 
 %% Go to path of this file
