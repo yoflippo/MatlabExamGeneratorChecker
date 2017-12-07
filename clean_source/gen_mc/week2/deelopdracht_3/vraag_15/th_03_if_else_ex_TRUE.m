@@ -1,4 +1,4 @@
-In de Command Window wordt de langste spier afgedrukt:
+In het Command Window wordt de langste spier afgedrukt:
 
 ======= Code =======
 

@@ -1,4 +1,4 @@
-In de Command Window wordt de 'Brachialis' afgedrukt:
+In het Command Window wordt de 'Brachialis' afgedrukt:
 
 ======= Code =======
 

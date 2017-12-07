@@ -1,1 +1,1 @@
-Het is mogelijk om een .mat file te openen met Excel.
+Het is niet mogelijk om een .csv file te openen in Matlab.

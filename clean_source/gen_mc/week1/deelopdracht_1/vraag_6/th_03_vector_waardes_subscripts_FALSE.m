@@ -1,4 +1,4 @@
-De variabele 'vec' heeft de waardes '2 3 4 3 4 5 6' na
+De variabele 'vec' heeft de waardes [2 3 4 3 4 5 6] na
 het uitvoeren van de volgende code:
 
 ------------code--------------

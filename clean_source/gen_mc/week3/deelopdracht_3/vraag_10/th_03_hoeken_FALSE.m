@@ -1,1 +1,1 @@
-Hoeken worden bepaald ten opzichte van de positieve y-as.
+Bij een Matlab plot is de y-as standaard positief naar rechts.

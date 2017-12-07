@@ -1,4 +1,4 @@
-In de Command Window wordt het woord 'Klopt' afgedrukt:
+In het Command Window wordt het woord 'Klopt' afgedrukt:
 
 ======= Code =======
 

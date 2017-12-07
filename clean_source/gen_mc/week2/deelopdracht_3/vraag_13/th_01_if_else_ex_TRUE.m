@@ -1,4 +1,4 @@
-In de Command Window wordt 'dag' afgedrukt:
+In het Command Window wordt 'dag' afgedrukt:
 
 ======= Code =======
 

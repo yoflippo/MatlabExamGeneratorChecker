@@ -1,6 +1,7 @@
 De onderstaande code laat een figure zien met 2 verticale subplots.
 
 ======= Code =======
+n = 10;
 t = -n:0.1:n;
 Y1 = t.^2;
 

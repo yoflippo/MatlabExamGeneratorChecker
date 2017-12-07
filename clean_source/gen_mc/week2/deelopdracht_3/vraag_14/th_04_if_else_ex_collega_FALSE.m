@@ -1,4 +1,4 @@
-In de Command Window wordt 'Herre is langer' afgedrukt:
+In het Command Window wordt 'Herre is langer' afgedrukt:
 
 ======= Code =======
 

@@ -1,7 +1,8 @@
-De onderstaande code wordt correct uitgevoerd:
+De onderstaande code wordt zonder foutmelding uitgevoerd:
 
 ======= Code =======
-randomWaardes = randn(1,20); %Genereren van random randomWaardesiabelen
+%Genereren van random variabelen
+randomWaardes = randn(1,20); 
 for nR = 20:100
    z(nR) = randomWaardes(nR) + randomWaardes(nR+1);
 end

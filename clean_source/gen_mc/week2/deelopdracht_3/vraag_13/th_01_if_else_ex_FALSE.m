@@ -1,4 +1,4 @@
-In de Command Window wordt 'hoi' afgedrukt:
+In het Command Window wordt 'hoi' afgedrukt:
 
 ======= Code =======
 

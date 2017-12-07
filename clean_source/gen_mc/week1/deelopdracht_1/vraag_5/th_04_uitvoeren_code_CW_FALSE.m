@@ -1,5 +1,5 @@
 Bij het uitvoeren van de volgende code is het resultaat
-in de Command Window: ' ans = 
+in het Command Window: ' ans = 
                              'a'
                       '
                       

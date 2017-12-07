@@ -1,2 +1,2 @@
-De while-lus kent geen specifieke voorkeur. Dat wil zeggen dat
-een for-lus nooit de voorkeur verdiend.
+Als je van te voren weet hoe vaak een lus moet worden
+herhaald, gebruik je een while-lus.

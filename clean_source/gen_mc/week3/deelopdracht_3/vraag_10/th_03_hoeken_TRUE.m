@@ -1,1 +1,1 @@
-Hoeken worden bepaald ten opzichte van de positieve x-as.
+Bij een Matlab plot is de x-as standaard positief naar rechts.

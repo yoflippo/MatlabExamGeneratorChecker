@@ -1,5 +1,4 @@
-De volgende code wordt geeft deze logische vector terug: [1 1 0].
-
+De volgende code geeft deze logische vector terug: [1 1 0].
 
 ======= Code =======
 

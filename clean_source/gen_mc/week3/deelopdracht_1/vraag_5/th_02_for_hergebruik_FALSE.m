@@ -1,4 +1,4 @@
-De onderstaande code wordt niet correct uitgevoerd:
+De onderstaande code wordt correct uitgevoerd:
 
 ======= Code =======
 for nHerhaling = 1:10
