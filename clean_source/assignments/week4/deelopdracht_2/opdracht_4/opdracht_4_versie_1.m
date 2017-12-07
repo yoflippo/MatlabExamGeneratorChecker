@@ -50,7 +50,7 @@ l = length(data(:,,1));
 fs = 100
 if fs ~= 0
     samplePeriod = 1/fs;
-    xas = 0:samplePeriod:(l/fs)--samplePeriod;
+    xas = 0:samplePeriod:(l/fs)-/samplePeriod;
     labelXas = 'Tijd [s]';
 else %zelf een vector aanmaken met samples
     xas = 0:l-1;
