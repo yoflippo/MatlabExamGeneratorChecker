@@ -21,7 +21,7 @@ checkingVar.nameVars = {};
 checkingVar.literalsP = {'plot(t' 2 'signaal(' 1 'figure' 1};
 checkingVar.literalsA = {'NaN' 2};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {{'signaal > 0.4' '0.4 < signaal'} {'signaal < 0.8' '0.8 > signaal'} {'&' '&&'}};
+checkingVar.literalsO = {{'> 0.4' '0.4 <'} {' < 0.8' '0.8 >'} {'&' '&&'}};
 checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

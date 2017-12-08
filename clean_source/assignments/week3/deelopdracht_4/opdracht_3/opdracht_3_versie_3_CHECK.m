@@ -19,7 +19,7 @@ function res = opdracht_3_versie_3_CHECK(apStudentSol)
 
 
 checkingVar.nameVars = {'data'};
-checkingVar.literalsP = {'data =' 1 'figure' 1 'plot(t,data' 1 '0.5' 1 '>' 1 '>0.5' 1};
+checkingVar.literalsP = {'figure' 1 'plot(t,data' 1 '0.5' 1 '>' 1 '>0.5' 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

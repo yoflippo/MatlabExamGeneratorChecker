@@ -16,14 +16,14 @@ function res = opdracht_10_versie_1_CHECK(apStudentSol)
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput.data = {{0.5,30} {0,0} {-1,-1} {pi,45}};
+checkingVar.testFunctionInput.data = {{0.5,30} {0,0} {-1,-1} {pi,45} {pi,pi} {-pi,pi}};
 % % % % % % % % % % % % % checkingVar.testFunctionInput.DOUBLE_OUTPUT = false;
 % % % % % % % % % % % % % checkingVar.testFunctionInput.DOUBLE_INPUT = false;
 
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'cos' 1 'sin' 1 'cosd' 1 'sind' 1};
+checkingVar.literalsP = {'cos(' 1 'sin(' 1 'cosd(' 1 'sind(' 1};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3 'cos(hoekGraden)' 2 ' sin(hoekGraden)' 2 'sind(hoekRad)' 2 ' cosd(hoekRad)' 2};

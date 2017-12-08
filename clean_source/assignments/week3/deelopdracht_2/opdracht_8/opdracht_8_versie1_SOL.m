@@ -12,9 +12,7 @@
 % Noem de functie: 'opdracht_8'.
 
 function output = opdracht_8(vector,kleinerdan)
-
 output = vector;
-output = output(output<kleinerdan);
+output(output<kleinerdan) = -1;
 plot(output)
-
 end

@@ -10,4 +10,3 @@
 % kopie.
 %
 % Noem de functie: 'opdracht_8'.
-

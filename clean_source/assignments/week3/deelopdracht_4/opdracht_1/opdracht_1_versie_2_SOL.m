@@ -8,4 +8,4 @@
 addpath(genpath(fullfile('..','Databestanden')))
 data = load('herrefaber.txt');
 
-data2 = data(2,3:4);
+data2 = data(2,2:4);

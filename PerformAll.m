@@ -8,14 +8,16 @@ for nW = 1:length(Weeks)
     gWeekNames{cnt,nW} = ['week' num2str(Weeks(nW))];
     cnt = cnt +1 ;
 end
+
 warning off
 rmpath(genpath(fileparts(mfilename('fullpath'))));
-warning on
 addpath(genpath('helpercode'));
+warning on
+
 InitAll
 buAll(pwd,'')
 % Fill in week to test
-weekToCorrect = 2;
+weekToCorrect = 3;
 weekNr = num2str(weekToCorrect);
 weekName = ['week' weekNr];
 
@@ -114,6 +116,10 @@ datetime
 diary off
 disp('Making a backup');
 buAll(con.BASEFOLDER,'')
+warning off
+rmpath(genpath(fileparts(mfilename('fullpath'))));
+addpath(genpath('helpercode'));
+warning on
 return;
 
 %% Check manually copied submitted files
@@ -130,3 +136,7 @@ catch err
     error([mfilename ': ' err.message]);
 end
 diary off
+warning off
+rmpath(genpath(fileparts(mfilename('fullpath'))));
+addpath(genpath('helpercode'));
+warning on

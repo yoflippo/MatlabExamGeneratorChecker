@@ -16,7 +16,7 @@ function res = opdracht_1_versie_3_CHECK(apStudentSol)
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
 checkingVar.nameVars = {'hoeken'};
-checkingVar.literalsP = {'plot(hoeken,' 1 'sin(data(2,:))' 1 'plot(hoeken,sin(data(2,:)))' 1};
+checkingVar.literalsP = {'plot(hoeken,' 1 'sin(' 1 'plot(hoeken,' 1};
 checkingVar.literalsA = {'NaN' 3};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

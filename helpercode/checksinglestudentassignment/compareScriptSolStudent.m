@@ -50,16 +50,17 @@ catch ErrMess
     return;
 end
 
-% Get values and variables from the SOLUTION file
-for nV = 1:length(nameVars)
-    % Save the variables in the SOLUTION FILE
-    eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
-    % Remove solution variables from Workspace.
-    eval(['clear ' nameVars{nV}  ';']);
-end
-
-%% Run the cleaned student script, if not working no points!
 try
+    % Get values and variables from the SOLUTION file
+    for nV = 1:length(nameVars)
+        % Save the variables in the SOLUTION FILE
+        eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
+        % Remove solution variables from Workspace.
+        eval(['clear ' nameVars{nV}  ';']);
+    end
+    
+    %% Run the cleaned student script, if not working no points!
+    
     if exist(apCleaned,'file')
         run(apCleaned);
         txtns = nospaces(apCleaned);
@@ -85,6 +86,10 @@ for nV = 1:length(nameVars)
         eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
         if blTest
             res = res + 1;
+        else
+            mss = ['% verwacht resultaat in: ' nameVars{nV} '= ' num2str(eval(['var' num2str(nV) 'ANS' ]))];
+            mss = [mss newline '% verkregen resultaat = ' num2str(eval(nameVars{nV}))];
+            WriteToLastLineOfFile(apStudentSol,mss);
         end
     catch ErrMess
         % Test for a generated file! Could also be done by testing for Hash

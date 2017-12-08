@@ -20,7 +20,7 @@ function res = opdracht_3_versie_1_CHECK(apStudentSol)
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
 checkingVar.nameVars = {};
-checkingVar.literalsP = {'figure' 2 'figure' 2 'plot(signaal1)' 1 'plot(signaal2)' 1 }; 
+checkingVar.literalsP = {'figure' 1 'figure' 1 'plot(signaal1)' 1 'plot(signaal2)' 1 }; 
 checkingVar.literalsA = {'NaN'};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

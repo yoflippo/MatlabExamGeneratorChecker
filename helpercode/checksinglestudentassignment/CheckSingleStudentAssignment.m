@@ -138,11 +138,13 @@ for i = 1:length(mfilesWithHash)
                 % Copy the solution file
                 answerFile = [nmSTUScript '_UITWERKING.m'];
                 copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));
+                txtResultStud = [];
                 txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(round(percStudent)) '% goed gemaakt.' newline];
                 txtResultStud{2} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
                 txtResultStud{3} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
                 WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
             else
+                txtResultStud = [];
                 txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(round(percStudent)) '% goed gemaakt.'];
                 WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
             end

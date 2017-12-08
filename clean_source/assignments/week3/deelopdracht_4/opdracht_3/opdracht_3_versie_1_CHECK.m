@@ -21,7 +21,7 @@ function res = opdracht_3_versie_1_CHECK(apStudentSol)
 
 
 checkingVar.nameVars = {'data'};
-checkingVar.literalsP = {'data =' 1 'figure' 1 'plot(t,data' 1 '10' 1 '<' 1 '<10' 1};
+checkingVar.literalsP = {'plot(t,data' 1 '10' 1 '<' 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

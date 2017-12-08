@@ -39,14 +39,11 @@ checkingVar.literalsR = {};
 checkingVar.literalsO = {{'strlength(B) < 8' '8 > strlength(B)'} {'strlength(AA) > 8' '8 < strlength(AA)'}};
 checkingVar.literalsRO = {};
 
-
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Literals that should be present and
 % 2- Lterals that should be abscent
 % You should take cornercases in to consideration as well. So add those
 % tests as well.
-
-
 
 %% Commence the TESTING !!!
 res = 0;

@@ -16,11 +16,11 @@ function res = opdracht_8_versie_1_CHECK(apStudentSol)
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 
-checkingVar.nameVars = {'vastNaarAchter'};
-checkingVar.literalsP = {'==' 2 '&' 1 'diff(Pos)' 1};
+checkingVar.nameVars = { 'vastNaarAchter'};
+checkingVar.literalsP = {};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'&' '&&'} {'for' 'diff('} {'<' '>'}};
 checkingVar.literalsRO = {};
 checkingVar.literalsSL = {};
 

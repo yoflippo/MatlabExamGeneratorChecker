@@ -2,8 +2,12 @@ function res = opdracht_5_versie1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % for i = 3:17
-% % % % % % %     i
+% % % % % % % %% Opdracht 5
+% % % % % % % % Gebruik een for-lus om de getallen TUSSEN 3 en 17 af
+% % % % % % % % te drukken in het Command Window.
+% % % % % % % 
+% % % % % % % for i = 2:16
+% % % % % % %     i;
 % % % % % % % end
 %%==========
 
@@ -11,8 +15,8 @@ function res = opdracht_5_versie1_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'i' };
-checkingVar.literalsP = {'3:17' 1 'i = 3:17' 1 'for' 1};
-checkingVar.literalsA = {'NaN' 1 'i=17' 3};
+checkingVar.literalsP = {'2:16' 1 'i = 2:16' 1 'for' 1};
+checkingVar.literalsA = {'NaN' 1 'i=17' 3 'i=16' 3};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

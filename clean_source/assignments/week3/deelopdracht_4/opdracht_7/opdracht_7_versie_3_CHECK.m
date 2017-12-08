@@ -13,7 +13,7 @@ function res = opdracht_7_versie_2_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'rp' 'q'};
-checkingVar.literalsP = {'q = k(rp)' 1 'logical([0; 1; 0; 1; 0; 1])' 1 'rp = ' 1};
+checkingVar.literalsP = {'q = ' 1 '[0; 1; 0; 1; 0; 1' 1 'rp = ' 1};
 checkingVar.literalsA = {'5;12;18' 5};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

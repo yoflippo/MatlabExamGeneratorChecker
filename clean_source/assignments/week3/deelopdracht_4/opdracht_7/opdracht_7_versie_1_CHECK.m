@@ -13,7 +13,7 @@ function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'r' 'lv'};
-checkingVar.literalsP = {'r = v(lv)' 1 'logical([1; 0; 0; 1; 0; 1])' 1 'lv = ' 1};
+checkingVar.literalsP = {'r = ' 1 '[1; 0; 0; 1; 0; 1' 1 'lv = ' 1};
 checkingVar.literalsA = {'3;12;18' 5};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

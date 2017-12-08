@@ -18,7 +18,7 @@ function res = opdracht_4_versie_1_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'diffSignaal'};
-checkingVar.literalsP = {'figure' 1 'plot(diffSignaal)' 1 'diff(' 1 'diff(signaal)' 1};
+checkingVar.literalsP = {'figure' 1 'plot(diffSignaal)' 1 'diff(' 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

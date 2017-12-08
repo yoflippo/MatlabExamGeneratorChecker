@@ -16,13 +16,14 @@ function res = opdracht_8_versie_2_CHECK(apStudentSol)
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 
-checkingVar.nameVars = {'vastNaarVoren'};
-checkingVar.literalsP = {'==' 2 '&' 1 'diff(Pos)' 1};
+checkingVar.nameVars = { 'vastNaarVoren'};
+checkingVar.literalsP = {};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'&' '&&'} {'for' 'diff('} {'<' '>'}};
 checkingVar.literalsRO = {};
 checkingVar.literalsSL = {};
+
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
 % 1- Variables with specific values and
