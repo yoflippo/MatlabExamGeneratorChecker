@@ -1,5 +1,4 @@
 %% This files creates/checks every assignment and file
-clear all;
 warning off
 rmpath(genpath(fileparts(mfilename('fullpath'))));
 warning on

@@ -119,6 +119,7 @@ return;
 %% Check manually copied submitted files
 % BU Cleaned submitted files from students before checking
 cd(con.BASEFOLDER)
+tmp
 cd(con.STUDENTSUBFOLDER)
 zip(fullfile(con.BASEFOLDER,'submitted_bu',['bu_beforeChecking_wk' num2str(weekToCorrect) '_' datetimetxt() '.zip' ]),fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER))
 cd(con.BASEFOLDER)

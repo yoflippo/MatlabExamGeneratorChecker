@@ -1,5 +1,5 @@
 %% Opdracht 10
-
+% 
 % Je hebt 10 keer gemeten hoe hard en hoever een pitcher een honkbal heeft gegooit. 
 % Van deze 10 worpen wil de gemiddelde balsnelheid weten en de mediaan van de afstand.
 % Maak een functie aan met de naam: 'opdracht_10'.

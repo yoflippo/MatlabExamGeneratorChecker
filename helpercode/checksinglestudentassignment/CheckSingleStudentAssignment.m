@@ -115,7 +115,6 @@ for i = 1:length(mfilesWithHash)
             clear txtResultStud;
             txtResultStud{1} = ' ';
             txtResultStud{2} = '%% Opmerkingen tijdens nakijken ';
-            txtResultStud{3} = ' ';
             try
                 WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
             catch warn
@@ -155,10 +154,9 @@ for i = 1:length(mfilesWithHash)
             edit(nmCHE)
             edit(AbsPathSOLScript)
             % Message with error, so student can learn from mistake
-            txtResultStud{1} = ' ';
-            txtResultStud{2} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.' newline];
-            txtResultStud{3} = '% Tijdens het uitvoeren trad er een fout op, met deze melding:';
-            txtResultStud{4} = ['% ' something.message];
+            txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.' newline];
+            txtResultStud{2} = '% Tijdens het uitvoeren trad er een fout op, met deze melding:';
+            txtResultStud{3} = ['% ' something.message];
             try
                 WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
             catch warn

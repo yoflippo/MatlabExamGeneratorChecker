@@ -98,7 +98,7 @@ blFound = false;
 try
     fndStrings = regexp(txt,['(?<!\.)\<' searchString '\>(?!\.)[ =]']); %regexp('demon= demo = _demo= kdemon= demo= demo ==','(?<!\.)\<demo\>(?!\.)[ =]')
     for n=1:length(fndStrings)
-        if ~isempty(fndStrings{n}) && contains(txt(n),'==')
+        if ~isempty(fndStrings{n}) && ~contains(txt(n),'==')
             blFound = true;
         end
     end

@@ -103,7 +103,7 @@ try
                 movefile(apCurrZip,apWrongSub);
             end
         else % not a zip-file but something else
-            keyboard
+%             keyboard
             warning off
             delete(apCurrZip)
             removeShitFromDir(apCurrZip)
