@@ -5,8 +5,7 @@
 % Deze functie heeft 3 outputs: de eerste rijvector van de matrix, 
 % de tweede rijvector en de derde rijvector.  
 
-% de drie output variabelen geef je de volgende namen mee:
+% De drie output variabelen geef je de volgende namen mee:
 % eersteRijvector, tweedeRijvector en derdeRijvector
 
 % Maak deze functie aan.
-

@@ -9,5 +9,3 @@
 % eersteRijVector,tweedeKolomVector,laatsteElement
 
 % Maak deze functie aan.
-
-

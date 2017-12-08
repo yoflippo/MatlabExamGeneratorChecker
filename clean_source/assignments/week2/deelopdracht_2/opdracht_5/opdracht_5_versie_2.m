@@ -10,5 +10,3 @@
 % Gebruik hiertoe een functie die alle indices opvraagt van waardes 
 % lager dan 50 km/h.
 % Stop de gevonden indices in een variabele genaamd 'indSnelheden'.
-
-

@@ -1,3 +1,4 @@
+%% Opdracht 3
 % Hieronder staat code waarmee je een grafiek van een logaritmische 
 % functie tekent. Maak een nieuw figuur aan. Maak alle waarden in 'signaal'
 % die kleiner zijn dan 10 gelijk aan nul. 
@@ -9,4 +10,3 @@ t = 0:0.01:pi;
 signaal = exp(t);
 plot(t,signaal)
 
-% Jouw oplossing:

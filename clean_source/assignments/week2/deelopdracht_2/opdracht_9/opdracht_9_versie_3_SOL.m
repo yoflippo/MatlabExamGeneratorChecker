@@ -5,7 +5,7 @@
 % Deze functie heeft 3 outputs: de eerste rijvector, 
 % de tweede kolomvector en het laatste element van de Matrix.  
 
-% de drie output variabelen geef je de volgende namen mee:
+% De drie output variabelen geef je de volgende namen mee:
 % eersteRijVector,tweedeKolomVector,laatsteElement
 
 % Maak deze functie aan.

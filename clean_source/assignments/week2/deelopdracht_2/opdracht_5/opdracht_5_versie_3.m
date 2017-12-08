@@ -11,5 +11,3 @@
 % Gebruik hiertoe een functie die alle indices opvraagt van waardes 
 % groter dan 70 graden.
 % Stop de gevonden indices in een variabele genaamd 'indKniehoeken'.
-
-

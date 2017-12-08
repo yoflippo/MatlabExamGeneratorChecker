@@ -1,3 +1,5 @@
+%% Opdracht 6
+%
 % Gegeven de kolomvector v = [3; 5; 8; 12]. Maak een function die met 
 % maximaal 2 coderegels de vector v omzet naar de matrix m:
 %

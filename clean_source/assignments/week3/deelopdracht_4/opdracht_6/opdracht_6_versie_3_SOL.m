@@ -1,3 +1,5 @@
+%% Opdracht 6
+%
 % Gegeven de kolomvector v = [3; 5; 8; 12]. Maak een function die met 
 % maximaal 2 coderegels de vector v omzet naar de matrix m:
 %
@@ -11,7 +13,6 @@
 % De output variabele krijgt de naam 'm'.
 % Test de door jou geschreven functie ook met andere vectoren.
 
-% De oplossing:
 function m = opdracht_6(v) 
 r = v';
 m = repmat(r,4,2);

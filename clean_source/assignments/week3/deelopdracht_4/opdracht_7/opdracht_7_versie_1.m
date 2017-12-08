@@ -1,3 +1,4 @@
+%% Opdracht 7
 % Gegeven de kolomvector v = [3; 5; 8; 12; 16; 18].
 %
 % Maak een logical kolomvector met de naam

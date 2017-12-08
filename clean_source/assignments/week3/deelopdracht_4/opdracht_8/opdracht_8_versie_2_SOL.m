@@ -1,3 +1,4 @@
+%% Opdracht 8
 % Gegeven: een rijvector met tijdstippen waarop een rugbyspeler een bal 
 % vast heeft (1) en de bal door niemand wordt vastgehouden (0).
 % 
@@ -13,7 +14,7 @@
 % als hij naar achter loopt of niemand de bal vast heeft.
 
 close all
-balVast = logical([1  1  1  1  1  0  0  0  0  0  0  0  0  1  1  1]);
+balVast = logical([1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1]);
 Pos = [30 31 33 35 38 36 34 32 30 28 26 24 22 22 23 24];
 
 % oplossing:

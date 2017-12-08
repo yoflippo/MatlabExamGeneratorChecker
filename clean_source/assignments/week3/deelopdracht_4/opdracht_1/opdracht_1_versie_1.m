@@ -1,3 +1,4 @@
+%% Opdracht 1
 % In de folder Databestanden staat een bestand met de naam herrefaber.txt.
 % Zet de inhoud van dat bestand in een variabele met de naam 'data'.
 %

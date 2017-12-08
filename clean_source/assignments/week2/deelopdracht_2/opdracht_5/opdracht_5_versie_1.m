@@ -10,5 +10,3 @@
 % 310   317   314   309   319   316   320   314
 %
 % De gevonden indices stop je in een variabele genaamd 'tijdstippen'.
-
-

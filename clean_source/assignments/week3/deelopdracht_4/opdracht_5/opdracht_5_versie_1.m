@@ -1,3 +1,5 @@
+%% Opdracht 5
+%
 % Hieronder staat een regel waarmee je kniehoeken genereert van 30 graden
 % tot 180 graden. Bepaal met behulp van een loop (for/while) de 
 % afstand tussen heup en enkel voor elk van deze kniehoeken.

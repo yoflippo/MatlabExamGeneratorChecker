@@ -1,3 +1,5 @@
+%% Opdracht 5
+%
 % Hieronder is code gegeven waarmee je de afstanden tussen enkel en heup 
 % genereert tijdens een kniestrekking. 
 % Bepaal met behulp van een while/for-lus de kniehoek tijdens deze 
@@ -30,7 +32,6 @@ L2 = 0.5;
 % afstand tussen enkel en heup tijdens kniestrekking
 L3 = 0.3:0.01:0.8;
 
-% De oplossing:
 kniehoek = zeros(size(L3));
 for i = 1:size(L3,2)
     cosw = (L1^2+L2^2-L3(i))/(2*L1*L2);

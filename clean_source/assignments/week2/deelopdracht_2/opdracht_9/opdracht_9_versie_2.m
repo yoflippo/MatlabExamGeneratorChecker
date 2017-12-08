@@ -9,5 +9,3 @@
 % eersteKolomVector,tweedeKolomVector,derdeKolomVector
 
 % Maak deze functie aan.
-
-

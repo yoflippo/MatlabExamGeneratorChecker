@@ -1,3 +1,4 @@
+%% Opdracht 4
 % Hieronder staat code waarmee je een grafiek van een cosinus functie
 % tekent. Maak een nieuw figuur aan. De variabele signaal bevat een
 % heleboel opvolgende cosinuswaardes. Trek steeds de opvolgende waardes
