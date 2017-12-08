@@ -20,6 +20,9 @@ checkingVar.literalsSL = {};
 res = 0;
 res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
 close all
+% % Open the cleansource variant
+% edit(insertAfter(which(mfilename),['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]));
+
 %% Junk, but could be usefull
 % % % % 
 % % % % % Variables that should be present in file and that should be compared to

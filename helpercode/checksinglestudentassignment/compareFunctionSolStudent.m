@@ -1,4 +1,4 @@
-function [res] = compareFunctionSolStudent(callerName,testSeries,apStudentSol)
+function [res] = compareFunctionSolStudent(callerName,testSeries,apStudentSol,apStudentSolOriginal)
 
 %COMPAREFUNCTIONSOLSTUDENT A helperfunction for the testing the answers of
 %students by comparing it to a Solution file.
@@ -75,6 +75,8 @@ for z = 1:length(testData)
         tVar = testData(z);
         tVar = tVar{1};
     end
+    oStud = [];
+    oSol = [];
     
     switch num2str([num_output num_input])
         case '1  0'
@@ -83,7 +85,7 @@ for z = 1:length(testData)
                     res = res + 1;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '1  1'
             try
@@ -92,11 +94,13 @@ for z = 1:length(testData)
                 if iscell(tVar)
                     tVar = tVar{1};
                 end
-                if isequal(feval(nmStudentSolution,tVar) , feval(solution,tVar))
+                oStud = feval(nmStudentSolution,tVar);
+                oSol =  feval(solution,tVar);
+                if isequal(outSol,outStud)
                     res = res + 1;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '2  1'
             try
@@ -105,16 +109,16 @@ for z = 1:length(testData)
                 if iscell(tVar)
                     tVar = tVar{1};
                 end
-                [oa, ob] = feval(nmStudentSolution,tVar);
-                [oas, obs] = feval(solution,tVar);
-                if isequal(oa,oas)
+                [oStud.a, oStud.b] = feval(nmStudentSolution,tVar);
+                [oSol.a, oSol.b] = feval(solution,tVar);
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '3  1'
             try
@@ -123,167 +127,188 @@ for z = 1:length(testData)
                 if iscell(tVar)
                     tVar = tVar{1};
                 end
-                [oa, ob, oc] = feval(nmStudentSolution,tVar);
-                [oas, obs, ocs] = feval(solution,tVar);
-                if isequal(oa,oas)
+                [oStud.a, oStud.b, oStud.c] = feval(nmStudentSolution,tVar);
+                [oSol.a, oSol.b, oSol.c] = feval(solution,tVar);
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
-                if isequal(oc,ocs)
+                if isequal(oStud.c,oSol.c)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '1  2'
             try
-                [oa] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oas] = feval(solution,tVar{1},tVar{2});
-                if isequal(oa,oas)
+                [oStud.a] = feval(nmStudentSolution,tVar{1},tVar{2});
+                [oSol.a] = feval(solution,tVar{1},tVar{2});
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '2  2'
             try
-                [oa, ob] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oas, obs] = feval(solution,tVar{1},tVar{2});
-                if isequal(oa,oas)
+                [oStud.a, oStud.b] = feval(nmStudentSolution,tVar{1},tVar{2});
+                [oSol.a, oSol.b] = feval(solution,tVar{1},tVar{2});
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '3  2'
             try
-                [oa, ob, oc] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oas, obs, ocs] = feval(solution,tVar{1},tVar{2});
-                if isequal(oa,oas)
+                [oStud.a, oStud.b, oStud.c] = feval(nmStudentSolution,tVar{1},tVar{2});
+                [oSol.a, oSol.b, oSol.c] = feval(solution,tVar{1},tVar{2});
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
-                if isequal(oc,ocs)
+                if isequal(oStud.c,oSol.c)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '4  2'
             try
-                [oa, ob, oc,od] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oas, obs, ocs,ods] = feval(solution,tVar{1},tVar{2});
-                if isequal(oa,oas)
+                [oStud.a, oStud.b, oStud.c,oStud.d] = feval(nmStudentSolution,tVar{1},tVar{2});
+                [oSol.a, oSol.b, oSol.c,oSol.d] = feval(solution,tVar{1},tVar{2});
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
-                if isequal(oc,ocs)
+                if isequal(oStud.c,oSol.c)
                     res = res + 1/num_output;
                 end
-                if isequal(od,ods)
+                if isequal(oStud.d,oSol.d)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '1  3'
             try
-                [oa] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
-                [oas] = feval(solution,tVar{1},tVar{2},tVar{3});
-                if isequal(oa,oas)
+                [oStud.a] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
+                [oSol.a] = feval(solution,tVar{1},tVar{2},tVar{3});
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '2  3'
             try
-                [oa, ob] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
-                [oas, obs] = feval(solution,tVar{1},tVar{2},tVar{3});
-                if isequal(oa,oas)
+                [oStud.a, oStud.b] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
+                [oSol.a, oSol.b] = feval(solution,tVar{1},tVar{2},tVar{3});
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '3  3'
             try
-                [oa, ob, oc] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
-                [oas, obs, ocs] = feval(solution,tVar{1},tVar{2},tVar{3});
-                if isequal(oa,oas)
+                [oStud.a, oStud.b, oStud.c] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
+                [oSol.a, oSol.b, oSol.c] = feval(solution,tVar{1},tVar{2},tVar{3});
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
-                if isequal(oc,ocs)
+                if isequal(oStud.c,oSol.c)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,tVar);
+                procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
-        case '5  0'           
+        case '5  0'
             try
-                [oa, ob, oc, od, oe] = feval(nmStudentSolution);
-                [oas, obs, ocs, ods, oes] = feval(solution);
-                if isequal(oa,oas)
+                [oStud.a, oStud.b, oStud.c, oStud.d, oStud.e] = feval(nmStudentSolution);
+                [oSol.a, oSol.b, oSol.c, oSol.d, oSol.e] = feval(solution);
+                if isequal(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
-                if isequal(ob,obs)
+                if isequal(oStud.b,oSol.b)
                     res = res + 1/num_output;
                 end
-                if isequal(oc,ocs)
+                if isequal(oStud.c,oSol.c)
                     res = res + 1/num_output;
                 end
-                if isequal(od,ods)
+                if isequal(oStud.d,oSol.d)
                     res = res + 1/num_output;
                 end
-                if isequal(oe,oes)
+                if isequal(oStud.e,oSol.e)
                     res = res + 1/num_output;
                 end
             catch ErrMess
-                procesError(apStudentSol,ErrMess,num_input,[]);
+                procesError(apStudentSol,ErrMess,num_input,[],num_output,oStud,oSol);
             end
         otherwise
             warning([newline mfilename ': ' newline 'NO RIGHT CASE!!' newline]);
+    end%switch
+    % Error message
+    if ~isequal(res,1)
+        procesError(apStudentSolOriginal,[],num_input,tVar,num_output,oStud,oSol)
     end
 end%for
-
 end%function
 
 
-function procesError(apStudentSol,ErrMess,num_input,tVar)
-
+function procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol)
 if ~contains(apStudentSol,'versie')
     %     keyboard %CHECK IF IT WORKS
-    if isequal(num_input,1)
-        txterror = ['% Deze code werkt niet met de input: ' num2str(tVar)];
-        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
-        WriteToLastLineOfFile(apStudentSol,txterror);
-    elseif isequal(num_input,2)
-        txterror = ['% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2})];
-        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
-        WriteToLastLineOfFile(apStudentSol,txterror);
-    elseif isequal(num_input,3)
-        txterror = ['% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2}) ' en ' num2str(tVar{3})  ];
-        txterror = [txterror newline 'Matlab error bericht: ' ErrMess.message];
-        WriteToLastLineOfFile(apStudentSol,txterror);
+    txterror = newline;
+    if ~isempty(ErrMess)
+        txterror = 'Tijdens het runnen van jouw uitwerking, tradt er een fout op';
+        txterror = [txterror 'Matlab error bericht: ' ErrMess.message];
     else
-        txterror = [newline 'Matlab error bericht: ' ErrMess.message];
-        WriteToLastLineOfFile(apStudentSol,txterror);
+        switch num_input
+            case 1
+                txterror = ['% Deze code werkt niet met de input: ' num2str(tVar)];
+            case 2
+                txterror = ['% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2})];
+            case 3
+                txterror = ['% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2}) ' en ' num2str(tVar{3})  ];
+            otherwise
+                txterror = ['%' newline];
+        end
+        switch num_output
+            case 1
+                txterror = ['% Dit is de output van jouw code: ' num2str(oStud.a)];
+                txterror = [txterror newline '% Dit is verwachte output: ' num2str(oSol.a)];
+            case 2
+                txterror = ['% Dit is de output van jouw code: ' num2str(oStud.a) ',' num2str(oStud.b)];
+                txterror = [txterror newline '% Dit is verwachte output: ' num2str(oSol.a) ',' num2str(oSol.b)];
+            case 3
+                txterror = ['% Dit is de output van jouw code: ' num2str(oStud.a) ',' num2str(oStud.b)  ',' num2str(oStud.c)];
+                txterror = [txterror newline '% Dit is verwachte output: ' num2str(oSol.a) ',' num2str(oSol.b) ',' num2str(oSol.c)];
+            case 4
+                txterror = ['% Dit is de output van jouw code: ' num2str(oStud.a) ',' num2str(oStud.b)  ',' num2str(oStud.c)  ',' num2str(oStud.d)];
+                txterror = [txterror newline '% Dit is verwachte output: ' num2str(oSol.a) ',' num2str(oSol.b) ',' num2str(oSol.c) ',' num2str(oSol.d)];
+            case 5
+                txterror = ['% Dit is de output van jouw code: ' num2str(oStud.a) ',' num2str(oStud.b)  ',' num2str(oStud.c)  ',' num2str(oStud.d) ',' num2str(oStud.e)];
+                txterror = [txterror newline '% Dit is verwachte output: ' num2str(oSol.a) ',' num2str(oSol.b) ',' num2str(oSol.c) ',' num2str(oSol.d) ',' num2str(oSol.e)]
+            otherwise
+                txterror = ['%' newline];
+        end
     end
+    WriteToLastLineOfFile(apStudentSol,txterror);
 end
-
 end %function

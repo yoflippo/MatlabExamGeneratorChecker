@@ -68,15 +68,14 @@ for nLp = 1:lenLiteralsP
                 catch
                     res = res + 1; % Weight of presence is 1
                 end
+            else
+                writeFeedbackToStudentFile(apStudentSol,lit,literalsP{nLp+1})
             end
         elseif findInString(txtns,lit) >= 1 % nNmber of times present not stated, default=1
             keyboard
             res = res + 1;
         else
-            % Test for a generated file! Could also be done by testing for Hash
-            if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP{nLp} ' en moet er: ' num2str(literalsP{nLp+1}) 'x in zitten.']);
-            end
+            writeFeedbackToStudentFile(apStudentSol,lit,literalsP{nLp+1})
         end
     catch
     end
@@ -84,6 +83,12 @@ for nLp = 1:lenLiteralsP
 end
 
 
+end
 
+function writeFeedbackToStudentFile(apStudentSol,literalsP,literalsP1)
+% Test for a generated file! Could also be done by testing for Hash
+if ~contains(apStudentSol,'versie')
+    WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP ' en moet er: ' num2str(literalsP1) 'x in zitten.']);
+end
 end
 

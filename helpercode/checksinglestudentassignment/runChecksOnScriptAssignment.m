@@ -73,18 +73,24 @@ if ~isempty(char(txtCleanedStudentSolution))
     elseif res > 1
         res = 1;
     end
-    % all outputs/variables are correct         %but result is too low
-    %     if length(checkingVar.nameVars) > 0 && ~contains(apStudentSol,'CHEAT') && isequal(resinput,length(checkingVar.nameVars)) && res < 1      ...
-    %         && res > 0 && ~contains(pwd,'clean_source')
-    %         edit(apStudentSol);
-    %         edit(replace(callerName,'CHECK','SOL'));
-    %         % Open clean source CheckFile
-    %         apCheckAss = feval('which',callerName);
-    %         apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
-    %         edit(callerName);
-    %         edit(apCheckClean);
-    %         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
-    %     end
+    
+    %     all outputs/variables are correct         %but result is too low
+    if length(checkingVar.nameVars) > 0 && ...
+        ~contains(apStudentSol,'CHEAT') && ... 
+        isequal(resinput,length(checkingVar.nameVars)) && ... 
+        res < 1 && ...
+        res > 0 && ... 
+        ~contains(pwd,'clean_source')
+        
+        edit(apStudentSol);
+        edit(replace(callerName,'CHECK','SOL'));
+        % Open clean source CheckFile
+        apCheckAss = feval('which',callerName);
+        apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
+        edit(callerName);
+        edit(apCheckClean);
+        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
+    end
     
 else
     if ~contains(apStudentSol,'versie')

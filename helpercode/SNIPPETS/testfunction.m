@@ -21,6 +21,9 @@ checkingVar.literalsRO = {};
 res = 0;
 res = runChecksOnFunctionAssignment(mfilename,checkingVar,apStudentSol);
 close all
+% % Open the cleansource variant
+% edit(insertAfter(which(mfilename),['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]));
+
 %% Junk that could be usefull
 % % % % % % % % % 
 % % % % % % % % % checkingVar.testFunctionInput.data = {'XXX' 'XXX' 'XXX'};
