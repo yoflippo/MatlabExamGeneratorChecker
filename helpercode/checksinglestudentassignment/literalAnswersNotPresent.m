@@ -88,9 +88,8 @@ if contains(txtns{1},'function')
     
     %% Check for inputparameter assignment
     for nI = 1:length(inputs)
-        toFind = [' ' inputs{nI} '='];
-        toFindNot = [toFind '='];
-        if findArgAssignment(txtclean,toFind)
+        toFind = [inputs{nI} '='];
+        if findArgAssignment(txtns,toFind)
             nAbs = nAbs + numTimes;
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
@@ -110,11 +109,10 @@ end
 function blFound = findArgAssignment(txt,searchString)
 blFound = false;
 try
-    fndStrings = regexp(txt,['(?<!\.)\<' searchString '\>(?!\.)[ =]']); %regexp('demon= demo = _demo= kdemon= demo= demo ==','(?<!\.)\<demo\>(?!\.)[ =]')
-    for n=1:length(fndStrings)
-        if ~isempty(fndStrings{n}) && ~contains(txt(n),'==')
-            blFound = true;
-        end
+    % %     fndStrings = regexp(txt,['(?<!\.)\<' searchString '\>(?!\.)[ =]']); %regexp('demon= demo = _demo= kdemon= demo= demo ==','(?<!\.)\<demo\>(?!\.)[ =]')
+    tst = contains(txt,searchString) & ~contains(txt,[searchString '='])
+    if any(tst)
+        blFound = true;
     end
 catch err
     error([mfilename ', ' newline err.message newline]);

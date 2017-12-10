@@ -290,8 +290,6 @@ try
                     txterror = [newline '% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2})];
                 case 3
                     txterror = [newline '% Deze code werkt niet met de input: ' num2str(tVar{1}) ' en ' num2str(tVar{2}) ' en ' num2str(tVar{3})  ];
-                otherwise
-                    txterror = ['% ' newline];
             end
         catch
         end
@@ -310,8 +308,6 @@ try
                     txterror = [txterror newline '% Dit is verwachte output: ' qq  num2str(oSol.a)  qq ',' qq  num2str(oSol.b) qq  ',' qq  num2str(oSol.c)  qq ',' qq  num2str(oSol.d) qq ];
                 case 5
                     txterror = [txterror newline '% Dit is verwachte output: ' qq  num2str(oSol.a)  qq ',' qq  num2str(oSol.b)  qq ',' qq  num2str(oSol.c)  qq ',' qq  num2str(oSol.d)  qq ',' qq  num2str(oSol.e) qq ]
-                otherwise
-                    txterror = ['% ' newline];
             end
         catch
         end
@@ -329,8 +325,6 @@ try
                     txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a) ',' qq  num2str(oStud.b)  qq  ',' qq  num2str(oStud.c)  qq  ',' qq  num2str(oStud.d) qq ];
                 case 5
                     txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a) ',' qq  num2str(oStud.b)   qq ',' qq  num2str(oStud.c)  qq  ',' qq  num2str(oStud.d)  qq ',' qq  num2str(oStud.e)  qq ];
-                otherwise
-                    txterror = ['% ' newline];
             end
         catch
         end
