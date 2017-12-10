@@ -55,11 +55,24 @@ for nLa = 1:length(literalsA)
         catch
         end
         
-        if findInString(txtns,lit) > 0 || findInString(txtns,litR) > 0
+        [fndNumStr, lnStr] = findInString(txtns,lit);
+        [fndNumStrR,lnStrR]  = findInString(txtns,litR);
+        if fndNumStr > 0 || fndNumStrR > 0
             nAbs = nAbs + numTimes;
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
+                %                 WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
+                mss = ['% De onderstaande regel(s) voldoe(t)(n) niet aan de opdracht: ']
+                if isempty(lnStr)
+                    for n = 1:length(lnStrR)
+                        mss = [mss newline char(34) '% ' txtclean{lnStrR(n)} char(34)]
+                    end
+                else
+                    for n = 1:length(lnStr)
+                        mss = [mss newline '% ' char(34) txtclean{lnStr(n)} char(34)]
+                    end
+                end
+                WriteToLastLineOfFile(apStudentSol,mss);
             end
         end
     end
@@ -82,6 +95,7 @@ if contains(txtns{1},'function')
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
                 errTxt = ['% Je mag niet schrijven naar een inputvariabele: ' toFind];
+                keyboard
                 WriteToLastLineOfFile(apStudentSol,errTxt);
             end
         end

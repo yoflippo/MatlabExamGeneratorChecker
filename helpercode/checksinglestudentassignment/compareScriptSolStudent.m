@@ -60,7 +60,6 @@ try
     end
     
     %% Run the cleaned student script, if not working no points!
-    
     if exist(apCleaned,'file')
         run(apCleaned);
         txtns = nospaces(apCleaned);
@@ -76,7 +75,7 @@ catch ErrMess
         WriteToLastLineOfFile(apStudentSol,['% ' txterror]);
     end
     delete(apCleaned);
-    error(txterror);
+    error([mfilename ': ' txterror]);
     return;
 end
 
@@ -89,7 +88,9 @@ for nV = 1:length(nameVars)
         else
             mss = ['% verwacht resultaat in: ' nameVars{nV} '= ' num2str(eval(['var' num2str(nV) 'ANS' ]))];
             mss = [mss newline '% verkregen resultaat = ' num2str(eval(nameVars{nV}))];
-            WriteToLastLineOfFile(apStudentSol,mss);
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,mss);
+            end
         end
     catch ErrMess
         % Test for a generated file! Could also be done by testing for Hash

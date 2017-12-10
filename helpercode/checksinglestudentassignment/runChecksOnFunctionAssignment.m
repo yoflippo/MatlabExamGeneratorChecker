@@ -37,8 +37,6 @@ function res = runChecksOnFunctionAssignment(callerName, checkingVar, apStudentS
 
 %% Commence the TESTING !!!
 res = 0;
-
-
 [txtCleanedStudentSolution, apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
 
 if ~isempty(char(txtCleanedStudentSolution))
@@ -60,22 +58,39 @@ if ~isempty(char(txtCleanedStudentSolution))
     %% Create a file from the cleaned file that contains no spaces, for easy txt comparisons
     txtns = nospaces(apCleaned);
     
-    %% Check all literals
-    [res2,nAbs, num] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
-    res = res + res2;
+    %% Check for literal answers, CAN NOT BE PRESENT
+    nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol,txtCleanedStudentSolution);
     
-    %% Calculate the result
-    sm = ((length(checkingVar.literalsP)/2)         + ...
-        length(data)                                + ...
-        num.Reversed                                + ...
-        num.VariantsRev                             + ...
-        num.Variants                                  ...
-        );
-    if sm == 0
-        res = 0;
+    %% Handle situation if input / output is correct (regardless of code used)
+    if resinput / length(data) == 1 && nAbs == 0
+        %In this case the student should receive ALL points
+        res = 1;
     else
-        res = (res-nAbs)/sm;
+        % The I/O does not fully correspond to the solution file so extra checks should be performed
+        
+        %% Check all literals
+        [res2, num] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
+        res = res + res2;
+        
+        %% Calculate the result
+        sm = ((length(checkingVar.literalsP)/2)         + ...
+            length(data)                                + ...
+            num.Reversed                                + ...
+            num.VariantsRev                             + ...
+            num.Variants                                  ...
+            );
+        if sm == 0
+            res = 0;
+        else
+            res = (res-nAbs)/sm;
+        end
+        
+% % % %                 % If the I/O is wrong only a maximum of 50% can be earned.
+% % % %         if length(data) > 1 && res > 0.5
+% % % %             res = res/2;
+% % % %         end
     end
+    
     if res < 0
         warning('result is too low!')
         res = 0;
@@ -83,22 +98,22 @@ if ~isempty(char(txtCleanedStudentSolution))
         warning('result is too high!')
         res = 1;
     end
-    
-    if  ~contains(apStudentSol,'CHEAT') && ...
-        isequal(resinput,length(data)) && ... 
-        res < 1 && ... 
-        res > 0 && ...
-        ~contains(pwd,'clean_source')
-        
-        edit(apStudentSol);
-        edit(replace(callerName,'CHECK','SOL'));
-        % Open clean source CheckFile
-        apCheckAss = feval('which',callerName);
-        edit(callerName);
-        apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
-        edit(apCheckClean);
-        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
-    end
+    %% Checks to see if the I/O is correct but the other checks not --> helps to see if we apply the right code checks
+    % % % % % % %     if  ~contains(apStudentSol,'CHEAT') && ...
+    % % % % % % %         isequal(resinput,length(data)) && ...
+    % % % % % % %         res < 1 && ...
+    % % % % % % %         res > 0 && ...
+    % % % % % % %         ~contains(pwd,'clean_source')
+    % % % % % % %
+    % % % % % % %         edit(apStudentSol);
+    % % % % % % %         edit(replace(callerName,'CHECK','SOL'));
+    % % % % % % %         % Open clean source CheckFile
+    % % % % % % %         apCheckAss = feval('which',callerName);
+    % % % % % % %         edit(callerName);
+    % % % % % % %         apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
+    % % % % % % %         edit(apCheckClean);
+    % % % % % % %         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
+    % % % % % % %     end
     
 else
     if ~contains(apStudentSol,'versie')

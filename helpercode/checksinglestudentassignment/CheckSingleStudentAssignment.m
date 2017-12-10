@@ -98,15 +98,15 @@ for i = 1:length(mfilesWithHash)
             addpath(genpath(apCHE));
             
             % Get the type of the file: opdracht_x, vraag_x
-            AbsPathStudentScript = mfilesWithHash{1,i};
-            [apSTU, nmSTUScript, ~] = fileparts(AbsPathStudentScript);
+            apStudentSol = mfilesWithHash{1,i};
+            [apSTU, nmSTUScript, ~] = fileparts(apStudentSol);
             addpath(genpath(apSTU));
             
             % Get the right string from the abspath of the studentscript to
             % find the number of points using dicNameAssignmentAndPoints
-            pathWithoutExt = replace(AbsPathStudentScript,'.m','');
+            pathWithoutExt = replace(apStudentSol,'.m','');
             foundSlashes = strfind(pathWithoutExt,filesep);
-            assignment = AbsPathStudentScript(foundSlashes(end-1)+1:length(pathWithoutExt));
+            assignment = apStudentSol(foundSlashes(end-1)+1:length(pathWithoutExt));
             
             % Get the number of points for this assignment
             pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
@@ -116,11 +116,11 @@ for i = 1:length(mfilesWithHash)
             txtResultStud{1} = ' ';
             txtResultStud{2} = '%% Opmerkingen tijdens nakijken ';
             try
-                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+                WriteToLastLineOfFile(apStudentSol,txtResultStud);
             catch warn
-                warning([mfilename ': cannot write to -> ' AbsPathStudentScript newline warn.message]);
+                warning([mfilename ': cannot write to -> ' apStudentSol newline warn.message]);
             end
-            ResStudentScript = feval(nmCHE,AbsPathStudentScript);
+            ResStudentScript = feval(nmCHE,apStudentSol);
             % IMPORTANT: remove the path to prevent the use of the wrong
             % check-files.
             warning off
@@ -139,20 +139,20 @@ for i = 1:length(mfilesWithHash)
                 answerFile = [nmSTUScript '_UITWERKING.m'];
                 copyfile(AbsPathSOLScript,fullfile(apSTU,answerFile));
                 txtResultStud = [];
-                txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(round(percStudent)) '% goed gemaakt.' newline];
+                txtResultStud{1} = ['%% Jij hebt deze opdracht ' num2str(round(percStudent)) '% goed gemaakt.' newline];
                 txtResultStud{2} = '% Indien je een score lager dan 100% hebt, bekijk dan het bestand';
                 txtResultStud{3} = ['% ' answerFile ' voor de oplossing\uitwerking.'];
-                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+                WriteToLastLineOfFile(apStudentSol,txtResultStud);
             else
                 txtResultStud = [];
                 txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(round(percStudent)) '% goed gemaakt.'];
-                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+                WriteToLastLineOfFile(apStudentSol,txtResultStud);
             end
         catch something
             disp(something)
             disp([mfilename ': Somethings wrong..'])
-            disp(['OPENING: ' AbsPathStudentScript]);
-            edit(AbsPathStudentScript)
+            disp(['OPENING: ' apStudentSol]);
+            edit(apStudentSol)
             edit(nmCHE)
             edit(AbsPathSOLScript)
             % Message with error, so student can learn from mistake
@@ -160,9 +160,9 @@ for i = 1:length(mfilesWithHash)
             txtResultStud{2} = '% Tijdens het uitvoeren trad er een fout op, met deze melding:';
             txtResultStud{3} = ['% ' something.message];
             try
-                WriteToLastLineOfFile(AbsPathStudentScript,txtResultStud);
+                WriteToLastLineOfFile(apStudentSol,txtResultStud);
             catch warn
-                warning([mfilename ': cannot write to -> ' AbsPathStudentScript newline warn.message]);
+                warning([mfilename ': cannot write to -> ' apStudentSol newline warn.message]);
             end
             keyboard
         end

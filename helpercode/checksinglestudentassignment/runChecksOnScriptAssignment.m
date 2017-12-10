@@ -51,46 +51,64 @@ if ~isempty(char(txtCleanedStudentSolution))
         deleteTemporaryFiles();
         return;
     end
-    
-    %% Check all literals
-    [res2,nAbs,num,weights] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
-    res = res + res2;
-    
-    % Get remaining numbers.
-    num.Present = weights.laPresent;
     num.nameVars = length(checkingVar.nameVars);
-    %% Calculate the result
-    res = (res-nAbs)/ (      ...
-        num.Present         + ...
-        num.nameVars        + ...
-        num.Reversed        + ...
-        num.VariantsRev     + ...
-        num.Variants        + ...
-        num.SameLine          ...
-        );
+    
+    %% Check for literal answers, CAN NOT BE PRESENT
+    nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol,txtCleanedStudentSolution);
+    
+    %% Handle situation if input / output is correct (regardless of code used)
+    if num.nameVars > 1 && resinput / num.nameVars == 1 && nAbs == 0
+        %In this case the student should receive ALL points
+        res = 1;
+    else
+        %% Check all literals
+        [res2,num2,weights] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
+        res = res + res2;
+        
+        % Get remaining numbers.
+        num2.Present = weights.laPresent;
+        
+        %% Calculate the result
+        res = (res-nAbs)/ (      ...
+            num2.Present         + ...
+            num.nameVars        + ...
+            num2.Reversed        + ...
+            num2.VariantsRev     + ...
+            num2.Variants        + ...
+            num2.SameLine          ...
+            );
+        
+% % % % %         % If the I/O is wrong only a maximum of 50% can be earned.
+% % % % %         if num.nameVars > 1
+% % % % %             res = min(res,0.5);
+% % % % %         end
+    end
+    
+    
     if res < 0
+        warning('result is too low!')
         res = 0;
     elseif res > 1
+        warning('result is too high!')
         res = 1;
     end
-    
-    %     all outputs/variables are correct         %but result is too low
-    if length(checkingVar.nameVars) > 0 && ...
-        ~contains(apStudentSol,'CHEAT') && ... 
-        isequal(resinput,length(checkingVar.nameVars)) && ... 
-        res < 1 && ...
-        res > 0 && ... 
-        ~contains(pwd,'clean_source')
-        
-        edit(apStudentSol);
-        edit(replace(callerName,'CHECK','SOL'));
-        % Open clean source CheckFile
-        apCheckAss = feval('which',callerName);
-        apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
-        edit(callerName);
-        edit(apCheckClean);
-        keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
-    end
+    % % % % % % % %     %     all outputs/variables are correct         %but result is too low
+    % % % % % % % %     if length(checkingVar.nameVars) > 0 && ...
+    % % % % % % % %         ~contains(apStudentSol,'CHEAT') && ...
+    % % % % % % % %         isequal(resinput,length(checkingVar.nameVars)) && ...
+    % % % % % % % %         res < 1 && ...
+    % % % % % % % %         res > 0 && ...
+    % % % % % % % %         ~contains(pwd,'clean_source')
+    % % % % % % % %
+    % % % % % % % %         edit(apStudentSol);
+    % % % % % % % %         edit(replace(callerName,'CHECK','SOL'));
+    % % % % % % % %         % Open clean source CheckFile
+    % % % % % % % %         apCheckAss = feval('which',callerName);
+    % % % % % % % %         apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
+    % % % % % % % %         edit(callerName);
+    % % % % % % % %         edit(apCheckClean);
+    % % % % % % % %         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
+    % % % % % % % %     end
     
 else
     if ~contains(apStudentSol,'versie')

@@ -278,9 +278,11 @@ function procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol)
 try
     if ~contains(apStudentSol,'versie')
         if ~isempty(ErrMess)
-            txterror = '% Tijdens het runnen van jouw uitwerking, tradt er een fout op';
+            txterror = '% Tijdens het runnen van jouw uitwerking, tradt er een fout op:';
             txterror = [txterror newline '% Matlab error bericht: ' ErrMess.message];
-        else
+        end
+        
+        try
             switch num_input
                 case 1
                     txterror = [newline '% Deze code werkt niet met de input: ' num2str(tVar)];
@@ -291,32 +293,54 @@ try
                 otherwise
                     txterror = ['% ' newline];
             end
-            qq = char(34);
+        catch
+        end
+        qq = char(34);
+        
+        % Give expected output
+        try
             switch num_output
                 case 1
-                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq num2str(oStud.a) qq];
                     txterror = [txterror newline '% Dit is verwachte output: ' qq num2str(oSol.a) qq];
                 case 2
-                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq num2str(oStud.a) qq ',' qq num2str(oStud.b) qq];
                     txterror = [txterror newline '% Dit is verwachte output: ' qq  num2str(oSol.a) ',' qq  num2str(oSol.b) qq ];
                 case 3
-                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a)  qq ',' qq  num2str(oStud.b)  qq  ',' qq  num2str(oStud.c) qq ];
                     txterror = [txterror newline '% Dit is verwachte output: ' qq  num2str(oSol.a)  qq ',' qq  num2str(oSol.b)  qq ',' qq  num2str(oSol.c) qq ];
                 case 4
-                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a) ',' qq  num2str(oStud.b)  qq  ',' qq  num2str(oStud.c)  qq  ',' qq  num2str(oStud.d) qq ];
                     txterror = [txterror newline '% Dit is verwachte output: ' qq  num2str(oSol.a)  qq ',' qq  num2str(oSol.b) qq  ',' qq  num2str(oSol.c)  qq ',' qq  num2str(oSol.d) qq ];
                 case 5
-                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a) ',' qq  num2str(oStud.b)   qq ',' qq  num2str(oStud.c)  qq  ',' qq  num2str(oStud.d)  qq ',' qq  num2str(oStud.e)  qq ];
                     txterror = [txterror newline '% Dit is verwachte output: ' qq  num2str(oSol.a)  qq ',' qq  num2str(oSol.b)  qq ',' qq  num2str(oSol.c)  qq ',' qq  num2str(oSol.d)  qq ',' qq  num2str(oSol.e) qq ]
                 otherwise
                     txterror = ['% ' newline];
             end
+        catch
         end
-        WriteToLastLineOfFile(apStudentSol,txterror);
+        
+        % Give student output
+        try
+            switch num_output
+                case 1
+                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq num2str(oStud.a) qq];
+                case 2
+                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq num2str(oStud.a) qq ',' qq num2str(oStud.b) qq];
+                case 3
+                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a)  qq ',' qq  num2str(oStud.b)  qq  ',' qq  num2str(oStud.c) qq ];
+                case 4
+                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a) ',' qq  num2str(oStud.b)  qq  ',' qq  num2str(oStud.c)  qq  ',' qq  num2str(oStud.d) qq ];
+                case 5
+                    txterror = [txterror newline '% Dit is de output van jouw code: ' qq  num2str(oStud.a) ',' qq  num2str(oStud.b)   qq ',' qq  num2str(oStud.c)  qq  ',' qq  num2str(oStud.d)  qq ',' qq  num2str(oStud.e)  qq ];
+                otherwise
+                    txterror = ['% ' newline];
+            end
+        catch
+        end
+        
     end
+    WriteToLastLineOfFile(apStudentSol,txterror);
 catch Err
     keyboard %Something wrong with your code budy
 end
+
 end %function
 
 function output = isequalQ(A,B)
