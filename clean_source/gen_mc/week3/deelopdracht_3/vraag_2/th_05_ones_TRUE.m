@@ -1,2 +1,2 @@
-De functie ones() levert altijd een vector bestaande uit meer
-dan 1 element op.
+De functie ones() kan een vector opleveren bestaande
+uit 1 element op.

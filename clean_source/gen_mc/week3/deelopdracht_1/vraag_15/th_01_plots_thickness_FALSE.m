@@ -1,4 +1,5 @@
-De onderstaande code laat een plot zien met een dikkere grafieklijn.
+De onderstaande code laat een plot zien met een dikkere
+grafieklijn.
 
 ======= Code =======
 t = -n:0.1:n;

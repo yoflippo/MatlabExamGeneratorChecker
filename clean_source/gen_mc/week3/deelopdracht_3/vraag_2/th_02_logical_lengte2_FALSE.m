@@ -1,6 +1,6 @@
-Gegeven: de variabele signal in onderstaande code bevat een 
+De variabele signal in onderstaande code bevat een 
 aantal getallen die kleiner zijn dan nul. 
-Na uitvoering van onderstaande code hebben bestaat variabele 
+Na het uitvoeren van onderstaande code bestaat de variabele 
 signal uit minder elementen dan de variabele signalGTzero.
 
 <<< begin code >>>
