@@ -1,4 +1,5 @@
-De onderstaande code laat een plot zien met een legenda.
+De onderstaande code laat een plot zien met
+een legenda.
 
 ======= Code =======
 

@@ -1,4 +1,5 @@
-De onderstaande code wordt herhaald door de while-lus:
+De onderstaande code wordt eeuwig herhaald door 
+de while-lus:
 
 ======= Code =======
 

@@ -1,7 +1,10 @@
-De onderstaande code wordt niet correct uitgevoerd:
+De onderstaande code wordt zonder syntactische fouten
+uitgevoerd:
 
 ======= Code =======
-testValues = randn(1,10); %Het genereren van willekeurige wardes.
+clc
+clear variables
+testValues = randn(1,10);
 for nR = 2:10
    z(nR) = var(nR) + var(nR+1) / 2;
 end

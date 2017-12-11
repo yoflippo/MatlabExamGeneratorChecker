@@ -1,8 +1,12 @@
-De onderstaande code wordt correct uitgevoerd:
+De onderstaande code wordt niet correct uitgevoerd omdat
+je in de for-lus op een bepaalt moment een element van 
+de vector selecteert die buiten de vector ligt.
 
 ======= Code =======
-testValues = randn(1,10); %Het genereren van willekeurige wardes.
-for nR = 2:10
-   z(nR) = var(nR) + var(nR+1) / 2;
+clc
+clear variables
+testValues = randn(1,10); 
+for nR = 10:1
+   z(nR) = var(nR-2) + var(nR-1) / 2;
 end
 ======= Code =======

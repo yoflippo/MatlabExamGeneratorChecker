@@ -1,4 +1,5 @@
-De onderstaande code laat 2 grafieken zien in 1 figure.
+De onderstaande code resulteert in 2 grafieken in 1
+figure.
 
 ======= Code =======
 

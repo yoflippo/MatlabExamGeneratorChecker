@@ -1,4 +1,5 @@
-De onderstaande code wordt niet herhaald door de while-lus:
+De onderstaande code wordt niet (eeuwig) herhaald door 
+de while-lus:
 
 ======= Code =======
 

@@ -2,8 +2,7 @@ De while-lus in de onderstaande code wordt 101 keer
 herhaald.
 
 ======= Code =======
-
-teller = 0
+teller = 0;
 while -1
     if teller < 100
         teller = teller + 1;
@@ -12,5 +11,4 @@ while -1
     end
     num2str(teller)
 end
-
 ======= Code =======

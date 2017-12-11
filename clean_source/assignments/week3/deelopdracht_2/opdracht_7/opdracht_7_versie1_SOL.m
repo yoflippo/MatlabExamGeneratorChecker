@@ -5,7 +5,9 @@
 %
 % Zorg dat de functie alle elementen van start tot en met eind bij elkaar
 % optelt. Dus als 'start' = 1 en 'eind' = 10 dan moet 1+2+3+...+9+10 bij
-% elkaar worden opgeteld. Geef dat getal terug aan de functie output.
+% elkaar worden opgeteld. Geef dat getal terug aan de functie output. Je
+% moet voor deze opdracht een for-lus gebruiken om tot het resultaat te
+% komen.
 %
 % Noem de functie: 'opdracht_7'.
 function output = opdracht_7(start,eind)
@@ -14,5 +16,8 @@ output = 0;
 for i = start:eind
     output = i + output;
 end
+
+% % % Ook goed als je geen for-lus zou moeten gebruiken:
+% % output = sum(start:eind)
 
 end

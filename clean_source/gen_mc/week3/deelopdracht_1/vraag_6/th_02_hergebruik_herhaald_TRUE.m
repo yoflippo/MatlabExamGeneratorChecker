@@ -1,7 +1,9 @@
 De onderstaande code geeft tijdens het runnen een 
-foutmelding
+foutmelding:
 
 ======= Code =======
+clc
+clear variables
 %Genereren van random variabelen
 randomWaardes = randn(1,20); 
 for nR = 20:100

@@ -1,4 +1,5 @@
-De onderstaande code laat een plot zien met een titel.
+De onderstaande code laat een plot zien met
+een titel.
 
 ======= Code =======
 
