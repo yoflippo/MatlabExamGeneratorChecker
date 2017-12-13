@@ -1,6 +1,6 @@
 %% Opdracht 5
 % Maak een functie met de naam opdracht_5.
-% De functie heeft twee inputs genaamd:  AA en B.
+% De functie heeft twee inputs genaamd: AA en B.
 % De functie heeft twee outputs genaamd: CC en D.
 %
 % M.b.v. de functie strlength() kun je de lengte van een string opvragen.

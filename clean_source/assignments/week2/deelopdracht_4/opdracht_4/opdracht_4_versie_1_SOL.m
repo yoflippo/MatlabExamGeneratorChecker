@@ -3,7 +3,7 @@
 % In deze opdracht maak je enkel gebruik van operatoren en een
 % if-statement (geen else-statement).
 %
-% Geef deze functie de volgende inputs (in deze volgorde):
+% Geef deze functie de volgende inputs:
 % Gastronemicus, RectusFemoris, Brachialis
 %
 % Als de Gastronemicus gelijk is aan 0 of 1 moet de output van de functie

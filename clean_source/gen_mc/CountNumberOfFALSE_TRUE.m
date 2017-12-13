@@ -2,6 +2,8 @@
 pathOfThisFile = erase(mfilename('fullpath'),mfilename);
 
 weeks = {'week1' 'week2' 'week3' 'week4'};
+totFalse = 0;
+totTrue = 0;
 for nWk = 1:length(weeks)
     try
         cd(fullfile(pathOfThisFile,weeks{nWk}));
@@ -11,4 +13,8 @@ for nWk = 1:length(weeks)
         cd(pathOfThisFile);
     catch
     end
+    totFalse = totFalse + nFalse;
+    totTrue = totTrue + nTrue;
 end
+cd ..
+disp(['TOTAAL: TRUE = ' num2str(totTrue) ' | FALSE = ' num2str(totFalse)])

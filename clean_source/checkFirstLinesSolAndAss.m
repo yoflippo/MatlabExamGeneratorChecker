@@ -9,7 +9,6 @@ end
 close all
 postfix = '_SOL';
 solfiles = dirmf(postfix);
-
 for nf = 1:length(solfiles)
     apSol = fullfile(solfiles(nf).folder,solfiles(nf).name);
     apStu = replace(apSol,postfix,'');
@@ -50,8 +49,9 @@ for nf = 1:length(solfiles)
             end
         end
     end
-    disp(['Progress: ' num2str(round(nf/length(solfiles)*100,1))])
     clc
+    disp(['Checking the headers of assignments and solutions, Progress: ' num2str(round(nf/length(solfiles)*100,1)) ' %'])  
 end
+
 end
 

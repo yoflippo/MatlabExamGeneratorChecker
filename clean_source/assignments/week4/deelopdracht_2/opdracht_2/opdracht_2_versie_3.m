@@ -3,7 +3,7 @@
 % Let op! Bij het oplossen mag je geen variabele verwijderen of index
 % veranderen. De tangentieleVersnelling moet 4 worden.
 
-t= 1:0.01:10;
+t = 1:0.01:10;
 (hoekKogelSlingeraar) = sin(t);
 if length(hoekKogelSlingeraar)== lengh(t)
     tangentleleVersnelling=4;   
