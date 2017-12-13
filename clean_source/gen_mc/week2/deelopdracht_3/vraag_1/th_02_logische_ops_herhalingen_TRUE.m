@@ -1,1 +1,2 @@
-Logische operatoren worden altijd geevalueerd tot false en true.
+Logische operatoren worden altijd geevalueerd tot
+false en true.

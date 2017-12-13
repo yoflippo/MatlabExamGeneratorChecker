@@ -1,4 +1,5 @@
-De volgende code geeft alleen logische enen terug:
+De volgende code geeft alleen logische enen
+terug:
 
 ======= Code =======
 

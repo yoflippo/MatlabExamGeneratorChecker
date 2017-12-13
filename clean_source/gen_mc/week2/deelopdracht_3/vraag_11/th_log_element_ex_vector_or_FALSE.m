@@ -1,6 +1,5 @@
 De volgende code kan niet worden geevalueerd:
 
-
 ======= Code =======
 
 vecA = [0 1 0];

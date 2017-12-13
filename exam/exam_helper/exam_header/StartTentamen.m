@@ -1,15 +1,15 @@
-%STARTTENTAMEN
+%                         ===~ STARTTENTAMEN ~===
 %
 %
-%                        ||
-%                        \/
+%                  ||
+%                  \/
 %
 %
 %      Druk op F5 en volg de instructies in het Command Window!
 %
 %
-%                            /\
-%                            ||
+%                                         /\
+%                                         ||
 %
 %
 % ------------------------------------------------------------------------
@@ -142,7 +142,7 @@
 
 
 
-%% STOP JIJ MOET TERUG NAAR BOVEN 
+%% STOP!!! JIJ MOET TERUG NAAR BOVEN 
 
 
 

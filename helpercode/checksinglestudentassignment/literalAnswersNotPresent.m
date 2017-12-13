@@ -39,6 +39,7 @@ function nAbs = literalAnswersNotPresent(txtns,literalsA,apStudentSol,txtclean)
 
 %% Check for literal answers, CAN NOT BE PRESENT
 nAbs = 0;
+numTimes = 1;
 for nLa = 1:length(literalsA)
     numTimes = 1;
     lit = literalsA{nLa};
@@ -65,11 +66,11 @@ for nLa = 1:length(literalsA)
                 mss = ['% De onderstaande regel(s) voldoe(t)(n) niet aan de opdracht: ']
                 if isempty(lnStr)
                     for n = 1:length(lnStrR)
-                        mss = [mss newline char(34) '% ' txtclean{lnStrR(n)} char(34)]
+                        mss = [mss newline char(34) '% ' txtclean{lnStrR(n)} char(34)];
                     end
                 else
                     for n = 1:length(lnStr)
-                        mss = [mss newline '% ' char(34) txtclean{lnStr(n)} char(34)]
+                        mss = [mss newline '% ' char(34) txtclean{lnStr(n)} char(34)];
                     end
                 end
                 WriteToLastLineOfFile(apStudentSol,mss);
@@ -79,32 +80,34 @@ for nLa = 1:length(literalsA)
 end
 
 %% Check if function and test for assignmnents to inputs
-if contains(txtns{1},'function')
-    %% Get the function input
-    fline = txtns{1};
-    ln = extractAfter(fline,'(');
-    ln = extractBefore(ln,')');
-    inputs = split(ln,',');
-    
-    %% Check for inputparameter assignment
-    for nI = 1:length(inputs)
-        toFind = [inputs{nI} '='];
-        if findArgAssignment(txtns,toFind)
-            nAbs = nAbs + numTimes;
-            % Test for a generated file! Could also be done by testing for Hash
-            if ~contains(apStudentSol,'versie')
-                errTxt = ['% Je mag niet schrijven naar een inputvariabele: ' toFind];
-                keyboard
-                WriteToLastLineOfFile(apStudentSol,errTxt);
+try
+    if contains(txtns{1},'function')
+        %% Get the function input
+        fline = txtns{1};
+        ln = extractAfter(fline,'(');
+        ln = extractBefore(ln,')');
+        inputs = split(ln,',');
+        
+        % Check for inputparameter assignment
+        
+        for nI = 1:length(inputs)
+            toFind = [inputs{nI} '='];
+            if findArgAssignment(txtns,toFind) && ~isequal(inputs,{''})
+                nAbs = nAbs + numTimes;
+                % Test for a generated file! Could also be done by testing for Hash
+                if ~contains(apStudentSol,'versie')
+                    errTxt = ['% Je mag niet schrijven naar een inputvariabele: ' toFind];
+%                     keyboard
+                    WriteToLastLineOfFile(apStudentSol,errTxt);
+                end
             end
         end
-        
     end
-    
+catch err
+    keyboard
 end
 
-
-end
+end%function
 
 function blFound = findArgAssignment(txt,searchString)
 blFound = false;

@@ -1,1 +1,2 @@
-De OR-operator kan ook worden toegepast op vectoren.
+De element-wise OR-operator kan worden toegepast 
+op vectoren.

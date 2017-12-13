@@ -3,7 +3,7 @@ De volgende twee code regels doen exact hetzelfde
 
 ======= Code =======
 
-ge(a,b)
-a >= b
+ge(a,b);
+a >= b;
 
 ======= Code =======

@@ -214,7 +214,8 @@ while numel(num2str(snumber)) < 8 | numel(num2str(snumber)) > 8
     end
 end
 
-while isempty(input('Heb je jouw studentennummer correct ingevoerd? Ja = 1, Anders = Druk op Enter): '))
+txtInput = 'Heb je jouw studentennummer correct ingevoerd? Ja = 1, Anders = 0, Druk daarna op Enter): ';
+while isempty(input(txtInput ))
     snumber = input('Geef hier opnieuw je studentnummer: ');
     if numel(num2str(snumber)) < 8
         warning('Je hebt te weinig cijfers opgegeven!');
@@ -234,11 +235,12 @@ warningtxt = [warningtxt newline 'Als je niet zeker bent, of je bij "opdracht_0"
 % warningtxt = [warningtxt newline];
 warningtxt = [warningtxt newline 'Voer vervolgens opnieuw: ' mfilename ' uit!'];
 % warningtxt = [warningtxt newline];
-warningtxt = [warningtxt newline 'Dit script stopt nu en StartTentamen.m wordt geopend!'];
+warningtxt = [warningtxt newline 'Dit script stopt nu en StartTentamen.m wordt geopend! Voer StartTentamen.m opnieuw uit en volg de instructies!'];
 
 if ~isequal(studentnumber,snumber)
     warning on
     warning(warningtxt)
+    pause(2)
     open(fullfile(apStartFile,'StartTentamen.m'));
     return;
 end

@@ -88,7 +88,7 @@ end
 function writeFeedbackToStudentFile(apStudentSol,literalsP,literalsP1)
 % Test for a generated file! Could also be done by testing for Hash
 if ~contains(apStudentSol,'versie')
-    WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' literalsP ' en moet er: ' num2str(literalsP1) 'x in zitten.']);
+    WriteToLastLineOfFile(apStudentSol,['% Ontbreekt aan de code: ' char(literalsP) ' en moet er: ' num2str(literalsP1) 'x in zitten.']);
 end
 end
 

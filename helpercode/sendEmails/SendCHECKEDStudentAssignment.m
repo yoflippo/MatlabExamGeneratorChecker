@@ -14,10 +14,16 @@ props.setProperty('mail.smtp.socketFactory.port','465');
 studentNumbers = load(fullfile('studentnumbers','studentnumbers.txt'))
 strStudentNumbers = string(num2str(studentNumbers));
 
-thisWeek = 'week3'
+thisWeek = 'week4'
 cd('submitted');
 cd(thisWeek);
 
+%% Recover earlier saved studentnumbers to prevent multiple e-mail to same student
+try
+    load('strStudentNumbers.mat','strStudentNumbers');
+    warning('RELOAD studentnumbers!!!!!');
+catch
+end
 %% Message for student
 chr = 'Beste student,';
 chr = [chr newline ];
@@ -27,7 +33,7 @@ chr = [chr newline];
 chr = [chr newline 'In het zip-bestand zit een m-file met de naam: "JouwCijfer.m".'];
 chr = [chr newline 'Als een vraag/opdracht niet 100% correct is, wordt de uitwerking'];
 chr = [chr newline 'er bij gegeven. Zo kun je leren van je fouten.'];
-chr = [chr newline newline 'Onderaan jouw uitwerking kan extra informatie staan over wat er fout is gegaan.']
+chr = [chr newline newline 'Onderaan jouw uitwerking kan extra informatie staan over wat er fout is gegaan.'];
 chr = [chr newline];
 chr = [chr newline 'Op deze e-mail wordt niet gereageerd.'];
 chr = [chr newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
@@ -45,7 +51,7 @@ oldPath = pwd;
 cd ..
 sendFolder = [thisWeek '_send'];
 mkdirIf(sendFolder);
-apSendFolder = fullfile(pwd,sendFolder)
+apSendFolder = fullfile(pwd,sendFolder);
 cd(oldPath)
 %% Send mails
 for nZ = 1:length(zips)
@@ -87,20 +93,36 @@ chrns = [chrns newline];
 chrns = [chrns newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
 chrns = [chrns newline 'Mark Schrauwen in RZ 2.17.1. '];
 chrns = [chrns newline];
+chrns = [chrns newline 'In de bijlage van deze e-mail staan de uitwerkingen van de eindopdrachten.'];
+chrns = [chrns newline];
 chrns = [chrns newline 'Op deze e-mail wordt niet gereageerd.'];
 chrns = [chrns newline];
 chrns = [chrns newline newline 'Met vriendelijke groet,'];
 chrns = [chrns newline 'Mark Schrauwen'];
 
 %% Send students without submission an e-mail
+apSol = fullfile(con.BASEFOLDER,con.STUDENTASSFOLDER,[thisWeek '_SOL']);
+cd(apSol)
+
+% Recover earlier saved studentnumbers to prevent multiple e-mail to same student
+try
+    load('strStudentNumbers.mat','strStudentNumbers');
+    warning('RELOAD studentnumbers!!!!!');
+catch
+end
+
 for nS = 1:length(strStudentNumbers)
     % extract student numbers
     sNum = strStudentNumbers(nS);
     % construct emailadres
     sEma = [char(sNum) '@student.hhs.nl']
     try
+        apSolStud = fullfile(apSol,[thisWeek '_' char(sNum) '.zip']);
+        if ~exist(apSolStud,'file')
+            error([newline mfilename ': ' newline 'SOL file not found!']);
+        end
         sendmail(sEma,...
-            ['Biostatica Matlab: geen/foute eindopdracht ' thisWeek],chrns);
+            ['Biostatica Matlab: geen/verkeerde eindopdracht ' thisWeek],chrns,apSolStud);
     catch err
         save('strStudentNumbers.mat','strStudentNumbers')
         error([newline mfilename ': ' newline err.message newline]);

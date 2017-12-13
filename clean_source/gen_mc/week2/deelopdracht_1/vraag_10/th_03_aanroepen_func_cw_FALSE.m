@@ -1,1 +1,2 @@
-Een functie kan worden aangeroepen vanuit de Workspace.
+Een functie kan worden aangeroepen vanuit
+de Workspace.

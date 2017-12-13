@@ -1,2 +1,2 @@
-Bij het opslaan van een functie geef je het bestand
-een andere naam dan de functie zelf.
+Bij het opslaan van een function file mag je het bestand
+een willekeurige naam geven.

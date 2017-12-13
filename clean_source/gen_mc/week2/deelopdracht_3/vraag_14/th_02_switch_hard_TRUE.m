@@ -11,7 +11,7 @@ switch spier
     case 3
         'Quadriceps'
     case 4
-        'tibialis'
+        'Tibialis'
     otherwise
         'Geen spier'
 end

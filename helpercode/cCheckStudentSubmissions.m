@@ -88,26 +88,38 @@ try
                 unzip(apCurrZip);
                 %Remove dirs without correct weekX assignment
                 neededDir = dirmf(weekName);
+                blSubmittedWrongFiles = true;
                 for nD = 1:length(neededDir)
-                    if ~isempty(neededDir) && neededDir(nD).isdir
+                    if ~isempty(neededDir) && neededDir(nD).isdir && isequal(neededDir(nD).name,weekName)
                         dirToCheck = fullfile(neededDir(nD).folder,neededDir(nD).name);
                         movefile(dirToCheck,currPath);
+                        blSubmittedWrongFiles = false;
+                        break;
                     end
+                end
+                if blSubmittedWrongFiles
+                    movefile(apCurrZip,apWrongSub);
                 end
                 %Delete everything but current week folder
                 cd ..
                 removeShitFromDir('temp')
                 rmdir('temp')
+                try
                 movefile(apCurrZip,apUnzipped);
+                catch
+                    currPath = pwd;
+                    cd ..
+                    rmdir(currPath)
+                end
             else
                 movefile(apCurrZip,apWrongSub);
             end
         else % not a zip-file but something else
-%             keyboard
+            %             keyboard
             warning off
             delete(apCurrZip)
             removeShitFromDir(apCurrZip)
-            rmdir(apCurrZip)
+            rmdirIf(apCurrZip)
             warning on
         end
         cd(tmpBase);
@@ -119,6 +131,7 @@ try
     end
     cd(con.BASEFOLDER);
 catch err
+    keyboard
     error([mfilename ': Something went wrong with unzipping!' newline err.message newline]);
 end
 %%
@@ -303,14 +316,14 @@ for sn = 1:length(strTrackStudent(:,1))
             % Check all the assigned assignments of individual students
             points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
                 dicNameAssignmentAndPoints);
-            grade = ((points/PointsToBeEarned)*9)+1;
+            grade = ((points/PointsToBeEarned)*9)+1
             studentMatrix(sn,1) = str2double(studentFolder);
             studentMatrix(sn,2) = round(grade,1);
             checkedStudent(cnt) = studentMatrix(sn,2);
             cnt = cnt + 1;
             % Give the student a grade, first make some text
             cCheck_GradeText;
-            makeMFileFromCells(fullfile(apSubmitted,studentFolder,'JouwCijfer'),t);
+            makeMFileFromCells(fullfile(apSubmitted,studentFolder,['JouwCijfer_' replace(num2str(round(grade,1)),'.','_')]),t);
             % Copy files to a new folder
             nmNewFolder = ['Checked_' studentFolder];
             mkdirIf(nmNewFolder)

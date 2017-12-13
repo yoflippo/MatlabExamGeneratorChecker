@@ -1,2 +1,3 @@
-In Matlab wordt is de waarde van 'true' gelijk aan '1' en de waarde
-van 'false' gelijk aan '0'.
+In Matlab is de waarde van 'true' alles 
+dat ongelijk is aan '0'. De waarde van 'false' 
+is gelijk aan '0'.

@@ -6,7 +6,7 @@
 %                           A: Bestandsnamen
 %                           B: Door ons aangemaakt commentaar
 %                           C: Folders en folderstructuur
-%                           D: De code in deze codesectie
+%                           D: De eventuele code in deze codesectie
 % 2 -   Als dit bestand niet uit te voeren valt, bijvoorbeeld doordat je
 %       tijdens het uitvoeren een foutmelding krijgt, krijg je GEEN punten!
 % 3 -   Elke variabele waar 'NaN' aan wordt toegekend moet JIJ bewerken.

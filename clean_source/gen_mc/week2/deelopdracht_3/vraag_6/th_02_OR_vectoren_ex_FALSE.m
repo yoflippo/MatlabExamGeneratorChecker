@@ -1,4 +1,4 @@
-De volgende code geeft 3 enen terug.
+De volgende code geeft 3 enen terug:
 
 ======= Code =======
 

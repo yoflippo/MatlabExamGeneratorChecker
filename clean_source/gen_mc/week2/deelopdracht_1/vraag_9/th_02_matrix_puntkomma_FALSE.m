@@ -1,1 +1,2 @@
-Met een dubbele punt (:) maak je een nieuwe rij aan binnen een matrix.
+Met een colon (:) maak je een nieuwe rij aan binnen
+een matrix.

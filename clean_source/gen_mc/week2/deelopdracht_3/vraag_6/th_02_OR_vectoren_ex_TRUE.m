@@ -1,4 +1,4 @@
-De volgende code geeft 2 enen terug.
+De volgende code geeft 2 enen terug:
 
 ======= Code =======
 
