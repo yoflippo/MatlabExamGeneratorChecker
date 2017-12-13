@@ -1,8 +1,8 @@
-In het onderstaande code voorbeeld geeft het commentaar
-(aangegeven met het '%' teken) aan welke berekening moet 
-worden uitgevoerd.
+Gegeven is dat in het onderstaande voorbeeld  
+het code commentaar (aangegeven met het '%' teken)
+aangeeft wat er moet gebeuren.
 
-In dit code voorbeeld zit geen syntaxfout.
+In dit code voorbeeld zit geen syntaxfout:
 
 ======= Code =======
 

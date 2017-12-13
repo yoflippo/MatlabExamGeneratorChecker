@@ -1,2 +1,2 @@
 Als je programma is gestopt m.b.v. een breakpoint dan
-kun je niet de variabelen van de Workspace bekijken.
+kan je niet de variabelen in de Workspace niet bekijken.

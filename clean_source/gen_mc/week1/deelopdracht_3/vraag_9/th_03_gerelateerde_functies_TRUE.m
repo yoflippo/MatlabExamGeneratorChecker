@@ -1,2 +1,3 @@
-In de Matlab doc of help functie krijg je een andere gerelateerde
-functies te zien.
+In de Matlab doc of help functie krijg je o.a.
+gerelateerde functies van de opgevraagde standaard
+Matlab functie te zien.

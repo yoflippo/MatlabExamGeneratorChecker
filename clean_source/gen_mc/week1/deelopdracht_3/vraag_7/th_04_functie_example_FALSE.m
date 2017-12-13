@@ -1,5 +1,5 @@
-In het onderstaande code voorbeeld is de correcte opbouw van een
-functie te zien:
+In het onderstaande code voorbeeld is de correcte 
+opbouw van een functie te zien:
 
 ======= Code =======
 

@@ -1,6 +1,9 @@
+Gegeven is dat in het onderstaande voorbeeld  
+het code commentaar (aangegeven met het '%' teken)
+aangeeft wat er moet gebeuren.
+
 In het onderstaande voorbeeld zit een programmeerfout
 in regel 6.
-
 
 ======= Code =======
 

@@ -1,6 +1,6 @@
 Zie de onderstaande code. Als je op regel 2 een breakpoint
-plaatst en Matlab stopt bij die regel dan is die code
-reeds uitgevoerd door Matlab.
+plaatst en Matlab stopt bij die regel dan is de code
+in die regel reeds uitgevoerd door Matlab.
 
 ======= Code =======
 1- % Vermenigvuldigen van a en b

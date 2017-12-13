@@ -1,5 +1,5 @@
-Zie het onderstaande code voorbeeld.
-De functie heeft twee outputs.
+Zie het onderstaande code voorbeeld. De functie heeft 
+twee outputs.
 
 ======= Code =======
 

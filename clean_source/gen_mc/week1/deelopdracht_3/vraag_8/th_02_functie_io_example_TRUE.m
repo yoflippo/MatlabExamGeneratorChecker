@@ -1,5 +1,5 @@
-Zie het onderstaande code voorbeeld.
-De output variabele 'text2' krijgt de string: 'empty'.
+Zie het onderstaande code voorbeeld. De output variabele 
+'text2' krijgt de string: 'empty'.
 
 ======= Code =======
 

@@ -1,5 +1,5 @@
-Zie het onderstaande code voorbeeld.
-In de code is een functie te zien met 2 inputs en 1 output.
+Zie het onderstaande code voorbeeld. In de code is een 
+functie te zien met 2 inputs en 1 output.
 
 ======= Code =======
 

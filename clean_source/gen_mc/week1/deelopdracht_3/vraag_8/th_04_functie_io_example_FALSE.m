@@ -1,6 +1,6 @@
 Zie het onderstaande code voorbeeld.
-De input(-parameter) 'fake' wordt in de body van de functie 
-gebruikt.
+De input(-parameter) 'fake' wordt door de functie 
+gebruikt in 1 of andere operatie/handeling.
 
 ======= Code =======
 

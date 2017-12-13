@@ -1,6 +1,8 @@
+Gegeven is dat in het onderstaande voorbeeld  
+het code commentaar (aangegeven met het '%' teken)
+aangeeft wat er moet gebeuren.
+
 De code hieronder geeft een voorbeeld van een syntaxfout.
-Het commentaar in het code voorbeeld
-geeft aan wat het programma moet doen.
 
 ======= Code =======
 % Optellen van een variabele

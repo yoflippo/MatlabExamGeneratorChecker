@@ -1,6 +1,6 @@
 Zie het onderstaande code voorbeeld.
-De input(-parameter) 'fake' wordt in de functie niet
-gebruikt.
+De input(-parameter) 'fake' wordt in de functie
+niet gebruikt.
 
 ======= Code =======
 

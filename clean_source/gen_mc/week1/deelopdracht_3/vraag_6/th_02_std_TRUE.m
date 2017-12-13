@@ -1,2 +1,2 @@
 Met behulp van de functie std() kan de standaarddeviatie
-van de waardes van een vector worden berekend.
+van de elementen van een vector worden berekend.
