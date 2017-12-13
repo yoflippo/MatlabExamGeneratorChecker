@@ -1,2 +1,2 @@
-Met de functie sqrt() kan de worteltrek operatie worden 
-uitgevoerd.
+Met de functie sqrt() kan de wortel worden getrokken
+van een getal.

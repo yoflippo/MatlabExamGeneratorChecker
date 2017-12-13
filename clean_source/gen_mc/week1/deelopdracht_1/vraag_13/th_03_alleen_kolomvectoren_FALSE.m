@@ -1,1 +1,2 @@
-In Matlab kun je alleen kolomvectoren aanmaken en gebruiken.
+In Matlab kun je alleen kolomvectoren aanmaken
+en gebruiken.

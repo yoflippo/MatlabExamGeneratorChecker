@@ -1,2 +1,2 @@
-In Matlab kun je met de blokhaken operator strings stukken tekst aan
-elkaar maken. 
+In Matlab kun je met de blokhaken operator
+stukken tekst aan elkaar plakken. 

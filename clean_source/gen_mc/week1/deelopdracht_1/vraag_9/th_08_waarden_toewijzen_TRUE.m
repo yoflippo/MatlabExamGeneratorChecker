@@ -1,4 +1,4 @@
-De onderstaande code zeg je tegen Matlab
+Met de onderstaande code zeg je tegen Matlab
 dat je de waarde 6 aan B toewijst
 
 ------------code--------------

@@ -1,4 +1,5 @@
-De volgende code plakt 'voornaam' en 'achternaam' aan elkaar:
+De volgende code plakt 'voornaam' en 'achternaam' 
+aan elkaar:
 
 ------------code--------------
 voornaam = 'Mark'

@@ -1,6 +1,6 @@
-In Matlab kun je bij elk element van een numerieke vector (een
-vector met alleen getallen) een waarde optellen (zie code voorbeeld
-hieronder). 
+In Matlab kun je bij elk element van een numerieke vector
+(een vector met alleen getallen) een waarde optellen 
+(zie code voorbeeld hieronder). 
 
 
 ======= Code =======

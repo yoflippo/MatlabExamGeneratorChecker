@@ -1,5 +1,6 @@
 In het onderstaande code voorbeeld worden de door randn() 
-gegeneerde waardes omgedraaid afgedrukt in het Command Window:
+gegeneerde waardes omgedraaid afgedrukt in het 
+Command Window:
 
 ======= Code =======
 
