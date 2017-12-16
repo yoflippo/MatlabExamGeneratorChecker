@@ -1,10 +1,12 @@
-function [grades] = checkSubmittedExams(examInfo)
+function [grades] = checkSubmittedExams(examInfo,ap)
 
 %% Unzip Exams
 zfiles = dir('*.zip');
 for nz = 1:length(zfiles)
     oDirs{nz} = replace(zfiles(nz).name,'.zip','');
-    unzip(zfiles(nz).name,oDirs{nz});
+    apCurrZip = fullfile(zfiles(nz).folder,zfiles(nz).name);
+    unzip(apCurrZip,oDirs{nz});
+    movefile(apCurrZip,ap.SUBMITTEDUNZIPPED);
 end
 
 %% Walk through unzipped folders

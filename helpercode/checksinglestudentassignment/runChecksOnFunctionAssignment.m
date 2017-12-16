@@ -84,11 +84,14 @@ if ~isempty(char(txtCleanedStudentSolution))
         else
             res = (res-nAbs)/sm;
         end
+
+        if length(data) > 1
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,'% De verwachte output is verkeerd. Je kunt nu nog maar maximaal 50% van het aantal punten verdienen.');
+            end
+            res = res/2;
+        end
         
-% % % %                 % If the I/O is wrong only a maximum of 50% can be earned.
-% % % %         if length(data) > 1 && res > 0.5
-% % % %             res = res/2;
-% % % %         end
     end
     
     if res < 0

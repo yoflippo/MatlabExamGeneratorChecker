@@ -92,6 +92,7 @@ txt(all(txt=="",2),:)=[];
 
 %% Remove 'clear' variants
 txt = strrep(txt,'clear','%clear');
+txt = strrep(txt,'input(','%input(');
 
 %% Write to file
 if ~blOutputTxtNoFile

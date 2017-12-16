@@ -31,6 +31,7 @@ mkdirIf(ap.CurrExamLog);
 ap.Assignments = fullfile(ap.CurrExam,'assignments');
 mkdirIf(ap.Assignments);
 ap.ExamSrcDir = fullfile(ap.CurrExam,nm.Exam);
+mkdirIf('bonus');
 
 %% Some log settings
 diary(fullfile(ap.CurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
@@ -103,7 +104,7 @@ generateTestExams(ap.CurrExam);
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams'),ap.Submitted);
 cd(ap.Submitted);
-grades = checkSubmittedExams(sAssigned);
+grades = checkSubmittedExams(sAssigned,ap);
 if mean(grades(:,2)) > 1
     error('The exam grade should be 1')
 end
@@ -113,7 +114,7 @@ cd ..
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams_SOL'),ap.Submitted);
 cd(ap.Submitted);
-grades = checkSubmittedExams(sAssigned);
+grades = checkSubmittedExams(sAssigned,ap);
 if mean(grades(:,2)) < 10
     error('The exam grade should be a TEN!!')
 end

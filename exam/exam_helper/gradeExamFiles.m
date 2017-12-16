@@ -32,10 +32,10 @@ for nS = 1:length(mfiles)
             res = feval(nameCheckFunction,apStudentSol);
             try
                 handleGrade(res,apStudentSol,apSOL)
-            catch
+            catch err1
             end
-        catch err
-            handleGradeErr(res,err,apStudentSol,apSOL)
+        catch err2
+            handleGradeErr(res,err2,apStudentSol,apSOL)
         end
         
         resT = res*examInfo(index).points + resT;
@@ -58,9 +58,9 @@ end
 
 function handleGrade(res,apStudentSol,apSOL)
 result = round(res,1)*100;
+[path, name, ext] = fileparts(apStudentSol);
+answerFile = replace([name ext],'.m','_UITWERKING.m');
 if res < 1
-    [path, name, ext] = fileparts(apStudentSol);
-    answerFile = replace([name ext],'.m','_UITWERKING.m');
     apFinSol = fullfile(path,answerFile);
     copyfile(apSOL,apFinSol);
     replaceVraagOpdracht(apFinSol,str2num(extractAfter(name,'_')));
