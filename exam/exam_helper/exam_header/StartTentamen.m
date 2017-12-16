@@ -327,7 +327,7 @@ while numel(num2str(snumber)) < 8 | numel(num2str(snumber)) > 8
     end
 end
 
-while isempty(input('Heb je jouw studentennummer correct ingevoerd? Ja = 1, Anders = Druk op Enter): '))
+while isempty(input('Heb je jouw studentennummer correct ingevoerd? Ja = 1, Anders = 0, Druk op Enter): '))
     snumber = input('Geef hier opnieuw je studentnummer: ');
     if numel(num2str(snumber)) < 8
         warning('Je hebt te weinig cijfers opgegeven!');
@@ -349,9 +349,3 @@ clc;
 cd ..
 disp('Start nu met deelopdracht_1')
 disp('TIP: kijk eens naar de hoeveelheid opdrachten zodat je rekening kunt houden met de beschikbare tijd');
-
-apThisFile = fileparts(mfilename('fullpath'));
-apStudentNumber = fullfile(apThisFile,'studentnummer.m');
-fileID = fopen(apStudentNumber,'w');
-fprintf(fileID,'%s\r\n',['studentnumber = ' num2str(snumber) ';']);
-fclose('all');
