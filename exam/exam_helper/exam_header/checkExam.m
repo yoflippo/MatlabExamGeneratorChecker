@@ -1,10 +1,8 @@
-%% V1
 %% ASSUME THIS FILE IS WITHIN THE EXAM DIRECTORY
+function [grades] = checkExam()
 clc
-close all
-clear all
-cd(fileparts(mfilename('fullpath')))
 load('Workspace.mat')
+cd(ap.CurrExam)
 addpath(genpath(ap.EXAMHELPER));
 addpath(genpath(ap.HELPERCODE));
 ap.SUBMITTEDUNZIPPED = fullfile(pwd,'submitted_unzipped');
@@ -21,18 +19,16 @@ ver
 dispPlatform
 clc
 
-
 %% Unzip every exam
 cd(ap.Submitted);
-checkSubmittedExams(sAssigned,ap);
+grades = checkSubmittedExams(sAssigned,ap);
 
-
-%% Finally, Clean up
-disp('Finally, Clean up');
-warning off
-fclose('all');
-rmpath(genpath(ap.BASEFOLDEREX));
-rmpath(genpath(ap.HELPERCODE));
-rmpath(genpath(ap.CurrExam));
-rmpath(genpath(ap.Assignments));
-warning on
+% % % %% Finally, Clean up
+% % % disp('Finally, Clean up');
+% % % warning off
+% % % fclose('all');
+% % % rmpath(genpath(ap.BASEFOLDEREX));
+% % % rmpath(genpath(ap.HELPERCODE));
+% % % rmpath(genpath(ap.CurrExam));
+% % % rmpath(genpath(ap.Assignments));
+% % % warning on

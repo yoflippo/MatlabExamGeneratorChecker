@@ -250,7 +250,7 @@ cd ..
 % Message to student
 clc
 snumber = num2str(snumber);
-sprefix = 'TentamenBiostatica_';
+sprefix = 'AfgerondTentamenBiostatica_';
 disp('Er is een zip-bestand aangemaakt dat je moet inleveren: ')
 disp('Dat zip-bestand heet: ');
 disp(['                        ' sprefix snumber '.zip'])

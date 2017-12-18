@@ -68,7 +68,7 @@ yheup = beenlengte-r;
 % alle punten die samen het model vormen in een matrix stoppen
 model(1,:)= [xp x xendoffoot xheup];
 % maak een vector aan:
-model(2,:) = {yp y yendoffoot yheup};
+model(2,:) = [yp y yendoffoot yheup;
 
 % dan linksom roteren over halve tophoek
 starthoek = (tophoek/2);
@@ -129,3 +129,15 @@ end %function
 
 
 
+
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:

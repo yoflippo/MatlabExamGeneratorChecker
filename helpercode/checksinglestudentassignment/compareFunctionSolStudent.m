@@ -275,6 +275,7 @@ end%function
 
 
 function procesError(apStudentSol,ErrMess,num_input,tVar,num_output,oStud,oSol)
+txterror = '% Tijdens het runnen van jouw uitwerking, tradt er een fout op:';
 try
     if ~contains(apStudentSol,'versie')
         if ~isempty(ErrMess)
@@ -338,9 +339,13 @@ end
 end %function
 
 function output = isequalQ(A,B)
-if isnumeric(A) && isnumeric(B) && all(abs(A) ~= Inf) && all(abs(B) ~= Inf)
-    output = all(abs(A-B)<0.05);
-else
+try
+    if isnumeric(A) && isnumeric(B) && all(all(abs(A) ~= Inf)) && all(all(abs(B) ~= Inf))
+        output = all(all(abs(A-B)<0.05));
+    else
+        output = isequal(A,B);
+    end
+catch
     output = isequal(A,B);
 end
-end
+end%f

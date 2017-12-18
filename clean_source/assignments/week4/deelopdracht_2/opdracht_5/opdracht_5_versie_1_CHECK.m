@@ -11,8 +11,8 @@ function res = opdracht_5_versie_1_CHECK(apStudentSol)
 
 
 checkingVar.testFunctionInput = {};
-checkingVar.literalsP = {'x = 0;' 1 'stap = (tophoek/numsteps);' 1 ... 
-    '[yp y yendoffoot yheup]' 1 'T1(2,:) = r;' 1 'T1(1,3)' 1 };
+checkingVar.literalsP = {'x = 0;' 1 'stap = (tophoek/numsteps)' 1 ... 
+    '[yp y yendoffoot yheup]' 1 'T1(2,:) = r' 1 'T1(1,3)' 1 };
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

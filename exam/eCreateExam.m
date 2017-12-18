@@ -32,6 +32,9 @@ ap.Assignments = fullfile(ap.CurrExam,'assignments');
 mkdirIf(ap.Assignments);
 ap.ExamSrcDir = fullfile(ap.CurrExam,nm.Exam);
 mkdirIf(fullfile(ap.CurrExam,'bonus'));
+ap.SUBMITTEDUNZIPPED = fullfile(ap.CurrExam,'submitted_unzipped');
+mkdirIf(ap.SUBMITTEDUNZIPPED);
+rmpath(genpath(ap.EXAMHELPERHEADER));
 % Copy the check exam script
 copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam.m'),ap.CurrExam)
 
@@ -50,7 +53,6 @@ CreateAndCopyQuestions(ap,weekNames);
 disp('Created MC-Questions')
 
 %% Redo the hashing of the copied questions/assignments 
-
 exam_addHashAndHeader(ap,weekNames,nm)
 disp('Added Hash and info to assignments')
 
@@ -89,8 +91,14 @@ cd(ap.CurrExam);
 
 %% Create a checking script
 cd(ap.CurrExam)
+nmFinalExamFolder = 'ToetsBiostaticaMatlab';
+mkdirIf(nmFinalExamFolder)
+cd(nmFinalExamFolder)
 ap.CurrZipFile = fullfile(ap.CurrExam,[nm.CurrExamDir '.zip']);
-zip(ap.CurrZipFile,ap.ExamSrcDir);
+ap.CurrZipFinalFile = fullfile(pwd,[nm.CurrExamDir '.zip']);
+% zip(ap.CurrZipFile,ap.ExamSrcDir);
+zip(ap.CurrZipFinalFile,ap.ExamSrcDir);
+cd(ap.CurrExam)
 
 %% Check the zip-files in folder submitted
 copyfile(ap.CurrZipFile,ap.Submitted);
@@ -103,22 +111,26 @@ generateTestExams(ap.CurrExam);
 
 
 %% Check test exams without solutions
+cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
-copyfiles(fullfile('Test_Exams','exams'),ap.Submitted);
-cd(ap.Submitted);
-grades = checkSubmittedExams(sAssigned,ap);
+copyfiles(fullfile('Test_Exams','exams'),ap.SUBMITTEDUNZIPPED);
+grades = checkExam();
 if mean(grades(:,2)) > 1
     error('The exam grade should be 1')
+else
+    disp('CHECK OK!');
 end
 cd ..
 
 %% Check test exams WITH solutions
+cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
-copyfiles(fullfile('Test_Exams','exams_SOL'),ap.Submitted);
-cd(ap.Submitted);
-grades = checkSubmittedExams(sAssigned,ap);
+copyfiles(fullfile('Test_Exams','exams_SOL'),ap.SUBMITTEDUNZIPPED);
+grades = checkExam();
 if mean(grades(:,2)) < 10
     error('The exam grade should be a TEN!!')
+else
+    disp('CHECK OK!');
 end
 cd ..
 
