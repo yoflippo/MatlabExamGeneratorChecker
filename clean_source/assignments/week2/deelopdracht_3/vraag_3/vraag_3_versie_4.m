@@ -1,6 +1,7 @@
 %% Vraag 3
 %
-% Stelling 1:   De logische AND-operator kan niet worden toegepast op een vector.
+% Stelling 1:   De element-wise AND-operator kan niet 
+%				worden toegepast op een vector.       
 %
 % Stelling 2:   De volgende code geeft alleen nullen terug:
 %				                                           

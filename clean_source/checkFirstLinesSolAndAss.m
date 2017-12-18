@@ -33,7 +33,7 @@ for nf = 1:length(solfiles)
     end
     
     for l = 1:fin
-        if ~isequal(txtSol{l},txtStu{l})
+        if ~isequal(txtSol{l},txtStu{l}) && length(txtSol{l})>1 && contains(txtSol{l}(1),'%')
             if ~contains(txtStu{l},'NaN')
                 edit(apSol)
                 edit(apStu)

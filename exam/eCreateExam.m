@@ -4,8 +4,8 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all
-nOfMulChoiceAssignment = 30;
-nOfScriptsFunctions = 15;
+nOfMulChoiceAssignment = 40;
+nOfScriptsFunctions = 19;
 weekNames = {'week1' 'week2' 'week3' 'week4'}; 
 
 %% Go to path of this file
@@ -31,7 +31,9 @@ mkdirIf(ap.CurrExamLog);
 ap.Assignments = fullfile(ap.CurrExam,'assignments');
 mkdirIf(ap.Assignments);
 ap.ExamSrcDir = fullfile(ap.CurrExam,nm.Exam);
-mkdirIf('bonus');
+mkdirIf(fullfile(ap.CurrExam,'bonus'));
+% Copy the check exam script
+copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam.m'),ap.CurrExam)
 
 %% Some log settings
 diary(fullfile(ap.CurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
