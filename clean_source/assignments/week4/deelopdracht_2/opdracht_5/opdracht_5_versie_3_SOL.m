@@ -61,8 +61,6 @@ booglengte = tophoek*r;
 stapboog = stap*r; % afgelegde weg op profiel en onderlaag per stap
 ang=starthoek:-0.01:eindhoek; %% eindhoeken ipv eindhoek
 
-% !! hier staat nu een clear vars
-
 
 % punten berekenen in rechtopstaande positie vh model
 xp= x+r*cos(ang); % x coordinaten van het profiel
@@ -73,7 +71,6 @@ xheup = x ;
 yheup = beenlengte-r;     
 % alle punten die samen het model vormen in een matrix stoppen
 model(1,:)= [xp x xendoffoot xheup]; %%!!
-
 % maak een vector aan:
 model(2,:) = [yp y yendoffoot yheup]; 
 

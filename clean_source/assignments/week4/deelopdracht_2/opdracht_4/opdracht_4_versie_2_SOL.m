@@ -11,7 +11,6 @@
 % LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
 % is. 
 
-
 %% ----------------Programma------------------------------------%%
 
 % ReadFORCEPLATE

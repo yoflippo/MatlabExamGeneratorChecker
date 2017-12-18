@@ -70,8 +70,6 @@ yendoffoot = y-r;
 xheup = x ;
 yheup = beenlengte-r;           
 % alle punten die samen het model vormen in een matrix stoppen
-
-% maak een vector aan:
 model(1,:)= xp x xendoffoot xheup];
 % maak een vector aan:
 model(2,:) = [yp y yendoffoot yheup]; 
@@ -133,7 +131,6 @@ for i = 1:numsteps+1     %%!! de f van for is weg gevallen
         delete(hArea)        
     end
 end
-
 end%function
 
 

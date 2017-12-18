@@ -5,5 +5,8 @@
 % Sla het resultaat van die bewerking op in diezelfde variabele (anders 
 % krijg je een eeuwige lus en dan krijg je geen punten voor deze opdracht).
 % Herhaal dit m.b.v. een while-lus zolang het getal groter is dan 5.
+%
+% Als je een eeuwige lus maakt (een lus die niet stopt) krijg je nul punten
+% voor deze opdracht.
 
 getal = 53;

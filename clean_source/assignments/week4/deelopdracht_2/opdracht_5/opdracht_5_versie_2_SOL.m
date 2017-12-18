@@ -16,7 +16,6 @@
 
 
 function [x,stap,model,T1,derdeElementT1] = opdracht_5()
-
 %% ---------------- Programma ------------------ %%
 % Dit script geeft je een basale bouwsteen voor een verder zelf te bouwen
 % model van de rocker shoe. In deze kale vorm heeft het model (in wording)

@@ -65,12 +65,10 @@ xendoffoot = x; %snijpunt van been met profiel
 yendoffoot = y-r;
 xheup = x ;
 yheup = beenlengte-r;
-
 % alle punten die samen het model vormen in een matrix stoppen
 model(1,:)= [xp x xendoffoot xheup];
 % maak een vector aan:
 model(2,:) = {yp y yendoffoot yheup};
-
 
 % dan linksom roteren over halve tophoek
 starthoek = (tophoek/2);
@@ -78,8 +76,6 @@ starthoek = (tophoek/2);
 Rm = [cos(starthoek) -sin(starthoek);sin(starthoek) cos(starthoek)];
 model = Rm*model;
 % model animeren
-%roteren over een staphoek (rechtsom dus -) (steeds over dezelfde hoek dus 1 matrix volstaat voor de hele
-%animatie. Elk geroteerd model wordt apart opgeslagen (3d matrix)
 Rstapm =  [cos(-stap) -sin(-stap);sin(-stap) cos(-stap)];
 for i =1:numsteps+1
     model(:,:,i+1) = Rstapm*model(:,:,i);
