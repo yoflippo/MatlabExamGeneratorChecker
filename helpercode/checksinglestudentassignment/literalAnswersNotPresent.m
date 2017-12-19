@@ -97,7 +97,7 @@ try
                 % Test for a generated file! Could also be done by testing for Hash
                 if ~contains(apStudentSol,'versie')
                     errTxt = ['% Je mag niet schrijven naar een inputvariabele: ' toFind];
-%                     keyboard
+                    %                     keyboard
                     WriteToLastLineOfFile(apStudentSol,errTxt);
                 end
             end
@@ -105,6 +105,11 @@ try
     end
 catch err
     keyboard
+    if ~contains(apStudentSol,'versie')
+        errTxt = ['% Er zit waarschijnlijk een fout in functie opbouw... '];
+        %                     keyboard
+        WriteToLastLineOfFile(apStudentSol,errTxt);
+    end
 end
 
 end%function

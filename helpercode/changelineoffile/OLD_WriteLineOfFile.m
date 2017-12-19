@@ -69,7 +69,7 @@ fclose(fileID);
 delete(absPathFile)
 % write to file
 try
-    fileID = fopen(absPathFile,'w');
+    fileID = fopen(absPathFile,'W');
     for i = 1:length(dataArray{1,1})
         fprintf(fileID,'%s\r\n',dataArray{1,1}{i});
     end

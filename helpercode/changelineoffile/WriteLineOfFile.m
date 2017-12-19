@@ -64,7 +64,7 @@ delete(absPathFile)
 
 %% write to file
 try
-    fileID = fopen(absPathFile,'w');
+    fileID = fopen(absPathFile,'W');
     for i = 1:length(txtFile)
         fprintf(fileID,'%s\r\n',txtFile{i});
     end

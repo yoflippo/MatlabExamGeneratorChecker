@@ -13,12 +13,14 @@ cd ..
 addpath(genpath('deelopdracht_2'));
 mfiles = [mfiles1; mfiles2];
 
-
-for nS = 1:length(mfiles)
+nfiles = length(mfiles);
+oldPath = pwd;
+for nS = 1:nfiles
     %% Create a fitting search string, to search in examInfo
     s4 = ['Tentamen' filesep];
     ss = extractAfter(mfiles(nS).folder,s4);
     ss = [s4 ss filesep mfiles(nS).name];
+    cd(mfiles(nS).folder);
     
     %% Search current question examInfo
     index = find(strcmp({examInfo.apQ}, ss)==1);
@@ -48,12 +50,13 @@ for nS = 1:length(mfiles)
         
         rmpath(genpath(path));
     end
+    disp([mfilename ', processed files: ' num2str(nS) ' of ' num2str(nfiles) ' (' mfiles(nS).name ')']);
 end
-
+cd(oldPath);
 grade = 1 + ((resT*9)/points);
 rmpath(genpath('deelopdracht_1'));
 rmpath(genpath('deelopdracht_2'));
-
+pause(0.5);
 end
 
 function handleGrade(res,apStudentSol,apSOL)

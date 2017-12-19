@@ -1,14 +1,27 @@
 %% ASSUME THIS FILE IS WITHIN THE EXAM DIRECTORY
 function [grades] = checkExam()
+clear variables
 clc
 load('Workspace.mat')
-cd(ap.CurrExam)
+
+try
+    cd(ap.CurrExam)
+catch
+    ap = changeAbsolutePath(ap);
+    cd(ap.CurrExam)
+end
 addpath(genpath(ap.EXAMHELPER));
 addpath(genpath(ap.HELPERCODE));
 ap.SUBMITTEDUNZIPPED = fullfile(pwd,'submitted_unzipped');
+mkdirIf(ap.SUBMITTEDUNZIPPED);
+ap.SUBMITTEDCHECKED = fullfile(pwd,'submitted_checked');
+mkdirIf(ap.SUBMITTEDCHECKED);
+
 if exist(ap.SUBMITTEDUNZIPPED,'dir')
-    removeShitFromDir(ap.Submitted);
-    movefiles(ap.SUBMITTEDUNZIPPED,ap.Submitted)
+    if ~exist(fullfile(ap.Submitted,'checkSubmittedExam.mat'),'file');
+        removeShitFromDir(ap.Submitted);
+        movefiles(ap.SUBMITTEDUNZIPPED,ap.Submitted)
+    end
 else
     mkdirIf(ap.SUBMITTEDUNZIPPED);
 end
@@ -20,15 +33,25 @@ dispPlatform
 clc
 
 %% Unzip every exam
-cd(ap.Submitted);
 grades = checkSubmittedExams(sAssigned,ap);
+% Descriptives
+PercentagePassed = sum(grades(:,2)>=5.5)/length(grades(:,2))
+AverageGrade = mean(grades(:,2))
+Std = std(grades(:,2))
+strDescriptive(1,1) = string(['Average grade: ' num2str(AverageGrade)]); 
+strDescriptive(2,1) = string(['Percentage passed: ' num2str(PercentagePassed)]); 
+strDescriptive(3,1) = string(['Standard Deviation: ' num2str(Std)]); 
+strDescriptive(4,1) = "In het geval dit het tentamen betreft zit het bonuscijfer er in verwerkt.";
+strGrades = string(num2str(grades))
+strGrades = [strDescriptive; strGrades]
+writetxtfile(fullfile(ap.Submitted,'cijfers.txt'),strGrades)
 
-% % % %% Finally, Clean up
-% % % disp('Finally, Clean up');
-% % % warning off
-% % % fclose('all');
-% % % rmpath(genpath(ap.BASEFOLDEREX));
-% % % rmpath(genpath(ap.HELPERCODE));
-% % % rmpath(genpath(ap.CurrExam));
-% % % rmpath(genpath(ap.Assignments));
-% % % warning on
+%% Finally, Clean up
+disp('Finally, Clean up');
+warning off
+fclose('all');
+rmpath(genpath(ap.BASEFOLDEREX));
+rmpath(genpath(ap.HELPERCODE));
+rmpath(genpath(ap.CurrExam));
+rmpath(genpath(ap.Assignments));
+warning on

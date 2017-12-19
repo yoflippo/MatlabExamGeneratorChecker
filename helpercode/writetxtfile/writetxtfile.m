@@ -53,7 +53,7 @@ try
     end
     
     %% Write to file
-    fileID = fopen(apFile,'w');
+    fileID = fopen(apFile,'W');
     if iscell(txt)
         for i = 1:length(txt)
             fprintf(fileID,'%s\r\n',txt{i});

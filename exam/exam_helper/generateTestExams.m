@@ -22,7 +22,7 @@ for nD = 1:length(dirs)
         
         %% Create studentnumber file
         apStudentNumber = fullfile(apExam,rpTmpDir,'deelopdracht_0','studentnummer.m');
-        fileID = fopen(apStudentNumber,'w');
+        fileID = fopen(apStudentNumber,'W');
         fprintf(fileID,'%s\r\n',['studentnumber = ' num2str(currSNumber) ';']);
         fclose('all');
         

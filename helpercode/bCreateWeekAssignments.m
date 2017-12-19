@@ -233,11 +233,11 @@ for nW = length(Weeks)
         cd(con.BASEFOLDER);
         
         % Create a file with the studentnumber
-        fid = fopen(fullfile(currStudentDir,weekName,'studentnummer.m'),'w');
+        fid = fopen(fullfile(currStudentDir,weekName,'studentnummer.m'),'W');
         fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
         fclose(fid);
         % Create a file with the studentnumber
-        fid = fopen(fullfile(currStudentDirSol,weekName,'studentnummer.m'),'w');
+        fid = fopen(fullfile(currStudentDirSol,weekName,'studentnummer.m'),'W');
         fprintf(fid,'%s',['currentStudentNumber = num2str(' studentDir ');']);
         fclose(fid);
         

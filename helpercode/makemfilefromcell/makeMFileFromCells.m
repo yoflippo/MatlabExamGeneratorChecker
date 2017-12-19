@@ -59,7 +59,7 @@ catch
     % Try to make file
     try
         fclose(FID);
-        FID = fopen([nameFile '.m'],'w');
+        FID = fopen([nameFile '.m'],'W');
         for i = 1:length(txtInCellFormat)
             fprintf(FID,'%s\r\n',txtInCellFormat{i});
         end

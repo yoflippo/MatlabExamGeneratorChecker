@@ -240,6 +240,7 @@ for z = 1:length(testData)
                 procesError(apStudentSolOriginal,ErrMess,num_input,tVar,num_output,oStud,oSol);
             end
         case '5  0'
+            tVar = [];
             try
                 [oStud.a, oStud.b, oStud.c, oStud.d, oStud.e] = feval(nmStudentSolution);
                 [oSol.a, oSol.b, oSol.c, oSol.d, oSol.e] = feval(solution);
