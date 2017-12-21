@@ -3,13 +3,23 @@ function [grades] = checkExam()
 clear variables
 clc
 load('Workspace.mat')
+apCheckExam = fileparts(mfilename('fullpath'));
+cd(apCheckExam);
+rmpath(genpath(apCheckExam))
 
+%% Change absolute paths if needed
 try
-    cd(ap.CurrExam)
-catch
-    ap = changeAbsolutePath(ap);
-    cd(ap.CurrExam)
+    if ~isequal(ap.CurrExam,pwd)
+        ap = changeAbsolutePath(ap);
+        sAssigned = changeAbsolutePath(sAssigned);  
+        AssInfo.FuncScrip = changeAbsolutePath(AssInfo.FuncScrip);
+        AssInfo.MC = changeAbsolutePath(AssInfo.MC);
+    end
+catch err
+    error([newline mfilename ': ' newline err.message newline]); 
+    cd(ap.CurrExam);
 end
+
 addpath(genpath(ap.EXAMHELPER));
 addpath(genpath(ap.HELPERCODE));
 ap.SUBMITTEDUNZIPPED = fullfile(pwd,'submitted_unzipped');
@@ -57,8 +67,6 @@ writetxtfile(fullfile(ap.Submitted,'cijfers.txt'),strGrades)
 disp('Finally, Clean up');
 warning off
 fclose('all');
-rmpath(genpath(ap.BASEFOLDEREX));
 rmpath(genpath(ap.HELPERCODE));
 rmpath(genpath(ap.CurrExam));
-rmpath(genpath(ap.Assignments));
 warning on

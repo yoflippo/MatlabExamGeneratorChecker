@@ -28,8 +28,8 @@ for nS = 1:nfiles
     if ~isempty(index)
         apSOL = examInfo(index).apSOL;
         apCHECK = replace(apSOL,'_SOL','_CHECK');
-        [path,nameCheckFunction] = fileparts(apCHECK);
-        addpath(genpath(path));
+        [pth,nameCheckFunction] = fileparts(apCHECK);
+        addpath(genpath(pth));
         apStudentSol = fullfile(mfiles(nS).folder,mfiles(nS).name);
         try
             res = feval(nameCheckFunction,apStudentSol);
@@ -49,7 +49,7 @@ for nS = 1:nfiles
 % % % % %             keyboard
 % % % % %         end
         
-        rmpath(genpath(path));
+        rmpath(genpath(pth));
     end
     disp([mfilename ', processed files: ' num2str(nS) ' of ' num2str(nfiles) ' (' mfiles(nS).name ')']);
 end
@@ -61,10 +61,10 @@ end
 
 function handleGrade(res,apStudentSol,apSOL)
 result = round(res,1)*100;
-[path, name, ext] = fileparts(apStudentSol);
+[pth, name, ext] = fileparts(apStudentSol);
 answerFile = replace([name ext],'.m','_UITWERKING.m');
 if res < 1
-    apFinSol = fullfile(path,answerFile);
+    apFinSol = fullfile(pth,answerFile);
     copyfile(apSOL,apFinSol);
     replaceVraagOpdracht(apFinSol,str2num(extractAfter(name,'_')));
 end
@@ -79,9 +79,9 @@ function handleGradeErr(res,err,apStudentSol,apSOL)
 result = round(res,1)*100;
 keyboard %THIS FUNCTION NEEDS TO BE CHECKED!!
 if res < 1
-    [path, name, ext] = fileparts(apStudentSol);
+    [pth, name, ext] = fileparts(apStudentSol);
     answerFile = replace([name ext],'.m','_UITWERKING.m');
-    apFinSol = fullfile(path,answerFile);
+    apFinSol = fullfile(pth,answerFile);
     copyfile(apSOL,apFinSol);
     replaceVraagOpdracht(apFinSol,str2num(extractAfter(name,'_')));
 end

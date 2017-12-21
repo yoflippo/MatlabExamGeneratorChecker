@@ -36,7 +36,7 @@ ap.SUBMITTEDUNZIPPED = fullfile(ap.CurrExam,'submitted_unzipped');
 mkdirIf(ap.SUBMITTEDUNZIPPED);
 rmpath(genpath(ap.EXAMHELPERHEADER));
 % Copy the check exam script
-copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam.m'),ap.CurrExam)
+copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,['_' nm.CurrExamDir]))
 
 %% Some log settings
 diary(fullfile(ap.CurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
