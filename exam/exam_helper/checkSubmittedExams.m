@@ -46,6 +46,11 @@ else
     
     %% Walk through unzipped folders
     nex = length(oDirs);
+    tmp = {examInfo.apQ};
+    tmp{1,cellfun(@isempty,tmp)}='';
+    resultOverview = [cell(1,1) tmp];
+    resultOverview = [resultOverview; ['Point for each assignment' {examInfo.points}]];
+    clear tmp;
     save('checkSubmittedExam.mat');
 end
 
@@ -63,7 +68,10 @@ for nd = 1:nex
             checkExamHashes();
             
             %% Grade files
-            grade = gradeExamFiles(examInfo);
+            [grade,tmpResultOverview] = gradeExamFiles(examInfo);
+            % Fill resultOverview
+            tmpResultOverview = [currStudentNumber tmpResultOverview];
+            resultOverview = [resultOverview; tmpResultOverview];
             
             %% Create file with grade information
             t{1} = ['% Jouw tentamen cijfer: ' num2str(round(grade,1))];

@@ -12,9 +12,10 @@ mfiles2 = dirmf();
 cd ..
 addpath(genpath('deelopdracht_2'));
 mfiles = [mfiles1; mfiles2];
+
 nfiles = length(mfiles);
+resultOverview = cell(1,length(examInfo.apQ)); 
 oldPath = pwd;
-resultOverview = cell(1,length({examInfo.apQ}));
 for nS = 1:nfiles
     %% Create a fitting search string, to search in examInfo
     s4 = ['Tentamen' filesep];
@@ -40,7 +41,7 @@ for nS = 1:nfiles
         catch err2
             handleGradeErr(res,err2,apStudentSol,apSOL)
         end
-        resultOverview{1,index} = res;
+        resultOverview{1,index+1} = res;
         resT = res*examInfo(index).points + resT;
         
 % % % % %         if res < 1

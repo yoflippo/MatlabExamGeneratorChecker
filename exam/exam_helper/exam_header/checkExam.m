@@ -38,10 +38,17 @@ grades = checkSubmittedExams(sAssigned,ap);
 PercentagePassed = sum(grades(:,2)>=5.5)/length(grades(:,2))
 AverageGrade = mean(grades(:,2))
 Std = std(grades(:,2))
+MaxGrade = max(grades(:,2))
+MinGrade = min(grades(:,2))
+numberPart = length(grades);
+clear strDescriptive
 strDescriptive(1,1) = string(['Average grade: ' num2str(AverageGrade)]); 
-strDescriptive(2,1) = string(['Percentage passed: ' num2str(PercentagePassed)]); 
-strDescriptive(3,1) = string(['Standard Deviation: ' num2str(Std)]); 
-strDescriptive(4,1) = "In het geval dit het tentamen betreft zit het bonuscijfer er in verwerkt.";
+strDescriptive(length(strDescriptive)+1,1) = string(['Percentage passed: ' num2str(PercentagePassed)]); 
+strDescriptive(length(strDescriptive)+1,1) = string(['Standard Deviation: ' num2str(Std)]); 
+strDescriptive(length(strDescriptive)+1,1) = string(['Highest grade: ' num2str(MaxGrade)]);
+strDescriptive(length(strDescriptive)+1,1) = string(['Lowest grade: ' num2str(MinGrade)]);
+strDescriptive(length(strDescriptive)+1,1) = string(['Number of students: ' num2str(numberPart)]); 
+strDescriptive(length(strDescriptive)+1,1) = "In het geval dit het tentamen betreft zit het bonuscijfer er in verwerkt.";
 strGrades = string(num2str(grades))
 strGrades = [strDescriptive; strGrades]
 writetxtfile(fullfile(ap.Submitted,'cijfers.txt'),strGrades)
