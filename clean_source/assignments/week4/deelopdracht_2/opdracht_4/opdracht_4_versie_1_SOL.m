@@ -46,7 +46,7 @@ data = load('Gaan1.txt');   %%!!
 
 % gebruiker geeft, indien bekend, de frequentie van de meting op
 l = length(data(:,1));     %%!! data ipv Data
-fs = 100
+fs = 100;
 if fs ~= 0
     samplePeriod = 1/fs;
     xas = 0:samplePeriod:(l/fs)-samplePeriod;    %%!!

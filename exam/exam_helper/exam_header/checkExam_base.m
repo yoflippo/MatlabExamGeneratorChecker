@@ -1,5 +1,5 @@
 %% ASSUME THIS FILE IS WITHIN THE EXAM DIRECTORY
-function [grades] = checkExam()
+% function [grades] = checkExam()
 clear variables
 clc
 load('Workspace.mat')
@@ -28,7 +28,7 @@ ap.SUBMITTEDCHECKED = fullfile(pwd,'submitted_checked');
 mkdirIf(ap.SUBMITTEDCHECKED);
 
 if exist(ap.SUBMITTEDUNZIPPED,'dir')
-    if ~exist(fullfile(ap.Submitted,'checkSubmittedExam.mat'),'file');
+    if ~exist(fullfile(ap.Submitted,'checkSubmittedExam.mat'),'file')
         removeShitFromDir(ap.Submitted);
         movefiles(ap.SUBMITTEDUNZIPPED,ap.Submitted)
     end
@@ -44,6 +44,7 @@ clc
 
 %% Unzip every exam
 grades = checkSubmittedExams(sAssigned,ap);
+
 % Descriptives
 PercentagePassed = sum(grades(:,2)>=5.5)/length(grades(:,2))
 AverageGrade = mean(grades(:,2))
@@ -62,7 +63,8 @@ strDescriptive(length(strDescriptive)+1,1) = "In het geval dit het tentamen betr
 strGrades = string(num2str(grades))
 strGrades = [strDescriptive; strGrades]
 writetxtfile(fullfile(ap.Submitted,'cijfers.txt'),strGrades)
-
+analyse_exam(fullfile(ap.Submitted,'resultOverview.mat'),nOfMulChoiceAssignment)
+cd(ap.CurrExam)
 %% Finally, Clean up
 disp('Finally, Clean up');
 warning off

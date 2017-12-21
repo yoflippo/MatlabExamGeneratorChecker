@@ -112,7 +112,7 @@ for nd = 1:nex
         end
     end
 end
-
+save('resultOverview.mat','resultOverview')
 save('grades.mat','grades');
 end
 

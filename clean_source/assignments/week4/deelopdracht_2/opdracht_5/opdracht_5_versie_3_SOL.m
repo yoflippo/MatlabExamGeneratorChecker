@@ -106,7 +106,7 @@ for i =1:numsteps+1
 end
 
 % hier pak je het 4de element van de eerste rij van T1 
-derdeElementT1 = T1(1,4)          %%!!
+derdeElementT1 = T1(1,4);          %%!!
 
 %  De animatie plotten
 figure('units','normalized','outerposition',[0 0 1 1],'Name', ' Rocker Animation ');

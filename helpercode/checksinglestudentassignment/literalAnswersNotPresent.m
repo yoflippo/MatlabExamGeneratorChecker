@@ -63,7 +63,7 @@ for nLa = 1:length(literalsA)
             % Test for a generated file! Could also be done by testing for Hash
             if ~contains(apStudentSol,'versie')
                 %                 WriteToLastLineOfFile(apStudentSol,['% Mag niet in de code zitten: ' literalsA{nLa}]);
-                mss = ['% De onderstaande regel(s) voldoe(t)(n) niet aan de opdracht: ']
+                mss = ['% De onderstaande regel(s) voldoe(t)(n) niet aan de opdracht: '];
                 if isempty(lnStr)
                     for n = 1:length(lnStrR)
                         mss = [mss newline char(34) '% ' txtclean{lnStrR(n)} char(34)];
@@ -104,7 +104,7 @@ try
         end
     end
 catch err
-    keyboard
+%     keyboard
     if ~contains(apStudentSol,'versie')
         errTxt = ['% Er zit waarschijnlijk een fout in functie opbouw... '];
         %                     keyboard
@@ -118,7 +118,7 @@ function blFound = findArgAssignment(txt,searchString)
 blFound = false;
 try
     % %     fndStrings = regexp(txt,['(?<!\.)\<' searchString '\>(?!\.)[ =]']); %regexp('demon= demo = _demo= kdemon= demo= demo ==','(?<!\.)\<demo\>(?!\.)[ =]')
-    tst = contains(txt,searchString) & ~contains(txt,[searchString '='])
+    tst = contains(txt,searchString) & ~contains(txt,[searchString '=']);
     if any(tst)
         blFound = true;
     end

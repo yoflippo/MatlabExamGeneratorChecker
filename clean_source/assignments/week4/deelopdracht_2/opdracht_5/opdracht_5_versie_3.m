@@ -105,7 +105,7 @@ for i =1:numsteps+1
 end
 
 % hier pak je het 4de element van de eerste rij van T1 
-derdeElementT1 = T1(4,2)          
+derdeElementT1 = T1(4,2);          
        
 
 %  De animatie plotten
