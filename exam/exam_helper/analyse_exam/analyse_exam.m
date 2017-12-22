@@ -1,4 +1,4 @@
-function [ output_args ] = analyse_exam( apMatResultOverview,numMC )
+function analyse_exam( apMatResultOverview,numMC,nmExam)
 
 mkdir('ExamAnalysis');
 cd('ExamAnalysis');
@@ -13,10 +13,11 @@ res = resultOverview(2:end,~all(cellfun(@isempty,resultOverview)));
 % remove student numbers
 res = res(:,2:end);
 desstat.pointsPerQ = cell2mat(res(1,:));
+desstat.totalPoints = sum(desstat.pointsPerQ);
+
 res = res(2:end,:);
 resProc = cell2mat(res);
-[l w] = size(resProc);
-resPoint = resProc;
+[l, w] = size(resProc);
 
 %% Get descriptive information about the question
 for nw = 1:w
@@ -30,17 +31,19 @@ end
 
 %% Get descriptive information about the student results
 for nl = 1:l
-    desstat.totPoints(nl,1) = sum(desstat.resPoint(nl,:))
+    desstat.totPoints(nl,1) = sum(desstat.resPoint(nl,:));
 end
 
 for nl = 1:nw
     desstat.cr(nl) = min(min(abs(corrcoef(desstat.resPoint(:,nl),desstat.totPoints))));
 end
 
+desstat.percentageCorrect =  repmat(mean(desstat.totPoints)/desstat.totalPoints,1,w);
+
 tQ{1} = 1:numMC;
 tQ{2} = numMC+1:w;
-nmQ{1} = 'MultipleChoice';
-nmQ{2} = 'Programming Assignments';
+nmQ{1} = ['MultipleChoice ' replace(nmExam,'_',' ') ];
+nmQ{2} = ['Programming Assignments ' replace(nmExam,'_',' ')];
 for n = 1:2
     t = tQ{n};
     figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1]);
@@ -50,15 +53,16 @@ for n = 1:2
     plot(desstat.stdQ(t),'LineWidth',2)
     plot(relPoints,'LineWidth',2)
     plot(desstat.cr(t),'LineWidth',2)
-    xlabel('Questions')
-    title(['Normalised ' nmQ{n}])
-    legend('Mean','Standard Deviation','Weight Question','RIT')
+    plot(desstat.percentageCorrect(t),'LineWidth',2)
+    xlabel('Questions');
+    title(['Normalised ' nmQ{n} ' (n=' num2str(l) ')']);
+    legend('Mean','Standard Deviation','Weight Question','RIT','Percentage correct answers');
     grid on; grid minor;
-    saveas(gcf,[nmQ{n} '.png'])
-    saveas(gcf,[nmQ{n} '.svg'])
+    saveas(gcf,[nmQ{n} '.png']);
+    saveas(gcf,[nmQ{n} '.svg']);
     savefig([nmQ{n} '.fig']);
 end
-save('analysisdata.mat')
+save('analysisdata.mat');
 
 
 end%f

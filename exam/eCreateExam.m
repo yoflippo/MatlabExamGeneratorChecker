@@ -94,6 +94,7 @@ cd(ap.CurrExam)
 nmFinalExamFolder = 'ToetsBiostaticaMatlab';
 mkdirIf(nmFinalExamFolder)
 cd(nmFinalExamFolder)
+ap.TheExamDir = pwd;
 ap.CurrZipFile = fullfile(ap.CurrExam,[nm.CurrExamDir '.zip']);
 ap.CurrZipFinalFile = fullfile(pwd,[nm.CurrExamDir '.zip']);
 % zip(ap.CurrZipFile,ap.ExamSrcDir);

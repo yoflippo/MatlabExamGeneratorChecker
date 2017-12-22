@@ -27,7 +27,6 @@ else
                 load(matfiles(n).name);
                 bonusgrades{n} = studentMatrix;
             end
-            
             % Calculate bonusgrade to add to examgrade
             for len = 1:length(bonusgrades{1,1})
                 bonus{len,1} = bonusgrades{1,1}(len,1);
@@ -47,7 +46,11 @@ else
     %% Walk through unzipped folders
     nex = length(oDirs);
     tmp = {examInfo.apQ};
+    try
+    % Remove empty cells
     tmp{1,cellfun(@isempty,tmp)}='';
+    catch
+    end
     resultOverview = [cell(1,1) tmp];
     resultOverview = [resultOverview; ['Point for each assignment' {examInfo.points}]];
     clear tmp;
