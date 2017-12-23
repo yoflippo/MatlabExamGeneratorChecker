@@ -15,4 +15,5 @@ addpath(genpath(fullfile('..','Databestanden')))
 data = load('herrefaber.txt');
 
 hoeken = data(2,:);
-plot(hoeken,sin(data(2,:)))
+sinusHoeken = sin(data(2,:));
+plot(hoeken,sinusHoeken)

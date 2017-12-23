@@ -15,5 +15,9 @@
 %       vermindering van het te verdienen aantal punten als gevolg hebben.
 % 5 -   Door jou geschreven commentaar regels (met %% of %) worden niet
 %       door ons gelezen of gebruikt. 
+% 6 -   Matlab is case-sensitive. De variabelen: 'aa', 'aA', 'Aa' en 'AA' 
+%       zijn allemaal verschillend. Let dus goed op!
+% 7 -   Als je programma een eeuwige-lus bevat (lees: nooit stopt met
+%       uitvoeren) krijg je GEEN punten.
 % 
 % Opdrachtbeschrijving:

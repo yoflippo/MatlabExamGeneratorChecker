@@ -2,12 +2,12 @@ function res = opdracht_1_versie_3_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % addpath(genpath(fullfile('.','Databestanden')))
+% % % % % % addpath(genpath(fullfile('..','Databestanden')))
 % % % % % % data = load('herrefaber.txt');
 % % % % % % 
-% % % % % % % De oplossing:
 % % % % % % hoeken = data(2,:);
-% % % % % % plot(hoeken,sin(data(2,:)))
+% % % % % % sinusHoeken = sin(data(2,:));
+% % % % % % plot(hoeken,sinusHoeken)
 %%==========
 
 
@@ -15,8 +15,8 @@ function res = opdracht_1_versie_3_CHECK(apStudentSol)
 
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
-checkingVar.nameVars = {'hoeken'};
-checkingVar.literalsP = {'plot(hoeken,' 1 'sin(' 1 'plot(hoeken,' 1};
+checkingVar.nameVars = {'hoeken' 'sinusHoeken'};
+checkingVar.literalsP = {'plot(hoeken,' 1 'sin(' 1 'sinusHoeken)' 1};
 checkingVar.literalsA = {'NaN' 3};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
