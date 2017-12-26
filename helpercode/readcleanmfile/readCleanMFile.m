@@ -58,11 +58,15 @@ if nargin == 1
     apDes = varargin{1};
     blMakeCopy = false;
     blNoSpaces = false;
+    blUpper = false;
+    blMC = false;
 else
     % Create variables that need to be filled
     apDes = [];
     blMakeCopy = false;
     blNoSpaces = false;
+    blUpper = false;
+    blMC = false;
     oNospaces = [];
     
     for narg = 1:nargin
@@ -73,6 +77,12 @@ else
             case {'-MAKECOPY', '-MC', 'MC'}
                 blMakeCopy = true;
             case {'-NS', '-NOSPACES', 'NS'}
+                blNoSpaces = true;
+            case {'-UPPER', 'UPPER'}
+                blUpper = true;
+            case {'-MULCHOICE'}
+                blMC = true;
+                blUpper = true;
                 blNoSpaces = true;
             otherwise
                 % Do nothing in the case of varargin{narg+1};
@@ -85,32 +95,75 @@ else
 end
 
 %% Make copy so original file is kept intact
-apCopy = replace(apDes,'.m','_COPY.m');
-copyfile(apDes,apCopy);
-fclose('all');
-
+blMadeCopy = false;
+if ~blMC
+    apCopy = replace(apDes,'.m','_COPY.m');
+    copyfile(apDes,apCopy);
+    blMadeCopy = true;
+    fclose('all');
+else
+    apCopy = apDes;
+end
 
 %% Clean up!
-removeCommentsAndEmptyLines(apCopy);
+try
+    delimiter = {'\n'};
+    formatSpec = '%s';
+    fileID = fopen(apCopy,'r');
+    txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
+        'TextType', 'string',  'ReturnOnError', false);
+    fclose('all');
+    txt = txt{1,1};
+catch err
+    error([mfilename ': Could not read the file: ' err.message]);
+end
+
+%% Remove comments
+for nL = 1:length(txt)
+    if contains(txt(nL),'%')
+        txt(nL) = extractBefore(txt(nL),'%');
+    end
+end
+
+%% Remove trailling space
+txt = deblank(txt);
+% Remove empty lines
+txt(all(txt=="",2),:)=[];
+
+%% Remove 'clear' variants
+txt = strrep(txt,'clear','%clear');
+txt = strrep(txt,'input(','%input(');
 
 %% Remove spaces do not change file
 if blNoSpaces
-    oNospaces = nospaces(apCopy);
+    if ~isempty(txt) && isequal(txt{1},-1)
+        txt = [];
+    else
+        txt = strrep(txt,' ','');
+    end
 end
 
-%% Give to output
-oCopy = addSemiColons(apCopy);
-
-%% check if oCopy contains -1
-if ~isempty(oCopy) && isequal(oCopy{1},-1)
-   oCopy = []; 
+%% Make upper
+if blUpper
+    txt = upper(txt);
 end
+
+if ~blMC
+    %% Add semicolons should they be forgotten
+    writetxtfile(apCopy,txt);
+    oCopy = addSemiColons(apCopy);
+else
+    oCopy = txt;
+end
+
 
 if blMakeCopy
     oApCopy = apCopy;
 else
     oApCopy = [];
-    delete(apCopy);
+    if blMadeCopy
+        delete(apCopy);
+    end
 end
 
 end %function

@@ -4,4 +4,4 @@ cd(apThisFile);
 
 matfile = dirmf('.mat');
 
-analyse_exam(fullfile(matfile.folder,matfile.name),40)
+analyse_exam(fullfile(matfile.folder,matfile.name),40,'test')

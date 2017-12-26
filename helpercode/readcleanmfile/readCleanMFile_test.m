@@ -78,3 +78,20 @@ else
 end
 % % % % assert(~all(ismember(NOSPACES,' ')));
 toc
+
+%% TEST: UPPER
+apData = fullfile(pathThisFile,testData{1});
+copyfile(apData,apDataCopy);
+fclose('all');
+clear TXTFILE;
+[TXTFILE a NOSPACES] = readCleanMFile('-ap',apDataCopy,'-mc','-ns','-upper');
+delete(apDataCopy);
+apCopiedFile = replace(apDataCopy,'.m','_COPY.m');
+if exist(apCopiedFile)
+    delete(apCopiedFile);
+    assert(true)
+else
+    assert(false)
+end
+% % % % assert(~all(ismember(NOSPACES,' ')));
+toc

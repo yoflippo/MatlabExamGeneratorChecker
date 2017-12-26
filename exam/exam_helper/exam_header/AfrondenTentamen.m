@@ -203,6 +203,16 @@ newline = sprintf('\r\n'); %Matlab 2014 does not have the newline command
 apThisFile = fileparts(mfilename('fullpath'));
 cd(apThisFile)
 clc;
+
+txtInput = 'Ben je HELEMAAL klaar met het tentamen? JA: geef een 1 en druk op Enter, NEE: druk op ENTER): ';
+tmp1 = input(txtInput);
+if isempty(tmp1) || ~isequal(tmp1,1)
+    warning on
+    warning([newline 'Maak eerst heel het tentamen af! Gestopt met het uitvoeren van ' mfilename '.m' newline]);
+    return;
+end
+clc
+
 snumber = input('Geef hier je studentnummer: ');
 while numel(num2str(snumber)) < 8 | numel(num2str(snumber)) > 8
     if numel(num2str(snumber)) < 8
@@ -214,8 +224,8 @@ while numel(num2str(snumber)) < 8 | numel(num2str(snumber)) > 8
     end
 end
 
-txtInput = 'Heb je jouw studentennummer correct ingevoerd? Ja = 1, Anders = 0, Druk daarna op Enter): ';
-while isempty(input(txtInput ))
+txtInput = 'Heb je jouw studentennummer correct ingevoerd? JA: geef een 1 en druk op Enter, NEE: druk op ENTER): ';
+while isempty(input(txtInput))
     snumber = input('Geef hier opnieuw je studentnummer: ');
     if numel(num2str(snumber)) < 8
         warning('Je hebt te weinig cijfers opgegeven!');

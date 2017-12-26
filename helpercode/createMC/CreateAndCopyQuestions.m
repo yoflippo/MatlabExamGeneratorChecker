@@ -274,7 +274,7 @@ for nw = 1:length(weekNames)
         apAss = fullfile(GetPathOneLevelUp(apOfCleanSource),'assignments',weekNames{nw},cleanMcFolders{nMCF});
         removeShitFromDir(apAss);
         copyfiles(fullfile(apCurrDir,cleanMcFolders{nMCF}),apAss);
-        disp([mfilename ': week ' num2str(nw) ',copied ' num2str(round(nMCF/length(cleanMcFolders),1)*100) '% of the files'])
+        disp([mfilename ': ' weekNames{nw} ',copied ' num2str(round(nMCF/length(cleanMcFolders),1)*100) '% of the files'])
     end
 end
 cd ..;

@@ -1,5 +1,5 @@
 function analyse_exam( apMatResultOverview,numMC,nmExam)
-
+close all;
 mkdir('ExamAnalysis');
 cd('ExamAnalysis');
 try
@@ -35,7 +35,7 @@ for nl = 1:l
 end
 
 for nl = 1:nw
-    desstat.cr(nl) = min(min(abs(corrcoef(desstat.resPoint(:,nl),desstat.totPoints))));
+    desstat.RIT(nl) = min(min(corrcoef(desstat.resPoint(:,nl),desstat.totPoints)));
 end
 
 desstat.percentageCorrect =  repmat(mean(desstat.totPoints)/desstat.totalPoints,1,w);
@@ -52,11 +52,20 @@ for n = 1:2
     hold on;
     plot(desstat.stdQ(t),'LineWidth',2)
     plot(relPoints,'LineWidth',2)
-    plot(desstat.cr(t),'LineWidth',2)
+    plot(desstat.RIT(t),'LineWidth',2)
     plot(desstat.percentageCorrect(t),'LineWidth',2)
-    xlabel('Questions');
+    %% Illustrate meaningfull RIT values
+    ritBor = 0.2;
+    for nr = 1:length(tQ{n})
+        if ( (desstat.meanQ(tQ{n}(nr)) > ritBor)  && (desstat.meanQ(tQ{n}(nr)) < (1-ritBor)) ) && ...
+           ( (desstat.RIT(tQ{n}(nr)) < ritBor)  ) || ( (desstat.RIT(tQ{n}(nr)) < ritBor)     )
+            plot(nr,desstat.RIT(tQ{n}(nr)),'ro','LineWidth',2);
+        end
+    end
+    
+    xlabel('Question');
     title(['Normalised ' nmQ{n} ' (n=' num2str(l) ')']);
-    legend('Mean','Standard Deviation','Weight Question','RIT','Percentage correct answers');
+    legend('Mean result','Standard Deviation','Weight Question','RIT','Percentage correct answers','Need to Check Question','Location','best');
     grid on; grid minor;
     saveas(gcf,[nmQ{n} '.png']);
     saveas(gcf,[nmQ{n} '.svg']);

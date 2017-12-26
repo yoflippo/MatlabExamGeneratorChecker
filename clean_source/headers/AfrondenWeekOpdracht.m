@@ -270,6 +270,16 @@ try
 catch
     error(['Het bestand ''studentnummer.m'' niet gevonden!!'   sprintf('\r\n') 'Als je de bestanden en folderstructuur niet intact laat krijg je geen punten voor de week eindopdracht'  sprintf('\r\n') 'Zorg eerst dat je alles netjes hebt hersteld!'] );
 end
+
+txtInput = 'Ben je helemaal klaar met de weekopdrachten? JA: geef een 1 en druk op Enter, NEE: druk op ENTER): ';
+tmp1 = input(txtInput);
+if isempty(tmp1) || ~isequal(tmp1,1)
+   disp(['Gestopt met uitvoeren van ' mfilename]);
+   return;
+end
+clc
+
+
 % Go to upper folder (the week folder)
 cd ..
 % Message to student

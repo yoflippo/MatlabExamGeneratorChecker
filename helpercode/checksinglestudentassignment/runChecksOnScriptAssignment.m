@@ -39,7 +39,7 @@ function [res,num] = runChecksOnScriptAssignment(callerName, checkingVar, apStud
 res = 0;
 
 % Creates a copy with cleaned code
-[txtCleanedStudentSolution, apCleaned] = readCleanMFile('-ap',apStudentSol,'mc');
+[txtCleanedStudentSolution, apCleaned] = readCleanMFile('-ap',apStudentSol,'-makecopy');
 
 if ~isempty(char(txtCleanedStudentSolution))
     
