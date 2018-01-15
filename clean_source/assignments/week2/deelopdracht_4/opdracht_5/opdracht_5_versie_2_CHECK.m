@@ -27,7 +27,7 @@ checkingVar.testFunctionInput = {{'XaX','XaX'} {'XXXXXYYYYYZ','XXXXXYYYYYZ'}  {'
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'strlength(AA)' 1 'strlength(B)' 1 'D = B' 1 'CC = AA' 1 'B' 3 'D' 3};
+checkingVar.literalsP = {'length(AA)' 1 'length(B)' 1 'D = B' 1 'CC = AA' 1 'B' 3 'D' 3};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3};
@@ -36,7 +36,7 @@ checkingVar.literalsA = {'NaN' 3};
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
 % THE REVERSED CASE:             '10+2' or  '100+vector1'
 checkingVar.literalsR = {};
-checkingVar.literalsO = {{'strlength(B) < 8' '8 > strlength(B)'} {'strlength(AA) > 8' '8 < strlength(AA)'}};
+checkingVar.literalsO = {{'length(B) < 8' '8 > length(B)'} {'length(AA) > 8' '8 < length(AA)'}};
 checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

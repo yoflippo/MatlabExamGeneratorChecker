@@ -17,7 +17,7 @@ checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
 checkingVar.literalsSL = {};
-
+checkingVar.NoLiteralsA = true;
 
 %% Commence the TESTING !!!
 res = 0;

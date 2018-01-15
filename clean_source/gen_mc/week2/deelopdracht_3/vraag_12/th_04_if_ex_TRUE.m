@@ -3,7 +3,7 @@ De code in de if-statement wordt uitgevoerd:
 ======= Code =======
 
 if true
-    % code
+    2+2;
 end
 
 ======= Code =======

@@ -3,9 +3,9 @@ clc;
 currPath = pwd;
 
 %% This file checks the SOL/CHECK/empty files in the current folder.
-typeOfAssFiles1 = dirmf('Multiplechoice');
+% typeOfAssFiles1 = dirmf('Multiplechoice');
 typeOfAssFiles = dirmf('Make');
-typeOfAssFiles = [typeOfAssFiles1; typeOfAssFiles]
+% typeOfAssFiles = [typeOfAssFiles1; typeOfAssFiles]
 
 tic
 for i = 1:length(typeOfAssFiles)

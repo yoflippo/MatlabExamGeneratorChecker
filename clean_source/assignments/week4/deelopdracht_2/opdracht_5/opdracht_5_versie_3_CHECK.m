@@ -18,7 +18,7 @@ checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
-
+checkingVar.NoLiteralsA = true;
 %% Commence the TESTING !!!
 res = 0;
 res = runChecksOnFunctionAssignment(mfilename,checkingVar,apStudentSol);

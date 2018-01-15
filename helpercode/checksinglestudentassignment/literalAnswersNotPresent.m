@@ -92,7 +92,7 @@ try
         
         for nI = 1:length(inputs)
             toFind = [inputs{nI} '='];
-            if findArgAssignment(txtns,toFind) && ~isequal(inputs,{''})
+            if ~isequal(inputs,{''}) && findArgAssignment(txtns,toFind)
                 nAbs = nAbs + numTimes;
                 % Test for a generated file! Could also be done by testing for Hash
                 if ~contains(apStudentSol,'versie')
@@ -114,12 +114,24 @@ end
 
 end%function
 
+% % % % % % function blFound = findArgAssignment(txt,searchString)
+% % % % % % blFound = false;
+% % % % % % try
+% % % % % %     % %     fndStrings = regexp(txt,['(?<!\.)\<' searchString '\>(?!\.)[ =]']); %regexp('demon= demo = _demo= kdemon= demo= demo ==','(?<!\.)\<demo\>(?!\.)[ =]')
+% % % % % %     tst = contains(txt,searchString) & ~contains(txt,[searchString '=']);
+% % % % % %     if any(tst)
+% % % % % %         blFound = true;
+% % % % % %     end
+% % % % % % catch err
+% % % % % %     error([mfilename ', ' newline err.message newline]);
+% % % % % % end
+
 function blFound = findArgAssignment(txt,searchString)
 blFound = false;
 try
-    % %     fndStrings = regexp(txt,['(?<!\.)\<' searchString '\>(?!\.)[ =]']); %regexp('demon= demo = _demo= kdemon= demo= demo ==','(?<!\.)\<demo\>(?!\.)[ =]')
-    tst = contains(txt,searchString) & ~contains(txt,[searchString '=']);
-    if any(tst)
+    txt1 = replace(txt,';',[';' newline]); % make sure every statement is on it own line
+    tst = regexp(txt1,searchString);
+    if any([tst{:}]==1)
         blFound = true;
     end
 catch err

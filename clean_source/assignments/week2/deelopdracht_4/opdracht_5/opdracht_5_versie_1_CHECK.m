@@ -26,7 +26,7 @@ checkingVar.testFunctionInput = {{'XaX','XaX'} {'XXXXXYYYYYZ','XXXXXYYYYYZ'}  {'
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'strlength(A)' 1 'strlength(B)' 1 'D = B' 1 'C = A' 1 'B' 3 'D' 3};
+checkingVar.literalsP = {'length(A)' 1 'length(B)' 1 'D = B' 1 'C = A' 1 'B' 3 'D' 3};
 % FILL literalsA, With strings that should not be present.
 % The numeric directly to the right represents the weight
 checkingVar.literalsA = {'NaN' 3};

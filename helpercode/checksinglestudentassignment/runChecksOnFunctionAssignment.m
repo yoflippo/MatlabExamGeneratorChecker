@@ -59,7 +59,12 @@ if ~isempty(char(txtCleanedStudentSolution))
     txtns = nospaces(apCleaned);
     
     %% Check for literal answers, CAN NOT BE PRESENT
-    nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol,txtCleanedStudentSolution);
+    try
+        checkingVar.NoLiteralsA;
+        nAbs = 0;
+    catch
+        nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol,txtCleanedStudentSolution);
+    end
     
     %% Handle situation if input / output is correct (regardless of code used)
     if resinput / length(data) == 1 && nAbs == 0
@@ -84,7 +89,7 @@ if ~isempty(char(txtCleanedStudentSolution))
         else
             res = (res-nAbs)/sm;
         end
-
+        
         if length(data) > 1
             if ~contains(apStudentSol,'versie')
                 WriteToLastLineOfFile(apStudentSol,'% De verwachte output is verkeerd. Je kunt nu nog maar maximaal 50% van het aantal punten verdienen.');
