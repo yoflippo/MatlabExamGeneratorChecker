@@ -82,6 +82,6 @@ zip(['Analysis_' nmExam '.zip'],ap.Analysis);
 disp('Finally, Clean up');
 warning off
 fclose('all');
-rmpath(genpath(ap.HELPERCODE));
-rmpath(genpath(ap.CurrExam));
+% % % rmpath(genpath(ap.HELPERCODE));
+% % % rmpath(genpath(ap.CurrExam));
 warning on

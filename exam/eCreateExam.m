@@ -3,7 +3,7 @@
 % the old. The scripts used in creating the exam are decoupled of the base
 % scripts. However, this does not mean that the helpercode is not used.
 
-clear all
+clear all; close all;
 nOfMulChoiceAssignment = 40;
 nOfScriptsFunctions = 19;
 weekNames = {'week1' 'week2' 'week3' 'week4'}; 
@@ -34,9 +34,9 @@ ap.ExamSrcDir = fullfile(ap.CurrExam,nm.Exam);
 mkdirIf(fullfile(ap.CurrExam,'bonus'));
 ap.SUBMITTEDUNZIPPED = fullfile(ap.CurrExam,'submitted_unzipped');
 mkdirIf(ap.SUBMITTEDUNZIPPED);
-rmpath(genpath(ap.EXAMHELPERHEADER));
+% rmpath(genpath(ap.EXAMHELPERHEADER));
 % Copy the check exam script
-copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,['_' nm.CurrExamDir]))
+copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,'checkExam.m'))
 
 %% Some log settings
 diary(fullfile(ap.CurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
@@ -102,7 +102,8 @@ zip(ap.CurrZipFinalFile,ap.ExamSrcDir);
 cd(ap.CurrExam)
 
 %% Check the zip-files in folder submitted
-copyfile(ap.CurrZipFile,ap.Submitted);
+% % copyfile(ap.CurrZipFile,ap.Submitted);
+copyfile(ap.CurrZipFinalFile,ap.Submitted);
 
 % NOTE: IETS DOEN AAN MOGELIJK VALSPELEN DOORDAT STUDENTEN KOPIEEN TOEVOEGEN
 % OPLOSSING, 
@@ -115,7 +116,7 @@ generateTestExams(ap.CurrExam);
 cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams'),ap.SUBMITTEDUNZIPPED);
-grades = checkExam();
+checkExam; close all;
 if mean(grades(:,2)) > 1
     error('The exam grade should be 1')
 else
@@ -127,7 +128,8 @@ cd ..
 cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams_SOL'),ap.SUBMITTEDUNZIPPED);
-grades = checkExam();
+% % % grades = checkExam();
+checkExam; close all;
 if mean(grades(:,2)) < 10
     error('The exam grade should be a TEN!!')
 else
@@ -137,7 +139,7 @@ cd ..
 
 %% Make a backup
 cd(ap.BASEFOLDER)
-dos(['start WinRaR a -r -m5 -mt16 ' [ap.BASEFOLDER '_BU'] filesep datetimetxt() 'beforeExam ' pwd filesep '*.*'])
+dos(['start WinRaR a -r -m5 -mt16 ' fullfile(ap.BASEFOLDEREX,'Created') filesep datetimetxt() 'beforeExam ' ap.CurrExam filesep '*.*'])
 
 %% Finally, Clean up
 disp('Finally, Clean up');
