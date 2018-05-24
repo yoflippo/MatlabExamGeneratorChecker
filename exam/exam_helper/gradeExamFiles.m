@@ -78,6 +78,8 @@ end
 function handleGradeErr(res,err,apStudentSol,apSOL)
 result = round(res,1)*100;
 keyboard %THIS FUNCTION NEEDS TO BE CHECKED!!
+open(apSOL)
+open(apStudentSol)
 if res < 1
     [pth, name, ext] = fileparts(apStudentSol);
     answerFile = replace([name ext],'.m','_UITWERKING.m');

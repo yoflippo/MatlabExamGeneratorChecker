@@ -21,7 +21,8 @@ addpath(genpath(ap.HELPERCODE));
 
 %% Make a dir of this exam, with some extra directories, create some handy variables
 nm.Exam = 'Tentamen';
-nm.CurrExamDir = [nm.Exam '_' datetimetxt() ];
+nm.CDate = datetimetxt();
+nm.CurrExamDir = [nm.Exam '_' nm.CDate];
 ap.CurrExam = fullfile(ap.BASEFOLDEREX,'Created',nm.CurrExamDir);
 mkdirIf(ap.CurrExam);
 ap.Submitted = fullfile(ap.CurrExam,'submitted');
@@ -36,7 +37,8 @@ ap.SUBMITTEDUNZIPPED = fullfile(ap.CurrExam,'submitted_unzipped');
 mkdirIf(ap.SUBMITTEDUNZIPPED);
 % rmpath(genpath(ap.EXAMHELPERHEADER));
 % Copy the check exam script
-copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,'checkExam.m'))
+copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,['checkExam_' nm.CDate '.m']))
+copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurExam,'SendCHECKED_' nm.CDate '.m'))
 
 %% Some log settings
 diary(fullfile(ap.CurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));

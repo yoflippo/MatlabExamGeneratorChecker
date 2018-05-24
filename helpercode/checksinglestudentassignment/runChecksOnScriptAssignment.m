@@ -84,12 +84,11 @@ if ~isempty(char(txtCleanedStudentSolution))
         % % % % %         end
         if length(num.nameVars) > 1
             if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,'% De verwachte output is verkeerd. Je kunt nu nog maar maximaal 50% van het aantal punten verdienen.');
+                WriteToLastLineOfFile(apStudentSol,'% De verwachte output is verkeerd.');
             end
-            res = res/2;
+            res = res/1.5;
         end
     end
-    
     
     if res < 0
         warning('result is too low!')

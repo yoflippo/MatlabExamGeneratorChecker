@@ -1,22 +1,23 @@
 %https://nl.mathworks.com/matlabcentral/answers/94446-can-i-send-e-mail-through-matlab-using-microsoft-outlook
 clear all;
-InitAll
+load('Workspace.mat')
+apCheckExam = fileparts(mfilename('fullpath'));
+cd(apCheckExam);
+addpath(genpath(apCheckExam))
+addpath(genpath(ap.EXAMHELPER));
+addpath(genpath(ap.HELPERCODE));
 
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','E_mail','opleidingbewegingstechnologie@gmail.com');
 setpref('Internet','SMTP_Username','opleidingbewegingstechnologie@gmail.com');
-setpref('Internet','SMTP_Password','btokee2btokee');
+password = input('Geef het wachtwoord:','s');
+setpref('Internet','SMTP_Password',password);
 props = java.lang.System.getProperties;
 props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-studentNumbers = load(fullfile('studentnumbers','studentnumbers.txt'))
-strStudentNumbers = string(num2str(studentNumbers));
-
 nmDirSend = 'submitted_checked_send';
-cd(con.BASEFOLDER);
-cd('exam');
 
 %% Recover earlier saved studentnumbers to prevent multiple e-mail to same student
 try
@@ -39,7 +40,8 @@ chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];
 
-%% Make dir send
+%% Get files to send
+cd('submitted_checked')
 zips = dirmf('Checked');
 nSendMails = 0;
 nMailsToSend = length(zips);
@@ -50,23 +52,15 @@ for nZ = 1:nMailsToSend
         try
             cd(zips(nZ).folder);
             rpSendFolder=fullfile('..',nmDirSend);
-            mkdirIf(rpSendFolder);
-            
+            mkdirIf(rpSendFolder);   
             %% extract student numbers
-            sNum = findStudentNumberInTxt(zips(nZ).name);
-            indices = contains(strStudentNumbers,sNum);
-            if any(indices)
-                %% construct emailadres
-                sEma = [sNum '@student.hhs.nl']
-                sAtt = fullfile(zips(nZ).folder,zips(nZ).name);
-                sendmail(sEma,'Biostatica Matlab: nagekeken tentamen ',chr,sAtt);
-                % Remove studentnumber from list
-                strStudentNumbers = strStudentNumbers(not(indices))
-                movefile(sAtt,rpSendFolder);
-                clc
-            else
-                error([mfilename ': Something is wrong, student has submitted that is not in the list']);
-            end
+            sNum = findStudentNumberInTxt(zips(nZ).name);        
+            %% construct emailadres
+            sEma = [sNum '@student.hhs.nl']
+            sAtt = fullfile(zips(nZ).folder,zips(nZ).name);
+            sendmail(sEma,'Biostatica Matlab: nagekeken tentamen ',chr,sAtt);
+            movefile(sAtt,rpSendFolder);
+            clc
         catch
             save('strStudentNumbers.mat','strStudentNumbers')
             error([mfilename ': sending of Checked e-mails stopped...']);
@@ -75,4 +69,12 @@ for nZ = 1:nMailsToSend
         disp(['Send mails: ' num2str(nSendMails)]);
     end
 end
-cd(con.BASEFOLDER)
+cd(apCheckExam);
+apExc = uigetfile({'*.*'},'Selecteer Osiris export bgestand');
+nmGradesMat = 'grades.mat';
+apGradesMat = dirmf(nmGradesMat);
+WriteResultsToExcel(apExc,fullfile(apGradesMat.folder,nmGradesMat));
+
+rmpath(genpath(apCheckExam))
+rmpath(genpath(ap.EXAMHELPER));
+rmpath(genpath(ap.HELPERCODE));

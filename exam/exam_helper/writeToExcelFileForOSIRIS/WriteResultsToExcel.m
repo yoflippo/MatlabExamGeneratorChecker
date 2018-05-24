@@ -8,10 +8,10 @@ if ~exist(apMatGrades,'file')
 end
 
 [~,excelData,~]=xlsread(apExcel);
-[le, we] = size(excelData);
-if ~isequal(we,3)
-    error([newline mfilename ': ' newline 'Excel file does not have correct size' newline]);
-end
+% [le, we] = size(excelData);
+% if ~isequal(we,3)
+%     error([newline mfilename ': ' newline 'Excel file does not have correct size' newline]);
+% end
 
 load(apMatGrades)
 if ~exist('grades','var')
@@ -19,11 +19,11 @@ if ~exist('grades','var')
 end
 strGrades = string(grades);
 filler = 'NA';
-matrix = excelData(:,2);
+matrix = excelData(9:end,4);
 txtVariant = "";
 for ng = 1:length(strGrades)
     studNum = strGrades(ng,1); studGra = char(strGrades(ng,2));
-    row = find(contains(excelData,studNum)==1);
+    row = find(contains(excelData,studNum)==1)-8;
     if isempty(row)
         keyboard % Student does not exist!
         txtVariant = [txtVariant; string(sprintf('%s\t%s',studNum,studGra))];
@@ -37,20 +37,30 @@ for ng = 1:length(strGrades)
 end
 
 % Fill the remaining empty cells
-for n = 2:length(matrix)
+for n = 1:length(matrix)
     if isempty(matrix{n})
         matrix{n} = filler;
     end 
 end
+excelData = [excelData(:,1:3) [{excelData{1:8,4}}';matrix] excelData(:,5:end)];
 
-indEmpty = contains(matrix,filler);
-otherStudents = excelData(indEmpty,1);
-for n = 1:length(otherStudents)
-   txtVariant = [txtVariant; string(sprintf('%s\t%s',otherStudents{n},filler))] ;
+% Fill file with date
+datetime.setDefaultFormats('default','dd-MM-yyyy');
+ds = char(datetime)
+for n = 9:length(excelData)
+    if isempty(excelData{n,3})
+        excelData{n,3} = ds;
+    end 
 end
-txtVariant = txtVariant(find(txtVariant~=""));
-%% Write the files
-writetxtfile(replace(apExcel,'.xls','.txt'),txtVariant);
-xlswrite(apExcel,matrix,'Resultaat','B1')
+
+% indEmpty = contains(matrix,filler);
+% otherStudents = excelData(indEmpty,1);
+% for n = 1:length(otherStudents)
+%    txtVariant = [txtVariant; string(sprintf('%s\t%s',otherStudents{n},filler))] ;
+% end
+% txtVariant = txtVariant(find(txtVariant~=""));
+% %% Write the files
+% writetxtfile(replace(apExcel,'.xls','.txt'),txtVariant);
+xlswrite(apExcel,excelData,'Resultaat')
 end
 
