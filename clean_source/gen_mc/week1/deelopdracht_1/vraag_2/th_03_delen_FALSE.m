@@ -1,1 +1,0 @@
-Delen gaat in Matlab met de deel-operator: '%'

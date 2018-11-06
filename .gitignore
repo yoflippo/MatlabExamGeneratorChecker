@@ -10,16 +10,8 @@ assignments/week2/
 assignments/week3/
 assignments/week4/
 clean_source/gen_mc/
-clean_source/assignments/week1/deelopdracht_1/
-clean_source/assignments/week1/deelopdracht_3/
-clean_source/assignments/week2/deelopdracht_1/
-clean_source/assignments/week2/deelopdracht_3/
-clean_source/assignments/week3/deelopdracht_1/
-clean_source/assignments/week4/deelopdracht_3/
-clean_source/assignments/week4/deelopdracht_1/
 submitted_bu/
 *.zip
-clean_source/assignments/week3/deelopdracht_3/
 exam/exam_helper/analyse_exam/resultOverview.mat
 exam/exam_helper/analyse_exam/analysisdata.mat
 exam/exam_helper/analyse_exam/Untitled.fig

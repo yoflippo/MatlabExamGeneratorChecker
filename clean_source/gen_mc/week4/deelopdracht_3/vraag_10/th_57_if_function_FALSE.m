@@ -1,1 +1,0 @@
-Je hoeft een if-statement niet af te sluiten met 'end'.

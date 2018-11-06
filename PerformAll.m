@@ -1,12 +1,15 @@
+
+
+
+
 %% This files creates/checks every assignment and file
 clear all;
 dbstop if error
 global gWeekNames;
-Weeks = 4;  % Adjust me!!!
+Weeks = 1:4;  % Adjust me!!!
 cnt = 1;
 for nW = 1:length(Weeks)
-    gWeekNames{cnt,nW} = ['week' num2str(Weeks(nW))];
-    cnt = cnt +1 ;
+    gWeekNames{nW} = ['week' num2str(Weeks(nW))];
 end
 
 warning off

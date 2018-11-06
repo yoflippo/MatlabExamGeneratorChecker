@@ -1,1 +1,0 @@
-Een vector kan een rij of kolom aan getallen bevatten.

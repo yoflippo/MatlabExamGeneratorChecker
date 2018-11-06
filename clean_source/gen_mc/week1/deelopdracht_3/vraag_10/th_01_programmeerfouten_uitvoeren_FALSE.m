@@ -1,1 +1,0 @@
-Een met programmeerfouten kan niet worden uitgevoerd.

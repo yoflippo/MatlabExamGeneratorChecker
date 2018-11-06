@@ -1,1 +1,0 @@
-In Matlab is een string ook een vector.

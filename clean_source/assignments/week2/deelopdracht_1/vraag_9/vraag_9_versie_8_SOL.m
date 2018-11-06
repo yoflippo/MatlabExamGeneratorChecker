@@ -1,0 +1,18 @@
+%% Vraag 9
+%
+% Stelling 1:   Met een colon (:) maak je een nieuwe rij aan binnen
+%				een matrix.                                        
+%
+% Stelling 2:   Wanneer in de functie strcmp() de volgende statements
+%				worden ingevoerd:                                    
+%				                                                     
+%				S1 = 'Sporten';                                      
+%				S2='Sporten';                                        
+%				                                                     
+%				Geeft die functie als antwoord een 0.                
+%
+% A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
+% B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
+% C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
+% D : stelling 1 is WAAR      en stelling 2 is WAAR
+Antwoord = A;

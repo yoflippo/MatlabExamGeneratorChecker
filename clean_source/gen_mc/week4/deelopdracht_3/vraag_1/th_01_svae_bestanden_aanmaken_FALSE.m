@@ -1,1 +1,0 @@
-Met de functie load() kun je data-bestanden aanmaken.

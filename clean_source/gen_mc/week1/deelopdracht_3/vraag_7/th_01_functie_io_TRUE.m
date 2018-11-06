@@ -1,1 +1,0 @@
-Een functie kan meerdere input variabelen hebben (argumenten).

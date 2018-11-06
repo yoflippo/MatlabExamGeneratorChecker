@@ -1,0 +1,13 @@
+%% Vraag 2
+%
+% Stelling 1:   Je kan binnen een functie een andere functie aanroepen.
+%
+% Stelling 2:   Wanneer je meerdere output variabelen van een functie   
+%				wilt krijgen, gebruik je blokhaken: [] bij het aanroepen
+%				van deze functie.                                       
+%
+% A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
+% B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
+% C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
+% D : stelling 1 is WAAR      en stelling 2 is WAAR
+Antwoord = D;

@@ -1,23 +1,23 @@
 %TODO: first copy then adjust
 
 function CreateAndCopyQuestions(ap,weekNames)
-
-fclose('all');
-%% Get path of output folder and empty it
-apOfCleanSource = fullfile(ap.BASEFOLDER,'clean_source','gen_mc');
-cd(apOfCleanSource);
-
-outputDir = fullfile(apOfCleanSource,'generated_questions');
-removeShitFromDir(outputDir)
-if ~exist(outputDir,'dir')
-    mkdir(outputDir)
-end
+fclose('all'); %Close files that could be open
 
 %% Iterate over each available week
 for nWk = 1:length(weekNames)
-    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekNames{nWk}));
     
+    %% Get path of output folder for a certain week X and empty it
+    apOfCleanSource = fullfile(ap.BASEFOLDER,'clean_source','gen_mc');
+    cd(apOfCleanSource);
+    
+    outputDir = fullfile(apOfCleanSource,'generated_questions',weekNames{nWk});
+    removeShitFromDir(outputDir)
+    if ~exist(outputDir,'dir')
+        mkdir(outputDir)
+    end
+        
     %% Get absolute paths of theses files with there respective answers
+    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekNames{nWk}));
     theses = {zeros(1,length(folders))};
     TPA = theses;
     for nDirs = 1:length(folders)
@@ -41,21 +41,11 @@ for nWk = 1:length(weekNames)
     apTemplateCheck = fullfile(apOfCleanSource,'TemplateCheckMC.m');
     
     %% Copy folder of weekXXX and empty the folders to make a skeleton directory
-    apDesMC = fullfile(outputDir,weekNames{nWk});
+    apDesMC = outputDir;
     apSrcThesis = fullfile(apOfCleanSource,weekNames{nWk});
     copyfiles(apSrcThesis,apDesMC);
     % Remove the thesis files
     emptyDirRecursiveMFiles(apDesMC);
-    
-    %% Generate answers (could be made randomnly)
-    answerA = ReadLineOfFile(fullfile(apOfCleanSource,'mc_answer_0.m'));
-    answerA = ['% A : ' char(answerA)];
-    answerB = ReadLineOfFile(fullfile(apOfCleanSource,'mc_answer_1.m'));
-    answerB = ['% B : ' char(answerB)];
-    answerC = ReadLineOfFile(fullfile(apOfCleanSource,'mc_answer_2.m'));
-    answerC = ['% C : ' char(answerC)];
-    answerD = ReadLineOfFile(fullfile(apOfCleanSource,'mc_answer_3.m'));
-    answerD = ['% D : ' char(answerD)];
     
     %% Browse the subfolder of weekXXX
     for nDirs = 1:length(folders)
@@ -77,22 +67,12 @@ for nWk = 1:length(weekNames)
         fn = 'TypeOfAssignment_Multiplechoice.m';
         copyfile(fullfile(apOfCleanSource,fn),fullfile(absPathDestination,fn));
         
-        % Generate non-adjacent indices, adjacent indices have a high
-        % probability of containing questions with the same theme. Creating
-        % MC questions out of theses with the same theme is not what we
-        % want.
-        cnt = 1;
-        randomFileIndexes = zeros(1,numberOfThesesFiles^2);
-        for ind = 1:numberOfThesesFiles-2
-            for ind2 = ind+2:numberOfThesesFiles
-                randomFileIndexes(cnt) = ind; cnt = cnt + 1;
-                randomFileIndexes(cnt) = ind2; cnt = cnt + 1;
-            end
-        end
-        randomFileIndexes = randomFileIndexes(1:cnt-1);
+        % Generate thesisses in random order
+        randomFileIndexes = randperm(numberOfThesesFiles);
+        
         %% Combine to make one question
         % read header file line and give it the right question number
-        headerTxt = ReadLineOfFile(fullfile(apOfCleanSource,'mc_header.m'));
+        headerTxt = ReadLineOfFile(fullfile(apOfCleanSource,'th_header.m'));
         questionNumber = GetPathOneLevelUp(currentFilePath);
         questionNumber = extractAfter(questionNumber(end-3:end),'_');
         headerTxt = replace(headerTxt,'xxx',questionNumber);
@@ -100,13 +80,12 @@ for nWk = 1:length(weekNames)
         %% Generate Questions
         nVersionMC = 0;
         
-        for nMostIndices = 1:(length(randomFileIndexes)/2)
+        for nMostIndices = 1:numberOfThesesFiles
             cnt = 1;
             finalTxt = cell(13,1);
             finalTxt{cnt,1} = headerTxt; cnt = cnt + 1;
             finalTxt{cnt,1} = '%';       cnt = cnt + 1; %add empty line
             
-            %% Combine theses
             % theses1
             currentIndex = randomFileIndexes(1);
             randomFileIndexes = randomFileIndexes(2:end);
@@ -116,7 +95,7 @@ for nWk = 1:length(weekNames)
                 open(TPA{nDirs,currentIndex}{1})
                 error([mfilename ': something wrong with file and opened it']);
             end
-            preambleTheses1 = '% Stelling 1:   ';
+            preambleTheses1 = '% ';
             txtTheses1{1} = [preambleTheses1 theses1(1,:)];
             finalTxt{cnt,1} = txtTheses1{1}; cnt = cnt + 1;
             
@@ -124,42 +103,16 @@ for nWk = 1:length(weekNames)
             nLinesOfTheses1 = size(theses1); nLinesOfTheses1 = nLinesOfTheses1(1);
             if nLinesOfTheses1 > 1
                 for otherLines = 2:nLinesOfTheses1
-                    txtTheses1{otherLines} = ['%' sprintf('\t\t\t\t') theses1(otherLines,:)];
+                    txtTheses1{otherLines} = ['% ' theses1(otherLines,:)];
                     finalTxt{cnt,1} = txtTheses1{otherLines}; cnt = cnt + 1;
                 end
             end
             txtTheses1{nLinesOfTheses1+1} = '%'; %line between theses
             finalTxt{cnt,1} = txtTheses1{nLinesOfTheses1+1}; cnt = cnt + 1;
             
-            % theses2
-            currentIndex = randomFileIndexes(1);
-            randomFileIndexes = randomFileIndexes(2:end);
-            ansTheses2 = TPA{nDirs,currentIndex}{2};
-            theses2 = char(readTxtFile(TPA{nDirs,currentIndex}{1}));
-            preambleTheses2 = '% Stelling 2:   ';
-            txtTheses2{1} = [preambleTheses2 theses2(1,:)];
-            finalTxt{cnt,1} =  txtTheses2{1}; cnt = cnt + 1;
-            % add the right number of tabs to rest of text
-            nLinesOfTheses2 = size(theses2); nLinesOfTheses2 = nLinesOfTheses2(1);
-            if nLinesOfTheses2 > 1
-                for otherLines = 2:nLinesOfTheses2
-                    txtTheses2{otherLines} = ['%' sprintf('\t\t\t\t') theses2(otherLines,:)];
-                    finalTxt{cnt,1} =  txtTheses2{otherLines}; cnt = cnt + 1;
-                end
-            end
-            txtTheses2{nLinesOfTheses2+1} = '%'; %line between theses
-            finalTxt{cnt,1} =  txtTheses2{nLinesOfTheses2+1}; cnt = cnt + 1;
-            
-            %% Add answers
-            finalTxt{cnt,1} = answerA; cnt = cnt + 1;
-            finalTxt{cnt,1} = answerB; cnt = cnt + 1;
-            finalTxt{cnt,1} = answerC; cnt = cnt + 1;
-            finalTxt{cnt,1} = answerD; cnt = cnt + 1;
-            
             %% Handle the answers parts
-            defaultAnswersTxt = ['A'; 'B'; 'C'; 'D';];
-            currentAnswer = defaultAnswersTxt((ansTheses1 * 2) + ansTheses2 + 1);
-            solAnswerLine = ['Antwoord = ' currentAnswer ';'];
+a;lksdjfalkdsjfalksdf HIER GEBLEVEN
+
             % get answer line
             emptyAnswerLine = ReadLineOfFile(fullfile(apOfCleanSource,'mc_answer_line.m'));
             % combine all the lines in a cell

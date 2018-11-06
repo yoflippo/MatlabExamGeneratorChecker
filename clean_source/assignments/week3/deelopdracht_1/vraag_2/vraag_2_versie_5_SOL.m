@@ -1,0 +1,29 @@
+%% Vraag 2
+%
+% Stelling 1:   De volgende code wordt 8 keer herhaald:       
+%				                                              
+%				======= Code =======                          
+%				clc                                           
+%				clear variables %workspace leegmaken          
+%				for i =1:8                                    
+%				   disp('Het laten zien van tekst in de CW'); 
+%				end                                           
+%				======= Code =======                          
+%
+% Stelling 2:   In de onderstaande code wordt de variabele i telkens met
+%				de waarde 1 opgehoogd.                                  
+%				                                                        
+%				                                                        
+%				======= Code =======                                    
+%				clc                                                     
+%				clear variables %workspace leegmaken                    
+%				for i =1:8                                              
+%				   disp('Het laten zien van tekst in het CW');          
+%				end                                                     
+%				======= Code =======                                    
+%
+% A : stelling 1 is NIET-WAAR en stelling 2 is NIET-WAAR
+% B : stelling 1 is NIET-WAAR en stelling 2 is WAAR
+% C : stelling 1 is WAAR      en stelling 2 is NIET-WAAR
+% D : stelling 1 is WAAR      en stelling 2 is WAAR
+Antwoord = D;
