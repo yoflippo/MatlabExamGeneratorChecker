@@ -1,9 +1,9 @@
 %% Stelling 11
 %
-% Met de functie randn() produceer je willekeurige 
-% numerieke waardes.                               
+% Met de functie randn() produceer je alleen positieve 
+% willekeurige getallen.                               
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

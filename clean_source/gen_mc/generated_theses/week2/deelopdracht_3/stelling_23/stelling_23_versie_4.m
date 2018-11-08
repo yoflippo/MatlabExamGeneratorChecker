@@ -4,8 +4,8 @@
 %                                             
 % ======= Code =======                        
 %                                             
-% if false                                    
-%     % code                                  
+% if true                                     
+%     2+2;                                    
 % end                                         
 %                                             
 % ======= Code =======                        

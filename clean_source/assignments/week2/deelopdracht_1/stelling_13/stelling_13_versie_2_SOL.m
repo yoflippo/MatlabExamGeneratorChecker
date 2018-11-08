@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% Als BT-er gebruik je zowel standaard functies als zelf 
-% gemaakte functies.                                     
+% De lengte van een vector v = [3 3 3 3] is 4.
 %
 Antwoord = 1;
+
 
 
 

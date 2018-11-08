@@ -1,13 +1,25 @@
 %% Stelling 22
 %
-% De and-operator geeft ook een true (logische 1) terug als
-% de twee operands bestaan uit een string en een nul.      
+% De twee code voorbeelden doen exact hetzelfde:
+%                                               
+% ======= Code1 =======                         
+% spier = 1                                     
+% switch spier                                  
+%     case 1                                    
+%         'Brachialis'                          
+%     otherwise                                 
+%         'Geen spier'                          
+% end                                           
+% ======= Code1 =======                         
+%                                               
+%                                               
+% ======= Code2 =======                         
+% spier = 1                                     
+% if spier == 1                                 
+%     'Brachialis'                              
+% else                                          
+%     'Geen spier'                              
+% end                                           
+% ======= Code2 =======                         
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-
-
-

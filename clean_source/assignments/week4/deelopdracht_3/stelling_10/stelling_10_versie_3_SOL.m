@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Je moet een if-statement altijd afsluiten met het 
-% keyword: end.                                     
+% Matlab kan headers van databestanden altijd probleemloos
+% inlezen.                                                
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

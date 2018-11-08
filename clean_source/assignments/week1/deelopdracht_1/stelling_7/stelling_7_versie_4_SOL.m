@@ -2,12 +2,12 @@
 %
 % Bij het uitvoeren van de volgende code is het resultaat
 % in het Command Window: ' ans =                         
-%                              'i'                       
+%                              'a'                       
 %                        '                               
 %                                                        
 % ------------code--------------                         
 % naam = 'Biostatica Matlab';                            
-% naam(2)                                                
+% naam(3)                                                
 % ------------code--------------                         
 %
-Antwoord = 1;
+Antwoord = 0;

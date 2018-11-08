@@ -1,9 +1,9 @@
 %% Stelling 5
 %
-% De output van de functie diff is altijd kleiner  
-% (minder elementen) dan de input van deze functie.
+% De input van de functie diff() is altijd groter 
+% (meer elementen) dan de output van deze functie.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

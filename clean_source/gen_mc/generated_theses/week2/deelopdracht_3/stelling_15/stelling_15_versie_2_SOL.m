@@ -5,13 +5,13 @@
 % ======= Code =======                                   
 %                                                        
 % lengte_brachialis = 10;                                
-% lengte_biceps = 7;                                     
+% lengte_biceps = 11;                                    
 % if lengte_brachialis > lengte_biceps                   
-%     'Brachialis'                                       
-% else                                                   
 %     'Biceps'                                           
+% else                                                   
+%     'Brachialis'                                       
 % end                                                    
 %                                                        
 % ======= Code =======                                   
 %
-Antwoord = 1;
+Antwoord = 0;

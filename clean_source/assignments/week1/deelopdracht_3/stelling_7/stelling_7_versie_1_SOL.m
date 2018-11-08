@@ -1,8 +1,8 @@
 %% Stelling 7
 %
-% Een functie moet altijd 1 input variabele hebben.
+% Een functie kan meerdere input variabelen hebben (argumenten).
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

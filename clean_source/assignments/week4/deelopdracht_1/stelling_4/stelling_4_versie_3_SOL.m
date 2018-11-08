@@ -1,14 +1,13 @@
 %% Stelling 4
 %
-% De volgende code geeft een foutmelding: 
-%                                         
-% --------Code-----------                 
-% n=[1 21 31 23 12]                       
-% if n==1                                 
-%     x=3                                 
-% else                                    
-%     x=4                                 
-% end                                     
-% ------------------------                
+% In de onderstaande for-loop is de variabele VectorA 
+% een vector:                                         
+%                                                     
+% ----------code-----------                           
+% for i = 1:length(VectorC)                           
+%     VectorA = VectorB(i) + VectorC(i);              
+% end                                                 
+% ----------code-----------                           
 %
-Antwoord = 0;
+Antwoord = 1;
+

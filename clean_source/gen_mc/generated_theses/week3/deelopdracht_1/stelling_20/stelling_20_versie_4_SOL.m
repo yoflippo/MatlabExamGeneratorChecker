@@ -1,18 +1,13 @@
 %% Stelling 20
 %
-% De onderstaande code wordt niet (eeuwig) herhaald door 
-% de while-lus:                                          
-%                                                        
-% ======= Code =======                                   
-%                                                        
-% InversieVoet = true;                                   
-% EversieVoet = InversieVoet;                            
-%                                                        
-% while InversieVoet == EversieVoet                      
-%     disp('Probleem met de voet')                       
-% end                                                    
-%                                                        
-% ======= Code =======                                   
-%                                                        
+% De while-lus herhaalt zichzelf als de expressie (test)
+% true is.                                              
 %
-Antwoord = 0;
+Antwoord = 1;
+
+
+
+
+
+
+

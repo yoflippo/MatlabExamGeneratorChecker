@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% Het is mogelijk een bestandformaat 'table' te plotten 
-% in Matlab.                                            
+% Table2array is een functie in Matlab die        
+% een bestandformaat table naar een matrix omzet. 
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

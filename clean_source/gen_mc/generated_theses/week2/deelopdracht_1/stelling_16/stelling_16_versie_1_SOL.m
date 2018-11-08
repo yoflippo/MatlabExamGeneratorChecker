@@ -1,9 +1,9 @@
 %% Stelling 16
 %
-% Bij het opslaan van een function file mag je het bestand
-% een willekeurige naam geven.                            
+% Bij het opslaan van een functie geef je het bestand
+% dezelfde naam als de functie.                      
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

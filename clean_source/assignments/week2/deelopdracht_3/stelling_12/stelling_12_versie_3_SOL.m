@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% De if-statement wordt uitgevoerd als de expressie tot
-% een true wordt geevalueerd.                          
+% De if-statement wordt gebruikt voor het herhalen
+% van code.                                       
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

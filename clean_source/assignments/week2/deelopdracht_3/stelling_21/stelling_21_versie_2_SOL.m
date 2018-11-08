@@ -1,10 +1,10 @@
 %% Stelling 21
 %
 % Als een Matlab bestand niet kan worden gevonden, terwijl het 
-% wel bestaat, dan staat het bestand waarschijnlijk wel in het 
+% wel bestaat, dan staat het bestand waarschijnlijk niet in het
 % Matlab path.                                                 
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

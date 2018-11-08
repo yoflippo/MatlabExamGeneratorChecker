@@ -1,9 +1,9 @@
 %% Stelling 17
 %
-% De element-wise AND-operator kan niet 
-% worden toegepast op een vector.       
+% De OR-operator werkt op 1 operand.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
 
 
 

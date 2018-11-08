@@ -1,9 +1,9 @@
 %% Stelling 6
 %
-% Het is mogelijk om een bestand met de extensie .txt naar
-% .csv om te zetten, maar niet van .csv naar .txt.        
+% Matlab heeft een automatisch dialoog genaamd 'Read Data'.
 %
 Antwoord = 0;
+
 
 
 

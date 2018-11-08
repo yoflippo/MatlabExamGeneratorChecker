@@ -1,13 +1,13 @@
 %% Stelling 23
 %
-% De else-statement van een if-else-statement wordt
-% uitgevoerd als de expressie true is.             
+% De code in de if-statement wordt uitgevoerd:
+%                                             
+% ======= Code =======                        
+%                                             
+% if false                                    
+%     % code                                  
+% end                                         
+%                                             
+% ======= Code =======                        
 %
 Antwoord = 0;
-
-
-
-
-
-
-

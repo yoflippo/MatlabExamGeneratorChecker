@@ -8,7 +8,7 @@
 % clc                                                          
 % clear variables %workspace leegmaken                         
 % for i = 1:8                                                  
-%    i                                                         
+%    I;                                                        
 % end                                                          
 % ======= Code =======                                         
 %

@@ -1,17 +1,13 @@
 %% Stelling 22
 %
-% In het Command Window wordt 'Herre is langer' afgedrukt:
-%                                                         
-% ======= Code =======                                    
-%                                                         
-% lengte_herre = 170;                                     
-% lengte_aad = 190;                                       
-% if lengte_herre > lengte_aad                            
-%     'Herre is langer'                                   
-% else                                                    
-%     'Herre is korter'                                   
-% end                                                     
-%                                                         
-% ======= Code =======                                    
+% De and-operator geeft ook een true (logische 1) terug als
+% de twee operands bestaan uit een getal groter dan 0.     
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
+
+
+

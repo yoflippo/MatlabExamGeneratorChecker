@@ -1,7 +1,9 @@
 %% Stelling 8
 %
 % Als je in het Command Window de volgende code typt, wordt  
-% de Workspace in een bestand opgeslagen met de mat-extensie.
+% de Workspace in een bestand opgeslagen met de txt-extensie.
+%                                                            
+%                                                            
 %                                                            
 % ======= Code =======                                       
 %                                                            
@@ -9,5 +11,4 @@
 %                                                            
 % ======= Code =======                                       
 %
-Antwoord = 1;
-
+Antwoord = 0;

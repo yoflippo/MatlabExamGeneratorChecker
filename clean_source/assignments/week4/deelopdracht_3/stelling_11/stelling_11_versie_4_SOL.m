@@ -1,9 +1,9 @@
 %% Stelling 11
 %
-% Met de function 'uigetfile()' kies je een bestand 
-% in Matlab.                                        
+% Met de function 'uichoosefile()' kan de gebruiker een 
+% bestand selecteren.                                   
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -1,10 +1,10 @@
 %% Stelling 9
 %
-% Het is mogelijk Excel bestanden met Matlab te lezen 
-% door de functie dlmread() te gebruiken.             
+% Een header van een databestand is onhandig, want de 
+% informatie in de header heb je als gebruiker nooit  
+% nodig.                                              
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
 
 
 

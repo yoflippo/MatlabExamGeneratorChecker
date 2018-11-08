@@ -1,9 +1,9 @@
 %% Stelling 9
 %
 % Het is mogelijk Excel bestanden met Matlab te lezen 
-% door de functie xlsread() te gebruiken.             
+% door de functie dlmread() te gebruiken.             
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

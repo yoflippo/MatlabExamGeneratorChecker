@@ -1,7 +1,7 @@
 %% Stelling 3
 %
-% De functie ones() en de functie zeros kunnen soms
-% dezelfde vectoren als output geven.              
+% De functie diff() heeft heeft altijd twee getallen
+% als input waartussen het verschil berekend wordt. 
 %
 Antwoord = 0;
 

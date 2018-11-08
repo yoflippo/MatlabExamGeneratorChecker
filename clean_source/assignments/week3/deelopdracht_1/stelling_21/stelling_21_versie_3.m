@@ -1,15 +1,16 @@
 %% Stelling 21
 %
-% De onderstaande code opent 1 figure met 2 grafieken.
-%                                                     
-% ======= Code =======                                
-%                                                     
-% vector = 22:33;                                     
-% hold on;                                            
-% plot(vector)                                        
-% vector2 = vector+2;                                 
-% plot(vector2)                                       
-%                                                     
-% ======= Code =======                                
+% De onderstaande code laat een figure zien met 2 
+% subplots.                                       
+%                                                 
+% ======= Code =======                            
+% n = 10;                                         
+% t = -n:0.1:n;                                   
+% Y1 = t.^2;                                      
+% subplot(2,1,1);                                 
+% plot(Y1);                                       
+% subplot(2,1,2);                                 
+% plot(t,Y1);                                     
+% ======= Code =======                            
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

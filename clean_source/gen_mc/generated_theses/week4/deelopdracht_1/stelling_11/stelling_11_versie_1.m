@@ -1,13 +1,13 @@
 %% Stelling 11
 %
-% Wanneer je wilt controleren of twee variabelen
-% aan elkaar gelijk zijn, moet je 1 '=' teken   
-% gebruiken.                                    
+% De volgende code geeft een foutmelding: 
+%                                         
+% --------Code-----------                 
+% A = [1 2 3;4 5 6];                      
+% A(1:2,4:6)                              
+% --------Code-----------                 
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
 
 
 

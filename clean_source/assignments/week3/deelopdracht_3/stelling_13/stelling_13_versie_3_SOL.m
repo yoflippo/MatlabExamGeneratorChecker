@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% De code 'zeros(3,6)' genereert een matrix die uit 6 rijen
+% De code 'zeros(3,6)' genereert een matrix die uit 3 rijen
 % bestaat, gevuld met nullen.                              
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

@@ -1,7 +1,7 @@
 %% Stelling 3
 %
-% Wanneer je een functie aanmaakt staat de input rechts
-% van de naam van de functie en de output links.       
+% Met de help functie kan je zien wat de input en output 
+% variabelen kunnen zijn in een standaard Matlab functie.
 %
 Antwoord = 1;
 

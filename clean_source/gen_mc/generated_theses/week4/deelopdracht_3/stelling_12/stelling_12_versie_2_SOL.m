@@ -6,8 +6,8 @@
 % ------------code--------------                         
 %                                                        
 % G = [1 3 3; 6 2 4 ; 2 9 7];                            
-% gemiddelde = mean(G);                                  
+% gemiddelde = mean(g);                                  
 %                                                        
 % ------------code--------------                         
 %
-Antwoord = 0;
+Antwoord = 1;

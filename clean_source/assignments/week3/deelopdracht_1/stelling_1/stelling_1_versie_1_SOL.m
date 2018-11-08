@@ -1,7 +1,7 @@
 %% Stelling 1
 %
-% Een for-lus gebruik je als je weet hoe vaak je iets kunt
-% herhalen.                                               
+% Tijdens het programmeren van een programma moet je vaak
+% handelingen herhalen en beslissingen maken.            
 %
 Antwoord = 1;
 

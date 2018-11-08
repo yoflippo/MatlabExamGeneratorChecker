@@ -1,14 +1,13 @@
 %% Stelling 5
 %
-% De onderstaande code wordt niet correct uitgevoerd omdat
-% de variabele z nog niet is gedefinieerd als de je in de 
-% for-lus komt.                                           
+% De vector z heeft tijdens het uitvoeren van onderstaande
+% code een constante lengte.                              
 %                                                         
 % ======= Code =======                                    
 % clc                                                     
 % clear variables                                         
-% for nHerhaling = 1:10                                   
-%    z(nHerhaling+1) = z(nHerhaling);                     
+% for a = 1:10                                            
+%    z(a) = a.^2;                                         
 % end                                                     
 % ======= Code =======                                    
 %

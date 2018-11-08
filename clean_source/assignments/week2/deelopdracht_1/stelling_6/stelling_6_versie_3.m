@@ -1,13 +1,13 @@
 %% Stelling 6
 %
-% Bij een bestaande vector v=[ 7 1 2 9] krijg je
-% bij de aanroep:                               
-%                                               
-% v(2:end)                                      
-%                                               
-% de waardes 7 1 2 als resultaat terug.         
+% Bij een vector: v = [7 8 2 1] krijg je bij de aanroep
+% v(2) de waarde 2 terug.                              
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
 
 
 

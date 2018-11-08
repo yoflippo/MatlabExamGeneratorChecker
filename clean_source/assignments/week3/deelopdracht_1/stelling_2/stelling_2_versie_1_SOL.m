@@ -1,15 +1,15 @@
 %% Stelling 2
 %
-% In de onderstaande code krijgt de variabele i tijdens de 
-% tweede keer dat de for-lus wordt uitgevoerd de waarde 3. 
-%                                                          
-%                                                          
-% ======= Code =======                                     
-% clc                                                      
-% clear variables %workspace leegmaken                     
-% for i = 1:8                                              
-%    disp('Doe iets');                                     
-% end                                                      
-% ======= Code =======                                     
+% In de onderstaande code wordt de variabele i telkens met
+% de waarde 1 opgehoogd.                                  
+%                                                         
+%                                                         
+% ======= Code =======                                    
+% clc                                                     
+% clear variables %workspace leegmaken                    
+% for i =1:8                                              
+%    disp('Het laten zien van tekst in het CW');          
+% end                                                     
+% ======= Code =======                                    
 %
-Antwoord = 0;
+Antwoord = 1;

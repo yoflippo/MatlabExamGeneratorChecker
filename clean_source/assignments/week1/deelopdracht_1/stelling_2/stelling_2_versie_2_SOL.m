@@ -1,7 +1,7 @@
 %% Stelling 2
 %
-% Als een foutloos script in de 'Current Folder' staat,
-% kun je het probleemloos uitvoeren.                   
+% In de Workspace staan de variabelen die Matlab heeft
+% gebruikt tijdens het uitvoeren van een programma.   
 %
 Antwoord = 1;
 

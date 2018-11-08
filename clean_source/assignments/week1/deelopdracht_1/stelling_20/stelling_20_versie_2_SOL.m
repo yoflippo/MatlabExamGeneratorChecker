@@ -1,9 +1,9 @@
 %% Stelling 20
 %
-% Je kunt in Matlab vectoren van gelijke lengte niet met 
-% elkaar vermenigvuldigen.                               
+% Je kunt in Matlab vectoren van gelijke lengte met 
+% elkaar vermenigvuldigen.                          
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

@@ -1,13 +1,13 @@
 %% Stelling 10
 %
-% Wanneer je de index (2,3) op vraagt van een vector              
-% v=[1.1 1.2 1.3] krijg je een foutmelding.                       
+% De volgende code geeft een foutmelding: 
+%                                         
+% --------Code-----------                 
+% Matrix=[ 78 127 28; 291 29 12; 92 19 0];
+% Matrix(1,3) = 32;                       
+% ------------------------                
 %
-Antwoord = 1;
-
-
-
-
+Antwoord = 0;
 
 
 

@@ -1,9 +1,9 @@
 %% Stelling 7
 %
-% De while-lus kan het beste worden gebruikt als het aantal
-% herhalingen nog onbekend is.                             
+% Als je van te voren weet hoe vaak een lus moet worden
+% herhaald, gebruik je een while-lus.                  
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -1,13 +1,13 @@
 %% Stelling 3
 %
-% De volgende code geeft alleen nullen terug:
+% De volgende code geeft alleen logische enen
+% terug:                                     
 %                                            
 % ======= Code =======                       
 %                                            
 % vectorA = [1 1 1 1];                       
-% vectorB = [0 1 0 1];                       
-% vectorA & vectorB                          
+% and(vectorA,vectorA)                       
 %                                            
 % ======= Code =======                       
 %
-Antwoord = 0;
+Antwoord = 1;

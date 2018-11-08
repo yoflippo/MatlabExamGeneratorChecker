@@ -1,9 +1,9 @@
 %% Stelling 7
 %
-% Een while-lus heeft in tegenstelling tot een for-lus
-% een expressie die getest moet worden.               
+% Als je van te voren weet hoe vaak een lus moet worden
+% herhaald, gebruik je een while-lus.                  
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

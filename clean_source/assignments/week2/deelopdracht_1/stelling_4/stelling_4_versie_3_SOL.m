@@ -1,9 +1,9 @@
 %% Stelling 4
 %
 % Wanneer je het eerste element uit de tweede kolom wilt
-% aanroepen van matrix A gebruik je A(2,1).             
+% aanroepen van matrix A gebruik je A(1,2).             
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

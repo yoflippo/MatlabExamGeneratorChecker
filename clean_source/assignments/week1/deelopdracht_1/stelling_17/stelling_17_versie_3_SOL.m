@@ -1,9 +1,9 @@
 %% Stelling 17
 %
-% In Matlab kun je met de blokhaken [ ] character vectoren
-% samenvoegen.                                            
+% In Matlab kun je met de ronde haken ( ) character
+% vectoren samenvoegen.                            
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

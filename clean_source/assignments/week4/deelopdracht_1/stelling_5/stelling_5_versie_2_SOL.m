@@ -1,13 +1,13 @@
 %% Stelling 5
 %
-% De volgende code geeft een foutmelding: 
-%                                         
-% --------Code-----------                 
-% A = [192 892 109 ];                     
-% B = [12 49 100];                        
-% A .+ 2                                  
-% ------------------------                
+% Wanneer je een  functie aanroept in een script die in 
+% dezelfde map en/of path staat als je script, krijg je 
+% een foutmelding.                                      
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+
+
 
 

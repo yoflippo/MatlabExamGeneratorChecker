@@ -1,17 +1,13 @@
 %% Stelling 14
 %
-% De onderstaande code laat een plot zien met tekst op
-% de x-as.                                            
-%                                                     
-% ======= Code =======                                
-%                                                     
-% vector = 66:222;                                    
-% plot(vector,'m')                                    
-% hold on;                                            
-% vectorTwee = 22:333;                                
-% plot(vectorTwee,'b')                                
-% xlabel('Kracht1');                                  
-%                                                     
-% ======= Code =======                                
+% Als je in Matlab twee vectoren in 1 figure wilt tekenen,
+% gebruik je het commando 'hold off'.                     
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+
+
+
+
+

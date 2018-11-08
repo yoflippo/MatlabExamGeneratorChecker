@@ -1,13 +1,13 @@
 %% Stelling 10
 %
-% De volgende code wordt geevalueerd tot een logische 1:
-%                                                       
-% ======= Code =======                                  
-%                                                       
-% 2 <= 2                                                
-%                                                       
-% ======= Code =======                                  
+% De volgende twee code regels doen exact hetzelfde  
+% (neem aan dat in variabele a en b een getal staat):
+%                                                    
+% ======= Code =======                               
+%                                                    
+% ge(a,b);                                           
+% a >= b;                                            
+%                                                    
+% ======= Code =======                               
 %
 Antwoord = 1;
-
-

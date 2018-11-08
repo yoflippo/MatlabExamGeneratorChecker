@@ -8,7 +8,7 @@
 % Y1 = t.^2;                                             
 %                                                        
 % figure;                                                
-% plot(t,Y1,'LineWidth',3);                              
+% plot(t,Y1,'ThickNess',3);                              
 % ======= Code =======                                   
 %
-Antwoord = 1;
+Antwoord = 0;

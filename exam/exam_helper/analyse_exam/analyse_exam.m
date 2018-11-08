@@ -24,6 +24,7 @@ for nw = 1:w
     vec = resProc(:,nw);
     desstat.meanQ(nw) = mean(vec);
     desstat.stdQ(nw) = std(vec);
+    desstat.varQ(nw) = var(vec);
     desstat.sumQ(nw) = sum(vec);
     desstat.meanPointsQ(nw) = desstat.meanQ(nw)*desstat.pointsPerQ(nw);
     desstat.resPoint(:,nw) = resProc(:,nw)*desstat.pointsPerQ(nw);
@@ -39,6 +40,12 @@ for nl = 1:nw
 end
 
 desstat.percentageCorrect =  repmat(mean(desstat.totPoints)/desstat.totalPoints,1,w);
+
+%% Calculate Cronbach's alpha betrouwbaarheid, TODO
+nQ = w;
+sumVariance = sum(desstat.varQ);
+varVariance = var(desstat.varQ);
+CA = (nQ/(nQ-1))*(1-(sumVariance/varVariance));
 
 tQ{1} = 1:numMC;
 tQ{2} = numMC+1:w;

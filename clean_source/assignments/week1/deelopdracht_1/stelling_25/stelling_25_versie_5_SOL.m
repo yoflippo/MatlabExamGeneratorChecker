@@ -1,9 +1,9 @@
 %% Stelling 25
 %
-% In het Command Window kun je NIET zelf 
-% Matlab commando's uitvoeren.           
+% Een verzameling letters kan op de volgende manier aan
+% een variabele worden toegekend: var = 'blablabla'.   
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

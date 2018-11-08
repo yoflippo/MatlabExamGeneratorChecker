@@ -1,7 +1,7 @@
 %% Stelling 9
 %
 % In de onderstaande for-loop wordt de variabele vectorA 
-% *geen* vector:                                         
+% een vector:                                            
 %                                                        
 % ----------code-----------                              
 % VectorB = 0:1:10;                                      

@@ -6,8 +6,7 @@
 %                                             
 % A = 1;                                      
 % B = 2;                                      
-% C = 3;                                      
-% if (A >= B) | (C)                           
+% if A >= B                                   
 %     'hoi'                                   
 % else                                        
 %     'dag'                                   

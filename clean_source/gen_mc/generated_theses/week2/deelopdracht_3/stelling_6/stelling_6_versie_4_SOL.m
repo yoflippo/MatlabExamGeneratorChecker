@@ -1,13 +1,13 @@
 %% Stelling 6
 %
-% De volgende code wordt geeft deze logische vector
-% terug: [1 0 1].                                  
-%                                                  
-% ======= Code =======                             
-%                                                  
-% [1 1 1] | [0 1 0]                                
-%                                                  
-% ======= Code =======                             
+% De volgende code geeft 2 enen terug:
+%                                     
+% ======= Code =======                
+%                                     
+% vectorA = [0 0 0];                  
+% vectorB = [1 1 0];                  
+% vectorA | vectorB                   
+%                                     
+% ======= Code =======                
 %
-Antwoord = 0;
-
+Antwoord = 1;

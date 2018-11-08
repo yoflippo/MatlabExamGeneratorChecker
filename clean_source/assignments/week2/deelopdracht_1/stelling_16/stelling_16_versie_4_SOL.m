@@ -1,7 +1,7 @@
 %% Stelling 16
 %
-% Bij het opslaan van een functie geef je het bestand
-% dezelfde naam als de functie.                      
+% De tweede output van de standaard functie max() geeft je 
+% het index nummer terug.                                  
 %
 Antwoord = 1;
 

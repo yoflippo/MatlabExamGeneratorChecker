@@ -1,9 +1,9 @@
 %% Stelling 2
 %
-% Het is niet mogelijk om binnen een functie een andere
-% functie aan te roepen.                               
+% Je kan binnen een functie een andere functie aanroepen.
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

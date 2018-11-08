@@ -1,9 +1,9 @@
 %% Stelling 8
 %
-% Als je weet hoevaak je iets moet herhalen gebruik je een
-% for-lus.                                                
+% Een for-lus kan je zo programmeren dat je niet weet hoevaak
+% deze uitgevoerd gaat worden.                               
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -1,13 +1,13 @@
 %% Stelling 9
 %
-% De volgende code wordt geevalueerd tot een logische 0:
-%                                                       
-% ======= Code =======                                  
-%                                                       
-% ne(false,0)                                           
-%                                                       
-% ======= Code =======                                  
+% De volgende code wordt geevalueerd tot een logische een:
+%                                                         
+% ======= Code =======                                    
+%                                                         
+% 2 ~= 2                                                  
+%                                                         
+% ======= Code =======                                    
 %
-Antwoord = 1;
+Antwoord = 0;
 
 

@@ -1,10 +1,10 @@
 %% Stelling 16
 %
-% In Matlab is de expressie 'true' enkel gelijk aan de
-% waarde '1'.                                         
-% De waarde van 'false' is enkel gelijk aan '0'.      
+% De EN-operator (AND-operator) geeft een 'true' terug als
+% de operands allebei 'false' zijn.                       
 %
 Antwoord = 0;
+
 
 
 

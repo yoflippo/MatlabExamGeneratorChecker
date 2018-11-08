@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% Als BT-er gebruik je bijna altijd de standaard functies       
-% van Matlab en schrijf je bijna nooit een zelfgemaakte functie.
+% De lengte van een vector v = [3 3 3 3] is 4.
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

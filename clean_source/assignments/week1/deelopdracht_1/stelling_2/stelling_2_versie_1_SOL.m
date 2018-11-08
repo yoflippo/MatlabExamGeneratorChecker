@@ -1,10 +1,10 @@
 %% Stelling 2
 %
-% In de Workspace staan de variabelen die Matlab heeft
-% gebruikt tijdens het uitvoeren van een programma.   
+% In de Workspace staan de bestanden (lees: geen
+% variabelen) van de 'Current Folder'.          
+%                                               
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

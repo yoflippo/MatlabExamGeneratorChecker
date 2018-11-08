@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% Als BT-er gebruik je zowel standaard functies als zelf 
-% gemaakte functies.                                     
+% De afmetingen (dimensies) van een vector v = [3 3 3 3] 
+% zijn 1 bij 3.                                          
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

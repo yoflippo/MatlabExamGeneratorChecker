@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Als je aan Matlab niet verteld dat er een header in een 
-% databestand staat, geeft Matlab een fout.               
+% Het is niet mogelijk om een .csv file te openen in Matlab.
 %
-Antwoord = 1;
+Antwoord = 0;
+
 
 
 

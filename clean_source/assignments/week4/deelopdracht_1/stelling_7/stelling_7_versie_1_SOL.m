@@ -1,13 +1,13 @@
 %% Stelling 7
 %
-% De volgende code geeft een foutmelding: 
-%                                         
-% --------Code-----------                 
-% stuwKracht= [42 31 35 12 31 42];        
-% minimaleStuwkracht= min(Kracht)         
-% ------------------------                
+% Bij het runnen van code met een syntaxfout krijg je 
+% een foutmelding in het Command Window.              
 %
 Antwoord = 1;
+
+
+
+
 
 
 

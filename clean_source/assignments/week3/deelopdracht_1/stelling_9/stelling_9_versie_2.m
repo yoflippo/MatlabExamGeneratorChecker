@@ -5,7 +5,7 @@
 % ======= Code =======                                  
 % blTest = false;                                       
 % teller = 1;                                           
-% while teller < 10 && blTest == false                  
+% while teller < 10 && blTest == true                   
 %     disp(num2str(teller));                            
 %     teller = teller + 1;                              
 % end                                                   

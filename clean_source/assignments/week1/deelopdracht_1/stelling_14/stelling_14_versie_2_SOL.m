@@ -1,13 +1,13 @@
 %% Stelling 14
 %
-% De Matlab functie length() geeft de lengte van         
-% een rijvector terug.                                   
-%                                                        
-% Bijvoorbeeld als een rijvector bestaat                 
-% uit 1 rij en 10 kolomen. Dan geeft length() de waarde 1
-% terug.                                                 
+% De Matlab functie length() geeft bij een         
+% kolomvector het aantal RIJEN van de vector terug.
 %
-Antwoord = 0;
+Antwoord = 1;
+
+
+
+
 
 
 

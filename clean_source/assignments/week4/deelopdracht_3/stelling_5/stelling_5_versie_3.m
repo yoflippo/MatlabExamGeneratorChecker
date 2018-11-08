@@ -1,13 +1,15 @@
 %% Stelling 5
 %
-% De onderstaande functie aanroep van uigetfile() opent 
-% een window (venster) waarin alle bestandstypes zijn te
-% zien:                                                 
+% Matlab kan het gemiddelde van vector G niet berekenen 
+% omdat die niet weet welke waarde G heeft:             
 %                                                       
-% ======= Code =======                                  
 %                                                       
-% [FileName,PathNAme,FilterIndex] = uigetfile('*');     
+% ------------code--------------                        
 %                                                       
-% ======= Code =======                                  
+% G = [1 3 3; 6 2 4 ; 2 9 7];                           
+% clear variables                                       
+% gemiddelde = mean(G)                                  
+%                                                       
+% ------------code--------------                        
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

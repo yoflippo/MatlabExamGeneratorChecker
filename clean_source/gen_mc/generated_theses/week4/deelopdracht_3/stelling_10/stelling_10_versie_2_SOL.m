@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Je hoeft een if-statement niet af te sluiten met 'end'.
+% Als je aan Matlab niet verteld dat er een header in een 
+% databestand staat, geeft Matlab een fout.               
 %
-Antwoord = 0;
-
+Antwoord = 1;
 
 
 

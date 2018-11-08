@@ -1,13 +1,13 @@
 %% Stelling 20
 %
-% De volgende code wordt geevalueerd tot een logische 0:
-%                                                       
-% ======= Code =======                                  
-%                                                       
-% ~(2 > 2);                                             
-%                                                       
-% ======= Code =======                                  
+% De inequality operator komt in twee vormen:
+%                                            
+% 1 - ~=                                     
+% 2 = ne()                                   
 %
-Antwoord = 0;
+Antwoord = 1;
+
+
+
 
 

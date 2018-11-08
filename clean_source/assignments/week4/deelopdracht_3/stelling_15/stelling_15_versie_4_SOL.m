@@ -2,9 +2,9 @@
 %
 % Als je niet aangeeft in wat voor type file je bestaande 
 % data opgeslagen wilt hebben, zal Matlab het automatisch 
-% als .mat opslaan.                                       
+% als .csv opslaan.                                       
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

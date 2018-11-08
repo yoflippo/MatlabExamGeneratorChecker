@@ -1,13 +1,15 @@
 %% Stelling 4
 %
-% De volgende code laadt het data-bestand met de naam       
-% 'datafile.txt' in (neem aan dat 'datafile.txt' bestaat en 
-% door Matlab vindbaar is):                                 
-%                                                           
-% ------------code--------------                            
-%                                                           
-% data = load['datafile.txt'];                              
-%                                                           
-% ------------code--------------                            
+% De onderstaande code zal bij het uitvoeren geen foutmelding 
+% geven:                                                      
+%                                                             
+% ------------code--------------                              
+%                                                             
+% A = [1 2 3 ; 4 5 6];                                        
+% B = [1 2 3 4 5 6 ];                                         
+% C = A.*B                                                    
+%                                                             
+% ------------code--------------                              
+%                                                             
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

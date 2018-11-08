@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% Je kan de naam van de output van een functie zelf kiezen.
+% De naam die je gebruikt voor een output van een functie 
+% is altijd hetzelfde.                                    
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

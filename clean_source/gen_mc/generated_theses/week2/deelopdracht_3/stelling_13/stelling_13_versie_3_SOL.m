@@ -1,13 +1,12 @@
 %% Stelling 13
 %
-% In het Command Window wordt 'hoi' afgedrukt:
+% In het Command Window wordt 'dag' afgedrukt:
 %                                             
 % ======= Code =======                        
 %                                             
 % A = 1;                                      
 % B = 2;                                      
-% C = 0;                                      
-% if (A >= B) | (C)                           
+% if A >= B                                   
 %     'hoi'                                   
 % else                                        
 %     'dag'                                   
@@ -15,4 +14,4 @@
 %                                             
 % ======= Code =======                        
 %
-Antwoord = 0;
+Antwoord = 1;

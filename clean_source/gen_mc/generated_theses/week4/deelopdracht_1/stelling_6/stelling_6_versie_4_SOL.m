@@ -1,11 +1,11 @@
 %% Stelling 6
 %
-% Wanneer je de index (1,1) op vraagt                                         
-% van de vector v=[1.1 1.2 1.3] krijg je een foutmelding.                     
+%  Wanneer je het bestand fietsData.txt in de Current Folder
+%  hebt staan en de volgende code uitvoert:                 
+%                 'kniehoek = load(fietsData.txt)'          
+%  krijg je een foutmelding.                                
 %
-Antwoord = 0;
-
-
+Antwoord = 1;
 
 
 

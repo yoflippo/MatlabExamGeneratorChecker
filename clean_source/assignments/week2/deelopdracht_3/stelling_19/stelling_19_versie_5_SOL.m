@@ -1,13 +1,13 @@
 %% Stelling 19
 %
-% De logische NOT en de logische OR kunnen niet worden
-% gecombineerd.                                       
+% De volgende code wordt geevalueerd tot een logische 1:
+%                                                       
+% ======= Code =======                                  
+%                                                       
+% 2 > 0                                                 
+%                                                       
+% ======= Code =======                                  
 %
-Antwoord = 0;
-
-
-
-
-
+Antwoord = 1;
 
 

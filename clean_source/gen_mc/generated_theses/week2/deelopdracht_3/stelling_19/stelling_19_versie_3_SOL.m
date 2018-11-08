@@ -1,13 +1,13 @@
 %% Stelling 19
 %
-% De NOT-operator heeft twee vormen:
-%                                   
-% 1 - Het symbool ~                 
-% 2 - De functie vorm: not()        
+% De volgende code wordt geevalueerd tot een logische 1:
+%                                                       
+% ======= Code =======                                  
+%                                                       
+% 2 > 0                                                 
+%                                                       
+% ======= Code =======                                  
 %
 Antwoord = 1;
-
-
-
 
 

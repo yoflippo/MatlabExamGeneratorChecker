@@ -1,9 +1,9 @@
 %% Stelling 14
 %
 % Als je in Matlab twee vectoren in 1 figure wilt tekenen,
-% gebruik je het commando 'hold off'.                     
+% gebruik je het commando 'hold on'.                      
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

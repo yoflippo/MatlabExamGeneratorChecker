@@ -1,7 +1,7 @@
 %% Stelling 1
 %
-% Het is mogelijk om data te plotten die niet in de
-% Matlab Workspace staat.                          
+% Tijdens het programmeren van een programma gebruik je 
+% voornamelijk herhalingen.                             
 %
 Antwoord = 0;
 

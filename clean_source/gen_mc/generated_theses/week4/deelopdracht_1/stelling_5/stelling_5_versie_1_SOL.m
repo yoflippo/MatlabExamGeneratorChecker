@@ -1,8 +1,8 @@
 %% Stelling 5
 %
-% Wanneer je een zelfgemaakte Matlab functie aanroept in een  
-% script, is het niet mogelijk dat die in een andere map staat
-% dan dat je script staat.                                    
+% Wanneer je een standaard Matlab functie aanroept in een       
+% script, die niet in dezelfde map of path staat als je script, 
+% krijg je een foutmelding.                                     
 %
 Antwoord = 0;
 

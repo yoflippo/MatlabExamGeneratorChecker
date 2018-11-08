@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% Tijdens het programmeren van een programma moet je vaak
-% handelingen herhalen en beslissingen maken.            
+% Het is mogelijk om data te plotten die niet in de
+% Matlab Workspace staat.                          
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

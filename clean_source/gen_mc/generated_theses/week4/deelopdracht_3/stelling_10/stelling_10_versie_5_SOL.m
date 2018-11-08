@@ -1,6 +1,6 @@
 %% Stelling 10
 %
-% Het is niet mogelijk om een .csv file te openen in Matlab.
+% Je hoeft een if-statement niet af te sluiten met 'end'.
 %
 Antwoord = 0;
 

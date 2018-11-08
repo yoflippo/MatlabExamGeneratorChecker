@@ -1,7 +1,6 @@
 %% Stelling 7
 %
-% De volgende code geeft een logische 1 terug:
-%                                             
+% De volgende code geeft een logische 0 terug:
 %                                             
 % ======= Code =======                        
 %                                             
@@ -11,3 +10,4 @@
 % ======= Code =======                        
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+

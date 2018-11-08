@@ -3,11 +3,11 @@
 % De volgende code geeft een foutmelding: 
 %                                         
 % --------Code-----------                 
-% Matrix=[ 78 127 28; 291 29 12; 92 19 0];
-% Matrix(1,1:3) = [32 21 32]              
+% massa= [42 31 35 12 31 42];             
+% gemiddeldeMassa = gemiddelde(massa)     
 % ------------------------                
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

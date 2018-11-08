@@ -1,13 +1,13 @@
 %% Stelling 5
 %
-% De vector z krijgt bij elke herhaling een grotere lengte.
-%                                                          
-% ======= Code =======                                     
-% clc                                                      
-% clear variables                                          
-% for a = 1:10                                             
-%    z(a) = a.^2;                                          
-% end                                                      
-% ======= Code =======                                     
+% De onderstaande code wordt zonder fouten uitgevoerd:
+%                                                     
+% ======= Code =======                                
+% clc                                                 
+% clear variables                                     
+% for nHerhaling = 1:10                               
+%    z(nHerhaling+1) = z(nHerhaling);                 
+% end                                                 
+% ======= Code =======                                
 %
-Antwoord = 1;
+Antwoord = 0;

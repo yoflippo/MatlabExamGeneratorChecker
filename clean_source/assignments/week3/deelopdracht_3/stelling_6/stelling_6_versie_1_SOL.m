@@ -1,9 +1,9 @@
 %% Stelling 6
 %
-% Met het statement 'axis equal' maak je de maatstreepjes
-% langs de assen van een grafiek allemaal even lang.     
+% Met het statement 'axis equal' pas je de schaling van
+% de assen van een grafiek aan.                        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

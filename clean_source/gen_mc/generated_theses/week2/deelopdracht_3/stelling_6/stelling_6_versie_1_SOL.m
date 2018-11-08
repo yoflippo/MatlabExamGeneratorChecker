@@ -1,6 +1,6 @@
 %% Stelling 6
 %
-% De volgende code geeft 2 enen terug:
+% De volgende code geeft 3 enen terug:
 %                                     
 % ======= Code =======                
 %                                     
@@ -10,4 +10,4 @@
 %                                     
 % ======= Code =======                
 %
-Antwoord = 1;
+Antwoord = 0;

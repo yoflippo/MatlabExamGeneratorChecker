@@ -1,9 +1,9 @@
 %% Stelling 2
 %
-% In Matlab kun je de AND operator gebruiken
-% m.b.v. ||, | en and().                    
+% In Matlab kun je de AND operator gebruiken 
+% m.b.v. &&, & en and().                     
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

@@ -1,9 +1,9 @@
 %% Stelling 4
 %
-% Met de rechte haken [ en ] kun je in Matlab  
-% verschillende character vectoren samenvoegen.
+% In de volgende coderegel heeft de min-operator 
+% prioriteit boven de macht-operator: 76 - 6^2.  
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

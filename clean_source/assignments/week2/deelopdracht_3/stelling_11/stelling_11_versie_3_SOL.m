@@ -6,8 +6,8 @@
 %                                         
 % vecA = [0 1 0];                         
 % vecB = [1 1 1];                         
-% vecA & vecB                             
+% vecA || vecB                            
 %                                         
 % ======= Code =======                    
 %
-Antwoord = 0;
+Antwoord = 1;

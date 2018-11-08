@@ -9,6 +9,9 @@ assignments/week1/
 assignments/week2/
 assignments/week3/
 assignments/week4/
+clean_source/gen_mc/generated_questions/
+clean_source/gen_mc/generated_theses/
+clean_source/assignments/
 submitted_bu/
 *.zip
 exam/exam_helper/analyse_exam/resultOverview.mat
@@ -24,6 +27,3 @@ exam/exam_helper/BiostaticaCijfersAnalyse.xlsx
 exam/Untitled.pdf
 exam/Untitled.mlx
 *.rar
-clean_source/gen_mc/generated_questions/
-clean_source/gen_mc/generated_theses/
-clean_source/assignments/

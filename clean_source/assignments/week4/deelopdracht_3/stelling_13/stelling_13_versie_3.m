@@ -4,8 +4,8 @@
 %                                                   
 % ------------code--------------                    
 %                                                   
-% [FileName. Pathname] = uigetfile('csv');          
-% data = Dlmread([FileName; PathName])              
+% [FileName, Pathname] = uigetfile('.csv');         
+% data = dlmread([FileName, PathName])              
 %                                                   
 % ------------code--------------                    
 %

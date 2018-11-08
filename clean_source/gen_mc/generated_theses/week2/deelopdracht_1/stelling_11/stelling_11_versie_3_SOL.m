@@ -1,13 +1,13 @@
 %% Stelling 11
 %
-% De input van een functie kan alleen een vector zijn.
+% Met de volgende code maak je een functie aan:
+%                                              
+% ======= Code =======                         
+%                                              
+% function [output]=naamfunctie(input)         
+%                                              
+% end                                          
+%                                              
+% ======= Code =======                         
 %
-Antwoord = 0;
-
-
-
-
-
-
-
-
+Antwoord = 1;

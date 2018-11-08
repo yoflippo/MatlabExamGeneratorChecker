@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Het is mogelijk om een .csv file te openen in Matlab.
+% Matlab kan headers van databestanden altijd probleemloos
+% inlezen.                                                
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

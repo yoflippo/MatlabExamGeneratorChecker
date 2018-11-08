@@ -1,15 +1,13 @@
 %% Stelling 5
 %
-% Matlab kan het gemiddelde van vector G niet berekenen 
-% omdat die niet weet welke waarde G heeft:             
-%                                                       
-%                                                       
-% ------------code--------------                        
-%                                                       
-% G = [1 3 3; 6 2 4 ; 2 9 7];                           
-% clear variables                                       
-% gemiddelde = mean(G)                                  
-%                                                       
-% ------------code--------------                        
+% De onderstaande functie aanroep uigetfile() opent
+% een window (venster) waarin alle mogelijke       
+% bestandstypes zijn te zien:                      
+%                                                  
+% ======= Code =======                             
+%                                                  
+% [FileName,PathNAme,FilterIndex] = uigetfile();   
+%                                                  
+% ======= Code =======                             
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

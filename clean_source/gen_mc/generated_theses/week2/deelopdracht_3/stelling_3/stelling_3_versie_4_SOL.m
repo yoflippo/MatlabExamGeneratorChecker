@@ -5,9 +5,9 @@
 % ======= Code =======                       
 %                                            
 % vectorA = [1 1 1 1];                       
-% vectorB = [0 1 0 1];                       
+% vectorB = [0 0 0 0];                       
 % vectorA & vectorB                          
 %                                            
 % ======= Code =======                       
 %
-Antwoord = 0;
+Antwoord = 1;

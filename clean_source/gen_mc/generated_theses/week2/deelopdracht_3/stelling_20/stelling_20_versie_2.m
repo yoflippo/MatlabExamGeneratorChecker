@@ -1,10 +1,10 @@
 %% Stelling 20
 %
-% De volgende code wordt geevalueerd tot een logische 1:
+% De volgende code wordt geevalueerd tot een logische 0:
 %                                                       
 % ======= Code =======                                  
 %                                                       
-% ne(true,false)                                        
+% ~(2 > 2);                                             
 %                                                       
 % ======= Code =======                                  
 %

@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% Met de functie fliplr() kun je van een rijvector
-% een kolomvector maken.                          
+% Met de functie whos() kun je zien welke variabelen in de
+% Workspace staan.                                        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

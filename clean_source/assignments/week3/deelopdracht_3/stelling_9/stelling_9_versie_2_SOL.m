@@ -1,9 +1,9 @@
 %% Stelling 9
 %
-% De diff() functie differientieert de aangeboden vector.
+% De diff() functie bepaalt het verschil tussen 2 opvolgende
+% getallen in een vector.                                   
 %
-Antwoord = 0;
-
+Antwoord = 1;
 
 
 

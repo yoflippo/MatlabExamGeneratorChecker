@@ -1,13 +1,13 @@
 %% Stelling 3
 %
-% Matlab zal tijdens het schrijven van code niet automatisch
-% operatoren wijzigen en aanvullen.                         
+% Gegeven: A = [4 2 7 4 5 6];                                 
+%                                                             
+% Met de onderstaande code zorg je ervoor dat de laatste drie 
+% elementen worden vervangen:                                 
+%                                                             
+% ------------code--------------                              
+% A(1:end) = [7 2 4];                                         
+% ------------code--------------                              
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-
-
 

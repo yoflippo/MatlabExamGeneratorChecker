@@ -1,10 +1,10 @@
 %% Stelling 15
 %
-% Als je niet aangeeft in wat voor type file je bestaande 
-% data opgeslagen wilt hebben, zal Matlab het automatisch 
-% als .csv opslaan.                                       
+% Je gebruik de functie dlmwrite() om csv bestanden weg 
+% te schrijven.                                         
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

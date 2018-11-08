@@ -1,7 +1,7 @@
 %% Stelling 25
 %
-% Variabelen in Matlab mogen beginnen met een
-% willekeurig symbool.                       
+% In het Command Window kun je NIET zelf 
+% Matlab commando's uitvoeren.           
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

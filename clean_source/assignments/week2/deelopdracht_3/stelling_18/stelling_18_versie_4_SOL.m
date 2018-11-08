@@ -1,9 +1,9 @@
 %% Stelling 18
 %
 % De OR-operator geeft bij twee logische nullen 
-% (de operands) een logische nul terug.         
+% (de operands) een logische 1 terug.           
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

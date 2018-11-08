@@ -1,13 +1,13 @@
 %% Stelling 10
 %
-% De volgende code wordt geevalueerd tot een logische 1:
+% De volgende code wordt geevalueerd tot een logische 1.
 %                                                       
 % ======= Code =======                                  
 %                                                       
-% 2 <= 2                                                
+% var = 2;                                              
+% var2 = 1;                                             
+% (var > var2) & (var2 > var);                          
 %                                                       
 % ======= Code =======                                  
 %
-Antwoord = 1;
-
-
+Antwoord = 0;

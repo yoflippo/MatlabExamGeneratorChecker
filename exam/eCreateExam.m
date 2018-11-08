@@ -4,7 +4,7 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all; close all;
-nOfMulChoiceAssignment = 40;
+nOfMulChoiceAssignment = 80;
 nOfScriptsFunctions = 19;
 weekNames = {'week1' 'week2' 'week3' 'week4'}; 
 
@@ -34,11 +34,13 @@ mkdirIf(ap.Assignments);
 ap.ExamSrcDir = fullfile(ap.CurrExam,nm.Exam);
 mkdirIf(fullfile(ap.CurrExam,'bonus'));
 ap.SUBMITTEDUNZIPPED = fullfile(ap.CurrExam,'submitted_unzipped');
+ap.DIRCLEANSRC = 'clean_source';
 mkdirIf(ap.SUBMITTEDUNZIPPED);
+
 % rmpath(genpath(ap.EXAMHELPERHEADER));
 % Copy the check exam script
 copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,['checkExam_' nm.CDate '.m']))
-copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurExam,'SendCHECKED_' nm.CDate '.m'))
+copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurrExam,['SendCHECKED_' nm.CDate '.m']))
 
 %% Some log settings
 diary(fullfile(ap.CurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
@@ -51,7 +53,9 @@ dbstop if error
 %% Generate MC files keep original files intact
 cd(ap.BASEFOLDEREX)
 removeShitFromDir(ap.Assignments);
+addpath(genpath(ap.DIRCLEANSRC));
 CreateAndCopyQuestions(ap,weekNames);
+rmpath(genpath(ap.DIRCLEANSRC));
 disp('Created MC-Questions')
 
 %% Redo the hashing of the copied questions/assignments 

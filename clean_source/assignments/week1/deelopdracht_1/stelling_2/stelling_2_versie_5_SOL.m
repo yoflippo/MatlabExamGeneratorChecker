@@ -1,10 +1,10 @@
 %% Stelling 2
 %
-% In de Workspace staan de bestanden (lees: geen
-% variabelen) van de 'Current Folder'.          
-%                                               
+% Als een foutloos script in de 'Current Folder' staat,
+% kun je het probleemloos uitvoeren.                   
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

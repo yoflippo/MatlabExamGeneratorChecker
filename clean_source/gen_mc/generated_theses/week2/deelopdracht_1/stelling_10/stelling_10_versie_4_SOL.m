@@ -1,13 +1,13 @@
 %% Stelling 10
 %
-% Met de onderstaande code kies je alle waarden van de 
-% eerste rij van de matrix A:                          
-%                                                      
-% ------------code--------------                       
-%                                                      
-% B = A(1,:);                                          
-%                                                      
-% ------------code--------------                       
+% Een functie kan worden aangeroepen vanuit het
+% Command Window.                              
 %
 Antwoord = 1;
+
+
+
+
+
+
 

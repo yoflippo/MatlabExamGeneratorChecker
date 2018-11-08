@@ -1,10 +1,10 @@
 %% Stelling 17
 %
-% In Matlab kun je met de ronde haken ( ) character
-% vectoren samenvoegen.                            
+% In Matlab wordt een stuk tekst zoals            
+% 'ditiseenstuktekst' ook wel een character vector
+% genoemd.                                        
 %
-Antwoord = 0;
-
+Antwoord = 1;
 
 
 

@@ -1,9 +1,9 @@
 %% Stelling 11
 %
-% De functie ones() levert altijd een vector bestaande
-% uit meer dan 1 element op.                          
+% Met het statement 'axis equal' maak je de assen van
+% een grafiek in de juiste verhouding.               
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

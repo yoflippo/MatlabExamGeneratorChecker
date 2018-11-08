@@ -4,10 +4,10 @@
 %                                         
 % --------Code-----------                 
 % massa= [42 31 35 12 31 42];             
-% gemiddeldeMassa = meal(massa)           
+% mediaanMassa = median(massa)            
 % ------------------------                
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

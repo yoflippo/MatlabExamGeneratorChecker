@@ -6,10 +6,10 @@
 % ======= Code =======                                     
 % n = 1;                                                   
 % t = -n:0.1:n;                                            
-% Y1 = t.^2;                                               
+% Y1 = t.^3;                                               
 %                                                          
 % figure;                                                  
-% plot(t,Y1,'ro','LineWidth',3);                           
+% plot(t,Y1,'r-','LineWidth',3);                           
 % ======= Code =======                                     
 %
-Antwoord = 1;
+Antwoord = 0;

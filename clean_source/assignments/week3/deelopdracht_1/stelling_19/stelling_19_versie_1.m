@@ -1,14 +1,15 @@
 %% Stelling 19
 %
-% De onderstaande code zonder foutmeldingen uitgevoerd:
-%                                                      
-% ======= Code =======                                 
-% clc                                                  
-% clear variables                                      
-% var = randn(1,100); %Genereren van random variabelen 
-% for nHerhaling = 1:10                                
-%    z(nHerhaling+1) = var(2*nHerhaling);              
-% end                                                  
-% ======= Code =======                                 
+% De onderstaande code geeft een foutmelding omdat    
+% omdat de variabele var niet groot genoeg is:        
+%                                                     
+% ======= Code =======                                
+% clc                                                 
+% clear variables                                     
+% var = randn(1,100); %Genereren van random variabelen
+% for nHerhaling = 1:10                               
+%    z(nHerhaling+1) = var(2*nHerhaling);             
+% end                                                 
+% ======= Code =======                                
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

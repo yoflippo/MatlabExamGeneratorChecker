@@ -1,13 +1,13 @@
 %% Stelling 4
 %
-% De volgende code geeft een logische 1 terug:
-%                                             
-% ======= Code =======                        
-%                                             
-% 0 | 1                                       
-%                                             
-% ======= Code =======                        
+% De OR-operator kan op de volgende manieren worden gebruikt:
+%                                                            
+% 1 - OR()                                                   
+% 2 - |||                                                    
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+
 
 

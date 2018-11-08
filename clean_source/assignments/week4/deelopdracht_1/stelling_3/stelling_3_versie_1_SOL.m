@@ -1,9 +1,9 @@
 %% Stelling 3
 %
-% Bij een programeerfout krijg je een foutmelding
-% in je Command Window.                          
+% Een programeerfout is een fout die geen foutmelding
+% tot gevolg heeft.                                  
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

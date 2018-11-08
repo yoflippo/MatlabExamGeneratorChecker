@@ -1,13 +1,22 @@
 %% Stelling 3
 %
-% De onderstaande code wordt niet correct uitgevoerd:
-%                                                    
-% ======= Code =======                               
-% clc                                                
-% clear variables %workspace leegmaken               
-% for i = -8:8                                       
-%    i;                                              
-% end                                                
-% ======= Code =======                               
+% Je mag de variabele i ook een andere naam geven.
+% Zie onderstaande code.                          
+%                                                 
+% ======= Code 1 =======                          
+% clc                                             
+% clear variables %workspace leegmaken            
+% for i = 1:8                                     
+%    i;                                           
+% end                                             
+% ======= Code 1 =======                          
+%                                                 
+% ======= Code 2 =======                          
+% clc                                             
+% clear variables %workspace leegmaken            
+% for d = 1:8                                     
+%    d;                                           
+% end                                             
+% ======= Code 2 =======                          
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

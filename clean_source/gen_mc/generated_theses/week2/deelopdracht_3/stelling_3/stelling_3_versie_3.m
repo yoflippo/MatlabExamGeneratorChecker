@@ -5,7 +5,7 @@
 %                                            
 % ======= Code =======                       
 %                                            
-% vectorA = [0 0 0 0];                       
+% vectorA = [1 1 1 1];                       
 % and(vectorA,vectorA)                       
 %                                            
 % ======= Code =======                       

@@ -1,9 +1,9 @@
 %% Stelling 20
 %
-% De while-lus herhaalt zichzelf als de expressie (test)
-% true is.                                              
+% De for-lus herhaalt zichzelf als de expressie true is.
 %
-Antwoord = 1;
+Antwoord = 0;
+
 
 
 

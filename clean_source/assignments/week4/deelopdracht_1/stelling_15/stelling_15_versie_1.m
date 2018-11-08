@@ -3,11 +3,11 @@
 % De volgende code geeft een foutmelding: 
 %                                         
 % --------Code-----------                 
-% massa= [42 31 35 12 31 42];             
-% gemiddeldeMassa = mean(massa)           
+% A = [192 892 109 ];                     
+% B = [12 49 100];                        
+% A .- B                                  
 % ------------------------                
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
 
 

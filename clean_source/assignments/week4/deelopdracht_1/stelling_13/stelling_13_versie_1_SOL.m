@@ -3,8 +3,8 @@
 % De volgende code geeft een foutmelding: 
 %                                         
 % --------Code-----------                 
-% massa= [42 31 35 12 31 42];             
-% mediaanMassa = median(massa)            
+% A = [1 2 3;4 5 6];                      
+% A(4:6)                                  
 % ------------------------                
 %
 Antwoord = 0;

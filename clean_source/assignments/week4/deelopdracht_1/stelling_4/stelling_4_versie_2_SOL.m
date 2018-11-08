@@ -3,11 +3,12 @@
 % De volgende code geeft een foutmelding: 
 %                                         
 % --------Code-----------                 
-% A = [192 892 109 ];                     
-% B = [12 49 100];                        
-% A .^ 2                                  
+% n=[1 21 31 23 12]                       
+% if n==1                                 
+%     x=3                                 
+% else                                    
+%     x=4                                 
+% end                                     
 % ------------------------                
 %
 Antwoord = 0;
-
-

@@ -1,9 +1,9 @@
 %% Stelling 8
 %
-% De standaard Matlab functie find() geeft een het
-% element terug als dat is gevonden.              
+% Met de standaard functie numel() vraag je het
+% aantal elementen van een vector of matrix op.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

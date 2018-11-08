@@ -1,7 +1,7 @@
 %% Stelling 13
 %
-% De afmetingen (dimensies) van een vector v = [3 3 3 3] 
-% zijn 1 bij 3.                                          
+% Als BT-er gebruik je bijna altijd de standaard functies       
+% van Matlab en schrijf je bijna nooit een zelfgemaakte functie.
 %
 Antwoord = 0;
 

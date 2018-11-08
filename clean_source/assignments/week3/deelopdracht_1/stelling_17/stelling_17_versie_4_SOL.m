@@ -9,7 +9,7 @@
 %                                                         
 % figure;                                                 
 % plot(t,Y1,'r');                                         
-% ylim([1 2])                                             
+% xlim([1 2])                                             
 % ======= Code =======                                    
 %
-Antwoord = 1;
+Antwoord = 0;

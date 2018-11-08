@@ -1,21 +1,13 @@
 %% Stelling 11
 %
-% Neem aan dat het code commentaar in het onderstaande
-% voorbeeld de gewenste handeling beschrijft.         
+% Er zijn in de readers twee type fouten gedefinieerd:
 %                                                     
-% In dit codevoorbeeld zit geen programmeerfout:      
-%                                                     
-% ======= Code =======                                
-%                                                     
-% 1- % Vermenigvuldigen van a en b                    
-% 2- a = 1;                                           
-% 3- b = 2;                                           
-% 4- mul = a * b;                                     
-% 5- % Optellen van c en a                            
-% 6- c = a;                                           
-% 7- d = 4;                                           
-% 8- som = c + a;                                     
-%                                                     
-% ======= Code =======                                
+% 1 - Syntax fouten                                   
+% 2 - Fouten veroorzaakt door Matlab                  
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+
+
+

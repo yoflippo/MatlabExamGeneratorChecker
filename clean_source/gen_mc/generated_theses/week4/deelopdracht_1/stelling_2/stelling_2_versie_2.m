@@ -1,13 +1,13 @@
 %% Stelling 2
 %
-%  Wanneer je het bestand kniehoekData.mat in de goede 
-%  folder hebt staan en de volgende code uitvoert:     
-%                                                      
-%  kniehoek = load('kniehoekData.mat')                 
-%                                                      
-%  krijg je een foutmelding                            
+% Wanneer je het element behorende bij index 2 opvraagt 
+% van de vector v=[ -3 -2 -1 0 1 2 3], krijg je een     
+% foutmelding.                                          
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
 
 
 

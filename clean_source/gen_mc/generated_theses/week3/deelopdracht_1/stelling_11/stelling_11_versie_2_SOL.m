@@ -1,7 +1,7 @@
 %% Stelling 11
 %
-% Als je iets plot moet de data in de Workspace van
-% Matlab staan.                                    
+% Als je in Matlab een plot aanmaakt, kan de gebruiker 
+% bepalen of deze in een figure komt te staan.         
 %
 Antwoord = 0;
 

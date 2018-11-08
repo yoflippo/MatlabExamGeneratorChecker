@@ -1,9 +1,9 @@
 %% Stelling 18
 %
-% De OR-operator geeft bij twee logische nullen 
-% (de operands) een logische 1 terug.           
+% De element-wise OR-operator kan worden toegepast 
+% op vectoren.                                     
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

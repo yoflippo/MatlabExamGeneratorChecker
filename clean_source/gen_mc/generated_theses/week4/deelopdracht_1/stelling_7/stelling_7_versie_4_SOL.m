@@ -4,10 +4,10 @@
 %                                         
 % --------Code-----------                 
 % stuwKracht= [42 31 35 12 31 42];        
-% minimaleStuwkracht= min(stuwKracht)     
+% minimaleStuwkracht= min(Kracht)         
 % ------------------------                
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

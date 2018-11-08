@@ -1,11 +1,10 @@
-% Deze opdracht bestaat uit een multiple choice vraag. Per vraag
-% kan slechts 1 antwoord worden gegeven, dit zijn de mogelijke
-% antwoorden: A, B, C en D. Matlab is case-sensitive, dus let op hoofd- en
-% kleine letter.
+% Deze opdracht bestaat uit een stelling. Een stelling is waar of onwaar.
+% Gebruik een 1 (true) als je stelling waar is.
+% Gebruik een 0 (false)als je stelling onwaar is.
 %
-A = 1; B = 2; C = 3; D = 4;
-% Voorbeeld antwoord:       Antwoord = A; 
-%                NIET GOED: Antwoord = a;
+% Andere type antwoorden worden foutgerekend.
 %
+% Voorbeeld antwoord:
+%                   Antwoord = 1;
 %% =========== BLIJF VAN HET BOVENSTAANDE CODE COMMENTAAR AF! =============
  

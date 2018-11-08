@@ -1,8 +1,8 @@
 %% Stelling 4
 %
-% Een kolom-vector bestaat uit 1 rij met data.
+% Een kolom-vector bestaat uit 1 kolom met data.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

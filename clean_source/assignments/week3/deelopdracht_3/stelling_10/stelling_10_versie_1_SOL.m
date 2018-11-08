@@ -1,6 +1,6 @@
 %% Stelling 10
 %
-% Een tijd-as van een plot MOET lineair zijn.
+% De operatie [1 2 3]/[1 2 3] geeft als resultaat [1 1 1]
 %
 Antwoord = 0;
 

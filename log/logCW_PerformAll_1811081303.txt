@@ -271,4 +271,98 @@ week2: TRUE = 78 | FALSE = 81
 week3: TRUE = 76 | FALSE = 77
 week4: TRUE = 61 | FALSE = 64
 TOTAAL: TRUE = 296 | FALSE = 303
-{Operation
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('removeShitFromDir', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\miscellaneous\removeShitFromDir.m', 48)" style="font-weight:bold">removeShitFromDir</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\miscellaneous\removeShitFromDir.m',48,0)">line 48</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 21)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',21,0)">line 21</a>)
+    removeShitFromDir(outputDir)
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 44)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',44,0)">line 44</a>)
+    CreateAndCopyQuestions(con,gWeekNames);
+} 
+!Winrar
+'Winrar' is not recognized as an internal or external command, 
+operable program or batch file. 
+!Winrar.exe
+'Winrar.exe' is not recognized as an internal or external command, 
+operable program or batch file. 
+!Explorer
+try
+    !Winrar.exe
+    
+catch
+    a = 1;
+end
+'Winrar.exe' is not recognized as an internal or external command, 
+operable program or batch file. 
+try
+    !Winrar.exe
+    
+catch
+    a = 1
+end
+'Winrar.exe' is not recognized as an internal or external command, 
+operable program or batch file. 
+eCreateExam
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam'
+
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m',41,1)">41  </a>copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurExam,['SendCHECKED_' nm.CDate '.m']))
+ap.CurExam
+{Reference to non-existent field 'CurExam'.
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m',41,1)">41  </a>copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurExam,['SendCHECKED_' nm.CDate '.m']))
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Reference to non-existent field 'CurExam'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('eCreateExam', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m', 41)" style="font-weight:bold">eCreateExam</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m',41,0)">line 41</a>)
+copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurExam,['SendCHECKED_' nm.CDate '.m']))
+} 
+if system_dependent('IsDebugMode')==1, dbquit all; end
+eCreateExam
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam'
+
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m',41,1)">41  </a>copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurrExam,['SendCHECKED_' nm.CDate '.m']))
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfile')" style="font-weight:bold">copyfile</a>
+No matching files were found.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('eCreateExam', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m', 41)" style="font-weight:bold">eCreateExam</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m',41,0)">line 41</a>)
+copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurrExam,['SendCHECKED_' nm.CDate '.m']))
+} 
+ap.CurrExam
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\Created\Tentamen_1811081312'
+
+fullfile(ap.CurrExam,['SendCHECKED_' nm.CDate '.m'])
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\Created\Tentamen_1811081312\SendCHECKED_1811081312.m'
+
+edit(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'))
+ap.EXAMHELPERHEADER
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\exam_helper\exam_header'
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+eCreateExam
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam'
+
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m',41,1)">41  </a>copyfile(fullfile(ap.EXAMHELPERHEADER,'SendCHECKED_EXAMS.m'),fullfile(ap.CurrExam,['SendCHECKED_' nm.CDate '.m']))
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\exam\eCreateExam.m',44,1)">44  </a>diary(fullfile(ap.CurrExamLog,['log_' mfilename '_' datetimetxt() '.txt']));
+if system_dependent('IsDebugMode')==1, dbstep; end

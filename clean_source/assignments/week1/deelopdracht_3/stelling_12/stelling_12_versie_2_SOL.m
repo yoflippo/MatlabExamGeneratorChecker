@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% Debuggen is het zetten van breakpoints in een programma.
+% Met behulp van de functie addall() kunnen de waardes 
+% van een vector bij elkaar worden opgeteld.           
 %
 Antwoord = 0;
-
 
 
 

@@ -1,19 +1,15 @@
 %% Stelling 19
 %
-% De while-lus stopt in het onderstaande voorbeeld met herhalen
-% omdat de variabele teller op een gegeven moment kleiner is   
-% dan 10.                                                      
-%                                                              
-% ======= Code =======                                         
-% clc                                                          
-% clear variables                                              
-% blTest = false;                                              
-% teller = 0;                                                  
-% while teller < 10 && blTest == false                         
-%     disp(num2str(teller));                                   
-%     teller = teller + 1;                                     
-% end                                                          
-% ======= Code =======                                         
-%                                                              
+% De onderstaande code geeft een foutmelding omdat    
+% omdat de variabele var niet groot genoeg is:        
+%                                                     
+% ======= Code =======                                
+% clc                                                 
+% clear variables                                     
+% var = randn(1,100); %Genereren van random variabelen
+% for nHerhaling = 1:10                               
+%    z(nHerhaling+1) = var(2*nHerhaling);             
+% end                                                 
+% ======= Code =======                                
 %
-Antwoord = 1;
+Antwoord = 0;

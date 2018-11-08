@@ -1,9 +1,9 @@
 %% Stelling 17
 %
-% De element-wise AND-operator kan niet 
-% worden toegepast op een vector.       
+% De element-wise AND-operator kan ook worden
+% toegepast op een vector.                   
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

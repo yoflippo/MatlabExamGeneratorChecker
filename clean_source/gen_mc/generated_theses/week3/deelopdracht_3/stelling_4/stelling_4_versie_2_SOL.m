@@ -5,11 +5,11 @@
 % ======= Code =======                     
 %                                          
 % stap = 2;                                
-% eindHoek = 30;                           
+% eindHoek = 33;                           
 % hoeken = 0:stap:eindHoek;                
 %                                          
 % ======= Code =======                     
 %                                          
-% De variabele 'hoeken' bevat 15 elementen.
+% De variabele 'hoeken' bevat 17 elementen.
 %
-Antwoord = 0;
+Antwoord = 1;

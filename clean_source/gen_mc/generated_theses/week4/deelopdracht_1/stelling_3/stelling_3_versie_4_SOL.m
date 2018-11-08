@@ -1,10 +1,10 @@
 %% Stelling 3
 %
-% Wanneer je een zelfgemaakte Matlab functie aanroept die
-% niet in de Current Folder of path staat, krijg je een  
-% foutmelding.                                           
+% Je kunt in Matlab een zelfgemaakte functie aanroepen
+% en gebruiken als deze niet in de Current Folder of  
+% Matlab path staat.                                  
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

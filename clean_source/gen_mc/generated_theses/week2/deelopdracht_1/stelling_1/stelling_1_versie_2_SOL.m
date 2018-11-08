@@ -1,6 +1,6 @@
 %% Stelling 1
 %
-% Een functie kan meerdere inputs hebben.
+% Je kan de naam van de output van een functie zelf kiezen.
 %
 Antwoord = 1;
 

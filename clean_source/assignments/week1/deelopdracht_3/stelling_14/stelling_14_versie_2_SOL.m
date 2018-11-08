@@ -1,9 +1,9 @@
 %% Stelling 14
 %
-% Het schrijven van een functie kan de programmeur helpen
-% om een programma beter leesbaar te maken.              
+% Het schrijven van een functie is verplicht in een Matlab
+% programma.                                              
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -1,9 +1,9 @@
 %% Stelling 16
 %
 % De EN-operator (AND-operator) geeft een 'true' terug als
-% de operands allebei 'false' zijn.                       
+% de operands allebei 'true' zijn.                        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

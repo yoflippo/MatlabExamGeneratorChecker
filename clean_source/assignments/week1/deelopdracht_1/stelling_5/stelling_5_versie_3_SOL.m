@@ -7,8 +7,8 @@
 % ======= Code =======                                        
 %                                                             
 % tekst = 'hieperdepiephoera';                                
-% selectie = tekst(end-5:end);                                
+% selectie = tekst(end-4:end);                                
 %                                                             
 % ======= Code =======                                        
 %
-Antwoord = 0;
+Antwoord = 1;

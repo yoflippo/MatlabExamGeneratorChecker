@@ -10,6 +10,6 @@
 % ======= Code =======                                    
 %                                                         
 % Na het uitvoeren van de voorgaande code bevat D2 exact  
-% 4 elementen.                                            
+% 3 elementen.                                            
 %
-Antwoord = 1;
+Antwoord = 0;

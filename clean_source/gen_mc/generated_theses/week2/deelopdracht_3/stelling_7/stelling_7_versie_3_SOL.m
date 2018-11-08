@@ -1,7 +1,6 @@
 %% Stelling 7
 %
-% De volgende code geeft een logische 1 terug:
-%                                             
+% De volgende code geeft een logische 0 terug:
 %                                             
 % ======= Code =======                        
 %                                             
@@ -10,4 +9,5 @@
 %                                             
 % ======= Code =======                        
 %
-Antwoord = 0;
+Antwoord = 1;
+

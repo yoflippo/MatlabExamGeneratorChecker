@@ -1,7 +1,7 @@
 %% Stelling 16
 %
-% De eerste output van de standaard functie max() geeft je 
-% het index nummer terug.                                  
+% Bij het opslaan van een functie geef je het bestand
+% dezelfde naam als de functie.                      
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

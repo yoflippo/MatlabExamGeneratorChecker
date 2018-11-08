@@ -1,6 +1,6 @@
 %% Stelling 1
 %
-% Een functie kan meerdere inputs hebben.
+% Je kan de naam van de output van een functie zelf kiezen.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

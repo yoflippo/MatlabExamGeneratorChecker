@@ -1,10 +1,10 @@
 %% Stelling 3
 %
-% Bij een programeerfout krijg je een foutmelding
-% in je Command Window.                          
+% Wanneer je een zelfgemaakte Matlab functie aanroept die
+% niet in de Current Folder of path staat, krijg je een  
+% foutmelding.                                           
 %
-Antwoord = 0;
-
+Antwoord = 1;
 
 
 

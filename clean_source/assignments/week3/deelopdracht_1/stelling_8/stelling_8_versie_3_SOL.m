@@ -1,15 +1,18 @@
 %% Stelling 8
 %
-% De onderstaande code wordt herhaald door de
-% while-lus:                                 
-%                                            
-% ======= Code =======                       
-% InversieVoet = true;                       
-% EversieVoet = ~InversieVoet;               
-% while InversieVoet == EversieVoet          
-%     disp('Probleem met de voet')           
-% end                                        
-% ======= Code =======                       
-%                                            
+% De onderstaande code wordt niet herhaald door de 
+% while-lus:                                       
+%                                                  
+% ======= Code =======                             
+%                                                  
+% InversieVoet = true;                             
+% EversieVoet = ~InversieVoet;                     
+%                                                  
+% while InversieVoet == EversieVoet                
+%     disp('Probleem met de voet')                 
+% end                                              
+%                                                  
+% ======= Code =======                             
+%                                                  
 %
-Antwoord = 0;
+Antwoord = 1;

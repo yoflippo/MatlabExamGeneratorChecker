@@ -1,10 +1,10 @@
 %% Stelling 11
 %
-% Wanneer je wilt controleren of twee variabelen 
-% aan elkaar gelijk zijn, moet je twee '=' tekens
-% gebruiken.                                     
+% Wanneer je wilt controleren of twee variabelen
+% aan elkaar gelijk zijn, moet je 1 '=' teken   
+% gebruiken.                                    
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -9,7 +9,7 @@
 %                                                         
 % figure;                                                 
 % plot(t,Y1,'r');                                         
-% ylim([1 2])                                             
+% xlim([1 2])                                             
 % ======= Code =======                                    
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

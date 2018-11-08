@@ -1,4 +1,4 @@
-function res = stelling_14_versie_3_CHECK(absPathStudentSol)
+function res = xxx(absPathStudentSol)
 
 res = runChecksOnMCAssignment(absPathStudentSol,mfilename('fullpath'));
 

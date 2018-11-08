@@ -1,14 +1,15 @@
 %% Stelling 6
 %
-% De onderstaande code wordt met foutmeldingen uitgevoerd:
-%                                                         
-% ======= Code =======                                    
-% clc                                                     
-% clear variables                                         
-% var = randn(1,100); %Genereren van random variabelen    
-% for nRep = 2:10                                         
-%    z(nRep) = var(nRep-1) + var(nRep) / 2;               
-% end                                                     
-% ======= Code =======                                    
+% De onderstaande code wordt zonder foutmelding uitgevoerd:
+%                                                          
+% ======= Code =======                                     
+% clc                                                      
+% clear variables                                          
+% %Genereren van random variabelen                         
+% randomWaardes = randn(1,20);                             
+% for nR = 20:100                                          
+%    z(nR) = randomWaardes(nR) + randomWaardes(nR+1);      
+% end                                                      
+% ======= Code =======                                     
 %
 Antwoord = 0;

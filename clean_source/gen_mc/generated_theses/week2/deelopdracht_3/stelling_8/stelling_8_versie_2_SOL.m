@@ -3,9 +3,9 @@
 % De equality-operator komt in twee vormen:
 %                                          
 % 1 - ==                                   
-% 2 - eq()                                 
+% 2 - eo()                                 
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

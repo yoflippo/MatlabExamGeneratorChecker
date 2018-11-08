@@ -1,10 +1,10 @@
 %% Stelling 9
 %
-% Een header van een databestand is onhandig, want de 
-% informatie in de header heb je als gebruiker nooit  
-% nodig.                                              
+% Het is mogelijk Excel bestanden met Matlab te lezen 
+% door de functie xlsread() te gebruiken.             
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

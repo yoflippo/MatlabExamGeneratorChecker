@@ -1,16 +1,13 @@
 %% Stelling 16
 %
-% In de onderstaande code mag de variabele i worden gebruikt
-% in een berekening:                                        
-%                                                           
-%                                                           
-% ======= Code =======                                      
-% clc                                                       
-% clear variables %workspace leegmaken                      
-% for i = 1:8                                               
-%    disp('Doe iets');                                      
-%    z = i+1;                                               
-% end                                                       
-% ======= Code =======                                      
+% Een for-lus kun je gebruiken als je bijvoorbeeld de index   
+% van een vector bij een element van een vector moet optellen.
 %
 Antwoord = 1;
+
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 %% Stelling 5
 %
-% Bij het maken van een eigen functie kan je doorgaans
-% zelf kiezen hoe je de output variabelen noemt.      
+% Bij het maken van een eigen functie geef je doorgaans
+% de output variabele altijd dezelfde naam.            
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

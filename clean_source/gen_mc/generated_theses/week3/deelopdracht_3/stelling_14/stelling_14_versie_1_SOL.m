@@ -1,13 +1,20 @@
 %% Stelling 14
 %
-% Het is mogelijk om in 1 regel met relationele operatoren
-% alle waardes van een vector te selecteren die tussen -1 
-% en 1 liggen.                                            
+% De output van code 1 en code 2 is identiek:
+%                                            
+% <<< Code 1 >>>                             
+% for i = 1:10                               
+%     disp(i)                                
+% end                                        
+% <<< Code 1 >>>                             
+%                                            
+%                                            
+% <<< Code 2 >>>                             
+% i = 1                                      
+% while i < 11                               
+%     disp(i)                                
+%     i = i+1;                               
+% end                                        
+% <<< Code 2 >>>                             
 %
 Antwoord = 1;
-
-
-
-
-
-

@@ -1,9 +1,9 @@
 %% Stelling 6
 %
-% Matlab heeft een ingebakken 'data inlees functionaliteit' 
-% genaamd 'Import Data'.                                    
+% Het is mogelijk om een bestand met de extensie .txt naar
+% .csv om te zetten, maar niet van .csv naar .txt.        
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -3,11 +3,11 @@
 % De volgende code geeft een foutmelding: 
 %                                         
 % --------Code-----------                 
-% A = [192 892 109 ];                     
-% B = [12 49 100];                        
-% A .- B                                  
+% Matrix=[ 78 127 28; 291 29 12; 92 19 0];
+% Matrix(1,1:3) = [32 21 32]              
 % ------------------------                
 %
-Antwoord = 1;
+Antwoord = 0;
+
 
 

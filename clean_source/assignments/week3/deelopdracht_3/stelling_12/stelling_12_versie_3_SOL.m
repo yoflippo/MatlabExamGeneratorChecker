@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% De functie bar genereert een lijngrafiek.
+% De functie aanroep 'zeros(3)' genereert een matrix
+% met 3x3 elementen.                                
 %
-Antwoord = 0;
-
+Antwoord = 1;
 
 
 

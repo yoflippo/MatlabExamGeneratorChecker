@@ -1,8 +1,8 @@
 %% Stelling 1
 %
-% Een functie kan niet meer dan 1 input hebben.
+% Een functie kan meerdere inputs hebben.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

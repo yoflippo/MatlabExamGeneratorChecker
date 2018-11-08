@@ -1,7 +1,7 @@
 %% Stelling 8
 %
-% Met een while-lus kan je een programma maken dat oneindig
-% zal doorgaan.                                            
+% Als je weet hoevaak je iets moet herhalen gebruik je een
+% for-lus.                                                
 %
 Antwoord = 1;
 

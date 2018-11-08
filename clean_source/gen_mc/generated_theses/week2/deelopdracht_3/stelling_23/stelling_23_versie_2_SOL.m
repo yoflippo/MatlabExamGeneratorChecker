@@ -4,10 +4,10 @@
 %                                             
 % ======= Code =======                        
 %                                             
-% if true                                     
-%     2+2;                                    
+% if false                                    
+%     % code                                  
 % end                                         
 %                                             
 % ======= Code =======                        
 %
-Antwoord = 1;
+Antwoord = 0;

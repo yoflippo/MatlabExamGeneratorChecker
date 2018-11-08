@@ -1,9 +1,9 @@
 %% Stelling 7
 %
-% De standaard functie strcmp() vergelijkt of twee strings
-% identiek zijn.                                          
+% Wanneer je find(v==10) uitvoert met de                
+% vector v = [9 8 17 18 10 13] krijg je als antwoord 10.
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

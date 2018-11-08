@@ -1,13 +1,13 @@
 %% Stelling 8
 %
-% De equality-operator komt in twee vormen:
-%                                          
-% 1 - ==                                   
-% 2 - eq()                                 
+% De volgende operatoren zijn relationele operatoren:
+%                                                    
+% - >                                                
+% - <                                                
+% - >=                                               
+% - ||                                               
+% - ==                                               
 %
-Antwoord = 1;
-
-
-
+Antwoord = 0;
 
 

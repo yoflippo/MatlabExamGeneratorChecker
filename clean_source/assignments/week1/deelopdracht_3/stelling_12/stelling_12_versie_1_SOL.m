@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% Debuggen is het verwijderen van fouten uit een Matlab 
-% programma.                                            
+% Als je programma is gestopt m.b.v. een breakpoint dan   
+% kan je niet de variabelen in de Workspace niet bekijken.
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

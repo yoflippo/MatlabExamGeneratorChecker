@@ -6,8 +6,7 @@
 %                                             
 % A = 1;                                      
 % B = 2;                                      
-% C = 3;                                      
-% if (A >= B) | (C)                           
+% if A >= B                                   
 %     'hoi'                                   
 % else                                        
 %     'dag'                                   
@@ -15,4 +14,4 @@
 %                                             
 % ======= Code =======                        
 %
-Antwoord = 1;
+Antwoord = 0;

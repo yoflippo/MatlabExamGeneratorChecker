@@ -1,7 +1,7 @@
 %% Stelling 4
 %
 % In het onderstaande code voorbeeld krijgt een vector genaamd
-% VECTOR de lengte 10.                                        
+% VECTOR de lengte 11.                                        
 %                                                             
 % ======= Code =======                                        
 % clc                                                         

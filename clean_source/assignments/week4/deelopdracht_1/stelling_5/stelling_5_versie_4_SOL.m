@@ -1,13 +1,13 @@
 %% Stelling 5
 %
-% Wanneer je een standaard Matlab functie aanroept in een       
-% script, die niet in dezelfde map of path staat als je script, 
-% krijg je een foutmelding.                                     
+% De volgende code geeft een foutmelding: 
+%                                         
+% --------Code-----------                 
+% A = [192 892 109 ];                     
+% B = [12 49 100];                        
+% A .+ 2                                  
+% ------------------------                
 %
-Antwoord = 0;
-
-
-
-
+Antwoord = 1;
 
 

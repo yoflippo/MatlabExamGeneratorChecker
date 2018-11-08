@@ -3,11 +3,11 @@
 % De volgende code geeft een foutmelding: 
 %                                         
 % --------Code-----------                 
-% A = [192 892 109 ];                     
-% B = [12 49 100];                        
-% A .- B                                  
+% massa= [42 31 35 12 31 42];             
+% gemiddeldeMassa = mean(massa)           
 % ------------------------                
 %
-Antwoord = 1;
+Antwoord = 0;
+
 
 

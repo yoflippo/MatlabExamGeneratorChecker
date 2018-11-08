@@ -1,13 +1,13 @@
 %% Stelling 23
 %
-% De code in de if-statement wordt uitgevoerd:
-%                                             
-% ======= Code =======                        
-%                                             
-% if false                                    
-%     % code                                  
-% end                                         
-%                                             
-% ======= Code =======                        
+% De else-statement van een if-else-statement wordt 
+% uitgevoerd als de expressie false is.             
 %
-Antwoord = 0;
+Antwoord = 1;
+
+
+
+
+
+
+

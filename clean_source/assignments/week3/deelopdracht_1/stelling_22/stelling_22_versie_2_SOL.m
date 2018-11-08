@@ -10,8 +10,8 @@
 % hold on;                                   
 % vectorTwee = 22:333;                       
 % plot(vectorTwee,'b')                       
-% titel('Kracht1');                          
+% title('Kracht1');                          
 %                                            
 % ======= Code =======                       
 %
-Antwoord = 0;
+Antwoord = 1;

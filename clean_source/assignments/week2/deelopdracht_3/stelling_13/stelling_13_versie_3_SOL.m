@@ -6,7 +6,7 @@
 %                                             
 % A = 1;                                      
 % B = 2;                                      
-% C = 0;                                      
+% C = 3;                                      
 % if (A >= B) | (C)                           
 %     'hoi'                                   
 % else                                        
@@ -15,4 +15,4 @@
 %                                             
 % ======= Code =======                        
 %
-Antwoord = 0;
+Antwoord = 1;

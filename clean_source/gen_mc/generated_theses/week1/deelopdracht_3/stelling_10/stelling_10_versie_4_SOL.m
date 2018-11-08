@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Het is ongebruikelijk dat je als Matlab programmeur
-% zelf functies schrijft.                            
+% Het is heel normaal dat je als Matlab programmeur 
+% zelf functies schrijft.                           
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

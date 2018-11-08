@@ -1,13 +1,13 @@
 %% Stelling 10
 %
-% In de volgende code wordt alleen bij het laatste element 
-% van de vector de waarde 78 opgeteld:                     
-%                                                          
-% ------------code--------------                           
-% vector = 22:33;                                          
-% vector = vector + 78;                                    
-% ------------code--------------                           
+% In de volgende code wordt er bij elk element van
+% de vector de waarde 99 opgeteld:                
+%                                                 
+% ------------code--------------                  
+% vector = 0:10;                                  
+% vector = vector + 99;                           
+% ------------code--------------                  
 %
-Antwoord = 0;
+Antwoord = 1;
 
 

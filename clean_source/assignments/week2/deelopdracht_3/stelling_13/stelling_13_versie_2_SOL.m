@@ -1,6 +1,6 @@
 %% Stelling 13
 %
-% In het Command Window wordt 'hoi' afgedrukt:
+% In het Command Window wordt 'dag' afgedrukt:
 %                                             
 % ======= Code =======                        
 %                                             
@@ -14,4 +14,4 @@
 %                                             
 % ======= Code =======                        
 %
-Antwoord = 0;
+Antwoord = 1;

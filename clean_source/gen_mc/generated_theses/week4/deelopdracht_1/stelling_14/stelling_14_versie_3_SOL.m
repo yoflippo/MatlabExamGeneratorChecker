@@ -1,9 +1,9 @@
 %% Stelling 14
 %
-% Wanneer je de index (1,1) op vraagt                                          
-% van de vector v=[1.1 1.2 1.3] krijg je een foutmelding.                      
+% Wanneer je een index (1,1) op vraagt                                            
+% van de vector v=[1.1 1.2 1.3] krijg je geen foutmelding.                        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

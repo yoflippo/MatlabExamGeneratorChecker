@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% Een vector bestaande uit logicals kan de waarde 0 bevatten.
+% Een vector bestaande uit logicals kan niet worden         
+% worden gebruikt om elementen van een vector te selecteren.
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

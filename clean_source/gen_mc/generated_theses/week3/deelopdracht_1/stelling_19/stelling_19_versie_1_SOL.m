@@ -1,14 +1,13 @@
 %% Stelling 19
 %
-% De onderstaande code zonder foutmeldingen uitgevoerd:
-%                                                      
-% ======= Code =======                                 
-% clc                                                  
-% clear variables                                      
-% var = randn(1,100); %Genereren van random variabelen 
-% for nHerhaling = 1:10                                
-%    z(nHerhaling+1) = var(2*nHerhaling);              
-% end                                                  
-% ======= Code =======                                 
+% Als je in Matlab twee vectoren in 1 figure wilt tekenen
+% (m.b.v. plot()) gebruik je het commando 'hold'.        
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+
+
+
+
+

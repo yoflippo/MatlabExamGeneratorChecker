@@ -1,7 +1,7 @@
 %% Stelling 12
 %
-% De if-statement wordt uitgevoerd als de expressie tot
-% een true wordt geevalueerd.                          
+% De if-statement wordt gebruikt voor het maken van
+% beslissingen.                                    
 %
 Antwoord = 1;
 

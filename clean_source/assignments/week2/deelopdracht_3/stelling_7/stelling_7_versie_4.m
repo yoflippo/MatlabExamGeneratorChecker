@@ -1,13 +1,13 @@
 %% Stelling 7
 %
-% De volgende code geeft een logische 0 terug:
-%                                             
-% ======= Code =======                        
-%                                             
-% varA = 1;                                   
-% and(~varA,varA)                             
-%                                             
-% ======= Code =======                        
+% De NOT-operator geeft bij de volgende code een 'true'
+% terug:                                               
+%                                                      
+% ======= Code =======                                 
+%                                                      
+% ~true                                                
+%                                                      
+% ======= Code =======                                 
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

@@ -15,8 +15,6 @@ CountNumberOfFALSE_TRUE;
 %% Iterate over each available week
 for nWk = 1:length(weekNames)
     
-    
-    
     outputDir = fullfile(apGeneratedTheses,weekNames{nWk});
     removeShitFromDir(outputDir)
     if ~exist(outputDir,'dir')
