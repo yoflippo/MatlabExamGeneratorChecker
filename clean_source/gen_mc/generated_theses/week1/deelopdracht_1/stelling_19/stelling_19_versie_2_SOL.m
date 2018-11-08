@@ -1,11 +1,11 @@
 %% Stelling 19
 %
-% Met de colon-operator kan een oplopende numerieke
+% Met de colon-operator kan een aflopende numerieke
 % vector worden aangemaakt.                        
-%                                                  
-% Bijvoorbeeld: vec = 10:-1:0.                     
+% Bijvoorbeeld: vec = 0:-1:-4                      
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

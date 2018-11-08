@@ -1,11 +1,11 @@
 %% Stelling 9
 %
-% Een Matlab functie heeft altijd: 
-% - een naam                       
-% - een input(-parameter)          
-% - een output                     
+% Bijna geen enkele Matlab gebruiker kent alle standaard functies
+% die Matlab standaard heeft, dat is een feit.                   
+% Een goede manier om nieuwe Matlab functies te leren kennen is  
+% door gebruik te maken te maken van een zoekmachine.            
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

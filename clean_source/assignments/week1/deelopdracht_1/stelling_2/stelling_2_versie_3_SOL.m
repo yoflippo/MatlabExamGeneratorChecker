@@ -1,9 +1,9 @@
 %% Stelling 2
 %
-% De naam van een script mag beginnen met een willekeurig
-% symbool.                                               
+% De naam van een script mag NIET beginnen met een 
+% willekeurig symbool.                             
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

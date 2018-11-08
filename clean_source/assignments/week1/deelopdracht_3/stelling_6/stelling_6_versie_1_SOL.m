@@ -1,9 +1,9 @@
 %% Stelling 6
 %
-% Met behulp van de functie mediaan() kan de mediaan
-% van een vector worden berekend.                   
+% Met behulp van de functie median() kan de mediaan
+% van een vector worden berekend.                  
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

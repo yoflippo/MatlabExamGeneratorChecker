@@ -1,7 +1,7 @@
 %% Stelling 25
 %
-% Door gebruik te maken van variabelen in plaats    
-% van getallen is een programma moeilijk aanpasbaar.
+% In het Command Window kun je NIET zelf 
+% Matlab commando's uitvoeren.           
 %
 Antwoord = 0;
 

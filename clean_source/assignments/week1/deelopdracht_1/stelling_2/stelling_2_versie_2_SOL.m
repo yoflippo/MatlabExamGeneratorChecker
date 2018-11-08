@@ -1,7 +1,7 @@
 %% Stelling 2
 %
-% De naam van een script mag NIET beginnen met een 
-% willekeurig symbool.                             
+% Als een foutloos script in de 'Current Folder' staat,
+% kun je het probleemloos uitvoeren.                   
 %
 Antwoord = 1;
 

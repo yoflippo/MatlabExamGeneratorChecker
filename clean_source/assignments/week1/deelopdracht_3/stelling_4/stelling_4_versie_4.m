@@ -1,8 +1,8 @@
 %% Stelling 4
 %
-% Zie de onderstaande code. Als je op regel 3 een breakpoint
+% Zie de onderstaande code. Als je op regel 2 een breakpoint
 % plaatst en Matlab stopt bij die regel dan is de code      
-% in regel 2 reeds uitgevoerd door Matlab.                  
+% in die regel reeds uitgevoerd door Matlab.                
 %                                                           
 % ======= Code =======                                      
 % 1- % Vermenigvuldigen van a en b                          

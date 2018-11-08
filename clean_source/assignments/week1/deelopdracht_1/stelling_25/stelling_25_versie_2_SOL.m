@@ -1,9 +1,9 @@
 %% Stelling 25
 %
-% De Editor wordt o.a. gebruikt om een script
-% te maken of aan te passen.                 
+% Door gebruik te maken van variabelen in plaats    
+% van getallen is een programma moeilijk aanpasbaar.
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

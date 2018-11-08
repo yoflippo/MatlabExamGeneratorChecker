@@ -3,9 +3,9 @@
 % Er zijn in de readers twee type fouten gedefinieerd:
 %                                                     
 % 1 - Syntax fouten                                   
-% 2 - Fouten veroorzaakt door Matlab                  
+% 2 - Programmeerfouten                               
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

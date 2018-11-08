@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% Om te delen gebruik je in Matlab de 
-% deel-operator: %                    
+% Een operator voert een handeling uit op 1 of meerdere
+% operands.                                            
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

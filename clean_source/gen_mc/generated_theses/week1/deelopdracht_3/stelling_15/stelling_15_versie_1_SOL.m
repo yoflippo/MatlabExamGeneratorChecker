@@ -1,9 +1,9 @@
 %% Stelling 15
 %
-% Een met programmeerfouten kan niet worden uitgevoerd.
+% Een programma met programmeer fouten kan niet door
+% Matlab worden uitgevoerd.                         
 %
 Antwoord = 0;
-
 
 
 

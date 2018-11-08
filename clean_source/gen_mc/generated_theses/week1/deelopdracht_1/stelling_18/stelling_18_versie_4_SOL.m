@@ -1,9 +1,9 @@
 %% Stelling 18
 %
-% De output van een commando kan, na het uitvoeren 
-% ervan, te zien zijn in het Command Window.       
+% In de Current Folder kan een gebruiker code typen en
+% uitvoeren.                                          
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

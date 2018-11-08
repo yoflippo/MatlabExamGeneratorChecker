@@ -1,7 +1,7 @@
 %% Stelling 22
 %
-% Met behulp van de colon-operator (:) kan een numerieke 
-% vector worden aangemaakt.                              
+% Elk element van een vector heeft een index. Deze index kan 
+% worden gebruikt om de waarde van het element op te vragen. 
 %
 Antwoord = 1;
 

@@ -7,7 +7,8 @@
 % ======= Code =======                                     
 %                                                          
 % waardes = randn(1,10);                                   
-% fliplr(waardes)                                          
+% om = fliplr(waardes);                                    
+% om = fliplr(om)                                          
 %                                                          
 % ======= Code =======                                     
 %

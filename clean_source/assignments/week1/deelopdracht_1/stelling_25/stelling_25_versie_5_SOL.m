@@ -1,9 +1,9 @@
 %% Stelling 25
 %
-% Voor de leesbaarheid van een programma is het verstandig
-% om betekenisvolle namen voor variabelen te gebruiken.   
+% Variabelen in Matlab mogen beginnen met een
+% willekeurig symbool.                       
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

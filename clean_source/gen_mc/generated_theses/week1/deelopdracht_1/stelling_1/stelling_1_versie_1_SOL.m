@@ -1,7 +1,7 @@
 %% Stelling 1
 %
-% Om te delen gebruik je in Matlab de 
-% deel-operator: /                    
+% In Matlab wordt machtsverheffing met de volgende 
+% operator uitgevoerd: ^                           
 %
 Antwoord = 1;
 

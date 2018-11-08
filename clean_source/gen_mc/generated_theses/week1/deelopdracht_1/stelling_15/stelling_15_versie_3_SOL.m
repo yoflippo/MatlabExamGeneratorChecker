@@ -1,13 +1,14 @@
 %% Stelling 15
 %
-% In Matlab kun je een rijvector van kolomvectoren maken. 
-% Dit wordt een matrix genoemd.                           
+% Zie het onderstaande codevoorbeeld. Als je bij een numerieke   
+% vector genaamd vecPlus een waarde optelt, dan wordt alleen bij 
+% het eerste element van vecPlus de waarde opgeteld.             
+%                                                                
+% ======= Code =======                                           
+%                                                                
+% vec = [1 2 3 4 5];                                             
+% vecPlus = vec + 2;                                             
+%                                                                
+% ======= Code =======                                           
 %
-Antwoord = 1;
-
-
-
-
-
-
-
+Antwoord = 0;

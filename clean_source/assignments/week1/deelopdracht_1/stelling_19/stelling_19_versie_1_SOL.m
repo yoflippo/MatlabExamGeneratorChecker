@@ -1,13 +1,13 @@
 %% Stelling 19
 %
-% Met de onderstaande code ken je de waarde 8 
-% aan variabele C toe.                        
-%                                             
-% ------------code--------------              
-% C = 8                                       
-% ------------code--------------              
+% Met de colon-operator kan een oplopende numerieke
+% vector worden aangemaakt.                        
+%                                                  
+% Bijvoorbeeld: vec = 10:-1:0.                     
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
 
 
 

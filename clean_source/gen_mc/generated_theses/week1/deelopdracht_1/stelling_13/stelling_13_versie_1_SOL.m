@@ -1,7 +1,7 @@
 %% Stelling 13
 %
-% Met de functie fliplr() kun je in Matlab de volgorde
-% van de elementen van een rijvector omdraaien.       
+% Met de functie whos() kun je zien welke variabelen in de
+% Workspace staan.                                        
 %
 Antwoord = 1;
 

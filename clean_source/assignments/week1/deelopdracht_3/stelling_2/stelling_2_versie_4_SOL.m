@@ -4,10 +4,10 @@
 %                                        
 % ======= Code =======                   
 % % Optellen van een variabele           
-% a = 23;                                
-% c = 22 %%2;                            
-% b = 11;                                
-% som = a * c;                           
+% a = %%2;                               
+% b = 2;                                 
+% som = a * b;                           
 % ======= Code =======                   
 %
-Antwoord = 0;
+Antwoord = 1;
+

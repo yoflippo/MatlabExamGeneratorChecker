@@ -1,7 +1,7 @@
 %% Stelling 4
 %
-% In de volgende coderegel heeft de min-operator 
-% prioriteit boven de macht-operator: 76 - 6^2.  
+% Met de rechte haken [ en ] kun je in Matlab  
+% verschillende character vectoren samenvoegen.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

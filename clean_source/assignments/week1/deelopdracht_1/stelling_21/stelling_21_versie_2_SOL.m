@@ -1,11 +1,11 @@
 %% Stelling 21
 %
-% Als je in Matlab vectoren bij elkaar optelt, dan wordt
-% dit 'pair-wise addition' genoemd.                     
+% Het aanmaken van een numerieke vector kan voor een  
+% Bewegingstechnoloog handig zijn om bijvoorbeeld een 
+% tijdvector aan te maken (een vector bestaande uit   
+% tijdstippen).                                       
 %
 Antwoord = 1;
-
-
 
 
 
