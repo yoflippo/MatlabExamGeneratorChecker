@@ -2,19 +2,20 @@
 
 function CreateAndCopyQuestions(ap,weekNames)
 fclose('all'); %Close files that could be open
+%% Get path of output folder for a certain week X and empty it
+apCleanSourceRoot = fullfile(ap.BASEFOLDER,ap.DIRCLEANSRC,'gen_mc');
+cd(apCleanSourceRoot);
+apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
+apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
+
+%% Test the generated MC-files
+cd(apCleanSourceRoot);
+CountNumberOfFALSE_TRUE;
 
 %% Iterate over each available week
 for nWk = 1:length(weekNames)
     
-    %% Get path of output folder for a certain week X and empty it
-    apCleanSourceRoot = fullfile(ap.BASEFOLDER,ap.DIRCLEANSRC,'gen_mc');
-    cd(apCleanSourceRoot);
-    apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
-    apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
     
-    %% Test the generated MC-files
-    CountNumberOfFALSE_TRUE;
-    cd(apCleanSourceRoot)
     
     outputDir = fullfile(apGeneratedTheses,weekNames{nWk});
     removeShitFromDir(outputDir)

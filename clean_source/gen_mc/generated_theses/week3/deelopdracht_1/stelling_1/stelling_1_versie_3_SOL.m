@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% Een for-lus gebruik je als je weet hoe vaak je iets kunt
-% herhalen.                                               
+% Het is mogelijk om data te plotten die niet in de
+% Matlab Workspace staat.                          
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

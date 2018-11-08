@@ -1,7 +1,7 @@
 %% Stelling 13
 %
-% De standaardfunctie mean() kan worden gebruikt om de gemiddelde
-% waarde van alle elementen van een vector te berekenen.         
+% De standaardfuncties: sin(), cos() en tan() zijn 
+% standaard Matlab functies.                       
 %
 Antwoord = 1;
 

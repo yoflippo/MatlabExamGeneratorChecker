@@ -1,9 +1,9 @@
 %% Stelling 5
 %
-% Met behulp van de functie som() kunnen de waardes 
-% van een vector bij elkaar worden opgeteld.        
+% Met behulp van de functie randn() kan een gebruiker
+% willekeurige getallen genereren.                   
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

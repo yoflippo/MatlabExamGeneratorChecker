@@ -5,6 +5,7 @@
 % ======= Code =======                            
 %                                                 
 % vector = 22:33;                                 
+% plot(vector)                                    
 % hold on;                                        
 % vector2 = vector;                               
 % plot(vector2)                                   

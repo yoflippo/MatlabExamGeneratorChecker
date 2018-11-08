@@ -6,8 +6,8 @@
 % ------------code--------------               
 % naam1 = "tekst"                              
 % naam2 = 'tekst'                              
-% selectie = naam1(2)                          
+% selectie = naam2(2)                          
 % ------------code--------------               
 %
-Antwoord = 0;
+Antwoord = 1;
 

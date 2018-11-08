@@ -1,15 +1,13 @@
 %% Stelling 12
 %
-% In het onderstaande codevoorbeeld worden de door randn() 
-% gegeneerde waardes in omgekeerde volgorde afgedrukt in   
-% het Command Window:                                      
-%                                                          
-% ======= Code =======                                     
-%                                                          
-% waardes = randn(1,10);                                   
-% om = fliplr(waardes);                                    
-% om = fliplr(om)                                          
-%                                                          
-% ======= Code =======                                     
+% De onderstaande code maakt een numerieke vector aan
+% met een lengte van 11:                             
+%                                                    
+% ------------code--------------                     
+% variabele = 1:10;                                  
+% ------------code--------------                     
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+

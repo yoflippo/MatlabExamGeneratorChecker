@@ -1,7 +1,7 @@
 %% Stelling 22
 %
-% Elk element van een vector heeft een index. Deze index kan 
-% worden gebruikt om de waarde van het element op te vragen. 
+% Een vector kan worden afgedrukt door het typen van     
+% zijn naam in het Command Window gevolgd door een Enter.
 %
 Antwoord = 1;
 

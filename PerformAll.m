@@ -4,7 +4,7 @@ dbstop if error
 global gWeekNames;
 
 %% READ ME
-WeekAssignmentsToGenerate = 1:4;  % Comment me if no re-generation needs to
+WeekAssignmentsToGenerate = 1;  % Comment me if no re-generation needs to
 % happen!!!
 InitAll
 
@@ -25,7 +25,7 @@ if exist('WeekAssignmentsToGenerate','var')
     addpath(genpath('helpercode'));
     warning on
     
-    buAll(pwd,'')
+%     buAll(pwd,'')
     
     %% Do some logging for debugging purposes
     diary(fullfile(pwd,'log',['logCW_' mfilename '_' datetimetxt() '.txt']));
@@ -41,6 +41,15 @@ if exist('WeekAssignmentsToGenerate','var')
     CreateAndCopyQuestions(con,gWeekNames);
     disp('Created MC-Questions')
     toc
+    
+    %% Clean the submitted folder
+    apCleanSubmitted{1} = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,weekName);
+    apCleanSubmitted{2} = [apCleanSubmitted{1} '_unzipped'];
+    apCleanSubmitted{3} = [apCleanSubmitted{1} '_wrongsubmissions'];
+    apCleanSubmitted{4} = [apCleanSubmitted{1} '_send'];
+    for nCS = 1:length(apCleanSubmitted)
+        removeShitFromDir(apCleanSubmitted{nCS});
+    end
     
     %% Execute generated all assignments script
     disp('execute generate all script');

@@ -4,9 +4,9 @@
 %                                        
 % ======= Code =======                   
 % % Optellen van een variabele           
-% a = 2;                                 
+% a = %%2;                               
 % b = 2;                                 
-% som = c * b;                           
+% som = a * b;                           
 % ======= Code =======                   
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

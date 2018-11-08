@@ -1,9 +1,9 @@
 %% Stelling 11
 %
-% Als je in Matlab een plot aanmaakt, kan er ook
-% een  'figure' worden aangemaakt.              
+% Als je iets plot moet de data in de Workspace van
+% Matlab staan.                                    
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -4,7 +4,7 @@
 % alle waarden onder de 3 te vervangen door nullen.        
 %                                                          
 % <<< Code >>>                                             
-% signal (signal < 3) = 0                                  
+% signal < 3 == 0                                          
 % <<< Code >>>                                             
 %
 Antwoord = 0;

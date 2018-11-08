@@ -1,6 +1,6 @@
 %% Stelling 7
 %
-% Een functie kan 0 of meerdere output variabelen hebben.
+% Een functie moet altijd 1 output variabele hebben.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

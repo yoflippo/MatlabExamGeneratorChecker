@@ -1,9 +1,9 @@
 %% Stelling 18
 %
-% In het Command Window kan een gebruiker code typen en
-% uitvoeren.                                           
+% De output van een commando is na het uitvoeren ervan 
+% nooit te zien in het Command Window.                 
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

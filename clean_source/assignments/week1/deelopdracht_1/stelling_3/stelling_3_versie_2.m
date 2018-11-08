@@ -1,13 +1,13 @@
 %% Stelling 3
 %
-% Om de output van een commando in het Command Window
-% te beperken, wordt aan het einde van de regel een  
-% dubbele punt geplaatst.                            
+% In de onderstaande code worden twee vectoren (vec1     
+% en vec2) element-by-element met elkaar vermenigvuldigd:
+%                                                        
+% ------------code--------------                         
+% vec1 = 0:10;                                           
+% vec2 = 1:11;                                           
+% vec3 = vec1*vec2;                                      
+% ------------code--------------                         
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-
 

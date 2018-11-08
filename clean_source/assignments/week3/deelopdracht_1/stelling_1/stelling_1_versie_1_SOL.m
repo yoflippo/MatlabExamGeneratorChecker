@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% Tijdens het programmeren van een programma gebruik je 
-% voornamelijk herhalingen.                             
+% Een for-lus gebruik je als je weet hoe vaak je iets kunt
+% herhalen.                                               
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

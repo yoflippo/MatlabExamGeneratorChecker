@@ -2870,4 +2870,92 @@ Give each assignment Hash-info week: week4, progress: 94%
 Give each assignment Hash-info week: week4, progress: 94%
 Give each assignment Hash-info week: week4, progress: 94%
 Give each assignment Hash-info week: week4, progress: 94%
-Give each assignment Hash-info week: week4, prog
+Give each assignment Hash-info week: week4, progress: 95%
+Give each assignment Hash-info week: week4, progress: 95%
+Give each assignment Hash-info week: week4, progress: 95%
+Give each assignment Hash-info week: week4, progress: 95%
+Give each assignment Hash-info week: week4, progress: 95%
+Give each assignment Hash-info week: week4, progress: 96%
+Give each assignment Hash-info week: week4, progress: 96%
+Give each assignment Hash-info week: week4, progress: 96%
+Give each assignment Hash-info week: week4, progress: 96%
+Give each assignment Hash-info week: week4, progress: 96%
+Give each assignment Hash-info week: week4, progress: 97%
+Give each assignment Hash-info week: week4, progress: 97%
+Give each assignment Hash-info week: week4, progress: 97%
+Give each assignment Hash-info week: week4, progress: 97%
+Give each assignment Hash-info week: week4, progress: 97%
+Give each assignment Hash-info week: week4, progress: 98%
+Give each assignment Hash-info week: week4, progress: 98%
+Give each assignment Hash-info week: week4, progress: 98%
+Give each assignment Hash-info week: week4, progress: 98%
+Give each assignment Hash-info week: week4, progress: 98%
+Give each assignment Hash-info week: week4, progress: 99%
+Give each assignment Hash-info week: week4, progress: 99%
+Give each assignment Hash-info week: week4, progress: 99%
+Give each assignment Hash-info week: week4, progress: 99%
+Give each assignment Hash-info week: week4, progress: 99%
+Give each assignment Hash-info week: week4, progress: 100%
+Give each assignment Hash-info week: week4, progress: 100%
+Give each assignment Hash-info week: week4, progress: 100%
+2.043: END SCRIPT
+Elapsed time is 2.043750 seconds.
+execute create week assignment scripts
+Check for the existence of needed supporting scripts/function files
+Generating assignents for WEEK: 4
+0.538: Empty folder with files for testing
+1.367: Create a student specific folder in every week folder
+1.497: Get overview of files
+1.96: Fill every student folder with the number of assignments
+141.471: Generate some test files for the Checking script
+141.56: Generate test folders with data to simulate students with wrong assignments
+141.591: END SCRIPT
+Elapsed time is 141.592681 seconds.
+Copy certain testfiles to directory submitted
+Execute check assignments
+Check for the existence of needed supporting scripts/function files
+Start with script
+week1
+0.004: Check if needed folder exists, if not stop execution of script
+0.004: Check which students have submitted their assignments. Student without do not get any points
+105 students did not submit their assignments
+5.068: Check if the HASH-codes in every m-file of the students is intact
+5.413: Check for each student if they have their correct assignments
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 92)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',92,0)">line 92</a>)
+PerformAll, did not work properly: Unable to read file 'assignments\week1\assignedHashes_week1'. No such file or directory.
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',92,1)">92  </a>        error([mfilename ', did not work properly: ' err.message]);
+opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',92,0)
+if system_dependent('IsDebugMode')==1, dbcont; end
+PerformAll
+Check for the existence of needed supporting scripts/function files
+Check for the existence of needed supporting scripts/function files
+Check manually copied submitted files
+Check for the existence of needed supporting scripts/function files
+Start with script
+week2
+0.005: Check if needed folder exists, if not stop execution of script
+0.007: Check which students have submitted their assignments. Student without do not get any points
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',116,1)">116 </a>            end
+if system_dependent('IsDebugMode')==1, dbquit; end
+con.STUDENTASSFOLDER
+
+ans =
+
+    'student_assignments'
+
+weekName
+
+weekName =
+
+    'week2'
+
+fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,weekName)
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\submitted\week2'
+
+PerformAll
+Check for the existence of needed supporting scripts/function files
+The system cannot find the file WinRaR. 

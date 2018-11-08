@@ -5,10 +5,11 @@
 % ======= Code =======                            
 %                                                 
 % vector = 22:33;                                 
+% plot(vector)                                    
 % hold on;                                        
 % vector2 = vector;                               
 % plot(vector2)                                   
 %                                                 
 % ======= Code =======                            
 %
-Antwoord = 0;
+Antwoord = 1;

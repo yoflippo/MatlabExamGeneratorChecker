@@ -7,8 +7,8 @@
 % ======= Code =======                                  
 %                                                       
 % tekst = 'bewegingstechnologie en matlab';             
-% selectie = tekst(1:3)                                 
+% selectie = tekst(2:5)                                 
 %                                                       
 % ======= Code =======                                  
 %
-Antwoord = 1;
+Antwoord = 0;

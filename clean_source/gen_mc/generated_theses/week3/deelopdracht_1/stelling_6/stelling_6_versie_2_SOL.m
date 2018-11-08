@@ -1,15 +1,15 @@
 %% Stelling 6
 %
-% De onderstaande code wordt zonder syntactische fouten
-% uitgevoerd:                                          
-%                                                      
-% ======= Code =======                                 
-% clc                                                  
-% clear variables                                      
-% testValues = randn(1,10);                            
-% for nR = 2:10                                        
-%    z(nR) = var(nR) + var(nR+1) / 2;                  
-% end                                                  
-% ======= Code =======                                 
+% De onderstaande code wordt zonder foutmelding uitgevoerd:
+%                                                          
+% ======= Code =======                                     
+% clc                                                      
+% clear variables                                          
+% %Genereren van random variabelen                         
+% randomWaardes = randn(1,20);                             
+% for nR = 20:100                                          
+%    z(nR) = randomWaardes(nR) + randomWaardes(nR+1);      
+% end                                                      
+% ======= Code =======                                     
 %
-Antwoord = 1;
+Antwoord = 0;

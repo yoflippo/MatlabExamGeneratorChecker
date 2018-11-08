@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Het grafisch weergeven van data in een grafiek is handig voor
-% de persoon die de data moet interpreteren.                   
+% In Matlab wordt een grafiek gemaakt m.b.v. de functie draw().
 %
-Antwoord = 1;
+Antwoord = 0;
+
 
 
 

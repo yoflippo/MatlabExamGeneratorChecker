@@ -1,15 +1,16 @@
 %% Stelling 18
 %
-% In de onderstaande code wordt de waarde variabele i afgedrukt
-% in het Command Window                                        
-%                                                              
-%                                                              
-% ======= Code =======                                         
-% clc                                                          
-% clear variables %workspace leegmaken                         
-% for i = 1:8                                                  
-%    I;                                                        
-% end                                                          
-% ======= Code =======                                         
+% Zie de onderstaande code. De vector 'c' bestaat na het 
+% uitvoeren exact 11 verschillende waardes.              
+%                                                        
+% ======= Code =======                                   
+% clc                                                    
+% clear variables %workspace leegmaken                   
+% for a = 1:10                                           
+%     for b = 1:10                                       
+%         c(a) = a+b;                                    
+%     end                                                
+% end                                                    
+% ======= Code =======                                   
 %
 Antwoord = 0;

@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% De standaardfuncties: sin(), cos() en tan() zijn 
-% standaard Matlab functies.                       
+% De functies: gemiddelde(), standaardev(), mediaan() zijn 
+% standaard Matlab functies.                               
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -1,7 +1,7 @@
 %% Stelling 25
 %
-% Een verzameling letters kan op de volgende manier aan
-% een variabele worden toegekend: var = 'blablabla'.   
+% Door gebruik te maken van variabelen in plaats    
+% van getallen is een programma moeilijk aanpasbaar.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

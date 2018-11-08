@@ -1,13 +1,15 @@
 %% Stelling 4
 %
-% De functie aanroep 'ones(4,8)' genereert een matrix
-% die uit 4 rijen bestaat, gevuld met enen.          
+% Gegeven de volgende code:                
+%                                          
+% ======= Code =======                     
+%                                          
+% stap = 2;                                
+% eindHoek = 30;                           
+% hoeken = 0:stap:eindHoek;                
+%                                          
+% ======= Code =======                     
+%                                          
+% De variabele 'hoeken' bevat 15 elementen.
 %
-Antwoord = 1;
-
-
-
-
-
-
-
+Antwoord = 0;

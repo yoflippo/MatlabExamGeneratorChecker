@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Een tijd-as van een plot dient de momenten te
-% bevatten waarop data is geregistreerd.       
+% De operatie [1 2 3]./[1 2 3] geeft als resultaat: [1 1 1]
 %
 Antwoord = 1;
+
 
 
 

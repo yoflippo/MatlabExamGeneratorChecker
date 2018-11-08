@@ -1,9 +1,9 @@
 %% Stelling 4
 %
-% In de volgende coderegel heeft de min-operator 
-% prioriteit boven de macht-operator: 76 - 6^2.  
+% Gegeven de volgende regel code: 2^8.
+% Hier is 8 de rechter operand.       
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

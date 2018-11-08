@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% Met behulp van de functie addall() kunnen de waardes 
-% van een vector bij elkaar worden opgeteld.           
+% Debuggen is het verwijderen van fouten uit een Matlab 
+% programma.                                            
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

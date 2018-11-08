@@ -4,7 +4,7 @@
 % het code commentaar (aangegeven met het '%' teken)
 % aangeeft wat er moet gebeuren.                    
 %                                                   
-% In dit code voorbeeld zit geen syntaxfout:        
+% In dit code voorbeeld zit een programmeerfout.    
 %                                                   
 % ======= Code =======                              
 %                                                   
@@ -13,7 +13,7 @@
 % 3- bart = 2;                                      
 % 4- herre = 3;                                     
 % 5- % Optellen van herre en aad                    
-% 6- som = aad ++ herre;                            
+% 6- som = aad - herre;                             
 %                                                   
 % ======= Code =======                              
 %

@@ -2,10 +2,10 @@
 %
 % Een Matlab functie heeft altijd: 
 % - een naam                       
-% - een body                       
+% - een input(-parameter)          
+% - een output                     
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

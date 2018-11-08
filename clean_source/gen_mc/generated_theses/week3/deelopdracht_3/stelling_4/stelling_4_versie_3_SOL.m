@@ -1,15 +1,13 @@
 %% Stelling 4
 %
-% Gegeven de volgende code:                
-%                                          
-% ======= Code =======                     
-%                                          
-% stap = 2;                                
-% eindHoek = 30;                           
-% hoeken = 0:stap:eindHoek;                
-%                                          
-% ======= Code =======                     
-%                                          
-% De variabele 'hoeken' bevat 15 elementen.
+% De functie ones(4,8) genereert een matrix met 4 kolommen, 
+% gevuld met enen.                                          
 %
 Antwoord = 0;
+
+
+
+
+
+
+

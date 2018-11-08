@@ -1,9 +1,9 @@
 %% Stelling 25
 %
-% Een verzameling letters kan op de volgende manier aan
-% een variabele worden toegekend: var = 'blablabla'.   
+% Door gebruik te maken van variabelen in plaats    
+% van getallen is een programma moeilijk aanpasbaar.
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

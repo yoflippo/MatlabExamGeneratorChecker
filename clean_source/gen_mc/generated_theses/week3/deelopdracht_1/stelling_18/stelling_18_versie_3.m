@@ -1,16 +1,15 @@
 %% Stelling 18
 %
-% Zie de onderstaande code. De vector 'c' bestaat na het 
-% uitvoeren exact 11 verschillende waardes.              
-%                                                        
-% ======= Code =======                                   
-% clc                                                    
-% clear variables %workspace leegmaken                   
-% for a = 1:10                                           
-%     for b = 1:10                                       
-%         c(a) = a+b;                                    
-%     end                                                
-% end                                                    
-% ======= Code =======                                   
+% In de onderstaande code wordt de waarde variabele i afgedrukt
+% in het Command Window                                        
+%                                                              
+%                                                              
+% ======= Code =======                                         
+% clc                                                          
+% clear variables %workspace leegmaken                         
+% for i = 1:8                                                  
+%    I;                                                        
+% end                                                          
+% ======= Code =======                                         
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

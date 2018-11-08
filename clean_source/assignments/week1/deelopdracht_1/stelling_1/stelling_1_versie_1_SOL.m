@@ -1,7 +1,7 @@
 %% Stelling 1
 %
-% In Matlab wordt machtsverheffing met de volgende 
-% operator uitgevoerd: ^                           
+% Een operator voert een handeling uit op 1 of meerdere
+% operands.                                            
 %
 Antwoord = 1;
 

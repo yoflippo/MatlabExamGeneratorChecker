@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% Debuggen is het verwijderen van fouten uit een Matlab 
-% programma.                                            
+% Met behulp van de functie addall() kunnen de waardes 
+% van een vector bij elkaar worden opgeteld.           
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

@@ -1,7 +1,7 @@
 %% Stelling 1
 %
-% Een while-lus gebruik je als je weet hoe vaak je iets kunt
-% herhalen.                                                 
+% Tijdens het programmeren van een programma gebruik je 
+% voornamelijk herhalingen.                             
 %
 Antwoord = 0;
 

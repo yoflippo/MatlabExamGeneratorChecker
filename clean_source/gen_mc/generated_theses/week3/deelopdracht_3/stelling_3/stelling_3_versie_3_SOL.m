@@ -1,9 +1,9 @@
 %% Stelling 3
 %
-% De functie diff() kan meer dan twee getallen als 
-% input hebben.                                    
+% De functie diff() heeft heeft altijd twee getallen
+% als input waartussen het verschil berekend wordt. 
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

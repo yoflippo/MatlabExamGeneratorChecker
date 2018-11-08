@@ -1,7 +1,7 @@
 %% Stelling 25
 %
-% Voor de leesbaarheid van een programma is het verstandig
-% om betekenisvolle namen voor variabelen te gebruiken.   
+% Een verzameling letters kan op de volgende manier aan
+% een variabele worden toegekend: var = 'blablabla'.   
 %
 Antwoord = 1;
 

@@ -1,10 +1,10 @@
 %% Stelling 2
 %
-% De naam van een script mag beginnen met een willekeurig
-% symbool.                                               
+% In de Workspace staan de bestanden (lees: geen
+% variabelen) van de 'Current Folder'.          
+%                                               
 %
 Antwoord = 0;
-
 
 
 
