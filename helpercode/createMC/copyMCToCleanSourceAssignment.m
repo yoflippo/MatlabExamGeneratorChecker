@@ -1,7 +1,6 @@
-function copyMCToCleanSourceAssignment(baseFolder,apFin,WeekNames)
+function copyMCToCleanSourceAssignment(baseFolder,apMCFiles,apFin,WeekNames)
 
 %% Get deelopdracht_x folderS
-apMCFiles = fullfile(baseFolder,'clean_source','gen_mc','generated_questions');
 cd(apMCFiles);
 ass =[];
 for wk = 1:length(WeekNames)

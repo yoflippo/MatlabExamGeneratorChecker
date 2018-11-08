@@ -6,7 +6,7 @@
 clear all;
 dbstop if error
 global gWeekNames;
-Weeks = 1:4;  % Adjust me!!! Leave empty if not needed to generate again
+Weeks = 1;  % Adjust me!!! Leave empty if not needed to generate again
 cnt = 1;
 for nW = 1:length(Weeks)
     gWeekNames{nW} = ['week' num2str(Weeks(nW))];

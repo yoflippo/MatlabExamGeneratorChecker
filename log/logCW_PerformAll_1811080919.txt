@@ -337,4 +337,916 @@ CreateAndCopyQuestions: 18 of 37 folders processed of week3
 CreateAndCopyQuestions: 19 of 37 folders processed of week3
 CreateAndCopyQuestions: 20 of 37 folders processed of week3
 CreateAndCopyQuestions: 21 of 37 folders processed of week3
-CreateAndCopyQuestions: 22 of 37 folders processed of w
+CreateAndCopyQuestions: 22 of 37 folders processed of week3
+CreateAndCopyQuestions: 23 of 37 folders processed of week3
+CreateAndCopyQuestions: 24 of 37 folders processed of week3
+CreateAndCopyQuestions: 25 of 37 folders processed of week3
+CreateAndCopyQuestions: 26 of 37 folders processed of week3
+CreateAndCopyQuestions: 27 of 37 folders processed of week3
+CreateAndCopyQuestions: 28 of 37 folders processed of week3
+CreateAndCopyQuestions: 29 of 37 folders processed of week3
+CreateAndCopyQuestions: 30 of 37 folders processed of week3
+CreateAndCopyQuestions: 31 of 37 folders processed of week3
+CreateAndCopyQuestions: 32 of 37 folders processed of week3
+CreateAndCopyQuestions: 33 of 37 folders processed of week3
+CreateAndCopyQuestions: 34 of 37 folders processed of week3
+CreateAndCopyQuestions: 35 of 37 folders processed of week3
+CreateAndCopyQuestions: 36 of 37 folders processed of week3
+CreateAndCopyQuestions: 37 of 37 folders processed of week3
+CreateAndCopyQuestions: 1 of 30 folders processed of week4
+CreateAndCopyQuestions: 2 of 30 folders processed of week4
+CreateAndCopyQuestions: 3 of 30 folders processed of week4
+CreateAndCopyQuestions: 4 of 30 folders processed of week4
+CreateAndCopyQuestions: 5 of 30 folders processed of week4
+CreateAndCopyQuestions: 6 of 30 folders processed of week4
+CreateAndCopyQuestions: 7 of 30 folders processed of week4
+CreateAndCopyQuestions: 8 of 30 folders processed of week4
+CreateAndCopyQuestions: 9 of 30 folders processed of week4
+CreateAndCopyQuestions: 10 of 30 folders processed of week4
+CreateAndCopyQuestions: 11 of 30 folders processed of week4
+CreateAndCopyQuestions: 12 of 30 folders processed of week4
+CreateAndCopyQuestions: 13 of 30 folders processed of week4
+CreateAndCopyQuestions: 14 of 30 folders processed of week4
+CreateAndCopyQuestions: 15 of 30 folders processed of week4
+CreateAndCopyQuestions: 16 of 30 folders processed of week4
+CreateAndCopyQuestions: 17 of 30 folders processed of week4
+CreateAndCopyQuestions: 18 of 30 folders processed of week4
+CreateAndCopyQuestions: 19 of 30 folders processed of week4
+CreateAndCopyQuestions: 20 of 30 folders processed of week4
+CreateAndCopyQuestions: 21 of 30 folders processed of week4
+CreateAndCopyQuestions: 22 of 30 folders processed of week4
+CreateAndCopyQuestions: 23 of 30 folders processed of week4
+CreateAndCopyQuestions: 24 of 30 folders processed of week4
+CreateAndCopyQuestions: 25 of 30 folders processed of week4
+CreateAndCopyQuestions: 26 of 30 folders processed of week4
+CreateAndCopyQuestions: 27 of 30 folders processed of week4
+CreateAndCopyQuestions: 28 of 30 folders processed of week4
+CreateAndCopyQuestions: 29 of 30 folders processed of week4
+CreateAndCopyQuestions: 30 of 30 folders processed of week4
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the generated files to clean_source assignment
+{'CountNumberOfFALSE_TRUE' is not found in the current folder or on the MATLAB path, but exists in:
+    C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc
+
+<a href = "matlab:cd 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc'">Change the MATLAB current folder</a> or <a href = "matlab:addpath 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc'">add its folder to the MATLAB path</a>.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 234)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',234,0)">line 234</a>)
+CountNumberOfFALSE_TRUE;
+} 
+cd ..;
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+CreateAndCopyQuestions: 2 of 40 folders processed of week1
+CreateAndCopyQuestions: 3 of 40 folders processed of week1
+CreateAndCopyQuestions: 4 of 40 folders processed of week1
+CreateAndCopyQuestions: 5 of 40 folders processed of week1
+CreateAndCopyQuestions: 6 of 40 folders processed of week1
+CreateAndCopyQuestions: 7 of 40 folders processed of week1
+CreateAndCopyQuestions: 8 of 40 folders processed of week1
+CreateAndCopyQuestions: 9 of 40 folders processed of week1
+CreateAndCopyQuestions: 10 of 40 folders processed of week1
+CreateAndCopyQuestions: 11 of 40 folders processed of week1
+CreateAndCopyQuestions: 12 of 40 folders processed of week1
+CreateAndCopyQuestions: 13 of 40 folders processed of week1
+CreateAndCopyQuestions: 14 of 40 folders processed of week1
+CreateAndCopyQuestions: 15 of 40 folders processed of week1
+CreateAndCopyQuestions: 16 of 40 folders processed of week1
+CreateAndCopyQuestions: 17 of 40 folders processed of week1
+CreateAndCopyQuestions: 18 of 40 folders processed of week1
+CreateAndCopyQuestions: 19 of 40 folders processed of week1
+CreateAndCopyQuestions: 20 of 40 folders processed of week1
+CreateAndCopyQuestions: 21 of 40 folders processed of week1
+CreateAndCopyQuestions: 22 of 40 folders processed of week1
+CreateAndCopyQuestions: 23 of 40 folders processed of week1
+CreateAndCopyQuestions: 24 of 40 folders processed of week1
+CreateAndCopyQuestions: 25 of 40 folders processed of week1
+CreateAndCopyQuestions: 26 of 40 folders processed of week1
+CreateAndCopyQuestions: 27 of 40 folders processed of week1
+CreateAndCopyQuestions: 28 of 40 folders processed of week1
+CreateAndCopyQuestions: 29 of 40 folders processed of week1
+CreateAndCopyQuestions: 30 of 40 folders processed of week1
+CreateAndCopyQuestions: 31 of 40 folders processed of week1
+CreateAndCopyQuestions: 32 of 40 folders processed of week1
+CreateAndCopyQuestions: 33 of 40 folders processed of week1
+CreateAndCopyQuestions: 34 of 40 folders processed of week1
+CreateAndCopyQuestions: 35 of 40 folders processed of week1
+CreateAndCopyQuestions: 36 of 40 folders processed of week1
+CreateAndCopyQuestions: 37 of 40 folders processed of week1
+CreateAndCopyQuestions: 38 of 40 folders processed of week1
+CreateAndCopyQuestions: 39 of 40 folders processed of week1
+CreateAndCopyQuestions: 40 of 40 folders processed of week1
+CreateAndCopyQuestions: 1 of 39 folders processed of week2
+CreateAndCopyQuestions: 2 of 39 folders processed of week2
+CreateAndCopyQuestions: 3 of 39 folders processed of week2
+CreateAndCopyQuestions: 4 of 39 folders processed of week2
+CreateAndCopyQuestions: 5 of 39 folders processed of week2
+CreateAndCopyQuestions: 6 of 39 folders processed of week2
+CreateAndCopyQuestions: 7 of 39 folders processed of week2
+CreateAndCopyQuestions: 8 of 39 folders processed of week2
+CreateAndCopyQuestions: 9 of 39 folders processed of week2
+CreateAndCopyQuestions: 10 of 39 folders processed of week2
+CreateAndCopyQuestions: 11 of 39 folders processed of week2
+CreateAndCopyQuestions: 12 of 39 folders processed of week2
+CreateAndCopyQuestions: 13 of 39 folders processed of week2
+CreateAndCopyQuestions: 14 of 39 folders processed of week2
+CreateAndCopyQuestions: 15 of 39 folders processed of week2
+CreateAndCopyQuestions: 16 of 39 folders processed of week2
+CreateAndCopyQuestions: 17 of 39 folders processed of week2
+CreateAndCopyQuestions: 18 of 39 folders processed of week2
+CreateAndCopyQuestions: 19 of 39 folders processed of week2
+CreateAndCopyQuestions: 20 of 39 folders processed of week2
+CreateAndCopyQuestions: 21 of 39 folders processed of week2
+CreateAndCopyQuestions: 22 of 39 folders processed of week2
+CreateAndCopyQuestions: 23 of 39 folders processed of week2
+CreateAndCopyQuestions: 24 of 39 folders processed of week2
+CreateAndCopyQuestions: 25 of 39 folders processed of week2
+CreateAndCopyQuestions: 26 of 39 folders processed of week2
+CreateAndCopyQuestions: 27 of 39 folders processed of week2
+CreateAndCopyQuestions: 28 of 39 folders processed of week2
+CreateAndCopyQuestions: 29 of 39 folders processed of week2
+CreateAndCopyQuestions: 30 of 39 folders processed of week2
+CreateAndCopyQuestions: 31 of 39 folders processed of week2
+CreateAndCopyQuestions: 32 of 39 folders processed of week2
+CreateAndCopyQuestions: 33 of 39 folders processed of week2
+CreateAndCopyQuestions: 34 of 39 folders processed of week2
+CreateAndCopyQuestions: 35 of 39 folders processed of week2
+CreateAndCopyQuestions: 36 of 39 folders processed of week2
+CreateAndCopyQuestions: 37 of 39 folders processed of week2
+CreateAndCopyQuestions: 38 of 39 folders processed of week2
+CreateAndCopyQuestions: 39 of 39 folders processed of week2
+CreateAndCopyQuestions: 1 of 37 folders processed of week3
+CreateAndCopyQuestions: 2 of 37 folders processed of week3
+CreateAndCopyQuestions: 3 of 37 folders processed of week3
+CreateAndCopyQuestions: 4 of 37 folders processed of week3
+CreateAndCopyQuestions: 5 of 37 folders processed of week3
+CreateAndCopyQuestions: 6 of 37 folders processed of week3
+CreateAndCopyQuestions: 7 of 37 folders processed of week3
+CreateAndCopyQuestions: 8 of 37 folders processed of week3
+CreateAndCopyQuestions: 9 of 37 folders processed of week3
+CreateAndCopyQuestions: 10 of 37 folders processed of week3
+CreateAndCopyQuestions: 11 of 37 folders processed of week3
+CreateAndCopyQuestions: 12 of 37 folders processed of week3
+CreateAndCopyQuestions: 13 of 37 folders processed of week3
+CreateAndCopyQuestions: 14 of 37 folders processed of week3
+CreateAndCopyQuestions: 15 of 37 folders processed of week3
+CreateAndCopyQuestions: 16 of 37 folders processed of week3
+CreateAndCopyQuestions: 17 of 37 folders processed of week3
+CreateAndCopyQuestions: 18 of 37 folders processed of week3
+CreateAndCopyQuestions: 19 of 37 folders processed of week3
+CreateAndCopyQuestions: 20 of 37 folders processed of week3
+CreateAndCopyQuestions: 21 of 37 folders processed of week3
+CreateAndCopyQuestions: 22 of 37 folders processed of week3
+CreateAndCopyQuestions: 23 of 37 folders processed of week3
+CreateAndCopyQuestions: 24 of 37 folders processed of week3
+CreateAndCopyQuestions: 25 of 37 folders processed of week3
+CreateAndCopyQuestions: 26 of 37 folders processed of week3
+CreateAndCopyQuestions: 27 of 37 folders processed of week3
+CreateAndCopyQuestions: 28 of 37 folders processed of week3
+CreateAndCopyQuestions: 29 of 37 folders processed of week3
+CreateAndCopyQuestions: 30 of 37 folders processed of week3
+CreateAndCopyQuestions: 31 of 37 folders processed of week3
+CreateAndCopyQuestions: 32 of 37 folders processed of week3
+CreateAndCopyQuestions: 33 of 37 folders processed of week3
+CreateAndCopyQuestions: 34 of 37 folders processed of week3
+CreateAndCopyQuestions: 35 of 37 folders processed of week3
+CreateAndCopyQuestions: 36 of 37 folders processed of week3
+CreateAndCopyQuestions: 37 of 37 folders processed of week3
+CreateAndCopyQuestions: 1 of 30 folders processed of week4
+CreateAndCopyQuestions: 2 of 30 folders processed of week4
+CreateAndCopyQuestions: 3 of 30 folders processed of week4
+CreateAndCopyQuestions: 4 of 30 folders processed of week4
+CreateAndCopyQuestions: 5 of 30 folders processed of week4
+CreateAndCopyQuestions: 6 of 30 folders processed of week4
+CreateAndCopyQuestions: 7 of 30 folders processed of week4
+CreateAndCopyQuestions: 8 of 30 folders processed of week4
+CreateAndCopyQuestions: 9 of 30 folders processed of week4
+CreateAndCopyQuestions: 10 of 30 folders processed of week4
+CreateAndCopyQuestions: 11 of 30 folders processed of week4
+CreateAndCopyQuestions: 12 of 30 folders processed of week4
+CreateAndCopyQuestions: 13 of 30 folders processed of week4
+CreateAndCopyQuestions: 14 of 30 folders processed of week4
+CreateAndCopyQuestions: 15 of 30 folders processed of week4
+CreateAndCopyQuestions: 16 of 30 folders processed of week4
+CreateAndCopyQuestions: 17 of 30 folders processed of week4
+CreateAndCopyQuestions: 18 of 30 folders processed of week4
+CreateAndCopyQuestions: 19 of 30 folders processed of week4
+CreateAndCopyQuestions: 20 of 30 folders processed of week4
+CreateAndCopyQuestions: 21 of 30 folders processed of week4
+CreateAndCopyQuestions: 22 of 30 folders processed of week4
+CreateAndCopyQuestions: 23 of 30 folders processed of week4
+CreateAndCopyQuestions: 24 of 30 folders processed of week4
+CreateAndCopyQuestions: 25 of 30 folders processed of week4
+CreateAndCopyQuestions: 26 of 30 folders processed of week4
+CreateAndCopyQuestions: 27 of 30 folders processed of week4
+CreateAndCopyQuestions: 28 of 30 folders processed of week4
+CreateAndCopyQuestions: 29 of 30 folders processed of week4
+CreateAndCopyQuestions: 30 of 30 folders processed of week4
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the generated files to clean_source assignment
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',234,1)">234 </a>CountNumberOfFALSE_TRUE;
+if system_dependent('IsDebugMode')==1, dbstep; end
+week1: TRUE = 81 | FALSE = 81
+week2: TRUE = 78 | FALSE = 81
+week3: TRUE = 76 | FALSE = 77
+week4: TRUE = 61 | FALSE = 64
+TOTAAL: TRUE = 296 | FALSE = 303
+if system_dependent('IsDebugMode')==1, dbstep; end
+Copy the files to the "assignment" place
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfiles', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\copyFiles\copyfiles.m', 41)" style="font-weight:bold">copyfiles</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\copyFiles\copyfiles.m',41,0)">line 41</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyMCToCleanSourceAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m', 21)" style="font-weight:bold">copyMCToCleanSourceAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',21,0)">line 21</a>)
+        copyfiles(apClnSrc,apFin2);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 238)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',238,0)">line 238</a>)
+copyMCToCleanSourceAssignment(ap.BASEFOLDER,ap.Assignments,weekNames);
+} 
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+CreateAndCopyQuestions: 2 of 40 folders processed of week1
+CreateAndCopyQuestions: 3 of 40 folders processed of week1
+CreateAndCopyQuestions: 4 of 40 folders processed of week1
+CreateAndCopyQuestions: 5 of 40 folders processed of week1
+CreateAndCopyQuestions: 6 of 40 folders processed of week1
+CreateAndCopyQuestions: 7 of 40 folders processed of week1
+CreateAndCopyQuestions: 8 of 40 folders processed of week1
+CreateAndCopyQuestions: 9 of 40 folders processed of week1
+CreateAndCopyQuestions: 10 of 40 folders processed of week1
+CreateAndCopyQuestions: 11 of 40 folders processed of week1
+CreateAndCopyQuestions: 12 of 40 folders processed of week1
+CreateAndCopyQuestions: 13 of 40 folders processed of week1
+CreateAndCopyQuestions: 14 of 40 folders processed of week1
+CreateAndCopyQuestions: 15 of 40 folders processed of week1
+CreateAndCopyQuestions: 16 of 40 folders processed of week1
+CreateAndCopyQuestions: 17 of 40 folders processed of week1
+CreateAndCopyQuestions: 18 of 40 folders processed of week1
+CreateAndCopyQuestions: 19 of 40 folders processed of week1
+CreateAndCopyQuestions: 20 of 40 folders processed of week1
+CreateAndCopyQuestions: 21 of 40 folders processed of week1
+CreateAndCopyQuestions: 22 of 40 folders processed of week1
+CreateAndCopyQuestions: 23 of 40 folders processed of week1
+CreateAndCopyQuestions: 24 of 40 folders processed of week1
+CreateAndCopyQuestions: 25 of 40 folders processed of week1
+CreateAndCopyQuestions: 26 of 40 folders processed of week1
+CreateAndCopyQuestions: 27 of 40 folders processed of week1
+CreateAndCopyQuestions: 28 of 40 folders processed of week1
+CreateAndCopyQuestions: 29 of 40 folders processed of week1
+CreateAndCopyQuestions: 30 of 40 folders processed of week1
+CreateAndCopyQuestions: 31 of 40 folders processed of week1
+CreateAndCopyQuestions: 32 of 40 folders processed of week1
+CreateAndCopyQuestions: 33 of 40 folders processed of week1
+CreateAndCopyQuestions: 34 of 40 folders processed of week1
+CreateAndCopyQuestions: 35 of 40 folders processed of week1
+CreateAndCopyQuestions: 36 of 40 folders processed of week1
+CreateAndCopyQuestions: 37 of 40 folders processed of week1
+CreateAndCopyQuestions: 38 of 40 folders processed of week1
+CreateAndCopyQuestions: 39 of 40 folders processed of week1
+CreateAndCopyQuestions: 40 of 40 folders processed of week1
+CreateAndCopyQuestions: 1 of 39 folders processed of week2
+CreateAndCopyQuestions: 2 of 39 folders processed of week2
+CreateAndCopyQuestions: 3 of 39 folders processed of week2
+CreateAndCopyQuestions: 4 of 39 folders processed of week2
+CreateAndCopyQuestions: 5 of 39 folders processed of week2
+CreateAndCopyQuestions: 6 of 39 folders processed of week2
+CreateAndCopyQuestions: 7 of 39 folders processed of week2
+CreateAndCopyQuestions: 8 of 39 folders processed of week2
+CreateAndCopyQuestions: 9 of 39 folders processed of week2
+CreateAndCopyQuestions: 10 of 39 folders processed of week2
+CreateAndCopyQuestions: 11 of 39 folders processed of week2
+CreateAndCopyQuestions: 12 of 39 folders processed of week2
+CreateAndCopyQuestions: 13 of 39 folders processed of week2
+CreateAndCopyQuestions: 14 of 39 folders processed of week2
+CreateAndCopyQuestions: 15 of 39 folders processed of week2
+CreateAndCopyQuestions: 16 of 39 folders processed of week2
+CreateAndCopyQuestions: 17 of 39 folders processed of week2
+CreateAndCopyQuestions: 18 of 39 folders processed of week2
+CreateAndCopyQuestions: 19 of 39 folders processed of week2
+CreateAndCopyQuestions: 20 of 39 folders processed of week2
+CreateAndCopyQuestions: 21 of 39 folders processed of week2
+CreateAndCopyQuestions: 22 of 39 folders processed of week2
+CreateAndCopyQuestions: 23 of 39 folders processed of week2
+CreateAndCopyQuestions: 24 of 39 folders processed of week2
+CreateAndCopyQuestions: 25 of 39 folders processed of week2
+CreateAndCopyQuestions: 26 of 39 folders processed of week2
+CreateAndCopyQuestions: 27 of 39 folders processed of week2
+CreateAndCopyQuestions: 28 of 39 folders processed of week2
+CreateAndCopyQuestions: 29 of 39 folders processed of week2
+CreateAndCopyQuestions: 30 of 39 folders processed of week2
+CreateAndCopyQuestions: 31 of 39 folders processed of week2
+CreateAndCopyQuestions: 32 of 39 folders processed of week2
+CreateAndCopyQuestions: 33 of 39 folders processed of week2
+CreateAndCopyQuestions: 34 of 39 folders processed of week2
+CreateAndCopyQuestions: 35 of 39 folders processed of week2
+CreateAndCopyQuestions: 36 of 39 folders processed of week2
+CreateAndCopyQuestions: 37 of 39 folders processed of week2
+CreateAndCopyQuestions: 38 of 39 folders processed of week2
+CreateAndCopyQuestions: 39 of 39 folders processed of week2
+CreateAndCopyQuestions: 1 of 37 folders processed of week3
+CreateAndCopyQuestions: 2 of 37 folders processed of week3
+CreateAndCopyQuestions: 3 of 37 folders processed of week3
+CreateAndCopyQuestions: 4 of 37 folders processed of week3
+CreateAndCopyQuestions: 5 of 37 folders processed of week3
+CreateAndCopyQuestions: 6 of 37 folders processed of week3
+CreateAndCopyQuestions: 7 of 37 folders processed of week3
+CreateAndCopyQuestions: 8 of 37 folders processed of week3
+CreateAndCopyQuestions: 9 of 37 folders processed of week3
+CreateAndCopyQuestions: 10 of 37 folders processed of week3
+CreateAndCopyQuestions: 11 of 37 folders processed of week3
+CreateAndCopyQuestions: 12 of 37 folders processed of week3
+CreateAndCopyQuestions: 13 of 37 folders processed of week3
+CreateAndCopyQuestions: 14 of 37 folders processed of week3
+CreateAndCopyQuestions: 15 of 37 folders processed of week3
+CreateAndCopyQuestions: 16 of 37 folders processed of week3
+CreateAndCopyQuestions: 17 of 37 folders processed of week3
+CreateAndCopyQuestions: 18 of 37 folders processed of week3
+CreateAndCopyQuestions: 19 of 37 folders processed of week3
+CreateAndCopyQuestions: 20 of 37 folders processed of week3
+CreateAndCopyQuestions: 21 of 37 folders processed of week3
+CreateAndCopyQuestions: 22 of 37 folders processed of week3
+CreateAndCopyQuestions: 23 of 37 folders processed of week3
+CreateAndCopyQuestions: 24 of 37 folders processed of week3
+CreateAndCopyQuestions: 25 of 37 folders processed of week3
+CreateAndCopyQuestions: 26 of 37 folders processed of week3
+CreateAndCopyQuestions: 27 of 37 folders processed of week3
+CreateAndCopyQuestions: 28 of 37 folders processed of week3
+CreateAndCopyQuestions: 29 of 37 folders processed of week3
+CreateAndCopyQuestions: 30 of 37 folders processed of week3
+CreateAndCopyQuestions: 31 of 37 folders processed of week3
+CreateAndCopyQuestions: 32 of 37 folders processed of week3
+CreateAndCopyQuestions: 33 of 37 folders processed of week3
+CreateAndCopyQuestions: 34 of 37 folders processed of week3
+CreateAndCopyQuestions: 35 of 37 folders processed of week3
+CreateAndCopyQuestions: 36 of 37 folders processed of week3
+CreateAndCopyQuestions: 37 of 37 folders processed of week3
+CreateAndCopyQuestions: 1 of 30 folders processed of week4
+CreateAndCopyQuestions: 2 of 30 folders processed of week4
+CreateAndCopyQuestions: 3 of 30 folders processed of week4
+CreateAndCopyQuestions: 4 of 30 folders processed of week4
+CreateAndCopyQuestions: 5 of 30 folders processed of week4
+CreateAndCopyQuestions: 6 of 30 folders processed of week4
+CreateAndCopyQuestions: 7 of 30 folders processed of week4
+CreateAndCopyQuestions: 8 of 30 folders processed of week4
+CreateAndCopyQuestions: 9 of 30 folders processed of week4
+CreateAndCopyQuestions: 10 of 30 folders processed of week4
+CreateAndCopyQuestions: 11 of 30 folders processed of week4
+CreateAndCopyQuestions: 12 of 30 folders processed of week4
+CreateAndCopyQuestions: 13 of 30 folders processed of week4
+CreateAndCopyQuestions: 14 of 30 folders processed of week4
+CreateAndCopyQuestions: 15 of 30 folders processed of week4
+CreateAndCopyQuestions: 16 of 30 folders processed of week4
+CreateAndCopyQuestions: 17 of 30 folders processed of week4
+CreateAndCopyQuestions: 18 of 30 folders processed of week4
+CreateAndCopyQuestions: 19 of 30 folders processed of week4
+CreateAndCopyQuestions: 20 of 30 folders processed of week4
+CreateAndCopyQuestions: 21 of 30 folders processed of week4
+CreateAndCopyQuestions: 22 of 30 folders processed of week4
+CreateAndCopyQuestions: 23 of 30 folders processed of week4
+CreateAndCopyQuestions: 24 of 30 folders processed of week4
+CreateAndCopyQuestions: 25 of 30 folders processed of week4
+CreateAndCopyQuestions: 26 of 30 folders processed of week4
+CreateAndCopyQuestions: 27 of 30 folders processed of week4
+CreateAndCopyQuestions: 28 of 30 folders processed of week4
+CreateAndCopyQuestions: 29 of 30 folders processed of week4
+CreateAndCopyQuestions: 30 of 30 folders processed of week4
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the generated files to clean_source assignment
+week1: TRUE = 81 | FALSE = 81
+week2: TRUE = 78 | FALSE = 81
+week3: TRUE = 76 | FALSE = 77
+week4: TRUE = 61 | FALSE = 64
+TOTAAL: TRUE = 296 | FALSE = 303
+Copy the files to the "assignment" place
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',238,1)">238 </a>copyMCToCleanSourceAssignment(ap.BASEFOLDER,ap.Assignments,weekNames);
+if system_dependent('IsDebugMode')==1, dbstep in; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',4,1)">4   </a>apMCFiles = fullfile(baseFolder,'clean_source','gen_mc','generated_questions');
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',5,1)">5   </a>cd(apMCFiles);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',6,1)">6   </a>ass =[];
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',7,1)">7   </a>for wk = 1:length(WeekNames)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',8,1)">8   </a>    cd(WeekNames{wk})
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',9,1)">9   </a>    ass{wk} = getFolders(pwd);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',10,1)">10  </a>    cd ..
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',11,1)">11  </a>end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',8,1)">8   </a>    cd(WeekNames{wk})
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',9,1)">9   </a>    ass{wk} = getFolders(pwd);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',10,1)">10  </a>    cd ..
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',11,1)">11  </a>end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',8,1)">8   </a>    cd(WeekNames{wk})
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',9,1)">9   </a>    ass{wk} = getFolders(pwd);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',10,1)">10  </a>    cd ..
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',11,1)">11  </a>end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',8,1)">8   </a>    cd(WeekNames{wk})
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',9,1)">9   </a>    ass{wk} = getFolders(pwd);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',10,1)">10  </a>    cd ..
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',11,1)">11  </a>end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',14,1)">14  </a>for nWk = 1:length(WeekNames)
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+cd(fullfile(apFin2))
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyMCToCleanSourceAssignment.m',23,1)">23  </a>        cd(apClnSrc)
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+CreateAndCopyQuestions: 2 of 40 folders processed of week1
+CreateAndCopyQuestions: 3 of 40 folders processed of week1
+CreateAndCopyQuestions: 4 of 40 folders processed of week1
+CreateAndCopyQuestions: 5 of 40 folders processed of week1
+CreateAndCopyQuestions: 6 of 40 folders processed of week1
+CreateAndCopyQuestions: 7 of 40 folders processed of week1
+CreateAndCopyQuestions: 8 of 40 folders processed of week1
+CreateAndCopyQuestions: 9 of 40 folders processed of week1
+CreateAndCopyQuestions: 10 of 40 folders processed of week1
+CreateAndCopyQuestions: 11 of 40 folders processed of week1
+CreateAndCopyQuestions: 12 of 40 folders processed of week1
+CreateAndCopyQuestions: 13 of 40 folders processed of week1
+CreateAndCopyQuestions: 14 of 40 folders processed of week1
+CreateAndCopyQuestions: 15 of 40 folders processed of week1
+CreateAndCopyQuestions: 16 of 40 folders processed of week1
+CreateAndCopyQuestions: 17 of 40 folders processed of week1
+CreateAndCopyQuestions: 18 of 40 folders processed of week1
+CreateAndCopyQuestions: 19 of 40 folders processed of week1
+CreateAndCopyQuestions: 20 of 40 folders processed of week1
+CreateAndCopyQuestions: 21 of 40 folders processed of week1
+CreateAndCopyQuestions: 22 of 40 folders processed of week1
+CreateAndCopyQuestions: 23 of 40 folders processed of week1
+CreateAndCopyQuestions: 24 of 40 folders processed of week1
+CreateAndCopyQuestions: 25 of 40 folders processed of week1
+CreateAndCopyQuestions: 26 of 40 folders processed of week1
+CreateAndCopyQuestions: 27 of 40 folders processed of week1
+CreateAndCopyQuestions: 28 of 40 folders processed of week1
+CreateAndCopyQuestions: 29 of 40 folders processed of week1
+CreateAndCopyQuestions: 30 of 40 folders processed of week1
+CreateAndCopyQuestions: 31 of 40 folders processed of week1
+CreateAndCopyQuestions: 32 of 40 folders processed of week1
+CreateAndCopyQuestions: 33 of 40 folders processed of week1
+CreateAndCopyQuestions: 34 of 40 folders processed of week1
+CreateAndCopyQuestions: 35 of 40 folders processed of week1
+CreateAndCopyQuestions: 36 of 40 folders processed of week1
+CreateAndCopyQuestions: 37 of 40 folders processed of week1
+CreateAndCopyQuestions: 38 of 40 folders processed of week1
+CreateAndCopyQuestions: 39 of 40 folders processed of week1
+CreateAndCopyQuestions: 40 of 40 folders processed of week1
+CreateAndCopyQuestions: 1 of 39 folders processed of week2
+CreateAndCopyQuestions: 2 of 39 folders processed of week2
+CreateAndCopyQuestions: 3 of 39 folders processed of week2
+CreateAndCopyQuestions: 4 of 39 folders processed of week2
+CreateAndCopyQuestions: 5 of 39 folders processed of week2
+CreateAndCopyQuestions: 6 of 39 folders processed of week2
+CreateAndCopyQuestions: 7 of 39 folders processed of week2
+CreateAndCopyQuestions: 8 of 39 folders processed of week2
+CreateAndCopyQuestions: 9 of 39 folders processed of week2
+CreateAndCopyQuestions: 10 of 39 folders processed of week2
+CreateAndCopyQuestions: 11 of 39 folders processed of week2
+CreateAndCopyQuestions: 12 of 39 folders processed of week2
+CreateAndCopyQuestions: 13 of 39 folders processed of week2
+CreateAndCopyQuestions: 14 of 39 folders processed of week2
+CreateAndCopyQuestions: 15 of 39 folders processed of week2
+CreateAndCopyQuestions: 16 of 39 folders processed of week2
+CreateAndCopyQuestions: 17 of 39 folders processed of week2
+CreateAndCopyQuestions: 18 of 39 folders processed of week2
+CreateAndCopyQuestions: 19 of 39 folders processed of week2
+CreateAndCopyQuestions: 20 of 39 folders processed of week2
+CreateAndCopyQuestions: 21 of 39 folders processed of week2
+CreateAndCopyQuestions: 22 of 39 folders processed of week2
+CreateAndCopyQuestions: 23 of 39 folders processed of week2
+CreateAndCopyQuestions: 24 of 39 folders processed of week2
+CreateAndCopyQuestions: 25 of 39 folders processed of week2
+CreateAndCopyQuestions: 26 of 39 folders processed of week2
+CreateAndCopyQuestions: 27 of 39 folders processed of week2
+CreateAndCopyQuestions: 28 of 39 folders processed of week2
+CreateAndCopyQuestions: 29 of 39 folders processed of week2
+CreateAndCopyQuestions: 30 of 39 folders processed of week2
+CreateAndCopyQuestions: 31 of 39 folders processed of week2
+CreateAndCopyQuestions: 32 of 39 folders processed of week2
+CreateAndCopyQuestions: 33 of 39 folders processed of week2
+CreateAndCopyQuestions: 34 of 39 folders processed of week2
+CreateAndCopyQuestions: 35 of 39 folders processed of week2
+CreateAndCopyQuestions: 36 of 39 folders processed of week2
+CreateAndCopyQuestions: 37 of 39 folders processed of week2
+CreateAndCopyQuestions: 38 of 39 folders processed of week2
+CreateAndCopyQuestions: 39 of 39 folders processed of week2
+CreateAndCopyQuestions: 1 of 37 folders processed of week3
+CreateAndCopyQuestions: 2 of 37 folders processed of week3
+CreateAndCopyQuestions: 3 of 37 folders processed of week3
+CreateAndCopyQuestions: 4 of 37 folders processed of week3
+CreateAndCopyQuestions: 5 of 37 folders processed of week3
+CreateAndCopyQuestions: 6 of 37 folders processed of week3
+CreateAndCopyQuestions: 7 of 37 folders processed of week3
+CreateAndCopyQuestions: 8 of 37 folders processed of week3
+CreateAndCopyQuestions: 9 of 37 folders processed of week3
+CreateAndCopyQuestions: 10 of 37 folders processed of week3
+CreateAndCopyQuestions: 11 of 37 folders processed of week3
+CreateAndCopyQuestions: 12 of 37 folders processed of week3
+CreateAndCopyQuestions: 13 of 37 folders processed of week3
+CreateAndCopyQuestions: 14 of 37 folders processed of week3
+CreateAndCopyQuestions: 15 of 37 folders processed of week3
+CreateAndCopyQuestions: 16 of 37 folders processed of week3
+CreateAndCopyQuestions: 17 of 37 folders processed of week3
+CreateAndCopyQuestions: 18 of 37 folders processed of week3
+CreateAndCopyQuestions: 19 of 37 folders processed of week3
+CreateAndCopyQuestions: 20 of 37 folders processed of week3
+CreateAndCopyQuestions: 21 of 37 folders processed of week3
+CreateAndCopyQuestions: 22 of 37 folders processed of week3
+CreateAndCopyQuestions: 23 of 37 folders processed of week3
+CreateAndCopyQuestions: 24 of 37 folders processed of week3
+CreateAndCopyQuestions: 25 of 37 folders processed of week3
+CreateAndCopyQuestions: 26 of 37 folders processed of week3
+CreateAndCopyQuestions: 27 of 37 folders processed of week3
+CreateAndCopyQuestions: 28 of 37 folders processed of week3
+CreateAndCopyQuestions: 29 of 37 folders processed of week3
+CreateAndCopyQuestions: 30 of 37 folders processed of week3
+CreateAndCopyQuestions: 31 of 37 folders processed of week3
+CreateAndCopyQuestions: 32 of 37 folders processed of week3
+CreateAndCopyQuestions: 33 of 37 folders processed of week3
+CreateAndCopyQuestions: 34 of 37 folders processed of week3
+CreateAndCopyQuestions: 35 of 37 folders processed of week3
+CreateAndCopyQuestions: 36 of 37 folders processed of week3
+CreateAndCopyQuestions: 37 of 37 folders processed of week3
+CreateAndCopyQuestions: 1 of 30 folders processed of week4
+CreateAndCopyQuestions: 2 of 30 folders processed of week4
+CreateAndCopyQuestions: 3 of 30 folders processed of week4
+CreateAndCopyQuestions: 4 of 30 folders processed of week4
+CreateAndCopyQuestions: 5 of 30 folders processed of week4
+CreateAndCopyQuestions: 6 of 30 folders processed of week4
+CreateAndCopyQuestions: 7 of 30 folders processed of week4
+CreateAndCopyQuestions: 8 of 30 folders processed of week4
+CreateAndCopyQuestions: 9 of 30 folders processed of week4
+CreateAndCopyQuestions: 10 of 30 folders processed of week4
+CreateAndCopyQuestions: 11 of 30 folders processed of week4
+CreateAndCopyQuestions: 12 of 30 folders processed of week4
+CreateAndCopyQuestions: 13 of 30 folders processed of week4
+CreateAndCopyQuestions: 14 of 30 folders processed of week4
+CreateAndCopyQuestions: 15 of 30 folders processed of week4
+CreateAndCopyQuestions: 16 of 30 folders processed of week4
+CreateAndCopyQuestions: 17 of 30 folders processed of week4
+CreateAndCopyQuestions: 18 of 30 folders processed of week4
+CreateAndCopyQuestions: 19 of 30 folders processed of week4
+CreateAndCopyQuestions: 20 of 30 folders processed of week4
+CreateAndCopyQuestions: 21 of 30 folders processed of week4
+CreateAndCopyQuestions: 22 of 30 folders processed of week4
+CreateAndCopyQuestions: 23 of 30 folders processed of week4
+CreateAndCopyQuestions: 24 of 30 folders processed of week4
+CreateAndCopyQuestions: 25 of 30 folders processed of week4
+CreateAndCopyQuestions: 26 of 30 folders processed of week4
+CreateAndCopyQuestions: 27 of 30 folders processed of week4
+CreateAndCopyQuestions: 28 of 30 folders processed of week4
+CreateAndCopyQuestions: 29 of 30 folders processed of week4
+CreateAndCopyQuestions: 30 of 30 folders processed of week4
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',169,1)">169 </a>cd(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+apOfCleanSource
+
+apOfCleanSource =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc'
+
+cd(apOfCleanSource)
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfile')" style="font-weight:bold">copyfile</a>
+The system cannot find the path specified.
+
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 66)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',66,0)">line 66</a>)
+        copyfile(fullfile(apOfCleanSource,fn),fullfile(absPathDestination,fn));
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',66,1)">66  </a>        copyfile(fullfile(apOfCleanSource,fn),fullfile(absPathDestination,fn));
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apOfCleanSource,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apOfCleanSource,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbcont; end
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cd')" style="font-weight:bold">cd</a>
+Cannot CD to C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc\week1 (Name is nonexistent or not a directory).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('GetDeepestFolders', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\getDeepestFolders\GetDeepestFolders.m', 51)" style="font-weight:bold">GetDeepestFolders</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\getDeepestFolders\GetDeepestFolders.m',51,0)">line 51</a>)
+cd(location);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 20)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',20,0)">line 20</a>)
+    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekNames{nWk}));
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\getDeepestFolders\GetDeepestFolders.m',51,1)">51  </a>cd(location);
+CreateAndCopyQuestions(con,gWeekNames);
+{Undefined function or variable 'con'.
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\getDeepestFolders\GetDeepestFolders.m',51,1)">51  </a>cd(location);
+if system_dependent('IsDebugMode')==1, dbquit; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apOfCleanSource,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',14,1)">14  </a>    removeShitFromDir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',15,1)">15  </a>    if ~exist(outputDir,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',20,1)">20  </a>    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekNames{nWk}));
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cd')" style="font-weight:bold">cd</a>
+Cannot CD to C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc\week1 (Name is nonexistent or not a directory).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('GetDeepestFolders', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\getDeepestFolders\GetDeepestFolders.m', 51)" style="font-weight:bold">GetDeepestFolders</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\getDeepestFolders\GetDeepestFolders.m',51,0)">line 51</a>)
+cd(location);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 20)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',20,0)">line 20</a>)
+    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekNames{nWk}));
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apOfCleanSource,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',14,1)">14  </a>    removeShitFromDir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',15,1)">15  </a>    if ~exist(outputDir,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',20,1)">20  </a>    try
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',21,1)">21  </a>    folders = GetDeepestFolders(fullfile(apOfCleanSource,weekNames{nWk}));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',42,1)">42  </a>    catch
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',43,1)">43  </a>    end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',44,1)">44  </a>    apTemplateCheck = fullfile(apOfCleanSource,'TemplateCheckMC.m');
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',47,1)">47  </a>    apDesMC = outputDir;
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+{Undefined function or variable 'folders'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 54)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',54,0)">line 54</a>)
+    for nDirs = 1:length(folders)
+} 
+opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',54,0)
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apOfCleanSource,'source_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cd')" style="font-weight:bold">cd</a>
+Cannot CD to C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\generated_source\gen_mc (Name is nonexistent or not a directory).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 11)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',11,0)">line 11</a>)
+    cd(apGeneratedTheses);
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',11,1)">11  </a>    cd(apGeneratedTheses);
+if system_dependent('IsDebugMode')==1, dbstep; end
+con
+
+con = 
+
+  <a href="matlab:helpPopup ConstantsClass" style="font-weight:bold">ConstantsClass</a> with properties:
+
+                         YEAR: 2018
+             STUDENTNUMBERMAT: 'studentNum.mat'
+         NAMEASSIGNMENTFOLDER: 'assignments'
+             STUDENTASSFOLDER: 'student_assignments'
+             STUDENTSUBFOLDER: 'submitted'
+               NAMEZIPPEDWEEK: 'Biostatica_Programmeren_StudentOpdrachten_'
+                          EXT: '.m'
+                   SOLPOSTFIX: '_SOL'
+                 CHECKPOSTFIX: '_CHECK'
+                 CHEATPOSTFIX: '_CHEAT'
+      NAMEZIPMFILEFORSTUDENTS: 'AfrondenWeekOpdracht.m'
+               LASTASSIGNMENT: 'LaatsteOpdracht.m'
+    OTHERFILESINSTUDENTFOLDER: {'AfrondenWeekOpdracht.m'  'studentnummer.m'  'LaatsteOpdracht.m'}
+                 ADJUSTEDHASH: 'AANGEPASTE_MFILE_GEEN_PUNTEN'
+                  FOLDERCHEAT: 'BESTANDEN_NIET_AAN_JOU_TOEGEWEZEN'
+                NAMERESULTMAT: 'resultatenWeek'
+                   VAR_RESULT: 'ResStudentScript'
+                   TESTFOLDER: 'fortesting'
+            DIRSTUDENTNUMBERS: 'studentnumbers'
+                  DIRCLEANSRC: 'clean_source'
+                    DIRHEADER: 'clean_source\headers'
+        LISTWITHNEEDEDFOLDERS: {'helpercode'  'clean_source'  'studentnumbers'  'fortesting'  'submitted'}
+                  WEEKFOLDERS: {'week1'  'week2'  'week3'  'week4'}
+                   BASEFOLDER: 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS'
+                     DATETIME: '1811080919'
+                  Assignments: 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments'
+
+CreateAndCopyQuestions(con,gWeekNames)
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',10,1)">10  </a>    apGeneratedTheses = fullfile(ap.BASEFOLDER,'gen_mc');
+apGeneratedTheses = fullfile(ap.BASEFOLDER,ap.DIRCLEANSRC,'gen_mc')
+
+apGeneratedTheses =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames)
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apGeneratedTheses,'generated_questions',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',14,1)">14  </a>    removeShitFromDir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',15,1)">15  </a>    if ~exist(outputDir,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',16,1)">16  </a>        mkdir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',17,1)">17  </a>    end
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames)
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apGeneratedTheses,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',14,1)">14  </a>    removeShitFromDir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',15,1)">15  </a>    if ~exist(outputDir,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',20,1)">20  </a>    folders = GetDeepestFolders(fullfile(apGeneratedTheses,weekNames{nWk}));
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames)
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',13,1)">13  </a>    outputDir = fullfile(apGeneratedTheses,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',14,1)">14  </a>    removeShitFromDir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',15,1)">15  </a>    if ~exist(outputDir,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',20,1)">20  </a>    folders = GetDeepestFolders(fullfile(apGeneratedTheses,'source_theses',weekNames{nWk}));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',21,1)">21  </a>    theses = {zeros(1,length(folders))};
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',22,1)">22  </a>    TPA = theses;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',23,1)">23  </a>    for nDirs = 1:length(folders)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',24,1)">24  </a>        cd(folders{nDirs});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',26,1)">26  </a>        theses{nDirs} = dir(['**' filesep '*th_*.m']);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',29,1)">29  </a>        for nT = 1:length(theses{nDirs})
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: copyfiles: No matching files were found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfiles', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\copyFiles\copyfiles.m', 43)" style="font-weight:bold">copyfiles</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\copyFiles\copyfiles.m',43,0)">line 43</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 46)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',46,0)">line 46</a>)] 
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames)
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',14,1)">14  </a>    outputDir = fullfile(apGeneratedTheses,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',15,1)">15  </a>    removeShitFromDir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',16,1)">16  </a>    if ~exist(outputDir,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',21,1)">21  </a>    folders = GetDeepestFolders(fullfile(apSourceTheses,weekNames{nWk}));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',22,1)">22  </a>    theses = {zeros(1,length(folders))};
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',23,1)">23  </a>    TPA = theses;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',24,1)">24  </a>    for nDirs = 1:length(folders)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',25,1)">25  </a>        cd(folders{nDirs});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',27,1)">27  </a>        theses{nDirs} = dir(['**' filesep '*th_*.m']);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>        for nT = 1:length(theses{nDirs})
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpName = theses{1,nDirs}(nT).name;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>            if contains(tmpName,'TRUE')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>                tmpAnswer = true;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',39,1)">39  </a>        end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpName = theses{1,nDirs}(nT).name;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>            if contains(tmpName,'TRUE')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>                tmpAnswer = true;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',39,1)">39  </a>        end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpName = theses{1,nDirs}(nT).name;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>            if contains(tmpName,'TRUE')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>            else
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>                tmpAnswer = false;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',39,1)">39  </a>        end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpName = theses{1,nDirs}(nT).name;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>            if contains(tmpName,'TRUE')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',34,1)">34  </a>                tmpAnswer = true;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',39,1)">39  </a>        end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',40,1)">40  </a>        cd(apGeneratedTheses);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',41,1)">41  </a>    end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',25,1)">25  </a>        cd(folders{nDirs});
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',27,1)">27  </a>        theses{nDirs} = dir(['**' filesep '*th_*.m']);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',30,1)">30  </a>        for nT = 1:length(theses{nDirs})
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpName = theses{1,nDirs}(nT).name;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',32,1)">32  </a>            tmpPath = theses{1,nDirs}(nT).folder;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',33,1)">33  </a>            if contains(tmpName,'TRUE')
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',35,1)">35  </a>            else
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',36,1)">36  </a>                tmpAnswer = false;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',37,1)">37  </a>            end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',38,1)">38  </a>            TPA{nDirs,nT} = {fullfile(tmpPath,tmpName),tmpAnswer,length(theses{nDirs})};
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',39,1)">39  </a>        end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',31,1)">31  </a>            tmpName = theses{1,nDirs}(nT).name;
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',52,1)">52  </a>    for nDirs = 1:length(folders)
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+CreateAndCopyQuestions: 1 of 80 folders processed of week1
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames)
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',14,1)">14  </a>    outputDir = fullfile(apGeneratedTheses,'generated_theses',weekNames{nWk});
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',15,1)">15  </a>    removeShitFromDir(outputDir)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',16,1)">16  </a>    if ~exist(outputDir,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',21,1)">21  </a>    folders = GetDeepestFolders(fullfile(apSourceTheses,weekNames{nWk}));
+if system_dependent('IsDebugMode')==1, dbstep; end
+fullfile(apSourceTheses,weekNames{nWk})
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\gen_mc\source_theses\week1'
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+close all
+clear all
+PerformAll
+Check for the existence of needed supporting scripts/function files
+The system cannot find the file WinRaR. 
