@@ -1,8 +1,8 @@
 %% Stelling 7
 %
-% Een functie kan 0 of meerdere output variabelen hebben.
+% Een functie moet altijd 1 output variabele hebben.
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

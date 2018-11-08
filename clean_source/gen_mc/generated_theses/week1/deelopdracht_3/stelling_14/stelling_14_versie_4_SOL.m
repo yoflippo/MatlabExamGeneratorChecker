@@ -1,14 +1,13 @@
 %% Stelling 14
 %
-% In het onderstaande code voorbeeld is de correcte 
-% opbouw van een functie te zien:                   
-%                                                   
-% ======= Code =======                              
-%                                                   
-% function [ output ] = naamFunctie( input          
-%     %Hier komt code                               
-% end                                               
-%                                                   
-% ======= Code =======                              
+% Het schrijven van een functie is verplicht in een Matlab
+% programma.                                              
 %
 Antwoord = 0;
+
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 %% Stelling 25
 %
-% In het Command Window kun je NIET zelf 
-% Matlab commando's uitvoeren.           
+% De Editor wordt o.a. gebruikt om een script
+% te maken of aan te passen.                 
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

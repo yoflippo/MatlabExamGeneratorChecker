@@ -1,7 +1,7 @@
 %% Stelling 22
 %
-% Met behulp van de colon-operator (:) kan een numerieke 
-% vector worden aangemaakt.                              
+% Een vector kan worden afgedrukt door het typen van     
+% zijn naam in het Command Window gevolgd door een Enter.
 %
 Antwoord = 1;
 

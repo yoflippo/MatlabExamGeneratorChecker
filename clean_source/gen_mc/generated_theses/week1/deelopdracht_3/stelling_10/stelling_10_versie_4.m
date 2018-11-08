@@ -1,20 +1,13 @@
 %% Stelling 10
 %
-% Gegeven is dat in het onderstaande voorbeeld      
-% het code commentaar (aangegeven met het '%' teken)
-% aangeeft wat er moet gebeuren.                    
-%                                                   
-% In dit code voorbeeld zit geen syntaxfout:        
-%                                                   
-% ======= Code =======                              
-%                                                   
-% 1- % Aanmaken van variabelen                      
-% 2- aad = 1;                                       
-% 3- bart = 2;                                      
-% 4- herre = 3;                                     
-% 5- % Optellen van herre en aad                    
-% 6- som = aad ++ herre;                            
-%                                                   
-% ======= Code =======                              
+% Het is heel normaal dat je als Matlab programmeur 
+% zelf functies schrijft.                           
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
+
+
+

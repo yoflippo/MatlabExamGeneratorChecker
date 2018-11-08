@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% Met de functie fliplr() kun je in Matlab de volgorde
-% van de elementen van een rijvector omdraaien.       
+% Met de functie whos() krijg je de eerste 10 variabelen
+% uit de Workspace te zien.                             
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

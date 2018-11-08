@@ -1,13 +1,13 @@
 %% Stelling 12
 %
 % De onderstaande code maakt een numerieke vector aan
-% met een lengte van 11:                             
+% met een lengte van 12:                             
 %                                                    
 % ------------code--------------                     
-% variabele = 1:10;                                  
+% vec = 3:14;                                        
 % ------------code--------------                     
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

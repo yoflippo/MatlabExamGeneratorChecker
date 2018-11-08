@@ -1,10 +1,10 @@
 %% Stelling 19
 %
-% Met de onderstaande code ken je de waarde 6 
-% aan variabele B toe.                        
+% Met de onderstaande code ken je de waarde 8 
+% aan variabele C toe.                        
 %                                             
 % ------------code--------------              
-% B = 6                                       
+% C = 8                                       
 % ------------code--------------              
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

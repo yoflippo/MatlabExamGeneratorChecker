@@ -1,13 +1,13 @@
 %% Stelling 10
 %
-% Met de functie flipud() kun je in Matlab de volgorde
-% van de elementen van een rijvector omdraaien.       
+% In de volgende code wordt er bij elk element van
+% de vector de waarde 99 opgeteld:                
+%                                                 
+% ------------code--------------                  
+% vector = 0:10;                                  
+% vector = vector + 99;                           
+% ------------code--------------                  
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-
 
 

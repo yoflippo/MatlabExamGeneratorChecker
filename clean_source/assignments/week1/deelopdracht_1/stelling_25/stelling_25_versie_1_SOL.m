@@ -1,9 +1,9 @@
 %% Stelling 25
 %
-% De Editor wordt o.a. gebruikt om een script
-% te maken of aan te passen.                 
+% Variabelen in Matlab mogen beginnen met een
+% willekeurig symbool.                       
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

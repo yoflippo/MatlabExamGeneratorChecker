@@ -1,13 +1,13 @@
 %% Stelling 14
 %
-% De functie size() geeft bij een matrix de hoogste      
-% waarde terug. Bijvoorbeeld: 'size(0:3)' geeft de waarde
-% 3 terug.                                               
+% De Matlab functie length() geeft de lengte van         
+% een rijvector terug.                                   
+%                                                        
+% Bijvoorbeeld als een rijvector bestaat                 
+% uit 1 rij en 10 kolomen. Dan geeft length() de waarde 1
+% terug.                                                 
 %
 Antwoord = 0;
-
-
-
 
 
 

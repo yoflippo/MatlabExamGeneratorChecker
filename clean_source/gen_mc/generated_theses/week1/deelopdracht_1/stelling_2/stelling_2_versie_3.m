@@ -1,10 +1,10 @@
 %% Stelling 2
 %
-% In de Workspace staan de bestanden (lees: geen
-% variabelen) van de 'Current Folder'.          
-%                                               
+% De naam van een script mag beginnen met een willekeurig
+% symbool.                                               
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
 
 
 

@@ -1,9 +1,9 @@
 %% Stelling 25
 %
-% Voor de leesbaarheid van een programma is het verstandig
-% om betekenisvolle namen voor variabelen te gebruiken.   
+% In het Command Window kun je NIET zelf 
+% Matlab commando's uitvoeren.           
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

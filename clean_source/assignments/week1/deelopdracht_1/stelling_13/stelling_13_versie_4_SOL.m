@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% Met de functie whos() krijg je de eerste 10 variabelen
-% uit de Workspace te zien.                             
+% Met de functie whos() kun je zien welke variabelen in de
+% Workspace staan.                                        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

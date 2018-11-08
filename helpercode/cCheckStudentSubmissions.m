@@ -134,7 +134,7 @@ catch err
     keyboard
     error([mfilename ': Something went wrong with unzipping!' newline err.message newline]);
 end
-%%
+
 %% Load the old studentNumbers
 load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
 % Display how many students did not submit
@@ -149,8 +149,6 @@ disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
 %% Check if the HASH-codes in every m-file of the students is intact
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
 %% Check if the HASH-codes in every m-file of the students is intact
-
-
 % Get Hash of original assignment folder AND save it in MAT-file
 assCurrWk = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName);
 dicWithHashes = GetDictionaryWithHashAndLocation(assCurrWk,con.SOLPOSTFIX);

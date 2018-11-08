@@ -67,7 +67,7 @@ cd(con.BASEFOLDER)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
 
 addpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}))
-addpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}))
+addpath(genpath([con.LISTWITHNEEDEDFOLDERS{2} filesep 'headers']))
 addpath(genpath(con.NAMEASSIGNMENTFOLDER))
 cd(con.NAMEASSIGNMENTFOLDER)
 
@@ -120,7 +120,7 @@ for wk = 1:length(weekFolders)
                 % Create header with hash of file
                 headerHash{1} = header{1};
                 % Be carefull, the following function needs unique data
-                currFileRel = extractAfter(currFileFull,'Biostatica_Auto_Matlab');
+                currFileRel = extractAfter(currFileFull,'assignments');
                 uniqueFN = generateUniqueFilename(currFileRel,con.YEAR);
                 % Test if a Hash is unique, could be
                 if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
@@ -177,7 +177,9 @@ for wk = 1:length(weekFolders)
     end
 end
 cd(con.BASEFOLDER)
+warning off
 rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{4}))
 rmpath(genpath(con.LISTWITHNEEDEDFOLDERS{2}))
 rmpath(genpath(con.NAMEASSIGNMENTFOLDER))
+warning on
 debugOutput(DEBUGOUTPUT,'END SCRIPT',1);
