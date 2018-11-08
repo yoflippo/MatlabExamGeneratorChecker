@@ -1,0 +1,1 @@
+De Matlab operator voor worteltrekken is: $.

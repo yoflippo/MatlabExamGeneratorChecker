@@ -1,0 +1,340 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1811080919
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.5.0.944444 (R2018b)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Home Version 10.0 (Build 17134)
+Java Version: Java 1.8.0_152-b16 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.5         (R2018b)
+Simulink                                              Version 9.2         (R2018b)
+Aerospace Blockset                                    Version 4.0         (R2018b)
+Aerospace Toolbox                                     Version 3.0         (R2018b)
+Antenna Toolbox                                       Version 3.2         (R2018b)
+Audio System Toolbox                                  Version 1.5         (R2018b)
+Automated Driving System Toolbox                      Version 1.3         (R2018b)
+Bioinformatics Toolbox                                Version 4.11        (R2018b)
+Communications Toolbox                                Version 7.0         (R2018b)
+Computer Vision System Toolbox                        Version 8.2         (R2018b)
+Control System Toolbox                                Version 10.5        (R2018b)
+Curve Fitting Toolbox                                 Version 3.5.8       (R2018b)
+DSP System Toolbox                                    Version 9.7         (R2018b)
+Data Acquisition Toolbox                              Version 3.14        (R2018b)
+Database Toolbox                                      Version 9.0         (R2018b)
+Datafeed Toolbox                                      Version 5.8         (R2018b)
+Deep Learning Toolbox                                 Version 12.0        (R2018b)
+Econometrics Toolbox                                  Version 5.1         (R2018b)
+Embedded Coder                                        Version 7.1         (R2018b)
+Filter Design HDL Coder                               Version 3.1.4       (R2018b)
+Financial Instruments Toolbox                         Version 2.8         (R2018b)
+Financial Toolbox                                     Version 5.12        (R2018b)
+Fixed-Point Designer                                  Version 6.2         (R2018b)
+Fuzzy Logic Toolbox                                   Version 2.4         (R2018b)
+GPU Coder                                             Version 1.2         (R2018b)
+Global Optimization Toolbox                           Version 4.0         (R2018b)
+HDL Coder                                             Version 3.13        (R2018b)
+HDL Verifier                                          Version 5.5         (R2018b)
+Image Acquisition Toolbox                             Version 5.5         (R2018b)
+Image Processing Toolbox                              Version 10.3        (R2018b)
+Instrument Control Toolbox                            Version 3.14        (R2018b)
+LTE HDL Toolbox                                       Version 1.2         (R2018b)
+LTE Toolbox                                           Version 3.0         (R2018b)
+MATLAB Coder                                          Version 4.1         (R2018b)
+MATLAB Compiler                                       Version 7.0         (R2018b)
+MATLAB Compiler SDK                                   Version 6.6         (R2018b)
+MATLAB Report Generator                               Version 5.5         (R2018b)
+Mapping Toolbox                                       Version 4.7         (R2018b)
+Model Predictive Control Toolbox                      Version 6.2         (R2018b)
+Model-Based Calibration Toolbox                       Version 5.5         (R2018b)
+OPC Toolbox                                           Version 4.0.6       (R2018b)
+Optimization Toolbox                                  Version 8.2         (R2018b)
+Parallel Computing Toolbox                            Version 6.13        (R2018b)
+Partial Differential Equation Toolbox                 Version 3.1         (R2018b)
+Phased Array System Toolbox                           Version 4.0         (R2018b)
+Polyspace Bug Finder                                  Version 2.6         (R2018b)
+Polyspace Code Prover                                 Version 9.10        (R2018b)
+Powertrain Blockset                                   Version 1.4         (R2018b)
+Predictive Maintenance Toolbox                        Version 1.1         (R2018b)
+RF Blockset                                           Version 7.1         (R2018b)
+RF Toolbox                                            Version 3.5         (R2018b)
+Risk Management Toolbox                               Version 1.4         (R2018b)
+Robotics System Toolbox                               Version 2.1         (R2018b)
+Robust Control Toolbox                                Version 6.5         (R2018b)
+Sensor Fusion and Tracking Toolbox                    Version 1.0         (R2018b)
+Signal Processing Toolbox                             Version 8.1         (R2018b)
+SimBiology                                            Version 5.8.1       (R2018b)
+SimEvents                                             Version 5.5         (R2018b)
+Simscape                                              Version 4.5         (R2018b)
+Simscape Driveline                                    Version 2.15        (R2018b)
+Simscape Electrical                                   Version 7.0         (R2018b)
+Simscape Fluids                                       Version 2.5         (R2018b)
+Simscape Multibody                                    Version 6.0         (R2018b)
+Simulink 3D Animation                                 Version 8.1         (R2018b)
+Simulink Check                                        Version 4.2         (R2018b)
+Simulink Code Inspector                               Version 3.3         (R2018b)
+Simulink Coder                                        Version 9.0         (R2018b)
+Simulink Control Design                               Version 5.2         (R2018b)
+Simulink Coverage                                     Version 4.2         (R2018b)
+Simulink Design Optimization                          Version 3.5         (R2018b)
+Simulink Design Verifier                              Version 4.0         (R2018b)
+Simulink Desktop Real-Time                            Version 5.7         (R2018b)
+Simulink PLC Coder                                    Version 2.6         (R2018b)
+Simulink Real-Time                                    Version 6.9         (R2018b)
+Simulink Report Generator                             Version 5.5         (R2018b)
+Simulink Requirements                                 Version 1.2         (R2018b)
+Simulink Test                                         Version 2.5         (R2018b)
+Spreadsheet Link                                      Version 3.4         (R2018b)
+Stateflow                                             Version 9.2         (R2018b)
+Statistics and Machine Learning Toolbox               Version 11.4        (R2018b)
+Symbolic Math Toolbox                                 Version 8.2         (R2018b)
+System Identification Toolbox                         Version 9.9         (R2018b)
+Text Analytics Toolbox                                Version 1.2         (R2018b)
+Trading Toolbox                                       Version 3.5         (R2018b)
+Vehicle Dynamics Blockset                             Version 1.1         (R2018b)
+Vehicle Network Toolbox                               Version 4.1         (R2018b)
+Vision HDL Toolbox                                    Version 1.7         (R2018b)
+WLAN Toolbox                                          Version 2.0         (R2018b)
+Wavelet Toolbox                                       Version 5.1         (R2018b)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',38,1)">38  </a>CreateAndCopyQuestions(con,gWeekNames);
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+{Undefined function or variable 'a'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQuestions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m', 114)" style="font-weight:bold">CreateAndCopyQuestions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',114,0)">line 114</a>)
+            % get answer line
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 38)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',38,0)">line 38</a>)
+CreateAndCopyQuestions(con,gWeekNames);
+} 
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',111,1)">111 </a>            finalTxt{cnt,1} = txtTheses1{nLinesOfTheses1+1}; cnt = cnt + 1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',111,1)">111 </a>            finalTxt{cnt,1} = txtTheses1{nLinesOfTheses1+1}; cnt = cnt + 1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',115,1)">115 </a>            emptyAnswerLine = ReadLineOfFile(fullfile(apOfCleanSource,'th_answer_line.m'));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',117,1)">117 </a>            finalTxt{cnt,1} =  solAnswerLine;
+solAnswerLine
+{Undefined function or variable 'solAnswerLine'.
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',117,1)">117 </a>            finalTxt{cnt,1} =  solAnswerLine;
+uiopen('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',1)
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',111,1)">111 </a>            finalTxt{cnt,1} = txtTheses1{nLinesOfTheses1+1}; cnt = cnt + 1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',115,1)">115 </a>            emptyAnswerLine = ReadLineOfFile(fullfile(apOfCleanSource,'th_answer_line.m'));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',117,1)">117 </a>            finalTxt{cnt,1} =  ansTheses1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',120,1)">120 </a>            cd(absPathDestination);
+uiopen('C:\Users\yoflippo\Dropbox\BT\00_ALG_BT\00-NEWCURR\Biostatica_Auto_Matlab\helpercode\createMC\CreateAndCopyQuestions.m',1)
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',111,1)">111 </a>            finalTxt{cnt,1} = txtTheses1{nLinesOfTheses1+1}; cnt = cnt + 1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',115,1)">115 </a>            emptyAnswerLine = ReadLineOfFile(fullfile(apOfCleanSource,'th_answer_line.m'));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',117,1)">117 </a>            finalTxt{cnt,1} = emptyAnswerLine; cnt= cnt + 1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',118,1)">118 </a>            finalTxt{cnt,1} = ansTheses1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',121,1)">121 </a>            cd(absPathDestination);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',117,1)">117 </a>            finalTxt{cnt,1} = ansTheses1;
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',117,1)">117 </a>            finalTxt{cnt,1} = ansTheses1;
+doc remove
+extractBefore(emptyAnswerLine,'NaN')
+
+ans = 
+
+    "Antwoord = "
+
+[extractBefore(emptyAnswerLine,'NaN') ansTheses1]
+
+ans = 
+
+  12 <a href="matlab:helpPopup string" style="font-weight:bold">string</a> array
+
+    "Antwoord = "    "true"
+
+[extractBefore(emptyAnswerLine,'NaN') num2str(ansTheses1)]
+
+ans = 
+
+  12 <a href="matlab:helpPopup string" style="font-weight:bold">string</a> array
+
+    "Antwoord = "    "1"
+
+[char(extractBefore(emptyAnswerLine,'NaN')) num2str(ansTheses1)]
+
+ans =
+
+    'Antwoord = 1'
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',117,1)">117 </a>            finalTxt{cnt,1} = [char(extractBefore(emptyAnswerLine,'NaN')) num2str(ansTheses1)];
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',120,1)">120 </a>            cd(absPathDestination);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',121,1)">121 </a>            [~, nameQuestion] = GetPathOneLevelUp(absPathDestination);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',123,1)">123 </a>            nVersionMC = nVersionMC + 1;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',124,1)">124 </a>            nameQuestion = [nameQuestion '_versie_' num2str(nVersionMC)];
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',125,1)">125 </a>            nameQuestionSOL = [nameQuestion '_SOL'];
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',126,1)">126 </a>            nameQuestionCHECK = [nameQuestion '_CHECK'];
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+CreateAndCopyQuestions(con,gWeekNames);
+CreateAndCopyQuestions: 1 of 40 folders processed of week1
+CreateAndCopyQuestions: 2 of 40 folders processed of week1
+CreateAndCopyQuestions: 3 of 40 folders processed of week1
+CreateAndCopyQuestions: 4 of 40 folders processed of week1
+CreateAndCopyQuestions: 5 of 40 folders processed of week1
+CreateAndCopyQuestions: 6 of 40 folders processed of week1
+CreateAndCopyQuestions: 7 of 40 folders processed of week1
+CreateAndCopyQuestions: 8 of 40 folders processed of week1
+CreateAndCopyQuestions: 9 of 40 folders processed of week1
+CreateAndCopyQuestions: 10 of 40 folders processed of week1
+CreateAndCopyQuestions: 11 of 40 folders processed of week1
+CreateAndCopyQuestions: 12 of 40 folders processed of week1
+CreateAndCopyQuestions: 13 of 40 folders processed of week1
+CreateAndCopyQuestions: 14 of 40 folders processed of week1
+CreateAndCopyQuestions: 15 of 40 folders processed of week1
+CreateAndCopyQuestions: 16 of 40 folders processed of week1
+CreateAndCopyQuestions: 17 of 40 folders processed of week1
+CreateAndCopyQuestions: 18 of 40 folders processed of week1
+CreateAndCopyQuestions: 19 of 40 folders processed of week1
+CreateAndCopyQuestions: 20 of 40 folders processed of week1
+CreateAndCopyQuestions: 21 of 40 folders processed of week1
+CreateAndCopyQuestions: 22 of 40 folders processed of week1
+CreateAndCopyQuestions: 23 of 40 folders processed of week1
+CreateAndCopyQuestions: 24 of 40 folders processed of week1
+CreateAndCopyQuestions: 25 of 40 folders processed of week1
+CreateAndCopyQuestions: 26 of 40 folders processed of week1
+CreateAndCopyQuestions: 27 of 40 folders processed of week1
+CreateAndCopyQuestions: 28 of 40 folders processed of week1
+CreateAndCopyQuestions: 29 of 40 folders processed of week1
+CreateAndCopyQuestions: 30 of 40 folders processed of week1
+CreateAndCopyQuestions: 31 of 40 folders processed of week1
+CreateAndCopyQuestions: 32 of 40 folders processed of week1
+CreateAndCopyQuestions: 33 of 40 folders processed of week1
+CreateAndCopyQuestions: 34 of 40 folders processed of week1
+CreateAndCopyQuestions: 35 of 40 folders processed of week1
+CreateAndCopyQuestions: 36 of 40 folders processed of week1
+CreateAndCopyQuestions: 37 of 40 folders processed of week1
+CreateAndCopyQuestions: 38 of 40 folders processed of week1
+CreateAndCopyQuestions: 39 of 40 folders processed of week1
+CreateAndCopyQuestions: 40 of 40 folders processed of week1
+CreateAndCopyQuestions: 1 of 39 folders processed of week2
+CreateAndCopyQuestions: 2 of 39 folders processed of week2
+CreateAndCopyQuestions: 3 of 39 folders processed of week2
+CreateAndCopyQuestions: 4 of 39 folders processed of week2
+CreateAndCopyQuestions: 5 of 39 folders processed of week2
+CreateAndCopyQuestions: 6 of 39 folders processed of week2
+CreateAndCopyQuestions: 7 of 39 folders processed of week2
+CreateAndCopyQuestions: 8 of 39 folders processed of week2
+CreateAndCopyQuestions: 9 of 39 folders processed of week2
+CreateAndCopyQuestions: 10 of 39 folders processed of week2
+CreateAndCopyQuestions: 11 of 39 folders processed of week2
+CreateAndCopyQuestions: 12 of 39 folders processed of week2
+CreateAndCopyQuestions: 13 of 39 folders processed of week2
+CreateAndCopyQuestions: 14 of 39 folders processed of week2
+CreateAndCopyQuestions: 15 of 39 folders processed of week2
+CreateAndCopyQuestions: 16 of 39 folders processed of week2
+CreateAndCopyQuestions: 17 of 39 folders processed of week2
+CreateAndCopyQuestions: 18 of 39 folders processed of week2
+CreateAndCopyQuestions: 19 of 39 folders processed of week2
+CreateAndCopyQuestions: 20 of 39 folders processed of week2
+CreateAndCopyQuestions: 21 of 39 folders processed of week2
+CreateAndCopyQuestions: 22 of 39 folders processed of week2
+CreateAndCopyQuestions: 23 of 39 folders processed of week2
+CreateAndCopyQuestions: 24 of 39 folders processed of week2
+CreateAndCopyQuestions: 25 of 39 folders processed of week2
+CreateAndCopyQuestions: 26 of 39 folders processed of week2
+CreateAndCopyQuestions: 27 of 39 folders processed of week2
+CreateAndCopyQuestions: 28 of 39 folders processed of week2
+CreateAndCopyQuestions: 29 of 39 folders processed of week2
+CreateAndCopyQuestions: 30 of 39 folders processed of week2
+CreateAndCopyQuestions: 31 of 39 folders processed of week2
+CreateAndCopyQuestions: 32 of 39 folders processed of week2
+CreateAndCopyQuestions: 33 of 39 folders processed of week2
+CreateAndCopyQuestions: 34 of 39 folders processed of week2
+CreateAndCopyQuestions: 35 of 39 folders processed of week2
+CreateAndCopyQuestions: 36 of 39 folders processed of week2
+CreateAndCopyQuestions: 37 of 39 folders processed of week2
+CreateAndCopyQuestions: 38 of 39 folders processed of week2
+CreateAndCopyQuestions: 39 of 39 folders processed of week2
+CreateAndCopyQuestions: 1 of 37 folders processed of week3
+CreateAndCopyQuestions: 2 of 37 folders processed of week3
+CreateAndCopyQuestions: 3 of 37 folders processed of week3
+CreateAndCopyQuestions: 4 of 37 folders processed of week3
+CreateAndCopyQuestions: 5 of 37 folders processed of week3
+CreateAndCopyQuestions: 6 of 37 folders processed of week3
+CreateAndCopyQuestions: 7 of 37 folders processed of week3
+CreateAndCopyQuestions: 8 of 37 folders processed of week3
+CreateAndCopyQuestions: 9 of 37 folders processed of week3
+CreateAndCopyQuestions: 10 of 37 folders processed of week3
+CreateAndCopyQuestions: 11 of 37 folders processed of week3
+CreateAndCopyQuestions: 12 of 37 folders processed of week3
+CreateAndCopyQuestions: 13 of 37 folders processed of week3
+CreateAndCopyQuestions: 14 of 37 folders processed of week3
+CreateAndCopyQuestions: 15 of 37 folders processed of week3
+CreateAndCopyQuestions: 16 of 37 folders processed of week3
+CreateAndCopyQuestions: 17 of 37 folders processed of week3
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQuestions.m',150,1)">150 </a>            apCheckFile = fullfile(absPathDestination,[nameQuestionCHECK '.m']);
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateAndCopyQuestions: 18 of 37 folders processed of week3
+CreateAndCopyQuestions: 19 of 37 folders processed of week3
+CreateAndCopyQuestions: 20 of 37 folders processed of week3
+CreateAndCopyQuestions: 21 of 37 folders processed of week3
+CreateAndCopyQuestions: 22 of 37 folders processed of w

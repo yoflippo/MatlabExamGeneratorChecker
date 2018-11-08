@@ -111,12 +111,10 @@ for nWk = 1:length(weekNames)
             finalTxt{cnt,1} = txtTheses1{nLinesOfTheses1+1}; cnt = cnt + 1;
             
             %% Handle the answers parts
-a;lksdjfalkdsjfalksdf HIER GEBLEVEN
-
-            % get answer line
-            emptyAnswerLine = ReadLineOfFile(fullfile(apOfCleanSource,'mc_answer_line.m'));
+            % get empty answer line, use it later on
+            emptyAnswerLine = ReadLineOfFile(fullfile(apOfCleanSource,'th_answer_line.m'));
             % combine all the lines in a cell
-            finalTxt{cnt,1} =  solAnswerLine;
+            finalTxt{cnt,1} = [char(extractBefore(emptyAnswerLine,'NaN')) num2str(ansTheses1) ';'];
             
             %% Write final files
             cd(absPathDestination);
@@ -127,7 +125,7 @@ a;lksdjfalkdsjfalksdf HIER GEBLEVEN
             nameQuestionSOL = [nameQuestion '_SOL'];
             nameQuestionCHECK = [nameQuestion '_CHECK'];
             
-            % write solution file, sometimes creating/copying does not work
+            % write SOLUTION file, sometimes creating/copying does not work
             % reliable
             apNameQuestionSOL = fullfile(absPathDestination,[nameQuestionSOL '.m']);
             cd(absPathDestination)

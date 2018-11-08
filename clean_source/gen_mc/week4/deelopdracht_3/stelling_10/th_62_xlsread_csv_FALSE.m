@@ -1,0 +1,1 @@
+Het is niet mogelijk om een .csv file te openen in Matlab.

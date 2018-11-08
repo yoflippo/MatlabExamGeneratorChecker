@@ -1,0 +1,1 @@
+In Matlab kun je alleen rijvectoren maken.

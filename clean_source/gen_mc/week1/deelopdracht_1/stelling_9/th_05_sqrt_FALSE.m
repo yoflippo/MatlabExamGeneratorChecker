@@ -1,0 +1,1 @@
+Met de functie sqrt(2) wordt het getal 2 gekwadrateerd.

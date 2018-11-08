@@ -1,0 +1,1 @@
+Een vector kan alleen getallen bevatten.
