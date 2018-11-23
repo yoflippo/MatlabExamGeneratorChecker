@@ -1,1 +1,0 @@
-deelpunten = 3;

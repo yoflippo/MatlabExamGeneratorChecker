@@ -4,7 +4,7 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all; close all;
-nOfMulChoiceAssignment = 80;
+nOfTheses = 80;
 nOfScriptsFunctions = 19;
 weekNames = {'week1' 'week2' 'week3' 'week4'}; 
 
@@ -71,7 +71,7 @@ disp('Created a randomized struct with all the assignments')
 %% Assign randomized assignments for exam
 cd(ap.CurrExam);
 % right number.
-sAssignedtmp1 = createMCQ(AssInfo,nOfMulChoiceAssignment,nm);
+sAssignedtmp1 = createMCQ(AssInfo,nOfTheses,nm);
 % Create a number of script/function assignments
 sAssignedtmp2 = createFuncScriptAss(AssInfo,nOfScriptsFunctions,nm);
 sAssigned = [sAssignedtmp1 sAssignedtmp2];

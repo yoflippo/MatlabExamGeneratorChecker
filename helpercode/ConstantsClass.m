@@ -25,12 +25,16 @@ classdef ConstantsClass
         DIRHEADER = [ConstantsClass.DIRCLEANSRC filesep 'headers'];
         LISTWITHNEEDEDFOLDERS = {'helpercode' ConstantsClass.DIRCLEANSRC ConstantsClass.DIRSTUDENTNUMBERS ...
             ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};
-        WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4'};
+        WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4' 'week5' 'week6' 'week7' 'week8'};
+        NMBONUSASSIGNMENTDIR = 'BONUSASSIGNMENT';
     end
+    
     properties (SetAccess = private)
         BASEFOLDER
         DATETIME  
         Assignments
+        BONUSASSIGNMENTS
+        NUM_BONUSASSIGNEMNTS
     end
     
     methods
@@ -43,6 +47,9 @@ classdef ConstantsClass
             end
             obj.DATETIME = datetimetxt();
             obj.Assignments = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
+            obj.BONUSASSIGNMENTS{1} = 1:3;
+            obj.BONUSASSIGNMENTS{2} = 4:6;
+            obj.NUM_BONUSASSIGNEMNTS = length(obj.BONUSASSIGNMENTS);
         end
     end
 end %class

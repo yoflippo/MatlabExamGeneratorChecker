@@ -41,12 +41,10 @@ end
 
 desstat.percentageCorrect =  repmat(mean(desstat.totPoints)/desstat.totalPoints,1,w);
 
-%% Calculate Cronbach's alpha betrouwbaarheid, TODO
-nQ = w;
-sumVariance = sum(desstat.varQ);
-varVariance = var(desstat.varQ);
-CA = (nQ/(nQ-1))*(1-(sumVariance/varVariance));
+%% Calculate Cronbach's alpha betrouwbaarheid
+desstat.CBA = CronbachAlpha(transpose(resProc));
 
+%% Create figures
 tQ{1} = 1:numMC;
 tQ{2} = numMC+1:w;
 nmQ{1} = ['MultipleChoice ' replace(nmExam,'_',' ') ];
@@ -71,11 +69,11 @@ for n = 1:2
     end
     
     xlabel('Question');
-    title(['Normalised ' nmQ{n} ' (n=' num2str(l) ')']);
-    legend('Mean result','Standard Deviation','Weight Question','RIT','Percentage correct answers','Need to Check Question','Location','best');
+    title(['Normalised ' nmQ{n} ' (n=' num2str(l) ') Cronbach Alpha = ' num2str(desstat.CBA) ]);
+    legend('Mean result / P+ ','Standard Deviation','Weight Question','RIT','Percentage correct answers','Need to Check Question','Location','best');
     grid on; grid minor;
     saveas(gcf,[nmQ{n} '.png']);
-    saveas(gcf,[nmQ{n} '.svg']);
+%     saveas(gcf,[nmQ{n} '.svg']);
     savefig([nmQ{n} '.fig']);
 end
 save('analysisdata.mat');

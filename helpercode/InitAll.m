@@ -33,3 +33,4 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
             'The folder: ' con.LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end
 end
+
