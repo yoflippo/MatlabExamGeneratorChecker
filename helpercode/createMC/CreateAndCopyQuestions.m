@@ -1,9 +1,9 @@
-%TODO: first copy then adjust
+function CreateAndCopyQuestions(con)
 
-function CreateAndCopyQuestions(ap,weekNames)
 fclose('all'); %Close files that could be open
+currentBonusAssignment = con.BONUSASSNUMBER;
 %% Get path of output folder for a certain week X and empty it
-apCleanSourceRoot = fullfile(ap.BASEFOLDER,ap.DIRCLEANSRC,'gen_mc');
+apCleanSourceRoot = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,'gen_mc');
 cd(apCleanSourceRoot);
 apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
 apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
@@ -13,14 +13,27 @@ cd(apCleanSourceRoot);
 CountNumberOfFALSE_TRUE;
 
 %% Iterate over each available week
+for nW = con.BONUSASSIGNMENTS{currentBonusAssignment}
+    weekNames{nW} = ['week' num2str(nW)];
+end
+nmBonusAssDir = [con.NMBONUSASSIGNMENTDIR num2str(currentBonusAssignment)];
+outputDir = fullfile(apGeneratedTheses,nmBonusAssDir);
+removeShitFromDir(outputDir)
+if ~exist(outputDir,'dir')
+    mkdir(outputDir)
+end
+
+%% Make a skeleton directories
 for nWk = 1:length(weekNames)
-    
-    outputDir = fullfile(apGeneratedTheses,weekNames{nWk});
-    removeShitFromDir(outputDir)
-    if ~exist(outputDir,'dir')
-        mkdir(outputDir)
-    end
-    
+    apDesMC = outputDir;
+    apSrcThesis = fullfile(apSourceTheses,weekNames{nWk});
+    copyfiles(apSrcThesis,apDesMC);
+    % Remove the thesis files
+    emptyDirRecursiveMFiles(apDesMC);
+end
+
+
+for nWk = 1:length(weekNames)
     %% Get absolute paths of theses files with there respective answers
     folders = GetDeepestFolders(fullfile(apSourceTheses,weekNames{nWk}));
     theses = {zeros(1,length(folders))};
@@ -45,13 +58,6 @@ for nWk = 1:length(weekNames)
     end
     apTemplateCheck = fullfile(apCleanSourceRoot,'TemplateCheckMC.m');
     
-    %% Copy folder of weekXXX and empty the folders to make a skeleton directory
-    apDesMC = outputDir;
-    apSrcThesis = fullfile(apSourceTheses,weekNames{nWk});
-    copyfiles(apSrcThesis,apDesMC);
-    % Remove the thesis files
-    emptyDirRecursiveMFiles(apDesMC);
-    
     %% Browse the subfolder of weekXXX
     for nDirs = 1:length(folders)
         clc;
@@ -63,7 +69,7 @@ for nWk = 1:length(weekNames)
         % output folder
         absPathDestination = GetPathOneLevelUp(currentFilePath);
         absPathDestination = replace(absPathDestination,'source_theses','generated_theses');
-        
+        absPathDestination = replace(absPathDestination,weekNames{nWk},nmBonusAssDir);
         % copy the points.m file (containing the number of points of mc-q) and
         % copy the TypeOfAssignment... file, so the CopyTheMultipleChoice..m
         % file works)
@@ -239,5 +245,5 @@ cd ..;
 
 %% Copy the files to the right place
 disp('Copy the files to the "assignment" place');
-copyMCToCleanSourceAssignment(ap.BASEFOLDER,apGeneratedTheses,ap.Assignments,weekNames);
+copyMCToCleanSourceAssignment(con,apGeneratedTheses,weekNames);
 end

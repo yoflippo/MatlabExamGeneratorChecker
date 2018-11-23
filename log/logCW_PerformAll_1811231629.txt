@@ -1,0 +1,1579 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1811231629
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.5.0.944444 (R2018b)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Home Version 10.0 (Build 17134)
+Java Version: Java 1.8.0_152-b16 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.5         (R2018b)
+Simulink                                              Version 9.2         (R2018b)
+Aerospace Blockset                                    Version 4.0         (R2018b)
+Aerospace Toolbox                                     Version 3.0         (R2018b)
+Antenna Toolbox                                       Version 3.2         (R2018b)
+Audio System Toolbox                                  Version 1.5         (R2018b)
+Automated Driving System Toolbox                      Version 1.3         (R2018b)
+Bioinformatics Toolbox                                Version 4.11        (R2018b)
+Communications Toolbox                                Version 7.0         (R2018b)
+Computer Vision System Toolbox                        Version 8.2         (R2018b)
+Control System Toolbox                                Version 10.5        (R2018b)
+Curve Fitting Toolbox                                 Version 3.5.8       (R2018b)
+DSP System Toolbox                                    Version 9.7         (R2018b)
+Data Acquisition Toolbox                              Version 3.14        (R2018b)
+Database Toolbox                                      Version 9.0         (R2018b)
+Datafeed Toolbox                                      Version 5.8         (R2018b)
+Deep Learning Toolbox                                 Version 12.0        (R2018b)
+Econometrics Toolbox                                  Version 5.1         (R2018b)
+Embedded Coder                                        Version 7.1         (R2018b)
+Filter Design HDL Coder                               Version 3.1.4       (R2018b)
+Financial Instruments Toolbox                         Version 2.8         (R2018b)
+Financial Toolbox                                     Version 5.12        (R2018b)
+Fixed-Point Designer                                  Version 6.2         (R2018b)
+Fuzzy Logic Toolbox                                   Version 2.4         (R2018b)
+GPU Coder                                             Version 1.2         (R2018b)
+Global Optimization Toolbox                           Version 4.0         (R2018b)
+HDL Coder                                             Version 3.13        (R2018b)
+HDL Verifier                                          Version 5.5         (R2018b)
+Image Acquisition Toolbox                             Version 5.5         (R2018b)
+Image Processing Toolbox                              Version 10.3        (R2018b)
+Instrument Control Toolbox                            Version 3.14        (R2018b)
+LTE HDL Toolbox                                       Version 1.2         (R2018b)
+LTE Toolbox                                           Version 3.0         (R2018b)
+MATLAB Coder                                          Version 4.1         (R2018b)
+MATLAB Compiler                                       Version 7.0         (R2018b)
+MATLAB Compiler SDK                                   Version 6.6         (R2018b)
+MATLAB Report Generator                               Version 5.5         (R2018b)
+Mapping Toolbox                                       Version 4.7         (R2018b)
+Model Predictive Control Toolbox                      Version 6.2         (R2018b)
+Model-Based Calibration Toolbox                       Version 5.5         (R2018b)
+OPC Toolbox                                           Version 4.0.6       (R2018b)
+Optimization Toolbox                                  Version 8.2         (R2018b)
+Parallel Computing Toolbox                            Version 6.13        (R2018b)
+Partial Differential Equation Toolbox                 Version 3.1         (R2018b)
+Phased Array System Toolbox                           Version 4.0         (R2018b)
+Polyspace Bug Finder                                  Version 2.6         (R2018b)
+Polyspace Code Prover                                 Version 9.10        (R2018b)
+Powertrain Blockset                                   Version 1.4         (R2018b)
+Predictive Maintenance Toolbox                        Version 1.1         (R2018b)
+RF Blockset                                           Version 7.1         (R2018b)
+RF Toolbox                                            Version 3.5         (R2018b)
+Risk Management Toolbox                               Version 1.4         (R2018b)
+Robotics System Toolbox                               Version 2.1         (R2018b)
+Robust Control Toolbox                                Version 6.5         (R2018b)
+Sensor Fusion and Tracking Toolbox                    Version 1.0         (R2018b)
+Signal Processing Toolbox                             Version 8.1         (R2018b)
+SimBiology                                            Version 5.8.1       (R2018b)
+SimEvents                                             Version 5.5         (R2018b)
+Simscape                                              Version 4.5         (R2018b)
+Simscape Driveline                                    Version 2.15        (R2018b)
+Simscape Electrical                                   Version 7.0         (R2018b)
+Simscape Fluids                                       Version 2.5         (R2018b)
+Simscape Multibody                                    Version 6.0         (R2018b)
+Simulink 3D Animation                                 Version 8.1         (R2018b)
+Simulink Check                                        Version 4.2         (R2018b)
+Simulink Code Inspector                               Version 3.3         (R2018b)
+Simulink Coder                                        Version 9.0         (R2018b)
+Simulink Control Design                               Version 5.2         (R2018b)
+Simulink Coverage                                     Version 4.2         (R2018b)
+Simulink Design Optimization                          Version 3.5         (R2018b)
+Simulink Design Verifier                              Version 4.0         (R2018b)
+Simulink Desktop Real-Time                            Version 5.7         (R2018b)
+Simulink PLC Coder                                    Version 2.6         (R2018b)
+Simulink Real-Time                                    Version 6.9         (R2018b)
+Simulink Report Generator                             Version 5.5         (R2018b)
+Simulink Requirements                                 Version 1.2         (R2018b)
+Simulink Test                                         Version 2.5         (R2018b)
+Spreadsheet Link                                      Version 3.4         (R2018b)
+Stateflow                                             Version 9.2         (R2018b)
+Statistics and Machine Learning Toolbox               Version 11.4        (R2018b)
+Symbolic Math Toolbox                                 Version 8.2         (R2018b)
+System Identification Toolbox                         Version 9.9         (R2018b)
+Text Analytics Toolbox                                Version 1.2         (R2018b)
+Trading Toolbox                                       Version 3.5         (R2018b)
+Vehicle Dynamics Blockset                             Version 1.1         (R2018b)
+Vehicle Network Toolbox                               Version 4.1         (R2018b)
+Vision HDL Toolbox                                    Version 1.7         (R2018b)
+WLAN Toolbox                                          Version 2.0         (R2018b)
+Wavelet Toolbox                                       Version 5.1         (R2018b)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+week1: TRUE = 53 | FALSE = 49
+week2: TRUE = 28 | FALSE = 32
+week3: TRUE = 33 | FALSE = 33
+week4: TRUE = 45 | FALSE = 48
+TOTAAL: TRUE = 159 | FALSE = 162
+CreateAndCopyQuestions: 1 of 25 folders processed of week1
+CreateAndCopyQuestions: 2 of 25 folders processed of week1
+CreateAndCopyQuestions: 3 of 25 folders processed of week1
+CreateAndCopyQuestions: 4 of 25 folders processed of week1
+CreateAndCopyQuestions: 5 of 25 folders processed of week1
+CreateAndCopyQuestions: 6 of 25 folders processed of week1
+CreateAndCopyQuestions: 7 of 25 folders processed of week1
+CreateAndCopyQuestions: 8 of 25 folders processed of week1
+CreateAndCopyQuestions: 9 of 25 folders processed of week1
+CreateAndCopyQuestions: 10 of 25 folders processed of week1
+CreateAndCopyQuestions: 11 of 25 folders processed of week1
+CreateAndCopyQuestions: 12 of 25 folders processed of week1
+CreateAndCopyQuestions: 13 of 25 folders processed of week1
+CreateAndCopyQuestions: 14 of 25 folders processed of week1
+CreateAndCopyQuestions: 15 of 25 folders processed of week1
+CreateAndCopyQuestions: 16 of 25 folders processed of week1
+CreateAndCopyQuestions: 17 of 25 folders processed of week1
+CreateAndCopyQuestions: 18 of 25 folders processed of week1
+CreateAndCopyQuestions: 19 of 25 folders processed of week1
+CreateAndCopyQuestions: 20 of 25 folders processed of week1
+CreateAndCopyQuestions: 21 of 25 folders processed of week1
+CreateAndCopyQuestions: 22 of 25 folders processed of week1
+CreateAndCopyQuestions: 23 of 25 folders processed of week1
+CreateAndCopyQuestions: 24 of 25 folders processed of week1
+CreateAndCopyQuestions: 25 of 25 folders processed of week1
+CreateAndCopyQuestions: 1 of 15 folders processed of week2
+CreateAndCopyQuestions: 2 of 15 folders processed of week2
+CreateAndCopyQuestions: 3 of 15 folders processed of week2
+CreateAndCopyQuestions: 4 of 15 folders processed of week2
+CreateAndCopyQuestions: 5 of 15 folders processed of week2
+CreateAndCopyQuestions: 6 of 15 folders processed of week2
+CreateAndCopyQuestions: 7 of 15 folders processed of week2
+CreateAndCopyQuestions: 8 of 15 folders processed of week2
+CreateAndCopyQuestions: 9 of 15 folders processed of week2
+CreateAndCopyQuestions: 10 of 15 folders processed of week2
+CreateAndCopyQuestions: 11 of 15 folders processed of week2
+CreateAndCopyQuestions: 12 of 15 folders processed of week2
+CreateAndCopyQuestions: 13 of 15 folders processed of week2
+CreateAndCopyQuestions: 14 of 15 folders processed of week2
+CreateAndCopyQuestions: 15 of 15 folders processed of week2
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the generated files to clean_source assignment
+Copy the files to the "assignment" place
+Created MC-Questions
+Elapsed time is 21.063544 seconds.
+execute generate all script
+Start fresh: Generate all week assignments
+0: Read the student number and convert the list to e-mailadresses
+0.012: Create new filenames (with HASH code AND combine file names)
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+1.136: END SCRIPT
+Elapsed time is 1.136804 seconds.
+Execute create week assignment scripts
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',76,1)">76  </a>        CreateBonusAssignments(con);
+if system_dependent('IsDebugMode')==1, dbcont; end
+Generating assignents
+0.928: Empty folder with files for testing
+2.164: Create a student specific folder in every week folder
+2.271: Get overview of files
+3.016: Fill every student folder with the number of assignments
+111.265: Generate some test files for the Checking script
+111.35: Generate test folders with data to simulate students with wrong assignments
+111.396: END SCRIPT
+Elapsed time is 111.398801 seconds.
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',83,1)">83  </a>    disp('Copy certain testfiles to directory submitted');
+if system_dependent('IsDebugMode')==1, dbstep; end
+Copy certain testfiles to directory submitted
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+weekName
+{Undefined function or variable 'weekName'.
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',86,1)">86  </a>    apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
+length(studentNumbers)nmCurrBonusAss
+ length(studentNumbers)nmCurrBonusAss
+                       
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax
+error. To construct matrices, use brackets instead of parentheses.
+} 
+nmCurrBonusAss
+{Undefined function or variable 'nmCurrBonusAss'.
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',86,1)">86  </a>    apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
+BonusAssignmentWeeks
+
+BonusAssignmentWeeks =
+
+     1     2
+
+con.BONUSASSNAME(con.BONUSASSNUMBER)
+
+ans =
+
+    'BONUSASSIGNMENT1'
+
+nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
+fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0')
+
+ans =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\fortesting\BONUSASSIGNMENT1\correct_0'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Undefined function or variable 'weekName'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 86)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',86,0)">line 86</a>)
+    apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
+} 
+if system_dependent('IsDebugMode')==1, dbstep; end
+apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0')
+
+apTestFiles =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\fortesting\BONUSASSIGNMENT1\correct_0'
+
+apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss)
+
+apFinDes =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\submitted\BONUSASSIGNMENT1'
+
+removeShitFromDir(apFinDes)
+copyfiles(apTestFiles,apFinDes)
+disp('Copy certain testfiles to directory submitted');
+Copy certain testfiles to directory submitted
+    cd(con.BASEFOLDER)
+    tic
+    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+    removeShitFromDir(apFinDes);
+    copyfiles(apTestFiles,apFinDes);
+    disp('Execute check assignments');
+Execute check assignments
+    try
+        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),1)
+            error('The average grade is not equal to 1');
+        end
+    catch err
+        error([mfilename ', did not work properly: ' err.message]);
+    end
+Check for the existence of needed supporting scripts/function files
+Start with script
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',38,1)">38  </a>subWkFolder = fullfile(con.STUDENTSUBFOLDER,nmCurrBonusAss);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',41,1)">41  </a>debugOutput(DEBUGOUTPUT,'Check if needed folder exists, if not stop execution of script',0);
+if system_dependent('IsDebugMode')==1, dbstep; end
+4.821: Check if needed folder exists, if not stop execution of script
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',43,1)">43  </a>if ~exist(con.STUDENTSUBFOLDER,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',46,1)">46  </a>if ~exist(subWkFolder,'dir')
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',52,1)">52  </a>debugOutput(DEBUGOUTPUT,'Check which students have submitted their assignments. Student without do not get any points',0);
+if system_dependent('IsDebugMode')==1, dbstep; end
+8.522: Check which students have submitted their assignments. Student without do not get any points
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',63,1)">63  </a>files = dir(subWkFolder);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+disp('Copy certain testfiles to directory submitted');
+Copy certain testfiles to directory submitted
+    cd(con.BASEFOLDER)
+    tic
+    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+    removeShitFromDir(apFinDes);
+    copyfiles(apTestFiles,apFinDes);
+    disp('Execute check assignments');
+Execute check assignments
+    try
+        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),1)
+            error('The average grade is not equal to 1');
+        end
+    catch err
+        error([mfilename ', did not work properly: ' err.message]);
+    end
+Check for the existence of needed supporting scripts/function files
+Start with script
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',38,1)">38  </a>subWkFolder = fullfile(con.STUDENTSUBFOLDER,nmCurrBonusAss);
+if system_dependent('IsDebugMode')==1, dbcont; end
+4.967: Check if needed folder exists, if not stop execution of script
+4.97: Check which students have submitted their assignments. Student without do not get any points
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',66,1)">66  </a>apWrongSub = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_wrongsubmissions']);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+105 students did not submit their assignments
+if system_dependent('IsDebugMode')==1, dbstep; end
+96.892: Check if the HASH-codes in every m-file of the students is intact
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+132.704: Check for each student if they have their correct assignments
+fullfile(con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss,['assignedHashes_' nmCurrBonusAss])
+
+ans =
+
+    'assignments\BONUSASSIGNMENT1\assignedHashes_BONUSASSIGNMENT1'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+245.47: Get the number of points for all week assignments
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+278.943: Put in dictionary and save in MAT-file
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+{, did not work properly: Undefined function or variable 'weekNr'.
+} 
+nmCurrBonusAss
+
+nmCurrBonusAss =
+
+    'BONUSASSIGNMENT1'
+
+disp('Copy certain testfiles to directory submitted');
+Copy certain testfiles to directory submitted
+    cd(con.BASEFOLDER)
+    tic
+    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+    removeShitFromDir(apFinDes);
+    copyfiles(apTestFiles,apFinDes);
+    disp('Execute check assignments');
+Execute check assignments
+    try
+        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),1)
+            error('The average grade is not equal to 1');
+        end
+    catch err
+        error([mfilename ', did not work properly: ' err.message]);
+    end
+Check for the existence of needed supporting scripts/function files
+Start with script
+0.004: Check if needed folder exists, if not stop execution of script
+0.007: Check which students have submitted their assignments. Student without do not get any points
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',136,1)">136 </a>load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
+if system_dependent('IsDebugMode')==1, dbcont; end
+105 students did not submit their assignments
+11.216: Check if the HASH-codes in every m-file of the students is intact
+if system_dependent('IsDebugMode')==1, dbcont; end
+15.057: Check for each student if they have their correct assignments
+15.439: Get the number of points for all week assignments
+if system_dependent('IsDebugMode')==1, dbcont; end
+25.106: Put in dictionary and save in MAT-file
+if system_dependent('IsDebugMode')==1, dbstep; end
+27.544: Check the answer of the students and track their points if correct
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+disp('Copy certain testfiles to directory submitted');
+Copy certain testfiles to directory submitted
+    cd(con.BASEFOLDER)
+    tic
+    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+    removeShitFromDir(apFinDes);
+    copyfiles(apTestFiles,apFinDes);
+    disp('Execute check assignments');
+Execute check assignments
+    try
+        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),1)
+            error('The average grade is not equal to 1');
+        end
+    catch err
+        error([mfilename ', did not work properly: ' err.message]);
+    end
+Check for the existence of needed supporting scripts/function files
+Start with script
+0.006: Check if needed folder exists, if not stop execution of script
+0.008: Check which students have submitted their assignments. Student without do not get any points
+105 students did not submit their assignments
+3.354: Check if the HASH-codes in every m-file of the students is intact
+3.637: Check for each student if they have their correct assignments
+4.082: Get the number of points for all week assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',249,1)">249 </a>apAssWk = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',250,1)">250 </a>cd(apAssWk);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',251,1)">251 </a>mfiles = dir(['**' filesep '*points*.m']);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',252,1)">252 </a>if isempty(mfiles)
+if system_dependent('IsDebugMode')==1, dbcont; end
+39.956: Put in dictionary and save in MAT-file
+if system_dependent('IsDebugMode')==1, dbstep; end
+44.721: Check the answer of the students and track their points if correct
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+{, did not work properly: Undefined function or variable 'weekNr'.
+} 
+disp('Copy certain testfiles to directory submitted');
+Copy certain testfiles to directory submitted
+    cd(con.BASEFOLDER)
+    tic
+    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+    removeShitFromDir(apFinDes);
+    copyfiles(apTestFiles,apFinDes);
+    disp('Execute check assignments');
+Execute check assignments
+    try
+        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),1)
+            error('The average grade is not equal to 1');
+        end
+    catch err
+        error([mfilename ', did not work properly: ' err.message]);
+    end
+Check for the existence of needed supporting scripts/function files
+Start with script
+0.005: Check if needed folder exists, if not stop execution of script
+0.008: Check which students have submitted their assignments. Student without do not get any points
+105 students did not submit their assignments
+3.315: Check if the HASH-codes in every m-file of the students is intact
+3.605: Check for each student if they have their correct assignments
+4.073: Get the number of points for all week assignments
+4.53: Put in dictionary and save in MAT-file
+4.535: Check the answer of the students and track their points if correct
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',292,1)">292 </a>eval(['load(''answerfiles_' nmCurrBonusAss ''')'])
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',294,1)">294 </a>apSubWk = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,nmCurrBonusAss);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',295,1)">295 </a>cd(apSubWk);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',299,1)">299 </a>warning off
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+
+studentFolder =
+
+    '17065852'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+
+studentFolder =
+
+    '18137628'
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+studentFolder =
+
+    '18098525'
+
+
+studentFolder =
+
+    '18026532'
+
+
+studentFolder =
+
+    '18050638'
+
+
+studentFolder =
+
+    '18071481'
+
+
+studentFolder =
+
+    '18129331'
+
+
+studentFolder =
+
+    '18067352'
+
+
+studentFolder =
+
+    '18063888'
+
+
+studentFolder =
+
+    '17017246'
+
+
+studentFolder =
+
+    '18104169'
+
+
+studentFolder =
+
+    '18037860'
+
+
+studentFolder =
+
+    '18085105'
+
+
+studentFolder =
+
+    '17096162'
+
+
+studentFolder =
+
+    '18078540'
+
+
+studentFolder =
+
+    '18098789'
+
+
+studentFolder =
+
+    '18060145'
+
+
+studentFolder =
+
+    '18146244'
+
+
+studentFolder =
+
+    '17096987'
+
+
+studentFolder =
+
+    '18030580'
+
+
+studentFolder =
+
+    '17094062'
+
+
+studentFolder =
+
+    '18041442'
+
+
+studentFolder =
+
+    '18038778'
+
+
+studentFolder =
+
+    '18105807'
+
+
+studentFolder =
+
+    '18091288'
+
+
+studentFolder =
+
+    '18068049'
+
+
+studentFolder =
+
+    '18089550'
+
+
+studentFolder =
+
+    '18060323'
+
+
+studentFolder =
+
+    '18109314'
+
+
+studentFolder =
+
+    '18086187'
+
+
+studentFolder =
+
+    '17060230'
+
+
+studentFolder =
+
+    '18078125'
+
+
+studentFolder =
+
+    '17038480'
+
+
+studentFolder =
+
+    '17113563'
+
+
+studentFolder =
+
+    '18032893'
+
+
+studentFolder =
+
+    '18026583'
+
+
+studentFolder =
+
+    '17103266'
+
+
+studentFolder =
+
+    '18112420'
+
+
+studentFolder =
+
+    '17033659'
+
+
+studentFolder =
+
+    '18012051'
+
+
+studentFolder =
+
+    '18024939'
+
+
+studentFolder =
+
+    '18072747'
+
+
+studentFolder =
+
+    '18088740'
+
+
+studentFolder =
+
+    '18145523'
+
+
+studentFolder =
+
+    '18004733'
+
+
+studentFolder =
+
+    '18060919'
+
+
+studentFolder =
+
+    '18057853'
+
+
+studentFolder =
+
+    '18043771'
+
+
+studentFolder =
+
+    '17026067'
+
+
+studentFolder =
+
+    '18036848'
+
+
+studentFolder =
+
+    '16012828'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:Containers:Map:NoKey'
+       message: 'The specified key is not present in this container.'
+         cause: {01 cell}
+         stack: [21 struct]
+
+CheckSingleStudentAssignment: Somethings wrong..
+OPENING: C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\submitted\BONUSASSIGNMENT1\16012828\BONUSASSIGNMENT1\deelopdracht_programmeren_wk1\opdracht_1.m
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:Containers:Map:NoKey'
+       message: 'The specified key is not present in this container.'
+         cause: {01 cell}
+         stack: [21 struct]
+
+CheckSingleStudentAssignment: Somethings wrong..
+OPENING: C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\submitted\BONUSASSIGNMENT1\16012828\BONUSASSIGNMENT1\deelopdracht_programmeren_wk1\opdracht_2.m
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',101,1)">101 </a>            apStudentSol = mfilesWithHash{1,i};
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',107,1)">107 </a>            pathWithoutExt = replace(apStudentSol,'.m','');
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+dicNameAssignmentAndPoints(assignment)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('containers.Map/subsref')" style="font-weight:bold">containers.Map/subsref</a>
+The specified key is not present in this container.
+} 
+AbsPathSOLScript
+
+AbsPathSOLScript =
+
+    'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BONUSASSIGNMENT1\deelopdracht_programmeren_wk1\opdracht_3\opdracht_3_versie_3_SOL.m'
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:Containers:Map:NoKey'
+       message: 'The specified key is not present in this container.'
+         cause: {01 cell}
+         stack: [21 struct]
+
+CheckSingleStudentAssignment: Somethings wrong..
+OPENING: C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\submitted\BONUSASSIGNMENT1\16012828\BONUSASSIGNMENT1\deelopdracht_programmeren_wk1\opdracht_3.m
+if system_dependent('IsDebugMode')==1, dbcont; end
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:Containers:Map:NoKey'
+       message: 'The specified key is not present in this container.'
+         cause: {01 cell}
+         stack: [21 struct]
+
+CheckSingleStudentAssignment: Somethings wrong..
+OPENING: C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\submitted\BONUSASSIGNMENT1\16012828\BONUSASSIGNMENT1\deelopdracht_programmeren_wk1\opdracht_4.m
+if system_dependent('IsDebugMode')==1, dbcont; end
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:Containers:Map:NoKey'
+       message: 'The specified key is not present in this container.'
+         cause: {01 cell}
+         stack: [21 struct]
+
+CheckSingleStudentAssignment: Somethings wrong..
+OPENING: C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\submitted\BONUSASSIGNMENT1\16012828\BONUSASSIGNMENT1\deelopdracht_programmeren_wk1\opdracht_5.m
+if system_dependent('IsDebugMode')==1, dbquit; end
+PerformAll
+Check for the existence of needed supporting scripts/function files

@@ -22,6 +22,8 @@ classdef ConstantsClass
         TESTFOLDER = 'fortesting';
         DIRSTUDENTNUMBERS = 'studentnumbers';
         DIRCLEANSRC = 'clean_source';
+        DIRCLEANSRC_PROGASS = 'programming_assignments';
+        DIRCLEANSRC_BONUSASS = 'bonus_assignments';
         DIRHEADER = [ConstantsClass.DIRCLEANSRC filesep 'headers'];
         LISTWITHNEEDEDFOLDERS = {'helpercode' ConstantsClass.DIRCLEANSRC ConstantsClass.DIRSTUDENTNUMBERS ...
             ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};
@@ -31,10 +33,14 @@ classdef ConstantsClass
     
     properties (SetAccess = private)
         BASEFOLDER
-        DATETIME  
+        DATETIME
         Assignments
         BONUSASSIGNMENTS
         NUM_BONUSASSIGNEMNTS
+    end
+    
+    properties (SetAccess = public)
+        BONUSASSNUMBER
     end
     
     methods
@@ -47,9 +53,16 @@ classdef ConstantsClass
             end
             obj.DATETIME = datetimetxt();
             obj.Assignments = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
-            obj.BONUSASSIGNMENTS{1} = 1:3;
+            obj.BONUSASSIGNMENTS{1} = 1:2;
             obj.BONUSASSIGNMENTS{2} = 4:6;
             obj.NUM_BONUSASSIGNEMNTS = length(obj.BONUSASSIGNMENTS);
         end
     end
+    
+    methods (Static)
+        function out = BONUSASSNAME(n)
+            out=[ConstantsClass.NMBONUSASSIGNMENTDIR num2str(n)];
+        end
+    end
+    
 end %class

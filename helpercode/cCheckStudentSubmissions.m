@@ -1,4 +1,4 @@
-function averageGrade = cCheckStudentSubmissions(Week)
+function averageGrade = cCheckStudentSubmissions(nmCurrBonusAss)
 %CHECKSTUDENTSUBMISSIONS
 %
 % ------------------------------------------------------------------------
@@ -35,10 +35,7 @@ InitAll
 %% Start with script
 debugOutput(DEBUGOUTPUT,'Start with script');
 dbstop if error
-weekNr = num2str(Week);
-weekName = ['week' weekNr];
-disp(weekName);
-subWkFolder = fullfile(con.STUDENTSUBFOLDER,weekName);
+subWkFolder = fullfile(con.STUDENTSUBFOLDER,nmCurrBonusAss);
 
 %% Check if needed folder exists, if not stop execution of script
 debugOutput(DEBUGOUTPUT,'Check if needed folder exists, if not stop execution of script',0);
@@ -66,8 +63,8 @@ addpath(genpath(apSubmitted))
 files = dir(subWkFolder);
 
 % Get studentnumbers of students that submitted AND unzip the folder
-apWrongSub = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[weekName '_wrongsubmissions']);
-apUnzipped = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[weekName '_unzipped']);
+apWrongSub = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_wrongsubmissions']);
+apUnzipped = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
 mkdirIf(apWrongSub);
 mkdirIf(apUnzipped);
 try
@@ -87,10 +84,10 @@ try
                 cd('temp');
                 unzip(apCurrZip);
                 %Remove dirs without correct weekX assignment
-                neededDir = dirmf(weekName);
+                neededDir = dirmf(nmCurrBonusAss);
                 blSubmittedWrongFiles = true;
                 for nD = 1:length(neededDir)
-                    if ~isempty(neededDir) && neededDir(nD).isdir && isequal(neededDir(nD).name,weekName)
+                    if ~isempty(neededDir) && neededDir(nD).isdir && isequal(neededDir(nD).name,nmCurrBonusAss)
                         dirToCheck = fullfile(neededDir(nD).folder,neededDir(nD).name);
                         movefile(dirToCheck,currPath);
                         blSubmittedWrongFiles = false;
@@ -150,7 +147,7 @@ disp([ num2str(numOfNotSubmitted) ' students did not submit their assignments'])
 debugOutput(DEBUGOUTPUT,'Check if the HASH-codes in every m-file of the students is intact',0);
 %% Check if the HASH-codes in every m-file of the students is intact
 % Get Hash of original assignment folder AND save it in MAT-file
-assCurrWk = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName);
+assCurrWk = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss);
 dicWithHashes = GetDictionaryWithHashAndLocation(assCurrWk,con.SOLPOSTFIX);
 save(fullfile(assCurrWk,'dicHashesAbsPath.mat'),'dicWithHashes')
 
@@ -180,7 +177,7 @@ try
             currFileAbsPath = fullfile(mfiles(nSAss).folder,mfiles(nSAss).name);
             [p, subdir] = GetPathOneLevelUp(currFileAbsPath,2);
             [~,~,endSnum] = findStudentNumberInTxt(currFileAbsPath);
-            p = fullfile(currFileAbsPath(1:endSnum),weekName);
+            p = fullfile(currFileAbsPath(1:endSnum),nmCurrBonusAss);
             try
                 currHash = GetHashCodeFromMFile(currFileAbsPath);
                 % Check if hash if present in dictionary
@@ -209,16 +206,16 @@ debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assig
 % student
 
 % Load the information assigned for this week
-load(fullfile(con.NAMEASSIGNMENTFOLDER,weekName,['assignedHashes_' weekName]));
+load(fullfile(con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss,['assignedHashes_' nmCurrBonusAss]));
 for i = 1:length(trackStudentAssignment)
     try %!!!
         % Get hash codes of current student
         HCodeCurrStud = {trackStudentAssignment{i,2:end}};
         % Go inside student folder
-        relPath = fullfile(con.STUDENTSUBFOLDER,weekName,trackStudentAssignment{i,1});
+        relPath = fullfile(con.STUDENTSUBFOLDER,nmCurrBonusAss,trackStudentAssignment{i,1});
         cd(relPath);
         % Get hashcodes in student folder
-        [HashCodeCurrStud, AbsPathCodeCurrStud] = GetHashCodeOfMFilesInFolder(weekName);
+        [HashCodeCurrStud, AbsPathCodeCurrStud] = GetHashCodeOfMFilesInFolder(nmCurrBonusAss);
         %% Check if all files are unique, to prevent copies to get more points
         if length(HashCodeCurrStud) ~= length(unique(HashCodeCurrStud))
             keyboard %pause program
@@ -233,8 +230,8 @@ for i = 1:length(trackStudentAssignment)
                 newNameOfCheatFile = strrep(nameOfFile,'.m','_m');
                 %Get corresponding subfolder of assignment
                 [~, subdir] = GetPathOneLevelUp(AbsPathCodeCurrStud{j},2);
-                mkdir(fullfile(weekName,FOLDERCHEAT,subdir));
-                movefile(AbsPathCodeCurrStud{j},fullfile(weekName,con.FOLDERCHEAT, ...
+                mkdir(fullfile(nmCurrBonusAss,FOLDERCHEAT,subdir));
+                movefile(AbsPathCodeCurrStud{j},fullfile(nmCurrBonusAss,con.FOLDERCHEAT, ...
                     subdir,newNameOfCheatFile));
             end
         end
@@ -249,7 +246,7 @@ cd(con.BASEFOLDER);
 debugOutput(DEBUGOUTPUT,'Get the number of points for all week assignments',0);
 % Get the number of points for all week assignments
 
-apAssWk = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName);
+apAssWk = fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss);
 cd(apAssWk);
 mfiles = dir(['**' filesep '*points*.m']);
 if isempty(mfiles)
@@ -265,7 +262,7 @@ for i = 1:length(mfiles)
         dr = mfiles(i).folder;
         run(fullfile(dr,mfiles(i).name));
         % Get assignment name + name of folder directly above it
-        tmp = extractAfter(dr,'week');
+        tmp = extractAfter(dr,nmCurrBonusAss);
         tmp= extractAfter(tmp,filesep);
         nameOfAssignment{i} = tmp;
         pointsPerAssignment(i) = deelpunten;
@@ -279,28 +276,28 @@ end
 debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
 
 dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
-save(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
+save(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
 % Delete a possible existing studentMatrix
-pathStudentResults = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,['resultatenWeek' weekNr '.mat']);
+pathStudentResults = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,['resultatenWeek' nmCurrBonusAss '.mat']);
 if exist(pathStudentResults,'dir')
     delete(pathStudentResults)
 end
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
-addpath(genpath(fullfile(con.NAMEASSIGNMENTFOLDER,weekName)));
+addpath(genpath(fullfile(con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss)));
 PointsToBeEarned = sum(pointsPerAssignment);
 % Load the answer files
-eval(['load(''answerfiles_week' weekNr ''')'])
+eval(['load(''answerfiles_' nmCurrBonusAss ''')'])
 % Go to folder with unzipped files
-apSubWk = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,weekName);
+apSubWk = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,nmCurrBonusAss);
 cd(apSubWk);
 
 %% Iterate over every unzipped folder/studentnumber
 % Remove Check-files from path
 warning off
-rmpath(genpath(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,weekName)));
+rmpath(genpath(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss)));
 warning on
 
 strTrackStudent = cellstr(trackStudentAssignment);

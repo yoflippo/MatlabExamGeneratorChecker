@@ -1,35 +1,32 @@
-function copyMCToCleanSourceAssignment(baseFolder,apMCFiles,apFin,WeekNames)
+function copyMCToCleanSourceAssignment(con,apMCFiles,WeekNames)
+%% Copy the theses and programming assignments to clean_source 'bonus_assignment'
+% directory.
 
-%% Get deelopdracht_x folderS
-cd(apMCFiles);
-ass =[];
-for wk = 1:length(WeekNames)
-    cd(WeekNames{wk})
-    ass{wk} = getFolders(pwd);
-    cd ..
-end
+cd(apMCFiles)
+currBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
+apCleanTheses = fullfile(apMCFiles,currBonusAss);
+apCleanBonusAss = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,con.DIRCLEANSRC_BONUSASS,currBonusAss);
 
-%% Copy files clean_source -> assignments
-for nWk = 1:length(WeekNames)
-    currWkName = WeekNames{nWk};
-    try
-        apClnSrc = fullfile(baseFolder,'clean_source','assignments',currWkName);
-        apFin2 = fullfile(apFin,currWkName);
-        removeShitFromDir(fullfile(apFin2))
-        mkdirIf(apFin2);
-        copyfiles(apClnSrc,apFin2);
-        % Check the files in each folder
-        cd(apClnSrc)
-        nFilesClnSrc = dirmf();
-        cd(apFin2)
-        nFilesFin = dirmf();
-        if ~isequal(length(nFilesFin), length(nFilesClnSrc))
-            error('Files not copied correctly');
-        end
-    catch errMess
-        disp(errMess);
-    end
+removeShitFromDir(apCleanBonusAss)
+if ~exist(apCleanBonusAss,'dir')
+    mkdir(apCleanBonusAss)
 end
-fclose('all');
-cd(baseFolder);
+copyfiles(apCleanTheses,apCleanBonusAss);
+
+apCleanProgrammingAss = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,con.DIRCLEANSRC_PROGASS);
+currBonusAssWeeks = WeekNames;
+
+for nW = 1:length(WeekNames)
+    apCurrProgrammAss = fullfile(apCleanProgrammingAss,WeekNames{nW});
+    cd(apCleanBonusAss);
+    copyfiles(apCurrProgrammAss,apCleanBonusAss)
 end
+cd(apMCFiles)
+
+%% Now copy the clean bonus assignment to the assignment place
+apFinalAssDir = fullfile(con.BASEFOLDER, con.NAMEASSIGNMENTFOLDER,currBonusAss);
+removeShitFromDir(apFinalAssDir)
+if ~exist(apFinalAssDir,'dir')
+    mkdir(apFinalAssDir)
+end
+copyfiles(apCleanBonusAss,apFinalAssDir)

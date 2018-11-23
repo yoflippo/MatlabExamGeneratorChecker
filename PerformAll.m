@@ -1,31 +1,19 @@
 %% This files creates/checks every assignment and file
 clear all;
 dbstop if error
-global gWeekNames;
-
-%% READ ME
 InitAll
 
-%% Comment me if no re-generation needs to
-WeekAssignmentsToGenerate = 1:8;
-
 %% Select week to correct, it is assumed that 4 weeks are used.
-currentBonusAssignment = 1;
-BonusAssignmentWeeks = con.BONUSASSIGNMENTS{currentBonusAssignment}; % Adjust me!!!
+con.BONUSASSNUMBER = 1; % Adjust me!!!
+nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
+BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 
-% % % % % % for nW = BonusAssignmentWeeks
-% % % % % %     weekName = [weekName ['week' weekNr]]
-% % % % % % end
-% % % % % % weekNr = num2str(BonusAssignmentWeeks);
-% % % % % % weekName = ['week' weekNr];
+%% Comment me if no re-generation needs to
+WeekAssignmentsToGenerate = BonusAssignmentWeeks;
 
 %% START
 if exist('WeekAssignmentsToGenerate','var')
-    cnt = 1;
-    for nW = 1:length(WeekAssignmentsToGenerate)
-        gWeekNames{nW} = ['week' num2str(WeekAssignmentsToGenerate(nW))];
-    end
-    
+    cnt = 1;    
     warning off
     rmpath(genpath(fileparts(mfilename('fullpath'))));
     addpath(genpath('helpercode'));
@@ -39,24 +27,23 @@ if exist('WeekAssignmentsToGenerate','var')
     
     %% Generate theses and copy all clean_source/assignments -> root/assignments
     %To Do give some output to user
-    if isempty(gWeekNames)
-        cd(con.BASEFOLDER)
-        disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
-        tic
-        CreateAndCopyQuestions(con,gWeekNames);
-        disp('Created MC-Questions')
-        toc
-    end
+    cd(con.BASEFOLDER)
+    disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
+    tic
+    CreateAndCopyQuestions(con);
+    disp('Created MC-Questions')
+    toc
+    
     
     %% Execute generated all assignments script, SHOULD BE EXECUTED ONLY ONCE
     disp('execute generate all script');
     cd(con.BASEFOLDER)
     tic
     try
-        GiveHashesToAssignments(con,gWeekNames);
+        GiveHashesToAssignments(con,DEBUGOUTPUT);
     catch err
         %Has to be a warning to continue
-        warning([mfilename ': E0 ' err.message newline ' aGenerateEverythingForCourse did not finish correctly']);
+        warning([mfilename ': E0 ' err.message newline ' GiveHashesToAssignments did not finish correctly']);
         keyboard
     end
     toc
@@ -70,8 +57,9 @@ if exist('WeekAssignmentsToGenerate','var')
     
     %% Clean the submitted folder
     cd(con.BASEFOLDER)
+    
     apCleanSubmitted{1} = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,...
-        [con.NMBONUSASSIGNMENTDIR num2str(currentBonusAssignment)]);
+        con.BONUSASSNAME(con.BONUSASSNUMBER));
     apCleanSubmitted{2} = [apCleanSubmitted{1} '_unzipped'];
     apCleanSubmitted{3} = [apCleanSubmitted{1} '_wrongsubmissions'];
     apCleanSubmitted{4} = [apCleanSubmitted{1} '_send'];
@@ -86,9 +74,9 @@ if exist('WeekAssignmentsToGenerate','var')
     end
     tic
     try
-        bCreateWeekAssignments(con,BonusAssignmentWeeks);
+        CreateBonusAssignments(con);
     catch err
-        error([mfilename ' in bCreateWeekAssignments: ' newline  err.message])
+        error([mfilename ' in CreateBonusAssignments: ' newline  err.message])
     end
     toc
     
@@ -96,13 +84,13 @@ if exist('WeekAssignmentsToGenerate','var')
     disp('Copy certain testfiles to directory submitted');
     cd(con.BASEFOLDER)
     tic
-    apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_0');
-    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,weekName);
+    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
     removeShitFromDir(apFinDes);
     copyfiles(apTestFiles,apFinDes);
     disp('Execute check assignments');
     try
-        if ~isequal(cCheckStudentSubmissions(BonusAssignmentWeeks),1)
+        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),1)
             error('The average grade is not equal to 1');
         end
     catch err
@@ -112,15 +100,14 @@ if exist('WeekAssignmentsToGenerate','var')
     
     %% TEST if all correct solutions files pass
     cd(con.BASEFOLDER)
-    disp(weekName);
-    apTestFiles = fullfile(pwd,'fortesting',weekName,'correct_100');
-    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,weekName);
+    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_100');
+    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
     removeShitFromDir(apFinDes);
     copyfiles(apTestFiles,apFinDes);
     disp('Execute check assignments');
     tic
     try
-        if ~isequal(cCheckStudentSubmissions(BonusAssignmentWeeks),10)
+        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),10)
             error('The average grade is not equal to 10');
         end
     catch err
