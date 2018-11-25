@@ -1,0 +1,2821 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1811251743
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.5.0.944444 (R2018b)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Home Version 10.0 (Build 17134)
+Java Version: Java 1.8.0_152-b16 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.5         (R2018b)
+Simulink                                              Version 9.2         (R2018b)
+Aerospace Blockset                                    Version 4.0         (R2018b)
+Aerospace Toolbox                                     Version 3.0         (R2018b)
+Antenna Toolbox                                       Version 3.2         (R2018b)
+Audio System Toolbox                                  Version 1.5         (R2018b)
+Automated Driving System Toolbox                      Version 1.3         (R2018b)
+Bioinformatics Toolbox                                Version 4.11        (R2018b)
+Communications Toolbox                                Version 7.0         (R2018b)
+Computer Vision System Toolbox                        Version 8.2         (R2018b)
+Control System Toolbox                                Version 10.5        (R2018b)
+Curve Fitting Toolbox                                 Version 3.5.8       (R2018b)
+DSP System Toolbox                                    Version 9.7         (R2018b)
+Data Acquisition Toolbox                              Version 3.14        (R2018b)
+Database Toolbox                                      Version 9.0         (R2018b)
+Datafeed Toolbox                                      Version 5.8         (R2018b)
+Deep Learning Toolbox                                 Version 12.0        (R2018b)
+Econometrics Toolbox                                  Version 5.1         (R2018b)
+Embedded Coder                                        Version 7.1         (R2018b)
+Filter Design HDL Coder                               Version 3.1.4       (R2018b)
+Financial Instruments Toolbox                         Version 2.8         (R2018b)
+Financial Toolbox                                     Version 5.12        (R2018b)
+Fixed-Point Designer                                  Version 6.2         (R2018b)
+Fuzzy Logic Toolbox                                   Version 2.4         (R2018b)
+GPU Coder                                             Version 1.2         (R2018b)
+Global Optimization Toolbox                           Version 4.0         (R2018b)
+HDL Coder                                             Version 3.13        (R2018b)
+HDL Verifier                                          Version 5.5         (R2018b)
+Image Acquisition Toolbox                             Version 5.5         (R2018b)
+Image Processing Toolbox                              Version 10.3        (R2018b)
+Instrument Control Toolbox                            Version 3.14        (R2018b)
+LTE HDL Toolbox                                       Version 1.2         (R2018b)
+LTE Toolbox                                           Version 3.0         (R2018b)
+MATLAB Coder                                          Version 4.1         (R2018b)
+MATLAB Compiler                                       Version 7.0         (R2018b)
+MATLAB Compiler SDK                                   Version 6.6         (R2018b)
+MATLAB Report Generator                               Version 5.5         (R2018b)
+Mapping Toolbox                                       Version 4.7         (R2018b)
+Model Predictive Control Toolbox                      Version 6.2         (R2018b)
+Model-Based Calibration Toolbox                       Version 5.5         (R2018b)
+OPC Toolbox                                           Version 4.0.6       (R2018b)
+Optimization Toolbox                                  Version 8.2         (R2018b)
+Parallel Computing Toolbox                            Version 6.13        (R2018b)
+Partial Differential Equation Toolbox                 Version 3.1         (R2018b)
+Phased Array System Toolbox                           Version 4.0         (R2018b)
+Polyspace Bug Finder                                  Version 2.6         (R2018b)
+Polyspace Code Prover                                 Version 9.10        (R2018b)
+Powertrain Blockset                                   Version 1.4         (R2018b)
+Predictive Maintenance Toolbox                        Version 1.1         (R2018b)
+RF Blockset                                           Version 7.1         (R2018b)
+RF Toolbox                                            Version 3.5         (R2018b)
+Risk Management Toolbox                               Version 1.4         (R2018b)
+Robotics System Toolbox                               Version 2.1         (R2018b)
+Robust Control Toolbox                                Version 6.5         (R2018b)
+Sensor Fusion and Tracking Toolbox                    Version 1.0         (R2018b)
+Signal Processing Toolbox                             Version 8.1         (R2018b)
+SimBiology                                            Version 5.8.1       (R2018b)
+SimEvents                                             Version 5.5         (R2018b)
+Simscape                                              Version 4.5         (R2018b)
+Simscape Driveline                                    Version 2.15        (R2018b)
+Simscape Electrical                                   Version 7.0         (R2018b)
+Simscape Fluids                                       Version 2.5         (R2018b)
+Simscape Multibody                                    Version 6.0         (R2018b)
+Simulink 3D Animation                                 Version 8.1         (R2018b)
+Simulink Check                                        Version 4.2         (R2018b)
+Simulink Code Inspector                               Version 3.3         (R2018b)
+Simulink Coder                                        Version 9.0         (R2018b)
+Simulink Control Design                               Version 5.2         (R2018b)
+Simulink Coverage                                     Version 4.2         (R2018b)
+Simulink Design Optimization                          Version 3.5         (R2018b)
+Simulink Design Verifier                              Version 4.0         (R2018b)
+Simulink Desktop Real-Time                            Version 5.7         (R2018b)
+Simulink PLC Coder                                    Version 2.6         (R2018b)
+Simulink Real-Time                                    Version 6.9         (R2018b)
+Simulink Report Generator                             Version 5.5         (R2018b)
+Simulink Requirements                                 Version 1.2         (R2018b)
+Simulink Test                                         Version 2.5         (R2018b)
+Spreadsheet Link                                      Version 3.4         (R2018b)
+Stateflow                                             Version 9.2         (R2018b)
+Statistics and Machine Learning Toolbox               Version 11.4        (R2018b)
+Symbolic Math Toolbox                                 Version 8.2         (R2018b)
+System Identification Toolbox                         Version 9.9         (R2018b)
+Text Analytics Toolbox                                Version 1.2         (R2018b)
+Trading Toolbox                                       Version 3.5         (R2018b)
+Vehicle Dynamics Blockset                             Version 1.1         (R2018b)
+Vehicle Network Toolbox                               Version 4.1         (R2018b)
+Vision HDL Toolbox                                    Version 1.7         (R2018b)
+WLAN Toolbox                                          Version 2.0         (R2018b)
+Wavelet Toolbox                                       Version 5.1         (R2018b)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+week1: TRUE = 53 | FALSE = 49
+week2: TRUE = 28 | FALSE = 32
+week3: TRUE = 33 | FALSE = 33
+week4: TRUE = 45 | FALSE = 48
+TOTAAL: TRUE = 159 | FALSE = 162
+CreateAndCopyQAssignments: 1 of 25 folders processed of week1
+CreateAndCopyQAssignments: 2 of 25 folders processed of week1
+CreateAndCopyQAssignments: 3 of 25 folders processed of week1
+CreateAndCopyQAssignments: 4 of 25 folders processed of week1
+CreateAndCopyQAssignments: 5 of 25 folders processed of week1
+CreateAndCopyQAssignments: 6 of 25 folders processed of week1
+CreateAndCopyQAssignments: 7 of 25 folders processed of week1
+CreateAndCopyQAssignments: 8 of 25 folders processed of week1
+CreateAndCopyQAssignments: 9 of 25 folders processed of week1
+CreateAndCopyQAssignments: 10 of 25 folders processed of week1
+CreateAndCopyQAssignments: 11 of 25 folders processed of week1
+CreateAndCopyQAssignments: 12 of 25 folders processed of week1
+CreateAndCopyQAssignments: 13 of 25 folders processed of week1
+CreateAndCopyQAssignments: 14 of 25 folders processed of week1
+CreateAndCopyQAssignments: 15 of 25 folders processed of week1
+CreateAndCopyQAssignments: 16 of 25 folders processed of week1
+CreateAndCopyQAssignments: 17 of 25 folders processed of week1
+CreateAndCopyQAssignments: 18 of 25 folders processed of week1
+CreateAndCopyQAssignments: 19 of 25 folders processed of week1
+CreateAndCopyQAssignments: 20 of 25 folders processed of week1
+CreateAndCopyQAssignments: 21 of 25 folders processed of week1
+CreateAndCopyQAssignments: 22 of 25 folders processed of week1
+CreateAndCopyQAssignments: 23 of 25 folders processed of week1
+CreateAndCopyQAssignments: 24 of 25 folders processed of week1
+CreateAndCopyQAssignments: 25 of 25 folders processed of week1
+CreateAndCopyQAssignments: 1 of 15 folders processed of week2
+CreateAndCopyQAssignments: 2 of 15 folders processed of week2
+CreateAndCopyQAssignments: 3 of 15 folders processed of week2
+CreateAndCopyQAssignments: 4 of 15 folders processed of week2
+CreateAndCopyQAssignments: 5 of 15 folders processed of week2
+CreateAndCopyQAssignments: 6 of 15 folders processed of week2
+CreateAndCopyQAssignments: 7 of 15 folders processed of week2
+CreateAndCopyQAssignments: 8 of 15 folders processed of week2
+CreateAndCopyQAssignments: 9 of 15 folders processed of week2
+CreateAndCopyQAssignments: 10 of 15 folders processed of week2
+CreateAndCopyQAssignments: 11 of 15 folders processed of week2
+CreateAndCopyQAssignments: 12 of 15 folders processed of week2
+CreateAndCopyQAssignments: 13 of 15 folders processed of week2
+CreateAndCopyQAssignments: 14 of 15 folders processed of week2
+CreateAndCopyQAssignments: 15 of 15 folders processed of week2
+CreateAndCopyQAssignments: 1 of 16 folders processed of week3
+CreateAndCopyQAssignments: 2 of 16 folders processed of week3
+CreateAndCopyQAssignments: 3 of 16 folders processed of week3
+CreateAndCopyQAssignments: 4 of 16 folders processed of week3
+CreateAndCopyQAssignments: 5 of 16 folders processed of week3
+CreateAndCopyQAssignments: 6 of 16 folders processed of week3
+CreateAndCopyQAssignments: 7 of 16 folders processed of week3
+CreateAndCopyQAssignments: 8 of 16 folders processed of week3
+CreateAndCopyQAssignments: 9 of 16 folders processed of week3
+CreateAndCopyQAssignments: 10 of 16 folders processed of week3
+CreateAndCopyQAssignments: 11 of 16 folders processed of week3
+CreateAndCopyQAssignments: 12 of 16 folders processed of week3
+CreateAndCopyQAssignments: 13 of 16 folders processed of week3
+CreateAndCopyQAssignments: 14 of 16 folders processed of week3
+CreateAndCopyQAssignments: 15 of 16 folders processed of week3
+CreateAndCopyQAssignments: 16 of 16 folders processed of week3
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the generated files to clean_source assignment
+Copy the files to the "assignment" place
+
+numProgramming =
+
+     4
+
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQAssignments.m',269,1)">269 </a>    rmdir(apOldFolder);
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Created MC-Questions
+Elapsed time is 83.538956 seconds.
+execute generate all script
+Start fresh: Generate all week assignments
+0: Read the student number and convert the list to e-mailadresses
+0.016: Create new filenames (with HASH code AND combine file names)
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+1.569: END SCRIPT
+Elapsed time is 1.569499 seconds.
+Execute create week assignment scripts
+Generating assignents
+0.012: Empty folder with files for testing
+0.014: Create a student specific folder in every week folder
+0.114: Get overview of files
+0.958: Fill every student folder with the number of assignments
+CreateBonusAssignments: , progress: 1%
+CreateBonusAssignments: , progress: 2%
+CreateBonusAssignments: , progress: 3%
+CreateBonusAssignments: , progress: 4%
+CreateBonusAssignments: , progress: 5%
+CreateBonusAssignments: , progress: 5%
+CreateBonusAssignments: , progress: 6%
+CreateBonusAssignments: , progress: 7%
+CreateBonusAssignments: , progress: 8%
+CreateBonusAssignments: , progress: 9%
+CreateBonusAssignments: , progress: 10%
+CreateBonusAssignments: , progress: 11%
+CreateBonusAssignments: , progress: 12%
+CreateBonusAssignments: , progress: 13%
+CreateBonusAssignments: , progress: 14%
+CreateBonusAssignments: , progress: 15%
+CreateBonusAssignments: , progress: 15%
+CreateBonusAssignments: , progress: 16%
+CreateBonusAssignments: , progress: 17%
+CreateBonusAssignments: , progress: 18%
+CreateBonusAssignments: , progress: 19%
+CreateBonusAssignments: , progress: 20%
+CreateBonusAssignments: , progress: 21%
+CreateBonusAssignments: , progress: 22%
+CreateBonusAssignments: , progress: 23%
+CreateBonusAssignments: , progress: 24%
+CreateBonusAssignments: , progress: 25%
+CreateBonusAssignments: , progress: 25%
+CreateBonusAssignments: , progress: 26%
+CreateBonusAssignments: , progress: 27%
+CreateBonusAssignments: , progress: 28%
+CreateBonusAssignments: , progress: 29%
+CreateBonusAssignments: , progress: 30%
+CreateBonusAssignments: , progress: 31%
+CreateBonusAssignments: , progress: 32%
+CreateBonusAssignments: , progress: 33%
+CreateBonusAssignments: , progress: 34%
+CreateBonusAssignments: , progress: 35%
+CreateBonusAssignments: , progress: 35%
+CreateBonusAssignments: , progress: 36%
+CreateBonusAssignments: , progress: 37%
+CreateBonusAssignments: , progress: 38%
+CreateBonusAssignments: , progress: 39%
+CreateBonusAssignments: , progress: 40%
+CreateBonusAssignments: , progress: 41%
+CreateBonusAssignments: , progress: 42%
+CreateBonusAssignments: , progress: 43%
+CreateBonusAssignments: , progress: 44%
+CreateBonusAssignments: , progress: 45%
+CreateBonusAssignments: , progress: 45%
+CreateBonusAssignments: , progress: 46%
+CreateBonusAssignments: , progress: 47%
+CreateBonusAssignments: , progress: 48%
+CreateBonusAssignments: , progress: 49%
+CreateBonusAssignments: , progress: 50%
+CreateBonusAssignments: , progress: 51%
+CreateBonusAssignments: , progress: 52%
+CreateBonusAssignments: , progress: 53%
+CreateBonusAssignments: , progress: 54%
+CreateBonusAssignments: , progress: 55%
+CreateBonusAssignments: , progress: 55%
+CreateBonusAssignments: , progress: 56%
+CreateBonusAssignments: , progress: 57%
+CreateBonusAssignments: , progress: 58%
+CreateBonusAssignments: , progress: 59%
+CreateBonusAssignments: , progress: 60%
+CreateBonusAssignments: , progress: 61%
+CreateBonusAssignments: , progress: 62%
+CreateBonusAssignments: , progress: 63%
+CreateBonusAssignments: , progress: 64%
+CreateBonusAssignments: , progress: 65%
+CreateBonusAssignments: , progress: 65%
+CreateBonusAssignments: , progress: 66%
+CreateBonusAssignments: , progress: 67%
+CreateBonusAssignments: , progress: 68%
+CreateBonusAssignments: , progress: 69%
+CreateBonusAssignments: , progress: 70%
+CreateBonusAssignments: , progress: 71%
+CreateBonusAssignments: , progress: 72%
+CreateBonusAssignments: , progress: 73%
+CreateBonusAssignments: , progress: 74%
+CreateBonusAssignments: , progress: 75%
+CreateBonusAssignments: , progress: 75%
+CreateBonusAssignments: , progress: 76%
+CreateBonusAssignments: , progress: 77%
+CreateBonusAssignments: , progress: 78%
+CreateBonusAssignments: , progress: 79%
+CreateBonusAssignments: , progress: 80%
+CreateBonusAssignments: , progress: 81%
+CreateBonusAssignments: , progress: 82%
+CreateBonusAssignments: , progress: 83%
+CreateBonusAssignments: , progress: 84%
+CreateBonusAssignments: , progress: 85%
+CreateBonusAssignments: , progress: 85%
+CreateBonusAssignments: , progress: 86%
+CreateBonusAssignments: , progress: 87%
+CreateBonusAssignments: , progress: 88%
+CreateBonusAssignments: , progress: 89%
+CreateBonusAssignments: , progress: 90%
+CreateBonusAssignments: , progress: 91%
+CreateBonusAssignments: , progress: 92%
+CreateBonusAssignments: , progress: 93%
+CreateBonusAssignments: , progress: 94%
+CreateBonusAssignments: , progress: 95%
+CreateBonusAssignments: , progress: 95%
+CreateBonusAssignments: , progress: 96%
+CreateBonusAssignments: , progress: 97%
+CreateBonusAssignments: , progress: 98%
+CreateBonusAssignments: , progress: 99%
+CreateBonusAssignments: , progress: 100%
+145.822: Generate some test files for the Checking script
+145.91: Generate test folders with data to simulate students with wrong assignments
+145.986: END SCRIPT
+Elapsed time is 145.989432 seconds.
+Copy certain testfiles to directory submitted
+Execute check assignments
+Check for the existence of needed supporting scripts/function files
+Start with script
+0.004: Check if needed folder exists, if not stop execution of script
+0.005: Check which students have submitted their assignments. Student without do not get any points
+105 students did not submit their assignments
+4.831: Check if the HASH-codes in every m-file of the students is intact
+5.29: Check for each student if they have their correct assignments
+5.854: Get the number of points for all week assignments
+6.524: Put in dictionary and save in MAT-file
+6.529: Check the answer of the students and track their points if correct
+
+studentFolder =
+
+    '17065852'
+
+
+studentFolder =
+
+    '18137628'
+
+
+studentFolder =
+
+    '18098525'
+
+
+studentFolder =
+
+    '18026532'
+
+
+studentFolder =
+
+    '18050638'
+
+
+studentFolder =
+
+    '18071481'
+
+
+studentFolder =
+
+    '18129331'
+
+
+studentFolder =
+
+    '18067352'
+
+
+studentFolder =
+
+    '18063888'
+
+
+studentFolder =
+
+    '17017246'
+
+
+studentFolder =
+
+    '18104169'
+
+
+studentFolder =
+
+    '18037860'
+
+
+studentFolder =
+
+    '18085105'
+
+
+studentFolder =
+
+    '17096162'
+
+
+studentFolder =
+
+    '18078540'
+
+
+studentFolder =
+
+    '18098789'
+
+
+studentFolder =
+
+    '18060145'
+
+
+studentFolder =
+
+    '18146244'
+
+
+studentFolder =
+
+    '17096987'
+
+
+studentFolder =
+
+    '18030580'
+
+
+studentFolder =
+
+    '17094062'
+
+
+studentFolder =
+
+    '18041442'
+
+
+studentFolder =
+
+    '18038778'
+
+
+studentFolder =
+
+    '18105807'
+
+
+studentFolder =
+
+    '18091288'
+
+
+studentFolder =
+
+    '18068049'
+
+
+studentFolder =
+
+    '18089550'
+
+
+studentFolder =
+
+    '18060323'
+
+
+studentFolder =
+
+    '18109314'
+
+
+studentFolder =
+
+    '18086187'
+
+
+studentFolder =
+
+    '17060230'
+
+
+studentFolder =
+
+    '18078125'
+
+
+studentFolder =
+
+    '17038480'
+
+
+studentFolder =
+
+    '17113563'
+
+
+studentFolder =
+
+    '18032893'
+
+
+studentFolder =
+
+    '18026583'
+
+
+studentFolder =
+
+    '17103266'
+
+
+studentFolder =
+
+    '18112420'
+
+
+studentFolder =
+
+    '17033659'
+
+
+studentFolder =
+
+    '18012051'
+
+
+studentFolder =
+
+    '18024939'
+
+
+studentFolder =
+
+    '18072747'
+
+
+studentFolder =
+
+    '18088740'
+
+
+studentFolder =
+
+    '18145523'
+
+
+studentFolder =
+
+    '18004733'
+
+
+studentFolder =
+
+    '18060919'
+
+
+studentFolder =
+
+    '18057853'
+
+
+studentFolder =
+
+    '18043771'
+
+
+studentFolder =
+
+    '17026067'
+
+
+studentFolder =
+
+    '18036848'
+
+
+studentFolder =
+
+    '16012828'
+
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_6_versie_3_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_3_CHECK.m', 48)" style="font-weight:bold">opdracht_6_versie_3_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_3_CHECK.m',48,0)">line 48</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_7_versie_4_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_4_CHECK.m', 35)" style="font-weight:bold">opdracht_7_versie_4_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_4_CHECK.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+
+grade =
+
+     1
+
+Elapsed time is 29.325618 seconds.
+
+studentFolder =
+
+    '16051041'
+
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_6_versie_1_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_1_CHECK.m', 45)" style="font-weight:bold">opdracht_6_versie_1_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_1_CHECK.m',45,0)">line 45</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_7_versie_1_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_1_CHECK.m', 51)" style="font-weight:bold">opdracht_7_versie_1_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_1_CHECK.m',51,0)">line 51</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+
+grade =
+
+     1
+
+Elapsed time is 29.716376 seconds.
+
+studentFolder =
+
+    '18041582'
+
+
+studentFolder =
+
+    '17105900'
+
+
+studentFolder =
+
+    '18114814'
+
+
+studentFolder =
+
+    '18102077'
+
+
+studentFolder =
+
+    '18081029'
+
+
+studentFolder =
+
+    '18007422'
+
+
+studentFolder =
+
+    '17096022'
+
+
+studentFolder =
+
+    '18048366'
+
+
+studentFolder =
+
+    '18108563'
+
+
+studentFolder =
+
+    '18072631'
+
+
+studentFolder =
+
+    '18062725'
+
+
+studentFolder =
+
+    '18016081'
+
+
+studentFolder =
+
+    '18070930'
+
+
+studentFolder =
+
+    '18135013'
+
+
+studentFolder =
+
+    '17140870'
+
+
+studentFolder =
+
+    '16053435'
+
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_6_versie_2_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_2_CHECK.m', 56)" style="font-weight:bold">opdracht_6_versie_2_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_2_CHECK.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_7_versie_1_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_1_CHECK.m', 51)" style="font-weight:bold">opdracht_7_versie_1_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_1_CHECK.m',51,0)">line 51</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+
+grade =
+
+     1
+
+Elapsed time is 30.656288 seconds.
+
+studentFolder =
+
+    '18072941'
+
+
+studentFolder =
+
+    '18119603'
+
+
+studentFolder =
+
+    '17049083'
+
+
+studentFolder =
+
+    '18049788'
+
+
+studentFolder =
+
+    '17040345'
+
+
+studentFolder =
+
+    '18067190'
+
+
+studentFolder =
+
+    '18063160'
+
+
+studentFolder =
+
+    '17094488'
+
+
+studentFolder =
+
+    '18031013'
+
+
+studentFolder =
+
+    '18110754'
+
+
+studentFolder =
+
+    '17088577'
+
+
+studentFolder =
+
+    '18103618'
+
+
+studentFolder =
+
+    '18059279'
+
+
+studentFolder =
+
+    '18021794'
+
+
+studentFolder =
+
+    '18100708'
+
+
+studentFolder =
+
+    '16090632'
+
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_6_versie_3_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_3_CHECK.m', 48)" style="font-weight:bold">opdracht_6_versie_3_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_3_CHECK.m',48,0)">line 48</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_7_versie_1_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_1_CHECK.m', 51)" style="font-weight:bold">opdracht_7_versie_1_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_7\opdracht_7_versie_1_CHECK.m',51,0)">line 51</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+
+grade =
+
+     1
+
+Elapsed time is 29.358851 seconds.
+
+studentFolder =
+
+    '18118283'
+
+
+studentFolder =
+
+    '18044417'
+
+
+studentFolder =
+
+    '18032230'
+
+
+studentFolder =
+
+    '18041752'
+
+
+studentFolder =
+
+    '18118739'
+
+
+studentFolder =
+
+    '18104940'
+
+
+studentFolder =
+
+    '18022588'
+
+
+studentFolder =
+
+    '18106498'
+
+
+studentFolder =
+
+    '17084539'
+
+
+studentFolder =
+
+    '18114903'
+
+
+studentFolder =
+
+    '18096417'
+
+
+studentFolder =
+
+    '18060420'
+
+
+studentFolder =
+
+    '18063837'
+
+
+studentFolder =
+
+    '16105370'
+
+[Warning: result is too low!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runChecksOnScriptAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m', 94)" style="font-weight:bold">runChecksOnScriptAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\runChecksOnScriptAssignment.m',94,0)">line 94</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('opdracht_6_versie_2_CHECK', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_2_CHECK.m', 56)" style="font-weight:bold">opdracht_6_versie_2_CHECK</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1\deelopdracht_4\opdracht_6\opdracht_6_versie_2_CHECK.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 123)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',123,0)">line 123</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 312)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',312,0)">line 312</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 93)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',93,0)">line 93</a>)] 
+
+grade =
+
+     1
+
+Elapsed time is 28.545177 seconds.
+
+studentFolder =
+
+    '18016596'
+
+
+studentFolder =
+
+    '18057411'
+
+
+studentFolder =
+
+    '17074770'
+
+
+studentFolder =
+
+    '18097898'
+
+
+studentFolder =
+
+    '18059384'
+
+
+studentFolder =
+
+    '18045871'
+
+
+studentFolder =
+
+    '18022316'
+
+
+studentFolder =
+
+    '18023231'
+
+
+studentFolder =
+
+    '18086241'
+
+
+studentFolder =
+
+    '18111718'
+
+
+studentFolder =
+
+    '16107004'
+
+
+studentFolder =
+
+    '17128560'
+
+
+studentMatrix =
+
+    17065852           1
+    18137628           1
+    18098525           1
+    18026532           1
+    18050638           1
+    18071481           1
+    18129331           1
+    18067352           1
+    18063888           1
+    17017246           1
+    18104169           1
+    18037860           1
+    18085105           1
+    17096162           1
+    18078540           1
+    18098789           1
+    18060145           1
+    18146244           1
+    17096987           1
+    18030580           1
+    17094062           1
+    18041442           1
+    18038778           1
+    18105807           1
+    18091288           1
+    18068049           1
+    18089550           1
+    18060323           1
+    18109314           1
+    18086187           1
+    17060230           1
+    18078125           1
+    17038480           1
+    17113563           1
+    18032893           1
+    18026583           1
+    17103266           1
+    18112420           1
+    17033659           1
+    18012051           1
+    18024939           1
+    18072747           1
+    18088740           1
+    18145523           1
+    18004733           1
+    18060919           1
+    18057853           1
+    18043771           1
+    17026067           1
+    18036848           1
+    16012828           1
+    16051041           1
+    18041582           1
+    17105900           1
+    18114814           1
+    18102077           1
+    18081029           1
+    18007422           1
+    17096022           1
+    18048366           1
+    18108563           1
+    18072631           1
+    18062725           1
+    18016081           1
+    18070930           1
+    18135013           1
+    17140870           1
+    16053435           1
+    18072941           1
+    18119603           1
+    17049083           1
+    18049788           1
+    17040345           1
+    18067190           1
+    18063160           1
+    17094488           1
+    18031013           1
+    18110754           1
+    17088577           1
+    18103618           1
+    18059279           1
+    18021794           1
+    18100708           1
+    16090632           1
+    18118283           1
+    18044417           1
+    18032230           1
+    18041752           1
+    18118739           1
+    18104940           1
+    18022588           1
+    18106498           1
+    17084539           1
+    18114903           1
+    18096417           1
+    18060420           1
+    18063837           1
+    16105370           1
+    18016596           1
+    18057411           1
+    17074770           1
+    18097898           1
+    18059384           1
+    18045871           1
+    18022316           1
+    18023231           1
+    18086241           1
+    18111718           1
+    16107004           1
+    17128560           1
+
+
+averageGrade =
+
+     1
+
+Elapsed time is 28.587177 seconds.
+Execute check assignments
+Check for the existence of needed supporting scripts/function files
+Start with script
+0.004: Check if needed folder exists, if not stop execution of script
+0.005: Check which students have submitted their assignments. Student without do not get any points
+105 students did not submit their assignments
+4.565: Check if the HASH-codes in every m-file of the students is intact
+5.028: Check for each student if they have their correct assignments
+5.548: Get the number of points for all week assignments
+6.173: Put in dictionary and save in MAT-file
+6.179: Check the answer of the students and track their points if correct
+
+studentFolder =
+
+    '17065852'
+
+
+studentFolder =
+
+    '18137628'
+
+
+studentFolder =
+
+    '18098525'
+
+
+studentFolder =
+
+    '18026532'
+
+
+studentFolder =
+
+    '18050638'
+
+
+studentFolder =
+
+    '18071481'
+
+
+studentFolder =
+
+    '18129331'
+
+
+studentFolder =
+
+    '18067352'
+
+
+studentFolder =
+
+    '18063888'
+
+
+studentFolder =
+
+    '17017246'
+
+
+studentFolder =
+
+    '18104169'
+
+
+studentFolder =
+
+    '18037860'
+
+
+studentFolder =
+
+    '18085105'
+
+
+studentFolder =
+
+    '17096162'
+
+
+studentFolder =
+
+    '18078540'
+
+
+studentFolder =
+
+    '18098789'
+
+
+studentFolder =
+
+    '18060145'
+
+
+studentFolder =
+
+    '18146244'
+
+
+studentFolder =
+
+    '17096987'
+
+
+studentFolder =
+
+    '18030580'
+
+
+studentFolder =
+
+    '17094062'
+
+
+studentFolder =
+
+    '18041442'
+
+
+studentFolder =
+
+    '18038778'
+
+
+studentFolder =
+
+    '18105807'
+
+
+studentFolder =
+
+    '18091288'
+
+
+studentFolder =
+
+    '18068049'
+
+
+studentFolder =
+
+    '18089550'
+
+
+studentFolder =
+
+    '18060323'
+
+
+studentFolder =
+
+    '18109314'
+
+
+studentFolder =
+
+    '18086187'
+
+
+studentFolder =
+
+    '17060230'
+
+
+studentFolder =
+
+    '18078125'
+
+
+studentFolder =
+
+    '17038480'
+
+
+studentFolder =
+
+    '17113563'
+
+
+studentFolder =
+
+    '18032893'
+
+
+studentFolder =
+
+    '18026583'
+
+
+studentFolder =
+
+    '17103266'
+
+
+studentFolder =
+
+    '18112420'
+
+
+studentFolder =
+
+    '17033659'
+
+
+studentFolder =
+
+    '18012051'
+
+
+studentFolder =
+
+    '18024939'
+
+
+studentFolder =
+
+    '18072747'
+
+
+studentFolder =
+
+    '18088740'
+
+
+studentFolder =
+
+    '18145523'
+
+
+studentFolder =
+
+    '18004733'
+
+
+studentFolder =
+
+    '18060919'
+
+
+studentFolder =
+
+    '18057853'
+
+
+studentFolder =
+
+    '18043771'
+
+
+studentFolder =
+
+    '17026067'
+
+
+studentFolder =
+
+    '18036848'
+
+
+studentFolder =
+
+    '16012828'
+
+
+grade =
+
+    10
+
+Elapsed time is 28.156307 seconds.
+
+studentFolder =
+
+    '16051041'
+
+
+grade =
+
+    10
+
+Elapsed time is 29.181783 seconds.
+
+studentFolder =
+
+    '18041582'
+
+
+studentFolder =
+
+    '17105900'
+
+
+studentFolder =
+
+    '18114814'
+
+
+studentFolder =
+
+    '18102077'
+
+
+studentFolder =
+
+    '18081029'
+
+
+studentFolder =
+
+    '18007422'
+
+
+studentFolder =
+
+    '17096022'
+
+
+studentFolder =
+
+    '18048366'
+
+
+studentFolder =
+
+    '18108563'
+
+
+studentFolder =
+
+    '18072631'
+
+
+studentFolder =
+
+    '18062725'
+
+
+studentFolder =
+
+    '18016081'
+
+
+studentFolder =
+
+    '18070930'
+
+
+studentFolder =
+
+    '18135013'
+
+
+studentFolder =
+
+    '17140870'
+
+
+studentFolder =
+
+    '16053435'
+
+
+grade =
+
+    10
+
+Elapsed time is 28.892001 seconds.
+
+studentFolder =
+
+    '18072941'
+
+
+studentFolder =
+
+    '18119603'
+
+
+studentFolder =
+
+    '17049083'
+
+
+studentFolder =
+
+    '18049788'
+
+
+studentFolder =
+
+    '17040345'
+
+
+studentFolder =
+
+    '18067190'
+
+
+studentFolder =
+
+    '18063160'
+
+
+studentFolder =
+
+    '17094488'
+
+
+studentFolder =
+
+    '18031013'
+
+
+studentFolder =
+
+    '18110754'
+
+
+studentFolder =
+
+    '17088577'
+
+
+studentFolder =
+
+    '18103618'
+
+
+studentFolder =
+
+    '18059279'
+
+
+studentFolder =
+
+    '18021794'
+
+
+studentFolder =
+
+    '18100708'
+
+
+studentFolder =
+
+    '16090632'
+
+
+grade =
+
+    10
+
+Elapsed time is 28.548907 seconds.
+
+studentFolder =
+
+    '18118283'
+
+
+studentFolder =
+
+    '18044417'
+
+
+studentFolder =
+
+    '18032230'
+
+
+studentFolder =
+
+    '18041752'
+
+
+studentFolder =
+
+    '18118739'
+
+
+studentFolder =
+
+    '18104940'
+
+
+studentFolder =
+
+    '18022588'
+
+
+studentFolder =
+
+    '18106498'
+
+
+studentFolder =
+
+    '17084539'
+
+
+studentFolder =
+
+    '18114903'
+
+
+studentFolder =
+
+    '18096417'
+
+
+studentFolder =
+
+    '18060420'
+
+
+studentFolder =
+
+    '18063837'
+
+
+studentFolder =
+
+    '16105370'
+
+
+grade =
+
+    10
+
+Elapsed time is 28.735351 seconds.
+
+studentFolder =
+
+    '18016596'
+
+
+studentFolder =
+
+    '18057411'
+
+
+studentFolder =
+
+    '17074770'
+
+
+studentFolder =
+
+    '18097898'
+
+
+studentFolder =
+
+    '18059384'
+
+
+studentFolder =
+
+    '18045871'
+
+
+studentFolder =
+
+    '18022316'
+
+
+studentFolder =
+
+    '18023231'
+
+
+studentFolder =
+
+    '18086241'
+
+
+studentFolder =
+
+    '18111718'
+
+
+studentFolder =
+
+    '16107004'
+
+
+studentFolder =
+
+    '17128560'
+
+
+studentMatrix =
+
+    17065852           1
+    18137628           1
+    18098525           1
+    18026532           1
+    18050638           1
+    18071481           1
+    18129331           1
+    18067352           1
+    18063888           1
+    17017246           1
+    18104169           1
+    18037860           1
+    18085105           1
+    17096162           1
+    18078540           1
+    18098789           1
+    18060145           1
+    18146244           1
+    17096987           1
+    18030580           1
+    17094062           1
+    18041442           1
+    18038778           1
+    18105807           1
+    18091288           1
+    18068049           1
+    18089550           1
+    18060323           1
+    18109314           1
+    18086187           1
+    17060230           1
+    18078125           1
+    17038480           1
+    17113563           1
+    18032893           1
+    18026583           1
+    17103266           1
+    18112420           1
+    17033659           1
+    18012051           1
+    18024939           1
+    18072747           1
+    18088740           1
+    18145523           1
+    18004733           1
+    18060919           1
+    18057853           1
+    18043771           1
+    17026067           1
+    18036848           1
+    16012828          10
+    16051041          10
+    18041582           1
+    17105900           1
+    18114814           1
+    18102077           1
+    18081029           1
+    18007422           1
+    17096022           1
+    18048366           1
+    18108563           1
+    18072631           1
+    18062725           1
+    18016081           1
+    18070930           1
+    18135013           1
+    17140870           1
+    16053435          10
+    18072941           1
+    18119603           1
+    17049083           1
+    18049788           1
+    17040345           1
+    18067190           1
+    18063160           1
+    17094488           1
+    18031013           1
+    18110754           1
+    17088577           1
+    18103618           1
+    18059279           1
+    18021794           1
+    18100708           1
+    16090632          10
+    18118283           1
+    18044417           1
+    18032230           1
+    18041752           1
+    18118739           1
+    18104940           1
+    18022588           1
+    18106498           1
+    17084539           1
+    18114903           1
+    18096417           1
+    18060420           1
+    18063837           1
+    16105370          10
+    18016596           1
+    18057411           1
+    17074770           1
+    18097898           1
+    18059384           1
+    18045871           1
+    18022316           1
+    18023231           1
+    18086241           1
+    18111718           1
+    16107004           1
+    17128560           1
+
+
+averageGrade =
+
+    10
+
+Elapsed time is 28.753155 seconds.
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1811251753
+

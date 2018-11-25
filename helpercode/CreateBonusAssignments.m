@@ -108,7 +108,9 @@ for nTypeAss = 1:nDeepestDir
     currPath = pwd;
     cd(fullfile(con.NAMEASSIGNMENTFOLDER,deepestAssignFolders{nTypeAss}));
     answerFilesInDir{nTypeAss} = dir(['*' con.SOLPOSTFIX '*']);
-    if isequal(length(answerFilesInDir{nTypeAss}),0) && ~contains(deepestAssignFolders{nTypeAss},'Databestanden')  && ~contains(deepestAssignFolders{nTypeAss},'deelopdracht_0')
+    if isequal(length(answerFilesInDir{nTypeAss}),0) && ...
+            ~contains(deepestAssignFolders{nTypeAss},'Databestanden')  &&...
+            ~contains(deepestAssignFolders{nTypeAss},'deelopdracht_0')
         error('A folder without files detected');
     end
     numberOfAssignmentInDir(nTypeAss) = length(answerFilesInDir{nTypeAss});

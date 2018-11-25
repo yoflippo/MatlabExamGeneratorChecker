@@ -3,7 +3,7 @@ clear all;
 dbstop if error
 InitAll
 
-%% Select week to correct, it is assumed that 4 weeks are used.
+%% Select the right BONUSASSNUMBER.
 con.BONUSASSNUMBER = 1; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
@@ -30,7 +30,7 @@ if exist('WeekAssignmentsToGenerate','var')
     cd(con.BASEFOLDER)
     disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
     tic
-    CreateAndCopyQuestions(con);
+    CreateAndCopyQAssignments(con);
     disp('Created MC-Questions')
     toc
     
