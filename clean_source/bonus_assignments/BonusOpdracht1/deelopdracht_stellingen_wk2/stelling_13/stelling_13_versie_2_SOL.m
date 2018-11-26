@@ -1,9 +1,9 @@
 %% Stelling 13
 %
-% De functies: gemiddelde(), standaardev(), mediaan() zijn 
-% standaard Matlab functies.                               
+% De standaardfunctie mean() kan worden gebruikt om de gemiddelde
+% waarde van alle elementen van een vector te berekenen.         
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

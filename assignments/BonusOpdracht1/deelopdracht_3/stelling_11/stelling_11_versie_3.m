@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |79d904c160f1c8bf657767e72b670b46|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 11
 %
-% Met de volgende code maak je een functie aan:
-%                                              
-% ======= Code =======                         
-%                                              
-% function [output]=naamfunctie(input)         
-%                                              
-% end                                          
-%                                              
-% ======= Code =======                         
+% De input van een functie kan alleen een vector zijn.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 %% Stelling 4
 %
-% In de volgende coderegel heeft de min-operator 
-% prioriteit boven de macht-operator: 76 - 6^2.  
+% Met de functie randn() produceer je alleen negatieve 
+% willekeurige getallen.                               
 %
 Antwoord = 0;
 

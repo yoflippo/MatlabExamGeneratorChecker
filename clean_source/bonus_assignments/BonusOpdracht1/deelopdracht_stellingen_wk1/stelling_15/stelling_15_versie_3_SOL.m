@@ -1,6 +1,6 @@
 %% Stelling 15
 %
-% In Matlab kun je alleen rijvectoren maken.
+% In Matlab kun je alleen kolomvectoren aanmaken.
 %
 Antwoord = 0;
 

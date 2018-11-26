@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |a3ca0e94bbe6358c62bea6c80a976395|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,17 @@
  
 %% Stelling 1
 %
-% Het code voorbeeld dat hieronder staat, is een voorbeeld                                           
-% van netjes werken:                                                                                 
-%                                                                                                    
-% ======= Code =======                                                                               
-% load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))                                              
-% addpath(genpath(fullfile(pwd,subWkFolder))); removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
-% files = dir(subWkFolder);                                                                          
-% ======= Code =======                                                                               
+% Het code voorbeeld dat hieronder staat, is een voorbeeld
+% van netjes werken:                                      
+%                                                         
+% ======= Code =======                                    
+% % Find studentnumbers                                   
+% load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))   
+% % Remove directories from folder                        
+% addpath(genpath(fullfile(pwd,subWkFolder)))             
+% removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))  
+% % Get files in the folder for analysis                  
+% files = dir(subWkFolder);                               
+% ======= Code =======                                    
 %
-Antwoord = 0;
-
+Antwoord = 1;

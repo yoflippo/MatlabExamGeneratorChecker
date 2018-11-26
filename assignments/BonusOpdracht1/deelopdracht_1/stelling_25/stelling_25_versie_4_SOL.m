@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |001c11f4cebccacf83a0a17fca7919cf|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 25
 %
-% Variabelen in Matlab mogen beginnen met een
-% willekeurig symbool.                       
+% Door gebruik te maken van variabelen in plaats    
+% van getallen is een programma moeilijk aanpasbaar.
 %
 Antwoord = 0;
 

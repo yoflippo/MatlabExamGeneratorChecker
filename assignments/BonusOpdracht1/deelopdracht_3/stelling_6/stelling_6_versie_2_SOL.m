@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |a5814ea6204bfd5c3b3a2e37b8889489|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 6
 %
-% Bij een vector: v = [7 8 2 1] krijg je bij de aanroep
-% v(2) de waarde 2 terug.                              
+% Bij een vector: v = [7 8 2 1] krijg je bij de 
+% aanroep v(2) de waarde 8 terug.               
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

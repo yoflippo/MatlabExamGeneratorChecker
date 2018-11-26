@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% Het Command Window is een van de mogelijkheden om een
-% functie aan te roepen.                               
+% Het is niet mogelijk om binnen een functie een 
+% andere functie aan te roepen.                  
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

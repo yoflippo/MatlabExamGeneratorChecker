@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |bcf48d6e17b5b17a938ee67a9b931c1c|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 3
 %
-% In de onderstaande code worden twee vectoren (vec1     
-% en vec2) element-by-element met elkaar vermenigvuldigd:
-%                                                        
-% ------------code--------------                         
-% vec1 = 0:10;                                           
-% vec2 = 1:11;                                           
-% vec3 = vec1*vec2;                                      
-% ------------code--------------                         
+% Om de output van een commando in het Command Window
+% te beperken, wordt aan het einde van de regel een  
+% dubbele punt geplaatst.                            
 %
 Antwoord = 0;
+
+
+
+
+
 

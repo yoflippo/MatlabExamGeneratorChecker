@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |09b0d2a42b7daceaea1e180ad62d291f|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 25
 %
-% De Editor wordt o.a. gebruikt om een script
-% te maken of aan te passen.                 
+% Een verzameling letters kan op de volgende manier aan
+% een variabele worden toegekend: var = 'blablabla'.   
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

@@ -1,9 +1,9 @@
 %% Stelling 10
 %
-% Een functie kan worden aangeroepen vanuit het
-% Command Window.                              
+% Een functie kan worden aangeroepen vanuit
+% de Workspace.                            
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

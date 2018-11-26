@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |014c49365d2a9652aeaf2a03220b1c17|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,7 +36,7 @@
  
 %% Stelling 14
 %
-% De functie strcmpi() is hoofdletter gevoelig.
+% De standaard functie strcmp() is hoofdletter gevoelig.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |244be87d7ff8c11dcb1c549706865ec1|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 4
 %
-% Wanneer je het eerste element uit de tweede kolom wilt
-% aanroepen van matrix A gebruik je A(1,2).             
+% Een kolom-vector bestaat uit 1 rij met data.
 %
-Antwoord = 1;
+Antwoord = 0;
+
 
 
 

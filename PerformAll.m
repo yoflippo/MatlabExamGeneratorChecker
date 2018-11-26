@@ -1,7 +1,29 @@
 %% This files creates/checks every assignment and file
 clear all;
 dbstop if error
-InitAll
+
+%% Initialisation
+clc; close all; close all hidden;
+fclose('all');
+addpath(genpath('helpercode'));
+global DEBUGOUTPUT;
+DEBUGOUTPUT = 1;
+% make zero to delete base folder
+con = ConstantsClass('PATH',GetPathOneLevelUp(mfilename('fullpath')),...
+    'NumberOfBonusAssignments',2,...
+    'WeeksForAssignment',{1:3,4:6});
+
+%% Check for the existence of needed supporting scripts/function files
+debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
+for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
+    try
+        cd(con.LISTWITHNEEDEDFOLDERS{i});
+        cd ..
+    catch err
+        error(['PLEASE ADJUST YOUR CURRENT LOCATION (Current Folder)' ...
+            'The folder: ' con.LISTWITHNEEDEDFOLDERS{i} ' was not found']);
+    end
+end
 
 %% Select the right BONUSASSNUMBER.
 con.BONUSASSNUMBER = 1; % Adjust me!!!
@@ -13,7 +35,7 @@ WeekAssignmentsToGenerate = BonusAssignmentWeeks;
 
 %% START
 if exist('WeekAssignmentsToGenerate','var')
-    cnt = 1;    
+    cnt = 1;
     warning off
     rmpath(genpath(fileparts(mfilename('fullpath'))));
     addpath(genpath('helpercode'));
@@ -25,28 +47,30 @@ if exist('WeekAssignmentsToGenerate','var')
     ver
     dispPlatform
     
-    %% Generate theses and copy all clean_source/assignments -> root/assignments
-    %To Do give some output to user
-    cd(con.BASEFOLDER)
-    disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
-    tic
-    CreateAndCopyQAssignments(con);
-    disp('Created MC-Questions')
-    toc
-    
-    
-    %% Execute generated all assignments script, SHOULD BE EXECUTED ONLY ONCE
-    disp('execute generate all script');
-    cd(con.BASEFOLDER)
-    tic
-    try
-        GiveHashesToAssignments(con,DEBUGOUTPUT);
-    catch err
-        %Has to be a warning to continue
-        warning([mfilename ': E0 ' err.message newline ' GiveHashesToAssignments did not finish correctly']);
-        keyboard
+    if input('Do you want to (re)generate the assignments? (yes=1/no=0)')
+        %% Generate theses and copy all clean_source/assignments -> BASEFOLDER/assignments
+        %To Do give some output to user
+        cd(con.BASEFOLDER)
+        disp('Generate MC files and copy all clean_source/assignments -> root/assignments')
+        tic
+        CreateAndCopyQAssignments(con);
+        disp('Created MC-Questions')
+        cd(con.BASEFOLDER)
+        toc
+        
+        %% Execute generated all assignments script, SHOULD BE EXECUTED ONLY ONCE
+        disp('execute generate all script');
+        cd(con.BASEFOLDER)
+        tic
+        try
+            GiveHashesToAssignments(con,DEBUGOUTPUT);
+        catch err
+            %Has to be a warning to continue
+            warning([mfilename ': E0 ' err.message newline ' GiveHashesToAssignments did not finish correctly']);
+            keyboard
+        end
+        toc
     end
-    toc
     
     %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
     cd(con.NAMEASSIGNMENTFOLDER)
@@ -66,6 +90,19 @@ if exist('WeekAssignmentsToGenerate','var')
     for nCS = 1:length(apCleanSubmitted)
         removeShitFromDir(apCleanSubmitted{nCS});
     end
+    
+    %% Read the student number and convert the list to e-mailadresses
+    debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
+    
+    studentFolderOutput = dir('studentnumber*/*.txt');
+    % go to the folder with studentnumbers. It is assumed to be a list with
+    
+    stdnmbFile = fullfile(studentFolderOutput(1).folder,studentFolderOutput(1).name);
+    studentNumbers = load(stdnmbFile);
+    
+    cd(con.NAMEASSIGNMENTFOLDER)
+    save(con.STUDENTNUMBERMAT,'studentNumbers');
+    cd(con.BASEFOLDER)
     
     %% Execute create week assignment scripts for individual students
     disp('Execute create week assignment scripts');
@@ -90,7 +127,7 @@ if exist('WeekAssignmentsToGenerate','var')
     copyfiles(apTestFiles,apFinDes);
     disp('Execute check assignments');
     try
-        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),1)
+        if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),1)
             error('The average grade is not equal to 1');
         end
     catch err
@@ -126,14 +163,15 @@ if exist('WeekAssignmentsToGenerate','var')
     addpath(genpath('helpercode'));
     warning on
     return;
-end %Generation of week assignment + re-randomization
+end %Generation of week assignment
+
 
 %% Check manually copied submitted files
 cd(con.BASEFOLDER)
 prePerform
 disp('Check manually copied submitted files');
 try
-    cCheckStudentSubmissions(BonusAssignmentWeeks)
+    cCheckStudentSubmissions(con,BonusAssignmentWeeks)
 catch err
     error([mfilename ': ' err.message]);
 end

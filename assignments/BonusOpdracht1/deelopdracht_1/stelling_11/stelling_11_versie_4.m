@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |113648202dce1d32149124de35ec3fd7|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 11
 %
-% Met de functie randn() produceer je alleen positieve 
-% willekeurige getallen.                               
+% In Matlab kun je met de quote operator (') een vector 
+% veranderen van rijvector naar kolomvector.            
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

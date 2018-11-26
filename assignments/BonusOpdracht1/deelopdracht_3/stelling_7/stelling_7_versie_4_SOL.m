@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |c664d7d7c4420bb01dec3ab4fc5bdab3|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 7
 %
-% Wanneer je find(v==10) uitvoert met de vector 
-% v = [9 8 17 18 10 13] krijg je als antwoord 5.
+% De standaard functie strcmp() vergelijkt of twee strings
+% identiek zijn.                                          
 %
 Antwoord = 1;
 

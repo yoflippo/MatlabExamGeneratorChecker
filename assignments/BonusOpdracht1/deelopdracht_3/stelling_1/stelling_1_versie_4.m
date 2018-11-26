@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |871f4bf635e933dbf962a1c01c1a62d8|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,7 +36,7 @@
  
 %% Stelling 1
 %
-% Een functie kan niet meer dan 1 input hebben.
+% Je kan de naam van de output van een functie zelf kiezen.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

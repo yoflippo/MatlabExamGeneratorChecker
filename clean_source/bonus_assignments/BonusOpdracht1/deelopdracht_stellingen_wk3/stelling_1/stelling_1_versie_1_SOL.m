@@ -1,8 +1,8 @@
 %% Stelling 1
 %
-% Je kan de naam van de output van een functie zelf kiezen.
+% Een functie kan niet meer dan 1 input hebben.
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

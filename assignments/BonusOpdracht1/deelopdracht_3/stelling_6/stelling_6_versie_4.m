@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |8539aa866c44db5001af1dbb831a7a4b|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 6
 %
-% Bij een vector: v = [7 8 2 1] krijg je bij de 
-% aanroep v(2) de waarde 8 terug.               
+% Bij een bestaande vector v=[ 7 1 2 9] krijg je bij
+% de aanroep:                                       
+%                                                   
+% v(2:end)                                          
+%                                                   
+% de waardes 1 2 9 als resultaat terug.             
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
 
 
 

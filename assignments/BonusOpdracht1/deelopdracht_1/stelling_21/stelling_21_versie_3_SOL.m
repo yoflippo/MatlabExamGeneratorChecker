@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |bbc31d1f03724089c6faed71c992bb1b|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 21
 %
-% Als je in Matlab vectoren bij elkaar optelt, dan wordt
-% dit 'pair-wise addition' genoemd.                     
+% In de onderstaande code worden de laatste vier 
+% elementen van een vector afgedrukt:            
+%                                                
+% ------------code--------------                 
+% vector = 2:66;                                 
+% vector(end-3:end)                              
+% ------------code--------------                 
 %
 Antwoord = 1;
-
-
-
-
-
 
 

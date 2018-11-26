@@ -1,8 +1,8 @@
 %% Stelling 14
 %
-% De functie strcmpi() is hoofdletter gevoelig.
+% De standaard functie strcmp() is hoofdletter gevoelig.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

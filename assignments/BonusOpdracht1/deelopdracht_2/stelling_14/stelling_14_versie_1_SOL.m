@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |0f11dc1c60c0ff154f0254c9506d5d84|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,18 @@
  
 %% Stelling 14
 %
-% Het schrijven van een functie kan de programmeur helpen
-% om een programma beter leesbaar te maken.              
+% Zie het onderstaande code voorbeeld. De output variabele 
+% 'text2' krijgt de string: 'empty'.                       
+%                                                          
+% ======= Code =======                                     
+%                                                          
+% function [text1 text2] = testfunctie(fullname,fake)      
+%     everything = fullname(1:end);                        
+%     nothing = 'empty';                                   
+%     text = everything;                                   
+%     text2 = nothing;                                     
+% end                                                      
+%                                                          
+% ======= Code =======                                     
 %
 Antwoord = 1;
-
-
-
-
-
-
-

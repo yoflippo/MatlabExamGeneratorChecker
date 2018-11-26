@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |a1a403bef5631afd377051ec03a481df|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,15 +36,14 @@
  
 %% Stelling 12
 %
-% In het onderstaande codevoorbeeld worden de door randn() 
-% gegeneerde waardes in omgekeerde volgorde afgedrukt in   
-% het Command Window:                                      
-%                                                          
-% ======= Code =======                                     
-%                                                          
-% waardes = randn(1,10);                                   
-% fliplr(waardes)                                          
-%                                                          
-% ======= Code =======                                     
+% De onderstaande code maakt een numerieke vector aan
+% met een lengte van 11:                             
+%                                                    
+% ------------code--------------                     
+% variabele = 1:10;                                  
+% ------------code--------------                     
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |99b9b77b947198a896373fa60dfb4f1a|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 5
 %
-% Met behulp van de functie 'random()' kan een gebruiker
-% willekeurige getallen genereren.                      
+% Met behulp van de functie randn() kan een gebruiker
+% willekeurige getallen genereren.                   
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

@@ -3,19 +3,13 @@
 % Neem aan dat het code commentaar in het onderstaande
 % voorbeeld de gewenste handeling beschrijft.         
 %                                                     
-% In dit codevoorbeeld zit geen programmeerfout:      
+% De code hieronder bevat een programmeerfout:        
 %                                                     
 % ======= Code =======                                
-%                                                     
-% 1- % Vermenigvuldigen van a en b                    
-% 2- a = 1;                                           
-% 3- b = 2;                                           
-% 4- mul = a * b;                                     
-% 5- % Optellen van c en a                            
-% 6- c = a;                                           
-% 7- d = 4;                                           
-% 8- som = c + a;                                     
-%                                                     
+% varA = 1;                                           
+% varB = 2;                                           
+% % Aftrekken van de variabelen                       
+% som = VarB - VarA                                   
 % ======= Code =======                                
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

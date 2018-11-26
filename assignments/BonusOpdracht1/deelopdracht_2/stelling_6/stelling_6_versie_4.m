@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |ad215fdfde59b29ce7c3f781781db52e|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 6
 %
-% Met behulp van de functie std() kan de standaarddeviatie
-% van de elementen van een vector worden berekend.        
+% Met behulp van de functie median() kan de mediaan
+% van een vector worden berekend.                  
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

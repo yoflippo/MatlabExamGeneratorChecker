@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |34d293c66d361ebe49a0e0855c6bd374|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,18 +36,14 @@
  
 %% Stelling 15
 %
-% Zie het onderstaande code voorbeeld. De functie heeft 
-% twee outputs.                                         
-%                                                       
-% ======= Code =======                                  
-%                                                       
-% function [text1 text2] = testfunctie(fullname,fake)   
-%     everything = fullname(1:end);                     
-%     nothing = 'empty';                                
-%     text = everything;                                
-%     text2 = nothing;                                  
-% end                                                   
-%                                                       
-% ======= Code =======                                  
+% Een programma met programmeer fouten kan niet door
+% Matlab worden uitgevoerd.                         
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+
+
+
+
+

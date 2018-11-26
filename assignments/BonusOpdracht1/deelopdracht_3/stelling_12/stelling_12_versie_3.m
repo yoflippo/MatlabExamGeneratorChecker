@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |9991b1af460542e06a3754e628c158d8|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,12 +36,12 @@
  
 %% Stelling 12
 %
-% Het is niet mogelijk om binnen een functie een 
-% andere functie aan te roepen.                  
+% Stel we hebben een matrix genaamd A.                  
+% De matrix heeft 3 rijen en 3 kolommen.                
+% We zouden het getal in rij R en kolom K op de volgende
+% manier kunnen opvragen: A(K,R)                        
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
 
 
 

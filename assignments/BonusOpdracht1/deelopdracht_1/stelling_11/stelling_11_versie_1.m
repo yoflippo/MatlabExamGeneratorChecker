@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |918e20b539e458845b4fa751555c8c02|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 11
 %
-% In Matlab kun je met het dakje symbool (^) een vector
-% veranderen van rijvector naar kolomvector.           
+% Met de functie randn() produceer je alleen positieve 
+% willekeurige getallen.                               
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

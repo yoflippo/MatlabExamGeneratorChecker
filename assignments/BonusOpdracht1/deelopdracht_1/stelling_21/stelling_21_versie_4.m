@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |25d2dddfaa198ddeac8794123e19d738|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,12 +36,12 @@
  
 %% Stelling 21
 %
-% Het aanmaken van een numerieke vector kan voor een  
-% Bewegingstechnoloog handig zijn om bijvoorbeeld een 
-% tijdvector aan te maken (een vector bestaande uit   
-% tijdstippen).                                       
+% Als je in Matlab vectoren bij elkaar optelt, dan wordt
+% dit 'pair-wise addition' genoemd.                     
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
 
 
 

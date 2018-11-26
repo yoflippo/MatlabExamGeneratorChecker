@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |8684abb99f4db74c8ba651921f476d68|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 7
 %
-% De Matlab operator voor worteltrekken is: ^.
+% Bij het uitvoeren van de volgende code is het resultaat
+% in het Command Window: ' ans =                         
+%                              'i'                       
+%                        '                               
+%                                                        
+% ------------code--------------                         
+% naam = 'Biostatica Matlab';                            
+% naam(2)                                                
+% ------------code--------------                         
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-
-
-
-

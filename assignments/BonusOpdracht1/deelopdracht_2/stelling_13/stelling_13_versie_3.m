@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |69dbf2bcd4ef67c2ef1bbfc0434ef17a|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 13
 %
-% De standaardfunctie average() kan worden gebruikt om de
-% gemiddelde waarde van alle elementen van een vector    
-% te berekenen.                                          
+% De functies: gemiddelde(), standaardev(), mediaan() zijn 
+% standaard Matlab functies.                               
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
 
 
 

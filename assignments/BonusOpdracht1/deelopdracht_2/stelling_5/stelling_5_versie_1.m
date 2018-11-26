@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |1ca14fcbd9c650c7485d246ca0c1831f|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 5
 %
-% Met behulp van de functie som() kunnen de waardes 
-% van een vector bij elkaar worden opgeteld.        
+% Met behulp van de functie 'random()' kan een gebruiker
+% willekeurige getallen genereren.                      
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

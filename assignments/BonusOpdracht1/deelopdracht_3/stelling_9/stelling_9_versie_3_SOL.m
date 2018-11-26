@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |0a743a0dee1df900753cb0abe1cc1beb|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 9
 %
-% Met een colon (:) maak je een nieuwe rij aan binnen
-% een matrix.                                        
+% Wanneer in de functie strcmp() de volgende statements
+% worden ingevoerd:                                    
+%                                                      
+% S1 = 'Sporten';                                      
+% S2='Sporten';                                        
+%                                                      
+% Geeft die functie als antwoord een 0.                
 %
 Antwoord = 0;
-
-
-
-
-
 
 

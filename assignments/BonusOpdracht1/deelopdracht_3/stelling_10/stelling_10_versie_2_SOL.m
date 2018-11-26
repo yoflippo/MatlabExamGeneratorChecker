@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |916b19ef2442e688f9c140a35ed2d649|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 10
 %
-% Een functie kan worden aangeroepen vanuit
-% de Workspace.                            
+% Een functie kan worden aangeroepen vanuit het
+% Command Window.                              
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

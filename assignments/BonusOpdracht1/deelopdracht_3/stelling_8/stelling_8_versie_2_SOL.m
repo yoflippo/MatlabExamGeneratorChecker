@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |757ad5053cdd5e0b7300ab44145866e1|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 8
 %
-% Met de standaard functie elements() vraag je het
-% aantal elementen van een vector of matrix op.   
+% Met de standaard functie numel() vraag je het
+% aantal elementen van een vector of matrix op.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

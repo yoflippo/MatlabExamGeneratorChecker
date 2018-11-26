@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |bb69834b26a14eee2b1971ee0e9f0ee0|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 9
 %
-% De variabele 'vec' bevat de waardes [2 3 4 3 4 5 6] na
-% het uitvoeren van de volgende code:                   
-%                                                       
-% ------------code--------------                        
-% vector = 2:13;                                        
-% vec = vector([1:3 2:5]);                              
-% ------------code--------------                        
+% Met de functie sqrt(2) wordt de wortel getrokken
+% van het getal 2.                                
 %
 Antwoord = 1;
+
+
+
+
+
 
 

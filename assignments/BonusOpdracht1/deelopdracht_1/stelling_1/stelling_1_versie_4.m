@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |14f0a08803c0cc191fff405ee92f4f93|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 1
 %
-% Een operator voert een handeling uit op 1 of meerdere
-% operands.                                            
+% Om te delen gebruik je in Matlab de 
+% deel-operator: /                    
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

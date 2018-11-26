@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |3dec1e72c3b374456a53d1bab3f75414|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 13
 %
-% Met de functie fliplr() kun je van een rijvector
-% een kolomvector maken.                          
+% Met de functie fliplr() kun je in Matlab de volgorde
+% van de elementen van een rijvector omdraaien.       
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

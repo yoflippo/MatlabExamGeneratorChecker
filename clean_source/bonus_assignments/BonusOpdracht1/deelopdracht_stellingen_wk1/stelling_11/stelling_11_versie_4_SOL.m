@@ -1,9 +1,9 @@
 %% Stelling 11
 %
-% Met de functie randn() produceer je alleen positieve 
-% willekeurige getallen.                               
+% In Matlab kun je met de quote operator (') een vector 
+% veranderen van rijvector naar kolomvector.            
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

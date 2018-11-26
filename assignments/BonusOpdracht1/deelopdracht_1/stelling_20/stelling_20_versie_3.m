@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |5c0dadda3a8852148a1b63e98e51c25d|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 20
 %
-% In de volgende code wordt alleen de waarde van het eerste 
-% element van de variabele 'vec' drie keer zo groot.        
-%                                                           
-% ------------code--------------                            
-% vec = 22:44;                                              
-% vec = vec*3;                                              
-% ------------code--------------                            
+% Je kunt in Matlab vectoren van gelijke lengte niet met 
+% elkaar vermenigvuldigen.                               
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
+
 
 

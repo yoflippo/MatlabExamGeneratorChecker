@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |ff6cc14cb2184003ca22f347b5471011|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 2
 %
-% Je kan binnen een functie een andere functie aanroepen.
+% Wanneer je meerdere output variabelen van een functie wilt 
+% krijgen, zijn blokhaken: [] niet noodzakelijk bij          
+% het aanroepen van deze functie.                            
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
 
 
 

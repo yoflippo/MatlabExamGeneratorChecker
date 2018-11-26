@@ -1,7 +1,7 @@
 %% Stelling 5
 %
-% Met behulp van de functie randn() kan een gebruiker
-% willekeurige getallen genereren.                   
+% Met behulp van de functie sum() kunnen de waardes 
+% van een vector bij elkaar worden opgeteld.        
 %
 Antwoord = 1;
 

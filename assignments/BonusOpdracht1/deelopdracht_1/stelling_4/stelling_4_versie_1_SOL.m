@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |7c69e9b9c2f0f49b419e6d0ae72669aa|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 4
 %
-% Met de functie randn() produceer je alleen negatieve 
-% willekeurige getallen.                               
+% Met de rechte haken [ en ] kun je in Matlab  
+% verschillende character vectoren samenvoegen.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

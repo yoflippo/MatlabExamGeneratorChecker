@@ -46,19 +46,60 @@ classdef ConstantsClass
     methods
         %% Constructor: overloaded
         function obj = ConstantsClass(varargin)
-            if isequal(nargin,1)
-                obj.BASEFOLDER = varargin{1};
-            else % Assume that this file is one dir deeper than basefolder
-                obj.BASEFOLDER = fileparts(fileparts(mfilename('fullpath')));
-            end
             obj.DATETIME = datetimetxt();
             obj.Assignments = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
-            %% adjust the week according to the bonus assignment
+            %% Some defaults values that can be overwritten in the constructor
             obj.BONUSASSIGNMENTS{1} = 1:3;
             obj.BONUSASSIGNMENTS{2} = 4:6;
             obj.NUM_BONUSASSIGNEMNTS = length(obj.BONUSASSIGNMENTS);
-        end
-    end
+            
+            %% Parse varargin
+            minargin = 0;
+            maxargin = (minargin+3)*2;
+            if nargin < minargin
+                error([ mfilename ':Needs at minimum' num2str(minargin) ' argument(s) ']);
+            end
+            if nargin > maxargin
+                error([ mfilename ':Needs max ' num2str(minargin) ' arguments ']);
+            end
+            
+            if nargin > 1
+                for narg = 1:nargin
+                    try
+                        sc = upper(varargin{narg});
+                        switch sc
+                            case {'PATH'}
+                                obj.BASEFOLDER = varargin{narg+1};
+                            case {'NUMBEROFBONUSASSIGNMENTS','NOBA'}
+                                NumberOfBonusAssignments = varargin{narg+1};
+                            case {'WEEKSFORASSIGNMENT', 'WFA'}
+                                WeeksForAssignment = varargin{narg+1};
+                                if ~isequal(length(WeeksForAssignment),NumberOfBonusAssignments)
+                                   error([newline mfilename ': ' newline 'Number of bonus assignment does not match the given weeks' newline]); 
+                                end
+                            otherwise
+                                % Do nothing in the case of varargin{narg+1};
+                        end
+                    catch
+                    end
+                end
+            elseif isequal(nargin,1) % Only ONE argument
+                obj.BASEFOLDER = varargin{1};
+            else
+                obj.BASEFOLDER = fileparts(fileparts(mfilename('fullpath')));
+            end
+            
+            % Change the default values 
+            if ~isequal(NumberOfBonusAssignments,length(obj.BONUSASSIGNMENTS)) || ...
+                    ~isempty(WeeksForAssignment)
+                for nBA = 1:NumberOfBonusAssignments
+                   obj.BONUSASSIGNMENTS{nBA} = WeeksForAssignment{nBA};
+                end
+                obj.NUM_BONUSASSIGNEMNTS = NumberOfBonusAssignments;
+            end
+            
+        end %function
+    end %methods
     
     methods (Static)
         function out = BONUSASSNAME(n)

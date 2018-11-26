@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |e743481c0bc3b120e648e369b5fb270b|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 1
 %
-% Om te delen gebruik je in Matlab de 
-% deel-operator: %                    
+% Een operator voert een handeling uit op 1 of meerdere
+% operands.                                            
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

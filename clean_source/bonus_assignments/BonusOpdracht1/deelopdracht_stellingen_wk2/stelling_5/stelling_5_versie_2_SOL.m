@@ -1,9 +1,9 @@
 %% Stelling 5
 %
-% Met behulp van de functie 'random()' kan een gebruiker
-% willekeurige getallen genereren.                      
+% Met behulp van de functie randn() kan een gebruiker
+% willekeurige getallen genereren.                   
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

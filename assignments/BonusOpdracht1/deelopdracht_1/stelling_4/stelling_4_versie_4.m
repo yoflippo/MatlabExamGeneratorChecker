@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |4fe8c9d573256005e6becfc72ab94491|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 4
 %
-% Gegeven de volgende regel code: 2^8.
-% Hier is 8 de rechter operand.       
+% In de volgende coderegel heeft de min-operator 
+% prioriteit boven de macht-operator: 76 - 6^2.  
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

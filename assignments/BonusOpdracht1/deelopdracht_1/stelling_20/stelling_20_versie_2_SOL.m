@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |e2c62106530f92626381d2b3c2cde7ff|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 20
 %
-% Je kunt in Matlab vectoren van gelijke lengte met 
-% elkaar vermenigvuldigen.                          
+% In de volgende code wordt alleen de waarde van het eerste 
+% element van de variabele 'vec' drie keer zo groot.        
+%                                                           
+% ------------code--------------                            
+% vec = 22:44;                                              
+% vec = vec*3;                                              
+% ------------code--------------                            
 %
-Antwoord = 1;
-
-
-
-
-
+Antwoord = 0;
 
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |9cdd39077bc6e1058e3888f9183ee97e|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -37,16 +37,18 @@
 %% Stelling 8
 %
 % Zie het onderstaande code voorbeeld.               
-% De input(-parameter) 'fake' wordt in de functie    
-% niet gebruikt.                                     
+% De input(-parameter) 'fake' wordt door de functie  
+% gebruikt in 1 of andere operatie/handeling.        
 %                                                    
 % ======= Code =======                               
 %                                                    
 % function [text1 text2] = testfunctie(fullname,fake)
+%     %begin body van de functie                     
 %     everything = fullname(1:end);                  
 %     nothing = 'empty';                             
 %     text = everything;                             
 %     text2 = nothing;                               
+%     %eind body van de functie                      
 % end                                                
 %                                                    
 % ======= Code =======                               

@@ -46,23 +46,6 @@ function GiveHashesToAssignments(con,DEBUGOUTPUT)
 
 debugOutput(DEBUGOUTPUT,'Start fresh: Generate all week assignments');
 
-%% Read the student number and convert the list to e-mailadresses
-debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
-
-studentFolderOutput = dir('studentnumber*/*.txt');
-% go to the folder with studentnumbers. It is assumed to be a list with
-
-stdnmbFile = fullfile(studentFolderOutput(1).folder,studentFolderOutput(1).name);
-studentNumbers = load(stdnmbFile);
-% % % % % % Reshuffle the list with student numbers (removing patterns)
-% RANDOMNNES
-% % % % % studentNumbers = studentNumbers(randperm(length(studentNumbers)));
-cd(con.NAMEASSIGNMENTFOLDER)
-save(con.STUDENTNUMBERMAT,'studentNumbers');
-cd(con.BASEFOLDER)
-
-
-
 %% Create new filenames (with HASH code AND combine file names)
 debugOutput(DEBUGOUTPUT,'Create new filenames (with HASH code AND combine file names)',1);
 

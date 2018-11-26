@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |c27df05692580fcd133ee4fea78bcd78|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 16
 %
-% Bij het opslaan van een functie geef je het bestand
-% dezelfde naam als de functie.                      
+% De tweede output van de standaard functie max() geeft je 
+% het index nummer terug.                                  
 %
 Antwoord = 1;
 

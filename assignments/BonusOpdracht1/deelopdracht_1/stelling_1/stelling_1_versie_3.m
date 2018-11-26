@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |0e5a9004e50f59e98a291b685c3457d5|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -37,7 +37,7 @@
 %% Stelling 1
 %
 % Om te delen gebruik je in Matlab de 
-% deel-operator: /                    
+% deel-operator: %                    
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

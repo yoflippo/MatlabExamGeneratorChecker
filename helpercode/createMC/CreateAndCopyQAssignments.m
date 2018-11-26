@@ -81,7 +81,8 @@ for nWk = 1:length(weekNames)
         copyfile(fullfile(apCleanSourceRoot,fn),fullfile(absPathDestination,fn));
         
         %% Generate thesisses in random order
-        randomFileIndexes = randperm(numberOfThesesFiles);
+        % % % %         randomFileIndexes = randperm(numberOfThesesFiles);
+        randomFileIndexes = 1:numberOfThesesFiles;
         
         %% Combine to make one question
         % read header file line and give it the right question number
@@ -254,7 +255,7 @@ apFinalAssDir = copyThesesToCleanSourceAssignment(con,apGeneratedTheses,weekName
 cd(apFinalAssDir);
 folders = dir;
 numAssignments = length(folders)-2;
-numProgramming = (numAssignments/2)+1
+numProgramming = (numAssignments/2)+1;
 for nFol = 3:length(folders)
     nmCurrFol = folders(nFol).name;
     if contains(string(nmCurrFol),"stellingen")

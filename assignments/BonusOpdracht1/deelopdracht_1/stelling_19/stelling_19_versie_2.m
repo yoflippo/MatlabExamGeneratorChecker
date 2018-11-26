@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |1339d626ec8d2251f0286a7b2a5d3075|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 19
 %
-% Met de onderstaande code ken je de waarde 8 
-% aan variabele C toe.                        
-%                                             
-% ------------code--------------              
-% C = 8                                       
-% ------------code--------------              
+% Met de colon-operator kan een oplopende numerieke
+% vector worden aangemaakt.                        
+%                                                  
+% Bijvoorbeeld: vec = 10:-1:0.                     
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
 
 
 

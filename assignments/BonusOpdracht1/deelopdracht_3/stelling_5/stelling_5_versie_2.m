@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |d00b751a519f0d0b6c643442ab96cb1b|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 5
 %
-% De functie length() is bedoeld voor vectoren.
-% De functie size() is bedoeld voor matrices.  
+% Bij het maken van een eigen functie kan je doorgaans
+% zelf kiezen hoe je de output variabelen noemt.      
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

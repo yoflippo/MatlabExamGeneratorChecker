@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |4308b827f4648844ff5cf219e6ccd111|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,16 +36,14 @@
  
 %% Stelling 11
 %
-% Neem aan dat het code commentaar in het onderstaande
-% voorbeeld de gewenste handeling beschrijft.         
+% Er zijn in de readers twee type fouten gedefinieerd:
 %                                                     
-% De code hieronder bevat een programmeerfout:        
-%                                                     
-% ======= Code =======                                
-% varA = 1;                                           
-% varB = 2;                                           
-% % Aftrekken van de variabelen                       
-% som = VarB - VarA                                   
-% ======= Code =======                                
+% 1 - Syntax fouten                                   
+% 2 - Fouten veroorzaakt door Matlab                  
 %
 Antwoord = 0;
+
+
+
+
+

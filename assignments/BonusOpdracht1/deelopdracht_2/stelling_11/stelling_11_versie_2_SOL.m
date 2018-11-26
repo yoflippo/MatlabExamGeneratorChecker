@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |0a65427acc7fed4986a6c2a24765383e|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,21 +36,14 @@
  
 %% Stelling 11
 %
-% Neem aan dat het code commentaar in het onderstaande 
-% voorbeeld de gewenste handeling beschrijft.          
-%                                                      
-% In het onderstaande voorbeeld zit een programmeerfout
-% in regel 8.                                          
-%                                                      
-% ======= Code =======                                 
-% 1- % Vermenigvuldigen van b en a                     
-% 2- a = 1;                                            
-% 3- b = 2;                                            
-% 4- mul = a * b;                                      
-% 5- % Optellen van c en a                             
-% 6- c = 3;                                            
-% 7- d = 4;                                            
-% 8- som = c + a;                                      
-% ======= Code =======                                 
+% Er zijn in de readers twee type fouten gedefinieerd:
+%                                                     
+% 1 - Syntax fouten                                   
+% 2 - Programmeerfouten                               
 %
-Antwoord = 0;
+Antwoord = 1;
+
+
+
+
+

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |b445e2ac5b52707788ab6167998d8265|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 25
 %
-% Door gebruik te maken van variabelen in plaats    
-% van getallen is een programma moeilijk aanpasbaar.
+% Voor de leesbaarheid van een programma is het verstandig
+% om betekenisvolle namen voor variabelen te gebruiken.   
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

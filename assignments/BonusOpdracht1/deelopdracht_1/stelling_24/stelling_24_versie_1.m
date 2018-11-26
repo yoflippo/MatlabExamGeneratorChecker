@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |6faf90d798ae4fac541c89b8c862b9cd|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 24
 %
-% De volgende code voegt 'voornaam' en 'achternaam' 
-% samen:                                            
-%                                                   
-% ------------code--------------                    
-% voornaam = 'Bio'                                  
-% achternaam = 'Statica'                            
-% volledigeNaam = voornaam + achternaam             
-% ------------code--------------                    
+% Het uitvoeren van onderstaande code in Matlab
+% gaat foutloos:                               
+%                                              
+% ------------code--------------               
+% naam1 = "tekst"                              
+% naam2 = 'tekst'                              
+% selectie = naam1(2)                          
+% ------------code--------------               
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |d4e187401100af684935970118b0dcbd|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 14
 %
-% De Matlab functie length() geeft bij een         
-% kolomvector het aantal RIJEN van de vector terug.
+% De functie size() geeft bij een matrix de hoogste      
+% waarde terug. Bijvoorbeeld: 'size(0:3)' geeft de waarde
+% 3 terug.                                               
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

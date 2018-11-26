@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |ca99567083ce5530272b22f95b927101|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 13
 %
-% De functies: gemiddelde(), standaardev(), mediaan() zijn 
-% standaard Matlab functies.                               
+% De standaardfunctie mean() kan worden gebruikt om de gemiddelde
+% waarde van alle elementen van een vector te berekenen.         
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |d9729d435bb3d5c1cb20a47b472a7296|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 4
 %
-% Met de rechte haken [ en ] kun je in Matlab  
-% verschillende character vectoren samenvoegen.
+% Gegeven de volgende regel code: 2^8.
+% Hier is 8 de rechter operand.       
 %
 Antwoord = 1;
 

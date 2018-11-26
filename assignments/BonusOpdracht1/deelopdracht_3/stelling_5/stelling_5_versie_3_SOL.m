@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |788b277c8cbd941e69ea0cd48a78055a|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 5
 %
-% Bij het maken van een eigen functie geef je doorgaans
-% de output variabele altijd dezelfde naam.            
+% De functie length() is bedoeld voor vectoren.
+% De functie size() is bedoeld voor matrices.  
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

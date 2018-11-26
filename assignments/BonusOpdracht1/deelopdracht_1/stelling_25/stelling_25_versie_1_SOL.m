@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |0d672fd5da0c247bad34d35a3c542a5c|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 25
 %
-% In het Command Window kun je NIET zelf 
-% Matlab commando's uitvoeren.           
+% De Editor wordt o.a. gebruikt om een script
+% te maken of aan te passen.                 
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

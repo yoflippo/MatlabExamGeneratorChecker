@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |a14adec070f11387a0f0504ef0f2e6dc|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 11
 %
-% In Matlab kun je met de quote operator (') een vector 
-% veranderen van rijvector naar kolomvector.            
+% Met de functie randn() produceer je willekeurige 
+% numerieke waardes.                               
 %
 Antwoord = 1;
 

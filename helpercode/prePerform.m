@@ -4,7 +4,7 @@ warning off
 rmpath(genpath(fileparts(mfilename('fullpath'))));
 warning on
 addpath(genpath('helpercode'));
-InitAll
+% % % % % % % % % % % % % % % % % % InitAll
 
 %% Specific student assignments that need to be checked
 cd(con.STUDENTSUBFOLDER)

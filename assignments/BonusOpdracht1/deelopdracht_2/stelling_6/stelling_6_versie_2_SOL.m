@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |6216143aa7f0f106ef71784a1ede9e51|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 6
 %
-% Met behulp van de functie stdev() kan de standaarddeviatie
-% van de elementen van een vector worden berekend.          
+% Met behulp van de functie std() kan de standaarddeviatie
+% van de elementen van een vector worden berekend.        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |05cbbdc2c4ba85d226c73027b73cf498|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 2
 %
-% Wanneer je meerdere output variabelen van een functie wilt 
-% krijgen, zijn blokhaken: [] niet noodzakelijk bij          
-% het aanroepen van deze functie.                            
+% Het is niet mogelijk om binnen een functie een andere
+% functie aan te roepen.                               
 %
 Antwoord = 0;
+
 
 
 

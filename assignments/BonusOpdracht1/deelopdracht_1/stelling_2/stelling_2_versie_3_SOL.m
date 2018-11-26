@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |c48574a139d2b53e5ff7efccd5b8074c|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 2
 %
-% De naam van een script mag NIET beginnen met een 
-% willekeurig symbool.                             
+% In de Workspace staan de variabelen die Matlab heeft
+% gebruikt tijdens het uitvoeren van een programma.   
 %
 Antwoord = 1;
 

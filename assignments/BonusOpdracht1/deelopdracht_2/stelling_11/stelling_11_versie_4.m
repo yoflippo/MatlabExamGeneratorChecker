@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |c9ab35705f9e42f036c65c23cdc7b95a|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,22 @@
  
 %% Stelling 11
 %
-% Er zijn in de readers twee type fouten gedefinieerd:
+% Neem aan dat het code commentaar in het onderstaande
+% voorbeeld de gewenste handeling beschrijft.         
 %                                                     
-% 1 - Syntax fouten                                   
-% 2 - Fouten veroorzaakt door Matlab                  
+% In dit codevoorbeeld zit geen programmeerfout:      
+%                                                     
+% ======= Code =======                                
+%                                                     
+% 1- % Vermenigvuldigen van a en b                    
+% 2- a = 1;                                           
+% 3- b = 2;                                           
+% 4- mul = a * b;                                     
+% 5- % Optellen van c en a                            
+% 6- c = a;                                           
+% 7- d = 4;                                           
+% 8- som = c + a;                                     
+%                                                     
+% ======= Code =======                                
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-

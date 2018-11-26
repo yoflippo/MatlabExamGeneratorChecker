@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |e5499019b734cfdbeac9b1e9948f4933|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,9 +36,9 @@
  
 %% Stelling 23
 %
-% Een vector kan alleen getallen bevatten.
+% Een vector kan een rij OF kolom aan getallen bevatten.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

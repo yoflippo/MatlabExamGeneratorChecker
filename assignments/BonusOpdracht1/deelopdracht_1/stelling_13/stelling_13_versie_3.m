@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |bd24fbf80ac76d6e8391a9ac23fbbaac|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 13
 %
-% Met de functie whos() kun je zien welke variabelen in de
-% Workspace staan.                                        
+% Met de functie whos() krijg je de eerste 10 variabelen
+% uit de Workspace te zien.                             
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

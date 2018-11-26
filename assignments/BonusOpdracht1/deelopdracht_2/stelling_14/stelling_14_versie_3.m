@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |f412cabef71811154a9d90d0d85fd9ce|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,18 +36,14 @@
  
 %% Stelling 14
 %
-% Zie het onderstaande code voorbeeld. De output variabele 
-% 'text2' krijgt de string: 'empty'.                       
-%                                                          
-% ======= Code =======                                     
-%                                                          
-% function [text1 text2] = testfunctie(fullname,fake)      
-%     everything = fullname(1:end);                        
-%     nothing = 'empty';                                   
-%     text = everything;                                   
-%     text2 = nothing;                                     
-% end                                                      
-%                                                          
-% ======= Code =======                                     
+% Het schrijven van een functie kan de programmeur helpen
+% om een programma beter leesbaar te maken.              
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
+
+
+

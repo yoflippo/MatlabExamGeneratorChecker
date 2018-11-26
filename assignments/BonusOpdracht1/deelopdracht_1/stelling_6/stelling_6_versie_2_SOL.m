@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |1d5ef9ca3c3091678d8f61c5656a098e|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 6
 %
-% Je kunt in Matlab elke willekeurige vector optellen bij
-% een andere willekeurige vector.                        
+% In de volgende code wordt er bij elk element van de 
+% vector 'vec' de waarde 99 opgeteld:                 
+%                                                     
+% ------------code--------------                      
+% vec = 0:10;                                         
+% vec = vec + 99;                                     
+% ------------code--------------                      
 %
-Antwoord = 0;
-
-
-
-
-
+Antwoord = 1;
 
 

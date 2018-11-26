@@ -1,7 +1,7 @@
 %% Stelling 11
 %
-% In Matlab kun je met het dakje symbool (^) een vector
-% veranderen van rijvector naar kolomvector.           
+% Met de functie randn() produceer je alleen positieve 
+% willekeurige getallen.                               
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |aa62776e6a963a5c4498dc4f79935b55|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 13
 %
-% De standaardfuncties: sin(), cos() en tan() zijn 
-% standaard Matlab functies.                       
+% De standaardfunctie average() kan worden gebruikt om de
+% gemiddelde waarde van alle elementen van een vector    
+% te berekenen.                                          
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |35537a68aef3a0b04ada1a48d0bfce19|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 17
 %
-% In Matlab kun je met de blokhaken [ ] character vectoren
-% samenvoegen.                                            
+% In Matlab wordt een stuk tekst zoals            
+% 'ditiseenstuktekst' ook wel een character vector
+% genoemd.                                        
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
 
 
 

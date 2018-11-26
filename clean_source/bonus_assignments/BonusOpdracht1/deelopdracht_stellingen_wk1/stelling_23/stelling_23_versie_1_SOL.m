@@ -1,8 +1,8 @@
 %% Stelling 23
 %
-% Een vector kan alleen getallen bevatten.
+% Een vector kan een rij OF kolom aan getallen bevatten.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

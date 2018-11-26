@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |504018bf818caa9eeae94ab933873717|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,21 +36,14 @@
  
 %% Stelling 10
 %
-% Gegeven is dat in het onderstaande voorbeeld      
-% het code commentaar (aangegeven met het '%' teken)
-% aangeeft wat er moet gebeuren.                    
-%                                                   
-% In dit code voorbeeld zit een programmeerfout.    
-%                                                   
-% ======= Code =======                              
-%                                                   
-% 1- % Aanmaken van variabelen                      
-% 2- aad = 1;                                       
-% 3- bart = 2;                                      
-% 4- herre = 3;                                     
-% 5- % Optellen van herre en aad                    
-% 6- som = aad - herre;                             
-%                                                   
-% ======= Code =======                              
+% Het is heel normaal dat je als Matlab programmeur 
+% zelf functies schrijft.                           
 %
 Antwoord = 1;
+
+
+
+
+
+
+

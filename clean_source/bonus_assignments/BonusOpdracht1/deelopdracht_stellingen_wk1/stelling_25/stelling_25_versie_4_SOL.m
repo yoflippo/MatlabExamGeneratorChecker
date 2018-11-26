@@ -1,7 +1,7 @@
 %% Stelling 25
 %
-% Variabelen in Matlab mogen beginnen met een
-% willekeurig symbool.                       
+% Door gebruik te maken van variabelen in plaats    
+% van getallen is een programma moeilijk aanpasbaar.
 %
 Antwoord = 0;
 

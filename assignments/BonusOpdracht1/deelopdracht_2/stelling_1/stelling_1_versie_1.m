@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |300b31fc49ccbfa79b793735697342e3|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,17 +36,14 @@
  
 %% Stelling 1
 %
-% Het code voorbeeld dat hieronder staat, is een voorbeeld
-% van netjes werken:                                      
-%                                                         
-% ======= Code =======                                    
-% % Find studentnumbers                                   
-% load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))   
-% % Remove directories from folder                        
-% addpath(genpath(fullfile(pwd,subWkFolder)))             
-% removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))  
-% % Get files in the folder for analysis                  
-% files = dir(subWkFolder);                               
-% ======= Code =======                                    
+% Het is onverstandig om een aantal regels code die 
+% bij elkaar horen (een code blok) te voorzien van  
+% commentaar.                                       
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
+
+

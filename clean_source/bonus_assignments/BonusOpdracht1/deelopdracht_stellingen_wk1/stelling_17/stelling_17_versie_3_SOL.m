@@ -1,7 +1,7 @@
 %% Stelling 17
 %
-% In Matlab wordt een stuk tekst zoals           
-% 'ditiseenstuktekst' ook wel een string genoemd.
+% In Matlab kun je met de ronde haken ( ) character
+% vectoren samenvoegen.                            
 %
 Antwoord = 0;
 

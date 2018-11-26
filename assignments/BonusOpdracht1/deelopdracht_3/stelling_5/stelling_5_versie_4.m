@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |63dd3cfa68e46229a73f719cc16a96b9|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,16 @@
  
 %% Stelling 5
 %
-% Bij het maken van een eigen functie kan je doorgaans
-% zelf kiezen hoe je de output variabelen noemt.      
+% De volgende matrix is gegeven:              
+% A = [3 8 4; 2 5 6; 9 3 2];                  
+%                                             
+% Met de onderstaande code stop je de waarde 2
+% in variabele B.                             
+%                                             
+% ------------code--------------              
+% B = A(3,3);                                 
+% ------------code--------------              
+%                                             
+%                                             
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-
-
-

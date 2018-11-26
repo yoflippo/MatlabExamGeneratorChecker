@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |81d18ee7f8ee22f99e6c47a50e1d7226|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 12
 %
-% Met behulp van de functie addall() kunnen de waardes 
-% van een vector bij elkaar worden opgeteld.           
+% Debuggen is het zetten van breakpoints in een programma.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
 
 
 

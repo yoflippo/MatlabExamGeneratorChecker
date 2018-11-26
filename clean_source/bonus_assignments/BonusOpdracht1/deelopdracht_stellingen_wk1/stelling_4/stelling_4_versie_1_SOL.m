@@ -1,9 +1,9 @@
 %% Stelling 4
 %
-% Met de functie randn() produceer je alleen negatieve 
-% willekeurige getallen.                               
+% Met de rechte haken [ en ] kun je in Matlab  
+% verschillende character vectoren samenvoegen.
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

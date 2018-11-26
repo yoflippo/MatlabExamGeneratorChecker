@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |2060bc574be1b9da9215e8c70321d19b|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 12
 %
-% Als je programma is gestopt m.b.v. een breakpoint dan   
-% kan je niet de variabelen in de Workspace niet bekijken.
+% Met behulp van de functie addall() kunnen de waardes 
+% van een vector bij elkaar worden opgeteld.           
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

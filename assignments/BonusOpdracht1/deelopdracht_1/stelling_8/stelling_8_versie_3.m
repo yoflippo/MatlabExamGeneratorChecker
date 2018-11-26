@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |7e77cb8e01c8bcac4d1949fbd234f535|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 8
 %
-% Bij het samenvoegen van meerdere character             
-% vectoren m.b.v. rechte haken wordt er niet automatisch 
-% een spatie geplaatst tussen de afzonderlijke character 
-% vectoren.                                              
-% Bijvoorbeeld: ['Bio' 'statica']                        
+% Bij het uitvoeren van de onderstaande code is de
+% variabele 'naam' een character vector.          
+%                                                 
+% ------------code--------------                  
+%                                                 
+% naam = 'Biostatica Matlab';                     
+%                                                 
+% ------------code--------------                  
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
 

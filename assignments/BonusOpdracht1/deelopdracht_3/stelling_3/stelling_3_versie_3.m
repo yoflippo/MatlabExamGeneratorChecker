@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |6cbdf0f23d51e74b4ebe770299c11f3a|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 3
 %
-% Met de help functie kan je zien wat de input en output 
-% variabelen kunnen zijn in een standaard Matlab functie.
+% Met de help functie kan je alleen zien wat de input variabelen
+% zijn van een standaard Matlab functie en niet de              
+% output variabelen.                                            
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
 
 
 

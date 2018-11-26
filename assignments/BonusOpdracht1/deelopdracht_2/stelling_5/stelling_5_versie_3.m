@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |82aa05750b5fb98fb8dd4752bbee5534|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,7 +36,7 @@
  
 %% Stelling 5
 %
-% Met behulp van de functie sum() kunnen de waardes 
+% Met behulp van de functie som() kunnen de waardes 
 % van een vector bij elkaar worden opgeteld.        
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)

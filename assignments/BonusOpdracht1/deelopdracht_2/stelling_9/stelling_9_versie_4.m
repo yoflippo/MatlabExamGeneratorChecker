@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |376257fbc8995f75fbf937b07d9244e1|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,12 +36,12 @@
  
 %% Stelling 9
 %
-% Gegeven dat bijna geen enkele Matlab gebruiker alle   
-% standaard functies van Matlab kent, is het belangrijk 
-% dat je als programmeur gebruik kunt maken van de      
-% Matlab help-functionaliteit.                          
+% Een Matlab functie heeft altijd: 
+% - een naam                       
+% - een body                       
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
 
 
 

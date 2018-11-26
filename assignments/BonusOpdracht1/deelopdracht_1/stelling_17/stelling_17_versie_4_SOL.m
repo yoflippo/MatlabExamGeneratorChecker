@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |a8ca80b2d3e9a59509a13269cb6226db|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,11 +36,11 @@
  
 %% Stelling 17
 %
-% In Matlab wordt een stuk tekst zoals            
-% 'ditiseenstuktekst' ook wel een character vector
-% genoemd.                                        
+% In Matlab kun je met de blokhaken [ ] character vectoren
+% samenvoegen.                                            
 %
 Antwoord = 1;
+
 
 
 

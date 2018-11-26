@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |506f64da9d10aec76d7b9a37272764ee|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -39,9 +39,9 @@
 % Stel we hebben een matrix genaamd A.                  
 % De matrix heeft 3 rijen en 3 kolommen.                
 % We zouden het getal in rij R en kolom K op de volgende
-% manier kunnen opvragen: A(K,R)                        
+% manier kunnen opvragen: A(R,K)                        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

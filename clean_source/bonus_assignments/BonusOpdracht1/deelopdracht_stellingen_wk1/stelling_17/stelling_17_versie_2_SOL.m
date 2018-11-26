@@ -1,10 +1,10 @@
 %% Stelling 17
 %
-% In Matlab kun je met de blokhaken [ ] character vectoren
-% samenvoegen.                                            
+% In Matlab wordt een stuk tekst zoals            
+% 'ditiseenstuktekst' ook wel een character vector
+% genoemd.                                        
 %
 Antwoord = 1;
-
 
 
 

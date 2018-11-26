@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |65b5e483392826db908d80b615922eeb|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 2
 %
-% In de Workspace staan de variabelen die Matlab heeft
-% gebruikt tijdens het uitvoeren van een programma.   
+% Als een foutloos script in de 'Current Folder' staat,
+% kun je het probleemloos uitvoeren.                   
 %
 Antwoord = 1;
 

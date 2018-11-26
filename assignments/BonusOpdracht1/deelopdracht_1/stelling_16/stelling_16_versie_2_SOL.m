@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |a1bc6885019ba052c57a47b51d53c0b6|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,15 +36,17 @@
  
 %% Stelling 16
 %
-% In de onderstaande code worden de eerste 3 letters uit
-% de variabele genaamd tekst gehaald en in de variabele 
-% selectie gezet.                                       
-%                                                       
-% ======= Code =======                                  
-%                                                       
-% tekst = 'bewegingstechnologie en matlab';             
-% selectie = tekst(2:5)                                 
-%                                                       
-% ======= Code =======                                  
+% In de onderstaande code wordt een stuk uit de                 
+% variabele tekst geselecteerd. Deze geselecteerde tekst wordt  
+% in de variabele selectie gestopt en bevat alleen medeklinkers 
+% (alle letters BEHALVE a,e,i,o,u,y).                           
+%                                                               
+%                                                               
+% ======= Code =======                                          
+%                                                               
+% tekst = 'hieper';                                             
+% selectie = tekst([1 4 6]);                                    
+%                                                               
+% ======= Code =======                                          
 %
-Antwoord = 0;
+Antwoord = 1;

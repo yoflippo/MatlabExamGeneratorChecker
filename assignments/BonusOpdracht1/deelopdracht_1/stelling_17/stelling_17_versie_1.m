@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |47e7973c9e9df7558a031fe4b8169adf|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 17
 %
-% In Matlab kun je met de ronde haken ( ) character
-% vectoren samenvoegen.                            
+% In Matlab wordt een stuk tekst zoals           
+% 'ditiseenstuktekst' ook wel een string genoemd.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

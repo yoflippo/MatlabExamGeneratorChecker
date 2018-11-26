@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |177e264ebde20894e1f20fcfc9a6e3e7|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 5
 %
-% In Matlab is een character vector een verzameling van
-% symbolen.                                            
+% In Matlab is een character vector geen verzameling van
+% symbolen.                                             
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

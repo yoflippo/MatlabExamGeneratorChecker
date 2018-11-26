@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |029c4e7ccf2451189a0fab770e91db14|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -37,7 +37,7 @@
 %% Stelling 8
 %
 % Zie het onderstaande code voorbeeld. In de code is een 
-% functie te zien met 2 inputs en 2 outputs.             
+% functie te zien met 2 inputs en 1 output.              
 %                                                        
 % ======= Code =======                                   
 %                                                        
@@ -47,4 +47,4 @@
 %                                                        
 % ======= Code =======                                   
 %
-Antwoord = 1;
+Antwoord = 0;

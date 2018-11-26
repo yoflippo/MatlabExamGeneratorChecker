@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |2328cda20c350d56cef192a3e47788a1|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 2
 %
-% Als een foutloos script in de 'Current Folder' staat,
-% kun je het probleemloos uitvoeren.                   
+% De naam van een script mag NIET beginnen met een 
+% willekeurig symbool.                             
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

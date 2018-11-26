@@ -1,16 +1,13 @@
 %% Stelling 1
 %
-% Het code voorbeeld dat hieronder staat, is een voorbeeld
-% van netjes werken:                                      
-%                                                         
-% ======= Code =======                                    
-% % Find studentnumbers                                   
-% load(fullfile(NAMEASSIGNMENTFOLDER,STUDENTNUMBERMAT))   
-% % Remove directories from folder                        
-% addpath(genpath(fullfile(pwd,subWkFolder)))             
-% removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))  
-% % Get files in the folder for analysis                  
-% files = dir(subWkFolder);                               
-% ======= Code =======                                    
+% Het is onverstandig om een aantal regels code die 
+% bij elkaar horen (een code blok) te voorzien van  
+% commentaar.                                       
 %
-Antwoord = 1;
+Antwoord = 0;
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% De naam die je gebruikt voor een output van een functie 
-% is altijd hetzelfde.                                    
+% Een functie kan meerdere inputs hebben.
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

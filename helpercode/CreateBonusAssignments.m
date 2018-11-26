@@ -37,9 +37,8 @@ function CreateBonusAssignments(con)
 % Creation of script.
 
 
-%% Start Fresh
+%% Start 
 dbstop if error
-
 
 % Copy assignment zero
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
@@ -65,7 +64,7 @@ end
 %% Create a student specific folder in every week folder
 debugOutput(DEBUGOUTPUT,'Create a student specific folder in every week folder',1);
 
-% Load the studentnumbers, they are randomly presented
+% Load the studentnumbers
 load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
 % Create weekfolders
 if ~exist(apWkDirName,'dir')
@@ -135,8 +134,7 @@ trackStudentAssignment = num2cell(zeros(length(studentNumbers), ...
 
 for nStud = 1:length(studentNumbers)
     
-    % Browse to every assignment folder, PLEASE NOTICE: randonmness is used
-    % by shuffling the studentNumbers in the studentlist.
+    % Browse to every assignment folder
     studentDir = num2str(studentNumbers(nStud));
     studentDirSol = studentDir;
     trackStudentAssignment{nStud,1} = studentDir;

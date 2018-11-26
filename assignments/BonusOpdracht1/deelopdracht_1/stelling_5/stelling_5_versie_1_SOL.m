@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |26d3bfb262faf4302c7ded880b9cd092|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -43,8 +43,8 @@
 % ======= Code =======                                        
 %                                                             
 % tekst = 'hieperdepiephoera';                                
-% selectie = tekst(end-4:end);                                
+% selectie = tekst(end-5:end);                                
 %                                                             
 % ======= Code =======                                        
 %
-Antwoord = 1;
+Antwoord = 0;

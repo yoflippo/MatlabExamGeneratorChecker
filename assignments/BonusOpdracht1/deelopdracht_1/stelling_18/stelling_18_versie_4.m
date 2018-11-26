@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |677ec6d19d96753813ec4379201f8ddb|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 18
 %
-% De output van een commando kan, na het uitvoeren 
-% ervan, te zien zijn in het Command Window.       
+% De output van een commando is na het uitvoeren ervan 
+% nooit te zien in het Command Window.                 
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

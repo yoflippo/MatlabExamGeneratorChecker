@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |dff94a7d08923a23d64d07876d38a79c|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 12
 %
-% Het Command Window is een van de mogelijkheden om een
-% functie aan te roepen.                               
+% Het is niet mogelijk om binnen een functie een 
+% andere functie aan te roepen.                  
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

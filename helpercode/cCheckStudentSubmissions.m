@@ -1,4 +1,4 @@
-function averageGrade = cCheckStudentSubmissions(nmCurrBonusAss)
+function averageGrade = cCheckStudentSubmissions(con,nmCurrBonusAss)
 %CHECKSTUDENTSUBMISSIONS
 %
 % ------------------------------------------------------------------------
@@ -28,11 +28,9 @@ function averageGrade = cCheckStudentSubmissions(nmCurrBonusAss)
 
 % $Revisi0n: 0.0.0 $  $Date: 2017-07-29 $
 % Creation of script
-InitAll
-
-
 
 %% Start with script
+global DEBUGOUTPUT;
 debugOutput(DEBUGOUTPUT,'Start with script');
 dbstop if error
 subWkFolder = fullfile(con.STUDENTSUBFOLDER,nmCurrBonusAss);

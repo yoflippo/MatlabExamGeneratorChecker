@@ -1,7 +1,7 @@
 %% Stelling 25
 %
-% De Editor wordt o.a. gebruikt om een script
-% te maken of aan te passen.                 
+% Een verzameling letters kan op de volgende manier aan
+% een variabele worden toegekend: var = 'blablabla'.   
 %
 Antwoord = 1;
 

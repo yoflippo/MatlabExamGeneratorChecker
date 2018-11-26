@@ -1,18 +1,19 @@
 %% Stelling 3
 %
-% In dit codevoorbeeld zit in regel 8 een syntaxfout.
-%                                                    
-% ======= Code =======                               
-%                                                    
-% 1- % Vermenigvuldigen van a en b                   
-% 2- a = 1;                                          
-% 3- b = 2;                                          
-% 4- mul = a * b;                                    
-% 5- % Optellen van c en a                           
-% 6- c = e;                                          
-% 7- d = 4;                                          
-% 8- som = d + d;                                    
-%                                                    
-% ======= Code =======                               
+% Neem aan dat het code commentaar in het onderstaande
+% voorbeeld de gewenste handeling beschrijft.         
+%                                                     
+% In dit codevoorbeeld zit een programmeerfout.       
+%                                                     
+% ======= Code =======                                
+% 1- % Vermenigvuldigen van a en b                    
+% 2- a = 1;                                           
+% 3- b = 2;                                           
+% 4- mul = a * b;                                     
+% 5- % Optellen van c en a                            
+% 6- c = 3;                                           
+% 7- d = 4;                                           
+% 8- som = c - a;                                     
+% ======= Code =======                                
 %
-Antwoord = 0;
+Antwoord = 1;

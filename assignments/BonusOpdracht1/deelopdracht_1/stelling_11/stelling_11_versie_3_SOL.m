@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |d8012d13f251dc0ef57ea2284066fb88|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 11
 %
-% Met de functie randn() produceer je willekeurige 
-% numerieke waardes.                               
+% In Matlab kun je met het dakje symbool (^) een vector
+% veranderen van rijvector naar kolomvector.           
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

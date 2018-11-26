@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |b6008550f6301ce117f47a35868c711b|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 13
 %
-% De afmetingen (dimensies) van een vector v = [3 3 3 3] 
-% zijn 1 bij 3.                                          
+% De lengte van een vector v = [3 3 3 3] is 4.
 %
-Antwoord = 0;
+Antwoord = 1;
+
 
 
 

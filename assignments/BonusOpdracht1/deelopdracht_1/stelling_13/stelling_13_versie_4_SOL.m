@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |fd1883e79970002dda365aa4f1a22cb4|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 13
 %
-% Met de functie whos() krijg je de eerste 10 variabelen
-% uit de Workspace te zien.                             
+% Met de functie whos() kun je zien welke variabelen in de
+% Workspace staan.                                        
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

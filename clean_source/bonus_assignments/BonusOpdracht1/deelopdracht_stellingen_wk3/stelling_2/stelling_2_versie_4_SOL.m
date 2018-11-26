@@ -1,10 +1,10 @@
 %% Stelling 2
 %
-% Het is niet mogelijk om binnen een functie een andere
-% functie aan te roepen.                               
+% Wanneer je meerdere output variabelen van een functie   
+% wilt krijgen, gebruik je blokhaken: [] bij het aanroepen
+% van deze functie.                                       
 %
-Antwoord = 0;
-
+Antwoord = 1;
 
 
 

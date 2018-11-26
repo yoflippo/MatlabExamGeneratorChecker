@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |eb21f44dc6a9dec6efe11d906c48db55|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,12 +36,12 @@
  
 %% Stelling 12
 %
-% Stel we hebben een matrix genaamd A.                  
-% De matrix heeft 3 rijen en 3 kolommen.                
-% We zouden het getal in rij R en kolom K op de volgende
-% manier kunnen opvragen: A(R,K)                        
+% Het Command Window is een van de mogelijkheden om een
+% functie aan te roepen.                               
 %
 Antwoord = 1;
+
+
 
 
 

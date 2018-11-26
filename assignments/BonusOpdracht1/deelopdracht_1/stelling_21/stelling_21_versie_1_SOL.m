@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |157bfae2651d30788d1175f56e91a5a7|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 21
 %
-% In de onderstaande code worden de laatste vier 
-% elementen van een vector afgedrukt:            
-%                                                
-% ------------code--------------                 
-% vector = 2:66;                                 
-% vector(end-3:end)                              
-% ------------code--------------                 
+% Het aanmaken van een numerieke vector kan voor een  
+% Bewegingstechnoloog handig zijn om bijvoorbeeld een 
+% tijdvector aan te maken (een vector bestaande uit   
+% tijdstippen).                                       
 %
 Antwoord = 1;
+
+
+
 
 

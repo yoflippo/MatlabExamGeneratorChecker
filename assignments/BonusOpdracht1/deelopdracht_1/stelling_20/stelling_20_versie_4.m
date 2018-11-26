@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |9c23a02d20d1f46f3581dec22716d11b|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 20
 %
-% Je kunt in Matlab vectoren van gelijke lengte niet met 
-% elkaar vermenigvuldigen.                               
+% Je kunt in Matlab vectoren van gelijke lengte met 
+% elkaar vermenigvuldigen.                          
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

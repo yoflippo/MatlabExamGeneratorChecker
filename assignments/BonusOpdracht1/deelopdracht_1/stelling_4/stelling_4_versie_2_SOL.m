@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |0657c9ab70871293bb7f0353e1b8e760|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 4
 %
-% In de volgende coderegel heeft de min-operator 
-% prioriteit boven de macht-operator: 76 - 6^2.  
+% Met de functie randn() produceer je alleen negatieve 
+% willekeurige getallen.                               
 %
 Antwoord = 0;
 

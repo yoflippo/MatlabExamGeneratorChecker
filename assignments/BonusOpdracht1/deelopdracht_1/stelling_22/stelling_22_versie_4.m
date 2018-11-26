@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |ad12ec0675a4ea9f602f217d04b318b5|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,18 @@
  
 %% Stelling 22
 %
-% Met behulp van de colon-operator (:) kan een numerieke 
-% vector worden aangemaakt.                              
+% Gegeven deze code:                                  
+%                                                     
+% ------------code--------------                      
+%                                                     
+% getallen = 0:3;                                     
+%                                                     
+% ------------code--------------                      
+%                                                     
+% Deze code geeft de volgende output: [0 1 2 3].      
+% Een programmeur kan op deze wijze (m.b.v. een colon-
+% operator, de dubbele punt) ook een willekeurige     
+% numerieke vector aanmaken,                          
+% bijvoorbeeld:  [0 -1 3 -2 10 11 12 -1]              
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
-
-
-
-
-
-

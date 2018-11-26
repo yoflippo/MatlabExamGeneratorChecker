@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |b50dfa8716d11f8c2140cb72e1333195|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,7 +36,7 @@
  
 %% Stelling 7
 %
-% Een functie kan 0 of meerdere output variabelen hebben.
+% Een functie kan meerdere input variabelen hebben (argumenten).
 %
 Antwoord = 1;
 

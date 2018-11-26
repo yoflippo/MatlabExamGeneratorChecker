@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |b466318cd286bca3497301ed023b59a3|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 1
 %
-% Een functie kan meerdere inputs hebben.
+% De naam die je gebruikt voor een output van een functie 
+% is altijd hetzelfde.                                    
 %
-Antwoord = 1;
-
+Antwoord = 0;
 
 
 

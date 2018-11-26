@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |1fc9daa474c7277af6f50a5ea2bd3d28|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,7 +36,7 @@
  
 %% Stelling 4
 %
-% Een kolom-vector bestaat uit 1 rij met data.
+% Een kolom-vector bestaat uit 1 kolom met data.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

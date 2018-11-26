@@ -1,9 +1,9 @@
 %% Stelling 1
 %
-% De naam die je gebruikt voor een output van een functie 
-% is altijd hetzelfde.                                    
+% Een functie kan meerdere inputs hebben.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
 
 
 

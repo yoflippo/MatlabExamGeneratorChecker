@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |27f18e00d396d93a0c1cec8b5a7e18fa|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 12
 %
-% Debuggen is het zetten van breakpoints in een programma.
+% Als je programma is gestopt m.b.v. een breakpoint dan   
+% kan je niet de variabelen in de Workspace niet bekijken.
 %
 Antwoord = 0;
-
 
 
 

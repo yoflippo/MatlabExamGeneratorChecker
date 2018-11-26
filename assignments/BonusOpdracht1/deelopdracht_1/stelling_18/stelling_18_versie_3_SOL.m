@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |418a5bc224ba4375976fa914045bd8b8|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 18
 %
-% In het Command Window kan een gebruiker code typen en
-% uitvoeren.                                           
+% De output van een commando kan, na het uitvoeren 
+% ervan, te zien zijn in het Command Window.       
 %
 Antwoord = 1;
 

@@ -1,7 +1,7 @@
 %% Stelling 4
 %
-% Gegeven de volgende regel code: 2^8.
-% Hier is 8 de rechter operand.       
+% In de volgende coderegel heeft de min-operator 
+% prioriteit boven de macht-operator: 76 - 6^2.  
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

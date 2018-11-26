@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |799f2e3823bbcc10530f49a4da1b32cb|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,12 +36,12 @@
  
 %% Stelling 23
 %
-% De onderstaande code maakt een numerieke vector aan 
-% met een lengte van 10:                              
-%                                                     
-% ------------code--------------                      
-% vec = 0:9;                                          
-% ------------code--------------                      
+% De onderstaande code maakt een numerieke vector aan
+% met een lengte van 10:                             
+%                                                    
+% ------------code--------------                     
+% vector = 2:12;                                     
+% ------------code--------------                     
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

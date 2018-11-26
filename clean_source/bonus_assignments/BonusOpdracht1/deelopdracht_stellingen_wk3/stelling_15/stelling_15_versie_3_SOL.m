@@ -1,9 +1,9 @@
 %% Stelling 15
 %
-% Wanneer je bij de functie strcmp() een 1 als antwoord krijgt,
-% is wat je vergelijkt met elkaar hetzelfde.                   
+% De Matrix A = [3 1 9 1; 32 91 23 10; 29 1 2 10]
+% heeft 3 elementen.                             
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 

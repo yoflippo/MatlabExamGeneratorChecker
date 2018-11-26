@@ -1,7 +1,7 @@
 %% Stelling 8
 %
 % Zie het onderstaande code voorbeeld. In de code is een 
-% functie te zien met 2 inputs en 1 output.              
+% functie te zien met 2 inputs en 2 outputs.             
 %                                                        
 % ======= Code =======                                   
 %                                                        
@@ -11,4 +11,4 @@
 %                                                        
 % ======= Code =======                                   
 %
-Antwoord = 0;
+Antwoord = 1;

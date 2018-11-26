@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |99612693e6d4d170f7aba7cbda5e8418|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,15 +36,14 @@
  
 %% Stelling 15
 %
-% Zie het onderstaande codevoorbeeld. Als je bij een numerieke   
-% vector genaamd vecPlus een waarde optelt, dan wordt alleen bij 
-% het eerste element van vecPlus de waarde opgeteld.             
-%                                                                
-% ======= Code =======                                           
-%                                                                
-% vec = [1 2 3 4 5];                                             
-% vecPlus = vec + 2;                                             
-%                                                                
-% ======= Code =======                                           
+% In Matlab kun je alleen rijvectoren maken.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
+
+
+
+
+
+

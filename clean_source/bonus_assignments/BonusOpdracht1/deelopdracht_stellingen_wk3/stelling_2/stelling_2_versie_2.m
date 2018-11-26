@@ -1,10 +1,10 @@
 %% Stelling 2
 %
-% Wanneer je meerdere output variabelen van een functie   
-% wilt krijgen, gebruik je blokhaken: [] bij het aanroepen
-% van deze functie.                                       
+% Je kan binnen een functie een andere functie aanroepen.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
+
 
 
 

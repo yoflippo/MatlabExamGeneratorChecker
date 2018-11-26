@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |1d5140496784e66a7b3031e4fed3a7e5|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,10 +36,10 @@
  
 %% Stelling 15
 %
-% In Matlab kun je alleen kolomvectoren aanmaken.
+% In Matlab kun je een rijvector van kolomvectoren maken. 
+% Dit wordt een matrix genoemd.                           
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
 
 
 

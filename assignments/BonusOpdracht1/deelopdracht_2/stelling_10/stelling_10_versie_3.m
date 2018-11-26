@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |da1bf163f7980997cb7fd74b9e1cac13|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,8 +36,8 @@
  
 %% Stelling 10
 %
-% Het is heel normaal dat je als Matlab programmeur 
-% zelf functies schrijft.                           
+% Het is ongebruikelijk dat je als Matlab programmeur
+% zelf functies schrijft.                            
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
 

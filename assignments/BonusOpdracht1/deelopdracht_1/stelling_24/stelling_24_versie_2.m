@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |c61a5af1db2a006df93d04bfee399026|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,14 +36,14 @@
  
 %% Stelling 24
 %
-% De volgende code wordt uitgevoerd zonder foutmeldingen:
-%                                                        
-% ------------code--------------                         
-% voornaam = 'Mark'                                      
-% achternaam = 'Hark'                                    
-% volledigeNaam = voornaam + achternaam                  
-% ------------code--------------                         
+% Het uitvoeren van onderstaande code in Matlab
+% gaat foutloos:                               
+%                                              
+% ------------code--------------               
+% naam1 = "tekst"                              
+% naam2 = 'tekst'                              
+% selectie = naam2(2)                          
+% ------------code--------------               
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
-
 

@@ -1,6 +1,6 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %                    |5edf7f437dc0e8e840ab9262184025f3|
-%                            1811251743
+%                            1811261147
 %
 % LEES DE VOLGENDE REGELS:
 %
@@ -36,9 +36,9 @@
  
 %% Stelling 7
 %
-% Een functie kan meerdere input variabelen hebben (argumenten).
+% Een functie moet altijd 1 input variabele hebben.
 %
-Antwoord = 1;
+Antwoord = 0;
 
 
 
