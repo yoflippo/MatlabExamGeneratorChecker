@@ -1303,4 +1303,12 @@ studentFolder =
 In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('path', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\path.m', 74)" style="font-weight:bold">path</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\path.m',74,0)">line 74</a>)
         cPath2 = parsedirs(path2);
 
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addpath', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('addpath', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\addpath.m', 86)" style="font-weight:bold">addpath</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\general\addpath.m',86,0)">line 86</a>)
+    path(p, mp);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CheckSingleStudentAssignment', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m', 103)" style="font-weight:bold">CheckSingleStudentAssignment</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\checksinglestudentassignment\CheckSingleStudentAssignment.m',103,0)">line 103</a>)
+            addpath(genpath(apSTU));
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cCheckStudentSubmissions', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m', 310)" style="font-weight:bold">cCheckStudentSubmissions</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\cCheckStudentSubmissions.m',310,0)">line 310</a>)
+            points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
+} 

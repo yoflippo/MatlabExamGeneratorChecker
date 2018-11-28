@@ -94,13 +94,13 @@ if exist('WeekAssignmentsToGenerate','var')
     %% Read the student number and convert the list to e-mailadresses
     debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
     
-    studentFolderOutput = dir('studentnumber*/*.txt');
     % go to the folder with studentnumbers. It is assumed to be a list with
-    
-    stdnmbFile = fullfile(studentFolderOutput(1).folder,studentFolderOutput(1).name);
-    studentNumbers = load(stdnmbFile);
-    
-    cd(con.NAMEASSIGNMENTFOLDER)
+    apDirStudentNumbers = fullfile(con.BASEFOLDER,'studentnumbers');
+    cd(apDirStudentNumbers);
+    studentNumbers = load('studentnumbers.txt');
+    disp(['Number of students: ' num2str(length(studentNumbers))]);
+    cd(con.BASEFOLDER);
+    cd(con.NAMEASSIGNMENTFOLDER);
     save(con.STUDENTNUMBERMAT,'studentNumbers');
     cd(con.BASEFOLDER)
     
@@ -117,40 +117,42 @@ if exist('WeekAssignmentsToGenerate','var')
     end
     toc
     
-    %% TEST if all INcorrect solutions files pass
-    disp('Copy certain testfiles to directory submitted');
-    cd(con.BASEFOLDER)
-    tic
-    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
-    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-    removeShitFromDir(apFinDes);
-    copyfiles(apTestFiles,apFinDes);
-    disp('Execute check assignments');
-    try
-        if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),1)
-            error('The average grade is not equal to 1');
+    if input('Do you want to test all generated files? (Yes=1,No=0)')
+        %% TEST if all INcorrect solutions files pass
+        disp('Copy certain testfiles to directory submitted');
+        cd(con.BASEFOLDER)
+        tic
+        apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+        apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+        removeShitFromDir(apFinDes);
+        copyfiles(apTestFiles,apFinDes);
+        disp('Execute check assignments');
+        try
+            if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),1)
+                error('The average grade is not equal to 1');
+            end
+        catch err
+            error([mfilename ', did not work properly: ' err.message]);
         end
-    catch err
-        error([mfilename ', did not work properly: ' err.message]);
-    end
-    toc
-    
-    %% TEST if all correct solutions files pass
-    cd(con.BASEFOLDER)
-    apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_100');
-    apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-    removeShitFromDir(apFinDes);
-    copyfiles(apTestFiles,apFinDes);
-    disp('Execute check assignments');
-    tic
-    try
-        if ~isequal(cCheckStudentSubmissions(nmCurrBonusAss),10)
-            error('The average grade is not equal to 10');
+        toc
+        
+        %% TEST if all correct solutions files pass
+        cd(con.BASEFOLDER)
+        apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_100');
+        apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+        removeShitFromDir(apFinDes);
+        copyfiles(apTestFiles,apFinDes);
+        disp('Execute check assignments');
+        tic
+        try
+            if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),10)
+                error('The average grade is not equal to 10');
+            end
+        catch err
+            error([mfilename ': ' err.message]);
         end
-    catch err
-        error([mfilename ': ' err.message]);
+        toc
     end
-    toc
     cd(con.BASEFOLDER)
     
     %% Backup if all is working

@@ -132,8 +132,7 @@ end
 trackStudentAssignment = num2cell(zeros(length(studentNumbers), ...
     length(deepestAssignFolders))+1);
 
-for nStud = 1:length(studentNumbers)
-    
+for nStud = 1:length(studentNumbers) 
     % Browse to every assignment folder
     studentDir = num2str(studentNumbers(nStud));
     studentDirSol = studentDir;
@@ -219,9 +218,8 @@ for nStud = 1:length(studentNumbers)
         copyfiles(apAss0{1},fullfile(apCurrStudWkSOL,'deelopdracht_0'));
     end
     
-    numAssignment = getFolders(pwd);
+    % Copy the files so a student can finish the assignment
     nmLastAssignmentDir = ['deelopdracht_' num2str(length(con.BONUSASSIGNMENTS{con.BONUSASSNUMBER})*2+1)];
-    
     mkdirIf(fullfile(apCurrStudWk,nmLastAssignmentDir));
     copyfile(finScriptStud,fullfile(apCurrStudWk,nmLastAssignmentDir));
     nmLastAssignmentSolDir = fullfile(currStudentDirSol,nmCurrBonusAss,nmLastAssignmentDir);

@@ -23,13 +23,10 @@ Moeilijkheidsgraad = NaN; %getal tussen 1 tot en met 5
 Hoeveelheid = NaN; %getal tussen 1 tot en met 5
 
 %% 5 -   Wij zijn geinteresseerd in wat je nog meer vond van deze opdrachten
-%        Schrijf wat je vond in het tekst-bestand wat automatisch wordt
-%        geopend als je dit script uitvoert. Druk NU op F5!
-
-%% 6 -   Je bent klaar, bedankt voor het opschrijven van je mening, 
-%        dat helpt ons het onderwijs beter te maken.
-%        Voer nu 'AfrondenWeekOpdracht.m' uit (openen en uitvoeren) en
-%        lever het automatisch gegeneerde bestand in.
+%        Voer zodadelijk 'AfrondenWeekOpdracht.m' uit (openen en uitvoeren) en
+%        lever het automatisch gegeneerde zip-bestand in.
+%
+%        Druk nu op F5 om op te schrijven wat je nog meer vond van de
 %
 % Einde van de opdrachtsbeschrijving.
 
