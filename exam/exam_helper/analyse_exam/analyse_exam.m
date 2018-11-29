@@ -82,7 +82,7 @@ for n = 1:2
         if desstat.meanQ(tQ{n}(nr)) < 0.5
             plot(nr,desstat.meanQ(tQ{n}(nr)),'k+','LineWidth',lineWidth,'MarkerSize',markerSize+1)
         end
-        plot([nr nr],[0 1],'Color',[0.8 0.8 0.8]','LineStyle','--')        
+        plot([nr nr],[0 1],'Color',[0.8 0.8 0.8]','LineStyle','--','HandleVisibility','off')        
     end
     ylim([-0.05 1.05])
     xlabel('Assignment');
