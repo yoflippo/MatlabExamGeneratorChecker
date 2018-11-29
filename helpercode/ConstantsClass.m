@@ -23,7 +23,7 @@ classdef ConstantsClass
         DIRSTUDENTNUMBERS = 'studentnumbers';
         DIRCLEANSRC = 'clean_source';
         DIRCLEANSRC_PROGASS = 'programming_assignments';
-        DIRCLEANSRC_BONUSASS = 'bonus_assignments';
+        DIRCLEANSRC_FINALASS = 'bonus_assignments';
         DIRHEADER = [ConstantsClass.DIRCLEANSRC filesep 'headers'];
         LISTWITHNEEDEDFOLDERS = {'helpercode' ConstantsClass.DIRCLEANSRC ConstantsClass.DIRSTUDENTNUMBERS ...
             ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};

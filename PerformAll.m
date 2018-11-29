@@ -26,7 +26,7 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
 end
 
 %% Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 1; % Adjust me!!!
+con.BONUSASSNUMBER = 2; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 

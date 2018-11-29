@@ -38,105 +38,103 @@ function exam_addHashAndHeader(ap,weekNames,nm)
 addpath(genpath(ap.CurrExam))
 cd(ap.Assignments)
 
-savedHashes = []; 
+savedHashes = [];
 cntHash = 1;
-for wk = 1:length(weekNames)
-    try
-        % find all files in weekX folder
-        cd(weekNames{wk})
-        weekAssignments = dirmf();
-        cd ..
-        
-        % traverse the week folder
-        for fl = 1:length(weekAssignments)
-            tic;
-            currentFile = weekAssignments(fl).name;
-            currFileAbsPath = weekAssignments(fl).folder;
-            currFileFull = fullfile(currFileAbsPath,currentFile);
-            currentFileSOL = fullfile(currFileAbsPath,replace(currentFile,'.m','_SOL.m'));
-            % find m-file with the answer/solution file
-            if exist(currentFileSOL,'file')
-                % check which types of questions are in the subfolder of the
-                % current weekfolder
-                subdirs = strsplit(currFileAbsPath,filesep);
-                cd(fullfile(subdirs{end-2},subdirs{end-1},subdirs{end}))
-                %Check for the presence of files below to give the proper
-                %header in the student specific assignment
-                if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
-                    header = combineTextOfDifferentFiles('default_header.m','header_question.m');
-                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_MakeScript.m'), 'file') == 2)
-                    header = combineTextOfDifferentFiles('default_header.m','header_script.m');
-                elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_MakeFunction.m'), 'file') == 2)
-                    header = combineTextOfDifferentFiles('default_header.m','header_function.m');
-                else
-                    error('The current folder does not contain a type file');
-                end
-                % Create header with hash of file
-                headerHash{1} = header{1};
-                % Be carefull, the following function needs unique data
-                uniqueFN = generateUniqueFilename(currFileFull,year(datetime));
-                % Test if a Hash is unique, could be
-                if ~isempty(savedHashes)
-                    if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
-                        error('A Non unique HASH has been created');
-                        cd(ap.BASEFOLDEREX);
-                    end
-                end
-                savedHashes{cntHash} = uniqueFN.Hash;
-                cntHash = cntHash + 1;
-                
-                headerHash{2} = uniqueFN.HashCommentLine;
-                % Add exam date
-                headerHash{3} = ['%                            ' nm.CurrExamDir];
-                
-                %% Get points of assignment
-                currPath = pwd;
-                cd(currFileAbsPath);
-                points
-                cd(currPath);        
-                headerHash{4} = ['%                              Deelpunten: ' num2str(deelpunten)];
-                
-                %% Grab default header text for every m-file
-                for hh = 2:length(header)
-                    headerHash{length(headerHash)+1} = header{hh};
-                end
-                headerHashSOL = headerHash;
-                % Copy the clean/original file
-                clear clean_file
-                clean_file = combineTextOfDifferentFiles(currFileFull);
-                for hh = 1:length(clean_file)
-                    headerHash{length(headerHash)+1} = clean_file{hh};
-                end
-                % Copy the clean/original SOLUTION file
-                clear clean_file_SOL
-                clean_file_SOL = combineTextOfDifferentFiles(currentFileSOL);
-                for hh = 1:length(clean_file_SOL)
-                    headerHashSOL{length(headerHashSOL)+1} = clean_file_SOL{hh};
-                end
-                
-                % Delete current file
-                delete(currFileFull);
-                delete(currentFileSOL);
-                makeMFileFromCells(replace(currFileFull,'.m',''),headerHash)
-                makeMFileFromCells(replace(currentFileSOL,'.m',''),headerHashSOL)
-                if ~exist(currFileFull,'file')
-                    error(['There is a missing CHECK file: ' namefile]);
-                end
-                fclose('all');
-                clear headerHash
-                cd ..; cd ..; cd ..;
+
+try
+    weekAssignments = dirmf();
+    cd ..
+    
+    % traverse the folders
+    for fl = 1:length(weekAssignments)
+        tic;
+        currentFile = weekAssignments(fl).name;
+        currFileAbsPath = weekAssignments(fl).folder;
+        currFileFull = fullfile(currFileAbsPath,currentFile);
+        currentFileSOL = fullfile(currFileAbsPath,replace(currentFile,'.m','_SOL.m'));
+        % find m-file with the answer/solution file
+        if exist(currentFileSOL,'file')
+            % check which types of questions are in the subfolder of the
+            % current weekfolder
+            subdirs = strsplit(currFileAbsPath,filesep);
+            cd(fullfile(subdirs{end-2},subdirs{end-1},subdirs{end}))
+            %Check for the presence of files below to give the proper
+            %header in the student specific assignment
+            if (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_Multiplechoice.m'), 'file') == 2)
+                header = combineTextOfDifferentFiles('default_header.m','header_question.m');
+            elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_MakeScript.m'), 'file') == 2)
+                header = combineTextOfDifferentFiles('default_header.m','header_script.m');
+            elseif (exist(fullfile(currFileAbsPath, 'TypeOfAssignment_MakeFunction.m'), 'file') == 2)
+                header = combineTextOfDifferentFiles('default_header.m','header_function.m');
+            else
+                error('The current folder does not contain a type file');
             end
-            clc
-            estPerc = round(fl/length(weekAssignments),2)*100;
-            disp([['Give each assignment Hash-info week: ' num2str(wk)] ', progress: ' num2str(estPerc) '%']);
+            % Create header with hash of file
+            headerHash{1} = header{1};
+            % Be carefull, the following function needs unique data
+            uniqueFN = generateUniqueFilename(currFileFull,year(datetime));
+            % Test if a Hash is unique, could be
+            if ~isempty(savedHashes)
+                if  ~isempty(find(ismember(savedHashes,uniqueFN.Hash),1))
+                    error('A Non unique HASH has been created');
+                    cd(ap.BASEFOLDEREX);
+                end
+            end
+            savedHashes{cntHash} = uniqueFN.Hash;
+            cntHash = cntHash + 1;
+            
+            headerHash{2} = uniqueFN.HashCommentLine;
+            % Add exam date
+            headerHash{3} = ['%                            ' nm.CurrExamDir];
+            
+            %% Get points of assignment
+            currPath = pwd;
+            cd(currFileAbsPath);
+            points
+            cd(currPath);
+            headerHash{4} = ['%                              Deelpunten: ' num2str(deelpunten)];
+            
+            %% Grab default header text for every m-file
+            for hh = 2:length(header)
+                headerHash{length(headerHash)+1} = header{hh};
+            end
+            headerHashSOL = headerHash;
+            % Copy the clean/original file
+            clear clean_file
+            clean_file = combineTextOfDifferentFiles(currFileFull);
+            for hh = 1:length(clean_file)
+                headerHash{length(headerHash)+1} = clean_file{hh};
+            end
+            % Copy the clean/original SOLUTION file
+            clear clean_file_SOL
+            clean_file_SOL = combineTextOfDifferentFiles(currentFileSOL);
+            for hh = 1:length(clean_file_SOL)
+                headerHashSOL{length(headerHashSOL)+1} = clean_file_SOL{hh};
+            end
+            
+            % Delete current file
+            delete(currFileFull);
+            delete(currentFileSOL);
+            makeMFileFromCells(replace(currFileFull,'.m',''),headerHash)
+            makeMFileFromCells(replace(currentFileSOL,'.m',''),headerHashSOL)
+            if ~exist(currFileFull,'file')
+                error(['There is a missing CHECK file: ' namefile]);
+            end
+            fclose('all');
+            clear headerHash
+            cd ..; cd ..; cd ..;
         end
-    catch causeException
-        cd(ap.BASEFOLDEREX)
-        disp(causeException);
-        addpath(genpath(ap.CurrExam))
-        error([mfilename ': problem with folder: ' weekNames{wk}  ]);
+        clc
+        estPerc = round(fl/length(weekAssignments),2)*100;
+        disp(['Give each assignment Hash-info: , progress: ' num2str(estPerc) '%']);
     end
+catch causeException
+    cd(ap.BASEFOLDEREX)
+    disp(causeException);
+    addpath(genpath(ap.CurrExam))
+    error([mfilename ': problem with folder ']);
 end
+
 cd(ap.BASEFOLDEREX)
 rmpath(genpath(ap.CurrExam));
 

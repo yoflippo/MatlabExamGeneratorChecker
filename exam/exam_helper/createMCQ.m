@@ -26,9 +26,9 @@ for n = 1:nOfMulChoiceAssignment
     apQSOL = fullfile(Q.folder,Q.name);
     apQ = replace(apQSOL,'_SOL','');
     % Copy MC-question to new file
-    rpFinQ = fullfile(rpExamDirMC,['vraag_' num2str(nQ) '.m']);
+    rpFinQ = fullfile(rpExamDirMC,['stelling_' num2str(nQ) '.m']);
     copyfile(apQ,rpFinQ);
-    rpFinQSOL = fullfile(rpExamDirMCSOL,['vraag_' num2str(nQ) '.m']);
+    rpFinQSOL = fullfile(rpExamDirMCSOL,['stelling_' num2str(nQ) '.m']);
     copyfile(apQSOL,rpFinQSOL);
     % Rename all txt of new questions.
     replaceVraagOpdracht(rpFinQ,nQ);

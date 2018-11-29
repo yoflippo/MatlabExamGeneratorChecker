@@ -1,33 +1,49 @@
-function CreateAndCopyQAssignments(con)
+function CreateAndCopyQAssignments(con,x)
 
-fclose('all'); %Close files that could be open
-currentBonusAssignment = con.BONUSASSNUMBER;
+fclose('all'); %Close files that could be opened
 
-%% Get path of output folder for a certain week X and empty it
-apCleanSourceRoot = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,'gen_mc');
-cd(apCleanSourceRoot);
-apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
-apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
-
-%% Test the generated MC-files
-cd(apCleanSourceRoot);
-CountNumberOfFALSE_TRUE;
-
-%% Iterate over each available week
-for nW = con.BONUSASSIGNMENTS{currentBonusAssignment}
-    weekNames{nW} = ['week' num2str(nW)];
+if nargin >1 % Ugly programming: for the creation of exam
+    %% Get path of output folder for a certain week X and empty it
+    apCleanSourceRoot = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,'gen_mc');
+    cd(apCleanSourceRoot);
+    apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
+    apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
+    
+    %% Iterate over each available week
+    weekNames = con.WEEKFOLDERS;
+    apCleanAssignmentDir = fullfile(apGeneratedTheses,'exam');
+    
+else % For the creation of BONUS assignments
+    currentBonusAssignment = con.BONUSASSNUMBER;
+    
+    %% Get path of output folder for a certain week X and empty it
+    apCleanSourceRoot = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,'gen_mc');
+    cd(apCleanSourceRoot);
+    apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
+    apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
+    
+    %% Test the generated MC-files
+    cd(apCleanSourceRoot);
+    CountNumberOfFALSE_TRUE;
+    
+    %% Iterate over each available week
+    tmpWeeks = con.BONUSASSIGNMENTS{currentBonusAssignment};
+    for nW = 1:length(tmpWeeks)
+        weekNames{nW} = ['week' num2str(tmpWeeks(nW))];
+    end
+    
+    nmBonusAssDir = [con.NMBONUSASSIGNMENTDIR num2str(currentBonusAssignment)];
+    apCleanAssignmentDir = fullfile(apGeneratedTheses,nmBonusAssDir);
 end
 
-nmBonusAssDir = [con.NMBONUSASSIGNMENTDIR num2str(currentBonusAssignment)];
-outputDir = fullfile(apGeneratedTheses,nmBonusAssDir);
-removeShitFromDir(outputDir)
-if ~exist(outputDir,'dir')
-    mkdir(outputDir)
+removeShitFromDir(apCleanAssignmentDir)
+if ~exist(apCleanAssignmentDir,'dir')
+    mkdir(apCleanAssignmentDir)
 end
 
 %% Make a skeleton directories
 for nWk = 1:length(weekNames)
-    apDesMC = outputDir;
+    apDesMC = apCleanAssignmentDir;
     apSrcThesis = fullfile(apSourceTheses,weekNames{nWk});
     copyfiles(apSrcThesis,apDesMC);
     % Remove the thesis files
@@ -69,16 +85,22 @@ for nWk = 1:length(weekNames)
         
         % generate final destination path of current question, by inserting the
         % output folder
-        absPathDestination = GetPathOneLevelUp(currentFilePath);
-        absPathDestination = replace(absPathDestination,'source_theses','generated_theses');
-        absPathDestination = replace(absPathDestination,weekNames{nWk},nmBonusAssDir);
+        apDestination = GetPathOneLevelUp(currentFilePath);
+        apDestination = replace(apDestination,'source_theses','generated_theses');
+        try %in case of generating an exam this does not exist 
+            % BAD programming: due to generation of bonus assignment and
+            % the exam
+            apDestination = replace(apDestination,weekNames{nWk},nmBonusAssDir);
+        catch
+            apDestination = replace(apDestination,weekNames{nWk},'exam');
+        end
         % copy the points.m file (containing the number of points of mc-q) and
         % copy the TypeOfAssignment... file, so the CopyTheMultipleChoice..m
         % file works)
         fn = 'points.m';
-        copyfile(fullfile(apCleanSourceRoot,fn),fullfile(absPathDestination,fn));
+        copyfile(fullfile(apCleanSourceRoot,fn),fullfile(apDestination,fn));
         fn = 'TypeOfAssignment_Multiplechoice.m';
-        copyfile(fullfile(apCleanSourceRoot,fn),fullfile(absPathDestination,fn));
+        copyfile(fullfile(apCleanSourceRoot,fn),fullfile(apDestination,fn));
         
         %% Generate thesisses in random order
         % % % %         randomFileIndexes = randperm(numberOfThesesFiles);
@@ -131,8 +153,8 @@ for nWk = 1:length(weekNames)
             finalTxt{cnt,1} = [char(extractBefore(emptyAnswerLine,'NaN')) num2str(ansTheses1) ';'];
             
             %% Write final files
-            cd(absPathDestination);
-            [~, nameQuestion] = GetPathOneLevelUp(absPathDestination);
+            cd(apDestination);
+            [~, nameQuestion] = GetPathOneLevelUp(apDestination);
             % make question string
             nVersionMC = nVersionMC + 1;
             nameQuestion = [nameQuestion '_versie_' num2str(nVersionMC)];
@@ -141,8 +163,8 @@ for nWk = 1:length(weekNames)
             
             % write SOLUTION file, sometimes creating/copying does not work
             % reliable
-            apNameQuestionSOL = fullfile(absPathDestination,[nameQuestionSOL '.m']);
-            cd(absPathDestination)
+            apNameQuestionSOL = fullfile(apDestination,[nameQuestionSOL '.m']);
+            cd(apDestination)
             makeMFileFromCells(nameQuestionSOL,finalTxt);
             while ~exist(apNameQuestionSOL,'file')
                 makeMFileFromCells(nameQuestionSOL,finalTxt);
@@ -152,7 +174,7 @@ for nWk = 1:length(weekNames)
             % write empty file, sometimes creating/copying does not work
             % reliable
             finalTxt{cnt,1} = emptyAnswerLine;
-            apNameQuestion = fullfile(absPathDestination,[nameQuestion '.m']);
+            apNameQuestion = fullfile(apDestination,[nameQuestion '.m']);
             makeMFileFromCells(nameQuestion,finalTxt);
             while ~exist(apNameQuestion,'file')
                 makeMFileFromCells(nameQuestion,finalTxt);
@@ -161,7 +183,7 @@ for nWk = 1:length(weekNames)
             
             % copy the template CHECK file, sometimes creating/copying does not work
             % reliable
-            apCheckFile = fullfile(absPathDestination,[nameQuestionCHECK '.m']);
+            apCheckFile = fullfile(apDestination,[nameQuestionCHECK '.m']);
             copyfile(apTemplateCheck,apCheckFile);
             while ~exist(apCheckFile,'file')
                 copyfile(apTemplateCheck,apCheckFile);
@@ -224,26 +246,26 @@ disp('number of SOLUTION and CHECK files match!');
 
 %% Remove accidental files with _COPY postfix
 disp('Remove accidental files with _COPY postfix');
-cd(outputDir)
+cd(apCleanAssignmentDir)
 solFiles = dirmf('_COPY');
 for nC = 1:length(solFiles)
     delete(fullfile(solFiles(nC).folder,solFiles(nC).name));
 end
 
-%% Copy the generated files to clean_source assignment
-disp('Copy the generated files to clean_source assignment');
-cd(apGeneratedTheses)
-for nw = 1:length(weekNames)
-    apCurrDir = fullfile(pwd,weekNames{nw});
-    cleanMcFolders = getFolders(apCurrDir);
-    for nMCF = 1:length(cleanMcFolders)
-        apAss = fullfile(GetPathOneLevelUp(apCleanSourceRoot),'assignments',weekNames{nw},cleanMcFolders{nMCF});
-        removeShitFromDir(apAss);
-        copyfiles(fullfile(apCurrDir,cleanMcFolders{nMCF}),apAss);
-        disp([mfilename ': ' weekNames{nw} ',copied ' num2str(round(nMCF/length(cleanMcFolders),1)*100) '% of the files'])
-    end
-end
-cd ..;
+% % % % % %% Copy the generated files to clean_source assignment
+% % % % % disp('Copy the generated files to clean_source assignment');
+% % % % % cd(apGeneratedTheses)
+% % % % % for nw = 1:length(weekNames)
+% % % % %     apCurrDir = fullfile(pwd,weekNames{nw});
+% % % % %     cleanMcFolders = getFolders(apCurrDir);
+% % % % %     for nMCF = 1:length(cleanMcFolders)
+% % % % %         apAss = fullfile(GetPathOneLevelUp(apCleanSourceRoot),'assignments',weekNames{nw},cleanMcFolders{nMCF});
+% % % % %         removeShitFromDir(apAss);
+% % % % %         copyfiles(fullfile(apCurrDir,cleanMcFolders{nMCF}),apAss);
+% % % % %         disp([mfilename ': ' weekNames{nw} ',copied ' num2str(round(nMCF/length(cleanMcFolders),1)*100) '% of the files'])
+% % % % %     end
+% % % % % end
+% % % % % cd ..;
 
 %% Copy the files to the right place
 disp('Copy the files to the "assignment" place');
@@ -252,23 +274,26 @@ apFinalAssDir = copyThesesToCleanSourceAssignment(con,apGeneratedTheses,weekName
 %% Rename the folders in the final assignment place for more uniformity
 % Assuming two types of folders: stellingen / programmeren the right folder
 % number can be calculated.
-cd(apFinalAssDir);
-folders = dir;
-numAssignments = length(folders)-2;
-numProgramming = (numAssignments/2)+1;
-for nFol = 3:length(folders)
-    nmCurrFol = folders(nFol).name;
-    if contains(string(nmCurrFol),"stellingen")
-        apNewFolder = fullfile(apFinalAssDir,replace(nmCurrFol,"stellingen_wk",""));
-    else %programmeren
-        apNewFolder = fullfile(apFinalAssDir,strcat(extractBefore(nmCurrFol,"programmeren"),num2str(numProgramming)));
-        numProgramming = numProgramming +1;
+if ~(nargin > 1)
+    cd(apFinalAssDir);
+    folders = dir;
+    numAssignments = length(folders)-2;
+    numProgramming = (numAssignments/2)+1;
+    nTheses = 1;
+    for nFol = 3:length(folders)
+        nmCurrFol = folders(nFol).name;
+        if contains(string(nmCurrFol),"stellingen")
+            apNewFolder = fullfile(apFinalAssDir,['deelopdracht_' num2str(nTheses)]);
+            nTheses = nTheses + 1;
+        else %programmeren
+            apNewFolder = fullfile(apFinalAssDir,strcat(extractBefore(nmCurrFol,"programmeren"),num2str(numProgramming)));
+            numProgramming = numProgramming +1;
+        end
+        apOldFolder = fullfile(apFinalAssDir,nmCurrFol);
+        mkdir(apNewFolder)
+        movefiles(apOldFolder,apNewFolder);
+        rmdir(apOldFolder);
     end
-    apOldFolder = fullfile(apFinalAssDir,nmCurrFol);
-    mkdir(apNewFolder)
-    movefiles(apOldFolder,apNewFolder);
-    rmdir(apOldFolder);
 end
-
 
 end

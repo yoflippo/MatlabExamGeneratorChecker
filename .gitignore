@@ -9,6 +9,9 @@ assignments/
 clean_source/gen_mc/generated_questions/
 clean_source/gen_mc/generated_theses/
 clean_source/assignments/
+clean_source/bonus_assignments/
+clean_source/exam_assignments/
+clean_source/programming_assignments/
 submitted_bu/
 *.zip
 exam/exam_helper/analyse_exam/resultOverview.mat

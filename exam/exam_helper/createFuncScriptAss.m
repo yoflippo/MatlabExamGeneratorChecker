@@ -149,7 +149,7 @@ for n = 1:nOfScriptsFunctions
     addpath(genpath(dirWithDataFiles));
     if exist(fullfile(dirWithDataFiles,'Databestanden'),'dir')
         copyfile(fullfile(dirWithDataFiles,'Databestanden'),fullfile(fileparts(rpFinQ),'Databestanden'));
-        copyfile(fullfile(dirWithDataFiles,'Databestanden'),fullfile(fileparts(rpFinQSOL),'Databestanden'))
+        copyfile(fullfile(dirWithDataFiles,'Databestanden'),fullfile(rpExamDirFSSOL,'Databestanden'))
     end
     rmpath(genpath(dirWithDataFiles));
     

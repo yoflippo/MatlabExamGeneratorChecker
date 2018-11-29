@@ -5,11 +5,12 @@
 
 clear all; close all;
 nOfTheses = 80;
-nOfScriptsFunctions = 19;
-weekNames = {'week1' 'week2' 'week3' 'week4'}; 
+nOfScriptsFunctions = 20;
 
 %% Go to path of this file
 mfilename('fullpath')
+ap.WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4' 'week5' 'week6' 'week7' 'week8'};
+weekNames = ap.WEEKFOLDERS;
 ap.BASEFOLDEREX = fileparts(mfilename('fullpath'));
 ap.BASEFOLDER = fileparts(ap.BASEFOLDEREX);
 warning off; rmpath(genpath(ap.BASEFOLDER)); warning on;
@@ -36,7 +37,8 @@ mkdirIf(fullfile(ap.CurrExam,'bonus'));
 ap.SUBMITTEDUNZIPPED = fullfile(ap.CurrExam,'submitted_unzipped');
 ap.DIRCLEANSRC = 'clean_source';
 mkdirIf(ap.SUBMITTEDUNZIPPED);
-
+ap.DIRCLEANSRC_FINALASS = 'exam_assignments';
+ap.DIRCLEANSRC_PROGASS = 'programming_assignments';
 % rmpath(genpath(ap.EXAMHELPERHEADER));
 % Copy the check exam script
 copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,['checkExam_' nm.CDate '.m']))
@@ -54,7 +56,7 @@ dbstop if error
 cd(ap.BASEFOLDEREX)
 removeShitFromDir(ap.Assignments);
 addpath(genpath(ap.DIRCLEANSRC));
-CreateAndCopyQuestions(ap,weekNames);
+CreateAndCopyQAssignments(ap,'all');
 rmpath(genpath(ap.DIRCLEANSRC));
 disp('Created MC-Questions')
 
@@ -117,12 +119,11 @@ copyfile(ap.CurrZipFinalFile,ap.Submitted);
 %% Create testing files for a few students
 generateTestExams(ap.CurrExam);
 
-
 %% Check test exams without solutions
 cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams'),ap.SUBMITTEDUNZIPPED);
-checkExam; close all;
+run(['checkExam_' nm.CDate]); close all;
 if mean(grades(:,2)) > 1
     error('The exam grade should be 1')
 else
@@ -135,7 +136,7 @@ cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams_SOL'),ap.SUBMITTEDUNZIPPED);
 % % % grades = checkExam();
-checkExam; close all;
+run(['checkExam_' nm.CDate]); close all;
 if mean(grades(:,2)) < 10
     error('The exam grade should be a TEN!!')
 else

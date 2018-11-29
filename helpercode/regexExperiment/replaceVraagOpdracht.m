@@ -46,7 +46,7 @@ end
 
 %% find the words in a file
 tNum = num2str(number);
-words = {'opdracht' 'Opdracht' 'vraag' 'Vraag'};
+words = {'opdracht' 'Opdracht' 'vraag' 'Vraag' 'Stelling' 'stelling'};
 for nW = 1:length(words)
     %     txt = regexprep(txt,['(?i)' words{nW} '[_][0-9]+'], [words{nW} '_' tNum]);
     txt = regexprep(txt,['' words{nW} '[_][0-9]+'], [words{nW} '_' tNum]);
