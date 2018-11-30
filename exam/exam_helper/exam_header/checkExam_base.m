@@ -68,7 +68,7 @@ ap.Grades = fullfile(ap.Submitted,'cijfers.txt');
 ap.Analysis = fullfile(ap.CurrExam,'ExamAnalysis');
 writetxtfile(ap.Grades,strGrades)
 cd(ap.CurrExam)
-analyse_exam(fullfile(ap.Submitted,'resultOverview.mat'),nOfMulChoiceAssignment,nm.CurrExamDir)
+analyse_exam(fullfile(ap.Submitted,'resultOverview.mat'),ap.nOfTheses,nm.CurrExamDir)
 %% Copy exam to analysis directory
 zip(fullfile(ap.Analysis,'TheExam.zip'),ap.ExamSrcDir);
 copyfile(ap.Grades,ap.Analysis);

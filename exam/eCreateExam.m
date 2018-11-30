@@ -4,8 +4,8 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all; close all;
-nOfTheses = 80;
-nOfScriptsFunctions = 20;
+ap.nOfTheses = 80;
+ap.nOfScriptsFunctions = 20;
 
 %% Go to path of this file
 mfilename('fullpath')
@@ -73,9 +73,9 @@ disp('Created a randomized struct with all the assignments')
 %% Assign randomized assignments for exam
 cd(ap.CurrExam);
 % right number.
-sAssignedtmp1 = createMCQ(AssInfo,nOfTheses,nm);
+sAssignedtmp1 = createMCQ(AssInfo,ap.nOfTheses,nm);
 % Create a number of script/function assignments
-sAssignedtmp2 = createFuncScriptAss(AssInfo,nOfScriptsFunctions,nm);
+sAssignedtmp2 = createFuncScriptAss(AssInfo,ap.nOfScriptsFunctions,nm);
 sAssigned = [sAssignedtmp1 sAssignedtmp2];
 disp(['Points for this exam: '  num2str(sum([sAssigned.points]))]);
 clear sAssignedtmp1 sAssignedtmp2 ans;

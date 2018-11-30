@@ -1,4 +1,4 @@
-function analyse_exam( apMatResultOverview,numMC,nmExam)
+function analyse_exam( apMatResultOverview,numMC,nmExam,grades)
 close all;
 nmAnalysisDir = 'ExamAnalysis';
 if contains(pwd,nmAnalysisDir )
@@ -69,51 +69,37 @@ for n = 1:2
     plot(desstat.meanQ(t),'g+','LineWidth',lineWidth,'MarkerSize',markerSize)
     hold on;
     plot(desstat.stdQ(t),'*','LineWidth',lineWidth,'MarkerSize',markerSize)
-    plot(relPoints,'s','LineWidth',lineWidth,'MarkerSize',markerSize)
+    stairs(relPoints,'-','LineWidth',lineWidth,'MarkerSize',markerSize)
     plot(desstat.RIT(t),'d','LineWidth',lineWidth,'MarkerSize',markerSize)
     plot(desstat.percentageCorrect(t),'LineWidth',lineWidth)
     %% Illustrate meaningfull RIT values
     ritBor = 0.2;
     for nr = 1:length(tQ{n})
+        blBoth = false;
+        plot([nr nr],[0 1],'Color',[0.7 0.7 0.7]','LineStyle','--','HandleVisibility','off')
         if ( (desstat.meanQ(tQ{n}(nr)) > ritBor)  && (desstat.meanQ(tQ{n}(nr)) < (1-ritBor)) ) && ...
                 ( (desstat.RIT(tQ{n}(nr)) < ritBor)  ) || ( (desstat.RIT(tQ{n}(nr)) < ritBor)     )
             plot(nr,desstat.RIT(tQ{n}(nr)),'kd','LineWidth',lineWidth,'MarkerSize',markerSize+1)
+            blBoth = true;
         end
         if desstat.meanQ(tQ{n}(nr)) < 0.5
             plot(nr,desstat.meanQ(tQ{n}(nr)),'k+','LineWidth',lineWidth,'MarkerSize',markerSize+1)
+            if blBoth
+                plot([nr nr],[0 1],'Color',[1 0.3 0.3]','LineStyle','--','HandleVisibility','off')
+            end
         end
-        plot([nr nr],[0 1],'Color',[0.8 0.8 0.8]','LineStyle','--','HandleVisibility','off')        
     end
     ylim([-0.05 1.05])
     xlabel('Assignment');
     title(['Normalised ' nmQ{n} ' (n=' num2str(l) '), Cronbach Alpha = ' num2str(desstat.CBA) ]);
-    %     if isequal(n,1) %Theses
-    legend('P+ value','STDT','Weight','RIT','Percentage correct','RIT low','P-val low','Location','best');
-    %     else % programming
-    %         legend('P+ value','Standard Deviation','Weight Question','RIT','Percentage correct answers','RIT too low','Location','best');
-    %     end
+    legend('P+ value','STD','Weight','RIT','Percentage correct','RIT low','P-val low','Location','best');
     grid on; grid minor;
-    saveas(gcf,[nmQ{n} '.png']);
+    saveTightFigure(gcf,[nmQ{n} '.png']);
     close all;
-    %     saveas(gcf,[nmQ{n} '.svg']);
     savefig([nmQ{n} '.fig']);
     
     %% Boxplots
-    if ~isequal(n,1)
-        % Absolute
-        figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1]);
-        if isequal(n,1)
-            boxplot(desstat.resPoint(:,1:numMC))
-        else
-            boxplot(desstat.resPoint(:,numMC+1:end))
-        end
-        xlabel('Assignment');
-        
-        title([nmQ{n} ' (n=' num2str(l) ') Cronbach Alpha = ' num2str(desstat.CBA) ]);
-        grid on; grid minor;
-        saveas(gcf,[nmQ{n} '_BOXPLOT_ABS.png']);
-        close all;
-        
+    if ~isequal(n,1)   
         % Normalised
         figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1],'visible','off');
         if isequal(n,1)
@@ -125,12 +111,37 @@ for n = 1:2
         
         title(['Normalised ' nmQ{n} ' (n=' num2str(l) ') Cronbach Alpha = ' num2str(desstat.CBA) ]);
         grid on; grid minor;
-        saveas(gcf,[nmQ{n} '_BOXPLOT_NORM.png']);
+        saveTightFigure(gcf,[nmQ{n} '_BOXPLOT_NORM.png']);
+        close all;
+        
+        % Absolute
+        figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1],'visible','off');
+        if isequal(n,1)
+            boxplot(desstat.resPoint(:,1:numMC))
+        else
+            boxplot(desstat.resPoint(:,numMC+1:end))
+        end
+        xlabel('Assignment');      
+        title([nmQ{n} ' (n=' num2str(l) ') Cronbach Alpha = ' num2str(desstat.CBA) ]);
+        grid on; grid minor;
+        saveTightFigure(gcf,[nmQ{n} '_BOXPLOT_ABS.png']);
         close all;
     end
 end
-save('analysisdata.mat');
 
+
+figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1],'visible','off');
+histogram(grades(:,2),[1:10]);
+title(['Biostatica Cijfers ' nmExam ', Percentage of students passed: ' num2str(round(sum(grades(:,2)>=5.5)/length(grades(:,2))*100,1)) '%']);
+xlabel('Grade')
+ylabel('Number')
+grid on; grid minor;
+saveTightFigure(gcf,[nmExam '_GRADES.png']);
+
+save('analysisdata.mat');
+if ispc
+    winopen(pwd)
+end
 
 end%f
 

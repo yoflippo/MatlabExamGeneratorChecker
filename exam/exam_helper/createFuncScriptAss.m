@@ -105,7 +105,7 @@ dff.t34 = round(linspace(dff.max-1,dff.min+1,dff.tIndex4-dff.tIndex3));
 dff.t45 = round(linspace(dff.min,dff.min,dff.tIndex5+1-dff.tIndex4));
 % Get index based on dff.pX
 indices = [dff.t01 dff.t12 dff.t23 dff.t34 dff.t45];
-plot(indices); grid on; ylim([0 dff.max+1]); xlim([1 nOfScriptsFunctions]);
+stairs(indices); grid on; ylim([0 dff.max+1]); xlim([1 nOfScriptsFunctions]);
 yticks(round([linspace(dff.min,dff.max,length(1:dff.max))]))%ytickformat('%1d')
 ylabel('Points per assignment' ); xlabel('Number of assignments')
 title(['Difficulty of this exam: ' extractAfter(nm.CurrExamDir,'_') ' (Totalpoints: ' num2str(sum(indices)) ')']);
