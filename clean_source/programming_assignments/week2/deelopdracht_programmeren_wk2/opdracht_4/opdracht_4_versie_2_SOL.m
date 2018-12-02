@@ -7,9 +7,6 @@
 % De functie plakt de tekst van de input (txt) aan de tekst:
 % 'opdracht_4 krijgt de tekst: ' en geeft dat terug aan "result".
 %
-% Als de input variabele de volgende string bevat: 'Pectoralis'. 
-% Dan geeft de functie 'opdracht_4 krijgt de tekst: Pectoralis' terug.
-%
 % Een function file mag alleen een functie bevatten (lees: geen variabelen 
 % boven of onder de functie) 
 

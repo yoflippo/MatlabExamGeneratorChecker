@@ -99,7 +99,7 @@ for n = 1:2
     savefig([nmQ{n} '.fig']);
     
     %% Boxplots
-    if ~isequal(n,1)   
+    if ~isequal(n,1)
         % Normalised
         figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1],'visible','off');
         if isequal(n,1)
@@ -121,7 +121,7 @@ for n = 1:2
         else
             boxplot(desstat.resPoint(:,numMC+1:end))
         end
-        xlabel('Assignment');      
+        xlabel('Assignment');
         title([nmQ{n} ' (n=' num2str(l) ') Cronbach Alpha = ' num2str(desstat.CBA) ]);
         grid on; grid minor;
         saveTightFigure(gcf,[nmQ{n} '_BOXPLOT_ABS.png']);
@@ -129,14 +129,16 @@ for n = 1:2
     end
 end
 
-
-figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1],'visible','off');
-histogram(grades(:,2),[1:10]);
-title(['Biostatica Cijfers ' nmExam ', Percentage of students passed: ' num2str(round(sum(grades(:,2)>=5.5)/length(grades(:,2))*100,1)) '%']);
-xlabel('Grade')
-ylabel('Number')
-grid on; grid minor;
-saveTightFigure(gcf,[nmExam '_GRADES.png']);
+try
+    figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1],'visible','off');
+    histogram(grades(:,2),[1:10]);
+    title(['Biostatica Cijfers ' nmExam ', Percentage of students passed: ' num2str(round(sum(grades(:,2)>=5.5)/length(grades(:,2))*100,1)) '%']);
+    xlabel('Grade')
+    ylabel('Number')
+    grid on; grid minor;
+    saveTightFigure(gcf,[nmExam '_GRADES.png']);
+catch
+end
 
 save('analysisdata.mat');
 if ispc
