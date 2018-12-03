@@ -292,6 +292,15 @@ eval(['load(''answerfiles_' nmCurrBonusAss ''')'])
 apSubWk = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,nmCurrBonusAss);
 cd(apSubWk);
 
+%% Create a cell with every student and every assignment to track how each individual assignment if made
+unAssignments = unique({trackStudentAssignment{:,2:end}});
+studentsColumn = {trackStudentAssignment{:,1}}';
+allStudentsAndAssignments = cell(length(studentsColumn),length(unAssignments));
+allStudentsAndAssignments = [studentsColumn allStudentsAndAssignments];
+unAssignments = [{''} unAssignments];
+allStudentsAndAssignments = [unAssignments; allStudentsAndAssignments];
+save('cellAllStudentsAndAssignments.mat','allStudentsAndAssignments')
+
 %% Iterate over every unzipped folder/studentnumber
 % Remove Check-files from path
 warning off

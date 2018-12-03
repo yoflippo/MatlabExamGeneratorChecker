@@ -57,6 +57,12 @@ dbstop('if','error')
 q = char(39);
 currPath = pwd;
 
+try
+    apAllStudentAss =  pwd;
+    load('cellAllStudentsAndAssignments.mat')
+catch
+end
+
 currentFolder = fullfile(pwd,studentdir);
 if isequal(exist(currentFolder,'dir'),0)
     warning([mfilename ': The accessed folder does not exists'])
@@ -89,7 +95,13 @@ for i = 1:length(mfilesWithHash)
         try
             % Get the check file for this assignment
             AbsPathSOLScript = dicCheckFilesAbsPath(HashOfmfiles{1,i});
-            % % %         [apSOL, nmSOL, eSOL] = fileparts(AbsPathSOLScript);
+            
+            % REGISTER all results in allStudentAndAssignments
+            idxHashAll_SA = strcmp(allStudentsAndAssignments(1,:),HashOfmfiles{1,i});
+            idxHashAll_SA = find(idxHashAll_SA);
+            idxStudAll_SA = strcmp(allStudentsAndAssignments(:,1),studentdir);
+            idxStudAll_SA = find(idxStudAll_SA);
+            allStudentsAndAssignments{idxStudAll_SA,idxHashAll_SA} = 0;
             
             % Save it in a variable used by the solution
             absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
@@ -129,7 +141,9 @@ for i = 1:length(mfilesWithHash)
             warning on
             % Calcule partialpoints
             sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
+            allStudentsAndAssignments{idxStudAll_SA,idxHashAll_SA} = pointsForCurrentAssignment * ResStudentScript;
             %             pointsForCurrentAssignment
+            
             %% Write the result to the student file
             percStudent = ResStudentScript * 100;
             
@@ -168,5 +182,8 @@ for i = 1:length(mfilesWithHash)
         end
     end
 end
+
+cd(apAllStudentAss)
+save('cellAllStudentsAndAssignments.mat','allStudentsAndAssignments')
 cd(currPath);
 end

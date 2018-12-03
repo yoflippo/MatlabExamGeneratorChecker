@@ -26,12 +26,12 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
 end
 
 %% Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 2; % Adjust me!!!
+con.BONUSASSNUMBER = 1; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 
 %% Comment me if no re-generation needs to
-WeekAssignmentsToGenerate = BonusAssignmentWeeks;
+% WeekAssignmentsToGenerate = BonusAssignmentWeeks;
 
 %% START
 if exist('WeekAssignmentsToGenerate','var')
@@ -70,88 +70,88 @@ if exist('WeekAssignmentsToGenerate','var')
             keyboard
         end
         toc
-    end
-    
-    %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
-    cd(con.NAMEASSIGNMENTFOLDER)
-    if ~isequal(length(dirmf(con.CHECKPOSTFIX)),length(dirmf(con.SOLPOSTFIX)))
-        disp('Check if al "checking" files are in working order');
-        assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
-    end
-    
-    %% Clean the submitted folder
-    cd(con.BASEFOLDER)
-    
-    apCleanSubmitted{1} = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,...
-        con.BONUSASSNAME(con.BONUSASSNUMBER));
-    apCleanSubmitted{2} = [apCleanSubmitted{1} '_unzipped'];
-    apCleanSubmitted{3} = [apCleanSubmitted{1} '_wrongsubmissions'];
-    apCleanSubmitted{4} = [apCleanSubmitted{1} '_send'];
-    for nCS = 1:length(apCleanSubmitted)
-        removeShitFromDir(apCleanSubmitted{nCS});
-    end
-    
-    %% Read the student number and convert the list to e-mailadresses
-    debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
-    
-    % go to the folder with studentnumbers. It is assumed to be a list with
-    apDirStudentNumbers = fullfile(con.BASEFOLDER,'studentnumbers');
-    cd(apDirStudentNumbers);
-    studentNumbers = load('studentnumbers.txt');
-    disp(['Number of students: ' num2str(length(studentNumbers))]);
-    cd(con.BASEFOLDER);
-    cd(con.NAMEASSIGNMENTFOLDER);
-    save(con.STUDENTNUMBERMAT,'studentNumbers');
-    cd(con.BASEFOLDER)
-    
-    %% Execute create week assignment scripts for individual students
-    disp('Execute create week assignment scripts');
-    if ~isequal(pwd,con.BASEFOLDER)
+        
+        %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
+        cd(con.NAMEASSIGNMENTFOLDER)
+        if ~isequal(length(dirmf(con.CHECKPOSTFIX)),length(dirmf(con.SOLPOSTFIX)))
+            disp('Check if al "checking" files are in working order');
+            assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
+        end
+        
+        %% Clean the submitted folder
         cd(con.BASEFOLDER)
-    end
-    tic
-    try
-        CreateBonusAssignments(con);
-    catch err
-        error([mfilename ' in CreateBonusAssignments: ' newline  err.message])
-    end
-    toc
-    
-    if input('Do you want to test all generated files? (Yes=1,No=0)')
-        %% TEST if all INcorrect solutions files pass
-        disp('Copy certain testfiles to directory submitted');
+        
+        apCleanSubmitted{1} = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,...
+            con.BONUSASSNAME(con.BONUSASSNUMBER));
+        apCleanSubmitted{2} = [apCleanSubmitted{1} '_unzipped'];
+        apCleanSubmitted{3} = [apCleanSubmitted{1} '_wrongsubmissions'];
+        apCleanSubmitted{4} = [apCleanSubmitted{1} '_send'];
+        for nCS = 1:length(apCleanSubmitted)
+            removeShitFromDir(apCleanSubmitted{nCS});
+        end
+        
+        %% Read the student number and convert the list to e-mailadresses
+        debugOutput(DEBUGOUTPUT,'Read the student number and convert the list to e-mailadresses',1);
+        
+        % go to the folder with studentnumbers. It is assumed to be a list with
+        apDirStudentNumbers = fullfile(con.BASEFOLDER,'studentnumbers');
+        cd(apDirStudentNumbers);
+        studentNumbers = load('studentnumbers.txt');
+        disp(['Number of students: ' num2str(length(studentNumbers))]);
+        cd(con.BASEFOLDER);
+        cd(con.NAMEASSIGNMENTFOLDER);
+        save(con.STUDENTNUMBERMAT,'studentNumbers');
         cd(con.BASEFOLDER)
+        
+        %% Execute create week assignment scripts for individual students
+        disp('Execute create week assignment scripts');
+        if ~isequal(pwd,con.BASEFOLDER)
+            cd(con.BASEFOLDER)
+        end
         tic
-        apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
-        apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-        removeShitFromDir(apFinDes);
-        copyfiles(apTestFiles,apFinDes);
-        disp('Execute check assignments');
         try
-            if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),1)
-                error('The average grade is not equal to 1');
-            end
+            CreateBonusAssignments(con);
         catch err
-            error([mfilename ', did not work properly: ' err.message]);
+            error([mfilename ' in CreateBonusAssignments: ' newline  err.message])
         end
         toc
         
-        %% TEST if all correct solutions files pass
-        cd(con.BASEFOLDER)
-        apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_100');
-        apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-        removeShitFromDir(apFinDes);
-        copyfiles(apTestFiles,apFinDes);
-        disp('Execute check assignments');
-        tic
-        try
-            if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),10)
-                error('The average grade is not equal to 10');
+        if input('Do you want to test all generated files? (Yes=1,No=0)')
+            %% TEST if all INcorrect solutions files pass
+            disp('Copy certain testfiles to directory submitted');
+            cd(con.BASEFOLDER)
+            tic
+            apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_0');
+            apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+            removeShitFromDir(apFinDes);
+            copyfiles(apTestFiles,apFinDes);
+            disp('Execute check assignments');
+            try
+                if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),1)
+                    error('The average grade is not equal to 1');
+                end
+            catch err
+                error([mfilename ', did not work properly: ' err.message]);
             end
-        catch err
-            error([mfilename ': ' err.message]);
+            toc
+            
+            %% TEST if all correct solutions files pass
+            cd(con.BASEFOLDER)
+            apTestFiles = fullfile(pwd,'fortesting',nmCurrBonusAss,'correct_100');
+            apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+            removeShitFromDir(apFinDes);
+            copyfiles(apTestFiles,apFinDes);
+            disp('Execute check assignments');
+            tic
+            try
+                if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),10)
+                    error('The average grade is not equal to 10');
+                end
+            catch err
+                error([mfilename ': ' err.message]);
+            end
+            toc
         end
-        toc
     end
     cd(con.BASEFOLDER)
     
@@ -170,10 +170,12 @@ end %Generation of week assignment
 
 %% Check manually copied submitted files
 cd(con.BASEFOLDER)
-prePerform
+apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped'])
+copyfiles(apStudentFiles,apFinDes);
 disp('Check manually copied submitted files');
 try
-    cCheckStudentSubmissions(con,BonusAssignmentWeeks)
+    cCheckStudentSubmissions(con,nmCurrBonusAss)
 catch err
     error([mfilename ': ' err.message]);
 end
