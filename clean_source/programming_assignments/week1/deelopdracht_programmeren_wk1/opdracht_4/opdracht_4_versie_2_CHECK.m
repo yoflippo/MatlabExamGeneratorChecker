@@ -1,17 +1,5 @@
 function res = opdracht_4_versie_2_CHECK(apStudentSol)
 
-res = 0;
-numtests = 4;
-% % % %% Opdracht 4
-% % % % - Maak de volgende variabelen aan: voornaam, achternaam
-% % % % - Geef de variabele voornaam de tekst: Mark
-% % % % - Geef de variabele achternaam de tekst: Schrauwen
-% % % % - Maak de volgende variabele aan: vol
-% % % % - Koppel de variabele 'voornaam' en 'achternaam' aan elkaar en stop het
-% % % %   resultaat in de variabele 'volledig'.
-% % % % Test je script of het werkt.
-% % %
-% % %
 % % % voornaam = 'Mark';
 % % % achternaam = 'Schrauwen';
 % % % volledig = [voornaam achternaam];

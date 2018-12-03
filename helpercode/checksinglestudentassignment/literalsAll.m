@@ -1,8 +1,11 @@
-function [res,num,weights] = literalsAll(txtns,checkingVar,apStudentSol,txtclean)
+function [res,num,weights] = literalsAll(txtns,checkingVar,apStudentSol)
 
 res = 0;
 
 %% Check for literal answers that MUST BE PRESENT
+if ~isequal(mod(length(checkingVar.literalsP),2),0)
+    error([mfilename ': you are missing a checking parameter in CHECK file'])
+end
 [resP, w] = literalAnswersPresent(txtns,checkingVar.literalsP,apStudentSol);
 res = res + resP;
 weights.laPresent = w;

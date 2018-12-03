@@ -138,3 +138,4 @@ end%function
 % Tijdens het runnen van jouw uitwerking, tradt er een fout op:
 % Tijdens het runnen van jouw uitwerking, tradt er een fout op:
 % Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:

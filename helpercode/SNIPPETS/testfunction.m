@@ -12,7 +12,7 @@ function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 checkingVar.testFunctionInput = {};
 checkingVar.literalsP = {};
-checkingVar.literalsA = {};
+checkingVar.literalsA = {'NaN'};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};
@@ -26,6 +26,7 @@ close all
 
 %% Junk that could be usefull
 % % % % % % % % % 
+% % % % % % % % % checkingVar.testFunctionInput = {{1:5} {2:2:10} {0:1}};
 % % % % % % % % % checkingVar.testFunctionInput.data = {'XXX' 'XXX' 'XXX'};
 % % % % % % % % % 
 % % % % % % % % % % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN

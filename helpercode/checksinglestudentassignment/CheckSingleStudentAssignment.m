@@ -119,6 +119,10 @@ for i = 1:length(mfilesWithHash)
             pathWithoutExt = replace(apStudentSol,'.m','');
             foundSlashes = strfind(pathWithoutExt,filesep);
             assignment = apStudentSol(foundSlashes(end-1)+1:length(pathWithoutExt));
+            if contains(assignment,'_UITWERKING')
+                assignment = extractBefore(assignment,'_UITWERKING');
+%                 keyboard %Somethings wrong Bub!
+            end
             
             % Get the number of points for this assignment
             pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);

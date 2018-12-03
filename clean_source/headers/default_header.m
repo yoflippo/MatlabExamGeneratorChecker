@@ -10,9 +10,10 @@
 % 2 -   Als dit bestand niet uit te voeren valt, bijvoorbeeld doordat je
 %       tijdens het uitvoeren een foutmelding krijgt, krijg je GEEN punten!
 % 3 -   Elke variabele waar 'NaN' aan is toegekend moet JIJ bewerken.
-% 4 -   Je maakt de opdracht in dit bestand. Vul het bestand alleen aan met
-%       voor de opdracht nuttige code. Doe je dit niet, dan kan dat een
-%       vermindering van het te verdienen aantal punten tot gevolg hebben.
+% 4 -   Je maakt de opdracht in dit bestand. Je mag geen kopieen maken.
+%       Vul dit bestand alleen aan met voor de opdracht nuttige code. Doe 
+%       je dit niet, dan kan dat een vermindering van het te verdienen aantal 
+%       punten tot gevolg hebben.
 % 5 -   Door JOU geschreven commentaarregels (met %% of %) worden niet
 %       door ons gelezen of gebruikt. 
 % 6 -   Matlab is case-sensitive (hoofdlettergevoelig). De 

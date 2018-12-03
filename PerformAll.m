@@ -97,6 +97,7 @@ if exist('WeekAssignmentsToGenerate','var')
         apDirStudentNumbers = fullfile(con.BASEFOLDER,'studentnumbers');
         cd(apDirStudentNumbers);
         studentNumbers = load('studentnumbers.txt');
+        %% Remove non-unique students
         disp(['Number of students: ' num2str(length(studentNumbers))]);
         cd(con.BASEFOLDER);
         cd(con.NAMEASSIGNMENTFOLDER);
@@ -171,7 +172,8 @@ end %Generation of week assignment
 %% Check manually copied submitted files
 cd(con.BASEFOLDER)
 apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped'])
+apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
+removeShitFromDir(apFinDes);
 copyfiles(apStudentFiles,apFinDes);
 disp('Check manually copied submitted files');
 try

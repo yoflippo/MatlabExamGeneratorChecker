@@ -62,7 +62,7 @@ if ~isempty(char(txtCleanedStudentSolution))
         res = 1;
     else
         %% Check all literals
-        [res2,num2,weights] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
+        [res2,num2,weights] = literalsAll(txtns,checkingVar,apStudentSol);
         res = res + res2;
         
         % Get remaining numbers.
@@ -90,13 +90,14 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
     end
     
-    if res < 0
-        warning('result is too low!')
-        res = 0;
-    elseif res > 1
-        warning('result is too high!')
-        res = 1;
-    end
+%     if res < 0
+%         warning('result is too low!')
+%         res = 0;
+%     elseif res > 1
+%         warning('result is too high!')
+%         res = 1;
+%     end
+
     % % % % % % % %     %     all outputs/variables are correct         %but result is too low
     % % % % % % % %     if length(checkingVar.nameVars) > 0 && ...
     % % % % % % % %         ~contains(apStudentSol,'CHEAT') && ...

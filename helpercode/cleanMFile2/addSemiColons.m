@@ -40,46 +40,55 @@ faults = checkcode(apFile,'-id','-fullpath');
 
 %% Search struct faults for certain keywords which say a semicolon is
 % missing.
-ccKeywords = {'NOPRT' 'PRTCAL' 'NOPTS'};
-index = [];
-for nK = 1:length(ccKeywords)
-    index = [index find(strcmp({faults.id}, ccKeywords{nK})==1)];
-end
-index = sort(index);
-
-%% Read the file
-try
-    txt = readTxtFile(apFile);
-catch
-    error([mfilename ': Could not read the file']);
-end
-
-
-%% Add semicolons
-% Browse through faults
-for n = 1:length(index)
-    idx = faults(index(n)).line;
-    txt{idx} = [txt{idx} ';'];
-end
-
-% Add a semicolon for every file that ends with )
-bck = ')';
-% Walk through txt
-try
-for nL = (faults(1).line+1):length(txt)
-    tmp = txt{nL}; % Remove cell bothersomeness and trailing spaces
-    if ~isempty(tmp) && contains(tmp(end),bck) && ~contains(tmp(end),';') ...
-            && ~contains(tmp,iskeyword())
-        tmp = [tmp ';'];
+if ~isempty(faults)
+    ccKeywords = {'NOPRT' 'PRTCAL' 'NOPTS'};
+    index = [];
+    for nK = 1:length(ccKeywords)
+        index = [index find(strcmp({faults.id}, ccKeywords{nK})==1)];
     end
-    txt{nL} = tmp;
-end
-catch
-end
-
-
-%% Write to file
-writetxtfile(apFile,txt);
-otxt = txt;
+    index = sort(index);
+    
+    %% Read the file
+    try
+        txt = readTxtFile(apFile);
+    catch
+        error([mfilename ': Could not read the file']);
+    end
+    
+    
+    %% Add semicolons
+    % Browse through faults
+    for n = 1:length(index)
+        idx = faults(index(n)).line;
+        txt{idx} = [txt{idx} ';'];
+    end
+    
+    % Add a semicolon for every file that ends with )
+    bck = ')';
+    % Walk through txt
+    try
+        for nL = (faults(1).line+1):length(txt)
+            tmp = txt{nL}; % Remove cell bothersomeness and trailing spaces
+            if ~isempty(tmp) && contains(tmp(end),bck) && ~contains(tmp(end),';') ...
+                    && ~contains(tmp,iskeyword())
+                tmp = [tmp ';'];
+            end
+            txt{nL} = tmp;
+        end
+    catch
+    end
+    
+    
+    %% Write to file
+    writetxtfile(apFile,txt);
+    otxt = txt;
+else % no faults
+    %% Read the file
+    try
+        otxt = readTxtFile(apFile);
+    catch
+        error([mfilename ': Could not read the file']);
+    end
+end % empty
 
 end

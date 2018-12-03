@@ -55,9 +55,13 @@ cd(currPath)
 
 % Get the hascodes
 for nHash = 1:length(mfiles)
+    try
     p = fullfile(mfiles(nHash).folder,mfiles(nHash).name);
     HashCodes{nHash} = GetHashCodeFromMFile(p) ;
     Paths{nHash} = p;
+    catch
+        keyboard %Somethings wrong Bubba!
+    end
 end
 
 % Combine the relevant files in a Container (dictionary) so the

@@ -294,7 +294,7 @@ cd(apSubWk);
 
 %% Create a cell with every student and every assignment to track how each individual assignment if made
 unAssignments = unique({trackStudentAssignment{:,2:end}});
-studentsColumn = {trackStudentAssignment{:,1}}';
+studentsColumn = unique({trackStudentAssignment{:,1}}'); %reuse unique, because of possible non-unique students
 allStudentsAndAssignments = cell(length(studentsColumn),length(unAssignments));
 allStudentsAndAssignments = [studentsColumn allStudentsAndAssignments];
 unAssignments = [{''} unAssignments];
@@ -311,13 +311,16 @@ strTrackStudent = cellstr(trackStudentAssignment);
 studentMatrix = ones(length(strTrackStudent(:,1)),2);
 cnt = 1;
 for sn = 1:length(strTrackStudent(:,1))
-    studentFolder = trackStudentAssignment{sn,1}
+    studentFolder = trackStudentAssignment{sn,1};
     if exist(studentFolder,'dir')
         tic
         try
             % Check all the assigned assignments of individual students
             points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
                 dicNameAssignmentAndPoints);
+            if points > PointsToBeEarned
+                keyboard %something is wrong Bub
+            end
             grade = ((points/PointsToBeEarned)*9)+1
             studentMatrix(sn,1) = str2double(studentFolder);
             studentMatrix(sn,2) = round(grade,1);
@@ -347,7 +350,6 @@ for sn = 1:length(strTrackStudent(:,1))
         studentMatrix(sn,2) = round(1.0,1);
     end
 end
-studentMatrix
 save(pathStudentResults,'studentMatrix');
 averageGrade = mean(checkedStudent)
 

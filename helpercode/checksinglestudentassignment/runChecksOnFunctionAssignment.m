@@ -74,7 +74,7 @@ if ~isempty(char(txtCleanedStudentSolution))
         % The I/O does not fully correspond to the solution file so extra checks should be performed
         
         %% Check all literals
-        [res2, num] = literalsAll(txtns,checkingVar,apStudentSol,txtCleanedStudentSolution);
+        [res2, num] = literalsAll(txtns,checkingVar,apStudentSol);
         res = res + res2;
         
         %% Calculate the result
