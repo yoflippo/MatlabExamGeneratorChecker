@@ -340,6 +340,8 @@ for sn = 1:length(strTrackStudent(:,1))
             dr = fullfile(apSubmitted,nmNewFolder);
             removeShitFromDir(dr);
             rmdir(dr);
+            removeShitFromDir(studentFolder);
+            rmdir(studentFolder);
         catch err
             disp([newline 'DO YOUR MAGIC MAESTRO!' newline]);
             keyboard
