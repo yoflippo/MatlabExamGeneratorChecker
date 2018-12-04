@@ -90,6 +90,7 @@ end
 
 %% Find the associated solution files
 sumPoints = 0;
+strPoints.pointsAss = [];
 for i = 1:length(mfilesWithHash)
     if ~isempty(mfilesWithHash{i})
         try

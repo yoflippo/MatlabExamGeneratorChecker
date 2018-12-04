@@ -178,10 +178,11 @@ copyfiles(apStudentFiles,apFinDes);
 disp('Check manually copied submitted files');
 try
     [averageGrade, studentMatrix] = cCheckStudentSubmissions(con,nmCurrBonusAss);
-    strOV = AnalyseBonusAssignments(con);
+    [strOV, strStudGrad] = AnalyseBonusAssignments(con);
 catch err
     error([mfilename ': ' err.message]);
 end
+save(['WorkSpaceAfterChecking' nmCurrBonusAss '.mat'])
 diary off
 warning off
 rmpath(genpath(fileparts(mfilename('fullpath'))));

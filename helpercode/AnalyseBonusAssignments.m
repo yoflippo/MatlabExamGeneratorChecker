@@ -54,7 +54,7 @@ nT = 1;
 for nSt = 2:length(asas(2:end,1))
     currAssStud = asas(nSt,2:end);
     currAssStudNotEmpty = sum(~cellfun(@isempty,currAssStud));
-    if currAssStudNotEmpty>5
+    if currAssStudNotEmpty>0
         strStudGrad(nT).idx = nSt;
         strStudGrad(nT).sumPoints = sum(cell2mat(currAssStud));
         nT = nT + 1;
