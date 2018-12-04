@@ -1,4 +1,4 @@
-function sumPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints)
+function strPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints)
 %CHECKSINGLESTUDENTASSIGNMENT A function that checks a students week
 %assignment.
 %
@@ -121,11 +121,12 @@ for i = 1:length(mfilesWithHash)
             assignment = apStudentSol(foundSlashes(end-1)+1:length(pathWithoutExt));
             if contains(assignment,'_UITWERKING')
                 assignment = extractBefore(assignment,'_UITWERKING');
-%                 keyboard %Somethings wrong Bub!
+                %                 keyboard %Somethings wrong Bub!
             end
             
             % Get the number of points for this assignment
             pointsForCurrentAssignment = dicNameAssignmentAndPoints(assignment);
+            strPoints.pointsAss(i) = pointsForCurrentAssignment;
             
             %Start checking
             clear txtResultStud;
@@ -135,8 +136,15 @@ for i = 1:length(mfilesWithHash)
                 WriteToLastLineOfFile(apStudentSol,txtResultStud);
             catch warn
                 warning([mfilename ': cannot write to -> ' apStudentSol newline warn.message]);
+                fclose('all')
             end
             ResStudentScript = feval(nmCHE,apStudentSol);
+            strPoints.pointsAssStud(i) = pointsForCurrentAssignment * ResStudentScript;
+            strPoints.relPointsAssStud(i) = ResStudentScript;
+            
+            if ResStudentScript < 0
+                keyboard %Something wrong Bub
+            end
             % IMPORTANT: remove the path to prevent the use of the wrong
             % check-files.
             warning off
@@ -145,9 +153,8 @@ for i = 1:length(mfilesWithHash)
             warning on
             % Calcule partialpoints
             sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
-            allStudentsAndAssignments{idxStudAll_SA,idxHashAll_SA} = pointsForCurrentAssignment * ResStudentScript;
-            %             pointsForCurrentAssignment
-            
+            allStudentsAndAssignments{idxStudAll_SA,idxHashAll_SA} = ResStudentScript;
+
             %% Write the result to the student file
             percStudent = ResStudentScript * 100;
             
@@ -187,7 +194,14 @@ for i = 1:length(mfilesWithHash)
     end
 end
 
+%Safety last
+strPoints.sumPoints = sumPoints;
+if strPoints.sumPoints < 0
+    strPoints.sumPoints = 0;
+end
+
+
 cd(apAllStudentAss)
 save('cellAllStudentsAndAssignments.mat','allStudentsAndAssignments')
 cd(currPath);
-end
+end%function

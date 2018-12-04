@@ -177,7 +177,8 @@ removeShitFromDir(apFinDes);
 copyfiles(apStudentFiles,apFinDes);
 disp('Check manually copied submitted files');
 try
-    cCheckStudentSubmissions(con,nmCurrBonusAss)
+    [averageGrade, studentMatrix] = cCheckStudentSubmissions(con,nmCurrBonusAss);
+    strOV = AnalyseBonusAssignments(con);
 catch err
     error([mfilename ': ' err.message]);
 end

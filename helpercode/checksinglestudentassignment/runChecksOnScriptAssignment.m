@@ -90,13 +90,13 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
     end
     
-%     if res < 0
+    if res < 0
 %         warning('result is too low!')
-%         res = 0;
-%     elseif res > 1
-%         warning('result is too high!')
+        res = 0;
+    elseif res > 1
+        warning('result is too high!')
 %         res = 1;
-%     end
+    end
 
     % % % % % % % %     %     all outputs/variables are correct         %but result is too low
     % % % % % % % %     if length(checkingVar.nameVars) > 0 && ...

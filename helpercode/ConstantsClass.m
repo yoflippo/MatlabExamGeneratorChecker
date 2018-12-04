@@ -29,6 +29,8 @@ classdef ConstantsClass
             ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};
         WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4' 'week5' 'week6' 'week7' 'week8'};
         NMBONUSASSIGNMENTDIR = 'BonusOpdracht';
+        RATIO_THESIS = 0.2;
+        RATIO_PROGR = 0.8;
     end
     
     properties (SetAccess = private)

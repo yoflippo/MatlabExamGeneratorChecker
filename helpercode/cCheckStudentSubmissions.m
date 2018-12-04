@@ -1,4 +1,4 @@
-function averageGrade = cCheckStudentSubmissions(con,nmCurrBonusAss)
+function [averageGrade, studentMatrix] = cCheckStudentSubmissions(con,nmCurrBonusAss)
 %CHECKSTUDENTSUBMISSIONS
 %
 % ------------------------------------------------------------------------
@@ -63,6 +63,7 @@ files = dir(subWkFolder);
 % Get studentnumbers of students that submitted AND unzip the folder
 apWrongSub = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_wrongsubmissions']);
 apUnzipped = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
+apChecked = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_checked']);
 mkdirIf(apWrongSub);
 mkdirIf(apUnzipped);
 try
@@ -100,22 +101,29 @@ try
                 removeShitFromDir('temp')
                 rmdir('temp')
                 try
-                movefile(apCurrZip,apUnzipped);
+                    movefile(apCurrZip,apUnzipped);
                 catch
                     currPath = pwd;
                     cd ..
                     rmdir(currPath)
                 end
             else
-                movefile(apCurrZip,apWrongSub);
+                movefile(apCurrZip,apChecked);
             end
         else % not a zip-file but something else
             %             keyboard
-            warning off
-            delete(apCurrZip)
-            removeShitFromDir(apCurrZip)
-            rmdirIf(apCurrZip)
-            warning on
+            if ~exist('blRemoveFolders','var') && input('Do you want to delete all remaining folders? Yes=1, No=0')
+                blRemoveFolders = true;
+            else
+                blRemoveFolders = false;
+            end
+            if blRemoveFolders
+                warning off
+                delete(apCurrZip)
+                removeShitFromDir(apCurrZip)
+                rmdirIf(apCurrZip)
+                warning on
+            end
         end
         cd(tmpBase);
     end
@@ -130,7 +138,15 @@ catch err
     error([mfilename ': Something went wrong with unzipping!' newline err.message newline]);
 end
 
+%% Count number of assignemts and distinguish between theses/programming
+apAssBonus = fullfile(con.BASEFOLDER,con.Assignments,nmCurrBonusAss);
+cd(apAssBonus)
+numTheses = length(dirmf('TypeOfAssignment_Multiplechoice'));
+numProg = length(dirmf('TypeOfAssignment_MakeScript'))+length(dirmf('TypeOfAssignment_MakeFunction'));
+
+
 %% Load the old studentNumbers
+cd(con.BASEFOLDER);
 load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
 % Display how many students did not submit
 numOfNotSubmitted = length(studentNumbers)-length(studentsThatSubmitted);
@@ -305,26 +321,31 @@ save('cellAllStudentsAndAssignments.mat','allStudentsAndAssignments')
 % Remove Check-files from path
 warning off
 rmpath(genpath(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss)));
+rmpath(genpath(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER)));
 warning on
 
 strTrackStudent = cellstr(trackStudentAssignment);
-studentMatrix = ones(length(strTrackStudent(:,1)),2);
+studentMatrix = []; %ones(length(strTrackStudent(:,1)),2);
 cnt = 1;
 for sn = 1:length(strTrackStudent(:,1))
+    cd(apSubWk)
     studentFolder = trackStudentAssignment{sn,1};
     if exist(studentFolder,'dir')
         tic
         try
             % Check all the assigned assignments of individual students
-            points = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
+            strPoints = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
                 dicNameAssignmentAndPoints);
-            if points > PointsToBeEarned
+            if strPoints.sumPoints > PointsToBeEarned
                 keyboard %something is wrong Bub
             end
-            grade = ((points/PointsToBeEarned)*9)+1
-            studentMatrix(sn,1) = str2double(studentFolder);
-            studentMatrix(sn,2) = round(grade,1);
-            checkedStudent(cnt) = studentMatrix(sn,2);
+            
+            %% Calculate Thesis grade
+            [grade, grade_theses, grade_prog] = calculateGrade(con, strPoints, numTheses);
+                        
+            studentMatrix(cnt,1) = str2double(studentFolder);
+            studentMatrix(cnt,2) = round(grade,1);
+            checkedStudent(cnt) = studentMatrix(cnt,2);
             cnt = cnt + 1;
             % Give the student a grade, first make some text
             cCheck_GradeText;
@@ -347,9 +368,9 @@ for sn = 1:length(strTrackStudent(:,1))
             keyboard
         end
         toc
-    else
-        studentMatrix(sn,1) = str2double(studentFolder);
-        studentMatrix(sn,2) = round(1.0,1);
+%     else %% in case students who did not submit have to be added
+%         studentMatrix(sn,1) = str2double(studentFolder);
+%         studentMatrix(sn,2) = round(1.0,1);
     end
 end
 save(pathStudentResults,'studentMatrix');
