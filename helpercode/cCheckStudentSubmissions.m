@@ -142,8 +142,6 @@ end
 apAssBonus = fullfile(con.BASEFOLDER,con.Assignments,nmCurrBonusAss);
 cd(apAssBonus)
 numTheses = length(dirmf('TypeOfAssignment_Multiplechoice'));
-numProg = length(dirmf('TypeOfAssignment_MakeScript'))+length(dirmf('TypeOfAssignment_MakeFunction'));
-
 
 %% Load the old studentNumbers
 cd(con.BASEFOLDER);

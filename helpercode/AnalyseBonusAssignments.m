@@ -20,6 +20,19 @@ asas = allStudentsAndAssignments;
 dchap = dicWithHashes;
 dcasap = dicNameAssignmentAndPoints;
 
+%% Traverse students
+strStudGrad = [];
+nT = 1;
+for nSt = 2:length(asas(2:end,1))
+    currAssStud = asas(nSt,2:end);
+    currAssStudNotEmpty = sum(~cellfun(@isempty,currAssStud));
+    if currAssStudNotEmpty>0
+        strStudGrad(nT).idx = nSt;
+        strStudGrad(nT).sumPoints = sum(cell2mat(currAssStud));
+        nT = nT + 1;
+    end
+end
+
 %% Traverse all assignments
 strOV = [];
 for nAss = 2:length(asas(1,2:end))
@@ -33,7 +46,7 @@ for nAss = 2:length(asas(1,2:end))
     strOV(nAss-1).rpAss = rpCurrAss;
     pntCurrAss = dcasap(rpCurrAss);
     strOV(nAss-1).pntAss = pntCurrAss;
-    
+% %     min(min(corrcoef(desstat.resPoint(:,nl),desstat.totPoints)));
     % Get clean points
     currPoints = asas(2:end,nAss);
     assEmpty = cellfun(@isempty,currPoints);
@@ -44,21 +57,8 @@ for nAss = 2:length(asas(1,2:end))
     strOV(nAss-1).numAttempts = length(clnPoints);
     
     % Calculate P-value current assignment
-    strOV(nAss-1).meanPoints = mean(cell2mat(clnPoints));
+    strOV(nAss-1).meanPoints = mean(cell2mat(clnPoints)*strOV(nAss-1).pntAss);
     strOV(nAss-1).Pval = strOV(nAss-1).meanPoints/strOV(nAss-1).pntAss;
-end
-
-%% Traverse students
-strStudGrad = [];
-nT = 1;
-for nSt = 2:length(asas(2:end,1))
-    currAssStud = asas(nSt,2:end);
-    currAssStudNotEmpty = sum(~cellfun(@isempty,currAssStud));
-    if currAssStudNotEmpty>0
-        strStudGrad(nT).idx = nSt;
-        strStudGrad(nT).sumPoints = sum(cell2mat(currAssStud));
-        nT = nT + 1;
-    end
 end
 
 end % function

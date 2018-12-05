@@ -86,7 +86,8 @@ try
             end
         end
     end 
-catch
+catch err
+    error([mfilename ': ' err.message]);
     fclose('all');
 end
 

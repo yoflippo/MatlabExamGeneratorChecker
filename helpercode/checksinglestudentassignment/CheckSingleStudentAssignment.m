@@ -60,7 +60,8 @@ currPath = pwd;
 try
     apAllStudentAss =  pwd;
     load('cellAllStudentsAndAssignments.mat')
-catch
+catch err
+    warning([newline mfilename ': ' newline err.message newline]);
 end
 
 currentFolder = fullfile(pwd,studentdir);
@@ -112,6 +113,12 @@ for i = 1:length(mfilesWithHash)
             
             % Get the type of the file: opdracht_x, vraag_x
             apStudentSol = mfilesWithHash{1,i};
+            try %sometimes files are marked as readonly
+                fileattrib(apStudentSol,'+w')
+            catch err
+                warning([newline mfilename ': ' newline err.message newline]);
+                keyboard
+            end
             [apSTU, nmSTUScript, ~] = fileparts(apStudentSol);
             addpath(genpath(apSTU));
             
@@ -137,7 +144,7 @@ for i = 1:length(mfilesWithHash)
                 WriteToLastLineOfFile(apStudentSol,txtResultStud);
             catch warn
                 warning([mfilename ': cannot write to -> ' apStudentSol newline warn.message]);
-                fclose('all')
+                fclose('all') %just in case, errors could leave files open
             end
             ResStudentScript = feval(nmCHE,apStudentSol);
             strPoints.pointsAssStud(i) = pointsForCurrentAssignment * ResStudentScript;
