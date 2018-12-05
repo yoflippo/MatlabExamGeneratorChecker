@@ -89,7 +89,7 @@ problem.AssAll.Ass = {strOV(problem.All).apAss};
 
 %% Ask user to go through all problem files
 if isequal(input('Do you want to go through all problem files? Yes = 1, No = else '),1)
-    for nF = 1:length(problem.All)
+    for nF = 1:sum(problem.All)
         clc;
         disp(['There are ' num2str(sum(problem.All)) ' problems found'])
         disp(['Current problem: ' num2str(nF)])
