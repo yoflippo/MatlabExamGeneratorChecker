@@ -317,5 +317,13 @@ catch
     error([newline newline newline newline 'Jij moet eerst de week eindopdracht uitpakken (unzippen)!' newline 'DOE DAT NU!' newline 'Doe je dat niet, dan loop je punten mis of gaan er zaken fout die niet fout mogen gaan.']);
 end
 cd ..;
-disp('Alles gaat goed! Ga aan de slag met deelopdracht_1')
+dirs = dir;
+errtxt = [newline newline '           LEES MIJ !!!!          ' newline newline 'Als je zo door gaat, gaat het fout. Je moet helemaal opnieuw beginnen.' newline 'Pak het verkregen zip-bestand (klik op het bestand, rechter muisknop enzv.).' newline 'Begin opnieuw met het uitvoeren van StartWeekOpdracht.m.' newline newline 'Jij mag namen van bestanden en folderstructuren e.d. niet aanpassen!'];
+
+if ~any(contains({dirs.name},'deelopdracht_1')) || ~any(contains({dirs.name},'deelopdracht_2')) || ~any(contains({dirs.name},'AfrondenWeekOpdracht.m'))
+  error(errtxt);
+end
+
+
+disp('Alles lijkt goed te gaan. Ga aan de slag met deelopdracht_1')
 

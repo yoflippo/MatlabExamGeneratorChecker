@@ -292,10 +292,8 @@ dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment
 save(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
 % Delete a possible existing studentMatrix
-pathStudentResults = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,['resultatenWeek' nmCurrBonusAss '.mat']);
-if exist(pathStudentResults,'dir')
-    delete(pathStudentResults)
-end
+pathStudentResults = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,...
+    con.BONUSASSNAME(con.BONUSASSNUMBER),['resultaten' nmCurrBonusAss datetimetxt '.mat']);
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);

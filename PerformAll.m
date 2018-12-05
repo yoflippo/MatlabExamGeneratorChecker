@@ -173,10 +173,10 @@ end %Generation of week assignment
 
 %% Check manually copied submitted files
 cd(con.BASEFOLDER)
-apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
-removeShitFromDir(apFinDes);
-copyfiles(apStudentFiles,apFinDes);
+% apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+% apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
+% removeShitFromDir(apFinDes);
+% copyfiles(apStudentFiles,apFinDes);
 disp('Check manually copied submitted files');
 try
     [averageGrade, studentMatrix] = cCheckStudentSubmissions(con,nmCurrBonusAss);
@@ -184,7 +184,8 @@ try
 catch err
     error([mfilename ': ' err.message]);
 end
-save(['WorkSpaceAfterChecking' nmCurrBonusAss '.mat'])
+cd(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,con.BONUSASSNAME(con.BONUSASSNUMBER)))
+save(['WorkSpace' mfilename 'AfterChecking' nmCurrBonusAss datetimetxt '.mat'])
 diary off
 warning off
 rmpath(genpath(fileparts(mfilename('fullpath'))));
