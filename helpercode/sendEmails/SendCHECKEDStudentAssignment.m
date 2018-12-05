@@ -1,6 +1,5 @@
 %https://nl.mathworks.com/matlabcentral/answers/94446-can-i-send-e-mail-through-matlab-using-microsoft-outlook
-clear all;
-InitAll
+cd(con.BASEFOLDER)
 
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','E_mail','opleidingbewegingstechnologie@gmail.com');
@@ -11,12 +10,16 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-studentNumbers = load(fullfile('studentnumbers','studentnumbers.txt'))
+assignmentNum = '1'
+nameCurrentBonusDir = [con.NMBONUSASSIGNMENTDIR assignmentNum '_checked']
+cd(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER));
+cd(nameCurrentBonusDir);
+
+studentNumbers = unique(load(fullfile(con.BASEFOLDER,'studentnumbers','studentnumbers.txt')))
 strStudentNumbers = string(num2str(studentNumbers));
 
-thisWeek = 'week4'
-cd('submitted');
-cd(thisWeek);
+thisWeek = 'BonusOpdracht1'
+
 
 %% Recover earlier saved studentnumbers to prevent multiple e-mail to same student
 try
@@ -37,7 +40,7 @@ chr = [chr newline newline 'Onderaan jouw uitwerking kan extra informatie staan 
 chr = [chr newline];
 chr = [chr newline 'Op deze e-mail wordt niet gereageerd.'];
 chr = [chr newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
-chr = [chr newline 'Mark Schrauwen in RZ 2.17.1. '];
+chr = [chr newline 'Mark Schrauwen in RZ 0.09. '];
 chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];

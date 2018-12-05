@@ -5,13 +5,13 @@
 % De eerste vector geef je de naam 'bovenbeen' en de tweede vector 
 % de naam 'onderbeen'.  
 %
-% De output is de afgetrekte waarde van het laatste element van de vector
-% bovenbeen en het tweede element van de vector onderbeen.
+% De output is de  waarde van het laatste element van de vector bovenbeen 
+% afgetrokken van het tweede element van de vector onderbeen.
 
-function afgetrekteWaarde = opdracht_8(bovenbeen, onderbeen)
+function afgetrokkenWaarde = opdracht_8(bovenbeen, onderbeen)
 
 waardeBovenbeen=bovenbeen(end);
 waardeOnderbeen=onderbeen(2);
-afgetrekteWaarde= waardeBovenbeen-waardeOnderbeen;
+afgetrokkenWaarde= waardeBovenbeen-waardeOnderbeen;
 
 end

@@ -43,8 +43,6 @@ booghoek = 80; %%!! %  cirkelsegment van de rockervoet moet minimaal gelijk zijn
 beenlengte= 90; % spreekt voor zich
 time = 0.01; % Pauseduur in de animatie
 
-
-
 % BEREKENINGEN
 x = 0; %startpositie (x coordinaat centrum cirkelsegment)
 y = 0; %% !!

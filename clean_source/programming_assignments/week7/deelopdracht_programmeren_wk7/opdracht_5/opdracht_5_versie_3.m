@@ -98,6 +98,7 @@ T1(2,: = r;                    %%!!
 for i = 1:numsteps
     T1(1,i+1) = T1(1,i)+Stapboog;
 
+    
 % Toepassen op het model
 for i =1:numsteps+1
     model 1,:,i) = T1(1,i)+model(1,:,i);

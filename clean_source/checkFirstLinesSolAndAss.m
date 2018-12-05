@@ -24,8 +24,8 @@ for nf = 1:length(solfiles)
         fin = min(lStu,lSol);
     end
     
-    if ~contains(txtSol{1},'Opdracht') && ~contains(txtSol{1},'Vraag') && ...
-            ~contains(txtStu{1},'Vraag') && ~contains(txtStu{1},'Vraag')
+    if ~contains(txtSol{1},'Opdracht') && ~contains(txtSol{1},'Stelling') && ...
+            ~contains(txtStu{1},'Stelling') && ~contains(txtStu{1},'Vraag')
         disp('FIRST LINE IS WRONG MOFO!');
         edit(apSol)
         edit(apStu)
@@ -42,7 +42,24 @@ for nf = 1:length(solfiles)
                 disp('VS:')
                 disp(txtStu{l})
                 disp(['Progress: ' num2str(round(nf/length(solfiles)*100,1))])
-                keyboard
+                
+                edtSvc  = com.mathworks.mlservices.MLEditorServices ;
+                edtList = edtSvc.getEditorApplication.getOpenEditors.toArray ;
+                edtList(end).bringToFront;
+                endPosition = edtList(end).getDocument.getLength;
+                edtList(end).setCaretPosition(endPosition);
+                % Also set caret for second to last files
+                endPosition = edtList(end-1).getDocument.getLength;
+                edtList(end-1).setCaretPosition(endPosition);
+                commandwindow
+                if isequal(input('Do you want to close The opened scripts? Yes = 1, No = else '),1)
+                    % Close opened scripts
+                    edtSvc  = com.mathworks.mlservices.MLEditorServices ;
+                    edtList = edtSvc.getEditorApplication.getOpenEditors.toArray ;
+                    edtList(end).close;
+                    edtList(end-1).close;
+                end
+                
                 clc
                 disp('Busy comparing SOLUTION files and assignments');
                 break;
@@ -50,7 +67,7 @@ for nf = 1:length(solfiles)
         end
     end
     clc
-    disp(['Checking the headers of assignments and solutions, Progress: ' num2str(round(nf/length(solfiles)*100,1)) ' %'])  
+    disp(['Checking the headers of assignments and solutions, Progress: ' num2str(round(nf/length(solfiles)*100,1)) ' %'])
 end
 
 end
