@@ -98,7 +98,7 @@ if exist('WeekAssignmentsToGenerate','var')
         % go to the folder with studentnumbers. It is assumed to be a list with
         apDirStudentNumbers = fullfile(con.BASEFOLDER,'studentnumbers');
         cd(apDirStudentNumbers);
-        studentNumbers = load('studentnumbers.txt');
+        studentNumbers = unique(load('studentnumbers.txt'));
         %% Remove non-unique students
         disp(['Number of students: ' num2str(length(studentNumbers))]);
         cd(con.BASEFOLDER);

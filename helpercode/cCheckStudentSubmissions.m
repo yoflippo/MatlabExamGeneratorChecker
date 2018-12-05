@@ -64,9 +64,11 @@ files = dir(subWkFolder);
 apWrongSub = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_wrongsubmissions']);
 apUnzipped = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
 apChecked = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_checked']);
+apFeedback = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_feedbackStudent']);
 mkdirIf(apWrongSub);
 mkdirIf(apUnzipped);
 mkdirIf(apChecked);
+mkdirIf(apFeedback);
 try
     cd(subWkFolder);
     tmpBase = pwd;
@@ -133,6 +135,15 @@ try
     for nA = 1:length(asvFiles)
         delete(fullfile(asvFiles(nA).folder,asvFiles(nA).name));
     end
+    
+    asvFiles = dirmf('GeefJouwMening.txt');
+    for nA = 1:length(asvFiles)
+        apTmp = fullfile(asvFiles(nA).folder,[asvFiles(nA).name]);
+        apDes = fullfile(apFeedback,[asvFiles(nA).name num2str(nA)]);
+        movefile(apTmp,apDes,'f');
+    end
+    
+    
     cd(con.BASEFOLDER);
 catch err
     keyboard
