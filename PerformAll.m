@@ -191,3 +191,4 @@ warning off
 rmpath(genpath(fileparts(mfilename('fullpath'))));
 addpath(genpath('helpercode'));
 warning on
+cd(con.BASEFOLDER)

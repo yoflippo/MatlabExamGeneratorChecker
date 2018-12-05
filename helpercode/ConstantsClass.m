@@ -16,7 +16,7 @@ classdef ConstantsClass
         OTHERFILESINSTUDENTFOLDER = {ConstantsClass.NAMEZIPMFILEFORSTUDENTS 'studentnummer.m' ConstantsClass.LASTASSIGNMENT};
         ADJUSTEDHASH = 'AANGEPASTE_MFILE_GEEN_PUNTEN';
         FOLDERCHEAT = 'BESTANDEN_NIET_AAN_JOU_TOEGEWEZEN';
-        
+        POSTFIX_SOL4STUD = '_UITWERKING';
         NAMERESULTMAT = 'resultatenWeek';
         VAR_RESULT = 'ResStudentScript';
         TESTFOLDER = 'fortesting';

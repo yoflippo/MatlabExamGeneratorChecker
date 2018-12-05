@@ -106,7 +106,7 @@ for i = 1:length(mfilesWithHash)
             allStudentsAndAssignments{idxStudAll_SA,idxHashAll_SA} = 0;
             
             % Save it in a variable used by the solution
-            absPathCheckfile = replace(AbsPathSOLScript,'SOL','CHECK');
+            absPathCheckfile = replace(AbsPathSOLScript,con.SOLPOSTFIX,con.CHECKPOSTFIX);
             % Extract name of checking function and assume it is on the path
             [apCHE, nmCHE, ~] = fileparts(absPathCheckfile);
             addpath(genpath(apCHE));
@@ -127,8 +127,8 @@ for i = 1:length(mfilesWithHash)
             pathWithoutExt = replace(apStudentSol,'.m','');
             foundSlashes = strfind(pathWithoutExt,filesep);
             assignment = apStudentSol(foundSlashes(end-1)+1:length(pathWithoutExt));
-            if contains(assignment,'_UITWERKING')
-                assignment = extractBefore(assignment,'_UITWERKING');
+            if contains(assignment,con.POSTFIX_SOL4STUD)
+                assignment = extractBefore(assignment,con.POSTFIX_SOL4STUD);
                 %                 keyboard %Somethings wrong Bub!
             end
             
@@ -153,12 +153,14 @@ for i = 1:length(mfilesWithHash)
             if ResStudentScript < 0
                 keyboard %Something wrong Bub
             end
+			
             % IMPORTANT: remove the path to prevent the use of the wrong
             % check-files.
             warning off
             rmpath(genpath(apCHE));
             rmpath(genpath(apSTU));
             warning on
+			
             % Calcule partialpoints
             sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
             allStudentsAndAssignments{idxStudAll_SA,idxHashAll_SA} = ResStudentScript;
@@ -207,7 +209,6 @@ strPoints.sumPoints = sumPoints;
 if strPoints.sumPoints < 0
     strPoints.sumPoints = 0;
 end
-
 
 cd(apAllStudentAss)
 save('cellAllStudentsAndAssignments.mat','allStudentsAndAssignments')

@@ -56,11 +56,7 @@ load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT))
 % unusable because you are running this script
 apSubmitted = fullfile(pwd,subWkFolder);
 addpath(genpath(apSubmitted))
-% % % % % % % % removeDirectoriesFromFolder(fullfile(pwd,subWkFolder))
-% Get files in the folder for analysis
-files = dir(subWkFolder);
 
-% Get studentnumbers of students that submitted AND unzip the folder
 apWrongSub = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_wrongsubmissions']);
 apUnzipped = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
 apChecked = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_checked']);
@@ -69,22 +65,25 @@ mkdirIf(apWrongSub);
 mkdirIf(apUnzipped);
 mkdirIf(apChecked);
 mkdirIf(apFeedback);
+
+files = dir(subWkFolder);
 try
     cd(subWkFolder);
     tmpBase = pwd;
     studentsThatSubmitted = cell(1,length(files)-2);
     % Get the right week folders
-    for i = 3:length(files)
-        apCurrZip = fullfile(apSubmitted,files(i).name);
-        if contains(files(i).name,'.zip')
-            if ~contains(files(i).name,'Checked') %% && contains(files(i).name,'ToSubmit')
-                studentsThatSubmitted{i-2} = findStudentNumberInTxt(files(i).name);
-                mkdir(studentsThatSubmitted{i-2})
-                cd(studentsThatSubmitted{i-2})
+    for nF = 3:length(files)
+        apCurrZip = fullfile(apSubmitted,files(nF).name);
+        if contains(files(nF).name,'.zip')
+            if ~contains(files(nF).name,'Checked') %% && contains(files(nF).name,'ToSubmit')
+                studentsThatSubmitted{nF-2} = findStudentNumberInTxt(files(nF).name);
+                mkdir(studentsThatSubmitted{nF-2})
+                cd(studentsThatSubmitted{nF-2})
                 currPath = pwd;
                 mkdir('temp');
                 cd('temp');
                 unzip(apCurrZip);
+                
                 %Remove dirs without correct weekX assignment
                 neededDir = dirmf(nmCurrBonusAss);
                 blSubmittedWrongFiles = true;
@@ -130,20 +129,30 @@ try
         end
         cd(tmpBase);
     end
+	
     % Remove .asv files
     asvFiles = dirmf('.asv');
     for nA = 1:length(asvFiles)
         delete(fullfile(asvFiles(nA).folder,asvFiles(nA).name));
     end
-    
-    asvFiles = dirmf('GeefJouwMening.txt');
-    for nA = 1:length(asvFiles)
-        apTmp = fullfile(asvFiles(nA).folder,[asvFiles(nA).name]);
-        apDes = fullfile(apFeedback,[asvFiles(nA).name num2str(nA)]);
+	
+    % Move all files with opinion of student
+    opStud = dirmf('GeefJouwMening.txt');
+    for nA = 1:length(opStud)
+        stNr = findStudentNumberInTxt(opStud(nA).folder);
+        apTmp = fullfile(opStud(nA).folder,opStud(nA).name);
+        [~,nm,ext] = fileparts(opStud(nA).name);
+        apDes = fullfile(apFeedback,[nm '_' stNr ext]);
         movefile(apTmp,apDes,'f');
+        clear stNr nA opStud;
     end
-    
-    
+	
+	% Delete files that contain the our solutions
+    Sol4Stud = dirmf(con.POSTFIX_SOL4STUD);
+    for nA = 1:length(Sol4Stud)
+        delete(fullfile(Sol4Stud(nA).folder,Sol4Stud(nA).name));
+    end
+    clear asvFiles opStud Sol4Stud nA
     cd(con.BASEFOLDER);
 catch err
     keyboard
@@ -231,12 +240,12 @@ debugOutput(DEBUGOUTPUT,'Check for each student if they have their correct assig
 
 % Load the information assigned for this week
 load(fullfile(con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss,['assignedHashes_' nmCurrBonusAss]));
-for i = 1:length(trackStudentAssignment)
+for nF = 1:length(trackStudentAssignment)
     try %!!!
         % Get hash codes of current student
-        HCodeCurrStud = {trackStudentAssignment{i,2:end}};
+        HCodeCurrStud = {trackStudentAssignment{nF,2:end}};
         % Go inside student folder
-        relPath = fullfile(con.STUDENTSUBFOLDER,nmCurrBonusAss,trackStudentAssignment{i,1});
+        relPath = fullfile(con.STUDENTSUBFOLDER,nmCurrBonusAss,trackStudentAssignment{nF,1});
         cd(relPath);
         % Get hashcodes in student folder
         [HashCodeCurrStud, AbsPathCodeCurrStud] = GetHashCodeOfMFilesInFolder(nmCurrBonusAss);
@@ -281,15 +290,15 @@ pointsPerAssignment = zeros(1,length(mfiles));
 clear nameOfAssignment
 nameOfAssignment = cell(1,length(mfiles));
 
-for i = 1:length(mfiles)
+for nF = 1:length(mfiles)
     try
-        dr = mfiles(i).folder;
-        run(fullfile(dr,mfiles(i).name));
+        dr = mfiles(nF).folder;
+        run(fullfile(dr,mfiles(nF).name));
         % Get assignment name + name of folder directly above it
         tmp = extractAfter(dr,nmCurrBonusAss);
         tmp= extractAfter(tmp,filesep);
-        nameOfAssignment{i} = tmp;
-        pointsPerAssignment(i) = deelpunten;
+        nameOfAssignment{nF} = tmp;
+        pointsPerAssignment(nF) = deelpunten;
     catch err
         disp(err);
         error([mfilename ': E2 ' newline]);
@@ -332,25 +341,24 @@ rmpath(genpath(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss))
 rmpath(genpath(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER)));
 warning on
 
+%% Check all the assigned assignments of individual students, 
+% grade them, zip them and save relevant data
 strTrackStudent = cellstr(trackStudentAssignment);
 studentMatrix = []; %ones(length(strTrackStudent(:,1)),2);
 cnt = 1;
-for sn = 1:length(strTrackStudent(:,1))
+for nS = 1:length(strTrackStudent(:,1))
     cd(apSubWk)
-    studentFolder = trackStudentAssignment{sn,1};
+    studentFolder = trackStudentAssignment{nS,1};
     if exist(studentFolder,'dir')
         tic
         try
-            % Check all the assigned assignments of individual students
             strPoints = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
                 dicNameAssignmentAndPoints);
             if strPoints.sumPoints > PointsToBeEarned
                 keyboard %something is wrong Bub
-            end
-            
-            %% Calculate Thesis grade
-            [grade, grade_theses, grade_prog] = calculateGrade(con, strPoints, numTheses);
-                        
+            end      
+            % Calculate Thesis grade
+            [grade, grade_theses, grade_prog] = calculateGrade(con, strPoints, numTheses);                       
             studentMatrix(cnt,1) = str2double(studentFolder);
             studentMatrix(cnt,2) = round(grade,1);
             checkedStudent(cnt) = studentMatrix(cnt,2);
@@ -377,14 +385,9 @@ for sn = 1:length(strTrackStudent(:,1))
             keyboard
         end
         toc
-%     else %% in case students who did not submit have to be added
-%         studentMatrix(sn,1) = str2double(studentFolder);
-%         studentMatrix(sn,2) = round(1.0,1);
     end
 end
 save(pathStudentResults,'studentMatrix');
 averageGrade = mean(checkedStudent)
-
 cd(con.BASEFOLDER);
-
 end
