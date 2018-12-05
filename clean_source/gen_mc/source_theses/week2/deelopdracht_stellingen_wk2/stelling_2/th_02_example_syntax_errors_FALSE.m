@@ -1,4 +1,5 @@
-De code hieronder bevat een syntaxfout:
+De code hieronder bevat een syntaxfout. Merk het verschil op tussen een
+syntaxfout en een programmeerfout.
 
 ======= Code =======
 % Optellen van een variabele

@@ -92,11 +92,13 @@ if isequal(input('Do you want to go through all problem files? Yes = 1, No = els
     for nF = 1:length(problem.All)
         clc;
         disp(['There are ' num2str(sum(problem.All)) ' problems found'])
+        disp(['Current problem: ' num2str(nF)])
         currSOLFile = problem.AssAll.SOL{nF};
         currAssFile = problem.AssAll.Ass{nF};
         if any(contains(problem.AssLowP.SOL,currSOLFile))
             disp('This file has a problem with the P-value');
-        elseif any(contains(problem.AssLowRIT.SOL,currSOLFile))
+        end
+        if any(contains(problem.AssLowRIT.SOL,currSOLFile))
             disp('This file has a problem with the RIT-value');
         end
         disp('Remember that these files are copies and you should also make changes in cleansource');
