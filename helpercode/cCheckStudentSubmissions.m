@@ -66,6 +66,7 @@ apUnzipped = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unz
 apChecked = fullfile(con.BASEFOLDER, con.STUDENTSUBFOLDER,[nmCurrBonusAss '_checked']);
 mkdirIf(apWrongSub);
 mkdirIf(apUnzipped);
+mkdirIf(apChecked);
 try
     cd(subWkFolder);
     tmpBase = pwd;
@@ -355,6 +356,7 @@ for sn = 1:length(strTrackStudent(:,1))
             % Zip checked folder
             zipFilePathName = [nmNewFolder '.zip'];
             zip(zipFilePathName,nmNewFolder)
+            movefile(zipFilePathName,apChecked);
             % Remove Folder
             dr = fullfile(apSubmitted,nmNewFolder);
             removeShitFromDir(dr);

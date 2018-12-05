@@ -13,6 +13,11 @@ con = ConstantsClass('PATH',GetPathOneLevelUp(mfilename('fullpath')),...
     'NumberOfBonusAssignments',2,...
     'WeeksForAssignment',{1:3,4:6});
 
+%% Select the right BONUSASSNUMBER.
+con.BONUSASSNUMBER = 1; % Adjust me!!!
+nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
+BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
+
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
 for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
@@ -25,10 +30,7 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
     end
 end
 
-%% Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 1; % Adjust me!!!
-nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
-BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
+
 
 %% Comment me if no re-generation needs to
 % WeekAssignmentsToGenerate = BonusAssignmentWeeks;
@@ -171,10 +173,10 @@ end %Generation of week assignment
 
 %% Check manually copied submitted files
 cd(con.BASEFOLDER)
-% apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-% apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
-% removeShitFromDir(apFinDes);
-% copyfiles(apStudentFiles,apFinDes);
+apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
+removeShitFromDir(apFinDes);
+copyfiles(apStudentFiles,apFinDes);
 disp('Check manually copied submitted files');
 try
     [averageGrade, studentMatrix] = cCheckStudentSubmissions(con,nmCurrBonusAss);
