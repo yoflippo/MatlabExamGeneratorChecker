@@ -101,10 +101,10 @@ if ~isempty(char(txtCleanedStudentSolution))
     end
     
     if res < 0
-        warning('result is too low!')
+%         warning('result is too low!')
         res = 0;
     elseif res > 1
-        warning('result is too high!')
+%         warning('result is too high!')
         res = 1;
     end
     %% Checks to see if the I/O is correct but the other checks not --> helps to see if we apply the right code checks

@@ -52,12 +52,15 @@ end
 
 % Create variables that need to be filled
 blOutputTxtNoFile = false;
+blNoFileButTxt = true;
 oTxt = [];
 for narg = 1:nargin
     sc = upper(varargin{narg});
     switch sc
         case {'OT', 'ONLYTXT'}
             blOutputTxtNoFile = true;
+        case {'TI', 'TXTINPUT'}
+            blNoFileButTxt = false;
         otherwise
             apFile = varargin{narg};
     end
@@ -66,16 +69,20 @@ end
 
 
 %% Read the file
-try
-    delimiter = {'\n'};
-    formatSpec = '%s';
-    fileID = fopen(apFile,'r');
-    txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
-        'TextType', 'string',  'ReturnOnError', false);
-    fclose('all');
-    txt = txt{1,1};
-catch err
-    error([mfilename ': Could not read the file: ' err.message]);
+if blNoFileButTxt
+    try
+        delimiter = {'\n'};
+        formatSpec = '%s';
+        fileID = fopen(apFile,'r');
+        txt = textscan(fileID, formatSpec,'Whitespace','', 'Delimiter', delimiter,...
+            'TextType', 'string',  'ReturnOnError', false);
+        fclose('all');
+        txt = txt{1,1};
+    catch err
+        error([mfilename ': Could not read the file: ' err.message]);
+    end
+else
+    txt = apFile;
 end
 
 % Remove comments
@@ -95,7 +102,7 @@ txt = strrep(txt,'clear','%clear');
 txt = strrep(txt,'input(','%input(');
 
 %% Write to file
-if ~blOutputTxtNoFile
+if ~blOutputTxtNoFile && blNoFileButTxt
     writetxtfile(apFile,txt);
 else
     oTxt = txt;

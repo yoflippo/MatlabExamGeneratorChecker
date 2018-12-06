@@ -156,6 +156,8 @@ else
     cnt = cnt + 1;
     txt{cnt} = 'Je mag ons altijd vragen stellen. Kom langs, of e-mail.';
     cnt = cnt + 1;
+    txt{cnt} = 'Mogelijk nemen we contact op met je op basis van jouw commentaar.';
+    cnt = cnt + 1;
     txt{cnt} = '';
     cnt = cnt + 1;
     txt{cnt} = 'Sla dit bestand op!';

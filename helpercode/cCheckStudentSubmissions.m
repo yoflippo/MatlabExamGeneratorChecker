@@ -114,7 +114,7 @@ try
             end
         else % not a zip-file but something else
             %             keyboard
-            if ~exist('blRemoveFolders','var') && input('Do you want to delete all remaining folders? Yes=1, No=0')
+            if ~exist('blRemoveFolders','var') && input('Do you want to delete all remaining folders in the submitted directory? Yes=1, No=0 ')
                 blRemoveFolders = true;
             else
                 blRemoveFolders = false;
@@ -129,13 +129,13 @@ try
         end
         cd(tmpBase);
     end
-	
+    
     % Remove .asv files
     asvFiles = dirmf('.asv');
     for nA = 1:length(asvFiles)
         delete(fullfile(asvFiles(nA).folder,asvFiles(nA).name));
     end
-	
+    
     % Move all files with opinion of student
     opStud = dirmf('GeefJouwMening.txt');
     for nA = 1:length(opStud)
@@ -144,10 +144,10 @@ try
         [~,nm,ext] = fileparts(opStud(nA).name);
         apDes = fullfile(apFeedback,[nm '_' stNr ext]);
         movefile(apTmp,apDes,'f');
-        clear stNr nA opStud;
     end
-	
-	% Delete files that contain the our solutions
+    clear stNr nA opStud;
+    
+    % Delete files that contain the our solutions
     Sol4Stud = dirmf(con.POSTFIX_SOL4STUD);
     for nA = 1:length(Sol4Stud)
         delete(fullfile(Sol4Stud(nA).folder,Sol4Stud(nA).name));
@@ -208,7 +208,7 @@ try
         % Get hashcode from current mfiles
         if blTestIfCorrectFile
             currFileAbsPath = fullfile(mfiles(nSAss).folder,mfiles(nSAss).name);
-            [p, subdir] = GetPathOneLevelUp(currFileAbsPath,2);
+            [~, subdir] = GetPathOneLevelUp(currFileAbsPath,2);
             [~,~,endSnum] = findStudentNumberInTxt(currFileAbsPath);
             p = fullfile(currFileAbsPath(1:endSnum),nmCurrBonusAss);
             try
@@ -307,7 +307,6 @@ end
 
 %% Put in dictionary and save in MAT-file
 debugOutput(DEBUGOUTPUT,'Put in dictionary and save in MAT-file',0);
-
 dicNameAssignmentAndPoints = containers.Map(nameOfAssignment,pointsPerAssignment);
 save(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss,'dicAssignmentsAndPoints.mat'),'dicNameAssignmentAndPoints')
 
@@ -341,7 +340,7 @@ rmpath(genpath(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss))
 rmpath(genpath(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER)));
 warning on
 
-%% Check all the assigned assignments of individual students, 
+%% Check all the assigned assignments of individual students,
 % grade them, zip them and save relevant data
 strTrackStudent = cellstr(trackStudentAssignment);
 studentMatrix = []; %ones(length(strTrackStudent(:,1)),2);
@@ -352,13 +351,14 @@ for nS = 1:length(strTrackStudent(:,1))
     if exist(studentFolder,'dir')
         tic
         try
-            strPoints = CheckSingleStudentAssignment(studentFolder,dicWithHashes, ...
+            strPoints = CheckSingleStudentAssignment(con,studentFolder,dicWithHashes, ...
                 dicNameAssignmentAndPoints);
             if strPoints.sumPoints > PointsToBeEarned
                 keyboard %something is wrong Bub
-            end      
+            end
             % Calculate Thesis grade
-            [grade, grade_theses, grade_prog] = calculateGrade(con, strPoints, numTheses);                       
+            [grade, grade_theses, grade_prog] = calculateGrade(con, strPoints, numTheses);
+            strDiffOpinStud(cnt) = findOpinionStudent(apSubWk,studentFolder,nmCurrBonusAss);
             studentMatrix(cnt,1) = str2double(studentFolder);
             studentMatrix(cnt,2) = round(grade,1);
             checkedStudent(cnt) = studentMatrix(cnt,2);
@@ -377,17 +377,57 @@ for nS = 1:length(strTrackStudent(:,1))
             % Remove Folder
             dr = fullfile(apSubmitted,nmNewFolder);
             removeShitFromDir(dr);
-            rmdir(dr);
-            removeShitFromDir(studentFolder);
-            rmdir(studentFolder);
+            rmdir(dr,'s');
+            rmdir(studentFolder,'s');
         catch err
             disp([newline 'DO YOUR MAGIC MAESTRO!' newline]);
             keyboard
         end
         toc
     end
-end
+end %for
+cd(apSubWk)
+analyseStudentFeedback(apFeedback,strDiffOpinStud,nmCurrBonusAss)
+cd(apSubWk)
 save(pathStudentResults,'studentMatrix');
 averageGrade = mean(checkedStudent)
 cd(con.BASEFOLDER);
+end
+
+%% Function to read the feedback of the student from the last assignment
+function strDiffOpinStud = findOpinionStudent(apSubWk,studentFolder,nmCurrBonusAss)
+apOld = pwd;
+try
+    apStud = fullfile(apSubWk,studentFolder,nmCurrBonusAss);
+    cd(apStud);
+    fAf = dirmf('deelopdracht_');
+    apEndAss = fullfile(fAf(end).folder,fAf(end).name)
+    cd(apEndAss)
+    files = dir;
+    apEndAssFile = fullfile(files(end).folder,files(end).name);
+    t = readTxtFile(apEndAssFile);
+    relTxt = t(1:50);
+    relTxt2 = removeCommentsAndEmptyLines(relTxt,'TI');
+    nmTmp = 'tmp.m';
+    makeMFileFromCells(nmTmp,{relTxt2});
+    run(nmTmp);
+    delete(nmTmp);
+    strDiffOpinStud.Naam = Naam;
+    strDiffOpinStud.Hoeveelheid = Hoeveelheid;
+    strDiffOpinStud.Moeilijkheidsgraad = Moeilijkheidsgraad;
+catch
+    strDiffOpinStud.Naam = [];
+    strDiffOpinStud.Hoeveelheid = [];
+    strDiffOpinStud.Moeilijkheidsgraad = [];
+end
+cd(apOld)
+end
+
+function analyseStudentFeedback(apSubWk,strDiffOpinStud,nmCurrBonusAss)
+cd(apSubWk)
+figure('name','Mening student','units','normalized','outerposition',[0 0 1 1],'visible','off');
+boxplot([strDiffOpinStud.Moeilijkheidsgraad; strDiffOpinStud.Hoeveelheid]');
+xlabel('Moeilijkheidsgraad en Hoeveelheid');
+title('Mening studenten moeilijheidsgraad en hoeveelheid');
+saveTightFigure(gcf,[nmCurrBonusAss '_DiffQuant.png']);
 end

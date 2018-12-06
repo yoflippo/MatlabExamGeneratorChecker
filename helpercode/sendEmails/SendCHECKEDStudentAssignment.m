@@ -27,6 +27,7 @@ try
     warning('RELOAD studentnumbers!!!!!');
 catch
 end
+
 %% Message for student
 chr = 'Beste student,';
 chr = [chr newline ];

@@ -1,4 +1,4 @@
-function strPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPath,dicNameAssignmentAndPoints)
+function strPoints = CheckSingleStudentAssignment(con,studentdir,dicCheckFilesAbsPath,dicNameAssignmentAndPoints)
 %CHECKSINGLESTUDENTASSIGNMENT A function that checks a students week
 %assignment.
 %
@@ -36,8 +36,8 @@ function strPoints = CheckSingleStudentAssignment(studentdir, dicCheckFilesAbsPa
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
 %
 % PARAMETERS:
-%               studentdir:   name of the student folder
-%               hashdic:   the dictionary with the hashes.
+%               studentdir: name of the student folder
+%               hashdic:    the dictionary with the hashes.
 %
 % RETURN:
 %               result:     the percentage of right answers and solution.
