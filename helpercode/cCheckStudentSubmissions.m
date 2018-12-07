@@ -100,14 +100,13 @@ try
                 end
                 %Delete everything but current week folder
                 cd ..
-                removeShitFromDir('temp')
-                rmdir('temp')
+                rmdir('temp','s')
                 try
                     movefile(apCurrZip,apUnzipped);
                 catch
                     currPath = pwd;
                     cd ..
-                    rmdir(currPath)
+                    rmdir(currPath,'s')
                 end
             else
                 movefile(apCurrZip,apChecked);
@@ -130,13 +129,13 @@ try
         cd(tmpBase);
     end
     
-    % Remove .asv files
-    asvFiles = dirmf('.asv');
-    for nA = 1:length(asvFiles)
-        delete(fullfile(asvFiles(nA).folder,asvFiles(nA).name));
-    end
+    %% Remove non-relevavnt files
+    cd(apSubmitted);
+    keyboard % This part has to be checked
+    cellExt2Keep = {'.m' '.txt' '.csv' '.dat' '.xls' '.xlsx'};
+    removeFilesFromDirs(ap.testData,cellExt2Keep);
     
-    % Move all files with opinion of student
+    %% Move all files with opinion of student
     opStud = dirmf('GeefJouwMening.txt');
     for nA = 1:length(opStud)
         stNr = findStudentNumberInTxt(opStud(nA).folder);
@@ -147,7 +146,7 @@ try
     end
     clear stNr nA opStud;
     
-    % Delete files that contain the our solutions
+    %% Delete files that contain the our solutions, possibly after a re-run of this function
     Sol4Stud = dirmf(con.POSTFIX_SOL4STUD);
     for nA = 1:length(Sol4Stud)
         delete(fullfile(Sol4Stud(nA).folder,Sol4Stud(nA).name));
@@ -401,7 +400,7 @@ try
     apStud = fullfile(apSubWk,studentFolder,nmCurrBonusAss);
     cd(apStud);
     fAf = dirmf('deelopdracht_');
-    apEndAss = fullfile(fAf(end).folder,fAf(end).name)
+    apEndAss = fullfile(fAf(end).folder,fAf(end).name);
     cd(apEndAss)
     files = dir;
     apEndAssFile = fullfile(files(end).folder,files(end).name);

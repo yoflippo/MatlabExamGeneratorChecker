@@ -1,1 +1,0 @@
-error([newline mfilename ': ' newline err.message newline]);

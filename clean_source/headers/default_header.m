@@ -1,25 +1,24 @@
 %% =========== BLIJF VAN HET ONDERSTAANDE CODE COMMENTAAR AF! =============
 %
-% LEES DE VOLGENDE REGELS:
+% LEES ALS EERSTE DIT BESTAND OM TE VOORKOMEN DAT JE IETS FOUT DOET:
+% http://www.bewegingstechnologie.com/weblinks/biostatica/readers/InleverenEindopdracht
+%
+% 
+% LEES OOK DE VOLGENDE REGELS:
 %
 % 1 -   De volgende AANGEMAAKTE onderdelen mag je NIET aanpassen:
 %                           A: Bestandsnamen
-%                           B: Commentaar bij de code
-%                           C: Folders en folderstructuur
+%                           B: Ons commentaar bij de code
+%                           C: Onze foldernamen 
+%                           D: Onze folderstructuur
 %       Doe je dat toch dan krijg je GEEN punten voor deze opdracht.
-% 2 -   Als dit bestand niet uit te voeren valt, bijvoorbeeld doordat je
+% 2 -   Je maakt de opdracht in dit bestand. Je mag geen kopieen maken.
+% 3 -   Als dit bestand niet uit te voeren valt, bijvoorbeeld doordat je
 %       tijdens het uitvoeren een foutmelding krijgt, krijg je GEEN punten!
-% 3 -   Elke variabele waar 'NaN' aan is toegekend moet JIJ bewerken.
-% 4 -   Je maakt de opdracht in dit bestand. Je mag geen kopieen maken.
-%       Vul dit bestand alleen aan met voor de opdracht nuttige code. Doe 
-%       je dit niet, dan kan dat een vermindering van het te verdienen aantal 
-%       punten tot gevolg hebben.
+% 4 -   Elke variabele waar 'NaN' aan is toegekend moet JIJ bewerken.
 % 5 -   Door JOU geschreven commentaarregels (met %% of %) worden niet
 %       door ons gelezen of gebruikt. 
-% 6 -   Matlab is case-sensitive (hoofdlettergevoelig). De 
-%       variabelen: 'aa', 'aA', 'Aa' en 'AA' zijn allemaal verschillend. 
-%       Let dus goed op!
-% 7 -   Als je programma een eeuwige-lus bevat (lees: nooit stopt met
+% 6 -   Als je programma een eeuwige-lus bevat (lees: nooit stopt met
 %       uitvoeren) krijg je GEEN punten.
-% 
+%
 % Opdrachtbeschrijving:

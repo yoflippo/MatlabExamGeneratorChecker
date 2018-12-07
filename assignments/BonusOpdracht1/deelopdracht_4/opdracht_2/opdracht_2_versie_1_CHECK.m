@@ -14,11 +14,11 @@ function res = opdracht_2_versie_1_CHECK(apStudentSol)
 
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
-checkingVar.nameVars = {'som'};
+checkingVar.nameVars = {};
 % FILL literalsP,  WITH CODE THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {};
+checkingVar.literalsP = {'som' 1};
 % FILL literalsA, With strings that should not be present. The number to
 % the right represents the weight of the error. Default weight = 1.
 checkingVar.literalsA = {'NaN'  2};

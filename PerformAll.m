@@ -195,3 +195,5 @@ rmpath(genpath(fileparts(mfilename('fullpath'))));
 addpath(genpath('helpercode'));
 warning on
 cd(con.BASEFOLDER)
+clc
+disp([mfilename ': All done!'])

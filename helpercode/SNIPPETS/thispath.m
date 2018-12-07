@@ -1,1 +1,0 @@
-thisPath = fileparts(mfilename('fullpath'));

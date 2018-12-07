@@ -260,18 +260,25 @@
 
 % Extract studentnumber
 mf = fileparts(mfilename('fullpath'));
-if ~isequal(pwd,mf)
-    warning off
-    rmpath(genpath(mf))
-    error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP "Change Folder"  DRUKKEN!'  sprintf('\r\n') sprintf('\r\n')])
+% if ~isequal(pwd,mf)
+    % warning off
+    % rmpath(genpath(mf))
+    % error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP "Change Folder"  DRUKKEN!'  sprintf('\r\n') sprintf('\r\n')])
+% end
+cd(mf)
+
+dirs = dir;
+if ~any(contains({dirs.name},'deelopdracht_1')) || ~any(contains({dirs.name},'deelopdracht_2')) || ~any(contains({dirs.name},'AfrondenWeekOpdracht.m'))
+  error(['Dit bestand is verplaatst en staat niet meer op de juiste plek. Zorg dat je dit hersteld!']);
 end
+
 try
     studentnummer;
 catch
-    error(['Het bestand ''studentnummer.m'' niet gevonden!!'   sprintf('\r\n') 'Als je de bestanden en folderstructuur niet intact laat krijg je geen punten voor de week eindopdracht'  sprintf('\r\n') 'Zorg eerst dat je alles netjes hebt hersteld!'] );
+    error(['Het bestand ''studentnummer.m'' niet gevonden!!'   sprintf('\r\n') 'Als je de bestanden en folderstructuur niet intact laat krijg je geen punten voor de week eindopdracht'  sprintf('\r\n') 'Zorg dat je de laatste opdracht ook hebt uitgevoerd (F5)!'] );
 end
 
-txtInput = 'Ben je helemaal klaar met de weekopdrachten? JA: geef een 1 en druk op Enter, NEE: druk op ENTER): ';
+txtInput = 'Ben je helemaal klaar met de opdrachten? JA: geef een 1 en druk op Enter, NEE: druk op ENTER): ';
 tmp1 = input(txtInput);
 if isempty(tmp1) || ~isequal(tmp1,1)
    disp(['Gestopt met uitvoeren van ' mfilename]);

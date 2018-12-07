@@ -321,7 +321,7 @@ dirs = dir;
 errtxt = [newline newline '           LEES MIJ !!!!          ' newline newline 'Als je zo door gaat, gaat het fout. Je moet helemaal opnieuw beginnen.' newline 'Pak het verkregen zip-bestand (klik op het bestand, rechter muisknop enzv.).' newline 'Begin opnieuw met het uitvoeren van StartWeekOpdracht.m.' newline newline 'Jij mag namen van bestanden en folderstructuren e.d. niet aanpassen!'];
 
 if ~any(contains({dirs.name},'deelopdracht_1')) || ~any(contains({dirs.name},'deelopdracht_2')) || ~any(contains({dirs.name},'AfrondenWeekOpdracht.m'))
-  error(errtxt);
+  error('Kennelijk missen er folders die nodig zijn om een zinvol bestand aan te leveren. Kijk eens naar wat wij hebben aangeleverd en herstel de folders en structuren.');
 end
 
 
