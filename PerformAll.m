@@ -8,13 +8,10 @@ fclose('all');
 addpath(genpath('helpercode'));
 global DEBUGOUTPUT;
 DEBUGOUTPUT = 1;
-% make zero to delete base folder
-con = ConstantsClass('PATH',GetPathOneLevelUp(mfilename('fullpath')),...
-    'NumberOfBonusAssignments',2,...
-    'WeeksForAssignment',{1:3,4:6});
+con = ConstantsClass();
 
 %% Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 1; % Adjust me!!!
+con.BONUSASSNUMBER = 2; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 
@@ -33,7 +30,7 @@ end
 
 
 %% Comment me if no re-generation needs to
-% WeekAssignmentsToGenerate = BonusAssignmentWeeks;
+WeekAssignmentsToGenerate = BonusAssignmentWeeks;
 
 %% START
 if exist('WeekAssignmentsToGenerate','var')

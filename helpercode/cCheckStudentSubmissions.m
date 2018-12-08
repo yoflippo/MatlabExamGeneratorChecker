@@ -159,7 +159,7 @@ catch err
 end
 
 %% Count number of assignemts and distinguish between theses/programming
-apAssBonus = fullfile(con.BASEFOLDER,con.Assignments,nmCurrBonusAss);
+apAssBonus = fullfile(con.DIRASSIGNMENTS,nmCurrBonusAss);
 cd(apAssBonus)
 numTheses = length(dirmf('TypeOfAssignment_Multiplechoice'));
 

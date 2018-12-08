@@ -1,3 +1,39 @@
+% CONSTANTSCLASS <short description>
+%
+% ------------------------------------------------------------------------
+%    Copyright (C) 2018  M. Schrauwen (markschrauwen@gmail.com)
+%
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% ------------------------------------------------------------------------
+%
+% DESCRIPTION: Class containing constants.
+%
+%
+% BY: 2018  M. Schrauwen (markschrauwen@gmail.com)
+%
+%
+% EXAMPLES:
+%   con = ConstantsClass('PATH',GetPathOneLevelUp(mfilename('fullpath')),...
+%   'NumberOfBonusAssignments',2,...
+%   'WeeksForAssignment',{1:3,4:6});
+%
+%   con = ConstantsClass;
+
+
+% $Revisi0n: 0.0.0 $  $Date: 2017-12-08 $
+% Creation of class
+
 classdef ConstantsClass
     
     properties (Constant)
@@ -25,10 +61,13 @@ classdef ConstantsClass
         DIRCLEANSRC_PROGASS = 'programming_assignments';
         DIRCLEANSRC_FINALASS = 'bonus_assignments';
         DIRHEADER = [ConstantsClass.DIRCLEANSRC filesep 'headers'];
+        DIRHELPER = 'helpercode';
         LISTWITHNEEDEDFOLDERS = {'helpercode' ConstantsClass.DIRCLEANSRC ConstantsClass.DIRSTUDENTNUMBERS ...
             ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};
         WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4' 'week5' 'week6' 'week7' 'week8'};
         NMBONUSASSIGNMENTDIR = 'BonusOpdracht';
+        TYPEASSIGNMENTS = {'Theses' 'Programming'};
+        TYPEASSIGNMENTSDUTCH = {'stelling' 'opdracht'};
         RATIO_THESIS = 0.2;
         RATIO_PROGR = 0.8;
     end
@@ -36,7 +75,7 @@ classdef ConstantsClass
     properties (SetAccess = private)
         BASEFOLDER
         DATETIME
-        Assignments
+        DIRASSIGNMENTS
         BONUSASSIGNMENTS
         NUM_BONUSASSIGNEMNTS
     end
@@ -48,13 +87,16 @@ classdef ConstantsClass
     methods
         %% Constructor: overloaded
         function obj = ConstantsClass(varargin)
+            obj.BASEFOLDER = fileparts(fileparts(mfilename('fullpath')));
+            addpath(genpath(fullfile(obj.BASEFOLDER,obj.DIRHELPER)));
             obj.DATETIME = datetimetxt();
-            obj.Assignments = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
+            obj.DIRASSIGNMENTS = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
             %% Some defaults values that can be overwritten in the constructor
             obj.BONUSASSIGNMENTS{1} = 1:3;
             obj.BONUSASSIGNMENTS{2} = 4:6;
             obj.NUM_BONUSASSIGNEMNTS = length(obj.BONUSASSIGNMENTS);
-            
+            NumberOfBonusAssignments = obj.NUM_BONUSASSIGNEMNTS ;
+            WeeksForAssignment = obj.BONUSASSIGNMENTS;
             %% Parse varargin
             minargin = 0;
             maxargin = (minargin+3)*2;
@@ -77,7 +119,7 @@ classdef ConstantsClass
                             case {'WEEKSFORASSIGNMENT', 'WFA'}
                                 WeeksForAssignment = varargin{narg+1};
                                 if ~isequal(length(WeeksForAssignment),NumberOfBonusAssignments)
-                                   error([newline mfilename ': ' newline 'Number of bonus assignment does not match the given weeks' newline]); 
+                                    error([newline mfilename ': ' newline 'Number of bonus assignment does not match the given weeks' newline]);
                                 end
                             otherwise
                                 % Do nothing in the case of varargin{narg+1};
@@ -87,15 +129,13 @@ classdef ConstantsClass
                 end
             elseif isequal(nargin,1) % Only ONE argument
                 obj.BASEFOLDER = varargin{1};
-            else
-                obj.BASEFOLDER = fileparts(fileparts(mfilename('fullpath')));
             end
             
-            % Change the default values 
+            % Change the default values
             if ~isequal(NumberOfBonusAssignments,length(obj.BONUSASSIGNMENTS)) || ...
                     ~isempty(WeeksForAssignment)
                 for nBA = 1:NumberOfBonusAssignments
-                   obj.BONUSASSIGNMENTS{nBA} = WeeksForAssignment{nBA};
+                    obj.BONUSASSIGNMENTS{nBA} = WeeksForAssignment{nBA};
                 end
                 obj.NUM_BONUSASSIGNEMNTS = NumberOfBonusAssignments;
             end
@@ -103,9 +143,13 @@ classdef ConstantsClass
         end %function
     end %methods
     
-    methods (Static)
-        function out = BONUSASSNAME(n)
-            out=[ConstantsClass.NMBONUSASSIGNMENTDIR num2str(n)];
+    methods
+        function out = BONUSASSNAME(obj,n)
+            try
+                out=[obj.NMBONUSASSIGNMENTDIR num2str(n)];
+            catch
+                out=[obj.NMBONUSASSIGNMENTDIR num2str(obj.BONUSASSNUMBER)];
+            end
         end
     end
     

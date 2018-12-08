@@ -42,7 +42,7 @@ dbstop if error
 
 % Copy assignment zero
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
-apAss0 = fullfile(con.Assignments,nmCurrBonusAss,'deelopdracht_0');
+apAss0 = fullfile(con.DIRASSIGNMENTS,nmCurrBonusAss,'deelopdracht_0');
 mkdirIf(apAss0);
 copyfiles(fullfile(con.BASEFOLDER,con.DIRHEADER,'deelopdracht_0'),apAss0);
 DEBUGOUTPUT = 1;
@@ -203,6 +203,7 @@ for nStud = 1:length(studentNumbers)
     cd(apCurrStudWk);
     % Copy Databestanden
     if any(fndDirDatabestanden)
+        keyboard % need to check this!!!!! nW does not exist
         rpDatabestanden = extractAfter(DirDatabestanden,['week' num2str(BonusWeeks(nW))]);
         rp = fullfile(apCurrStudWk,rpDatabestanden{1});
         mkdir(rp);

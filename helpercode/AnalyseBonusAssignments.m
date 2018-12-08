@@ -5,9 +5,9 @@ try
     nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
     apStudentAndGrades = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,nmCurrBonusAss,'cellAllStudentsAndAssignments.mat');
     load(apStudentAndGrades);
-    apDicHashes = fullfile(con.BASEFOLDER,con.Assignments,nmCurrBonusAss,'dicHashesAbsPath.mat');
+    apDicHashes = fullfile(con.DIRASSIGNMENTS,nmCurrBonusAss,'dicHashesAbsPath.mat');
     load(apDicHashes);
-    apDicAssignmentAndPoints = fullfile(con.BASEFOLDER,con.Assignments,nmCurrBonusAss,'dicAssignmentsAndPoints.mat');
+    apDicAssignmentAndPoints = fullfile(con.DIRASSIGNMENTS,nmCurrBonusAss,'dicAssignmentsAndPoints.mat');
     load(apDicAssignmentAndPoints)
 catch err
     txterror = ['*Some files not found!' newline];
