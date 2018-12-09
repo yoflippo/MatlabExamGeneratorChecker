@@ -2,9 +2,10 @@ function CreateAndCopyQAssignments(con,x)
 
 fclose('all'); %Close files that could be opened
 
+
+apCleanSourceRoot = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,con.DIRTHESES);
 if nargin >1 % Ugly programming: for the creation of exam
     %% Get path of output folder for a certain week X and empty it
-    apCleanSourceRoot = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,'gen_mc');
     cd(apCleanSourceRoot);
     apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
     apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
@@ -17,7 +18,6 @@ else % For the creation of BONUS assignments
     currentBonusAssignment = con.BONUSASSNUMBER;
     
     %% Get path of output folder for a certain week X and empty it
-    apCleanSourceRoot = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,'gen_mc');
     cd(apCleanSourceRoot);
     apSourceTheses = fullfile(apCleanSourceRoot,'source_theses');
     apGeneratedTheses = replace(apSourceTheses,'source_theses','generated_theses');
@@ -87,7 +87,7 @@ for nWk = 1:length(weekNames)
         % output folder
         apDestination = GetPathOneLevelUp(currentFilePath);
         apDestination = replace(apDestination,'source_theses','generated_theses');
-        try %in case of generating an exam this does not exist 
+        try %in case of generating an exam this does not exist
             % BAD programming: due to generation of bonus assignment and
             % the exam
             apDestination = replace(apDestination,weekNames{nWk},nmBonusAssDir);

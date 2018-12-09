@@ -34,7 +34,7 @@ cd(apMCFiles)
 try
     apFinalAssDir = fullfile(con.BASEFOLDER, con.NAMEASSIGNMENTFOLDER,currBonusAss);
 catch
-    apFinalAssDir = con.DIRASSIGNMENTS;
+    apFinalAssDir = con.AP_ASSIGNMENTS;
 end
 removeShitFromDir(apFinalAssDir)
 if ~exist(apFinalAssDir,'dir')

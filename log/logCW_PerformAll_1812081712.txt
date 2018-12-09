@@ -1202,4 +1202,81 @@ Give each assignment Hash-info: , progress: 94%
 Give each assignment Hash-info: , progress: 94%
 Give each assignment Hash-info: , progress: 94%
 Give each assignment Hash-info: , progress: 94%
-Gi
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+2.425: END SCRIPT
+Elapsed time is 2.426215 seconds.
+2.578: Read the student number and convert the list to e-mailadresses
+Number of students: 122
+Execute create week assignment scripts
+Generating assignents
+0.01: Empty folder with files for testing
+0.012: Create a student specific folder in every week folder
+0.13: Get overview of files
+1.158: Fill every student folder with the number of assignments
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 118)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',118,0)">line 118</a>)
+PerformAll in CreateBonusAssignments:
+Undefined function or variable 'nW'.
+} 
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',118,1)">118 </a>            error([mfilename ' in CreateBonusAssignments: ' newline  err.message])

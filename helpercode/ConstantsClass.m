@@ -37,45 +37,52 @@
 classdef ConstantsClass
     
     properties (Constant)
-        YEAR = year(datetime);
-        STUDENTNUMBERMAT = 'studentNum.mat';
-        NAMEASSIGNMENTFOLDER = 'assignments';
-        STUDENTASSFOLDER = 'student_assignments';
-        STUDENTSUBFOLDER = 'submitted';
-        NAMEZIPPEDWEEK = 'Biostatica_Programmeren_StudentOpdrachten_';
-        EXT = '.m';
-        SOLPOSTFIX = '_SOL';
-        CHECKPOSTFIX = '_CHECK';
-        CHEATPOSTFIX = '_CHEAT';
-        NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
-        LASTASSIGNMENT = 'LaatsteOpdracht.m';
-        OTHERFILESINSTUDENTFOLDER = {ConstantsClass.NAMEZIPMFILEFORSTUDENTS 'studentnummer.m' ConstantsClass.LASTASSIGNMENT};
         ADJUSTEDHASH = 'AANGEPASTE_MFILE_GEEN_PUNTEN';
-        FOLDERCHEAT = 'BESTANDEN_NIET_AAN_JOU_TOEGEWEZEN';
-        POSTFIX_SOL4STUD = '_UITWERKING';
-        NAMERESULTMAT = 'resultatenWeek';
-        VAR_RESULT = 'ResStudentScript';
-        TESTFOLDER = 'fortesting';
-        DIRSTUDENTNUMBERS = 'studentnumbers';
+        CHEATPOSTFIX = '_CHEAT';
+        CHECKPOSTFIX = '_CHECK';
         DIRCLEANSRC = 'clean_source';
-        DIRCLEANSRC_PROGASS = 'programming_assignments';
+        DIRCLEANSRC_EXAMASS = 'exam_assignments';
         DIRCLEANSRC_FINALASS = 'bonus_assignments';
+        DIRCLEANSRC_PROGASS = 'programming_assignments';
         DIRHEADER = [ConstantsClass.DIRCLEANSRC filesep 'headers'];
         DIRHELPER = 'helpercode';
+        DIRSTUDENTNUMBERS = 'studentnumbers';
+        DIRTHESES = 'theses';
+        DIRTHESES_CLEANSRC = 'source_theses';
+        DIRTHESES_GENERATED = 'generated_theses';
+        EXT = '.m';
+        FOLDERCHEAT = 'BESTANDEN_NIET_AAN_JOU_TOEGEWEZEN';
+        LASTASSIGNMENT = 'LaatsteOpdracht.m';
         LISTWITHNEEDEDFOLDERS = {'helpercode' ConstantsClass.DIRCLEANSRC ConstantsClass.DIRSTUDENTNUMBERS ...
-            ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};
-        WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4' 'week5' 'week6' 'week7' 'week8'};
+            ConstantsClass.TESTFOLDER ConstantsClass.STUDENTSUBFOLDER};     
+        NAMEASSIGNMENTFOLDER = 'assignments';
+        NAMERESULTMAT = 'resultatenWeek';
+        NAMESUB_ASSIGNMENT = 'deelopdracht_';
+        NAMEZIPMFILEFORSTUDENTS = 'AfrondenWeekOpdracht.m';
+        NAMEZIPPEDWEEK = 'Biostatica_Programmeren_StudentOpdrachten_';
         NMBONUSASSIGNMENTDIR = 'BonusOpdracht';
-        TYPEASSIGNMENTS = {'Theses' 'Programming'};
-        TYPEASSIGNMENTSDUTCH = {'stelling' 'opdracht'};
-        RATIO_THESIS = 0.2;
+        OTHERFILESINSTUDENTFOLDER = {ConstantsClass.NAMEZIPMFILEFORSTUDENTS 'studentnummer.m' ConstantsClass.LASTASSIGNMENT};
+        POSTFIX_SOL4STUD = '_UITWERKING';
+        PREFIX_THESES = 'th_';
         RATIO_PROGR = 0.8;
+        RATIO_THESIS = 0.2;
+        SOLPOSTFIX = '_SOL';
+        STUDENTASSFOLDER = 'student_assignments';
+        STUDENTNUMBERMAT = 'studentNum.mat';
+        STUDENTSUBFOLDER = 'submitted';
+        TESTFOLDER = 'fortesting';
+        TYPEASSIGNMENTS = {'theses' 'programming'};
+        TYPEASSIGNMENTSDUTCH = {'stelling' 'opdracht'};
+        VAR_RESULT = 'ResStudentScript';
+        WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4' 'week5' 'week6' 'week7' 'week8'};
+        YEAR = year(datetime);
+        
     end
     
     properties (SetAccess = private)
         BASEFOLDER
         DATETIME
-        DIRASSIGNMENTS
+        AP_ASSIGNMENTS
         BONUSASSIGNMENTS
         NUM_BONUSASSIGNEMNTS
     end
@@ -90,7 +97,7 @@ classdef ConstantsClass
             obj.BASEFOLDER = fileparts(fileparts(mfilename('fullpath')));
             addpath(genpath(fullfile(obj.BASEFOLDER,obj.DIRHELPER)));
             obj.DATETIME = datetimetxt();
-            obj.DIRASSIGNMENTS = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
+            obj.AP_ASSIGNMENTS = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
             %% Some defaults values that can be overwritten in the constructor
             obj.BONUSASSIGNMENTS{1} = 1:3;
             obj.BONUSASSIGNMENTS{2} = 4:6;
