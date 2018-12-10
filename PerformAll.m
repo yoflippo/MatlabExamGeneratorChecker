@@ -6,8 +6,7 @@ dbstop if error
 clc; close all; close all hidden;
 fclose('all');
 addpath(genpath('helpercode'));
-global DEBUGOUTPUT;
-DEBUGOUTPUT = 1;
+global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();
 
 %% Select the right BONUSASSNUMBER.

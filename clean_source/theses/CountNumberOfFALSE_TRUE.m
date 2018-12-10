@@ -1,17 +1,17 @@
 function CountNumberOfFALSE_TRUE()
 
-%% Get path of output folder and empty it
+% Get path of output folder and empty it
 pathOfThisFile = erase(mfilename('fullpath'),mfilename);
 
-weeks = {'week1' 'week2' 'week3' 'week4'};
 totFalse = 0;
 totTrue = 0;
-for nWk = 1:length(weeks)
+for nWk = 1:8
+    currWeek = ['week' num2str(nWk)];
     try
-        cd(fullfile(pathOfThisFile,'source_theses',weeks{nWk}));
+        cd(fullfile(pathOfThisFile,'source_theses',currWeek));
         nFalse = length(dirmf('FALSE'));
         nTrue = length(dirmf('TRUE'));
-        disp([weeks{nWk} ': TRUE = ' num2str(nTrue) ' | FALSE = ' num2str(nFalse)])
+        disp([currWeek ': TRUE = ' num2str(nTrue) ' | FALSE = ' num2str(nFalse)])
         cd(pathOfThisFile);
     catch
     end
