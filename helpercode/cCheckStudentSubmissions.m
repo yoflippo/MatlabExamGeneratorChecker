@@ -133,7 +133,7 @@ try
     cd(apSubmitted);
     keyboard % This part has to be checked
     cellExt2Keep = {'.m' '.txt' '.csv' '.dat' '.xls' '.xlsx'};
-    removeFilesFromDirs(ap.testData,cellExt2Keep);
+    removeFilesFromDirs(apSubmitted,cellExt2Keep);
     
     %% Move all files with opinion of student
     opStud = dirmf('GeefJouwMening.txt');
