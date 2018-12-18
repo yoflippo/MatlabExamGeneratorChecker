@@ -39,6 +39,10 @@ ap.DIRCLEANSRC = 'clean_source';
 mkdirIf(ap.SUBMITTEDUNZIPPED);
 ap.DIRCLEANSRC_FINALASS = 'exam_assignments';
 ap.DIRCLEANSRC_PROGASS = 'programming_assignments';
+ap.DIRTHESES = 'theses';
+ap.DIRTHESES_CLEANSRC = 'source_theses';
+ap.DIRTHESES_GENERATED = 'generated_theses';
+ap.AP_ASSIGNMENTS = fullfile(ap.BASEFOLDER,'assignments','exam');
 % rmpath(genpath(ap.EXAMHELPERHEADER));
 % Copy the check exam script
 copyfile(fullfile(ap.EXAMHELPERHEADER,'checkExam_base.m'),fullfile(ap.CurrExam,['checkExam_' nm.CDate '.m']))
@@ -60,7 +64,7 @@ CreateAndCopyQAssignments(ap,'all');
 rmpath(genpath(ap.DIRCLEANSRC));
 disp('Created MC-Questions')
 
-%% Redo the hashing of the copied questions/assignments 
+%% Redo the hashing of the copied questions/assignments
 exam_addHashAndHeader(ap,weekNames,nm)
 disp('Added Hash and info to assignments')
 
@@ -84,18 +88,25 @@ save('Workspace.mat');
 %% Add files to help the student
 ap.CurrExam_ExamDir = fullfile(ap.CurrExam,nm.Exam);
 cd(ap.CurrExam_ExamDir);
-% Copy files for start of Exam
-ap.CurrExam_FirstAss = fullfile(ap.CurrExam_ExamDir,'deelopdracht_0');
-mkdirIf(ap.CurrExam_FirstAss);
-removeShitFromDir(ap.CurrExam_FirstAss);
-copyfile(fullfile(ap.EXAMHELPERHEADER,'StartTentamen.m'),ap.CurrExam_FirstAss);
 
-% Copy AfrondenTentamen
-ap.CurrExam_LastAss = fullfile(ap.CurrExam_ExamDir,'deelopdracht_3');
-mkdirIf(ap.CurrExam_LastAss);
-removeShitFromDir(ap.CurrExam_LastAss);
-copyfile(fullfile(ap.EXAMHELPERHEADER,'AfrondenTentamen.m'),ap.CurrExam_LastAss);
-cd(ap.CurrExam);
+for n=1:2 % Repeat for SOLUTIONS directory
+    if n==2
+        ap.CurrExam_ExamDir = fullfile(ap.CurrExam,[nm.Exam 'SOL']);
+    end
+    % Copy files for start of Exam
+    ap.CurrExam_FirstAss = fullfile(ap.CurrExam_ExamDir,'deelopdracht_0');
+    mkdirIf(ap.CurrExam_FirstAss);
+    removeShitFromDir(ap.CurrExam_FirstAss);
+    copyfile(fullfile(ap.EXAMHELPERHEADER,'StartTentamen.m'),ap.CurrExam_FirstAss);
+    
+    % Copy AfrondenTentamen
+    ap.CurrExam_LastAss = fullfile(ap.CurrExam_ExamDir,'deelopdracht_3');
+    mkdirIf(ap.CurrExam_LastAss);
+    removeShitFromDir(ap.CurrExam_LastAss);
+    copyfile(fullfile(ap.EXAMHELPERHEADER,'AfrondenTentamen.m'),ap.CurrExam_LastAss);
+    cd(ap.CurrExam);
+    ap.CurrExam_ExamDir = fullfile(ap.CurrExam,nm.Exam);
+end
 
 %% Create a checking script
 cd(ap.CurrExam)
@@ -114,10 +125,10 @@ cd(ap.CurrExam)
 copyfile(ap.CurrZipFinalFile,ap.Submitted);
 
 % NOTE: IETS DOEN AAN MOGELIJK VALSPELEN DOORDAT STUDENTEN KOPIEEN TOEVOEGEN
-% OPLOSSING, 
+% OPLOSSING,
 
 %% Create testing files for a few students
-generateTestExams(ap.CurrExam);
+generateTestExams(ap.CurrExam,5);
 
 %% Check test exams without solutions
 cd(ap.CurrExam)

@@ -1,6 +1,6 @@
 function apFinalAssDir = copyThesesToCleanSourceAssignment(con,apMCFiles,WeekNames)
 %% Copy the theses and programming assignments to clean_source 'bonus_assignment'
-% directory.
+% directory and the final 'assignment' folder in the rootfolder.
 
 cd(apMCFiles)
 try %BAD PROGRAMMING: not a clean function due to exams vs. bonus assignments
@@ -19,6 +19,7 @@ removeShitFromDir(apCleanBonusAss)
 if ~exist(apCleanBonusAss,'dir')
     mkdir(apCleanBonusAss)
 end
+disp([mfilename ': Copy files to ' apCleanBonusAss]);
 copyfiles(apCleanTheses,apCleanBonusAss);
 
 apCleanProgrammingAss = fullfile(con.BASEFOLDER,con.DIRCLEANSRC,con.DIRCLEANSRC_PROGASS);
@@ -40,4 +41,11 @@ removeShitFromDir(apFinalAssDir)
 if ~exist(apFinalAssDir,'dir')
     mkdir(apFinalAssDir)
 end
+disp([mfilename ': Copy files to ' apFinalAssDir]);
 copyfiles(apCleanBonusAss,apFinalAssDir)
+
+%% In case of the exam, copy files to exam director
+if contains(apCleanTheses,'exam')
+    disp([mfilename ': Copy files to ' con.Assignments]);
+    copyfiles(apCleanBonusAss,con.Assignments)
+end

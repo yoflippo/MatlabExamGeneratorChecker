@@ -9,7 +9,7 @@ end
 close all
 file = dirmf('points');
 currPath = pwd;
-vect = [];
+vect(1,10)=0;
 for i = 1:10
     cnt = 0;
     for nf = 1:length(file)

@@ -10,7 +10,7 @@ global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();
 
 %% Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 1; % Adjust me!!!
+con.BONUSASSNUMBER = 2; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 
@@ -25,8 +25,6 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
             'The folder: ' con.LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end
 end
-
-
 
 %% Comment me if no re-generation needs to
 WeekAssignmentsToGenerate = BonusAssignmentWeeks;
