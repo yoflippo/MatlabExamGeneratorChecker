@@ -11,10 +11,11 @@ warning on;
 
 rpTmpDir = fullfile(nameTestExamsDir,'Tentamen');
 apTmpDir = fullfile(apExam,rpTmpDir);
-rpTmpDirSOL = fullfile(nameTestExamsDir,'TentamenSOL');
-apTmpDirSOL = fullfile(apExam,rpTmpDirSOL);
-filesTmpDir = dir([apTmpDir filesep '**']);
-filesTmpDirSOL = dir([apTmpDirSOL filesep '**'])
+apSrcTTDir = fullfile(apExam,'Tentamen');
+apSrcTTDirSOL = fullfile(apExam,'TentamenSOL');
+filesSrc = dir([apSrcTTDir filesep '**']);
+filesSrcSOL = dir([apSrcTTDirSOL filesep '**'])
+
 mkdir(rpTmpDir);
 mkdir(fullfile(nameTestExamsDir,'exams'));
 mkdir(fullfile(nameTestExamsDir,'exams_SOL'));
@@ -29,8 +30,11 @@ for nD = 1:length(dirs)
         currSNumber = snumber(ns);
         
         %% Copy new exam files (no solutions)
-        copyfiles(dirs{nD},rpTmpDir)
-                
+        copyfiles(dirs{nD},apTmpDir)
+        removeFilesFromDirs(apTmpDir,{'.m'}); %Databestanden still intact.
+        
+        %% Hier nog iets doen met verschillende moeilijkheidsgraden
+        
         %% Create studentnumber file
         apStudentNumber = fullfile(apExam,rpTmpDir,'deelopdracht_0','studentnummer.m');
         fileID = fopen(apStudentNumber,'W');
@@ -38,7 +42,7 @@ for nD = 1:length(dirs)
         fclose('all');
         
         %% Zip the examfile
-        cd(rpTmpDir)
+        cd(apTmpDir)
         currZip = ['TentamenBiostatica_' num2str(currSNumber) '.zip'];
         zip(fullfile('..',currZip),pwd)
         cd ..

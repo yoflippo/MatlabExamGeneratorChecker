@@ -128,6 +128,7 @@ copyfile(ap.CurrZipFinalFile,ap.Submitted);
 % OPLOSSING,
 
 %% Create testing files for a few students
+
 generateTestExams(ap.CurrExam,5);
 
 %% Check test exams without solutions
