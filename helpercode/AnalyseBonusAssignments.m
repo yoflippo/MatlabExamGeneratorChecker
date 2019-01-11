@@ -89,17 +89,19 @@ problem.AssAll.Ass = {strOV(problem.All).apAss};
 
 %% Ask user to go through all problem files
 if isequal(input('Do you want to go through all problem files? Yes = 1, No = else '),1)
-    for nF = 1:sum(problem.All)
+    nF = 1;
+    problems = find(problem.All);
+    for nP = problems
         clc;
         disp(['There are ' num2str(sum(problem.All)) ' problems found'])
         disp(['Current problem: ' num2str(nF)])
         currSOLFile = problem.AssAll.SOL{nF};
         currAssFile = problem.AssAll.Ass{nF};
         if any(contains(problem.AssLowP.SOL,currSOLFile))
-            disp('This file has a problem with the P-value');
+            disp(['This file has a problem with the P-value: ' num2str(strOV(nP).RIT)]);
         end
         if any(contains(problem.AssLowRIT.SOL,currSOLFile))
-            disp('This file has a problem with the RIT-value');
+            disp(['This file has a problem with the RIT-value: ' num2str(strOV(nP).Pval)]);
         end
         disp('Remember that these files are copies and you should also make changes in cleansource');
         edit(currSOLFile);
@@ -115,14 +117,27 @@ if isequal(input('Do you want to go through all problem files? Yes = 1, No = els
         endPosition = edtList(end-1).getDocument.getLength;
         edtList(end-1).setCaretPosition(endPosition);
         commandwindow
-        if isequal(input('Do you want to close The opened scripts? Yes = 1, No = else '),1)
-            % Close opened scripts
-            edtSvc  = com.mathworks.mlservices.MLEditorServices ;
-            edtList = edtSvc.getEditorApplication.getOpenEditors.toArray ;
-            edtList(end).close;
-            edtList(end-1).close;
+        switch input('Do you want to close The opened scripts? Yes = 1 AND open clean source? Yes = 2, Else No = else ')
+            case 1
+                % Close opened scripts
+                edtSvc  = com.mathworks.mlservices.MLEditorServices ;
+                edtList = edtSvc.getEditorApplication.getOpenEditors.toArray ;
+                edtList(end).close;
+                edtList(end-1).close;
+                break;
+            case 2
+                biostatFindAss
+                % Close opened scripts
+                edtSvc  = com.mathworks.mlservices.MLEditorServices ;
+                edtList = edtSvc.getEditorApplication.getOpenEditors.toArray ;
+                edtList(end).close;
+                edtList(end-1).close;
+                break;
+            otherwise
+                break;
         end
     end
+    nF = nF + 1;
 end
 
 end % function

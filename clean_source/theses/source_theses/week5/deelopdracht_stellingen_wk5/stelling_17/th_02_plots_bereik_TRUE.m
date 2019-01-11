@@ -1,4 +1,4 @@
-De onderstaande code laat een plot zien met een beperkte
+De onderstaande code laat een plot zien met een gelimiteerde
 y-as.
 
 ======= Code =======

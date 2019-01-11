@@ -131,7 +131,7 @@ try
     
     %% Remove non-relevavnt files
     cd(apSubmitted);
-    keyboard % This part has to be checked
+%     keyboard % This part has to be checked
     cellExt2Keep = {'.m' '.txt' '.csv' '.dat' '.xls' '.xlsx'};
     removeFilesFromDirs(apSubmitted,cellExt2Keep);
     
@@ -383,6 +383,7 @@ for nS = 1:length(strTrackStudent(:,1))
             keyboard
         end
         toc
+        grade
     end
 end %for
 cd(apSubWk)

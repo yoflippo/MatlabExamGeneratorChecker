@@ -9,10 +9,14 @@ addpath(genpath('helpercode'));
 global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();
 
-%% Select the right BONUSASSNUMBER.
+%% ACTION: Select the right BONUSASSNUMBER.
 con.BONUSASSNUMBER = 2; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
+
+%% ACTION: Comment me if no re-generation needs to
+% WeekAssignmentsToGenerate = BonusAssignmentWeeks;
+
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');
@@ -25,9 +29,6 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
             'The folder: ' con.LISTWITHNEEDEDFOLDERS{i} ' was not found']);
     end
 end
-
-%% Comment me if no re-generation needs to
-WeekAssignmentsToGenerate = BonusAssignmentWeeks;
 
 %% START
 if exist('WeekAssignmentsToGenerate','var')

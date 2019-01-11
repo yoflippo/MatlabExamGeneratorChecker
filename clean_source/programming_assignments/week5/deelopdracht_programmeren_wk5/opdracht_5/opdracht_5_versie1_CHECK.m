@@ -2,9 +2,9 @@ function res = opdracht_5_versie1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % %% Opdracht 5
-% % % % % % % % Gebruik een for-lus om de getallen TUSSEN 3 en 17 af
-% % % % % % % % te drukken in het Command Window.
+%% Opdracht 5
+% Gebruik een for-lus om de getallen van 2 tot en met 16 af
+% te drukken in het Command Window.
 % % % % % % % 
 % % % % % % % for i = 2:16
 % % % % % % %     i;

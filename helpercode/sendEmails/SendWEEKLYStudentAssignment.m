@@ -1,5 +1,6 @@
 %https://nl.mathworks.com/matlabcentral/answers/94446-can-i-send-e-mail-through-matlab-using-microsoft-outlook
 % Assuming the Workspace is still present after executing 'PerformAll.m'
+con = ConstantsClass();
 cd(con.BASEFOLDER)
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','E_mail','opleidingbewegingstechnologie@gmail.com');
@@ -10,7 +11,8 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
-assignmentNum = '1'
+con.BONUSASSNUMBER = 2;
+assignmentNum = num2str(con.BONUSASSNUMBER);
 nameCurrentBonusDir = [con.NMBONUSASSIGNMENTDIR assignmentNum]
 cd('student_assignments');
 cd(nameCurrentBonusDir);
@@ -19,29 +21,21 @@ cd(nameCurrentBonusDir);
 chr = '';
 chr = [chr newline 'Beste student,'];
 chr = [chr newline newline 'Lees deze e-mail helemaal door!'];
-chr = [chr ' Jij krijgt deze bonus-opdracht omdat jij je hebt ingeschreven voor de Blackboard course Biostatica. '];
+
+chr = [chr newline 'De deadline van deze bonusopdracht is 07-01-19 om 12:59h.'];
+chr = [chr newline ];
+chr = [chr 'Jij krijgt deze bonus-opdracht omdat jij je hebt ingeschreven voor de Blackboard course Biostatica. '];
 chr = [chr newline 'Wil je deze e-mails niet meer ontvangen, stuur mij (Mark) dan een e-mail. '];
 chr = [chr newline ];
 % chr = [chr 'Deze week een eindopdracht met minder opdrachten.' newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw eindopdracht voor Biostatica Matlab.'];
 chr = [chr newline ];
-chr = [chr newline 'Op Blackboard staan de uiterlijke inlevermomenten van de week eindopdrachten (zie: https://blackboard.hhs.nl/webapps/blackboard/content/listContent.jsp?course_id=_74661_1&content_id=_2569595_1&mode=reset)'];
-chr = [chr newline];
-chr = [chr newline 'Je krijgt voor deze opdracht een bonuscijfer (zie Blackboard).'];
-chr = [chr newline 'Het maken van de eindopdrachten is de beste oefening die je kunt krijgen voor het tentamen.'];
-chr = [chr newline];
-chr = [chr newline 'Je mag de foldernamen, folderstructuren en bestandsnamen'];
-chr = [chr newline 'van het zip-bestand NIET aanpassen!'];
-chr = [chr newline];
-chr = [chr newline 'Met behulp van de m-file: "AfrondenWeekOpdracht.m" maak je een'];
-chr = [chr newline 'zip-bestand van al je werk. Dat specifieke zip-bestand moet je'];
-chr = [chr newline 'uploaden via Blackboard. Indien je toch zelfstandig een'];
-chr = [chr newline 'zip-bestand maakt, wordt je opdracht NIET nagekeken!'];
-chr = [chr newline];
-chr = [chr newline 'Wij proberen jouw opdracht na het inlevermoment, binnen'];
-chr = [chr newline '10 werkdagen na te kijken. Je ontvangt je nagekeken werk'];
-chr = [chr newline 'op dit e-mailadres.'];
-chr = [chr newline 'Je bonuscijfer is nog niet bekend als je aan je tentamen begint.'];
+chr = [chr newline ];
+chr = [chr newline 'Lees de regels horende bij deze opdrachten (zie bovenaan iedere m-file)!!!'];
+chr = [chr newline ];
+chr = [chr newline ];
+chr = [chr newline 'Wij proberen jouw opdracht na het inlevermoment, binnen 10 werkdagen na te kijken. Je ontvangt je nagekeken werk op dit e-mailadres.'];
+chr = [chr newline 'Je definitieve bonuscijfer is nog niet bekend als je aan je tentamen begint.'];
 chr = [chr newline];
 chr = [chr newline 'Stuur bij vragen/onduidelijkheden een e-mail naar mjschrau@hhs.nl'];
 chr = [chr newline 'E-mails naar dit e-mailadres worden NIET gelezen.'];
@@ -71,6 +65,7 @@ for nZ = 1:nMailsToSend
         ['Biostatica Matlab: ' nameCurrentBonusDir],chr,sAtt);
         movefile(sAtt,apSendFolder);
         nSendMails = nSendMails + 1;
+        disp([mfilename ', progress: ' num2str(round(100*nZ/nMailsToSend,1)) '%' ]);
     catch err
         sNum
         keyboard
