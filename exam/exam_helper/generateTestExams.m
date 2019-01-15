@@ -31,7 +31,7 @@ for nD = 1:length(dirs)
         
         %% Copy new exam files (no solutions)
         copyfiles(dirs{nD},apTmpDir)
-        removeFilesFromDirs(apTmpDir,{'.m'}); %Databestanden still intact.
+        removeFilesFromDirs(apTmpDir,{'.m' '.txt' '.csv'}); %Databestanden still intact.
         
         %% Hier nog iets doen met verschillende moeilijkheidsgraden
         

@@ -13,7 +13,7 @@ props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
 con.BONUSASSNUMBER = 2;
 assignmentNum = num2str(con.BONUSASSNUMBER);
-nameCurrentBonusDir = [con.NMBONUSASSIGNMENTDIR assignmentNum]
+nameCurrentBonusDir = [con.NMBONUSASSIGNMENTDIR assignmentNum];
 cd('student_assignments');
 cd(nameCurrentBonusDir);
 

@@ -129,7 +129,7 @@ copyfile(ap.CurrZipFinalFile,ap.Submitted);
 
 %% Create testing files for a few students
 
-generateTestExams(ap.CurrExam,5);
+generateTestExams(ap.CurrExam,2);
 
 %% Check test exams without solutions
 cd(ap.CurrExam)

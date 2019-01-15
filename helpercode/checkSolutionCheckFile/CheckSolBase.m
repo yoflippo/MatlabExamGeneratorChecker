@@ -16,9 +16,10 @@ pathEmptyFile = fullfile(path,filename);
 pathCheatFile = fullfile(path,cheatFile);
 
 %% Expect that CHECK file is a function that needs a SOLUTION file and STUDENTFILE
-addpath(genpath(path))
+% addpath(genpath(path))
 % make a string with the check function name
-checkFunction = replace(checkFile,'.m','');
+F = function_handle(pathCheckFile);
+% checkFunction = replace(checkFile,'.m','');
 % Evaluate function
 res = 0;
 try
@@ -33,14 +34,14 @@ try
     end
     % run the empty file on the target CHECK function
     %     eval(['res = ' checkFunction '(pathEmptyFile);']).
-    res=feval(checkFunction,pathEmptyFile);
+    res=F(pathEmptyFile);
     if round(res,1) ~= 0.0
         edit(pathEmptyFile);
         error(['The Check function should return a result of 0 but is: ' num2str(res)]);
     end
     % run the SOLUTION file on the target CHECK function
 %     eval(['res = ' checkFunction '(pathSolutionFile);'])
-    res=feval(checkFunction,pathSolutionFile);
+    res=F(pathSolutionFile);
     if round(res,1) ~= 1.0
         edit(pathSolutionFile);
         error(['The Check function should return a result of 1 but is: ' num2str(res)]);
@@ -49,7 +50,7 @@ try
     cheatMax = 0.2;
     if exist(cheatFile,'file')
         %         eval(['res = ' checkFunction '(pathCheatFile);'])
-        res = feval(checkFunction,pathCheatFile);
+        res = F(pathCheatFile);
         if res > cheatMax
             error(['The CHEAT function should return a result of: ' num2str(cheatMax) ' but is: ' num2str(res)]);
         end
@@ -59,6 +60,6 @@ catch catchMessage
     edit(pathCheckFile);
     error([newline mfilename ', something went wrong: ' catchMessage.message newline]);
 end
-rmpath(genpath(path))
+% rmpath(genpath(path))
 
 end%function

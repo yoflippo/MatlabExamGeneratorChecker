@@ -18,7 +18,7 @@ cd(nameCurrentBonusDir);
 studentNumbers = unique(load(fullfile(con.BASEFOLDER,'studentnumbers','studentnumbers.txt')))
 strStudentNumbers = string(num2str(studentNumbers));
 
-nmAssignment = 'BonusOpdracht1';
+nmAssignment = 'BonusOpdracht2';
 
 
 %% Recover earlier saved studentnumbers to prevent multiple e-mail to same student
