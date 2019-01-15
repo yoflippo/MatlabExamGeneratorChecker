@@ -20,7 +20,7 @@ function res = opdracht_3_versie_2_CHECK(apStudentSol)
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
 checkingVar.nameVars = {};
-checkingVar.literalsP = {'getal > 6' 1 'getal >6' 1 'getal > 6' 1 'getal / 6' 1 'while getal > 6' 1 'getal + 3' 1}; 
+checkingVar.literalsP = {'getal > 6' 1 'getal >6' 1 'getal > 6' 1 'getal / 6' 1 'while' 1 'getal + 3' 1}; 
 checkingVar.literalsA = {'NaN'};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

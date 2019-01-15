@@ -10,8 +10,8 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-assignmentNum = '1'
-nameCurrentBonusDir = [con.NMBONUSASSIGNMENTDIR assignmentNum '_checked']
+assignmentNum = '2'
+nameCurrentBonusDir = ['BonusOpdracht' assignmentNum '_checked']
 cd(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER));
 cd(nameCurrentBonusDir);
 
