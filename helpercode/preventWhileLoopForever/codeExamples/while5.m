@@ -1,0 +1,3 @@
+while true
+    'loser!'
+end
