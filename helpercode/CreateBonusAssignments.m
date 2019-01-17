@@ -255,12 +255,13 @@ for nStud = 1:length(studentNumbers)
     if nTestFiles > length(studentNumbers)
         nTestFiles = length(studentNumbers);
     end
+    snumber = unique(randi([11111111,99999999],1,1));
     
     %% Move the student folder that is previously zipped
     if nTestFiles >= nStud
         % Copy raw files
-        rawFilesTestDir = fullfile(currTestDir,'raw',studentDir);
-        rawFilesTestDirSol = fullfile(currTestDir,'rawsol',studentDir);
+        rawFilesTestDir = fullfile(currTestDir,'raw',num2str(snumber));
+        rawFilesTestDirSol = fullfile(currTestDir,'rawsol',num2str(snumber));
         mkdirIf(rawFilesTestDir);
         mkdirIf(rawFilesTestDirSol);
         movefile(currStudentDir,rawFilesTestDir);

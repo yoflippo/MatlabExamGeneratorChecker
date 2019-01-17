@@ -101,6 +101,7 @@ classdef ConstantsClass
             %% Some defaults values that can be overwritten in the constructor
             obj.BONUSASSIGNMENTS{1} = 1:3;
             obj.BONUSASSIGNMENTS{2} = 4:6;
+            obj.BONUSASSIGNMENTS{3} = 7:8;
             obj.NUM_BONUSASSIGNEMNTS = length(obj.BONUSASSIGNMENTS);
             NumberOfBonusAssignments = obj.NUM_BONUSASSIGNEMNTS ;
             WeeksForAssignment = obj.BONUSASSIGNMENTS;

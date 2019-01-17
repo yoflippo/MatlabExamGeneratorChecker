@@ -10,13 +10,12 @@ global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();
 
 %% ACTION: Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 2; % Adjust me!!!
+con.BONUSASSNUMBER = 3; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 
 %% ACTION: Comment me if no re-generation needs to
-% WeekAssignmentsToGenerate = BonusAssignmentWeeks;
-
+WeekAssignmentsToGenerate = BonusAssignmentWeeks;
 
 %% Check for the existence of needed supporting scripts/function files
 debugOutput(DEBUGOUTPUT,'Check for the existence of needed supporting scripts/function files');

@@ -49,7 +49,7 @@ end
 %% Message for student
 chr = 'Beste student,';
 chr = [chr newline ];
-chr = [chr newline 'In de bijlage van deze e-mail staat jouw opnieuw nagekeken eindopdracht'];
+chr = [chr newline 'In de bijlage van deze e-mail staat jouw nagekeken eindopdracht'];
 chr = [chr newline 'van ' nmAssignment ' voor Biostatica Matlab.'];
 chr = [chr newline];
 chr = [chr newline 'In het zip-bestand zit een m-file met de naam: "JouwCijfer.m".'];
