@@ -22,7 +22,7 @@ files = files(contains({files.name},'.m'));
 %% Do some testing
 for n = 1:length(files)
     currfile = fullfile(files(n).folder,files(n).name);
-    adjustMFileToPrevent4EverWhile(currfile)
+    adjustMFileToPrevent4EverWhile(currfile);
     run(currfile)
     n
 end

@@ -60,11 +60,18 @@ end
 linesWithWhile = find(contains(oCopy,'while'));
 
 if any(linesWithWhile)
+    idxFunctionLine = contains(oCopy,'function');
+    if any(idxFunctionLine)
+        idxFunctionLine = find(idxFunctionLine);
+        oCopy = [oCopy(1); "global mscounter; mscounter = 1;" ;  oCopy(2:end); ""; "function o = funcCnt(c)"; " global mscounter; mscounter = c + 1;"; "o = mscounter;"; "end";];
+    else
+        oCopy = ["global mscounter; mscounter = 1;" ;  oCopy; ""; "function o = funcCnt(c)"; " global mscounter; mscounter = c + 1;"; "o = mscounter;"; "end";];
+    end
     %% Add global variable to code
-    oCopy = ["global mscounter; mscounter = 1;" ;  oCopy; ""; "function o = funcCnt(c)"; " global mscounter; mscounter = c + 1;"; "o = mscounter;"; "end";];
     linesWithWhile = find(contains(oCopy,'while'));
+    
     %% Add mscounter to while lines
-    for n = linesWithWhile
+    for n = linesWithWhile'
         line = char(oCopy(n));
         line = insertAfter(line,'while','((');
         line = [line ') && (funcCnt(mscounter) < 1000))'];
