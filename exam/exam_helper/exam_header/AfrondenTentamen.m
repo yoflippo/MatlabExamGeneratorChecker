@@ -192,6 +192,12 @@
 
 %% Ask for studentnumber
 mf = fileparts(mfilename('fullpath'));
+
+if contains(mf,'.zip')
+    error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP HET AANGELEVERDE ZIP-BESTAND EERST UITPAKKEN!'  sprintf('\r\n') 'Nu, moet je echt goed gaan opletten, want je riskeert het verlies van AL je werk.' sprintf('\r\n')])
+end
+
+
 if ~isequal(pwd,mf)
     dbclear all
     warning off
@@ -274,6 +280,3 @@ disp(pwd);
 if ispc
     winopen(pwd)
 end
-
-
-

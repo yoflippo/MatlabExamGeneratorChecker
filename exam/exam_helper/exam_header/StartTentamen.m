@@ -142,7 +142,7 @@
 
 
 
-%% STOP!!! JIJ MOET TERUG NAAR BOVEN 
+%% STOP!!! JIJ MOET TERUG NAAR BOVEN
 
 
 
@@ -309,6 +309,11 @@
 
 %% JIJ HEBT HIER NIETS TE ZOEKEN, GA NU HELEMAAL TERUG NAAR BOVEN
 mf = fileparts(mfilename('fullpath'));
+
+if contains(mf,'.zip')
+    error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP HET AANGELEVERDE ZIP-BESTAND EERST UITPAKKEN!'  sprintf('\r\n') sprintf('\r\n')])
+end
+
 if ~isequal(pwd,mf)
     warning off
     rmpath(genpath(mf))
