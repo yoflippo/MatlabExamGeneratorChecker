@@ -32,6 +32,7 @@ for n = 1:nOfMulChoiceAssignment
     copyfile(apQSOL,rpFinQSOL);
     % Rename all txt of new questions.
     replaceVraagOpdracht(rpFinQ,nQ);
+    replaceVraagOpdracht(rpFinQSOL,nQ);
     % Make a record of assignment in sAssignedMC
     sAssignedMC(nQ).apSOL = apQSOL;
     sAssignedMC(nQ).apQ = rpFinQ;

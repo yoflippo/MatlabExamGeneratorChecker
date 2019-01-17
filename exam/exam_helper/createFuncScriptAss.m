@@ -158,6 +158,7 @@ for n = 1:nOfScriptsFunctions
     copyfile(apQSOL,rpFinQSOL);
     % Rename all txt of new questions.
     replaceVraagOpdracht(rpFinQ,n);
+    replaceVraagOpdracht(rpFinQSOL,n);
     % Make a record of assignment in sAssigned
     sAssigned(n).apSOL = apQSOL;
     sAssigned(n).apQ = rpFinQ;
