@@ -1,6 +1,6 @@
 %% Stelling 6
 %
-% In de volgende code wordt bij slechts n element
+% In de volgende code wordt bij slechts één element
 % van de vector 'vec' de waarde 99 opgeteld:       
 %                                                  
 % ------------code--------------                   

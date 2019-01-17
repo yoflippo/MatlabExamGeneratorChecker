@@ -1,56 +1,73 @@
-function res = opdracht_5_versie_2_CHECK(absPathStudentSol)
+function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
+
+%%========== PLACE SOLUTION IN COMMENTS HERE
+% tijdas = [0:0.1:60];
+%%==========
+
+
+%% FILL string cells below to test, if you are not using them, make them empty!
+checkingVar.nameVars = {'tijdas'};
+checkingVar.literalsP = {'tijdas' 1 };
+checkingVar.literalsA = {};
+checkingVar.literalsR = {};
+checkingVar.literalsO = {};
+checkingVar.literalsRO = {};
+checkingVar.literalsSL = {};
+
+
+%% Commence the TESTING !!!
 res = 0;
-numtests = 4;
+res = runChecksOnScriptAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
 
-% % % %% Opdracht 5
-% % % % Maak een vector genaamd 'tijdas' aan.
-% % % % Zorg dat de vector wordt gevuld met de tijd van 0 tot en met 60 seconden.
-% % % % Zorg dat de vector met tijdstappen van 0.1 seconde wordt gevuld.
-% % % % VB: 0, 0.1, 0.2, 0.3 ...
-% % % 
-% % % tijdas = [0:0.1:60];
+close all
+% % Open the cleansource variant
+% edit(insertAfter(which(mfilename),['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]));
 
-var1 = 'tijdas';
-ta = 0:0.1:60;
-var2 = length(ta);
+%% Junk, but could be usefull
+% % % % 
+% % % % % Variables that should be present in file and that should be compared to
+% % % % % the SOLUTION:
+% % % % checkingVar.nameVars = {'XXX' 'XXX'};
+% % % % % FILL literalsP,  WITH CODE THAT SHOULD BE PRESENT IN
+% % % % % The number to the right of the string designates the number of times the
+% % % % % string should be present.
+% % % % checkingVar.literalsP = {'XXX' 2 'XXX' 1};
+% % % % % FILL literalsA, With strings that should not be present. The number to
+% % % % % the right represents the weight of the error. Default weight = 1.
+% % % % checkingVar.literalsA = {'NaN' 'XXX' 2};
+% % % % % Reverse literals separated by spaces
+% % % % % EXAMPLE:
+% % % % % THE STUDENT SOLUTION, e.g.:    {'2 + 10'  'vector1 + 100'}
+% % % % % Will test for:  {'2 + 10'       | '10 + 2'      }    AND
+% % % % % Will test for:  {'100 + vector' | 'vector + 100'}
+% % % % % Every case and it reverse will be tested.
+% % % % checkingVar.literalsR = {'X Y' 'Z U'};
+% % % % 
+% % % % %====== checkingVar below this line can be removed
+% % % % % Test for literals and their variants
+% % % % % EXAMPLE: {'varA>varB' 'varB<varA'}
+% % % % checkingVar.literalsO = {{'varA>varB' 'varB<varA'} {'Z' 'M'}};
+% % % % % Test for literals and their (reversed) variants
+% % % % % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x) and
+% % % % % so the reversed case (which would be an error made by the student) could
+% % % % % be accepted as correct.
+% % % % %
+% % % % % EXAMPLE: {'vecD & vecC' 'vecD && vecC'}
+% % % % % Now one of these 4 strings have to be present: 
+% % % % % 1:'vecD & vecC' 2:'vecD && vecC' 3:'vecC & vecD' 4:'vecC && vecD'
+% % % % checkingVar.literalsRO = {{'Y' 'X'}};
 
-%% Get cleaned temporary file
-[path name ext] =fileparts(absPathStudentSol);
-tmp = readCleanMFile(absPathStudentSol);
 
-%% Use the cleaned code to check for certain lines
-if ~isempty(char(tmp))
-    % Make temp file
-    absPathTmp = fullfile(path,'tmp');
-    makeMFileFromCells(absPathTmp,tmp);
-    absPathTmp = fullfile(path,'tmp.m');
-    
-    % Run the original student scripts, if not working no points!
-    try
-        run(absPathStudentSol);
-    catch
-        return;
-    end
-    
-    %% Perform test
-    if exist(var1,'var')
-        l = eval(['length(' var1 ');']);
-        if l == var2
-            res = res + (1/numtests);
-        end
-        if eval([var1 '(end) == ta(end)'])
-            res = res + (1/numtests);
-        end
-        if eval([var1 '(1) == ta(1)'])
-            res = res + (1/numtests);
-        end
-        if eval([var1 '(66) == ta(66)'])
-            res = res + (1/numtests);
-        end
-    end
-    
-    delete(absPathTmp);
-end
+%% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:
+% 1- Variables with specific values and
+% 2- Literals that should be present and
+% 3- Lterals that should be abscent
+% You should take cornercases in to consideration as well. So add those
+% tests as well.
+
+% If the used tests above are not sufficient... design your own... you
+% lazy cunt
 
 end %function
+

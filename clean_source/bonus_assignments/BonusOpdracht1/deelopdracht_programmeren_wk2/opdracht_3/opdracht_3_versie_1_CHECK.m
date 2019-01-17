@@ -20,13 +20,13 @@ res = 0;
 
 %% FILL string cells below to test, if you are not using them, make them empty!
 % Variables that should be present in file
-checkingVar.testFunctionInput = {{1:5} {2:2:10} {0:1}};
+checkingVar.testFunctionInput = {{randn(1,10)} {randn(1,10)} {randn(1,10)} {randn(1,10)} {randn(1,10)} {randn(1,10)}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
 checkingVar.literalsP = {'getallen' 3 'result' 2 'function' 1  'sum' 1};
 % FILL literalsA, With strings that should not be present.
-checkingVar.literalsA = {'NaN' 'mean(' 4};
+checkingVar.literalsA = {'NaN' 'mean(' 5};
 % Reverse literals separated by spaces
 % FOR EXAMPLE:
 % THE STUDENT SOLUTION, e.g.:    '2+10' or  'vector1+100'
@@ -46,5 +46,6 @@ checkingVar.literalsRO = {};
 
 %% Commence the TESTING !!!
 res = runChecksOnFunctionAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
+
 
 end %function

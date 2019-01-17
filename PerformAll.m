@@ -10,7 +10,7 @@ global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();
 
 %% ACTION: Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 3; % Adjust me!!!
+con.BONUSASSNUMBER = 1; % Adjust me!!!
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 

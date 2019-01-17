@@ -770,4 +770,82 @@ CreateBonusAssignments: , progress: 88%
 CreateBonusAssignments: , progress: 89%
 CreateBonusAssignments: , progress: 89%
 CreateBonusAssignments: , progress: 90%
-CreateBon
+CreateBonusAssignments: , progress: 91%
+CreateBonusAssignments: , progress: 92%
+CreateBonusAssignments: , progress: 93%
+CreateBonusAssignments: , progress: 93%
+CreateBonusAssignments: , progress: 94%
+CreateBonusAssignments: , progress: 95%
+CreateBonusAssignments: , progress: 96%
+CreateBonusAssignments: , progress: 97%
+CreateBonusAssignments: , progress: 98%
+CreateBonusAssignments: , progress: 98%
+CreateBonusAssignments: , progress: 99%
+CreateBonusAssignments: , progress: 100%
+230.152: Generate some test files for the Checking script
+230.27: Generate test folders with data to simulate students with wrong assignments
+230.306: END SCRIPT
+Elapsed time is 230.308238 seconds.
+Do you want to test all generated files? (Yes=1,No=0){Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 119)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',119,0)">line 119</a>)
+} 
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.unittest.internal.ui.toolstrip.getFunctionFileInfoForToolstrip', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\testframework\ui\toolstrip\+matlab\+unittest\+internal\+ui\+toolstrip\getFunctionFileInfoForToolstrip.m', 10)" style="font-weight:bold">matlab.unittest.internal.ui.toolstrip.getFunctionFileInfoForToolstrip</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\testframework\ui\toolstrip\+matlab\+unittest\+internal\+ui\+toolstrip\getFunctionFileInfoForToolstrip.m',10,0)">line 10</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.unittest.internal.ui.toolstrip.getFileInfoForToolstrip', 'C:\Program Files\MATLAB\R2018b\toolbox\matlab\testframework\ui\toolstrip\+matlab\+unittest\+internal\+ui\+toolstrip\getFileInfoForToolstrip.m', 35)" style="font-weight:bold">matlab.unittest.internal.ui.toolstrip.getFileInfoForToolstrip</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018b\toolbox\matlab\testframework\ui\toolstrip\+matlab\+unittest\+internal\+ui\+toolstrip\getFileInfoForToolstrip.m',35,0)">line 35</a>)
+        isTestFile = getFunctionFileInfoForToolstrip(file,parseTree);
+} 
+Generating assignents
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('removeShitFromDir', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\miscellaneous\removeShitFromDir.m', 50)" style="font-weight:bold">removeShitFromDir</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\miscellaneous\removeShitFromDir.m',50,0)">line 50</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateBonusAssignments', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m', 52)" style="font-weight:bold">CreateBonusAssignments</a> (<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',52,0)">line 52</a>)
+removeShitFromDir(apWkDirName);
+} 
+Exception in thread "AWT-EventQueue-0": com.mathworks.mvm.exec.MvmCancellationException
+	at com.mathworks.mvm.exec.FutureResult.getInternal(FutureResult.java:409)
+	at com.mathworks.mvm.exec.FutureFevalResult.getInternal(FutureFevalResult.java:49)
+	at com.mathworks.mvm.exec.FutureResult.get(FutureResult.java:262)
+	at com.mathworks.toolbox.matlab.testframework.ui.toolstrip.RunTestsToolSetMatlabCommandSender$2.done(RunTestsToolSetMatlabCommandSender.java:60)
+	at com.mathworks.mvm.exec.MvmSwingWorker$1$1.run(MvmSwingWorker.java:142)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+CreateBonusAssignments(con)
+Generating assignents
+0.21: Empty folder with files for testing
+1.369: Create a student specific folder in every week folder
+1.517: Get overview of files
+2.011: Fill every student folder with the number of assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',263,1)">263 </a>        rawFilesTestDir = fullfile(currTestDir,'raw',num2str(snumber));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',264,1)">264 </a>        rawFilesTestDirSol = fullfile(currTestDir,'rawsol',num2str(snumber));
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',265,1)">265 </a>        mkdirIf(rawFilesTestDir);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',266,1)">266 </a>        mkdirIf(rawFilesTestDirSol);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',267,1)">267 </a>        movefile(currStudentDir,rawFilesTestDir);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',268,1)">268 </a>        movefile(currStudentDirSol,rawFilesTestDirSol);
+if system_dependent('IsDebugMode')==1, dbquit; end
+CreateBonusAssignments(con)
+Generating assignents
+0.723: Empty folder with files for testing
+0.85: Create a student specific folder in every week folder
+0.976: Get overview of files
+1.452: Fill every student folder with the number of assignments
+<a href="matlab: opentoline('C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',223,1)">223 </a>    nmLastAssignmentDir = ['deelopdracht_' num2str(length(con.BONUSASSIGNMENTS{con.BONUSASSNUMBER})*2+1)];
+if system_dependent('IsDebugMode')==1, dbquit; end
+PerformAll
+Check for the existence of needed supporting scripts/function files

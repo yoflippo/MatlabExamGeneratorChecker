@@ -277,17 +277,25 @@ apFinalAssDir = copyThesesToCleanSourceAssignment(con,apGeneratedTheses,weekName
 if ~(nargin > 1)
     cd(apFinalAssDir);
     folders = dir;
-    numAssignments = length(folders)-2;
-    numProgramming = (numAssignments/2)+1;
-    nTheses = 1;
-    for nFol = 3:length(folders)
-        nmCurrFol = folders(nFol).name;
-        if contains(string(nmCurrFol),"stellingen")
-            apNewFolder = fullfile(apFinalAssDir,['deelopdracht_' num2str(nTheses)]);
-            nTheses = nTheses + 1;
+    %%
+    dirs = dir;
+    dirs = dirs([dirs.isdir]);
+    dirs = dirs(3:end);
+    
+    numAssignments = length(dirs); %length(folders)-2;
+    numProgramming = sum(contains({dirs.name},'programmeren'))%(numAssignments/2)+1;
+    numTheses = numAssignments-numProgramming;
+    lstProg = contains({dirs.name},'programmeren');
+    cntTheses = 1;
+    cntProg = 0;
+    for nFol = 1:length(lstProg)
+        nmCurrFol = dirs(nFol).name;
+        if ~lstProg(nFol)
+            apNewFolder = fullfile(apFinalAssDir,['deelopdracht_' num2str(cntTheses)]);
+            cntTheses = cntTheses + 1;
         else %programmeren
-            apNewFolder = fullfile(apFinalAssDir,strcat(extractBefore(nmCurrFol,"programmeren"),num2str(numProgramming)));
-            numProgramming = numProgramming +1;
+            cntProg = numTheses + cntProg + 1;
+            apNewFolder = fullfile(apFinalAssDir,strcat(extractBefore(nmCurrFol,"programmeren"),num2str(cntProg)));
         end
         apOldFolder = fullfile(apFinalAssDir,nmCurrFol);
         mkdir(apNewFolder)

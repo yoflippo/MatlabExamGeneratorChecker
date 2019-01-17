@@ -38,4 +38,5 @@ checkingVar.literalsRO = {};
 %% Commence the TESTING !!!
 res = runChecksOnFunctionAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
 
+
 end %function

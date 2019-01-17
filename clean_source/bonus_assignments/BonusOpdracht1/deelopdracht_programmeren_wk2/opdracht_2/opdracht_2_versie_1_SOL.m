@@ -7,3 +7,27 @@
 function result = opdracht_2(num)
 result = num*num; %num^2 is ook goed.
 end
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
+% Tijdens het runnen van jouw uitwerking, tradt er een fout op:

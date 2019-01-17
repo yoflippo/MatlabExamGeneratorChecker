@@ -23,7 +23,7 @@ checkingVar.nameVars = {'vgl'};
 % FILL literalsP,  WITH CODE THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {'strcmp(S1,S2)' 1 'strcmp(S1,S2)' 1};
+checkingVar.literalsP = {};
 % FILL literalsA, With strings that should not be present. The number to
 % the right represents the weight of the error. Default weight = 1.
 checkingVar.literalsA = {'NaN' 'vgl=1' 'vgl=0' 'if'};
@@ -38,7 +38,7 @@ checkingVar.literalsR = {};
 %====== checkingVar below this line can be removed
 % Test for literals and their variants
 % EXAMPLE: {'varA>varB' 'varB<varA'}
-checkingVar.literalsO = {};
+checkingVar.literalsO = {{'strcmp(S1,S2)' 'strcmp(S2,S1)' 'strcmpi(S1,S2)' 'strcmpi(S2,S1)'}};
 % Test for literals and their (reversed) variants
 % NOTE THE LIMITED USABILITY OF RO: e.g. x > y has the reverse (y > x) and
 % so the reversed case (which would be an error made by the student) could

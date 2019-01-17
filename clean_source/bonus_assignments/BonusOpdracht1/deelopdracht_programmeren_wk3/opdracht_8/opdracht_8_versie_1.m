@@ -5,6 +5,5 @@
 % De eerste vector geef je de naam 'bovenbeen' en de tweede vector 
 % de naam 'onderbeen'.  
 %
-% De output is de opgetelde waarde van het laatste element van de vector
-% bovenbeen en het derde element van de vector onderbeen.
-
+% De output is de opgetelde waarde van het laatste element van 
+% 'bovenbeen' en het derde element van 'onderbeen'.

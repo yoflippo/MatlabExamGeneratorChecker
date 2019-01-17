@@ -1,0 +1,2256 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1901171705
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.5.0.944444 (R2018b)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Home Version 10.0 (Build 17763)
+Java Version: Java 1.8.0_152-b16 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.5         (R2018b)
+Simulink                                              Version 9.2         (R2018b)
+Aerospace Blockset                                    Version 4.0         (R2018b)
+Aerospace Toolbox                                     Version 3.0         (R2018b)
+Antenna Toolbox                                       Version 3.2         (R2018b)
+Audio System Toolbox                                  Version 1.5         (R2018b)
+Automated Driving System Toolbox                      Version 1.3         (R2018b)
+Bioinformatics Toolbox                                Version 4.11        (R2018b)
+Communications Toolbox                                Version 7.0         (R2018b)
+Computer Vision System Toolbox                        Version 8.2         (R2018b)
+Control System Toolbox                                Version 10.5        (R2018b)
+Curve Fitting Toolbox                                 Version 3.5.8       (R2018b)
+DSP System Toolbox                                    Version 9.7         (R2018b)
+Data Acquisition Toolbox                              Version 3.14        (R2018b)
+Database Toolbox                                      Version 9.0         (R2018b)
+Datafeed Toolbox                                      Version 5.8         (R2018b)
+Deep Learning Toolbox                                 Version 12.0        (R2018b)
+Econometrics Toolbox                                  Version 5.1         (R2018b)
+Embedded Coder                                        Version 7.1         (R2018b)
+Filter Design HDL Coder                               Version 3.1.4       (R2018b)
+Financial Instruments Toolbox                         Version 2.8         (R2018b)
+Financial Toolbox                                     Version 5.12        (R2018b)
+Fixed-Point Designer                                  Version 6.2         (R2018b)
+Fuzzy Logic Toolbox                                   Version 2.4         (R2018b)
+GPU Coder                                             Version 1.2         (R2018b)
+Global Optimization Toolbox                           Version 4.0         (R2018b)
+HDL Coder                                             Version 3.13        (R2018b)
+HDL Verifier                                          Version 5.5         (R2018b)
+Image Acquisition Toolbox                             Version 5.5         (R2018b)
+Image Processing Toolbox                              Version 10.3        (R2018b)
+Instrument Control Toolbox                            Version 3.14        (R2018b)
+LTE HDL Toolbox                                       Version 1.2         (R2018b)
+LTE Toolbox                                           Version 3.0         (R2018b)
+MATLAB Coder                                          Version 4.1         (R2018b)
+MATLAB Compiler                                       Version 7.0         (R2018b)
+MATLAB Compiler SDK                                   Version 6.6         (R2018b)
+MATLAB Report Generator                               Version 5.5         (R2018b)
+Mapping Toolbox                                       Version 4.7         (R2018b)
+Model Predictive Control Toolbox                      Version 6.2         (R2018b)
+Model-Based Calibration Toolbox                       Version 5.5         (R2018b)
+OPC Toolbox                                           Version 4.0.6       (R2018b)
+Optimization Toolbox                                  Version 8.2         (R2018b)
+Parallel Computing Toolbox                            Version 6.13        (R2018b)
+Partial Differential Equation Toolbox                 Version 3.1         (R2018b)
+Phased Array System Toolbox                           Version 4.0         (R2018b)
+Polyspace Bug Finder                                  Version 2.6         (R2018b)
+Polyspace Code Prover                                 Version 9.10        (R2018b)
+Powertrain Blockset                                   Version 1.4         (R2018b)
+Predictive Maintenance Toolbox                        Version 1.1         (R2018b)
+RF Blockset                                           Version 7.1         (R2018b)
+RF Toolbox                                            Version 3.5         (R2018b)
+Risk Management Toolbox                               Version 1.4         (R2018b)
+Robotics System Toolbox                               Version 2.1         (R2018b)
+Robust Control Toolbox                                Version 6.5         (R2018b)
+Sensor Fusion and Tracking Toolbox                    Version 1.0         (R2018b)
+Signal Processing Toolbox                             Version 8.1         (R2018b)
+SimBiology                                            Version 5.8.1       (R2018b)
+SimEvents                                             Version 5.5         (R2018b)
+Simscape                                              Version 4.5         (R2018b)
+Simscape Driveline                                    Version 2.15        (R2018b)
+Simscape Electrical                                   Version 7.0         (R2018b)
+Simscape Fluids                                       Version 2.5         (R2018b)
+Simscape Multibody                                    Version 6.0         (R2018b)
+Simulink 3D Animation                                 Version 8.1         (R2018b)
+Simulink Check                                        Version 4.2         (R2018b)
+Simulink Code Inspector                               Version 3.3         (R2018b)
+Simulink Coder                                        Version 9.0         (R2018b)
+Simulink Control Design                               Version 5.2         (R2018b)
+Simulink Coverage                                     Version 4.2         (R2018b)
+Simulink Design Optimization                          Version 3.5         (R2018b)
+Simulink Design Verifier                              Version 4.0         (R2018b)
+Simulink Desktop Real-Time                            Version 5.7         (R2018b)
+Simulink PLC Coder                                    Version 2.6         (R2018b)
+Simulink Real-Time                                    Version 6.9         (R2018b)
+Simulink Report Generator                             Version 5.5         (R2018b)
+Simulink Requirements                                 Version 1.2         (R2018b)
+Simulink Test                                         Version 2.5         (R2018b)
+Spreadsheet Link                                      Version 3.4         (R2018b)
+Stateflow                                             Version 9.2         (R2018b)
+Statistics and Machine Learning Toolbox               Version 11.4        (R2018b)
+Symbolic Math Toolbox                                 Version 8.2         (R2018b)
+System Identification Toolbox                         Version 9.9         (R2018b)
+Text Analytics Toolbox                                Version 1.2         (R2018b)
+Trading Toolbox                                       Version 3.5         (R2018b)
+Vehicle Dynamics Blockset                             Version 1.1         (R2018b)
+Vehicle Network Toolbox                               Version 4.1         (R2018b)
+Vision HDL Toolbox                                    Version 1.7         (R2018b)
+WLAN Toolbox                                          Version 2.0         (R2018b)
+Wavelet Toolbox                                       Version 5.1         (R2018b)
+Windows platform
+Do you want to (re)generate the assignments? (yes=1/no=0)1
+Generate MC files and copy all clean_source/assignments -> root/assignments
+week1: TRUE = 53 | FALSE = 49
+week2: TRUE = 28 | FALSE = 32
+week3: TRUE = 33 | FALSE = 33
+week4: TRUE = 45 | FALSE = 48
+week5: TRUE = 47 | FALSE = 48
+week6: TRUE = 29 | FALSE = 29
+week7: TRUE = 31 | FALSE = 31
+week8: TRUE = 30 | FALSE = 33
+TOTAAL: TRUE = 296 | FALSE = 303
+CreateAndCopyQAssignments: 1 of 25 folders processed of week1
+CreateAndCopyQAssignments: 2 of 25 folders processed of week1
+CreateAndCopyQAssignments: 3 of 25 folders processed of week1
+CreateAndCopyQAssignments: 4 of 25 folders processed of week1
+CreateAndCopyQAssignments: 5 of 25 folders processed of week1
+CreateAndCopyQAssignments: 6 of 25 folders processed of week1
+CreateAndCopyQAssignments: 7 of 25 folders processed of week1
+CreateAndCopyQAssignments: 8 of 25 folders processed of week1
+CreateAndCopyQAssignments: 9 of 25 folders processed of week1
+CreateAndCopyQAssignments: 10 of 25 folders processed of week1
+CreateAndCopyQAssignments: 11 of 25 folders processed of week1
+CreateAndCopyQAssignments: 12 of 25 folders processed of week1
+CreateAndCopyQAssignments: 13 of 25 folders processed of week1
+CreateAndCopyQAssignments: 14 of 25 folders processed of week1
+CreateAndCopyQAssignments: 15 of 25 folders processed of week1
+CreateAndCopyQAssignments: 16 of 25 folders processed of week1
+CreateAndCopyQAssignments: 17 of 25 folders processed of week1
+CreateAndCopyQAssignments: 18 of 25 folders processed of week1
+CreateAndCopyQAssignments: 19 of 25 folders processed of week1
+CreateAndCopyQAssignments: 20 of 25 folders processed of week1
+CreateAndCopyQAssignments: 21 of 25 folders processed of week1
+CreateAndCopyQAssignments: 22 of 25 folders processed of week1
+CreateAndCopyQAssignments: 23 of 25 folders processed of week1
+CreateAndCopyQAssignments: 24 of 25 folders processed of week1
+CreateAndCopyQAssignments: 25 of 25 folders processed of week1
+CreateAndCopyQAssignments: 1 of 15 folders processed of week2
+CreateAndCopyQAssignments: 2 of 15 folders processed of week2
+CreateAndCopyQAssignments: 3 of 15 folders processed of week2
+CreateAndCopyQAssignments: 4 of 15 folders processed of week2
+CreateAndCopyQAssignments: 5 of 15 folders processed of week2
+CreateAndCopyQAssignments: 6 of 15 folders processed of week2
+CreateAndCopyQAssignments: 7 of 15 folders processed of week2
+CreateAndCopyQAssignments: 8 of 15 folders processed of week2
+CreateAndCopyQAssignments: 9 of 15 folders processed of week2
+CreateAndCopyQAssignments: 10 of 15 folders processed of week2
+CreateAndCopyQAssignments: 11 of 15 folders processed of week2
+CreateAndCopyQAssignments: 12 of 15 folders processed of week2
+CreateAndCopyQAssignments: 13 of 15 folders processed of week2
+CreateAndCopyQAssignments: 14 of 15 folders processed of week2
+CreateAndCopyQAssignments: 15 of 15 folders processed of week2
+CreateAndCopyQAssignments: 1 of 16 folders processed of week3
+CreateAndCopyQAssignments: 2 of 16 folders processed of week3
+CreateAndCopyQAssignments: 3 of 16 folders processed of week3
+CreateAndCopyQAssignments: 4 of 16 folders processed of week3
+CreateAndCopyQAssignments: 5 of 16 folders processed of week3
+CreateAndCopyQAssignments: 6 of 16 folders processed of week3
+CreateAndCopyQAssignments: 7 of 16 folders processed of week3
+CreateAndCopyQAssignments: 8 of 16 folders processed of week3
+CreateAndCopyQAssignments: 9 of 16 folders processed of week3
+CreateAndCopyQAssignments: 10 of 16 folders processed of week3
+CreateAndCopyQAssignments: 11 of 16 folders processed of week3
+CreateAndCopyQAssignments: 12 of 16 folders processed of week3
+CreateAndCopyQAssignments: 13 of 16 folders processed of week3
+CreateAndCopyQAssignments: 14 of 16 folders processed of week3
+CreateAndCopyQAssignments: 15 of 16 folders processed of week3
+CreateAndCopyQAssignments: 16 of 16 folders processed of week3
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the files to the "assignment" place
+copyThesesToCleanSourceAssignment: Copy files to C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\bonus_assignments\BonusOpdracht1
+copyThesesToCleanSourceAssignment: Copy files to C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1
+
+numProgramming =
+
+     3
+
+Created MC-Questions
+Elapsed time is 79.254458 seconds.
+execute generate all script
+Start fresh: Generate all week assignments
+0: Create new filenames (with HASH code AND combine file names)
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+4.085: END SCRIPT
+Elapsed time is 4.086989 seconds.
+4.635: Read the student number and convert the list to e-mailadresses
+Number of students: 122
+Execute create week assignment scripts
+Generating assignents
+0.206: Empty folder with files for testing
+1.584: Create a student specific folder in every week folder
+1.711: Get overview of files
+2.727: Fill every student folder with the number of assignments
+CreateBonusAssignments: , progress: 1%
+CreateBonusAssignments: , progress: 2%
+CreateBonusAssignments: , progress: 2%
+CreateBonusAssignments: , progress: 3%
+CreateBonusAssignments: , progress: 4%
+CreateBonusAssignments: , progress: 5%
+CreateBonusAssignments: , progress: 6%
+CreateBonusAssignments: , progress: 7%
+CreateBonusAssignments: , progress: 7%
+CreateBonusAssignments: , progress: 8%
+CreateBonusAssignments: , progress: 9%
+CreateBonusAssignments: , progress: 10%
+CreateBonusAssignments: , progress: 11%
+CreateBonusAssignments: , progress: 11%
+CreateBonusAssignments: , progress: 12%
+CreateBonusAssignments: , progress: 13%
+CreateBonusAssignments: , progress: 14%
+CreateBonusAssignments: , progress: 15%
+CreateBonusAssignments: , progress: 16%
+CreateBonusAssignments: , progress: 16%
+CreateBonusAssignments: , progress: 17%
+CreateBonusAssignments: , progress: 18%
+CreateBonusAssignments: , progress: 19%
+CreateBonusAssignments: , progress: 20%
+CreateBonusAssignments: , progress: 20%
+CreateBonusAssignments: , progress: 21%
+CreateBonusAssignments: , progress: 22%
+CreateBonusAssignments: , progress: 23%
+CreateBonusAssignments: , progress: 24%
+CreateBonusAssignments: , progress: 25%
+CreateBonusAssignments: , progress: 25%
+CreateBonusAssignments: , progress: 26%
+CreateBonusAssignments: , progress: 27%
+CreateBonusAssignments: , progress: 28%
+CreateBonusAssignments: , progress: 29%
+CreateBonusAssignments: , progress: 30%
+CreateBonusAssignments: , progress: 30%
+CreateBonusAssignments: , progress: 31%
+CreateBonusAssignments: , progress: 32%
+CreateBonusAssignments: , progress: 33%
+CreateBonusAssignments: , progress: 34%
+CreateBonusAssignments: , progress: 34%
+CreateBonusAssignments: , progress: 35%
+CreateBonusAssignments: , progress: 36%
+CreateBonusAssignments: , progress: 37%
+CreateBonusAssignments: , progress: 38%
+CreateBonusAssignments: , progress: 39%
+CreateBonusAssignments: , progress: 39%
+CreateBonusAssignments: , progress: 40%
+CreateBonusAssignments: , progress: 41%
+CreateBonusAssignments: , progress: 42%
+CreateBonusAssignments: , progress: 43%
+CreateBonusAssignments: , progress: 43%
+CreateBonusAssignments: , progress: 44%
+CreateBonusAssignments: , progress: 45%
+CreateBonusAssignments: , progress: 46%
+CreateBonusAssignments: , progress: 47%
+CreateBonusAssignments: , progress: 48%
+CreateBonusAssignments: , progress: 48%
+CreateBonusAssignments: , progress: 49%
+CreateBonusAssignments: , progress: 50%
+CreateBonusAssignments: , progress: 51%
+CreateBonusAssignments: , progress: 52%
+CreateBonusAssignments: , progress: 52%
+CreateBonusAssignments: , progress: 53%
+CreateBonusAssignments: , progress: 54%
+CreateBonusAssignments: , progress: 55%
+CreateBonusAssignments: , progress: 56%
+CreateBonusAssignments: , progress: 57%
+CreateBonusAssignments: , progress: 57%
+CreateBonusAssignments: , progress: 58%
+CreateBonusAssignments: , progress: 59%
+CreateBonusAssignments: , progress: 60%
+CreateBonusAssignments: , progress: 61%
+CreateBonusAssignments: , progress: 61%
+CreateBonusAssignments: , progress: 62%
+CreateBonusAssignments: , progress: 63%
+CreateBonusAssignments: , progress: 64%
+CreateBonusAssignments: , progress: 65%
+CreateBonusAssignments: , progress: 66%
+CreateBonusAssignments: , progress: 66%
+CreateBonusAssignments: , progress: 67%
+CreateBonusAssignments: , progress: 68%
+CreateBonusAssignments: , progress: 69%
+CreateBonusAssignments: , progress: 70%
+CreateBonusAssignments: , progress: 70%
+CreateBonusAssignments: , progress: 71%
+CreateBonusAssignments: , progress: 72%
+CreateBonusAssignments: , progress: 73%
+CreateBonusAssignments: , progress: 74%
+CreateBonusAssignments: , progress: 75%
+CreateBonusAssignments: , progress: 75%
+CreateBonusAssignments: , progress: 76%
+CreateBonusAssignments: , progress: 77%
+CreateBonusAssignments: , progress: 78%
+CreateBonusAssignments: , progress: 79%
+CreateBonusAssignments: , progress: 80%
+CreateBonusAssignments: , progress: 80%
+CreateBonusAssignments: , progress: 81%
+CreateBonusAssignments: , progress: 82%
+CreateBonusAssignments: , progress: 83%
+CreateBonusAssignments: , progress: 84%
+CreateBonusAssignments: , progress: 84%
+CreateBonusAssignments: , progress: 85%
+CreateBonusAssignments: , progress: 86%
+CreateBonusAssignments: , progress: 87%
+CreateBonusAssignments: , progress: 88%
+CreateBonusAssignments: , progress: 89%
+CreateBonusAssignments: , progress: 89%
+CreateBonusAssignments: , progress: 90%
+CreateBonusAssignments: , progress: 91%
+CreateBonusAssignments: , progress: 92%
+CreateBonusAssignments: , progress: 93%
+CreateBonusAssignments: , progress: 93%
+CreateBonusAssignments: , progress: 94%
+CreateBonusAssignments: , progress: 95%
+CreateBonusAssignments: , progress: 96%
+CreateBonusAssignments: , progress: 97%
+CreateBonusAssignments: , progress: 98%
+CreateBonusAssignments: , progress: 98%
+CreateBonusAssignments: , progress: 99%
+CreateBonusAssignments: , progress: 100%
+216.539: Generate some test files for the Checking script
+216.654: Generate test folders with data to simulate students with wrong assignments
+216.731: END SCRIPT
+Elapsed time is 216.734625 seconds.
+Do you want to test all generated files? (Yes=1,No=0)1
+Copy certain testfiles to directory submitted
+Execute check assignments
+Start with script
+0.001: Check if needed folder exists, if not stop execution of script
+0.001: Check which students have submitted their assignments. Student without do not get any points
+117 students did not submit their assignments
+6.873: Check if the HASH-codes in every m-file of the students is intact
+7.433: Check for each student if they have their correct assignments
+8.196: Get the number of points for all week assignments
+9.054: Put in dictionary and save in MAT-file
+9.088: Check the answer of the students and track their points if correct
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 6.957107 seconds.
+
+grade =
+
+     1
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 6.333428 seconds.
+
+grade =
+
+     1
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 6.097893 seconds.
+
+grade =
+
+     1
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 5.805803 seconds.
+
+grade =
+
+     1
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 5.457408 seconds.
+
+grade =
+
+     1
+
+
+averageGrade =
+
+     1
+
+Elapsed time is 7.864207 seconds.
+Execute check assignments
+Start with script
+0.006: Check if needed folder exists, if not stop execution of script
+0.007: Check which students have submitted their assignments. Student without do not get any points
+117 students did not submit their assignments
+7.02: Check if the HASH-codes in every m-file of the students is intact
+7.619: Check for each student if they have their correct assignments
+8.371: Get the number of points for all week assignments
+9.173: Put in dictionary and save in MAT-file
+9.194: Check the answer of the students and track their points if correct
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 6.054458 seconds.
+
+grade =
+
+   10.4081
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 5.696964 seconds.
+
+grade =
+
+   10.3992
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 6.558221 seconds.
+
+grade =
+
+   10.2970
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 5.369903 seconds.
+
+grade =
+
+   10.3060
+
+CheckSingleStudentAssignment, progress: 1.2%
+CheckSingleStudentAssignment, progress: 2.5%
+CheckSingleStudentAssignment, progress: 3.7%
+CheckSingleStudentAssignment, progress: 4.9%
+CheckSingleStudentAssignment, progress: 6.2%
+CheckSingleStudentAssignment, progress: 7.4%
+CheckSingleStudentAssignment, progress: 8.6%
+CheckSingleStudentAssignment, progress: 9.9%
+CheckSingleStudentAssignment, progress: 11.1%
+CheckSingleStudentAssignment, progress: 12.3%
+CheckSingleStudentAssignment, progress: 13.6%
+CheckSingleStudentAssignment, progress: 14.8%
+CheckSingleStudentAssignment, progress: 16%
+CheckSingleStudentAssignment, progress: 17.3%
+CheckSingleStudentAssignment, progress: 18.5%
+CheckSingleStudentAssignment, progress: 19.8%
+CheckSingleStudentAssignment, progress: 21%
+CheckSingleStudentAssignment, progress: 22.2%
+CheckSingleStudentAssignment, progress: 23.5%
+CheckSingleStudentAssignment, progress: 24.7%
+CheckSingleStudentAssignment, progress: 25.9%
+CheckSingleStudentAssignment, progress: 27.2%
+CheckSingleStudentAssignment, progress: 28.4%
+CheckSingleStudentAssignment, progress: 29.6%
+CheckSingleStudentAssignment, progress: 30.9%
+CheckSingleStudentAssignment, progress: 32.1%
+CheckSingleStudentAssignment, progress: 33.3%
+CheckSingleStudentAssignment, progress: 34.6%
+CheckSingleStudentAssignment, progress: 35.8%
+CheckSingleStudentAssignment, progress: 37%
+CheckSingleStudentAssignment, progress: 38.3%
+CheckSingleStudentAssignment, progress: 39.5%
+CheckSingleStudentAssignment, progress: 40.7%
+CheckSingleStudentAssignment, progress: 42%
+CheckSingleStudentAssignment, progress: 43.2%
+CheckSingleStudentAssignment, progress: 44.4%
+CheckSingleStudentAssignment, progress: 45.7%
+CheckSingleStudentAssignment, progress: 46.9%
+CheckSingleStudentAssignment, progress: 48.1%
+CheckSingleStudentAssignment, progress: 49.4%
+CheckSingleStudentAssignment, progress: 50.6%
+CheckSingleStudentAssignment, progress: 51.9%
+CheckSingleStudentAssignment, progress: 53.1%
+CheckSingleStudentAssignment, progress: 54.3%
+CheckSingleStudentAssignment, progress: 55.6%
+CheckSingleStudentAssignment, progress: 56.8%
+CheckSingleStudentAssignment, progress: 58%
+CheckSingleStudentAssignment, progress: 59.3%
+CheckSingleStudentAssignment, progress: 60.5%
+CheckSingleStudentAssignment, progress: 61.7%
+CheckSingleStudentAssignment, progress: 63%
+CheckSingleStudentAssignment, progress: 64.2%
+CheckSingleStudentAssignment, progress: 65.4%
+CheckSingleStudentAssignment, progress: 66.7%
+CheckSingleStudentAssignment, progress: 67.9%
+CheckSingleStudentAssignment, progress: 69.1%
+CheckSingleStudentAssignment, progress: 70.4%
+CheckSingleStudentAssignment, progress: 71.6%
+CheckSingleStudentAssignment, progress: 72.8%
+CheckSingleStudentAssignment, progress: 74.1%
+CheckSingleStudentAssignment, progress: 75.3%
+CheckSingleStudentAssignment, progress: 76.5%
+CheckSingleStudentAssignment, progress: 77.8%
+CheckSingleStudentAssignment, progress: 79%
+CheckSingleStudentAssignment, progress: 80.2%
+CheckSingleStudentAssignment, progress: 81.5%
+CheckSingleStudentAssignment, progress: 82.7%
+CheckSingleStudentAssignment, progress: 84%
+CheckSingleStudentAssignment, progress: 85.2%
+CheckSingleStudentAssignment, progress: 86.4%
+CheckSingleStudentAssignment, progress: 87.7%
+CheckSingleStudentAssignment, progress: 88.9%
+CheckSingleStudentAssignment, progress: 90.1%
+CheckSingleStudentAssignment, progress: 91.4%
+CheckSingleStudentAssignment, progress: 92.6%
+CheckSingleStudentAssignment, progress: 93.8%
+CheckSingleStudentAssignment, progress: 95.1%
+CheckSingleStudentAssignment, progress: 96.3%
+CheckSingleStudentAssignment, progress: 97.5%
+CheckSingleStudentAssignment, progress: 98.8%
+CheckSingleStudentAssignment, progress: 100%
+Elapsed time is 5.087495 seconds.
+
+grade =
+
+   10.3992
+
+
+averageGrade =
+
+   10.3600
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yoflippo\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 151)" style="font-weight:bold">PerformAll</a> (<a hr
