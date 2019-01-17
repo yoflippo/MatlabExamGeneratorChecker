@@ -53,6 +53,7 @@ checkingVar.literalsRO = {};
 
 
 %% Commence the TESTING !!!
-res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
+res = runChecksOnScriptAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
+
 
 end %function

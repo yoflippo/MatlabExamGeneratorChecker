@@ -44,6 +44,7 @@ checkingVar.literalsSL = {{'for' 'phi'} {'L3' 'L2' 'L1'}};
 
 %% Commence the TESTING !!!
 res = 0;
-res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
+res = runChecksOnScriptAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
+
 close all
 end %function

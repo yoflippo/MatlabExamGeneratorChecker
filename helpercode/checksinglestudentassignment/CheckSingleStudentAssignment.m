@@ -109,7 +109,8 @@ for i = 1:length(mfilesWithHash)
             absPathCheckfile = replace(AbsPathSOLScript,con.SOLPOSTFIX,con.CHECKPOSTFIX);
             % Extract name of checking function and assume it is on the path
             [apCHE, nmCHE, ~] = fileparts(absPathCheckfile);
-            addpath(genpath(apCHE));
+% % %             addpath(genpath(apCHE));
+            FH_CHECK = function_handle(absPathCheckfile);
             
             % Get the type of the file: opdracht_x, vraag_x
             apStudentSol = mfilesWithHash{1,i};
@@ -119,8 +120,8 @@ for i = 1:length(mfilesWithHash)
                 warning([newline mfilename ': ' newline err.message newline]);
                 keyboard
             end
-            [apSTU, nmSTUScript, ~] = fileparts(apStudentSol);
-            addpath(genpath(apSTU));
+             [apSTU, nmSTUScript, ~] = fileparts(apStudentSol);
+% % %             addpath(genpath(apSTU));
             
             % Get the right string from the abspath of the studentscript to
             % find the number of points using dicNameAssignmentAndPoints
@@ -146,7 +147,7 @@ for i = 1:length(mfilesWithHash)
                 warning([mfilename ': cannot write to -> ' apStudentSol newline warn.message]);
                 fclose('all') %just in case, errors could leave files open
             end
-            ResStudentScript = feval(nmCHE,apStudentSol);
+            ResStudentScript = FH_CHECK(apStudentSol);
             strPoints.pointsAssStud(i) = pointsForCurrentAssignment * ResStudentScript;
             strPoints.relPointsAssStud(i) = ResStudentScript;
             
@@ -154,12 +155,12 @@ for i = 1:length(mfilesWithHash)
                 keyboard %Something wrong Bub
             end
 			
-            % IMPORTANT: remove the path to prevent the use of the wrong
-            % check-files.
-            warning off
-            rmpath(genpath(apCHE));
-            rmpath(genpath(apSTU));
-            warning on
+% % %             % IMPORTANT: remove the path to prevent the use of the wrong
+% % %             % check-files.
+% % %             warning off
+% % %             rmpath(genpath(apCHE));
+% % %             rmpath(genpath(apSTU));
+% % %             warning on
 			
             % Calcule partialpoints
             sumPoints = sumPoints + (pointsForCurrentAssignment * ResStudentScript);
@@ -202,6 +203,7 @@ for i = 1:length(mfilesWithHash)
             keyboard
         end
     end
+    disp([mfilename ', progress: ' num2str(round(100*i/length(mfilesWithHash),1)) '%' ]);
 end
 
 %Safety last

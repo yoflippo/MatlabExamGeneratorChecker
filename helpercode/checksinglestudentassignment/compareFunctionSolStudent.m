@@ -44,7 +44,11 @@ solution = replace(callerName,'_CHECK','_SOL');
 try
 FH_sol = function_handle(solution);
 catch
-   keyboard %% make sure fullpath is called
+    try
+        FH_sol = function_handle([solution '.m']);
+    catch
+           keyboard %% make sure fullpath is called
+    end
 end
 
 blStruct = false;

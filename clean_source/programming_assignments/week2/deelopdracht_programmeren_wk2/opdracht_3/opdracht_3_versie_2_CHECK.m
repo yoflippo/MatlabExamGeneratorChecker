@@ -29,7 +29,8 @@ checkingVar.literalsRO = {};
 
 %% Commence the TESTING !!!
 res = 0;
-res = runChecksOnFunctionAssignment(mfilename,checkingVar,apStudentSol);
+res = runChecksOnFunctionAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
+
 close all
 % % Open the cleansource variant
 % edit(insertAfter(which(mfilename),['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]));

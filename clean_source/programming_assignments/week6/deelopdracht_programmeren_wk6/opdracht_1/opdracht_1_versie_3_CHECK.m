@@ -36,7 +36,8 @@ checkingVar.literalsRO = {};
 
 %% Commence the TESTING !!!
 res = 0;
-res = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
+res = runChecksOnScriptAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
+
 rmpath(genpath(fullfile('..','Databestanden')))
 close all;
 end %function
