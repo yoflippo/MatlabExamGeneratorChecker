@@ -283,7 +283,7 @@ if ~(nargin > 1)
     dirs = dirs(3:end);
     
     numAssignments = length(dirs); %length(folders)-2;
-    numProgramming = sum(contains({dirs.name},'programmeren'))%(numAssignments/2)+1;
+    numProgramming = sum(contains({dirs.name},'programmeren'));%(numAssignments/2)+1;
     numTheses = numAssignments-numProgramming;
     lstProg = contains({dirs.name},'programmeren');
     cntTheses = 1;

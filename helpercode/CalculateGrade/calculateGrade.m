@@ -3,7 +3,7 @@ function [grade, grade_theses, grade_prog] = calculateGrade(con, strPoints, numT
 %% Calculate Thesis grade
 pointsPerAssignment = strPoints.pointsAss;
 weightTheses = pointsPerAssignment(1);
-sumThesesPointsStud = sum(strPoints.pointsAssStud(1:numTheses));
+sumThesesPointSTUDENT = sum(strPoints.pointsAssStud(1:numTheses));
 sumThesesPoints = sum(pointsPerAssignment(1:numTheses));
 sumProgrammingPoints = sum(pointsPerAssignment(numTheses+1:end));
 sumProgrammingPointsStud = sum(strPoints.pointsAssStud(numTheses+1:end));
@@ -18,9 +18,11 @@ sumProgrammingPointsStud = sum(strPoints.pointsAssStud(numTheses+1:end));
 %   |            /
 %  1| _ _ _ _ _ /
 %   |====================num_points
-sumThesesPointsStud = sumThesesPointsStud-((numTheses/2)*weightTheses);
-if sumThesesPointsStud > 0
-    ratio = sumThesesPointsStud/(sumThesesPoints/2);
+%               xGrade
+xGrade = 0.5;
+if sumThesesPointSTUDENT > 0
+    sumThesesPointSTUDENT = sumThesesPoints-(sumThesesPointSTUDENT*xGrade);
+    ratio = sumThesesPointSTUDENT/(sumThesesPoints*xGrade);
     grade_theses = (ratio*9)+1;
 else % no points
     grade_theses = 1;

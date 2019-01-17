@@ -143,7 +143,7 @@ if exist('WeekAssignmentsToGenerate','var')
             copyfiles(apTestFiles,apFinDes);
             disp('Execute check assignments');
             tic
-            try ERZIT HIER NOG EEN FOUT DIE ZORGT DAT HET CIJFER NOG GROTER KAN ZIJN DNA 110
+            try 
                 if ~isequal(cCheckStudentSubmissions(con,nmCurrBonusAss),10)
                     error('The average grade is not equal to 10');
                 end

@@ -152,7 +152,7 @@ for i = 1:length(mfilesWithHash)
             strPoints.pointsAssStud(i) = pointsForCurrentAssignment * ResStudentScript;
             strPoints.relPointsAssStud(i) = ResStudentScript;
             
-            if ResStudentScript < 0
+            if ResStudentScript < 0 || ResStudentScript > 1
                 keyboard %Something wrong Bub
             end
 			
