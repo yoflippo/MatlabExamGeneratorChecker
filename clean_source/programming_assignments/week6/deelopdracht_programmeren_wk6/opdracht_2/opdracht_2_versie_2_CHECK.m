@@ -19,7 +19,7 @@ function res = opdracht_2_versie_2_CHECK(apStudentSol)
 
 checkingVar.nameVars = {};
 checkingVar.literalsP = {'plot(t' 2 'signaal(' 1 'figure' 1 'signaal < 0' 1};
-checkingVar.literalsA = {'NaN' 2};
+checkingVar.literalsA = {'NaN' 2 'for' 1 'while' 1};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

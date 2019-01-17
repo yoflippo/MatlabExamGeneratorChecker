@@ -57,7 +57,7 @@ if ~isempty(char(txtCleanedStudentSolution))
         
         % For a function without input
         if isempty(data)
-            data = 1;
+            data = [];
         end
         
         %% Create a file from the cleaned file that contains no spaces, for easy txt comparisons

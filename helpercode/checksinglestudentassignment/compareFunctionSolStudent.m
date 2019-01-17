@@ -253,8 +253,8 @@ for z = 1:length(testData)
         case '5  0'
             tVar = [];
             try
-                [oStud.a, oStud.b, oStud.c, oStud.d, oStud.e] = feval(apStudentSol);
-                [oSol.a, oSol.b, oSol.c, oSol.d, oSol.e] = feval(solution);
+                [oStud.a, oStud.b, oStud.c, oStud.d, oStud.e] = FH_studsol(apStudentSol);
+                [oSol.a, oSol.b, oSol.c, oSol.d, oSol.e] = FH_sol(solution);
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
