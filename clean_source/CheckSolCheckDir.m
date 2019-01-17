@@ -11,7 +11,8 @@ tic
 for i = 1:length(typeOfAssFiles)
     %% Get info about current file
     pathname = typeOfAssFiles(i).folder;
-    cd(pathname)
+    cd(pathname) %%% removing this would lead to faster script, but it gives
+                 %%% gives problems with compareScriptsSolStudent.m
     deleteTemporaryFiles();
     checkFiles = dirmf('_SOL');
     for j = 1:length(checkFiles)
@@ -33,7 +34,7 @@ for i = 1:length(typeOfAssFiles)
             deleteTemporaryFiles();
             error([mfilename ': ' err.message newline ]);
         end
-        
+        disp([mfilename ', progress: ' num2str(round(100* i / length(typeOfAssFiles),1)) '%' ]);
     end
 end
 toc

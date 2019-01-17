@@ -126,4 +126,3 @@ for i = 1:numsteps+1
 end
 
 end %function
-% Tijdens het runnen van jouw uitwerking, tradt er een fout op:

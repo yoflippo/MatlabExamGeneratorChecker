@@ -133,11 +133,3 @@ for i = 1:numsteps+1     %%!! de f van for is weg gevallen
     end
 end
 end%function
-
-
-
-% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
-% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
-% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
-% Tijdens het runnen van jouw uitwerking, tradt er een fout op:
-% Tijdens het runnen van jouw uitwerking, tradt er een fout op:

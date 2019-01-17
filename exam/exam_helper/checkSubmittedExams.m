@@ -98,10 +98,12 @@ for nd = 1:nex
             
             %% Zip checked exam
             cd(currPath)
+            deleteTemporaryFiles();
             zip(nmChecked,oDirs{nd})
             % Clear folder of student
             removeShitFromDir(oDirs{nd});
-            rmdir(oDirs{nd})
+            rmpath(genpath(oDirs{nd}));
+            rmdir(oDirs{nd},'s')
             % Copy checked file
             movefile(nmChecked,ap.SUBMITTEDCHECKED);
             

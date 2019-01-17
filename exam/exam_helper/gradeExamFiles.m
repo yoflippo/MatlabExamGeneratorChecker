@@ -20,19 +20,21 @@ for nS = 1:nfiles
     s4 = ['Tentamen' filesep];
     ss = extractAfter(mfiles(nS).folder,s4);
     ss = [s4 ss filesep mfiles(nS).name];
-    cd(mfiles(nS).folder);
+    
     
     %% Search current question examInfo
-    index = find(strcmp({examInfo.apQ}, ss)==1);  
+    index = find(strcmp({examInfo.apQ}, ss)==1);
     res = 0;
     if ~isempty(index)
         apSOL = examInfo(index).apSOL;
         apCHECK = replace(apSOL,'_SOL','_CHECK');
-        [pth,nameCheckFunction] = fileparts(apCHECK);
-        addpath(genpath(pth));
+        cd(fileparts(apCHECK)); %%% Need to add this to use function_handle, WHY???
+        %         [pth,nameCheckFunction] = fileparts(apCHECK);
+        F = function_handle(apCHECK);
+        %         addpath(genpath(pth));
         apStudentSol = fullfile(mfiles(nS).folder,mfiles(nS).name);
         try
-            res = feval(nameCheckFunction,apStudentSol);
+            res = F(apStudentSol);
             try
                 handleGrade(res,apStudentSol,apSOL)
             catch err1
@@ -43,16 +45,17 @@ for nS = 1:nfiles
         resultOverview{1,index} = res;
         resT = res*examInfo(index).points + resT;
         
-% % % % %         if res < 1
-% % % % %             open(nameCheckFunction)
-% % % % %             open(apStudentSol)
-% % % % %             keyboard
-% % % % %         end
+        % % % % %         if res < 1
+        % % % % %             open(nameCheckFunction)
+        % % % % %             open(apStudentSol)
+        % % % % %             keyboard
+        % % % % %         end
         
-        rmpath(genpath(pth));
+        %         rmpath(genpath(pth));
     end
     disp([mfilename ', processed files: ' num2str(nS) ' of ' num2str(nfiles) ' (' mfiles(nS).name ')']);
 end
+
 cd(oldPath);
 grade = 1 + ((resT*9)/points);
 rmpath(genpath('deelopdracht_1'));

@@ -39,8 +39,13 @@ function [resTotal] = compareFunctionSolStudent(callerName,testSeries,apStudentS
 % Creation of this function.
 
 
-[~, nmStudentSolution] = fileparts(apStudentSol);
+% [~, apStudentSol] = fileparts(apStudentSol);
 solution = replace(callerName,'_CHECK','_SOL');
+try
+FH_sol = function_handle(solution);
+catch
+   keyboard %% make sure fullpath is called
+end
 
 blStruct = false;
 num_input = 0;
@@ -68,6 +73,8 @@ end
 %% Test for number of outputs of assignment by checking the SOLUTION
 num_output = countNumberOfFunctionOutputs(solution);
 resTotal = 0;
+FH_studsol = function_handle(apStudentSol);
+
 %% Perform tests version 2
 for z = 1:length(testData)
     res = 0;
@@ -82,7 +89,7 @@ for z = 1:length(testData)
     switch num2str([num_output num_input])
         case '1  0'
             try
-                if isequal(feval(nmStudentSolution) , feval(solution))
+                if isequal(FH_studsol(), FH_sol())
                     res = res + 1;
                 end
             catch ErrMess
@@ -95,8 +102,8 @@ for z = 1:length(testData)
                 if iscell(tVar)
                     tVar = tVar{1};
                 end
-                oStud.a = feval(nmStudentSolution,tVar);
-                oSol.a =  feval(solution,tVar);
+                oStud.a = FH_studsol(tVar);
+                oSol.a =  FH_sol(tVar);
                 if isequalQ(oSol.a,oStud.a)
                     res = res + 1;
                 end
@@ -110,8 +117,8 @@ for z = 1:length(testData)
                 if iscell(tVar)
                     tVar = tVar{1};
                 end
-                [oStud.a, oStud.b] = feval(nmStudentSolution,tVar);
-                [oSol.a, oSol.b] = feval(solution,tVar);
+                [oStud.a, oStud.b] = FH_studsol(tVar);
+                [oSol.a, oSol.b] = FH_sol(tVar);
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -128,8 +135,8 @@ for z = 1:length(testData)
                 if iscell(tVar)
                     tVar = tVar{1};
                 end
-                [oStud.a, oStud.b, oStud.c] = feval(nmStudentSolution,tVar);
-                [oSol.a, oSol.b, oSol.c] = feval(solution,tVar);
+                [oStud.a, oStud.b, oStud.c] = FH_studsol(tVar);
+                [oSol.a, oSol.b, oSol.c] = FH_sol(tVar);
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -144,8 +151,8 @@ for z = 1:length(testData)
             end
         case '1  2'
             try
-                [oStud.a] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oSol.a] = feval(solution,tVar{1},tVar{2});
+                [oStud.a] = FH_studsol(tVar{1},tVar{2});
+                [oSol.a] = FH_sol(tVar{1},tVar{2});
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -154,8 +161,8 @@ for z = 1:length(testData)
             end
         case '2  2'
             try
-                [oStud.a, oStud.b] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oSol.a, oSol.b] = feval(solution,tVar{1},tVar{2});
+                [oStud.a, oStud.b] = FH_studsol(tVar{1},tVar{2});
+                [oSol.a, oSol.b] = FH_sol(tVar{1},tVar{2});
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -167,8 +174,8 @@ for z = 1:length(testData)
             end
         case '3  2'
             try
-                [oStud.a, oStud.b, oStud.c] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oSol.a, oSol.b, oSol.c] = feval(solution,tVar{1},tVar{2});
+                [oStud.a, oStud.b, oStud.c] = FH_studsol(tVar{1},tVar{2});
+                [oSol.a, oSol.b, oSol.c] = FH_sol(tVar{1},tVar{2});
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -183,8 +190,8 @@ for z = 1:length(testData)
             end
         case '4  2'
             try
-                [oStud.a, oStud.b, oStud.c,oStud.d] = feval(nmStudentSolution,tVar{1},tVar{2});
-                [oSol.a, oSol.b, oSol.c,oSol.d] = feval(solution,tVar{1},tVar{2});
+                [oStud.a, oStud.b, oStud.c,oStud.d] = FH_studsol(tVar{1},tVar{2});
+                [oSol.a, oSol.b, oSol.c,oSol.d] = FH_sol(tVar{1},tVar{2});
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -202,8 +209,8 @@ for z = 1:length(testData)
             end
         case '1  3'
             try
-                [oStud.a] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
-                [oSol.a] = feval(solution,tVar{1},tVar{2},tVar{3});
+                [oStud.a] = FH_studsol(tVar{1},tVar{2},tVar{3});
+                [oSol.a] = FH_sol(tVar{1},tVar{2},tVar{3});
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -212,8 +219,8 @@ for z = 1:length(testData)
             end
         case '2  3'
             try
-                [oStud.a, oStud.b] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
-                [oSol.a, oSol.b] = feval(solution,tVar{1},tVar{2},tVar{3});
+                [oStud.a, oStud.b] = FH_studsol(tVar{1},tVar{2},tVar{3});
+                [oSol.a, oSol.b] = FH_sol(tVar{1},tVar{2},tVar{3});
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -225,8 +232,8 @@ for z = 1:length(testData)
             end
         case '3  3'
             try
-                [oStud.a, oStud.b, oStud.c] = feval(nmStudentSolution,tVar{1},tVar{2},tVar{3});
-                [oSol.a, oSol.b, oSol.c] = feval(solution,tVar{1},tVar{2},tVar{3});
+                [oStud.a, oStud.b, oStud.c] = FH_studsol(tVar{1},tVar{2},tVar{3});
+                [oSol.a, oSol.b, oSol.c] = FH_sol(tVar{1},tVar{2},tVar{3});
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
                 end
@@ -242,7 +249,7 @@ for z = 1:length(testData)
         case '5  0'
             tVar = [];
             try
-                [oStud.a, oStud.b, oStud.c, oStud.d, oStud.e] = feval(nmStudentSolution);
+                [oStud.a, oStud.b, oStud.c, oStud.d, oStud.e] = feval(apStudentSol);
                 [oSol.a, oSol.b, oSol.c, oSol.d, oSol.e] = feval(solution);
                 if isequalQ(oStud.a,oSol.a)
                     res = res + 1/num_output;
