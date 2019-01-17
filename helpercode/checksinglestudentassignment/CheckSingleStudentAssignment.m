@@ -73,8 +73,9 @@ end
 
 %% Check the m-files in student directory
 % Get mfiles
-cd(studentdir);
-mfiles = dir(['**' filesep '*.m']);
+% cd(studentdir);
+% mfiles = dir([currentFolder filesep '*' filesep '*.m']);
+mfiles = dir([currentFolder filesep '**' filesep '*.m']);
 % Get files with hashcode
 mfilesWithHash = cell(1,length(mfiles));
 HashOfmfiles = mfilesWithHash;
