@@ -25,6 +25,6 @@ checkingVar.literalsRO = {};
 
 %% Commence the TESTING !!!
 res = 0;
-[res,num] = runChecksOnScriptAssignment(mfilename,checkingVar,apStudentSol);
+[res,num] = runChecksOnScriptAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
 close all;
 end %function

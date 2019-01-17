@@ -41,12 +41,9 @@ function [filesRemoved] = removeFilesFromDirs(apDir,cellExt2Keep)
 % $Revision: 0.0.0 $  $Date: 2018-12-07 $
 % Creation of this function.
 
-ap.Old = pwd;
-ap.New = apDir;
-cd(ap.New);
 
 %% Find all files in the given directory
-stcAllFile = dir(['**' filesep '*']);
+stcAllFile = dir([apDir filesep '**']);
 
 try
     %% Remove files and folders that need to be saved from struct
@@ -61,6 +58,4 @@ try
 catch
 end
 
-%% Return to old directory
-cd(ap.Old);
 end %function

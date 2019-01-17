@@ -213,7 +213,5 @@ if strPoints.sumPoints < 0
     strPoints.sumPoints = 0;
 end
 
-cd(apAllStudentAss)
-save('cellAllStudentsAndAssignments.mat','allStudentsAndAssignments')
-cd(currPath);
+save(fullfile(apAllStudentAss,'cellAllStudentsAndAssignments.mat'),'allStudentsAndAssignments')
 end%function

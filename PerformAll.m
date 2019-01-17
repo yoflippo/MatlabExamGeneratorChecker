@@ -171,10 +171,6 @@ end %Generation of week assignment
 
 %% Check manually copied submitted files
 cd(con.BASEFOLDER)
-% apFinDes = fullfile(pwd,con.STUDENTSUBFOLDER,nmCurrBonusAss);
-% apStudentFiles = fullfile(pwd,con.STUDENTSUBFOLDER,[nmCurrBonusAss '_unzipped']);
-% removeShitFromDir(apFinDes);
-% copyfiles(apStudentFiles,apFinDes);
 disp('Check manually copied submitted files');
 try
     [averageGrade, studentMatrix] = cCheckStudentSubmissions(con,nmCurrBonusAss);

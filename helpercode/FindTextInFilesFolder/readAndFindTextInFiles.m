@@ -101,9 +101,9 @@ end
 
 %% Find all files in path
 thisPath = fileparts(mfilename('fullpath'));
-cd(AbsPath)
-filesInPath = dir(['**' filesep '*' fExtension]);
-cd(thisPath)
+% cd(AbsPath)
+filesInPath = dir([AbsPath filesep '**' filesep '*' fExtension]);
+% cd(thisPath)
 
 %% Read every line in a file with the searchstring
 cnt = 0;
@@ -118,7 +118,7 @@ currPath = pwd;
 for nf = 1:length(filesInPath)
     absPathFn = fullfile(filesInPath(nf).folder,filesInPath(nf).name);
     % Go to folder
-    cd(filesInPath(nf).folder);
+    %     cd(filesInPath(nf).folder);
     delimiter = {''};
     formatSpec = '%s%[^\n]';
     fileID = fopen(absPathFn,'r');
@@ -149,9 +149,9 @@ for nf = 1:length(filesInPath)
             end
         end
     catch
-        cd(currPath)
+        %         cd(currPath)
     end
-    cd(currPath)
+    %     cd(currPath)
 end
 
 

@@ -1,20 +1,13 @@
-clear variables; 
-clc;
-currPath = pwd;
+clear variables, clc;
 
 %% This file checks the SOL/CHECK/empty files in the current folder.
 % typeOfAssFiles1 = dirmf('Multiplechoice');
-typeOfAssFiles = dirmf('Make');
-% typeOfAssFiles = [typeOfAssFiles1; typeOfAssFiles]
-
-tic
+typeOfAssFiles = dirmf('TypeOfAssignment');
+deleteTemporaryFiles();
 for i = 1:length(typeOfAssFiles)
     %% Get info about current file
     pathname = typeOfAssFiles(i).folder;
-    cd(pathname) %%% removing this would lead to faster script, but it gives
-                 %%% gives problems with compareScriptsSolStudent.m
-    deleteTemporaryFiles();
-    checkFiles = dirmf('_SOL');
+    checkFiles = dir([pathname filesep '**' filesep '*_SOL*'] );
     for j = 1:length(checkFiles)
         try
             fn = checkFiles(j).name;
@@ -37,6 +30,3 @@ for i = 1:length(typeOfAssFiles)
         disp([mfilename ', progress: ' num2str(round(100* i / length(typeOfAssFiles),1)) '%' ]);
     end
 end
-toc
-cd(currPath)
-%%
