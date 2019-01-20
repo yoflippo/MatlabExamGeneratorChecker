@@ -83,6 +83,7 @@ sAssignedtmp2 = createFuncScriptAss(AssInfo,ap.nOfScriptsFunctions,nm);
 sAssigned = [sAssignedtmp1 sAssignedtmp2];
 disp(['Points for this exam: '  num2str(sum([sAssigned.points]))]);
 clear sAssignedtmp1 sAssignedtmp2 ans;
+
 save('Workspace.mat');
 
 %% Add files to help the student
@@ -158,6 +159,7 @@ cd ..
 
 %% Make a backup
 cd(ap.BASEFOLDER)
+save('WorkspaceAfterChecking.mat');
 dos(['start WinRaR a -r -m5 -mt16 ' fullfile(ap.BASEFOLDEREX,'Created') filesep datetimetxt() 'beforeExam ' ap.CurrExam filesep '*.*'])
 
 %% Finally, Clean up

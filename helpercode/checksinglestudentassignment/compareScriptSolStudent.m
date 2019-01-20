@@ -39,67 +39,85 @@ function [res, txtns] = compareScriptSolStudent(callerName,nameVars,apCleaned,ap
 % Creation of this function.
 
 res = 0;
-
-%% Run the solution file - HAS TO WORK!!
-try
-    run(replace(callerName,'_CHECK','_SOL'));
-catch ErrMess
-    keyboard
-    open(replace(callerName,'_CHECK','_SOL'));
-    error([mfilename ': SERIOUS PROBLEM WITH SOL FILE ' ErrMess.message]);
-    return;
-end
-
-try
-    % Get values and variables from the SOLUTION file
-    for nV = 1:length(nameVars)
-        % Save the variables in the SOLUTION FILE
-        eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
-        % Remove solution variables from Workspace.
-        eval(['clear ' nameVars{nV}  ';']);
+resMax = 0;
+for n = 1:2
+    resMax = max(resMax,res);
+    res = 0;
+    switch n
+        case 1
+            %% Run the solution file - HAS TO WORK!!
+            try
+                run(replace(callerName,'_CHECK','_SOL'));
+            catch ErrMess
+                keyboard
+                open(replace(callerName,'_CHECK','_SOL'));
+                error([mfilename ': SERIOUS PROBLEM WITH SOL FILE ' ErrMess.message]);
+                res = max(resMax,res);
+                return;
+            end
+        case 2
+            try
+                run(replace(callerName,'_CHECK','_SOL2'));
+            catch ErrMess
+                %                 keyboard
+                %                 open(replace(callerName,'_CHECK','_SOL2'));
+                %                 error([mfilename ': SERIOUS PROBLEM WITH SOL FILE ' ErrMess.message]);
+                res = max(resMax,res);
+                return;
+            end
     end
     
-    %% Run the cleaned student script, if not working no points!
-    if exist(apCleaned,'file')
-        run(apCleaned);
-        txtns = nospaces(apCleaned);
-    else
-        run(apStudentSol);
-        txtns = nospaces(apStudentSol);
-    end
-catch ErrMess
-    % Test for a generated file! Could also be done by testing for Hash
-    txterror = 'Het script of de functie van de student kan niet worden uitgevoerd!';
-    if ~contains(apStudentSol,'versie')
-        WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
-        WriteToLastLineOfFile(apStudentSol,['% ' txterror]);
-    end
-    delete(apCleaned);
-    error([mfilename ': ' txterror]);
-    return;
-end
-
-%% Perform tests for certain variables in the Workspace
-for nV = 1:length(nameVars)
     try
-        eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
-        if blTest
-            res = res + 1;
+        % Get values and variables from the SOLUTION file
+        for nV = 1:length(nameVars)
+            % Save the variables in the SOLUTION FILE
+            eval(['var' num2str(nV) 'ANS = ' nameVars{nV} ';']);
+            % Remove solution variables from Workspace.
+            eval(['clear ' nameVars{nV}  ';']);
+        end
+        
+        %% Run the cleaned student script, if not working no points!
+        if exist(apCleaned,'file')
+            run(apCleaned);
+            txtns = nospaces(apCleaned);
         else
-            mss = ['% verwacht resultaat in: ' nameVars{nV} '= ' num2str(eval(['var' num2str(nV) 'ANS' ]))];
-            mss = [mss newline '% verkregen resultaat = ' num2str(eval(nameVars{nV}))];
-            if ~contains(apStudentSol,'versie')
-                WriteToLastLineOfFile(apStudentSol,mss);
-            end
+            run(apStudentSol);
+            txtns = nospaces(apStudentSol);
         end
     catch ErrMess
         % Test for a generated file! Could also be done by testing for Hash
+        txterror = 'Het script of de functie van de student kan niet worden uitgevoerd!';
         if ~contains(apStudentSol,'versie')
             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+            WriteToLastLineOfFile(apStudentSol,['% ' txterror]);
+        end
+        delete(apCleaned);
+        error([mfilename ': ' txterror]);
+        res = max(resMax,res);
+        return;
+    end
+    
+    %% Perform tests for certain variables in the Workspace
+    for nV = 1:length(nameVars)
+        try
+            eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
+            if blTest
+                res = res + 1;
+            else
+                mss = ['% verwacht resultaat in: ' nameVars{nV} '= ' num2str(eval(['var' num2str(nV) 'ANS' ]))];
+                mss = [mss newline '% verkregen resultaat = ' num2str(eval(nameVars{nV}))];
+                if ~contains(apStudentSol,'versie')
+                    WriteToLastLineOfFile(apStudentSol,mss);
+                end
+            end
+        catch ErrMess
+            % Test for a generated file! Could also be done by testing for Hash
+            if ~contains(apStudentSol,'versie')
+                WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
+            end
         end
     end
 end
 
-
-end
+res = max(resMax,res);
 

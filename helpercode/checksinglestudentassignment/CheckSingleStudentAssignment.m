@@ -107,6 +107,7 @@ for i = 1:length(mfilesWithHash)
             allStudentsAndAssignments{idxStudAll_SA,idxHashAll_SA} = 0;
             
             % Save it in a variable used by the solution
+            AbsPathSOLScript = replace(AbsPathSOLScript,'2.m','.m');
             absPathCheckfile = replace(AbsPathSOLScript,con.SOLPOSTFIX,con.CHECKPOSTFIX);
             % Extract name of checking function and assume it is on the path
             [apCHE, nmCHE, ~] = fileparts(absPathCheckfile);

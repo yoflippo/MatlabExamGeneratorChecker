@@ -6,7 +6,7 @@
 %
 % Het is jouw taak om alle fouten uit het programma te verwijderen. Als je
 % twijfelt over een mogelijke programmeerfout, neem dan aan dat het code
-% commentaar correct is.
+% commentaar wat er bij staat correct is.
 %
 % LET OP: Je moet de code aanpassen om fouten te verwijderen. Enkel foute
 % code verwijderen gaat niet werken. Je moet code verbeteren.

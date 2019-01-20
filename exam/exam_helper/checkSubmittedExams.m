@@ -76,6 +76,8 @@ for nd = 1:nex
             tmpResultOverview = [currStudentNumber tmpResultOverview];
             resultOverview = [resultOverview; tmpResultOverview];
             
+%             keyboard %% Aanpassen voor andere bonusopdrachten
+            
             %% Create file with grade information
             t{1} = ['% Jouw tentamen cijfer: ' num2str(round(grade,1))];
             studBonusGrade = 0;

@@ -2,18 +2,16 @@ function res = opdracht_3_versie_1_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
-% % % % % % % % % 
-% % % % % % % % % close all
-% % % % % % % % % t = 0:0.01:pi;
-% % % % % % % % % signaal = exp(t);
-% % % % % % % % % plot(t,signaal)
-% % % % % % % % % 
-% % % % % % % % % % De oplossing:
-% % % % % % % % % signaal(signaal < 10) = 0;
-% % % % % % % % % data = signaal;
-% % % % % % % % % figure
-% % % % % % % % % plot(t,data)
-
+%% Opdracht 3
+% % % % close all
+% % % % t = 0:0.01:pi;
+% % % % signaal = log(t);
+% % % % plot(t,signaal)
+% % % % 
+% % % % signaal(signaal < 1) = 0;
+% % % % data = signaal;
+% % % % figure
+% % % % plot(t,data)
 %%==========
 
 
@@ -21,7 +19,7 @@ function res = opdracht_3_versie_1_CHECK(apStudentSol)
 
 
 checkingVar.nameVars = {'data'};
-checkingVar.literalsP = {'plot(t,data' 1 '10' 1 '<' 1};
+checkingVar.literalsP = {'plot(t,data' 1 'signaal < 1' 1 'signaal < 1' 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};

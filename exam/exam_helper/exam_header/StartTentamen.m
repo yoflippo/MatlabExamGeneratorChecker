@@ -310,8 +310,10 @@
 %% JIJ HEBT HIER NIETS TE ZOEKEN, GA NU HELEMAAL TERUG NAAR BOVEN
 mf = fileparts(mfilename('fullpath'));
 
-if contains(mf,'.zip')
-    error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP HET AANGELEVERDE ZIP-BESTAND EERST UITPAKKEN!'  sprintf('\r\n') sprintf('\r\n')])
+try
+    cd(mf)
+catch
+    error([sprintf('\r\n') sprintf('\r\n') sprintf('\r\n') sprintf('\r\n') 'Jij moet eerst de week eindopdracht uitpakken (unzippen)!' sprintf('\r\n') 'DOE DAT NU!' sprintf('\r\n') 'Doe je dat niet, dan loop je punten mis of gaan er zaken fout die niet fout mogen gaan.']);
 end
 
 if ~isequal(pwd,mf)
@@ -320,9 +322,21 @@ if ~isequal(pwd,mf)
     error([sprintf('\r\n') sprintf('\r\n') 'STOP! JE MOET OP "Change Folder"  DRUKKEN!'  sprintf('\r\n') sprintf('\r\n')])
 end
 
+cd ..;
+dirs = dir;
+errtxt = [sprintf('\r\n') sprintf('\r\n') '           LEES MIJ !!!!          ' sprintf('\r\n') sprintf('\r\n') 'Als je zo door gaat, gaat het fout. Je moet helemaal opnieuw beginnen.' sprintf('\r\n') 'Pak het verkregen zip-bestand (klik op het bestand, rechter muisknop enzv.).' sprintf('\r\n') 'Begin opnieuw met het uitvoeren van StartWeekOpdracht.m.' sprintf('\r\n') sprintf('\r\n') 'Jij mag namen van bestanden en folderstructuren e.d. niet aanpassen!'];
+if contains(pwd,'.zip')
+    errtxt = [sprintf('\r\n') sprintf('\r\n') '  Je hebt het door ons aangeleverde zip-bestand niet uitgepakt!' sprintf('\r\n') 'Unzip (uitpakken) het zip-bestand NU!'];
+    error(errtxt);
+end
+
+if ~any(contains({dirs.name},'deelopdracht_1')) || ~any(contains({dirs.name},'deelopdracht_2'))
+    error('Er missen folders die nodig zijn om een zinvol bestand aan te leveren. Je zit toch niet vanuit een zip-bestand te werken? Kijk eens naar wat wij hebben aangeleverd en herstel de folders en structuren.');
+end
+
 clc;
 snumber = input('Geef hier je studentnummer: ');
-while numel(num2str(snumber)) < 8 | numel(num2str(snumber)) > 8
+while numel(num2str(snumber)) < 8 || numel(num2str(snumber)) > 8
     if numel(num2str(snumber)) < 8
         warning('Je hebt te weinig cijfers opgegeven!');
         snumber = input('Geef hier opnieuw je studentnummer: ');
@@ -341,8 +355,11 @@ while isempty(input('Heb je jouw studentennummer correct ingevoerd? Ja = 1, Ande
     end
 end
 
-apThisFile = fileparts(mfilename('fullpath'));
-apStudentNumber = fullfile(apThisFile,'studentnummer.m');
+apStudentNumber = fullfile(mf,'studentnummer.m');
+if exist(apStudentNumber,'file')
+    delete(apStudentNumber)
+end
+
 fileID = fopen(apStudentNumber,'W');
 fprintf(fileID,'%s\r\n',['studentnumber = ' num2str(snumber) ';']);
 clc
@@ -351,6 +368,9 @@ fprintf(fileID,'%s\r\n',['fullname = ' char(39) fullname char(39) ';']);
 fclose('all');
 
 clc;
-cd ..
-disp('Start nu met deelopdracht_1')
-disp('TIP: kijk eens naar de hoeveelheid opdrachten zodat je rekening kunt houden met de beschikbare tijd');
+cd(mf)
+cd(fullfile('..','deelopdracht_1'))
+disp([sprintf('\r\n') 'Start nu met deelopdracht_1, zie Current Folder' sprintf('\r\n')])
+disp('TIP1: kijk eens naar de hoeveelheid opdrachten zodat je rekening kunt houden met de beschikbare tijd.');
+disp(sprintf('\r\n'));
+disp('TIP2: de meeste punten verdien je met de programmeeropdrachten (zie deelopdracht_2).');

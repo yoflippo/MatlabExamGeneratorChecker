@@ -2,8 +2,8 @@ function blAllOkay = CheckSolCheckDirFunc(directory)
 clc;
 cd(directory);
 
-checkFiles = dir('**/*_SOL.m');
-checkFilestmp = dir('**/*_CHECK.m');
+checkFiles = dir(['**' filesep '*_SOL.m']);
+checkFilestmp = dir(['**' filesep '*_CHECK.m']);
 if ~isequal(length(checkFiles),length(checkFilestmp))
     disp(['number of SOLUTION files: ' num2str(length(checkFiles))]);
     disp(['number of CHECK files: ' num2str(length(checkFilestmp))]);

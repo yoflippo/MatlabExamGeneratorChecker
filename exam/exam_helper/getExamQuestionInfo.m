@@ -24,18 +24,18 @@ function [outVar] = getExamQuestionInfo(apExamDir)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-% 
+%
 % PARAMETERS:
 %               apExamDir:  Absolute path of the exam questions
 %
-% RETURN:       
-%               outVar:     Struct containing all information needed.    
-% 
+% RETURN:
+%               outVar:     Struct containing all information needed.
+%
 % EXAMPLES:
 %               of struct: exFiles.MC(1).files(1).Hash
 %
@@ -61,10 +61,12 @@ nD = length(exFiles.MC);
 randIndexD = randperm(nD); % create random index
 for nM = 1:nD
     nMrand = randIndexD(nM); % add the files in random order to struct.
-    cd(exFiles.MC(nMrand).folder)
+    % % %     cd(exFiles.MC(nMrand).folder)
     % Read points -> in deelpunten
-    points
-    files = dirmf('_SOL');
+    run(fullfile(exFiles.MC(nMrand).folder,'points.m'));
+    %     files = dirmf('_SOL');
+    files = dir([exFiles.MC(nMrand).folder filesep '*_SOL.m']);
+    % % % checkFiles = dir(['**' filesep '*_SOL.m']);
     randIndexF = randpermSpace(length(files)); % create random index
     la = length(files);
     files2 = struct('folder', cell(1, la), 'name', cell(1, la), 'Hash', cell(1, la));
@@ -97,10 +99,12 @@ nD = length(exFiles.FuncScrip);
 randIndexD = randperm(nD); % create random index
 for nM = 1:nD
     nMrand = randIndexD(nM); % add the files in random order to struct.
-    cd(exFiles.FuncScrip(nMrand).folder)
+    % % % %     cd(exFiles.FuncScrip(nMrand).folder)
     %% Read points -> in deelpunten
-    points
-    files = dirmf('_SOL');
+    run(fullfile(exFiles.FuncScrip(nMrand).folder,'points.m'));
+    %     points
+    % % %     files = dirmf('_SOL.m');
+    files = dir([exFiles.FuncScrip(nMrand).folder filesep '*_SOL.m']);
     randIndexF = randperm(length(files)); % create random index
     for nF = 1:length(files)
         nFrand = randIndexF(nF);  % add the files in random order to struct.

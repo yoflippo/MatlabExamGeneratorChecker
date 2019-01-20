@@ -206,8 +206,7 @@ if ~isequal(pwd,mf)
 end
 
 newline = sprintf('\r\n'); %Matlab 2014 does not have the newline command
-apThisFile = fileparts(mfilename('fullpath'));
-cd(apThisFile)
+cd(mf)
 clc;
 
 txtInput = 'Ben je HELEMAAL klaar met het tentamen? JA: geef een 1 en druk op Enter, NEE: druk op ENTER): ';
@@ -240,7 +239,7 @@ while isempty(input(txtInput))
     end
 end
 
-cd(apThisFile)
+cd(mf)
 cd ..
 apStartFile = fullfile(pwd,'deelopdracht_0');
 cd(apStartFile)
@@ -267,13 +266,12 @@ cd ..
 clc
 snumber = num2str(snumber);
 sprefix = 'AfgerondTentamenBiostatica_';
-disp('Er is een zip-bestand aangemaakt dat je moet inleveren: ')
+disp('Er is een zip-bestand aangemaakt dat je moet INLEVEREN: ')
 disp('Dat zip-bestand heet: ');
 disp(['                        ' sprefix snumber '.zip'])
 % Zip the file
-zip(['..' filesep sprefix snumber '.zip'],pwd)
+zip([sprefix snumber '.zip'],pwd)
 filebrowser
-cd ..
 disp(' ');
 disp(['Het zip-bestand staat hier: ']);
 disp(pwd);

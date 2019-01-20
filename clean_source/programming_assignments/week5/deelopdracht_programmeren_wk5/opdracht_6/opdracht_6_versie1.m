@@ -4,7 +4,7 @@
 % 
 % Bijvoorbeeld
 % element 1 van: vector 1 + vector 2 + vector 3 + 1
-% element 1 van: vector 1 + vector 2 + vector 3 + 8
+% element 8 van: vector 1 + vector 2 + vector 3 + 8
 % etc.
 %
 % Stop de opgetelde elementen in een vector genaamd 'resultaat'. 

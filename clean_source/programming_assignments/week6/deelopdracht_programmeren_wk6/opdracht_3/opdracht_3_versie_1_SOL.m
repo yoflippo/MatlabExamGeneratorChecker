@@ -1,16 +1,19 @@
 %% Opdracht 3
 % Hieronder staat code waarmee je een grafiek van een logaritmische 
 % functie tekent. Maak een nieuw figuur aan. Maak alle waarden in 'signaal'
-% die kleiner zijn dan 10 gelijk aan nul. 
+% die kleiner zijn dan 1 gelijk aan nul. 
 % Ken die aangepaste vector toe aan een variabele 'data'. 
 % Plot 'data' met de bijbehorende tijdstippen in het nieuwe figure. 
+%
+% Je mag geen gebruik maken van een loop (for/while). Tip: gebruik
+% relationele operatoren.
 
 close all
 t = 0:0.01:pi;
-signaal = exp(t);
+signaal = log(t);
 plot(t,signaal)
 
-signaal(signaal < 10) = 0;
+signaal(signaal < 1) = 0;
 data = signaal;
 figure
 plot(t,data)

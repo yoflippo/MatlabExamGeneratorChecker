@@ -6,6 +6,8 @@
 % vector genaamd 'diffSignaal'. Gebruik hiertoe een daarvoor bedoelde
 % standaard functie van Matlab.
 % Plot dit signaal in het nieuwe figure (geen tijdstippen op de x-as).
+%
+% Je mag geen gebruik maken van een loop (for/while).
 
 close all
 t = 0:0.01:pi;

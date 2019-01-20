@@ -1,4 +1,5 @@
 function [grade,resultOverview] = gradeExamFiles(examInfo)
+% keyboard %% Aanpassen voor vernieuwde manier om cijfers te berekenen
 resT = 0;
 points = sum([examInfo.points]);
 
@@ -80,7 +81,7 @@ end
 
 function handleGradeErr(res,err,apStudentSol,apSOL)
 result = round(res,1)*100;
-keyboard %THIS FUNCTION NEEDS TO BE CHECKED!!
+% keyboard %THIS FUNCTION NEEDS TO BE CHECKED!!
 open(apSOL)
 open(apStudentSol)
 if res < 1

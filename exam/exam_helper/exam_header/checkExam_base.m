@@ -2,9 +2,9 @@
 % function [grades] = checkExam()
 clear variables
 clc
-load('Workspace.mat')
 apCheckExam = fileparts(mfilename('fullpath'));
 cd(apCheckExam);
+load('Workspace.mat')
 rmpath(genpath(apCheckExam))
 
 %% Change absolute paths if needed

@@ -4,7 +4,11 @@ function CheckSolBase(fn,path)
 %% Check if needed files are present
 % Erase a possible POSTFIX
 filename = erase(fn,'_CHECK');
-filename = erase(filename,'_SOL');
+if contains(filename,'_SOL2')
+    filename = erase(filename,'_SOL2');
+else
+    filename = erase(filename,'_SOL');
+end
 % Create a string of the SOL and CHECK file
 solutionFile = replace(filename,'.m','_SOL.m');
 checkFile = replace(filename,'.m','_CHECK.m');
@@ -40,7 +44,7 @@ try
         error(['The Check function should return a result of 0 but is: ' num2str(res)]);
     end
     % run the SOLUTION file on the target CHECK function
-%     eval(['res = ' checkFunction '(pathSolutionFile);'])
+    %     eval(['res = ' checkFunction '(pathSolutionFile);'])
     res=F(pathSolutionFile);
     if round(res,1) ~= 1.0
         edit(pathSolutionFile);

@@ -1,6 +1,6 @@
 %% Check if first lines of files are correct.
 
-function checkFirstLinesSolAndAss( )
+% function checkFirstLinesSolAndAss( )
 
 if ~contains(pwd,'clean_source')
     error('Go the clean_source folder');
@@ -8,7 +8,7 @@ end
 
 close all
 postfix = '_SOL';
-solfiles = dirmf(postfix);
+solfiles = dir(['**' filesep '*_SOL.m']);
 for nf = 1:length(solfiles)
     apSol = fullfile(solfiles(nf).folder,solfiles(nf).name);
     apStu = replace(apSol,postfix,'');
@@ -69,6 +69,3 @@ for nf = 1:length(solfiles)
     clc
     disp(['Checking the headers of assignments and solutions, Progress: ' num2str(round(nf/length(solfiles)*100,1)) ' %'])
 end
-
-end
-
