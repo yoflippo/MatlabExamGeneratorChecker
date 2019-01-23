@@ -133,6 +133,8 @@ txt(all(txt=="",2),:)=[];
 %% Remove 'clear' variants
 txt = strrep(txt,'clear','%clear');
 txt = strrep(txt,'input(','%input(');
+txt = commentLineFromTxt(txt,'uigetfile');
+txt = commentLineFromTxt(txt,'uigetdir');
 
 %% Remove spaces do not change file
 if blNoSpaces

@@ -16,7 +16,7 @@ function res = opdracht_1_versie_2_CHECK(apStudentSol)
 % the SOLUTION:
 checkingVar.nameVars = {'data2'};
 checkingVar.literalsP = {'data(2' 1};
-checkingVar.literalsA = {'NaN' 3};
+checkingVar.literalsA = {'NaN' 3 'uigetfile' 1 'uigetdir' 1};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {{'[data(2,2) data(2,3) data(2,4)]' 'data(2,2:4'}};
 checkingVar.literalsRO = {};

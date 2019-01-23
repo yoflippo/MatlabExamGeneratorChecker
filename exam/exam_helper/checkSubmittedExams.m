@@ -38,7 +38,7 @@ for nd = 1:nex
     currPath = pwd;
     if exist(oDirs{nd},'dir')
         cd(oDirs{nd});
-        currStudentNumber = oDirs{nz}
+        currStudentNumber = oDirs{nd}
         cd(currPath)
         nmChecked = ['Checked_' oDirs{nd} '.zip'];
         if ~exist(nmChecked,'file')
@@ -48,8 +48,11 @@ for nd = 1:nex
                 cd('Tentamen')
             catch
                 subdirs = dir(['*' filesep]);
+                subdirs = subdirs([subdirs.isdir]);
                 idxTentamenDir = find(contains({subdirs.name},'Tentamen'));
-                cd(fullfile(subdirs(idxTentamenDir).folder,subdirs(idxTentamenDir).name))
+                if ~isempty(idxTentamenDir)
+                    cd(fullfile(subdirs(idxTentamenDir).folder,subdirs(idxTentamenDir).name))
+                end
             end
             deleteTemporaryFiles({'_UITWERKING'})
             %% Check Hashes and remove files that do not belong
@@ -61,13 +64,14 @@ for nd = 1:nex
             tmpResultOverview = [currStudentNumber tmpResultOverview];
             resultOverview = [resultOverview; tmpResultOverview];
             grade
+
             %             keyboard %% Aanpassen voor andere bonusopdrachten
             
             %% Create file with grade information
             t{1} = ['% Jouw tentamen cijfer: ' num2str(round(grade,1))];
             studBonusGrade = 0;
             if exist('bonus','var')
-                idx = find(bonus(:,1)==currStudentNumber);
+                idx = find(bonus(:,1)==str2double(currStudentNumber));
                 if ~isempty(idx)
                     for wk = 1:2
                         if bonus(idx,wk+1)

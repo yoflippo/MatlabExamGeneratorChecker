@@ -28,9 +28,10 @@ ap.SUBMITTEDCHECKED = fullfile(pwd,'submitted_checked');
 mkdirIf(ap.SUBMITTEDCHECKED);
 
 if exist(ap.SUBMITTEDUNZIPPED,'dir')
-    if ~exist(fullfile(ap.Submitted,'checkSubmittedExam.mat'),'file')
+    if ~exist(fullfile(ap.Submitted,'checkSubmittedExam.mat'),'file') && input('Do you want to empty the submitted dir? Yes=1, no=else')
         removeShitFromDir(ap.Submitted);
         movefiles(ap.SUBMITTEDUNZIPPED,ap.Submitted)
+        removeShitFromDir(ap.SUBMITTEDCHECKED);
     end
 else
     mkdirIf(ap.SUBMITTEDUNZIPPED);

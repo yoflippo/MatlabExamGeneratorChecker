@@ -57,6 +57,18 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
         num.nameVars = length(checkingVar.nameVars);
         
+        %% Check multiple possible
+        try
+            if ~isempty(checkingVar.nameVarsOr)
+                [resMul, txtns] = compareScriptMultiplePossibleSolStudent(callerName,checkingVar.nameVarsOr,apCleaned,apStudentSol);
+            end
+        catch err
+            deleteTemporaryFiles();
+            return;
+        end
+        num.nameVarsOr = length(checkingVar.nameVarsOr);
+        
+        
         %% Check for literal answers, CAN NOT BE PRESENT
         nAbs = literalAnswersNotPresent(txtns,checkingVar.literalsA,apStudentSol,txtCleanedStudentSolution);
         
@@ -65,6 +77,9 @@ if ~isempty(char(txtCleanedStudentSolution))
             %In this case the student should receive ALL points
             res = 1;
         else
+            %% Add resMul
+            res = res + resMul;
+            
             %% Check all literals
             [res2,num2,weights] = literalsAll(txtns,checkingVar,apStudentSol);
             res = res + res2;
@@ -75,7 +90,8 @@ if ~isempty(char(txtCleanedStudentSolution))
             %% Calculate the result
             res = (res-nAbs)/ (      ...
                 num2.Present         + ...
-                num.nameVars        + ...
+                num.nameVars         + ...
+                num.nameVarsOr       + ...
                 num2.Reversed        + ...
                 num2.VariantsRev     + ...
                 num2.Variants        + ...

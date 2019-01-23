@@ -91,7 +91,7 @@ for n = 1:2
             WriteToLastLineOfFile(apStudentSol,['% ' ErrMess.message]);
             WriteToLastLineOfFile(apStudentSol,['% ' txterror]);
         end
-        delete(apCleaned);
+% % %         delete(apCleaned);
         error([mfilename ': ' txterror]);
         res = max(resMax,res);
         return;

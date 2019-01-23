@@ -23,6 +23,7 @@ desstat.pointsPerQ = cell2mat(res(1,:));
 desstat.totalPoints = sum(desstat.pointsPerQ);
 
 res = res(2:end,:);
+res(cellfun(@isempty,res))={0};
 resProc = cell2mat(res);
 [l, w] = size(resProc);
 
@@ -53,7 +54,7 @@ end
 desstat.percentageCorrect =  repmat(mean(desstat.totPoints)/desstat.totalPoints,1,w);
 
 %% Calculate Cronbach's alpha betrouwbaarheid
-desstat.CBA = CronbachAlpha(transpose(resProc));
+desstat.CBA = CronbachAlpha(resProc);
 
 %% Create figures
 tQ{1} = 1:numMC;
@@ -79,11 +80,11 @@ for n = 1:2
         plot([nr nr],[0 1],'Color',[0.7 0.7 0.7]','LineStyle','--','HandleVisibility','off')
         if ( (desstat.meanQ(tQ{n}(nr)) > ritBor)  && (desstat.meanQ(tQ{n}(nr)) < (1-ritBor)) ) && ...
                 ( (desstat.RIT(tQ{n}(nr)) < ritBor)  ) || ( (desstat.RIT(tQ{n}(nr)) < ritBor)     )
-            plot(nr,desstat.RIT(tQ{n}(nr)),'kd','LineWidth',lineWidth,'MarkerSize',markerSize+1)
+            plot(nr,desstat.RIT(tQ{n}(nr)),'rd','LineWidth',lineWidth,'MarkerSize',markerSize+1)
             blBoth = true;
         end
         if desstat.meanQ(tQ{n}(nr)) < 0.5
-            plot(nr,desstat.meanQ(tQ{n}(nr)),'k+','LineWidth',lineWidth,'MarkerSize',markerSize+1)
+            plot(nr,desstat.meanQ(tQ{n}(nr)),'r+','LineWidth',lineWidth,'MarkerSize',markerSize+1)
             if blBoth
                 plot([nr nr],[0 1],'Color',[1 0.3 0.3]','LineStyle','--','HandleVisibility','off')
             end

@@ -18,13 +18,15 @@ oldPath = pwd;
 resultOverview = cell(1,length({examInfo.apQ}));
 for nS = 1:nfiles
     %% Create a fitting search string, to search in examInfo
-    s4 = ['Tentamen' filesep];
-    ss = extractAfter(mfiles(nS).folder,s4);
-    ss = [s4 ss filesep mfiles(nS).name];
+    %     s4 = ['Tentamen' filesep];
+    %     ss = extractAfter(mfiles(nS).folder,s4);
+    s2 = strfind(mfiles(nS).folder,'deelopdracht');
+    s2 = fullfile(mfiles(nS).folder(s2:end),mfiles(nS).name);
+    ss = fullfile('Tentamen',s2);
     
     
     %% Search current question examInfo
-    index = find(strcmp({examInfo.apQ}, ss)==1);
+    index = find(strcmp({examInfo.apQ}, ss));
     res = 0;
     if ~isempty(index)
         apSOL = examInfo(index).apSOL;
@@ -59,6 +61,11 @@ end
 
 cd(oldPath);
 grade = 1 + ((resT*9)/points);
+
+if grade > 10 || grade < 1
+    keyboard %something is wrong bub
+end
+
 rmpath(genpath('deelopdracht_1'));
 rmpath(genpath('deelopdracht_2'));
 end
@@ -81,7 +88,7 @@ end
 
 function handleGradeErr(res,err,apStudentSol,apSOL)
 result = round(res,1)*100;
-% keyboard %THIS FUNCTION NEEDS TO BE CHECKED!!
+keyboard %THIS FUNCTION NEEDS TO BE CHECKED!!
 open(apSOL)
 open(apStudentSol)
 if res < 1

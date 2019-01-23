@@ -11,7 +11,7 @@ checkingVar.nameVars = {'data'};
 checkingVar.literalsP = {"data = load('Gaan8.txt')" 1 "xas = 0:samplePeriod:(l/fs)-samplePeriod;" 1 ...
     "xas = 0:l-1;" 1 "subplot(aantalSubPlots,1,2); " 1 "legend('X', 'Y', 'Z');" 1 "x = x + (bereikx-maxx);" 1 ... 
     "xlabel('afstand x (cm)');" 1 };
-checkingVar.literalsA = {};
+checkingVar.literalsA = {"uigetdir" 1 "uigetfile" 1};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

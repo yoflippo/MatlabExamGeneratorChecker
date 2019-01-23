@@ -15,7 +15,7 @@ function res = opdracht_1_versie_1_CHECK(apStudentSol)
 % the SOLUTION:
 checkingVar.nameVars = {'data' };
 checkingVar.literalsP = {'load(bestand)' 1 };
-checkingVar.literalsA = {'NaN' 3};
+checkingVar.literalsA = {'NaN' 3 'uigetfile' 1 'uigetdir' 1};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

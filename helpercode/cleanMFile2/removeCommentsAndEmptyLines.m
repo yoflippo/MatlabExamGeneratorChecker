@@ -100,6 +100,8 @@ txt(all(txt=="",2),:)=[];
 %% Remove 'clear' variants
 txt = strrep(txt,'clear','%clear');
 txt = strrep(txt,'input(','%input(');
+txt = removeLineFromTxt(txt,'uigetfile');
+txt = removeLineFromTxt(txt,'uigetdir');
 
 %% Write to file
 if ~blOutputTxtNoFile && blNoFileButTxt

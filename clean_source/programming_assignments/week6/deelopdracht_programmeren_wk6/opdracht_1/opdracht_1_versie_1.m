@@ -2,7 +2,8 @@
 % In de folder Databestanden staat een bestand met de naam herrefaber.txt.
 % Zet de inhoud van dat bestand in een variabele met de naam 'data'.
 %
-% Dit is niet toegestaan: data = load('herrefaber.txt');
+% Dit is niet toegestaan: data = load('herrefaber.txt'); Je mag ook geen
+% gebruik maken van 'uigetfile' of 'uigetdir'. Tip: let op was is gegeven.
 %
 % Gebruik in plaats daarvan een variabele voor de bestandsnaam. 
 % Ter controle: 'data' bestaat uit 2 rijen en 5 kolommen met getallen.

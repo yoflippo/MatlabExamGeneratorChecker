@@ -11,7 +11,7 @@ checkingVar.nameVars = {'data' 'xas' 'labelXas' 'miny'};
 checkingVar.literalsP = {"data = load('Gaan8.txt')" 1 "xas = 0:samplePeriod:(l/fs)-samplePeriod;" 1  ... 
     "labelXas = 'Aantal samples';" 1 "plot(xas,data(:,5), 'g');" 1 "y = -data(:,5)*100./data(:,3);" 1 ... 
     "miny = abs(min(min(y)));" 1 };
-checkingVar.literalsA = {};
+checkingVar.literalsA = {"uigetdir" 1 "uigetfile" 1};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

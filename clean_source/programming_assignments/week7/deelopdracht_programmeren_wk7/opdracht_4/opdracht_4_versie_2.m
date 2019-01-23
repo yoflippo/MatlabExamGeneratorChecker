@@ -10,6 +10,9 @@
 % Je hebt het goed gedaan krijg je een plot te zien.
 % LET OP: Het kan soms even duren voordat het programma helemaal doorlopen
 % is. 
+%
+% Je mag ook geen gebruik maken van 'uigetfile' of 'uigetdir'.
+%
 
 %% ----------------Programma------------------------------------%%
 
