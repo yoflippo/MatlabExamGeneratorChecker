@@ -335,6 +335,15 @@ if ~any(contains({dirs.name},'deelopdracht_1')) || ~any(contains({dirs.name},'de
 end
 
 clc;
+
+try
+    % close current tab
+    edtSvc  = com.mathworks.mlservices.MLEditorServices ;
+    edtList = edtSvc.getEditorApplication.getOpenEditors.toArray ;
+catch
+    
+end
+
 snumber = input('Geef hier je studentnummer: ');
 while numel(num2str(snumber)) < 8 || numel(num2str(snumber)) > 8
     if numel(num2str(snumber)) < 8
@@ -374,3 +383,12 @@ disp([sprintf('\r\n') 'Start nu met deelopdracht_1, zie Current Folder' sprintf(
 disp('TIP1: kijk eens naar de hoeveelheid opdrachten zodat je rekening kunt houden met de beschikbare tijd.');
 disp(sprintf('\r\n'));
 disp('TIP2: de meeste punten verdien je met de programmeeropdrachten (zie deelopdracht_2).');
+
+try
+    edit(mfilename('fullpath'))
+    edtSvc  = com.mathworks.mlservices.MLEditorServices ;
+    edtList = edtSvc.getEditorApplication.getOpenEditors.toArray ;
+    edtList(end).close;
+catch
+    
+end

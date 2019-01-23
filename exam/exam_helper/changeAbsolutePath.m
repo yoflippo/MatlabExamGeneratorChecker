@@ -16,20 +16,20 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %
-% 
+%
 % BY: 2017  M. Schrauwen (markschrauwen@gmail.com)
-% 
+%
 % PARAMETERS:
 %               iStruct:    input struct containing different non-struct
 %                           fields.
 %
-% RETURN:       
+% RETURN:
 %               oStruct:    output struct containing different non-struct
-%                           fields.    
-% 
+%                           fields.
+%
 % EXAMPLES:
 %
 %
@@ -39,7 +39,7 @@
 
 function [ oStruct ] = changeAbsolutePath( iStruct )
 
-nmBASE = 'Biostatica_Auto_Matlab';
+nmBASE = 'MATLAB_TOETS';
 ap = extractBefore(pwd,nmBASE);
 if isstruct(iStruct)
     field = fieldnames(iStruct)';
@@ -47,8 +47,12 @@ if isstruct(iStruct)
         tmp = {iStruct.(field{nf})};
         for lf = 1:length(tmp)
             try
-                oStruct(lf).(field{nf}) = fullfile(ap,nmBASE,extractAfter(tmp{lf},nmBASE));
-            catch 
+                if ~isnumeric(tmp{1}) && any(contains(tmp,'C:\'))
+                    oStruct(lf).(field{nf}) = fullfile(ap,nmBASE,extractAfter(tmp{lf},nmBASE));
+                else
+                    oStruct(lf).(field{nf}) = iStruct(lf).(field{nf});
+                end
+            catch
                 oStruct(lf).(field{nf}) = iStruct(lf).(field{nf});
             end
         end
