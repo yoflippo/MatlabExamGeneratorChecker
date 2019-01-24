@@ -113,7 +113,7 @@ for nd = 1:nex
             movefile(nmChecked,ap.SUBMITTEDCHECKED);
             
             %% Save grade
-            grades(nd,1:2) = [str2double(currStudentNumber) studFinGrade];
+            grades(nd,1:4) = [str2double(currStudentNumber) studFinGrade bonus(idx,wk+1) bonus(idx,wk+2)];
             clear idx studBonusGrade studFinGrade t
             clc; close all;
             disp(['Progress checking EXAMS: ' num2str(100*(nd/nex)) ' %']);

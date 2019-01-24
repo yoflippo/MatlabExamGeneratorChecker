@@ -67,12 +67,13 @@ for n = 1:2
     t = tQ{n};
     figure('name',nmQ{n},'units','normalized','outerposition',[0 0 1 1],'visible','off');
     relPoints = desstat.pointsPerQ(t)/max(desstat.pointsPerQ(t));
-    plot(desstat.meanQ(t),'g+','LineWidth',lineWidth,'MarkerSize',markerSize)
+    hCnt = 1;
+    h(1) = plot(desstat.meanQ(t),'g+','LineWidth',lineWidth,'MarkerSize',markerSize,'DisplayName','P+ value');
     hold on;
-    plot(desstat.stdQ(t),'*','LineWidth',lineWidth,'MarkerSize',markerSize)
-    stairs(relPoints,'-','LineWidth',lineWidth,'MarkerSize',markerSize)
-    plot(desstat.RIT(t),'d','LineWidth',lineWidth,'MarkerSize',markerSize)
-    plot(desstat.percentageCorrect(t),'LineWidth',lineWidth)
+    h(2) = plot(desstat.stdQ(t),'*','LineWidth',lineWidth,'MarkerSize',markerSize,'DisplayName','STD');
+    h(3) = stairs(relPoints,'-','LineWidth',lineWidth,'MarkerSize',markerSize,'DisplayName','Weight');
+    h(4) = plot(desstat.RIT(t),'d','LineWidth',lineWidth,'MarkerSize',markerSize,'DisplayName','RIT');
+    h(5) = plot(desstat.percentageCorrect(t),'LineWidth',lineWidth,'DisplayName','Percentage correct');
     %% Illustrate meaningfull RIT values
     ritBor = 0.2;
     for nr = 1:length(tQ{n})
@@ -80,25 +81,33 @@ for n = 1:2
         plot([nr nr],[0 1],'Color',[0.7 0.7 0.7]','LineStyle','--','HandleVisibility','off')
         if ( (desstat.meanQ(tQ{n}(nr)) > ritBor)  && (desstat.meanQ(tQ{n}(nr)) < (1-ritBor)) ) && ...
                 ( (desstat.RIT(tQ{n}(nr)) < ritBor)  ) || ( (desstat.RIT(tQ{n}(nr)) < ritBor)     )
-            plot(nr,desstat.RIT(tQ{n}(nr)),'rd','LineWidth',lineWidth,'MarkerSize',markerSize+1)
+            h(6) = plot(nr,desstat.RIT(tQ{n}(nr)),'rd','LineWidth',lineWidth,'MarkerSize',markerSize+1,'DisplayName','RIT low');
             blBoth = true;
         end
         if desstat.meanQ(tQ{n}(nr)) < 0.5
-            plot(nr,desstat.meanQ(tQ{n}(nr)),'r+','LineWidth',lineWidth,'MarkerSize',markerSize+1)
+            h(7) = plot(nr,desstat.meanQ(tQ{n}(nr)),'r+','LineWidth',lineWidth,'MarkerSize',markerSize+1,'DisplayName','P-val low');
             if blBoth
                 plot([nr nr],[0 1],'Color',[1 0.3 0.3]','LineStyle','--','HandleVisibility','off')
             end
         end
     end
+    xlim([0 length(tQ{n})+1]);
     ylim([-0.05 1.05])
     xlabel('Assignment');
     title(['Normalised ' nmQ{n} ' (n=' num2str(l) '), Cronbach Alpha = ' num2str(desstat.CBA) ]);
-    legend('P+ value','STD','Weight','RIT','Percentage correct','RIT low','P-val low','Location','best');
+    superHandle = [];
+    for nH = 1:length(h)
+        if ~isa(h(nH),'matlab.graphics.GraphicsPlaceholder')
+            superHandle = [superHandle h(nH)];
+        end
+    end
+    legend(superHandle);
+    clear h superHandle
+    %     legend('P+ value','STD','Weight','RIT','Percentage correct','RIT low','P-val low','Location','best');
     grid on; grid minor;
     saveTightFigure(gcf,[nmQ{n} '.png']);
-    close all;
     savefig([nmQ{n} '.fig']);
-    
+    close all;
     %% Boxplots
     if ~isequal(n,1)
         % Normalised
