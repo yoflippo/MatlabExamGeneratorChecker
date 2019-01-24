@@ -12,10 +12,10 @@ function res = opdracht_2_versie1_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'teller'};
-checkingVar.literalsP = {'teller < 100' 1 'teller + 1' 1 'teller=1' 1};
+checkingVar.literalsP = {'teller < 100' 1 'teller + 1' 1 };
 checkingVar.literalsA = {'NaN'};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {};
+checkingVar.literalsO = {'teller=1' 'teller=0'};
 checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

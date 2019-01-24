@@ -34,7 +34,7 @@ chr = [chr newline 'van Biostatica Matlab.'];
 chr = [chr newline];
 chr = [chr newline 'Op deze e-mail wordt niet gereageerd.'];
 chr = [chr newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
-chr = [chr newline 'Mark Schrauwen in RZ 2.17.1. Of maak een afspraak via: '];
+chr = [chr newline 'Mark Schrauwen in RZ 0.09. Of maak een afspraak via: '];
 chr = [chr newline 'http://www.bewegingstechnologie.com/markschrauwen '];
 chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
@@ -48,7 +48,7 @@ nMailsToSend = length(zips);
 
 %% Send mails
 for nZ = 1:nMailsToSend
-    if contains(zips(nZ).name,'.zip') && contains(zips(nZ).name,'TentamenBiostatica')
+    if contains(zips(nZ).name,'.zip')
         try
             cd(zips(nZ).folder);
             rpSendFolder=fullfile('..',nmDirSend);

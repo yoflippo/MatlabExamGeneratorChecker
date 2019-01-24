@@ -4,7 +4,7 @@
 % Als je een eeuwige lus maakt (een lus die niet stopt) krijg je nul punten
 % voor deze opdracht.
 
-teller = 1;
+teller = 0;
 while teller < 100
     teller = teller + 1;
 end

@@ -58,7 +58,7 @@ if exist('bonus','dir')
     %% Calculate bonusgrade to add to examgrade
     % Find largest files
     idxMax = find(sizeBonus==max(sizeBonus));
-    
+    bonusgrades = preProcesBonusGrades(bonusgrades,idxMax);
     for len = 1:length(bonusgrades{idxMax})
         % Get student and check if it exist for all
         currBonusrades = bonusgrades{idxMax};
@@ -70,7 +70,7 @@ if exist('bonus','dir')
         vecIdxBonusAss = 1:length(sizeBonus);
         vecIdxBonusAss(vecIdxBonusAss==idxMax)=[];
         for nBon = vecIdxBonusAss
-            if ~isequal(nBon,idxMax) && any(bonusgrades{nBon}(:,1)==currStud)
+            if any(bonusgrades{nBon}(:,1)==currStud)
                 idx = find(bonusgrades{nBon}(:,1)==currStud);
                 currGrades(nBon) = bonusgrades{nBon}(idx,2);
             else
@@ -79,7 +79,7 @@ if exist('bonus','dir')
         end
         
         currAvgGrade = sum(currGrades)/length(sizeBonus);
-        % Recalculate to a number between 0..1 to add it to exam 
+        % Recalculate to a number between 0..1 to add it to exam
         currExtraExamPoint = (currAvgGrade-1)/9;
         bonus(len,:) = [currStud currGrades currExtraExamPoint];
     end
@@ -88,4 +88,26 @@ else
     disp([mfilename ': bonus directory does not exist' ]);
 end
 cd(oldPath)
+
+%% Make sure that if a student only participated in one of the last bonus assignments
+% is still processed
+
 end %function
+
+function [bonusgrades] = preProcesBonusGrades(bonusgrades,idxMax)
+largestList = bonusgrades{idxMax}(:,1);
+for i = 1:length(bonusgrades)
+    if ~isequal(i,idxMax) %prevent looping through largest list
+        for nF = 1:length(bonusgrades{i})
+            %find unique student not present in largest bonus grade
+            %collection
+            currStudPP = bonusgrades{i}(nF,1);
+            if ~any(largestList==currStudPP)
+                bonusgrades{idxMax}(end+1,1) = currStudPP;
+                bonusgrades{idxMax}(end,i) = 1;
+            end
+        end
+    end
+end
+
+end
