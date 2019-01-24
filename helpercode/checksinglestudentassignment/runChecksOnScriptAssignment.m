@@ -57,16 +57,23 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
         num.nameVars = length(checkingVar.nameVars);
         
-        %% Check multiple possible
+        %% Check multiple possible variables that should be tested
         try
+            num.nameVarsOr = 0;
+            resMul = 0;
             if ~isempty(checkingVar.nameVarsOr)
                 [resMul, txtns] = compareScriptMultiplePossibleSolStudent(callerName,checkingVar.nameVarsOr,apCleaned,apStudentSol);
             end
+            num.nameVarsOr = length(checkingVar.nameVarsOr);
         catch err
             deleteTemporaryFiles();
-            return;
         end
-        num.nameVarsOr = length(checkingVar.nameVarsOr);
+        
+        
+        if resMul > num.nameVarsOr
+            keyboard
+            error([newline mfilename ': ' newline 'impossible situation' newline]);
+        end
         
         
         %% Check for literal answers, CAN NOT BE PRESENT
@@ -111,30 +118,12 @@ if ~isempty(char(txtCleanedStudentSolution))
         end
         
         if res < 0
-            %         warning('result is too low!')
+            warning('result is too low!')
             res = 0;
         elseif res > 1
             warning('result is too high!')
-            %         res = 1;
+            keyboard
         end
-        
-        % % % % % % % %     %     all outputs/variables are correct         %but result is too low
-        % % % % % % % %     if length(checkingVar.nameVars) > 0 && ...
-        % % % % % % % %         ~contains(apStudentSol,'CHEAT') && ...
-        % % % % % % % %         isequal(resinput,length(checkingVar.nameVars)) && ...
-        % % % % % % % %         res < 1 && ...
-        % % % % % % % %         res > 0 && ...
-        % % % % % % % %         ~contains(pwd,'clean_source')
-        % % % % % % % %
-        % % % % % % % %         edit(apStudentSol);
-        % % % % % % % %         edit(replace(callerName,'CHECK','SOL'));
-        % % % % % % % %         % Open clean source CheckFile
-        % % % % % % % %         apCheckAss = feval('which',callerName);
-        % % % % % % % %         apCheckClean = insertAfter(apCheckAss,['Biostatica_Auto_Matlab' filesep],['clean_source' filesep]);
-        % % % % % % % %         edit(callerName);
-        % % % % % % % %         edit(apCheckClean);
-        % % % % % % % %         keyboard %Something is wrong, because the input test is perfect but the grade not, so I use the wrong test
-        % % % % % % % %     end
     else
         WriteToLastLineOfFile(apStudentSol,'% Eeuwige while-lus, dus je krijgt nul punten');
     end %test forever while

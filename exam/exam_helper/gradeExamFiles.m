@@ -45,8 +45,13 @@ for nS = 1:nfiles
         catch err2
             handleGradeErr(res,err2,apStudentSol,apSOL)
         end
+        
+        if res > 1
+            keyboard % something is wrong bub
+        end
+        
         resultOverview{1,index} = res;
-        resT = res*examInfo(index).points + resT;
+        resT = (res * examInfo(index).points) + resT;
         
         % % % % %         if res < 1
         % % % % %             open(nameCheckFunction)
