@@ -94,6 +94,8 @@ cd(oldPath)
 
 end %function
 
+%% Add students that did not participate in largest list to the largest list 
+% so they will be processed.
 function [bonusgrades] = preProcesBonusGrades(bonusgrades,idxMax)
 largestList = bonusgrades{idxMax}(:,1);
 for i = 1:length(bonusgrades)
