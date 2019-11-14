@@ -52,6 +52,7 @@ if exist('bonus','dir')
         end
     else
         disp([mfilename ': no bonusfiles found' ]);
+        bonus = [];
         return;
     end
     
@@ -85,6 +86,7 @@ if exist('bonus','dir')
     end
     save('bonus.mat','bonus');
 else
+    bonus = [];
     disp([mfilename ': bonus directory does not exist' ]);
 end
 cd(oldPath)
@@ -94,7 +96,7 @@ cd(oldPath)
 
 end %function
 
-%% Add students that did not participate in largest list to the largest list 
+%% Add students that did not participate in largest list to the largest list
 % so they will be processed.
 function [bonusgrades] = preProcesBonusGrades(bonusgrades,idxMax)
 largestList = bonusgrades{idxMax}(:,1);

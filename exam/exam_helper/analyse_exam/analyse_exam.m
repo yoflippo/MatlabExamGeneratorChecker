@@ -55,6 +55,9 @@ desstat.percentageCorrect =  repmat(mean(desstat.totPoints)/desstat.totalPoints,
 
 %% Calculate Cronbach's alpha betrouwbaarheid
 desstat.CBA = CronbachAlpha(resProc);
+if isnan(desstat.CBA)
+    desstat.CBA = CronbachAlpha(resProc');
+end
 
 %% Create figures
 tQ{1} = 1:numMC;

@@ -135,7 +135,7 @@ generateTestExams(ap.CurrExam,2);
 %% Check test exams without solutions
 cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
-copyfiles(fullfile('Test_Exams','exams'),ap.SUBMITTEDUNZIPPED);
+copyfiles(fullfile('Test_Exams','exams'),ap.Submitted);
 run(['checkExam_' nm.CDate]); close all;
 if mean(grades(:,2)) > 1
     error('The exam grade should be 1')
@@ -147,7 +147,7 @@ cd ..
 %% Check test exams WITH solutions
 cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
-copyfiles(fullfile('Test_Exams','exams_SOL'),ap.SUBMITTEDUNZIPPED);
+copyfiles(fullfile('Test_Exams','exams_SOL'),ap.Submitted);
 % % % grades = checkExam();
 run(['checkExam_' nm.CDate]); close all;
 if mean(grades(:,2)) < 10

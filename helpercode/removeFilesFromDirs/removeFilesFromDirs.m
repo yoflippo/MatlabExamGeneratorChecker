@@ -1,4 +1,4 @@
-function [filesRemoved] = removeFilesFromDirs(apDir,cellExt2Keep)
+function [apFilesToRemove] = removeFilesFromDirs(apDir,cellExt2Keep)
 % REMOVEFILESFROMDIRS This function deletes certain file extensions from a
 % directory and returns which files are removed.
 %
@@ -31,7 +31,7 @@ function [filesRemoved] = removeFilesFromDirs(apDir,cellExt2Keep)
 %                               files that have to be kept.
 %
 % RETURN:
-%               filesRemoved: a cell variable with which files are removed.
+%               apFilesToRemove: a cell variable with which files are removed.
 %
 % EXAMPLES:
 %               cellExt2Keep = {'.m' '.mlx' '.txt' '.csv'};
@@ -44,16 +44,14 @@ function [filesRemoved] = removeFilesFromDirs(apDir,cellExt2Keep)
 
 %% Find all files in the given directory
 stcAllFile = dir([apDir filesep '**']);
-
 try
     %% Remove files and folders that need to be saved from struct
-    stcFilesToKeep = stcAllFile(~[stcAllFile.isdir]);
-    stcFilesToKeep = stcFilesToKeep(~contains({stcFilesToKeep.name}',cellExt2Keep));
-    
+    stcFilesToRemove = stcAllFile(~[stcAllFile.isdir]);
+    stcFilesToRemove = stcFilesToRemove(~contains({stcFilesToRemove.name}',cellExt2Keep));
     %% Delete remaining file types based on stcAllFile
-    filesRemoved = fullfile({stcFilesToKeep.folder}',{stcFilesToKeep.name}');
-    for nF = 1:length(filesRemoved)
-        delete(filesRemoved{nF})
+    apFilesToRemove = fullfile({stcFilesToRemove.folder}',{stcFilesToRemove.name}');
+    for nF = 1:length(apFilesToRemove)
+        delete(apFilesToRemove{nF})
     end
 catch
 end

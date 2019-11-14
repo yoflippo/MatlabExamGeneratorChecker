@@ -3,23 +3,27 @@ cd(ap.Submitted);
 if exist('checkSubmittedExam.mat','file')
     load('checkSubmittedExam.mat');
 else
-    
+
     %% Unzip Exams
     zfiles = dir('*.zip');
     if isequal(length(zfiles),0)
-        error([newline mfilename ': ' newline 'No Zip-files found in submitted' newline]);
+        warning([newline mfilename ': ' newline 'No Zip-files found in submitted' newline]);
+        error("Fill folder with student exam zipfiles");
+    else
+        % correctly unzip zip files
+        for nz = 1:length(zfiles)
+            oDirs{nz} = findStudentNumberInTxt(zfiles(nz).name);
+            apCurrZip = fullfile(zfiles(nz).folder,zfiles(nz).name);
+            unzip(apCurrZip,oDirs{nz});
+            movefile(apCurrZip,ap.SUBMITTEDUNZIPPED);
+        end
     end
-    for nz = 1:length(zfiles)
-        oDirs{nz} = findStudentNumberInTxt(zfiles(nz).name);
-        apCurrZip = fullfile(zfiles(nz).folder,zfiles(nz).name);
-        unzip(apCurrZip,oDirs{nz});
-        movefile(apCurrZip,ap.SUBMITTEDUNZIPPED);
-    end
-    
+
+
     %% Check for bonus
     bonus = processBonusGrade(ap);
     cd(ap.Submitted)
-    
+
     %% Walk through unzipped folders
     nex = length(oDirs);
     tmp = {examInfo.apQ};
@@ -57,7 +61,7 @@ for nd = 1:nex
             deleteTemporaryFiles({'_UITWERKING'})
             %% Check Hashes and remove files that do not belong
             checkExamHashes();
-            
+
             %% Grade files
             [grade,tmpResultOverview] = gradeExamFiles(examInfo);
             % Fill resultOverview
@@ -66,11 +70,11 @@ for nd = 1:nex
             grade
 
             %             keyboard %% Aanpassen voor andere bonusopdrachten
-            
+
             %% Create file with grade information
             t{1} = ['% Jouw tentamen cijfer: ' num2str(round(grade,1))];
             studBonusGrade = 0;
-            if exist('bonus','var')
+            if isempty('bonus')
                 idx = find(bonus(:,1)==str2double(currStudentNumber));
                 if ~isempty(idx)
                     for wk = 1:2
@@ -95,12 +99,12 @@ for nd = 1:nex
                 t{length(t)+1} = '% Kijk! In jouw geval had een bonuscijfer kunnen helpen, gemiste kans :(';
                 t{length(t)+1} = '%';
             end
-            
+
             t{length(t)+1} = '% Kijk eventueel in het UITWERKING bestand om te zien wat er fout is gegaan.';
             t{length(t)+1} = '% Alleen bij het Tentamen (niet het HERtentamen) wordt';
             t{length(t)+1} = '% het bonuspunt opgeteld.';
             makeMFileFromCells(fullfile(pwd,'JouwCijfer'),t);
-            
+
             %% Zip checked exam
             cd(currPath)
             deleteTemporaryFiles();
@@ -111,7 +115,7 @@ for nd = 1:nex
             rmdir(oDirs{nd},'s')
             % Copy checked file
             movefile(nmChecked,ap.SUBMITTEDCHECKED);
-            
+
             %% Save grade
 
             % TO DO track the number of people who had a bonus assignment.

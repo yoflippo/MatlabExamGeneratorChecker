@@ -5,7 +5,9 @@ clc
 apCheckExam = fileparts(mfilename('fullpath'));
 cd(apCheckExam);
 load('Workspace.mat')
+warning off;
 rmpath(genpath(apCheckExam))
+warning on;
 
 %% Change absolute paths if needed
 try
@@ -45,7 +47,6 @@ clc
 
 %% Unzip every exam
 grades = checkSubmittedExams(sAssigned,ap);
-
 %% Descriptives
 PercentagePassed = sum(grades(:,2)>=5.5)/length(grades(:,2));
 AverageGrade = mean(grades(:,2));
@@ -70,14 +71,22 @@ ap.Analysis = fullfile(ap.CurrExam,'ExamAnalysis');
 writetxtfile(ap.Grades,strGrades)
 cd(ap.CurrExam)
 analyse_exam(fullfile(ap.Submitted,'resultOverview.mat'),ap.nOfTheses,nm.CurrExamDir)
+
 %% Copy exam to analysis directory
 zip(fullfile(ap.Analysis,'TheExam.zip'),ap.ExamSrcDir);
 copyfile(ap.Grades,ap.Analysis);
 save('WorkspaceFinal.mat');
+
 %% Zip Analysis
 cd(ap.CurrExam)
 [~,nmExam] = fileparts(ap.CurrExam);
 zip(['Analysis_' nmExam '.zip'],ap.Analysis);
+
+%% Make OSIRIS
+createOsirisFile
+
+%% Zip this shit
+zip(['BiostaticaMatlab' nmExam '_FIN.zip'],fileparts(ap.ExamSrcDir));
 
 %% Finally, Clean up
 disp('Finally, Clean up');
