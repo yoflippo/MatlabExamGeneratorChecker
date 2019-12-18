@@ -10,7 +10,7 @@ global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();
 
 %% ACTION: Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 2; % Adjust me!!!
+con.BONUSASSNUMBER = 1; % Adjust me!!! See: ConstantsClass.m
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 
@@ -27,7 +27,7 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
 end
 
 %% START
-if input('Do you want to (re)generate the assignments? (yes=1/no=0)')
+if input('Do you want to (re)generate the assignments (replaces all files in directory "assignments" ? (yes=1/no=0)')
     cnt = 1;
     warning off
     rmpath(genpath(fileparts(mfilename('fullpath'))));
@@ -64,12 +64,13 @@ if input('Do you want to (re)generate the assignments? (yes=1/no=0)')
     end
     toc
     
-    %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
-    cd(con.NAMEASSIGNMENTFOLDER)
-    if ~isequal(length(dirmf(con.CHECKPOSTFIX)),length(dirmf(con.SOLPOSTFIX)))
-        disp('Check if al "checking" files are in working order');
-        assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
-    end
+%     %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
+%     cd(con.BASEFOLDER)
+%     cd(con.NAMEASSIGNMENTFOLDER)
+%     if ~isequal(length(dirmf(con.CHECKPOSTFIX)),length(dirmf(con.SOLPOSTFIX)))
+%         disp('Check if al "checking" files are in working order');
+%         assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
+%     end
     
     %% Clean the submitted folder
     cd(con.BASEFOLDER)
@@ -89,10 +90,25 @@ if input('Do you want to (re)generate the assignments? (yes=1/no=0)')
     % go to the folder with studentnumbers. It is assumed to be a list with
     apDirStudentNumbers = fullfile(con.BASEFOLDER,'studentnumbers');
     cd(apDirStudentNumbers);
+    
     % Remove non-unique students
-    studentNumbers = unique(load('studentnumbers.txt'));
+    opts = delimitedTextImportOptions("NumVariables", 1);
+    opts.DataLines = [1, Inf];
+    opts.Delimiter = ",";
+    opts.VariableNames = "VarName1";
+    opts.VariableTypes = "string";
+    opts = setvaropts(opts, 1, "WhitespaceRule", "preserve");
+    opts = setvaropts(opts, 1, "EmptyFieldRule", "auto");
+    opts.ExtraColumnsRule = "ignore";
+    opts.EmptyLineRule = "read";
+    studentnumbers1 = readtable("studentnumbers.txt", opts);
+    studentnumbers1 = table2array(studentnumbers1);
+    clear opts
+    
+    % Replace studentnumbers.txt
+    studentNumbers = unique(studentnumbers1);
     delete('studentnumbers.txt');
-    writetxtfile(fullfile(pwd,'studentnumbers.txt'),string(num2str(studentNumbers)))
+    writetxtfile(fullfile(pwd,'studentnumbers.txt'),studentNumbers)
     
     disp(['Number of students: ' num2str(length(studentNumbers))]);
     cd(con.BASEFOLDER);
@@ -100,21 +116,20 @@ if input('Do you want to (re)generate the assignments? (yes=1/no=0)')
     save(con.STUDENTNUMBERMAT,'studentNumbers');
     cd(con.BASEFOLDER)
     
-    %% Execute create week assignment scripts for individual students
+    %% Creat Bonus assignments for individual students
     disp('Execute create week assignment scripts');
-    if ~isequal(pwd,con.BASEFOLDER)
-        cd(con.BASEFOLDER)
-    end
+    cd(con.BASEFOLDER)
     tic
     try
-        CreateBonusAssignments(con);
+        CreateBonusAssignments(con); %also generates testfiles
     catch err
         error([mfilename ' in CreateBonusAssignments: ' newline  err.message])
     end
     toc
     
+    %% TEST if all INcorrect solutions files pass
     if input('Do you want to test all generated files? (Yes=1,No=0)')
-        %% TEST if all INcorrect solutions files pass
+        
         disp('Copy certain testfiles to directory submitted');
         cd(con.BASEFOLDER)
         tic

@@ -8,6 +8,7 @@
 % % rmpath(genpath(apBU));
 % % warning on;
 function buAll(apBasefolder,extraString)
-
-dos(['start WinRaR a -r -m5 -mt16 ' [apBasefolder '_BU'] ...
+nmBaseFolderBU = [apBasefolder '_BU'];
+mkdir(nmBaseFolderBU);
+dos(['start WinRaR a -r -m5 -mt16 ' nmBaseFolderBU ...
     filesep datetimetxt() extraString ' ' apBasefolder filesep '*.*']);

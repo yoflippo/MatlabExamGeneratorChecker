@@ -41,7 +41,7 @@ if ~exist(apCleanAssignmentDir,'dir')
     mkdir(apCleanAssignmentDir)
 end
 
-%% Make a skeleton directories
+%% Make a empty directories (for placement of thesisses)
 for nWk = 1:length(weekNames)
     apDesMC = apCleanAssignmentDir;
     apSrcThesis = fullfile(apSourceTheses,weekNames{nWk});
@@ -287,14 +287,14 @@ if ~(nargin > 1)
     numTheses = numAssignments-numProgramming;
     lstProg = contains({dirs.name},'programmeren');
     cntTheses = 1;
-    cntProg = 0;
+    cntProg = numTheses;
     for nFol = 1:length(lstProg)
         nmCurrFol = dirs(nFol).name;
         if ~lstProg(nFol)
             apNewFolder = fullfile(apFinalAssDir,['deelopdracht_' num2str(cntTheses)]);
             cntTheses = cntTheses + 1;
         else %programmeren
-            cntProg = numTheses + cntProg + 1;
+            cntProg = cntProg + 1;
             apNewFolder = fullfile(apFinalAssDir,strcat(extractBefore(nmCurrFol,"programmeren"),num2str(cntProg)));
         end
         apOldFolder = fullfile(apFinalAssDir,nmCurrFol);

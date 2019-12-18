@@ -14,6 +14,7 @@ function res = opdracht_1_versie_3_CHECK(apStudentSol)
 % Variables that should be present in file and that should be compared to
 % the SOLUTION:
 checkingVar.nameVars = {'variable'};
+checkingVar.nameVarsOr = {{'variable' 'variabele'} {'variable' 'variabele'}};
 % FILL literalsP,  WITH CODE THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.

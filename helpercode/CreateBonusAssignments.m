@@ -70,8 +70,11 @@ load(fullfile(con.NAMEASSIGNMENTFOLDER,con.STUDENTNUMBERMAT));
 if ~exist(apWkDirName,'dir')
     mkdir(apWkDirName)
 end
+
+
 % Create a con.STUDENTASSFOLDER inside every weekfolder
 for i = 1:length(studentNumbers)
+    studentNumbers(i) = extractBefore(studentNumbers(i),'@');
     ptmp = fullfile(apWkDirName,num2str(studentNumbers(i)));
     if exist(ptmp,'dir') == 0
         mkdir(ptmp);

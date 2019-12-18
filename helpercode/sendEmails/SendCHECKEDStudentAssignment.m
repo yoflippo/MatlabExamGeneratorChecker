@@ -4,13 +4,13 @@ cd(con.BASEFOLDER)
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','E_mail','opleidingbewegingstechnologie@gmail.com');
 setpref('Internet','SMTP_Username','opleidingbewegingstechnologie@gmail.com');
-setpref('Internet','SMTP_Password','btokee2btokee');
+setpref('Internet','SMTP_Password','biostatica19');
 props = java.lang.System.getProperties;
 props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-assignmentNum = '2'
+assignmentNum = '1'
 nameCurrentBonusDir = ['BonusOpdracht' assignmentNum '_checked']
 cd(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER));
 cd(nameCurrentBonusDir);
@@ -18,7 +18,7 @@ cd(nameCurrentBonusDir);
 studentNumbers = unique(load(fullfile(con.BASEFOLDER,'studentnumbers','studentnumbers.txt')))
 strStudentNumbers = string(num2str(studentNumbers));
 
-nmAssignment = 'BonusOpdracht2';
+nmAssignment = ['BonusOpdracht' num2str(assignmentNum)];
 
 
 %% Recover earlier saved studentnumbers to prevent multiple e-mail to same student
@@ -75,6 +75,7 @@ sendFolder = [nmAssignment '_send'];
 mkdirIf(sendFolder);
 apSendFolder = fullfile(pwd,sendFolder);
 cd(oldPath)
+strStudentNumbers = addZerosToCharStringList(studentNumbers);
 %% Send mails
 for nZ = 1:length(zips)
     if contains(zips(nZ).name,'Checked')

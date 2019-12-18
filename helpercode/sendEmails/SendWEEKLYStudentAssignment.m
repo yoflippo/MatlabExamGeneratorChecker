@@ -5,13 +5,13 @@ cd(con.BASEFOLDER)
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','E_mail','opleidingbewegingstechnologie@gmail.com');
 setpref('Internet','SMTP_Username','opleidingbewegingstechnologie@gmail.com');
-setpref('Internet','SMTP_Password','btokee2btokee');
+setpref('Internet','SMTP_Password','biostatica19');
 props = java.lang.System.getProperties;
 props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 % sendmail('yoflippo@gmail.com','texttobesent') ;
-con.BONUSASSNUMBER = 2;
+con.BONUSASSNUMBER = 1;
 assignmentNum = num2str(con.BONUSASSNUMBER);
 nameCurrentBonusDir = [con.NMBONUSASSIGNMENTDIR assignmentNum];
 cd('student_assignments');
@@ -22,7 +22,7 @@ chr = '';
 chr = [chr newline 'Beste student,'];
 chr = [chr newline newline 'Lees deze e-mail helemaal door!'];
 
-chr = [chr newline 'De deadline van deze bonusopdracht is 07-01-19 om 12:59h.'];
+chr = [chr newline 'De deadline van deze bonusopdracht is 09-12-19 om 16:59h.'];
 chr = [chr newline ];
 chr = [chr 'Jij krijgt deze bonus-opdracht omdat jij je hebt ingeschreven voor de Blackboard course Biostatica. '];
 chr = [chr newline 'Wil je deze e-mails niet meer ontvangen, stuur mij (Mark) dan een e-mail. '];

@@ -1,0 +1,66 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1912041149
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.3.0.713579 (R2017b)
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 17763)
+Java Version: Java 1.8.0_121-b13 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.3         (R2017b)
+Simulink                                              Version 9.0         (R2017b)
+Control System Toolbox                                Version 10.3        (R2017b)
+DSP System Toolbox                                    Version 9.5         (R2017b)
+Data Acquisition Toolbox                              Version 3.12        (R2017b)
+Image Processing Toolbox                              Version 10.1        (R2017b)
+Instrument Control Toolbox                            Version 3.12        (R2017b)
+Optimization Toolbox                                  Version 8.0         (R2017b)
+Signal Processing Toolbox                             Version 7.5         (R2017b)
+Simulink Control Design                               Version 5.0         (R2017b)
+Statistics and Machine Learning Toolbox               Version 11.2        (R2017b)
+Symbolic Math Toolbox                                 Version 8.0         (R2017b)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+week1: TRUE = 53 | FALSE = 49
+week2: TRUE = 28 | FALSE = 32
+week3: TRUE = 33 | FALSE = 33
+week4: TRUE = 46 | FALSE = 47
+week5: TRUE = 47 | FALSE = 48
+week6: TRUE = 29 | FALSE = 29
+week7: TRUE = 31 | FALSE = 31
+week8: TRUE = 29 | FALSE = 34
+TOTAAL: TRUE = 296 | FALSE = 303
+[Warning: copyfiles: Unknown error occurred.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfiles', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\copyFiles\copyfiles.m', 43)" style="font-weight:bold">copyfiles</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\copyFiles\copyfiles.m',43,0)">line 43</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQAssignments', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQAssignments.m', 48)" style="font-weight:bold">CreateAndCopyQAssignments</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQAssignments.m',48,0)">line 48</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 49)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',49,0)">line 49</a>)] 
+CreateAndCopyQAssignments: 1 of 25 folders processed of week1
+CreateAndCopyQAssignments: 2 of 25 folders processed of week1
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('copyfile')" style="font-weight:bold">copyfile</a>
+The system cannot find the path specified.
+
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CreateAndCopyQAssignments', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQAssignments.m', 101)" style="font-weight:bold">CreateAndCopyQAssignments</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQAssignments.m',101,0)">line 101</a>)
+        copyfile(fullfile(apCleanSourceRoot,fn),fullfile(apDestination,fn));
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 49)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',49,0)">line 49</a>)
+    CreateAndCopyQAssignments(con);
+} 
+<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQAssignments.m',101,1)">101 </a>        copyfile(fullfile(apCleanSourceRoot,fn),fullfile(apDestination,fn));
+if system_dependent('IsDebugMode')==1, dbquit; end
+PerformAll
+[Warning: The file 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m' could not be cleared
+because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m' could not be cleared
+because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',2,0)">line 2</a>)] 
+[Warning: The file 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m' could not be cleared
+because it contains MATLAB code that is currently executing.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 2)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',2,0)">line 2</a>)] 
+Check for the existence of needed supporting scripts/function files
+Do you want to (re)generate the assignments (replaces all files in directory "assignments" ? (yes=1/no=0)1

@@ -1,0 +1,250 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   1911141024
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.6.0.1099231 (R2019a) Update 1
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 17763)
+Java Version: Java 1.8.0_181-b13 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.6         (R2019a)
+Simulink                                              Version 9.3         (R2019a)
+Control System Toolbox                                Version 10.6        (R2019a)
+DSP System Toolbox                                    Version 9.8         (R2019a)
+Data Acquisition Toolbox                              Version 4.0         (R2019a)
+Image Processing Toolbox                              Version 10.4        (R2019a)
+Instrument Control Toolbox                            Version 4.0         (R2019a)
+Optimization Toolbox                                  Version 8.3         (R2019a)
+Signal Processing Toolbox                             Version 8.2         (R2019a)
+Simulink Control Design                               Version 5.3         (R2019a)
+Statistics and Machine Learning Toolbox               Version 11.5        (R2019a)
+Symbolic Math Toolbox                                 Version 8.3         (R2019a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+week1: TRUE = 53 | FALSE = 49
+week2: TRUE = 28 | FALSE = 32
+week3: TRUE = 33 | FALSE = 33
+week4: TRUE = 46 | FALSE = 47
+week5: TRUE = 47 | FALSE = 48
+week6: TRUE = 29 | FALSE = 29
+week7: TRUE = 31 | FALSE = 31
+week8: TRUE = 29 | FALSE = 34
+TOTAAL: TRUE = 296 | FALSE = 303
+<a href="matlab: opentoline('Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\CreateAndCopyQAssignments.m',80,1)">80  </a>    for nDirs = 1:length(folders)
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateAndCopyQAssignments: 1 of 25 folders processed of week1
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateAndCopyQAssignments: 2 of 25 folders processed of week1
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateAndCopyQAssignments: 3 of 25 folders processed of week1
+CreateAndCopyQAssignments: 4 of 25 folders processed of week1
+CreateAndCopyQAssignments: 5 of 25 folders processed of week1
+CreateAndCopyQAssignments: 6 of 25 folders processed of week1
+CreateAndCopyQAssignments: 7 of 25 folders processed of week1
+CreateAndCopyQAssignments: 8 of 25 folders processed of week1
+CreateAndCopyQAssignments: 9 of 25 folders processed of week1
+CreateAndCopyQAssignments: 10 of 25 folders processed of week1
+CreateAndCopyQAssignments: 11 of 25 folders processed of week1
+CreateAndCopyQAssignments: 12 of 25 folders processed of week1
+CreateAndCopyQAssignments: 13 of 25 folders processed of week1
+CreateAndCopyQAssignments: 14 of 25 folders processed of week1
+CreateAndCopyQAssignments: 15 of 25 folders processed of week1
+CreateAndCopyQAssignments: 16 of 25 folders processed of week1
+CreateAndCopyQAssignments: 17 of 25 folders processed of week1
+CreateAndCopyQAssignments: 18 of 25 folders processed of week1
+CreateAndCopyQAssignments: 19 of 25 folders processed of week1
+CreateAndCopyQAssignments: 20 of 25 folders processed of week1
+CreateAndCopyQAssignments: 21 of 25 folders processed of week1
+CreateAndCopyQAssignments: 22 of 25 folders processed of week1
+CreateAndCopyQAssignments: 23 of 25 folders processed of week1
+CreateAndCopyQAssignments: 24 of 25 folders processed of week1
+CreateAndCopyQAssignments: 25 of 25 folders processed of week1
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateAndCopyQAssignments: 1 of 15 folders processed of week2
+CreateAndCopyQAssignments: 2 of 15 folders processed of week2
+CreateAndCopyQAssignments: 3 of 15 folders processed of week2
+CreateAndCopyQAssignments: 4 of 15 folders processed of week2
+CreateAndCopyQAssignments: 5 of 15 folders processed of week2
+CreateAndCopyQAssignments: 6 of 15 folders processed of week2
+CreateAndCopyQAssignments: 7 of 15 folders processed of week2
+CreateAndCopyQAssignments: 8 of 15 folders processed of week2
+CreateAndCopyQAssignments: 9 of 15 folders processed of week2
+CreateAndCopyQAssignments: 10 of 15 folders processed of week2
+CreateAndCopyQAssignments: 11 of 15 folders processed of week2
+CreateAndCopyQAssignments: 12 of 15 folders processed of week2
+CreateAndCopyQAssignments: 13 of 15 folders processed of week2
+CreateAndCopyQAssignments: 14 of 15 folders processed of week2
+CreateAndCopyQAssignments: 15 of 15 folders processed of week2
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+CreateAndCopyQAssignments: 1 of 16 folders processed of week3
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+CreateAndCopyQAssignments: 2 of 16 folders processed of week3
+CreateAndCopyQAssignments: 3 of 16 folders processed of week3
+CreateAndCopyQAssignments: 4 of 16 folders processed of week3
+CreateAndCopyQAssignments: 5 of 16 folders processed of week3
+CreateAndCopyQAssignments: 6 of 16 folders processed of week3
+CreateAndCopyQAssignments: 7 of 16 folders processed of week3
+CreateAndCopyQAssignments: 8 of 16 folders processed of week3
+CreateAndCopyQAssignments: 9 of 16 folders processed of week3
+CreateAndCopyQAssignments: 10 of 16 folders processed of week3
+CreateAndCopyQAssignments: 11 of 16 folders processed of week3
+CreateAndCopyQAssignments: 12 of 16 folders processed of week3
+CreateAndCopyQAssignments: 13 of 16 folders processed of week3
+CreateAndCopyQAssignments: 14 of 16 folders processed of week3
+CreateAndCopyQAssignments: 15 of 16 folders processed of week3
+CreateAndCopyQAssignments: 16 of 16 folders processed of week3
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+number of SOLUTION and CHECK files match!
+if system_dependent('IsDebugMode')==1, dbstep; end
+Remove accidental files with _COPY postfix
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Copy the files to the "assignment" place
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+copyThesesToCleanSourceAssignment: Copy files to Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\bonus_assignments\BonusOpdracht1
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyThesesToCleanSourceAssignment.m',28,1)">28  </a>    apCurrProgrammAss = fullfile(apCleanProgrammingAss,WeekNames{nW});
+<a href="matlab: opentoline('Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyThesesToCleanSourceAssignment.m',29,1)">29  </a>    cd(apCleanBonusAss);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyThesesToCleanSourceAssignment.m',28,1)">28  </a>    apCurrProgrammAss = fullfile(apCleanProgrammingAss,WeekNames{nW});
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyThesesToCleanSourceAssignment.m',32,1)">32  </a>cd(apMCFiles)
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+copyThesesToCleanSourceAssignment: Copy files to Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht1
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('Z:\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\createMC\copyThesesToCleanSourceAssignment.m',48,1)">48  </a>if contains(apCleanTheses,'exam')
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+dirs
+
+dirs = 
+
+  6×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+dirs.name
+
+ans =
+
+    'deelopdracht_programmeren_wk1'
+
+
+ans =
+
+    'deelopdracht_programmeren_wk2'
+
+
+ans =
+
+    'deelopdracht_programmeren_wk3'
+
+
+ans =
+
+    'deelopdracht_stellingen_wk1'
+
+
+ans =
+
+    'deelopdracht_stellingen_wk2'
+
+
+ans =
+
+    'deelopdracht_stellingen_wk3'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+1:length(lstProg)
+
+ans =
+
+     1     2     3     4     5     6
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+PerformAll
+if system_dependent('IsDebugMode')==1, dbcont; end
+Check for the existence of needed supporting scripts/function files
+Do you want to (re)generate the assignments? (yes=1/no=0)1

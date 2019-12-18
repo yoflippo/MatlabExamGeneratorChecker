@@ -15,7 +15,7 @@ checkingVar.testFunctionInput = {{'XXX'} {'XXXXXX'} {'____'}};
 % FILL literalsP, FOR INSTANCE WITH OPERATIONS THAT SHOULD BE PRESENT IN
 % The number to the right of the string designates the number of times the
 % string should be present.
-checkingVar.literalsP = {   'function' 1 'result' 2 'opdracht_4(' 1 'opdracht_4(txt)' 1 'end' 1 ...
+checkingVar.literalsP = {   'function' 1 'result' 2 'opdracht_' 1 'end' 1 ...
                                         'opdracht: ' 1 'txt' 2};
 % FILL literalsA, With strings that should not be present.
 checkingVar.literalsA = {'NaN'};

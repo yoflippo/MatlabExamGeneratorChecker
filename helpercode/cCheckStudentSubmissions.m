@@ -65,7 +65,7 @@ mkdirIf(apWrongSub);
 mkdirIf(apUnzipped);
 mkdirIf(apChecked);
 mkdirIf(apFeedback);
-
+blWrongZipFile = false;
 files = dir(subWkFolder);
 try
     cd(subWkFolder);
@@ -82,31 +82,46 @@ try
                 currPath = pwd;
                 mkdir('temp');
                 cd('temp');
-                unzip(apCurrZip);
-                
-                %Remove dirs without correct weekX assignment
-                neededDir = dirmf(nmCurrBonusAss);
-                blSubmittedWrongFiles = true;
-                for nD = 1:length(neededDir)
-                    if ~isempty(neededDir) && neededDir(nD).isdir && isequal(neededDir(nD).name,nmCurrBonusAss)
-                        dirToCheck = fullfile(neededDir(nD).folder,neededDir(nD).name);
-                        movefile(dirToCheck,currPath);
-                        blSubmittedWrongFiles = false;
-                        break;
-                    end
-                end
-                if blSubmittedWrongFiles
-                    movefile(apCurrZip,apWrongSub);
-                end
-                %Delete everything but current week folder
-                cd ..
-                rmdir('temp','s')
                 try
-                    movefile(apCurrZip,apUnzipped);
-                catch
-                    currPath = pwd;
+                    unzip(apCurrZip);
+                    
+                    %Remove dirs without correct weekX assignment
+                    neededDir = dirmf(nmCurrBonusAss);
+                    blSubmittedWrongFiles = true;
+                    for nD = 1:length(neededDir)
+                        if ~isempty(neededDir) && neededDir(nD).isdir && isequal(neededDir(nD).name,nmCurrBonusAss)
+                            dirToCheck = fullfile(neededDir(nD).folder,neededDir(nD).name);
+                            movefile(dirToCheck,currPath);
+                            blSubmittedWrongFiles = false;
+                            break;
+                        end
+                    end
+                    if blSubmittedWrongFiles
+                        movefile(apCurrZip,apWrongSub);
+                    end
+                    %Delete everything but current week folder
                     cd ..
-                    rmdir(currPath,'s')
+                    rmdir('temp','s')
+                    try
+                        movefile(apCurrZip,apUnzipped);
+                    catch
+                        currPath = pwd;
+                        cd ..
+                        rmdir(currPath,'s')
+                    end
+                catch err
+                    warning([mfilename ': Something went wrong with unzipping!' newline err.message newline]);
+                    if ~blWrongZipFile && ~input('Read the Warning: do you want to continue? Yes=1, No=0 ')
+                        error([mfilename ': Stopped! ']);
+                    else
+                        blWrongZipFile = true;
+                        movefile(apCurrZip,apWrongSub);
+                        % Remove unzipped folder with wrong submission
+                        currStudNumber = findStudentNumberInTxt(apCurrZip);
+                        cd(apSubmitted);
+                        removeShitFromDir(currStudNumber);
+                        rmdirIf(currStudNumber);
+                    end
                 end
             else
                 movefile(apCurrZip,apChecked);
@@ -131,7 +146,7 @@ try
     
     %% Remove non-relevavnt files
     cd(apSubmitted);
-%     keyboard % This part has to be checked
+    %     keyboard % This part has to be checked
     cellExt2Keep = {'.m' '.txt' '.csv' '.dat' '.xls' '.xlsx'};
     removeFilesFromDirs(apSubmitted,cellExt2Keep);
     
@@ -311,7 +326,7 @@ save(fullfile(con.BASEFOLDER,con.NAMEASSIGNMENTFOLDER,nmCurrBonusAss,'dicAssignm
 
 % Delete a possible existing studentMatrix
 pathStudentResults = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,...
-    con.BONUSASSNAME(con.BONUSASSNUMBER),['resultaten' nmCurrBonusAss datetimetxt '.mat']);
+    con.BONUSASSNAME(con.BONUSASSNUMBER),['resultaten' nmCurrBonusAss datetimetxt(true) '.mat']);
 
 %% Check the answer of the students and track their points if correct
 debugOutput(DEBUGOUTPUT,'Check the answer of the students and track their points if correct',0);
@@ -379,7 +394,7 @@ for nS = 1:length(strTrackStudent(:,1))
             rmdir(dr,'s');
             rmdir(studentFolder,'s');
         catch err
-            disp([newline 'DO YOUR MAGIC MAESTRO!' newline]);
+            disp([newline 'DO YOUR MAGIC MAESTRO!' newline err.message]);
             keyboard
         end
         toc
