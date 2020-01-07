@@ -7,6 +7,9 @@ function [ res ] = runChecksOnMCAssignment( apStudentSol, apFileName )
 [txtClean] = readCleanMFile('-ap',apStudentSol,'-MULCHOICE');
 % Create the result variable for students
 res = 0;
+if isempty(txtClean)
+    return
+end
 % Only use last line
 txtClean = txtClean(end);
 if ~isempty(char(txtClean)) && ~contains(char(txtClean),'NAN')

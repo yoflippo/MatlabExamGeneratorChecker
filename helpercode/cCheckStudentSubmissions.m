@@ -161,7 +161,7 @@ try
     end
     clear stNr nA opStud;
     
-    %% Delete files that contain the our solutions, possibly after a re-run of this function
+    %% Delete files that contain our solutions, possibly after a re-run of this function
     Sol4Stud = dirmf(con.POSTFIX_SOL4STUD);
     for nA = 1:length(Sol4Stud)
         delete(fullfile(Sol4Stud(nA).folder,Sol4Stud(nA).name));
@@ -222,10 +222,14 @@ try
         % Get hashcode from current mfiles
         if blTestIfCorrectFile
             currFileAbsPath = fullfile(mfiles(nSAss).folder,mfiles(nSAss).name);
+            
             [~, subdir] = GetPathOneLevelUp(currFileAbsPath,2);
             [~,~,endSnum] = findStudentNumberInTxt(currFileAbsPath);
             p = fullfile(currFileAbsPath(1:endSnum),nmCurrBonusAss);
             try
+                if ~contains(currFileAbsPath,'deelopdracht_')
+                    error()
+                end
                 currHash = GetHashCodeFromMFile(currFileAbsPath);
                 % Check if hash if present in dictionary
                 dicWithHashes(currHash);

@@ -1,5 +1,3 @@
-
-
 function res = opdracht_XXX_versie_X_CHECK(apStudentSol)
 
 
@@ -26,6 +24,7 @@ checkingVar.literalsSL = {};
 %% Commence the TESTING !!!
 res = 0;
 res = runChecksOnScriptAssignment(mfilename('fullpath'),checkingVar,apStudentSol);
+
 
 close all
 % % Open the cleansource variant

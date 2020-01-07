@@ -100,15 +100,17 @@ for nSol = 1:2
             %% Perform tests for certain variables in the Workspace
             for nV = 1:length(nameVars)
                 try
-                    eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
-                    if blTest
-                        res = res + 1;
-                        eval(['clear var' num2str(nV) 'ANS;']);
-                    else
-                        mss = ['% verwacht resultaat in: ' nameVars{nV} '= ' num2str(eval(['var' num2str(nV) 'ANS' ]))];
-                        mss = [mss newline '% verkregen resultaat = ' num2str(eval(nameVars{nV}))];
-                        if ~contains(apStudentSol,'versie')
-                            WriteToLastLineOfFile(apStudentSol,mss);
+                    if exist(['var' num2str(nV) 'ANS'],'var')
+                        eval(['blTest = isequal(var' num2str(nV) 'ANS, ' nameVars{nV} ');']);
+                        if blTest
+                            res = res + 1;
+                            eval(['clear var' num2str(nV) 'ANS;']);
+                        else
+                            mss = ['% verwacht resultaat in: ' nameVars{nV} '= ' num2str(eval(['var' num2str(nV) 'ANS' ]))];
+                            mss = [mss newline '% verkregen resultaat = ' num2str(eval(nameVars{nV}))];
+                            if ~contains(apStudentSol,'versie')
+                                WriteToLastLineOfFile(apStudentSol,mss);
+                            end
                         end
                     end
                 catch ErrMess

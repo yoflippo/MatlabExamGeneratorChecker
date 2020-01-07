@@ -4,13 +4,13 @@ cd(con.BASEFOLDER)
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','E_mail','opleidingbewegingstechnologie@gmail.com');
 setpref('Internet','SMTP_Username','opleidingbewegingstechnologie@gmail.com');
-setpref('Internet','SMTP_Password','btokee2btokee');
+setpref('Internet','SMTP_Password','biostatica19');
 props = java.lang.System.getProperties;
 props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-assignmentNum = '2'
+assignmentNum = '1'
 nameCurrentBonusDir = ['BonusOpdracht' assignmentNum '_checked']
 cd(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER));
 cd(nameCurrentBonusDir);
@@ -52,6 +52,9 @@ chr = [chr newline ];
 chr = [chr newline 'In de bijlage van deze e-mail staat jouw opnieuw nagekeken eindopdracht'];
 chr = [chr newline 'van ' nmAssignment ' voor Biostatica Matlab.'];
 chr = [chr newline];
+chr = [chr newline 'Het is mogelijk dat jouw cijfer lager is dan de eerste keer (i.v.m. een bug).'];
+chr = [chr newline 'Daarentegen zijn al jullie commentaren verwerkt waardoor het cijfer ook hoger kan uitvallen.s'];
+chr = [chr newline];
 chr = [chr newline 'In het zip-bestand zit een m-file met de naam: "JouwCijfer.m".'];
 chr = [chr newline 'Als een vraag/opdracht niet 100% correct is, wordt de uitwerking'];
 chr = [chr newline 'er bij gegeven. Zo kun je leren van je fouten.'];
@@ -75,6 +78,7 @@ sendFolder = [nmAssignment '_send'];
 mkdirIf(sendFolder);
 apSendFolder = fullfile(pwd,sendFolder);
 cd(oldPath)
+strStudentNumbers = addZerosToCharStringList(studentNumbers);
 %% Send mails
 for nZ = 1:length(zips)
     if contains(zips(nZ).name,'Checked')

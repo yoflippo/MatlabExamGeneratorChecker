@@ -10,7 +10,7 @@ global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();
 
 %% ACTION: Select the right BONUSASSNUMBER.
-con.BONUSASSNUMBER = 1; % Adjust me!!! See: ConstantsClass.m
+con.BONUSASSNUMBER = 2; % Adjust me!!! See: ConstantsClass.m
 nmCurrBonusAss = con.BONUSASSNAME(con.BONUSASSNUMBER);
 BonusAssignmentWeeks = con.BONUSASSIGNMENTS{con.BONUSASSNUMBER};
 
@@ -64,13 +64,13 @@ if input('Do you want to (re)generate the assignments (replaces all files in dir
     end
     toc
     
-%     %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
-%     cd(con.BASEFOLDER)
-%     cd(con.NAMEASSIGNMENTFOLDER)
-%     if ~isequal(length(dirmf(con.CHECKPOSTFIX)),length(dirmf(con.SOLPOSTFIX)))
-%         disp('Check if al "checking" files are in working order');
-%         assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
-%     end
+    %     %% Check if all 'checking' files are in working order when files are SOL/CHECK files are not equal
+    %     cd(con.BASEFOLDER)
+    %     cd(con.NAMEASSIGNMENTFOLDER)
+    %     if ~isequal(length(dirmf(con.CHECKPOSTFIX)),length(dirmf(con.SOLPOSTFIX)))
+    %         disp('Check if al "checking" files are in working order');
+    %         assert(CheckSolCheckDirFunc(fullfile(con.BASEFOLDER,'assignments')));
+    %     end
     
     %% Clean the submitted folder
     cd(con.BASEFOLDER)
@@ -119,13 +119,11 @@ if input('Do you want to (re)generate the assignments (replaces all files in dir
     %% Creat Bonus assignments for individual students
     disp('Execute create week assignment scripts');
     cd(con.BASEFOLDER)
-    tic
     try
         CreateBonusAssignments(con); %also generates testfiles
     catch err
         error([mfilename ' in CreateBonusAssignments: ' newline  err.message])
     end
-    toc
     
     %% TEST if all INcorrect solutions files pass
     if input('Do you want to test all generated files? (Yes=1,No=0)')
@@ -181,6 +179,12 @@ end %Generation of week assignment
 
 
 %% Check manually copied submitted files
+if input('Do you want to copy the zipped files from the students to use for checking? (Yes=1,No=0)')
+    submittedThisWeek = fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER,nmCurrBonusAss);
+    removeShitFromDir(submittedThisWeek)
+    removeShitFromDir([submittedThisWeek  '_checked'])
+    copyfiles([submittedThisWeek  '_unzipped'],submittedThisWeek)
+end
 cd(con.BASEFOLDER)
 disp('Check manually copied submitted files');
 try

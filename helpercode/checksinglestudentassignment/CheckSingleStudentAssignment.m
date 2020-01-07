@@ -191,7 +191,7 @@ for i = 1:length(mfilesWithHash)
             disp([mfilename ': Somethings wrong..'])
             disp(['OPENING: ' apStudentSol]);
             edit(apStudentSol)
-            edit(nmCHE)
+            edit(absPathCheckfile)
             edit(AbsPathSOLScript)
             % Message with error, so student can learn from mistake
             txtResultStud{1} = ['% Jij hebt deze opdracht ' num2str(0) '% goed gemaakt.' newline];
