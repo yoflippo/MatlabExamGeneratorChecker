@@ -54,11 +54,15 @@ mfiles = dir(['**' filesep '*' SOLPOSTFIX '*.m']);
 cd(currPath)
 
 % Get the hascodes
+nCntHash = 1;
 for nHash = 1:length(mfiles)
     try
-    p = fullfile(mfiles(nHash).folder,mfiles(nHash).name);
-    HashCodes{nHash} = GetHashCodeFromMFile(p) ;
-    Paths{nHash} = p;
+        p = fullfile(mfiles(nHash).folder,mfiles(nHash).name);
+        if ~contains(p,'SOL2')
+            HashCodes{nCntHash} = GetHashCodeFromMFile(p) ;
+            Paths{nCntHash} = p;
+            nCntHash = nCntHash + 1;
+        end
     catch
         keyboard %Somethings wrong Bubba!
     end

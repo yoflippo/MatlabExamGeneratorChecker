@@ -173,6 +173,10 @@ catch err
     error([mfilename ': Something went wrong with unzipping!' newline err.message newline]);
 end
 
+%% Now all student stuff is cleaned. It would save time and diskspace to
+% save this 'cleaned product', so let's save time.
+zip(fullfile(apUnzipped,[nmCurrBonusAss '_CLEANED_' char(datetime('today','format','y')) '.zip']),apSubmitted)
+
 %% Count number of assignemts and distinguish between theses/programming
 apAssBonus = fullfile(con.AP_ASSIGNMENTS,nmCurrBonusAss);
 cd(apAssBonus)

@@ -153,7 +153,13 @@ for nStud = 1:length(studentNumbers)
             cnt = answerFileCounter(nAss);
             currFileSol = [deepestAssignFolders{nAss} filesep answerFilesInDir{1,nAss}(cnt).name];
             % rename the file to a file without nTypeAss
+            if contains(currFileSol,'SOL2')
+                currFile = replace(currFileSol,'SOL2','');
+                currFile = replace(currFile,'_.m','.m');
+                currFileSol = replace(currFileSol,'SOL2.m','SOL.m');
+            end 
             currFile = replace(currFileSol,con.SOLPOSTFIX,'');
+            
             % file to copy
             sourceFile = [con.NAMEASSIGNMENTFOLDER currFile];
             sourceFileSOL = [con.NAMEASSIGNMENTFOLDER currFileSol];
@@ -186,7 +192,7 @@ for nStud = 1:length(studentNumbers)
                 answerFileCounter(nAss) = cnt + 1;
             end
         catch err
-            warning(err);
+            warning(err.message);
         end
     end
     

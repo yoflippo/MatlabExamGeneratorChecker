@@ -27,7 +27,8 @@ for i = 1:length(con.LISTWITHNEEDEDFOLDERS)
 end
 
 %% START
-if input('Do you want to (re)generate the assignments (replaces all files in directory "assignments" ? (yes=1/no=0)')
+if input(['Do you want to (re)generate the assignments (replaces all files in directory "assignments" ? ' ...
+        newline 'This is something you will do only once per Bonusassignment  (yes=1/no=0)'])
     cnt = 1;
     warning off
     rmpath(genpath(fileparts(mfilename('fullpath'))));
@@ -143,6 +144,8 @@ if input('Do you want to (re)generate the assignments (replaces all files in dir
         catch err
             error([mfilename ', did not work properly: ' err.message]);
         end
+        removeShitFromDir(apFinDes);
+        removeShitFromDir([apFinDes '_unzipped']);
         toc
         
         %% TEST if all correct solutions files pass
@@ -161,6 +164,8 @@ if input('Do you want to (re)generate the assignments (replaces all files in dir
             error([mfilename ': ' err.message]);
         end
         toc
+        removeShitFromDir(apFinDes);
+        removeShitFromDir([apFinDes '_unzipped']);
     end
     
     cd(con.BASEFOLDER)

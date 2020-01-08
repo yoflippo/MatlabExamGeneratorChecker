@@ -1,0 +1,1224 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   2001081107
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.6.0.1099231 (R2019a) Update 1
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 17763)
+Java Version: Java 1.8.0_181-b13 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.6         (R2019a)
+Simulink                                              Version 9.3         (R2019a)
+Control System Toolbox                                Version 10.6        (R2019a)
+Curve Fitting Toolbox                                 Version 3.5.9       (R2019a)
+DSP System Toolbox                                    Version 9.8         (R2019a)
+Data Acquisition Toolbox                              Version 4.0         (R2019a)
+Deep Learning Toolbox                                 Version 12.1        (R2019a)
+Image Processing Toolbox                              Version 10.4        (R2019a)
+Instrument Control Toolbox                            Version 4.0         (R2019a)
+Optimization Toolbox                                  Version 8.3         (R2019a)
+Parallel Computing Toolbox                            Version 7.0         (R2019a)
+Robust Control Toolbox                                Version 6.6         (R2019a)
+Sensor Fusion and Tracking Toolbox                    Version 1.1         (R2019a)
+Signal Processing Toolbox                             Version 8.2         (R2019a)
+Simulink Control Design                               Version 5.3         (R2019a)
+Statistics and Machine Learning Toolbox               Version 11.5        (R2019a)
+Symbolic Math Toolbox                                 Version 8.3         (R2019a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+week1: TRUE = 53 | FALSE = 49
+week2: TRUE = 29 | FALSE = 32
+week3: TRUE = 32 | FALSE = 34
+week4: TRUE = 46 | FALSE = 47
+week5: TRUE = 47 | FALSE = 48
+week6: TRUE = 29 | FALSE = 29
+week7: TRUE = 31 | FALSE = 31
+week8: TRUE = 29 | FALSE = 34
+TOTAAL: TRUE = 296 | FALSE = 304
+CreateAndCopyQAssignments: 1 of 23 folders processed of week4
+CreateAndCopyQAssignments: 2 of 23 folders processed of week4
+CreateAndCopyQAssignments: 3 of 23 folders processed of week4
+CreateAndCopyQAssignments: 4 of 23 folders processed of week4
+CreateAndCopyQAssignments: 5 of 23 folders processed of week4
+CreateAndCopyQAssignments: 6 of 23 folders processed of week4
+CreateAndCopyQAssignments: 7 of 23 folders processed of week4
+CreateAndCopyQAssignments: 8 of 23 folders processed of week4
+CreateAndCopyQAssignments: 9 of 23 folders processed of week4
+CreateAndCopyQAssignments: 10 of 23 folders processed of week4
+CreateAndCopyQAssignments: 11 of 23 folders processed of week4
+CreateAndCopyQAssignments: 12 of 23 folders processed of week4
+CreateAndCopyQAssignments: 13 of 23 folders processed of week4
+CreateAndCopyQAssignments: 14 of 23 folders processed of week4
+CreateAndCopyQAssignments: 15 of 23 folders processed of week4
+CreateAndCopyQAssignments: 16 of 23 folders processed of week4
+CreateAndCopyQAssignments: 17 of 23 folders processed of week4
+CreateAndCopyQAssignments: 18 of 23 folders processed of week4
+CreateAndCopyQAssignments: 19 of 23 folders processed of week4
+CreateAndCopyQAssignments: 20 of 23 folders processed of week4
+CreateAndCopyQAssignments: 21 of 23 folders processed of week4
+CreateAndCopyQAssignments: 22 of 23 folders processed of week4
+CreateAndCopyQAssignments: 23 of 23 folders processed of week4
+CreateAndCopyQAssignments: 1 of 22 folders processed of week5
+CreateAndCopyQAssignments: 2 of 22 folders processed of week5
+CreateAndCopyQAssignments: 3 of 22 folders processed of week5
+CreateAndCopyQAssignments: 4 of 22 folders processed of week5
+CreateAndCopyQAssignments: 5 of 22 folders processed of week5
+CreateAndCopyQAssignments: 6 of 22 folders processed of week5
+CreateAndCopyQAssignments: 7 of 22 folders processed of week5
+CreateAndCopyQAssignments: 8 of 22 folders processed of week5
+CreateAndCopyQAssignments: 9 of 22 folders processed of week5
+CreateAndCopyQAssignments: 10 of 22 folders processed of week5
+CreateAndCopyQAssignments: 11 of 22 folders processed of week5
+CreateAndCopyQAssignments: 12 of 22 folders processed of week5
+CreateAndCopyQAssignments: 13 of 22 folders processed of week5
+CreateAndCopyQAssignments: 14 of 22 folders processed of week5
+CreateAndCopyQAssignments: 15 of 22 folders processed of week5
+CreateAndCopyQAssignments: 16 of 22 folders processed of week5
+CreateAndCopyQAssignments: 17 of 22 folders processed of week5
+CreateAndCopyQAssignments: 18 of 22 folders processed of week5
+CreateAndCopyQAssignments: 19 of 22 folders processed of week5
+CreateAndCopyQAssignments: 20 of 22 folders processed of week5
+CreateAndCopyQAssignments: 21 of 22 folders processed of week5
+CreateAndCopyQAssignments: 22 of 22 folders processed of week5
+CreateAndCopyQAssignments: 1 of 15 folders processed of week6
+CreateAndCopyQAssignments: 2 of 15 folders processed of week6
+CreateAndCopyQAssignments: 3 of 15 folders processed of week6
+CreateAndCopyQAssignments: 4 of 15 folders processed of week6
+CreateAndCopyQAssignments: 5 of 15 folders processed of week6
+CreateAndCopyQAssignments: 6 of 15 folders processed of week6
+CreateAndCopyQAssignments: 7 of 15 folders processed of week6
+CreateAndCopyQAssignments: 8 of 15 folders processed of week6
+CreateAndCopyQAssignments: 9 of 15 folders processed of week6
+CreateAndCopyQAssignments: 10 of 15 folders processed of week6
+CreateAndCopyQAssignments: 11 of 15 folders processed of week6
+CreateAndCopyQAssignments: 12 of 15 folders processed of week6
+CreateAndCopyQAssignments: 13 of 15 folders processed of week6
+CreateAndCopyQAssignments: 14 of 15 folders processed of week6
+CreateAndCopyQAssignments: 15 of 15 folders processed of week6
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the files to the "assignment" place
+copyThesesToCleanSourceAssignment: Copy files to C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\bonus_assignments\BonusOpdracht2
+copyThesesToCleanSourceAssignment: Copy files to C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht2
+Created MC-Questions
+Elapsed time is 122.634566 seconds.
+execute generate all script
+Start fresh: Generate all week assignments
+0: Create new filenames (with HASH code AND combine file names)
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 0%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 1%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 2%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 3%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 4%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 5%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 6%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 7%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 8%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 9%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 10%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 11%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 12%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 13%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 14%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 15%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 16%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 17%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 18%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 19%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 20%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 21%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 22%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 23%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 24%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 25%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 26%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 27%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 28%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 29%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 30%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 31%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 32%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 33%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 34%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 35%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 36%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 37%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 38%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 39%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 40%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 41%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 42%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 43%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 44%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 45%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 46%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 47%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 48%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 49%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 50%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 51%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 52%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 53%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 54%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 55%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 56%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 57%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 58%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 59%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 60%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 61%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 62%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 63%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 64%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 65%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 66%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 67%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 68%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 69%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 70%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 71%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 72%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 73%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 74%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 75%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 76%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 77%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 78%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 79%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 80%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 81%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 82%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 83%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 84%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 85%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 86%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 87%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 88%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 89%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 90%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 91%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 92%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 93%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 94%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 95%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 96%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 97%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 98%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 99%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+Give each assignment Hash-info: , progress: 100%
+3.887: END SCRIPT
+Elapsed time is 3.889264 seconds.
+3.927: Read the student number and convert the list to e-mailadresses
+Number of students: 103
+Execute create week assignment scripts
+Generating assignents
+0.894: Empty folder with files for testing
+3.028: Create a student specific folder in every week folder
+3.154: Get overview of files
+4.444: Fill every student folder with the number of assignments
+CreateBonusAssignments: , progress: 1%
+<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\helpercode\CreateBonusAssignments.m',193,1)">193 </a>            warning(err.message);
+if system_dependent('IsDebugMode')==1, dbquit all; end
+PerformAll
+Check for the existence of needed supporting scripts/function files
+Do you want to (re)generate the assignments (replaces all files in directory "assignments" ? 
+This is something you will do only once per Bonusassignment  (yes=1/no=0)
+Do you want to copy the zipped files from the students to use for checking? (Yes=1,No=0){Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PerformAll', 'C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m', 183)" style="font-weight:bold">PerformAll</a> (<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',183,0)">line 183</a>)
+} 
+PerformAll
+Check for the existence of needed supporting scripts/function files
+Do you want to (re)generate the assignments (replaces all files in directory "assignments" ? 
+This is something you will do only once per Bonusassignment  (yes=1/no=0)1

@@ -1,0 +1,111 @@
+
+ans = 
+
+  <a href="matlab:helpPopup datetime" style="font-weight:bold">datetime</a>
+
+   2001071150
+
+-----------------------------------------------------------------------------------------------------
+MATLAB Version: 9.6.0.1099231 (R2019a) Update 1
+MATLAB License Number: 40577245
+Operating System: Microsoft Windows 10 Pro Version 10.0 (Build 17763)
+Java Version: Java 1.8.0_181-b13 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+-----------------------------------------------------------------------------------------------------
+MATLAB                                                Version 9.6         (R2019a)
+Simulink                                              Version 9.3         (R2019a)
+Control System Toolbox                                Version 10.6        (R2019a)
+Curve Fitting Toolbox                                 Version 3.5.9       (R2019a)
+DSP System Toolbox                                    Version 9.8         (R2019a)
+Data Acquisition Toolbox                              Version 4.0         (R2019a)
+Deep Learning Toolbox                                 Version 12.1        (R2019a)
+Image Processing Toolbox                              Version 10.4        (R2019a)
+Instrument Control Toolbox                            Version 4.0         (R2019a)
+Optimization Toolbox                                  Version 8.3         (R2019a)
+Parallel Computing Toolbox                            Version 7.0         (R2019a)
+Robust Control Toolbox                                Version 6.6         (R2019a)
+Sensor Fusion and Tracking Toolbox                    Version 1.1         (R2019a)
+Signal Processing Toolbox                             Version 8.2         (R2019a)
+Simulink Control Design                               Version 5.3         (R2019a)
+Statistics and Machine Learning Toolbox               Version 11.5        (R2019a)
+Symbolic Math Toolbox                                 Version 8.3         (R2019a)
+Windows platform
+Generate MC files and copy all clean_source/assignments -> root/assignments
+<a href="matlab: opentoline('C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\PerformAll.m',50,1)">50  </a>    CreateAndCopyQAssignments(con);
+if system_dependent('IsDebugMode')==1, dbcont; end
+week1: TRUE = 53 | FALSE = 49
+week2: TRUE = 29 | FALSE = 32
+week3: TRUE = 32 | FALSE = 34
+week4: TRUE = 46 | FALSE = 47
+week5: TRUE = 47 | FALSE = 48
+week6: TRUE = 29 | FALSE = 29
+week7: TRUE = 31 | FALSE = 31
+week8: TRUE = 29 | FALSE = 34
+TOTAAL: TRUE = 296 | FALSE = 304
+CreateAndCopyQAssignments: 1 of 23 folders processed of week4
+CreateAndCopyQAssignments: 2 of 23 folders processed of week4
+CreateAndCopyQAssignments: 3 of 23 folders processed of week4
+CreateAndCopyQAssignments: 4 of 23 folders processed of week4
+CreateAndCopyQAssignments: 5 of 23 folders processed of week4
+CreateAndCopyQAssignments: 6 of 23 folders processed of week4
+CreateAndCopyQAssignments: 7 of 23 folders processed of week4
+CreateAndCopyQAssignments: 8 of 23 folders processed of week4
+CreateAndCopyQAssignments: 9 of 23 folders processed of week4
+CreateAndCopyQAssignments: 10 of 23 folders processed of week4
+CreateAndCopyQAssignments: 11 of 23 folders processed of week4
+CreateAndCopyQAssignments: 12 of 23 folders processed of week4
+CreateAndCopyQAssignments: 13 of 23 folders processed of week4
+CreateAndCopyQAssignments: 14 of 23 folders processed of week4
+CreateAndCopyQAssignments: 15 of 23 folders processed of week4
+CreateAndCopyQAssignments: 16 of 23 folders processed of week4
+CreateAndCopyQAssignments: 17 of 23 folders processed of week4
+CreateAndCopyQAssignments: 18 of 23 folders processed of week4
+CreateAndCopyQAssignments: 19 of 23 folders processed of week4
+CreateAndCopyQAssignments: 20 of 23 folders processed of week4
+CreateAndCopyQAssignments: 21 of 23 folders processed of week4
+CreateAndCopyQAssignments: 22 of 23 folders processed of week4
+CreateAndCopyQAssignments: 23 of 23 folders processed of week4
+CreateAndCopyQAssignments: 1 of 22 folders processed of week5
+CreateAndCopyQAssignments: 2 of 22 folders processed of week5
+CreateAndCopyQAssignments: 3 of 22 folders processed of week5
+CreateAndCopyQAssignments: 4 of 22 folders processed of week5
+CreateAndCopyQAssignments: 5 of 22 folders processed of week5
+CreateAndCopyQAssignments: 6 of 22 folders processed of week5
+CreateAndCopyQAssignments: 7 of 22 folders processed of week5
+CreateAndCopyQAssignments: 8 of 22 folders processed of week5
+CreateAndCopyQAssignments: 9 of 22 folders processed of week5
+CreateAndCopyQAssignments: 10 of 22 folders processed of week5
+CreateAndCopyQAssignments: 11 of 22 folders processed of week5
+CreateAndCopyQAssignments: 12 of 22 folders processed of week5
+CreateAndCopyQAssignments: 13 of 22 folders processed of week5
+CreateAndCopyQAssignments: 14 of 22 folders processed of week5
+CreateAndCopyQAssignments: 15 of 22 folders processed of week5
+CreateAndCopyQAssignments: 16 of 22 folders processed of week5
+CreateAndCopyQAssignments: 17 of 22 folders processed of week5
+CreateAndCopyQAssignments: 18 of 22 folders processed of week5
+CreateAndCopyQAssignments: 19 of 22 folders processed of week5
+CreateAndCopyQAssignments: 20 of 22 folders processed of week5
+CreateAndCopyQAssignments: 21 of 22 folders processed of week5
+CreateAndCopyQAssignments: 22 of 22 folders processed of week5
+CreateAndCopyQAssignments: 1 of 15 folders processed of week6
+CreateAndCopyQAssignments: 2 of 15 folders processed of week6
+CreateAndCopyQAssignments: 3 of 15 folders processed of week6
+CreateAndCopyQAssignments: 4 of 15 folders processed of week6
+CreateAndCopyQAssignments: 5 of 15 folders processed of week6
+CreateAndCopyQAssignments: 6 of 15 folders processed of week6
+CreateAndCopyQAssignments: 7 of 15 folders processed of week6
+CreateAndCopyQAssignments: 8 of 15 folders processed of week6
+CreateAndCopyQAssignments: 9 of 15 folders processed of week6
+CreateAndCopyQAssignments: 10 of 15 folders processed of week6
+CreateAndCopyQAssignments: 11 of 15 folders processed of week6
+CreateAndCopyQAssignments: 12 of 15 folders processed of week6
+CreateAndCopyQAssignments: 13 of 15 folders processed of week6
+CreateAndCopyQAssignments: 14 of 15 folders processed of week6
+CreateAndCopyQAssignments: 15 of 15 folders processed of week6
+number of SOLUTION and CHECK files match!
+Remove accidental files with _COPY postfix
+Copy the files to the "assignment" place
+copyThesesToCleanSourceAssignment: Copy files to C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\clean_source\bonus_assignments\BonusOpdracht2
+copyThesesToCleanSourceAssignment: Copy files to C:\Users\yof\Dropbox\BT\03_LESSEN\20_MATLAB\MATLAB_TOETS\assignments\BonusOpdracht2
+Created MC-Questions
+Elapsed time is 113.595991 seconds.
+if system_dependent('IsDebugMode')==1, dbquit; end
