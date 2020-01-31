@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% Als je programma is gestopt m.b.v. een breakpoint dan   
-% kan je niet de variabelen in de Workspace niet bekijken.
+% Als je programma is gestopt m.b.v. een breakpoint dan
+% kan je de variabelen in de Workspace bekijken.       
 %
-Antwoord = 0;
+Antwoord = 1;
 
 
 

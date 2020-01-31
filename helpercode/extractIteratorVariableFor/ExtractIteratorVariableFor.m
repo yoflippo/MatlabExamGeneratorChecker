@@ -1,5 +1,5 @@
-function olist = addZerosToCharStringList(list)
-% ADDZEROSTOCHARSTRINGLIST <short description>
+function [itvar] = ExtractIteratorVariableFor(TXT)
+% EXTRACTITERATORVARIABLEFOR
 %
 % ------------------------------------------------------------------------
 %    Copyright (C) 2020  M. Schrauwen (markschrauwen@gmail.com)
@@ -17,51 +17,41 @@ function olist = addZerosToCharStringList(list)
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ------------------------------------------------------------------------
-% 
+%
 % DESCRIPTION:
 %
-% 
+%
 % BY: 2020  M. Schrauwen (markschrauwen@gmail.com)
-% 
+%
 % PARAMETERS:
 %               varargin:   <text>
 %               varargin:   <text>
 %
-% RETURN:       
-%               outvar:     <text>     
+% RETURN:
 %               outvar:     <text>
-% 
+%               outvar:     <text>
+%
 % EXAMPLES:
 %
 %
 
-% $Revision: 0.0.0 $  $Date: 2020-01-15 $
+% $Revision: 0.0.0 $  $Date: 2020-01-20 $
 % Creation of this function.
 
-if isstring(list(1)) || ischar(list(1))
-    blIsString = isstring(list(1));
-    if blIsString
-        list = char(list);
-    end
-    
-    for i = 1:length(list)
-        if list(i,1)== ' '
-            list(i,1)= '0';
-        end
-    end
-    
-    if blIsString
-        list = string(list);
-    end
-    
-    olist = list;
-else
-    for i = 1:length(list)
-        str = char(num2str(list(i)));
-        if length(str) < 8
-            olist(i) = string(['0' str]);
-        else
-            olist(i) = string(str);
+itvar = [];
+if isfile(TXT) %NOT ALLOWED!
+    TXT = readCleanMFile(TXT);
+end
+TXT1 = string(TXT);
+linesWithFor = TXT1(contains(TXT1,'for') | contains(TXT1,'FOR'));
+for i = 1:length(linesWithFor)
+    tmp = char(linesWithFor(i));
+    if isequal(tmp(1:3),'for') || isequal(tmp(1:3),'FOR')
+        itvar = extractBefore(extractAfter(tmp,'for'),'= ');
+        if ~isempty(itvar)
+            return
         end
     end
 end
+
+end %function

@@ -1,10 +1,8 @@
 %% This files creates/checks every assignment and file
-clear all;
+%% Initialisation
+clear all; clc; close all; close all hidden; fclose('all');
 dbstop if error
 
-%% Initialisation
-clc; close all; close all hidden;
-fclose('all');
 addpath(genpath('helpercode'));
 global DEBUGOUTPUT; DEBUGOUTPUT = 1;
 con = ConstantsClass();

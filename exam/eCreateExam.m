@@ -4,8 +4,8 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all; close all;
-ap.nOfTheses = 80;
-ap.nOfScriptsFunctions = 20;
+ap.nOfTheses = 50; %80
+ap.nOfScriptsFunctions = 13; %20
 
 %% Go to path of this file
 mfilename('fullpath')

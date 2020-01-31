@@ -1,4 +1,4 @@
-function res = opdracht_2_versie2_CHECK(apStudentSol)
+function res = opdracht_2_versie3_CHECK(apStudentSol)
 
 
 %%========== PLACE SOLUTION IN COMMENTS HERE
@@ -8,7 +8,7 @@ function res = opdracht_2_versie2_CHECK(apStudentSol)
 % % % % % % % % % % % % initialiseer deze variabele op 1. 
 % % % % % % % % % % % 
 % % % % % % % % % % % teller = 15;
-% % % % % % % % % % % while teller < 105
+% % % % % % % % % % % while teller < 106
 % % % % % % % % % % %     teller = teller + 1;
 % % % % % % % % % % % end
 %%==========
@@ -17,10 +17,10 @@ function res = opdracht_2_versie2_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 
 checkingVar.nameVars = {'teller'};
-checkingVar.literalsP = {'teller < 105' 1 'teller + 1' 1};
+checkingVar.literalsP = { 'teller + 1' 1};
 checkingVar.literalsA = {'NaN'};
 checkingVar.literalsR = {};
-checkingVar.literalsO = {{'teller=15' 'teller=14'}};
+checkingVar.literalsO = {{'teller=15' 'teller=14'}, {'teller < 105' 'teller < 106'}};
 checkingVar.literalsRO = {};
 
 %% PLEASE THINK CAREFULLY ABOUT THE TESTING OF:

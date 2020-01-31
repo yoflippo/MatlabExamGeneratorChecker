@@ -42,9 +42,12 @@ function [HashCode] = GetHashCodeFromMFile(fileLocationAbsPath)
 % $Revision: 0.0.0 $  $Date: 2017-09-21 $
 % Made function much more efficient by assuming that the hashcode is on the
 % second line of the file
+% $Revision: 0.0.0 $  $Date: 2020-01 $
+% Made function not return an error if empty....
 
 %% Check if File exists
 dbstop if error
+HashCode = [];
 % Has to be in comments for a proper error: HashCode = [];
 if exist(fileLocationAbsPath) == 0
     error('The file does not exist');

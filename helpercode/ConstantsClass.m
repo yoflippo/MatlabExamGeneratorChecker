@@ -76,7 +76,6 @@ classdef ConstantsClass
         VAR_RESULT = 'ResStudentScript';
         WEEKFOLDERS = {'week1' 'week2' 'week3' 'week4' 'week5' 'week6' 'week7' 'week8'};
         YEAR = year(datetime);
-        
     end
     
     properties (SetAccess = private)
@@ -100,8 +99,8 @@ classdef ConstantsClass
             obj.AP_ASSIGNMENTS = fullfile(obj.BASEFOLDER,obj.NAMEASSIGNMENTFOLDER);
             %% Some defaults values that can be overwritten in the constructor
             obj.BONUSASSIGNMENTS{1} = 1:3;
-            obj.BONUSASSIGNMENTS{2} = 4:6;
-            obj.BONUSASSIGNMENTS{3} = 7:8;
+            obj.BONUSASSIGNMENTS{2} = 4:5;
+            obj.BONUSASSIGNMENTS{3} = 6:8;
             obj.NUM_BONUSASSIGNEMNTS = length(obj.BONUSASSIGNMENTS);
             NumberOfBonusAssignments = obj.NUM_BONUSASSIGNEMNTS ;
             WeeksForAssignment = obj.BONUSASSIGNMENTS;

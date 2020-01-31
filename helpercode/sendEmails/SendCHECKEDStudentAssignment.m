@@ -10,7 +10,7 @@ props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
 props.setProperty('mail.smtp.socketFactory.port','465');
 
-assignmentNum = '1'
+assignmentNum = '2'
 nameCurrentBonusDir = ['BonusOpdracht' assignmentNum '_checked']
 cd(fullfile(con.BASEFOLDER,con.STUDENTSUBFOLDER));
 cd(nameCurrentBonusDir);
@@ -57,9 +57,8 @@ chr = [chr newline 'Als een vraag/opdracht niet 100% correct is, wordt de uitwer
 chr = [chr newline 'er bij gegeven. Zo kun je leren van je fouten.'];
 chr = [chr newline newline 'Onderaan jouw uitwerking kan extra informatie staan over wat er fout is gegaan.']
 chr = [chr newline];
-chr = [chr newline 'Op deze e-mail wordt niet gereageerd.'];
-chr = [chr newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
-chr = [chr newline 'Mark Schrauwen in RZ 0.09 of stuur een e-mail naar mjschrau@hhs.nl. '];
+% chr = [chr newline 'Op deze e-mail wordt niet gereageerd.'];
+chr = [chr newline 'Als je denkt dat er iets niet klopt stuur dan een e-mail naar mjschrau@hhs.nl. '];
 chr = [chr newline];
 chr = [chr newline newline 'Met vriendelijke groet,'];
 chr = [chr newline 'Mark Schrauwen'];
@@ -112,9 +111,6 @@ chrns = [chrns newline ];
 chrns = [chrns newline 'Wij hebben geen eindopdracht van jou ontvangen of'];
 chrns = [chrns newline 'je hebt de verkeerde bestanden opgestuurd '];
 chrns = [chrns newline 'van ' nmAssignment ' voor Biostatica Matlab.'];
-chrns = [chrns newline];
-chrns = [chrns newline 'Als je denkt dat er iets niet klopt, kom dan langs bij '];
-chrns = [chrns newline 'Mark Schrauwen in RZ 0.09. '];
 chrns = [chrns newline];
 chrns = [chrns newline 'In de bijlage van deze e-mail staan de uitwerkingen van jouw opdrachten.'];
 chrns = [chrns newline];

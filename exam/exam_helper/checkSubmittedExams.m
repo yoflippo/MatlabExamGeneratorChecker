@@ -49,7 +49,11 @@ for nd = 1:nex
             cd(oDirs{nd});
             %
             try
-                cd('Tentamen')
+                tmpdirs = dir(['**' filesep 'deelopdracht_0']);
+                tmpdirs(~contains({tmpdirs.folder},oDirs{nd})) = [];
+                cd(tmpdirs(1).folder);
+                cd ..
+                %OLD VERSION worked most of the times: cd('Tentamen')
             catch
                 subdirs = dir(['*' filesep]);
                 subdirs = subdirs([subdirs.isdir]);
@@ -74,8 +78,9 @@ for nd = 1:nex
             %% Create file with grade information
             t{1} = ['% Jouw tentamen cijfer: ' num2str(round(grade,1))];
             studBonusGrade = 0;
-            if isempty('bonus')
-                idx = find(bonus(:,1)==str2double(currStudentNumber));
+            stringbonus = string(bonus(:,1));
+            if not(isempty('bonus'))
+                idx = find(contains(stringbonus,string(currStudentNumber)));
                 if ~isempty(idx)
                     for wk = 1:2
                         if bonus(idx,wk+1)

@@ -6,6 +6,7 @@
 % genereren met de waardes 55 tot en met 99.
 % In elk ander geval moet je een numerieke vector genereren van 0 tot en met
 % 10.
+% Deze resultaten stop je in de outputvariabele van deze functie.
 %
 % Maak een functie aan met de naam: 'opdracht_7'
 % 

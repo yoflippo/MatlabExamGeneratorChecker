@@ -13,10 +13,10 @@ function res = opdracht_5_versie1_CHECK(apStudentSol)
 
 
 %% FILL string cells below to test, if you are not using them, make them empty!
-
-checkingVar.nameVars = {'i' };
-checkingVar.literalsP = {'2:16' 1 'i = 2:16' 1 'for' 1};
-checkingVar.literalsA = {'NaN' 1 'i=17' 3 'i=16' 3};
+itvar =ExtractIteratorVariableFor(apStudentSol);
+checkingVar.nameVars = {itvar};
+checkingVar.literalsP = {'2:16' 1 [itvar ' = 2:16'] 1 'for' 1};
+checkingVar.literalsA = {'NaN' 1 [itvar '=17'] 3 [itvar '=16'] 3};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
 checkingVar.literalsRO = {};

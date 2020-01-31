@@ -13,12 +13,12 @@ warning on;
 try
     if ~isequal(ap.CurrExam,pwd)
         ap = changeAbsolutePath(ap);
-        sAssigned = changeAbsolutePath(sAssigned);  
+        sAssigned = changeAbsolutePath(sAssigned);
         AssInfo.FuncScrip = changeAbsolutePath(AssInfo.FuncScrip);
         AssInfo.MC = changeAbsolutePath(AssInfo.MC);
     end
 catch err
-    error([newline mfilename ': ' newline err.message newline]); 
+    error([newline mfilename ': ' newline err.message newline]);
     cd(ap.CurrExam);
 end
 
@@ -34,6 +34,7 @@ if exist(ap.SUBMITTEDUNZIPPED,'dir')
         removeShitFromDir(ap.Submitted);
         movefiles(ap.SUBMITTEDUNZIPPED,ap.Submitted)
         removeShitFromDir(ap.SUBMITTEDCHECKED);
+        removeShitFromDir(fullfile(ap.CurrExam,'ExamAnalysis'));
     end
 else
     mkdirIf(ap.SUBMITTEDUNZIPPED);
@@ -55,12 +56,12 @@ MaxGrade = max(grades(:,2));
 MinGrade = min(grades(:,2));
 numberPart = length(grades);
 clear strDescriptive;
-strDescriptive(1,1) = string(['Average grade: ' num2str(AverageGrade)]); 
-strDescriptive(length(strDescriptive)+1,1) = string(['Percentage passed: ' num2str(PercentagePassed)]); 
-strDescriptive(length(strDescriptive)+1,1) = string(['Standard Deviation: ' num2str(Std)]); 
+strDescriptive(1,1) = string(['Average grade: ' num2str(AverageGrade)]);
+strDescriptive(length(strDescriptive)+1,1) = string(['Percentage passed: ' num2str(PercentagePassed)]);
+strDescriptive(length(strDescriptive)+1,1) = string(['Standard Deviation: ' num2str(Std)]);
 strDescriptive(length(strDescriptive)+1,1) = string(['Highest grade: ' num2str(MaxGrade)]);
 strDescriptive(length(strDescriptive)+1,1) = string(['Lowest grade: ' num2str(MinGrade)]);
-strDescriptive(length(strDescriptive)+1,1) = string(['Number of students: ' num2str(numberPart)]); 
+strDescriptive(length(strDescriptive)+1,1) = string(['Number of students: ' num2str(numberPart)]);
 strDescriptive(length(strDescriptive)+1,1) = "In het geval dit het tentamen betreft zit het bonuscijfer er in verwerkt.";
 strGrades = string(num2str(grades));
 strGrades = [strDescriptive; strGrades]
@@ -83,7 +84,10 @@ cd(ap.CurrExam)
 zip(['Analysis_' nmExam '.zip'],ap.Analysis);
 
 %% Make OSIRIS
-createOsirisFile
+try
+    createOsirisFile
+catch
+end
 
 %% Zip this shit
 zip(['BiostaticaMatlab' nmExam '_FIN.zip'],fileparts(ap.ExamSrcDir));
@@ -92,6 +96,4 @@ zip(['BiostaticaMatlab' nmExam '_FIN.zip'],fileparts(ap.ExamSrcDir));
 disp('Finally, Clean up');
 warning off
 fclose('all');
-% % % rmpath(genpath(ap.HELPERCODE));
-% % % rmpath(genpath(ap.CurrExam));
 warning on

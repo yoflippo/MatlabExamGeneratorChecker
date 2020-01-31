@@ -1,6 +1,6 @@
 %% Opdracht 3
 % Maak een functie genaamd 'opdracht_3' om de verhouding van de langste en
-% korste beenlengte te berekenen.
+% kortste beenlengte te berekenen.
 %
 % Je moet de verhouding (ratio) bepalen
 % van de grootste beenlengte en de kleinste beenlengte. Deze beenlengte

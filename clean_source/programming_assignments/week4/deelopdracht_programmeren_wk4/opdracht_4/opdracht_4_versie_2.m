@@ -13,5 +13,5 @@
 %
 % Voorbeelden:
 % 1- opdracht_4(1, 2, 3)    geeft terug: 10
-% 2- opdracht_4(0,-1,-1)    geeft terug: -1
+% 2- opdracht_4(0,-1,-1)    geeft terug: -2
 % 3- opdracht_4(3,-1,-6)    geeft terug:  7

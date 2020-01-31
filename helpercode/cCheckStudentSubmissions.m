@@ -84,7 +84,7 @@ try
                 cd('temp');
                 try
                     unzip(apCurrZip);
-                    
+%                     cellfun(@(x) x(1:3),C,'UniformOutput',false)
                     %Remove dirs without correct weekX assignment
                     neededDir = dirmf(nmCurrBonusAss);
                     blSubmittedWrongFiles = true;
@@ -126,6 +126,7 @@ try
             else
                 movefile(apCurrZip,apChecked);
             end
+            
         else % not a zip-file but something else
             %             keyboard
             if ~exist('blRemoveFolders','var') && input('Do you want to delete all remaining folders in the submitted directory? Yes=1, No=0 ')
@@ -139,6 +140,9 @@ try
                 removeShitFromDir(apCurrZip)
                 rmdirIf(apCurrZip)
                 warning on
+            end
+            if contains(files(nF).name,'.txt')
+                delete(apCurrZip);
             end
         end
         cd(tmpBase);
