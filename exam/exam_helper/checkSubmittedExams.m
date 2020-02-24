@@ -72,14 +72,14 @@ for nd = 1:nex
             tmpResultOverview = [currStudentNumber tmpResultOverview];
             resultOverview = [resultOverview; tmpResultOverview];
             grade
-
+            
             %             keyboard %% Aanpassen voor andere bonusopdrachten
-
+            
             %% Create file with grade information
             t{1} = ['% Jouw tentamen cijfer: ' num2str(round(grade,1))];
             studBonusGrade = 0;
-            stringbonus = string(bonus(:,1));
-            if not(isempty('bonus'))
+            if exist('bonus','var') && not(isequal(bonus,[]))
+                stringbonus = string(bonus(:,1));
                 idx = find(contains(stringbonus,string(currStudentNumber)));
                 if ~isempty(idx)
                     for wk = 1:2

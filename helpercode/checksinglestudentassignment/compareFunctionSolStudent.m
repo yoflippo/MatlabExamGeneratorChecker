@@ -41,13 +41,16 @@ function [resTotal] = compareFunctionSolStudent(callerName,testSeries,apStudentS
 
 % [~, apStudentSol] = fileparts(apStudentSol);
 solution = replace(callerName,'_CHECK','_SOL');
+
 try
-FH_sol = function_handle(solution);
+%     ap = fileparts(apStudentSol);
+    FH_sol = function_handle(solution);
 catch
     try
         FH_sol = function_handle([solution '.m']);
+        %FH_sol = function_handle(fullfile(ap,[solution '.m']));
     catch
-           keyboard %% make sure fullpath is called
+        keyboard %% make sure fullpath is called
     end
 end
 
