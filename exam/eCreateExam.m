@@ -4,8 +4,8 @@
 % scripts. However, this does not mean that the helpercode is not used.
 
 clear all; close all;
-ap.nOfTheses = 50; %80
-ap.nOfScriptsFunctions = 13; %20
+ap.nOfTheses = 80; 
+ap.nOfScriptsFunctions = 20;
 
 %% Go to path of this file
 mfilename('fullpath')
@@ -117,26 +117,25 @@ cd(nmFinalExamFolder)
 ap.TheExamDir = pwd;
 ap.CurrZipFile = fullfile(ap.CurrExam,[nm.CurrExamDir '.zip']);
 ap.CurrZipFinalFile = fullfile(pwd,[nm.CurrExamDir '.zip']);
-% zip(ap.CurrZipFile,ap.ExamSrcDir);
 zip(ap.CurrZipFinalFile,ap.ExamSrcDir);
 cd(ap.CurrExam)
 
 %% Check the zip-files in folder submitted
-% % copyfile(ap.CurrZipFile,ap.Submitted);
 copyfile(ap.CurrZipFinalFile,ap.Submitted);
 
 % NOTE: IETS DOEN AAN MOGELIJK VALSPELEN DOORDAT STUDENTEN KOPIEEN TOEVOEGEN
 % OPLOSSING,
 
 %% Create testing files for a few students
+generateTestExams(ap.CurrExam,1);
 
-generateTestExams(ap.CurrExam,2);
-
-%% Check test exams without solutions
+%% Check test exams withOUT solutions
 cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams'),ap.Submitted);
-run(['checkExam_' nm.CDate]); close all;
+run(['checkExam_' nm.CDate]); 
+close all;
+clc;
 if mean(grades(:,2)) > 1
     error('The exam grade should be 1')
 else
@@ -148,8 +147,9 @@ cd ..
 cd(ap.CurrExam)
 removeShitFromDir(ap.Submitted)
 copyfiles(fullfile('Test_Exams','exams_SOL'),ap.Submitted);
-% % % grades = checkExam();
-run(['checkExam_' nm.CDate]); close all;
+run(['checkExam_' nm.CDate]); 
+close all;
+clc;
 if mean(grades(:,2)) < 10
     error('The exam grade should be a TEN!!')
 else
@@ -157,17 +157,17 @@ else
 end
 cd ..
 
-%% Make a backup
+%% Make a backup of everything
 cd(ap.BASEFOLDER)
 save('WorkspaceAfterChecking.mat');
-dos(['start WinRaR a -r -m5 -mt16 ' fullfile(ap.BASEFOLDEREX,'Created') filesep datetimetxt() 'beforeExam ' ap.CurrExam filesep '*.*'])
+zip(fullfile(ap.BASEFOLDEREX,'Created',[nm.CurrExamDir '_beforeExam']),ap.CurrExam);
 
 %% Finally, Clean up
 disp('Finally, Clean up');
 warning off
 fclose('all');
-rmpath(genpath(ap.BASEFOLDEREX));
-rmpath(genpath(ap.HELPERCODE));
-rmpath(genpath(ap.CurrExam));
-rmpath(genpath(ap.Assignments));
+% rmpath(genpath(ap.BASEFOLDEREX));
+% rmpath(genpath(ap.HELPERCODE));
+% rmpath(genpath(ap.CurrExam));
+% rmpath(genpath(ap.Assignments));
 warning on

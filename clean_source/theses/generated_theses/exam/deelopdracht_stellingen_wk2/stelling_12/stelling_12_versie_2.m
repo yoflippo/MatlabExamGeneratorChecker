@@ -1,9 +1,9 @@
 %% Stelling 12
 %
-% Debuggen is het verwijderen van fouten uit een Matlab 
-% programma.                                            
+% Debuggen is het zetten van breakpoints in een programma.
 %
 Antwoord = NaN; % vul hier het juiste antwoord in 1 (WAAR) of 0 (ONWAAR)
+
 
 
 

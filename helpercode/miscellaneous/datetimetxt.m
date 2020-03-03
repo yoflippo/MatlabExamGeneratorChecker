@@ -56,10 +56,10 @@ end
 
 
 if blOnlyDate
-    datetime.setDefaultFormats('default','yyMMdd');
+    datetime.setDefaultFormats('default','yyyyMMdd');
     ds = char(datetime);
 else
-    datetime.setDefaultFormats('default','yyMMddHHmm')
+    datetime.setDefaultFormats('default','yyyyMMdd_HHmm')
     ds = char(datetime);
 end
 

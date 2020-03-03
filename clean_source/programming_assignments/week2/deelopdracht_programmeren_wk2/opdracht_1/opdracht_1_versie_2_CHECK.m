@@ -2,7 +2,7 @@ function res = opdracht_1_versie_2_CHECK(apStudentSol)
 %% FILL string cells below to test, if you are not using them, make them empty!
 checkingVar.nameVars = {};
 checkingVar.nameVarsOr = {};
-checkingVar.literalsP = {'hallo daar!' 1 'opdracht_1' 1 'function' 1 'function opdracht_1()' 1 'end' 1};
+checkingVar.literalsP = {'hallo daar!' 1 'opdracht_' 1 'function' 1 'function opdracht_' 1 'end' 1};
 checkingVar.literalsA = {};
 checkingVar.literalsR = {};
 checkingVar.literalsO = {};
