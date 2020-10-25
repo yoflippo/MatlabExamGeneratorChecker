@@ -5,7 +5,7 @@ cd(con.BASEFOLDER)
 setpref('Internet','SMTP_Server','smtp.gmail.com');
 setpref('Internet','E_mail','opleidingbewegingstechnologie@gmail.com');
 setpref('Internet','SMTP_Username','opleidingbewegingstechnologie@gmail.com');
-setpref('Internet','SMTP_Password','biostatica19');
+setpref('Internet','SMTP_Password',);
 props = java.lang.System.getProperties;
 props.setProperty('mail.smtp.auth','true');
 props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
